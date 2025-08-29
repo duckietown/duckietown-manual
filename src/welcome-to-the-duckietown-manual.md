@@ -18,26 +18,19 @@ If you are new to Duckietown, you should find a course that helps you navigate t
 
 If you are a Duckietown veteran, treat this book as a reference manual on how to do specific things. 
 
-If you have suggestions on how to improve this documentation, read the [Duckietown Book Writer Manual](https://docs.duckietown.com/daffy/devmanual-docs/intro.html) to learn how to make contributions.
+If you have suggestions on how to improve this documentation, read the [Duckietown Book Writer Manual]() to learn how to make contributions.
 
+```{todo}
+add intra link to book writer manual once integrated
+```
 
 (how-to-get-help-pointer)=
 ## How to get help
 
 Read the [FAQ and Troubleshooting](how-to-get-help) to find out how to get support in Duckietown.
 
-(book-db-opmanual-toc)=
+(book-dt-manual-toc)=
 ## Table of Contents
-
-
-```{figure} /_images/intro/db-status-diagram.jpg
-:alt: duckiebot assembly, setup, configuration and status definition diagram
-:width: 60%
-:name: duckiebot-status-flow
-:align: center
-
-How to build a Duckiebot: from a box of parts to a self-driving car.
-```
 
 
 ```{tableofcontents}

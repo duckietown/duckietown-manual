@@ -21,11 +21,6 @@ If you are a Duckietown veteran, treat this book as a reference manual on how to
 If you have suggestions on how to improve this documentation, read the [Duckietown Book Writer Manual](https://docs.duckietown.com/daffy/devmanual-docs/intro.html) to learn how to make contributions.
 
 
-(how-to-get-help-pointer)=
-## How to get help
-
-Read the [FAQ and Troubleshooting](how-to-get-help) to find out how to get support in Duckietown.
-
 (book-db-opmanual-toc)=
 ## Table of Contents
 

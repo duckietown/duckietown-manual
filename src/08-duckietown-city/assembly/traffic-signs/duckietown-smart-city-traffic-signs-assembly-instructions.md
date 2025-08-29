@@ -95,7 +95,7 @@ To use a different signs and tags database, ensure you specify the correct datab
 
 A traffic sign stand consists of laser-cut components, as shown in {numref}`fig:traffic_stand_assembly_1`.
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_signs/trafficsign_kit.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_signs/trafficsign_kit.png
 :width: 50%
 :name: fig:traffic_stand_assembly_1
 
@@ -104,7 +104,7 @@ Traffic sign stand kit
 
 Detach the wooden components and assemble them as shown in {numref}`fig:traffic_stand_assembly_2`. If the structure seems loose, apply wood glue for added stability.
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_signs/trafficsign_stand_assembly.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_signs/trafficsign_stand_assembly.png
 :width: 35%
 :name: fig:traffic_stand_assembly_2
 
@@ -113,7 +113,7 @@ Traffic sign stand assembled
 
 Once assembled, mount the traffic sign as shown in {numref}`fig:traffic_stand_assembly_3`.
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_signs/trafficsign_stand_assembled.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_signs/trafficsign_stand_assembled.png
 :width: 35%
 :name: fig:traffic_stand_assembly_3
 

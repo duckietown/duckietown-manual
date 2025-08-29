@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: general-intro
+root: welcome-to-the-duckietown-manual
 parts:
     -   caption: Start Here - Setup
         maxdepth: 3
@@ -80,13 +80,12 @@ parts:
             -   file: 08-duckietown-city/assembly/introduction
                 sections:                  
                 -   file: 08-duckietown-city/assembly/tilemap/duckietown-smart-city-road-assembly-instructions
-                -   file: 08-duckietown-city/assembly/traffic_signs/duckietown-smart-city-traffic-signs-assembly-instructions
+                -   file: 08-duckietown-city/assembly/traffic-signs/duckietown-smart-city-traffic-signs-assembly-instructions
                     sections:
                     -   file: 08-duckietown-city/assembly/traffic-lights/duckietown-smart-city-overview-traffic-lights-assembly-instructions
                         sections:
                             - file: 08-duckietown-city/assembly/traffic-lights/duckietown-traffic-light-dt21-tl-assembly-instructions
                             - file: 08-duckietown-city/assembly/traffic-lights/duckietown-legacy-traffic-light-dt18_tl-assembly-instructions
-
     -   caption: Autonomous Behaviors (Demos)
         maxdepth: 1
         numbered: False
@@ -96,6 +95,31 @@ parts:
             # -   file: demonstrations/lane-following-with-obstacles
             # -   file: demonstrations/lane-following-with-intersections
             # -   file: demonstrations/lane-following-with-duckiebots
+    -   caption: Duckiematrix Virtual Environment
+        maxdepth: 3
+        numbered: False
+        chapters:
+            -   file: 09-duckiematrix/introduction-to-the-duckiematrix-virtual-environment
+            -   file: 09-duckiematrix/getting-started/duckiematrix-first-steps
+                sections:
+                -   file: 09-duckiematrix/getting-started/architecture
+                -   file: 09-duckiematrix/getting-started/world-and-matrix-sides
+                -   file: 09-duckiematrix/getting-started/running-the-duckiematrix
+                -   file: 09-duckiematrix/getting-started/dtps-interfaces
+            -   file: 09-duckiematrix/virtual-duckietown-robots/introduction-to-virtual-duckiebots
+                sections:
+                -   file: 09-duckiematrix/virtual-duckietown-robots/attaching-a-duckietown-robot-to-a-duckiematrix-entity                
+                -   file: 09-duckiematrix/virtual-duckietown-robots/dts-commands
+                -   file: 09-duckiematrix/virtual-duckietown-robots/drivers
+            #-   file: 09-duckiematrix/test/test
+            -   file: 09-duckiematrix/additional-functionalities/introduction-to-additional-functionalities
+                sections:
+                -   file: 09-duckiematrix/additional-functionalities/maps/duckiematrix-maps
+                -   file: 09-duckiematrix/additional-functionalities/maps/custom-duckiematrix-maps
+                -   file: 09-duckiematrix/additional-functionalities/links
+                -   file: 09-duckiematrix/additional-functionalities/modes
+                -   file: 09-duckiematrix/additional-functionalities/engine-reachability-domains
+                -   file: 09-duckiematrix/additional-functionalities/demonstrations                 
     -   caption: Software Tools
         maxdepth: 1
         numbered: False

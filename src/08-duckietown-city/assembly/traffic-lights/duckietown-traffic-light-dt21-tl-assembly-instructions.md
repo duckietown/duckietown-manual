@@ -31,7 +31,7 @@ If a glue icon appears in the yellow box, it means some parts will be permanentl
 
 Follow the steps illustrated in the images below to assemble the ground structure:
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_light_21/STEP_01.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_01.png
 :width: 100%
 :name: fig:TL_STEP_01
 ```
@@ -43,7 +43,7 @@ Follow the steps illustrated in the images below to assemble the ground structur
 
 Assemble the TL Corner by following these steps:
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_light_21/STEP_24.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_24.png
 :width: 100%
 :name: fig:TL_STEP_24
 ```
@@ -55,7 +55,7 @@ Assemble the TL Corner by following these steps:
 
 Assemble the camera housing as shown below:
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_light_21/STEP_28.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_28.png
 :width: 100%
 :name: fig:TL_STEP_28
 ```
@@ -67,7 +67,7 @@ Assemble the camera housing as shown below:
 
 Assemble the TL Base as follows:
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_light_21/STEP_35.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_35.png
 :width: 100%
 :name: fig:TL_STEP_35
 ```
@@ -79,7 +79,7 @@ Assemble the TL Base as follows:
 
 Follow these steps to assemble a single TL Corner:
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_light_21/STEP_40.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_40.png
 :width: 100%
 :name: fig:TL_STEP_40
 ```
@@ -91,7 +91,7 @@ Follow these steps to assemble a single TL Corner:
 
 Install the LED housing by following these steps:
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_light_21/STEP_45.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_45.png
 :width: 100%
 :name: fig:TL_STEP_45
 ```
@@ -103,7 +103,7 @@ Install the LED housing by following these steps:
 
 Once all components are assembled, you should have a complete traffic light:
 
-```{figure} ../../_images/duckietown-city/assembly/traffic_light_21/Complete_Traffic_Light.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_light_21/Complete_Traffic_Light.png
 :width: 100%
 :name: fig:Complete_Traffic_Light
 ```

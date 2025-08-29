@@ -9,9 +9,9 @@
 ```
 
 ```{needget}
-- An initialized Duckiebot
+- 
 ---
-- A working Duckiebot
+- 
 ```
 
 ```{figure} ../../_images/intro/filename.ext

@@ -20,10 +20,6 @@ Small perturbations to the appearance specifications might affect negatively the
 Below are examples of Duckietowns of different sizes and complexities, compatible with the appearance specifications.
 
 
-```{tableofcontents}
-```
-
-
 <!--
 ```{needget}
 * Duckiebot `DB21` parts ([get a `DB21-Jx`](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311)). If you are unsure what version of Duckiebot you have, check the overview of existing [Duckiebot configurations](duckiebot-configurations).
