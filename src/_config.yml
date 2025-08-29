@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: BOOK_NAME_HERE
+title: The Duckietown Manual
 author: Duckietown, Inc.
-logo: logo.png
+logo: logo-dtmatrix.png
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns: ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
 
@@ -23,7 +23,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/duckietown/BOOK_NAME_HERE
+  url: https://github.com/duckietown/dt-manual
   path_to_book: src
 
 # Add GitHub buttons to your book
