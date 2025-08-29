@@ -22,7 +22,7 @@ If you have suggestions on how to improve this documentation, read the [Duckieto
 
 
 (book-db-opmanual-toc)=
-## Table of Contents
+## From a box of parts to a ready to go Duckiebot
 
 
 ```{figure} /_images/intro/db-status-diagram.jpg
@@ -32,8 +32,4 @@ If you have suggestions on how to improve this documentation, read the [Duckieto
 :align: center
 
 How to build a Duckiebot: from a box of parts to a self-driving car.
-```
-
-
-```{tableofcontents}
 ```

@@ -23,7 +23,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/duckietown/dt-manual
+  url: https://github.com/duckietown/duckietown-manual
   path_to_book: src
 
 # Add GitHub buttons to your book
@@ -36,6 +36,10 @@ html:
   extra_navbar: ""
 
 sphinx:
-  extra_extensions: []
+  extra_extensions:
+    - sphinx_examples  
   config:
-    intersphinx_mapping: {}
+    intersphinx_mapping:
+      jupyter-book-docs:
+        - "https://jupyterbook.org/en/stable"
+        - null

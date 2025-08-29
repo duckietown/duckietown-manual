@@ -96,7 +96,7 @@ parts:
             # -   file: demonstrations/lane-following-with-intersections
             # -   file: demonstrations/lane-following-with-duckiebots
     -   caption: Duckiematrix Virtual Environment
-        maxdepth: 3
+        maxdepth: 2
         numbered: False
         chapters:
             -   file: 09-duckiematrix/introduction-to-the-duckiematrix-virtual-environment
@@ -154,3 +154,14 @@ parts:
             -   file: 07-further-reading/working-with-docker-in-duckietown
             -   file: 07-further-reading/version-control-with-git
             -   file: 07-further-reading/ssh-aliases-setup
+    - caption: Contributing to the Duckietown Manual
+      maxdepth: 1
+      numbered: False
+      chapters:
+            -   file: 90-contributing/introduction
+            -   file: 90-contributing/how-to-edit
+                sections:
+                -   file: 90-contributing/edit-the-duckietown-docs-the-simple-way
+                -   file: 90-contributing/edit-the-duckietown-docs-with-local-edits
+            -   file: 90-contributing/format-and-style-guidelines
+            -   file: 90-contributing/duckietown-manual-cheatsheet
