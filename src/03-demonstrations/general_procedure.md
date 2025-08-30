@@ -1,7 +1,7 @@
 (general-demo-procedure)=
 # General Procedure for Running Demos
 
-In general, any duckietown repository that has been built from one of the [templates](book-devmanual-software:project-templates).
+In general, any duckietown repository that has been built from one of the [templates](temp-sw-devmanual-project-templates).
 
 In some cases, you may have an option to run the actual demo code on your *laptop* and communicate with the robot, or
 to directly run the code on the *robot*. 

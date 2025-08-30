@@ -154,8 +154,126 @@ parts:
             -   file: 07-further-reading/working-with-docker-in-duckietown
             -   file: 07-further-reading/version-control-with-git
             -   file: 07-further-reading/ssh-aliases-setup
+    -   caption: Instructor Manual
+        maxdepth: 3
+        numbered: False
+        chapters: 
+            -   file: 80-instructor-manual/introduction-to-the-instructor-manual
+                sections:
+                -   file: 80-instructor-manual/introduction/who-should-read-this-manual
+                -   file: 80-instructor-manual/introduction/how-to-get-started
+                -   file: 80-instructor-manual/introduction/how-to-use-this-manual
+                -   file: 80-instructor-manual/introduction/quickstart-guide
+                -   file: 80-instructor-manual/introduction/duckietown-professor-journey
+            -   file: 80-instructor-manual/available-resources/overview-of-available-resources
+                sections:
+                -   file: 80-instructor-manual/available-resources/index-of-slides-for-instructors
+                    sections:
+                    -   file: 80-instructor-manual/available-resources/slides/intro/00-intro-overview
+                        sections:
+                        - file: 80-instructor-manual/available-resources/slides/intro/01-introductions
+                        - file: 80-instructor-manual/available-resources/slides/intro/02-autonomy
+                        - file: 80-instructor-manual/available-resources/slides/intro/03-autonomous-vehicles
+                        - file: 80-instructor-manual/available-resources/slides/intro/04-robots
+                        - file: 80-instructor-manual/available-resources/slides/intro/05-architectures
+                        - file: 80-instructor-manual/available-resources/slides/intro/06-testing
+                        - file: 80-instructor-manual/available-resources/slides/intro/07-signal-processing
+                        - file: 80-instructor-manual/available-resources/slides/intro/08-networking
+                        - file: 80-instructor-manual/available-resources/slides/intro/09-full-lecture
+                    -   file: 80-instructor-manual/available-resources/slides/tools/00-tools-overview
+                        sections:
+                        - file: 80-instructor-manual/available-resources/slides/tools/01-docker
+                        - file: 80-instructor-manual/available-resources/slides/tools/02-ros
+                        - file: 80-instructor-manual/available-resources/slides/tools/03-git
+                    -   file: 80-instructor-manual/available-resources/slides/models/00-models-overview
+                        sections:
+                        - file: 80-instructor-manual/available-resources/slides/models/01-representations
+                        - file: 80-instructor-manual/available-resources/slides/models/02-differential-drive
+                        - file: 80-instructor-manual/available-resources/slides/models/03-full-lecture-modeling
+                    -   file: 80-instructor-manual/available-resources/slides/control/00-control-overview
+                        sections:
+                        - file: 80-instructor-manual/available-resources/slides/control/01-controls-intro
+                        - file: 80-instructor-manual/available-resources/slides/control/02-odometry
+                        - file: 80-instructor-manual/available-resources/slides/control/03-pid
+                        - file: 80-instructor-manual/available-resources/slides/control/04-full-lecture-control
+                    -   file: 80-instructor-manual/available-resources/slides/vision/00-vision-overview
+                        sections:
+                        - file: 80-instructor-manual/available-resources/slides/vision/01-projective-geometry
+                        - file: 80-instructor-manual/available-resources/slides/vision/02-camera-calibration
+                        - file: 80-instructor-manual/available-resources/slides/vision/03-image-filtering
+                        - file: 80-instructor-manual/available-resources/slides/vision/06-full-lecture-vision
+                    -   file: 80-instructor-manual/available-resources/slides/perception/00-visual-perception-overview
+                        sections:
+                        -   file: 80-instructor-manual/available-resources/slides/perception/01-intro-visual-perception
+                        -   file: 80-instructor-manual/available-resources/slides/perception/02-intro-nn
+                        -   file: 80-instructor-manual/available-resources/slides/perception/03-cnn
+                        -   file: 80-instructor-manual/available-resources/slides/perception/04-object-detection
+                        -   file: 80-instructor-manual/available-resources/slides/perception/05-full-lecture-visual-perception
+                    -   file: 80-instructor-manual/available-resources/slides/estimation/00-estimation-overview
+                        sections:
+                        - file: 80-instructor-manual/available-resources/slides/estimation/01-representations
+                        - file: 80-instructor-manual/available-resources/slides/estimation/02-bayes-filter
+                        - file: 80-instructor-manual/available-resources/slides/estimation/03-kalman-filter
+                        - file: 80-instructor-manual/available-resources/slides/estimation/04-particle-filter
+                        - file: 80-instructor-manual/available-resources/slides/estimation/05-histogram-filter
+                        - file: 80-instructor-manual/available-resources/slides/estimation/06-full-lecture-filtering
+                        - file: 80-instructor-manual/available-resources/slides/estimation/07-ransac
+                        - file: 80-instructor-manual/available-resources/slides/estimation/08-slam
+                    -   file: 80-instructor-manual/available-resources/slides/planning/00-planning-overview
+                        sections:
+                        - file: 80-instructor-manual/available-resources/slides/planning/01-motion-planning
+                        - file: 80-instructor-manual/available-resources/slides/planning/02-graphs
+                        - file: 80-instructor-manual/available-resources/slides/planning/03-sampling
+                        - file: 80-instructor-manual/available-resources/slides/planning/04-planning-full
+                    -   file: 80-instructor-manual/available-resources/slides/learning/00-learning-overview
+                        sections:
+                        - file: 80-instructor-manual/available-resources/slides/learning/01-mdp
+                        - file: 80-instructor-manual/available-resources/slides/learning/02-policy-iteration
+                        - file: 80-instructor-manual/available-resources/slides/learning/03-q-learning
+                        - file: 80-instructor-manual/available-resources/slides/learning/04-sim-to-real
+                        - file: 80-instructor-manual/available-resources/slides/learning/05-rl-full
+                        - file: 80-instructor-manual/available-resources/slides/learning/06-imitation-full
+                    -   file: 80-instructor-manual/available-resources/slides/advanced/00-advanced-overview    
+                        sections:
+                        - file: 80-instructor-manual/available-resources/slides/advanced/01-multi
+                        - file: 80-instructor-manual/available-resources/slides/advanced/02-safety
+                        - file: 80-instructor-manual/available-resources/slides/advanced/03-uncertainty-machine-learning
+                        - file: 80-instructor-manual/available-resources/slides/advanced/04-estimation-from-blur
+                -   file: 80-instructor-manual/available-resources/exercises
+                -   file: 80-instructor-manual/available-resources/evaluation
+                -   file: 80-instructor-manual/available-resources/simulation
+                -   file: 80-instructor-manual/available-resources/code
+                -   file: 80-instructor-manual/available-resources/hardware
+                -   file: 80-instructor-manual/available-resources/projects/index
+                    sections:
+                        - file: 80-instructor-manual/available-resources/projects/examples
+                -   file: 80-instructor-manual/available-resources/support
+            -   file: 80-instructor-manual/course-design-considerations/introduction-to-course-design
+                sections:
+                -   file: 80-instructor-manual/course-design-considerations/prerequisites/pre-index
+                    sections: 
+                    -   file: 80-instructor-manual/course-design-considerations/prerequisites/pre-instructors
+                    -   file: 80-instructor-manual/course-design-considerations/prerequisites/pre-students
+                    -   file: 80-instructor-manual/course-design-considerations/prerequisites/pre-equipment
+                -   file: 80-instructor-manual/course-design-considerations/composition
+                -   file: 80-instructor-manual/course-design-considerations/intended-learning-outcomes-ilo
+                -   file: 80-instructor-manual/course-design-considerations/how-to-structure-a-duckietown-course-suggestions
+                -   file: 80-instructor-manual/course-design-considerations/common-pitfalls
+                -   file: 80-instructor-manual/course-design-considerations/feedback
+                -   file: 80-instructor-manual/course-design-considerations/the-spirit-of-duckietown
+            -   file: 80-instructor-manual/sample-curricula/duckietown-courses-examples
+                sections:
+                -   file: 80-instructor-manual/sample-curricula/graduate-courses/sample-curricula-graduate-level-index 
+                    sections:
+                    -   file: 80-instructor-manual/sample-curricula/graduate-courses/udem-universite-de-montreal
+                    -   file: 80-instructor-manual/sample-curricula/graduate-courses/ethz-swiss-federal-institute-of-technology-zurich
+                -   file: 80-instructor-manual/sample-curricula/undergraduate-courses/sample-curricula-undergraduate-level-index
+                    sections:
+                    -   file: 80-instructor-manual/sample-curricula/undergraduate-courses/umass-university-of-massachusetts-lowell
+                -   file: 80-instructor-manual/sample-curricula/highschool/index
+                -   file: 80-instructor-manual/sample-curricula/mooc/index
     - caption: Contributing to the Duckietown Manual
-      maxdepth: 1
+      maxdepth: 2
       numbered: False
       chapters:
             -   file: 90-contributing/introduction
