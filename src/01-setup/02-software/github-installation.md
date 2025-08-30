@@ -1,6 +1,9 @@
+(setup-sw-github)=
+# GitHub and Git LFS installation
+
 ```{seo}
-:description: 
-:keywords: 
+:description: Set up your GitHub account with public SSH keys to flawlessly use Duckietown software.
+:keywords: duckietown setup, git, github, ssh setup
 ```
 
 ```{needget}
@@ -10,8 +13,6 @@
 - GitHub correctly configured on your computer
 ```
 
-(setup-sw-github)=
-# GitHub and Git LFS installation
 
 If you have followed this manual in order, `Git` and `Git Large File System (LFS)` have already been installed during : [](setup-sw-dependencies-installation). 
 

@@ -23,5 +23,3 @@ If you do not already have a GitHub account, make one now:
 * [Create a GitHub account](https://github.com/join).
 
 Take note of your GitHub account username and email used, and move on to the next section.
-
-

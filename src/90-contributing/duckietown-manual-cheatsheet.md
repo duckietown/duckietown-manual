@@ -1122,7 +1122,7 @@ Link to a [page on another book](book-opmanual-duckiebot:duckiebot-boot).
 ```
 -->
 
-#### How to configure
+### How to configure
 
 The mapping between book names and their remote location is defined in the `_config.yml` file.
 For example, we can add a link to the book `jupyter-book-docs` as follows,

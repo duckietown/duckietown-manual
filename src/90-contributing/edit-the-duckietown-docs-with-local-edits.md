@@ -1,10 +1,21 @@
+(local-editor-workflow)=
+# The right way: Local editor 
+
 ```{seo}
 :description: The best way of contributing to the Duckietown documentation is through local edits and pull requests. 
 :keywords: duckietown, documentation, local edits, offline, Git
 ```
 
-(local-editor-workflow)=
-# The right way: Local editor 
+```{needget}
+- [Basic SSH configuration](prelim-sw-ssh).
+- [Key pair creation](prelim-sw-ssh-keys).
+- [Adding public key on GitHub](prelim-sw-ssh-keys-upload).
+- [Docker installation](setup-sw-docker).
+- [Duckietown Shell](setup-dts).
+---
+- Local documentation build, necessary for substantial contributions
+```
+
 
 This section describes the workflow to edit the documentation for one single book.
 
@@ -21,21 +32,21 @@ In a nutshell:
 
 We assume that you have set up a GitHub account with working public keys.
 
-See: [Basic SSH config](book-opmanual-duckiebot:prelim-sw-ssh).
+See: [Basic SSH config](prelim-sw-ssh).
 
-See: [Key pair creation](book-opmanual-duckiebot:prelim-sw-ssh-keys).
+See: [Key pair creation](prelim-sw-ssh-keys).
 
-See: [Adding public key on GitHub](book-opmanual-duckiebot:prelim-sw-ssh-keys-upload).
+See: [Adding public key on GitHub](prelim-sw-ssh-keys-upload).
 
 
 ### Install Docker
 
-Before you start, make sure that you have [installed Docker](book-opmanual-duckiebot:laptop-setup-docker).
+Before you start, make sure that you have [installed Docker](setup-sw-docker).
 
 
 ### Install the Duckietown Shell
 
-Install the Duckietown Shell using [these instructions](book-opmanual-duckiebot:laptop-setup-shell).
+Install the Duckietown Shell using [these instructions](setup-dts).
 
 ### Fork the `book-[name]` repository on GitHub
 
