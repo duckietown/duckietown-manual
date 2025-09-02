@@ -4,7 +4,7 @@
 ```
 
 (duckietown-simulation)=
-# Gym-Simulation in Duckietown
+# Gym-Simulation in Duckietown (legacy)
 
 ```{needget}
 * Implementing Basic Robot Behaviors
@@ -15,6 +15,10 @@
 ```{figure} ../../_images/intermediate/simulator/simplesim_free.png
 :name: fig:simplesim_free
 
+```
+
+```{warning}
+This package is obsolete, it has been superseeded by the Duckiematrix Gym environment, [available here](https://github.com/duckietown/gym-duckiematrix).
 ```
 
 ## Why simulation?
