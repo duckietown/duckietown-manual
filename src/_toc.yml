@@ -134,6 +134,70 @@ parts:
         numbered: False
         chapters:
             -   file: 05-learning-experiences/introduction-to-duckietown-lxs
+
+    -   caption: Developer Manual
+        maxdepth: 3
+        numbered: False
+        chapters:
+            -   file: 10-developer-manual/basics/intro
+                sections:
+                    -   file: 10-developer-manual/basics/terminal/terminal-basics
+                    -   file: 10-developer-manual/basics/development/foreword
+                        sections:
+                            - file: 10-developer-manual/basics/development/iso-iec9126
+                            - file: 10-developer-manual/basics/development/linux
+                            - file: 10-developer-manual/basics/development/developer-basics-git
+                            - file: 10-developer-manual/basics/development/developer-basics-docker
+                            - file: 10-developer-manual/basics/development/dts-duckietown-shell
+
+            -   file: 10-developer-manual/beginner/intro
+                sections:
+                    -   file: 10-developer-manual/beginner/dtproject/introduction-to-duckietown-projects
+                        sections:
+                            - file: 10-developer-manual/beginner/dtproject/how-to-create-a-duckietown-project
+                            - file: 10-developer-manual/beginner/dtproject/adding-code-to-a-dtproject
+                            - file: 10-developer-manual/beginner/dtproject/working-with-dtproject-dependencies
+                            - file: 10-developer-manual/beginner/dtproject/running-a-dtproject-on-duckietown-robot
+                            - file: 10-developer-manual/beginner/dtproject/managing-dt-project-launchers
+                            - file: 10-developer-manual/beginner/dtproject/duckietown-project-templates
+
+                    -   file: 10-developer-manual/beginner/ros/introduction-to-using-ros-with-duckietown
+                        sections:
+                            - file: 10-developer-manual/beginner/ros/create-new-ros-project
+                            - file: 10-developer-manual/beginner/ros/catkin-packages
+                            - file: 10-developer-manual/beginner/ros/ros-publisher
+                            - file: 10-developer-manual/beginner/ros/ros-subscriber
+                            - file: 10-developer-manual/beginner/ros/faster-development-workflow
+                            - file: 10-developer-manual/beginner/ros/duckiebot-camera-subscriber
+                            - file: 10-developer-manual/beginner/ros/duckiebot-wheel-encoder-subscriber
+                            - file: 10-developer-manual/beginner/ros/wheel-control
+                            - file: 10-developer-manual/beginner/ros/twist-control
+                        #    - file: 10-developer-manual/beginner/ros/launch-files
+                        #    - file: 10-developer-manual/beginner/ros/namespace-remapping
+                        #    - file: 10-developer-manual/beginner/ros/cli
+                        #    - file: 10-developer-manual/beginner/ros/gui
+
+                    -   file: 10-developer-manual/beginner/first-python-library/how-to-create-and-update-a-python-library-in-duckietown
+
+                    -   file: 10-developer-manual/beginner/code-hierarchy/duckietown-docker-code-hierarchy-explained
+
+                    -   file: 10-developer-manual/beginner/code-documentation/introduction-to-code-documentation
+                        sections:
+                            - file: 10-developer-manual/beginner/code-documentation/writing-duckietown-code-documentation
+                            - file: 10-developer-manual/beginner/code-documentation/building-duckietown-code-documentation
+
+            -   file: 10-developer-manual/intermediate/intro
+                sections:
+                    -   file: 10-developer-manual/intermediate/dtros/duckietown-dtros-class
+                    -   file: 10-developer-manual/intermediate/diagnostics/index
+                        sections:
+                            - file: 10-developer-manual/intermediate/diagnostics/introduction-to-duckietown-diagnostic-tool
+                            - file: 10-developer-manual/intermediate/diagnostics/get-started-with-duckietown-diagnostic-tool
+                            - file: 10-developer-manual/intermediate/diagnostics/diagnostics-tool-command-reference
+                    -   file: 10-developer-manual/intermediate/simulation/gym-simulation-in-duckietown
+
+
+
     -   caption: FAQ and Troubleshooting
         maxdepth: 1
         numbered: False
