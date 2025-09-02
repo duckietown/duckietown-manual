@@ -214,8 +214,6 @@ parts:
         chapters:
             -   file: 07-further-reading/protip-setting-up-remote-duckiebot-control-with-zerotier
             -   file: 07-further-reading/duckiebot-configurations-explained
-            -   file: 07-further-reading/working-with-docker-in-duckietown
-            -   file: 07-further-reading/version-control-with-git
             -   file: 07-further-reading/ssh-aliases-setup
     -   caption: Instructor Manual
         maxdepth: 3
