@@ -61,6 +61,13 @@ parts:
                 sections:
                   -   file: 20-operations/04-calibrations/duckiebot-camera-calibration
                   -   file: 20-operations/04-calibrations/duckiebot-motor-odometry-calibration
+
+    -   caption: Duckiedrone
+        maxdepth: 1
+        numbered: False
+        chapters:
+            -   file: 25-duckiedrone/duckiedrone
+
     -   caption: Duckietown City
         maxdepth: 3
         numbered: False
@@ -164,11 +171,67 @@ parts:
                 -   file: 60-learning-experiences/04-additional-information/2_workflow/3_workbench
     #            -  file: background/2_workflow/4_evaluate
     #            -  file: background/2_workflow/5_submit
-    -   caption: Placeholder - Developer Manual
-        maxdepth: 1
+
+    -   caption: Developer Manual
         numbered: False
         chapters:
-            -   file: 70-placeholder-developer-manual/placeholder-intro-to-development-with-duckietown
+            -   file: 70-developer-manual/basics/intro
+                sections:
+                    -   file: 70-developer-manual/basics/terminal/terminal-basics
+                    -   file: 70-developer-manual/basics/development/foreword
+                        sections:
+                            - file: 70-developer-manual/basics/development/iso-iec9126
+                            - file: 70-developer-manual/basics/development/linux
+                            - file: 70-developer-manual/basics/development/developer-basics-git
+                            - file: 70-developer-manual/basics/development/developer-basics-docker
+                            - file: 70-developer-manual/basics/development/dts-duckietown-shell
+
+            -   file: 70-developer-manual/beginner/intro
+                sections:
+                    -   file: 70-developer-manual/beginner/dtproject/introduction-to-duckietown-projects
+                        sections:
+                            - file: 70-developer-manual/beginner/dtproject/how-to-create-a-duckietown-project
+                            - file: 70-developer-manual/beginner/dtproject/adding-code-to-a-dtproject
+                            - file: 70-developer-manual/beginner/dtproject/working-with-dtproject-dependencies
+                            - file: 70-developer-manual/beginner/dtproject/running-a-dtproject-on-duckietown-robot
+                            - file: 70-developer-manual/beginner/dtproject/managing-dt-project-launchers
+                            - file: 70-developer-manual/beginner/dtproject/duckietown-project-templates
+
+                    -   file: 70-developer-manual/beginner/ros/introduction-to-using-ros-with-duckietown
+                        sections:
+                            - file: 70-developer-manual/beginner/ros/create-new-ros-project
+                            - file: 70-developer-manual/beginner/ros/catkin-packages
+                            - file: 70-developer-manual/beginner/ros/ros-publisher
+                            - file: 70-developer-manual/beginner/ros/ros-subscriber
+                            - file: 70-developer-manual/beginner/ros/faster-development-workflow
+                            - file: 70-developer-manual/beginner/ros/duckiebot-camera-subscriber
+                            - file: 70-developer-manual/beginner/ros/duckiebot-wheel-encoder-subscriber
+                            - file: 70-developer-manual/beginner/ros/wheel-control
+                            - file: 70-developer-manual/beginner/ros/twist-control
+                        #    - file: 70-developer-manual/beginner/ros/launch-files
+                        #    - file: 70-developer-manual/beginner/ros/namespace-remapping
+                        #    - file: 70-developer-manual/beginner/ros/cli
+                        #    - file: 70-developer-manual/beginner/ros/gui
+
+                    -   file: 70-developer-manual/beginner/first-python-library/how-to-create-and-update-a-python-library-in-duckietown
+
+                    -   file: 70-developer-manual/beginner/code-hierarchy/duckietown-docker-code-hierarchy-explained
+
+                    -   file: 70-developer-manual/beginner/code-documentation/introduction-to-code-documentation
+                        sections:
+                            - file: 70-developer-manual/beginner/code-documentation/writing-duckietown-code-documentation
+                            - file: 70-developer-manual/beginner/code-documentation/building-duckietown-code-documentation
+
+            -   file: 70-developer-manual/advanced/intro
+                sections:
+                    -   file: 70-developer-manual/advanced/dtros/duckietown-dtros-class
+                    -   file: 70-developer-manual/advanced/diagnostics/index
+                        sections:
+                            - file: 70-developer-manual/advanced/diagnostics/introduction-to-duckietown-diagnostic-tool
+                            - file: 70-developer-manual/advanced/diagnostics/get-started-with-duckietown-diagnostic-tool
+                            - file: 70-developer-manual/advanced/diagnostics/diagnostics-tool-command-reference
+                    -   file: 70-developer-manual/advanced/simulation/gym-simulation-in-duckietown
+
     -   caption: Instructor Manual
         maxdepth: 3
         numbered: False
@@ -324,6 +387,4 @@ parts:
         chapters:
             -   file: 99-further-reading/protip-setting-up-remote-duckiebot-control-with-zerotier
             -   file: 99-further-reading/duckiebot-configurations-explained
-            -   file: 99-further-reading/working-with-docker-in-duckietown
-            -   file: 99-further-reading/version-control-with-git
             -   file: 99-further-reading/ssh-aliases-setup
