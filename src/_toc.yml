@@ -121,10 +121,49 @@ parts:
                 -   file: 50-duckiematrix/additional-functionalities/engine-reachability-domains
                 -   file: 50-duckiematrix/additional-functionalities/demonstrations
     -   caption: Learning Experiences
-        maxdepth: 1
+        maxdepth: 2
         numbered: False
         chapters:
-            -   file: 60-learning-experiences/introduction-to-duckietown-lxs
+            -   file: 60-learning-experiences/duckietown-lx-overview
+            -   file: 60-learning-experiences/list-of-supported-learning-experiences-lxs.md
+                sections:
+                -   file: 60-learning-experiences/01-introduction/01-what-is-a-duckietown-learning-experience
+                -   file: 60-learning-experiences/01-introduction/02-lx-features-and-activities
+            -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/00-step-by-step-run-introduction
+                sections:
+                -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/01-duckietown-lx-environment-setup
+                -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/02-instructions-dts-code-workflow-usage
+                    sections:
+                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/03-instructions-how-to-build-duckietown-lx-environment
+                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/04-instructions-how-to-set-up-duckietown-lx-code-editor
+                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/05-instructions-how-to-use-duckietown-lx-workbench-tools
+                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/06-instructions-how-to-evaluate-learning-experience
+                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/07-instructions-how-to-submit-duckietown-learning-experience
+                -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/08-instructions-duckietown-lx-whats-next
+            -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/00-step-by-step-create-introduction
+                sections:
+                -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/01-lx-structure-duckietown-learning-experience
+                -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/02-how-to-create-a-duckietown-learning-experience
+                -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/03-how-to-develop-your-learning-activities
+                    sections:
+                    -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/1_notebooks
+    #                -  file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/2_editor
+    #                -  file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/3_workbench_tools
+    #                -  file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/4_workbench_sims
+    #                -  file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/5_workbench_bots
+                    -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/6_challenges
+                -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/4_publish/index
+                    sections:
+                    -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/4_publish/1_test
+                    -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/4_publish/2_publish
+            -   file: 60-learning-experiences/04-additional-information/2_workflow/index
+                sections:
+        #        - file: background/1_assembly/index
+    #            -  file: background/2_workflow/1_build
+    #            -  file: background/2_workflow/2_editor
+                -   file: 60-learning-experiences/04-additional-information/2_workflow/3_workbench
+    #            -  file: background/2_workflow/4_evaluate
+    #            -  file: background/2_workflow/5_submit
     -   caption: Placeholder - Developer Manual
         maxdepth: 1
         numbered: False

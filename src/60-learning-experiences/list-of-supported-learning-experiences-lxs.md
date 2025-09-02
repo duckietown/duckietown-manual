@@ -1,23 +1,24 @@
 (duckiebot-lxs)=
-# The Learning Experiences (`LX`)
+# The Duckiebot Learning Experiences (`LX`)
 
 ```{seo}
 :description: The LXs (Learning Experiences) available for a Duckiebot.
 :keywords: Duckietown, Duckiebot, LXs, Learning Experiences
 ```
 
-This chapter describes the `LXs` (`Learning Experiences`) available for your Duckiebot.
+This chapter describes the `LXs` (`Learning Experiences`) available for Duckiebots.
 
 ```{needget}
 * Completed [](db-camera-calibration).
 * Completed [](db-wheels-calibration).
 ---
-Knowledge on the `LXs` available for your Duckiebot.
+* Links to currently supported `LXs` for Duckiebots.
 ```
 
-## Introduction
+(duckiebot-lxs-list)=
+## Supported Duckiebot LXs
 
-The following `LXs` are available for your Duckiebot:
+The following `LXs` are available for your Duckiebot, which, unless otherwise specified, in assumed to be a model `DB21J4`. See [](duckiebot-configurations) for definitions of Duckiebot models. 
 
 <!--
 ### Daffy LXs 
@@ -39,9 +40,17 @@ The following `LXs` are available for your Duckiebot:
 - [EKF Localization](https://github.com/duckietown/lx-ekf-localization)
 - [Object Detection](https://github.com/duckietown/lx-object-detection)
 
+<!--
+(duckiedrone-lxs-list)=
+## Supported Duckiedrone LXs
+
+
+-->
+
 ```{todo}
-this must be updated to the new `LX` workflow.
+All content below is a duplicate/triplicate and should be proofread and moved elsewhere.
 ```
+
 
 - See [Dev Manual](https://docs.duckietown.com/ente/devmanual-lx/consume/01-duckietown-lx-environment-setup.html#env-setup) for setup instructions
 
@@ -75,7 +84,6 @@ In here you will see a number of folders. Each folder corresponds to an exercise
 
 
 ### The Anatomy of an Exercise
-
 
 Exercises should contain all of the following:
 
