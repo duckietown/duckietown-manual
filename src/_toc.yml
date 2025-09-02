@@ -136,7 +136,6 @@ parts:
             -   file: 05-learning-experiences/introduction-to-duckietown-lxs
 
     -   caption: Developer Manual
-        maxdepth: 3
         numbered: False
         chapters:
             -   file: 10-developer-manual/basics/intro
@@ -186,15 +185,15 @@ parts:
                             - file: 10-developer-manual/beginner/code-documentation/writing-duckietown-code-documentation
                             - file: 10-developer-manual/beginner/code-documentation/building-duckietown-code-documentation
 
-            -   file: 10-developer-manual/intermediate/intro
+            -   file: 10-developer-manual/advanced/intro
                 sections:
-                    -   file: 10-developer-manual/intermediate/dtros/duckietown-dtros-class
-                    -   file: 10-developer-manual/intermediate/diagnostics/index
+                    -   file: 10-developer-manual/advanced/dtros/duckietown-dtros-class
+                    -   file: 10-developer-manual/advanced/diagnostics/index
                         sections:
-                            - file: 10-developer-manual/intermediate/diagnostics/introduction-to-duckietown-diagnostic-tool
-                            - file: 10-developer-manual/intermediate/diagnostics/get-started-with-duckietown-diagnostic-tool
-                            - file: 10-developer-manual/intermediate/diagnostics/diagnostics-tool-command-reference
-                    -   file: 10-developer-manual/intermediate/simulation/gym-simulation-in-duckietown
+                            - file: 10-developer-manual/advanced/diagnostics/introduction-to-duckietown-diagnostic-tool
+                            - file: 10-developer-manual/advanced/diagnostics/get-started-with-duckietown-diagnostic-tool
+                            - file: 10-developer-manual/advanced/diagnostics/diagnostics-tool-command-reference
+                    -   file: 10-developer-manual/advanced/simulation/gym-simulation-in-duckietown
 
 
 

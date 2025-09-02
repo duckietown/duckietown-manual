@@ -1,9 +1,9 @@
 (part:sw_diagnostics)=
-# Intermediate – Diagnostics
+# Advanced – Diagnostics
 
 ```{needget}
 * Basic experience running code on the Duckiebot
-* Understanding of the [DTROS node structure](sec:intermediate-dtros)
+* Understanding of the [DTROS node structure](sec:advanced-dtros)
 ---
 * Ability to record and inspect system‑level statistics with the Duckietown Diagnostics tool
 ```
@@ -15,7 +15,7 @@ Further sections explain how to start a recording session, visualize the data, a
 
 <!--
 (part:sw_diagnostics)=
-# Intermediate - Diagnostics
+# Advanced - Diagnostics
 
 One of the strengths of Duckietown is that of allowing complex 
 (sometimes state-of-the-art) algorithms to run on low-end computing

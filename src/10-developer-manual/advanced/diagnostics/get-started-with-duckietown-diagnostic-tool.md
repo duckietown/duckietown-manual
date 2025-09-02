@@ -45,7 +45,7 @@ Open <https://dashboard.duckietown.com/diagnostics>.
 
 Logs are indexed by **Group**, **Subgroup**, and hostname.
 
-```{figure} ../../_images/intermediate/diagnostics/diagnostics_web_dropdown.png
+```{figure} ../../_images/advanced/diagnostics/diagnostics_web_dropdown.png
 :width: 100%
 :alt: Selecting diagnostics test on the Duckietown Dashboard
 
@@ -134,7 +134,7 @@ Remember, when the subgroup is not explicitly specified with the argument
 `-S/--subgroup`, `default` is used.
 
 
-```{figure} ../../_images/intermediate/diagnostics/diagnostics_web_dropdown.png
+```{figure} ../../_images/advanced/diagnostics/diagnostics_web_dropdown.png
 :width: 100%
 :alt: selecting diagnostics test on dashboard.duckietown.org
 

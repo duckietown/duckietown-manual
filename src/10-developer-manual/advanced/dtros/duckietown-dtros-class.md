@@ -3,7 +3,7 @@
 :keywords: Duckietown, DTROS, ROS node, Python, parameters, publishers, subscribers, config files, launch files
 ```
 
-(sec:intermediate-dtros)=
+(sec:advanced-dtros)=
 # The **DTROS** class
 
 ```{needget}
@@ -319,7 +319,7 @@ By following these guidelines—and leveraging the capabilities baked into **`DT
 
 
 <!--
-(sec:intermediate-dtros)=
+(sec:advanced-dtros)=
 # The **DTROS** class
 
 This section deals with how you should write the code in a ROS node. 

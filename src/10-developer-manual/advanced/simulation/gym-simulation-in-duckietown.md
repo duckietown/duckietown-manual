@@ -12,7 +12,7 @@
 * Experience with running and testing on the Duckietown simulator 
 ```
 
-```{figure} ../../_images/intermediate/simulator/simplesim_free.png
+```{figure} ../../_images/advanced/simulator/simplesim_free.png
 :name: fig:simplesim_free
 
 ```
@@ -50,7 +50,7 @@ intersections, obstacles, Duckie pedestrians, and other Duckiebots.
 Gym-Duckietown is fast, open, and very customizable. What started as a lane-following simulator has evolved into a fully functioning autonomous driving simulator that you can use to train and test your Machine Learning, Reinforcement Learning, Imitation Learning, or even classical robotics algorithms. Gym-Duckietown offers a wide range of tasks, from simple lane-following to full city navigation with dynamic obstacles. Gym-Duckietown also ships with features, wrappers, and tools that 
 can help you bring your algorithms to the real robot, including [domain-randomization](https://blog.openai.com/spam-detection-in-the-physical-world/), accurate camera distortion, and differential-drive physics (and most importantly, realistic waddling).
 
-```{figure} ../../_images/intermediate/simulator/finalmain.gif
+```{figure} ../../_images/advanced/simulator/finalmain.gif
 :name: fig:finalmain-sim
 
 ```
@@ -160,7 +160,7 @@ method, your learned models will likely overfit to various aspects of the simula
 which will not transfer to the real world. 
 
 
-```{figure} ../../_images/intermediate/simulator/domainrand-sim.gif
+```{figure} ../../_images/advanced/simulator/domainrand-sim.gif
 :name: fig:domainrand-sim
 
 ```
