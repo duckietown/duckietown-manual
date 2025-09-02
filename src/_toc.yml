@@ -61,6 +61,13 @@ parts:
                 sections:
                   -   file: 20-operations/04-calibrations/duckiebot-camera-calibration
                   -   file: 20-operations/04-calibrations/duckiebot-motor-odometry-calibration
+
+    -   caption: Duckiedrone
+        maxdepth: 1
+        numbered: False
+        chapters:
+            -   file: 25-duckiedrone/duckiedrone
+
     -   caption: Duckietown City
         maxdepth: 3
         numbered: False
