@@ -129,7 +129,7 @@ parts:
         maxdepth: 1
         numbered: False
         chapters:
-            -   file: 70-placeholder-developer-manual/introduction-to-developing-with-duckietown
+            -   file: 70-placeholder-developer-manual/placeholder-intro-to-development-with-duckietown
     -   caption: Instructor Manual
         maxdepth: 3
         numbered: False
