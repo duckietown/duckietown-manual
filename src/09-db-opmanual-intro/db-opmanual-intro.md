@@ -1,5 +1,5 @@
 (book-db-opmanual)=
-# The Duckiebot Operation Manual
+# Overview 
 
 ```{seo}
 :description: Welcome to the Duckiebot Operation Manual - the starting point for setting up your Duckietown experience.
@@ -8,7 +8,7 @@
 
 Welcome to the Duckiebot operation manual!
 
-This book is a great place for getting started with Duckietown. 
+This is a great place for getting started with Duckietown. 
 
 It contains step-by-step instructions on how to set up your computer, assemble, calibrate, and operate a Duckiebot, along with troubleshooting tips.
 

@@ -4,10 +4,10 @@
 ```
 
 (book-duckietown-opmanual-intro)=
-# Duckietown Urban Environments
+# Overview
 
 
-This book describes the Duckietown appearance specifications and assembly instructions.
+This section describes the Duckietown appearance specifications and assembly instructions.
  
 Specifications are a set of rules for which a functional system has been verified. 
 

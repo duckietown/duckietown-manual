@@ -20,3 +20,7 @@ Welcome to the Duckiematrix, where simulation and reality are blurred!
 The Duckiematrix is a Unity-based photorealistic virtual environment for Duckietown supporting digital twins of Duckietown robots.
 
 Its purpose is to simulate the physics and aesthetics of a physical Duckietown environment, as well as the sensing and acting capabilities of Duckietown robots within that environment.
+
+
+```{tableofcontents}
+```

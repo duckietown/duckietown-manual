@@ -10,12 +10,13 @@
 An operational (assembled + initialized) Duckiebot.
 ```
 
-(intro-db-assembly)=
-# Setup - Duckiebot 
+(duckiebot-setup-intro)=
+# Setting up your Duckiebot
 
-This section describes how to set up a Duckiebot, including the SD card initialization procedure as well as the hardware assembly.
+In this section we will describe how you can get started with the Duckiebot. 
+At the end of these steps you should have a Duckiebot that is assembled, that 
+you can connect to and is ready to use. 
 
-## In this Section
 
 ```{tableofcontents}
 ```

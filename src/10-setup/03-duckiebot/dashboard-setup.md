@@ -1,5 +1,5 @@
 (duckiebot-dashboard-setup)=
-# Setup - Duckiebot Dashboard
+# Dashboard Setup
 
 ```{seo}
 :description: Tep by step instructions on how to set up your Duckiebot Dashboard in Duckietown.
@@ -13,7 +13,7 @@
 - A working Duckiebot Dashboard for hardware and software diagnostics
 ```
 
-This section shows how to install a perform the first setup of the Duckietown Dashboard on the Duckiebot.
+This section describes how to install and perform the first setup of the Duckietown Dashboard on the Duckiebot.
 
 <!--
 (compose-platform)=
