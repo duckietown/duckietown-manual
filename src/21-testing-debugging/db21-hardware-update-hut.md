@@ -1,5 +1,5 @@
 (reflash-microcontroller)=
-# Debug - Re-flash HUT
+# Re-flashing the "HUT"
 
 ```{seo}
 :description: How to reflash the Duckietown Duckiebot HUT microcontroller.

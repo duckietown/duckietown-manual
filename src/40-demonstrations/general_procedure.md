@@ -1,7 +1,7 @@
 (general-demo-procedure)=
 # General Procedure for Running Demos
 
-In general, any duckietown repository that has been built from one of the [templates](temp-sw-devmanual-project-templates).
+In general, any duckietown repository that has been built from one of the [templates](project-templates).
 
 In some cases, you may have an option to run the actual demo code on your *laptop* and communicate with the robot, or
 to directly run the code on the *robot*. 
@@ -14,7 +14,7 @@ through a wireless network which will induce a random latency and can cause unex
 In either case the first step will be to build the project image. To do so, enter the 
 the repository containing the project code and run:
 
-```commandline
+```bash
 dts devel build -H [!ROBOTNAME]
 ```
 ```{note}
@@ -30,7 +30,7 @@ the image will be *pulled* from the registry, which can take some time.
 
 Then you can run the demo with the command 
 
-```commandline
+```bash
 dts devel run -H [!ROBOTNAME] -L [!LAUNCHER_NAME]
 ```
 

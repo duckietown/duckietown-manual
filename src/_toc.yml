@@ -61,6 +61,7 @@ parts:
                   -   file: 21-testing-debugging/db21-hardware-update-hut # keep hardware up to date
                   -   file: 21-testing-debugging/db21-hardware-update-duckiebattery
                   -   file: 06-troubleshooting/how-to-get-support
+                  -   file: 04-software-tools/duckietown-duckiebot-additional-software-tools
                   -   file: 06-troubleshooting/duckiebot-network-faqs
              #    -   file: 06-troubleshooting/duckiebot-hardware-components
                   -   file: 06-troubleshooting/reflashing-jetson-nano-development-kit-4gb-duckietown
@@ -95,25 +96,9 @@ parts:
             -   file: 50-duckiematrix/introduction-to-the-duckiematrix-virtual-environment
                 sections:
                 -   file: 50-duckiematrix/getting-started/duckiematrix-first-steps
-                    sections:
-                    -   file: 50-duckiematrix/getting-started/architecture
-                    -   file: 50-duckiematrix/getting-started/world-and-matrix-sides
-                    -   file: 50-duckiematrix/getting-started/running-the-duckiematrix
-                    -   file: 50-duckiematrix/getting-started/dtps-interfaces
+                -   file: 50-duckiematrix/getting-started/running-the-duckiematrix
                 -   file: 50-duckiematrix/virtual-duckietown-robots/introduction-to-virtual-duckiebots
-                    sections:
-                    -   file: 50-duckiematrix/virtual-duckietown-robots/attaching-a-duckietown-robot-to-a-duckiematrix-entity
-                    -   file: 50-duckiematrix/virtual-duckietown-robots/dts-commands
-                    -   file: 50-duckiematrix/virtual-duckietown-robots/drivers
-                #-   file: 50-duckiematrix/test/test
-                -   file: 50-duckiematrix/additional-functionalities/introduction-to-additional-functionalities
-                    sections:
-                    -   file: 50-duckiematrix/additional-functionalities/maps/duckiematrix-maps
-                    -   file: 50-duckiematrix/additional-functionalities/maps/custom-duckiematrix-maps
-                    -   file: 50-duckiematrix/additional-functionalities/links
-                    -   file: 50-duckiematrix/additional-functionalities/modes
-                    -   file: 50-duckiematrix/additional-functionalities/engine-reachability-domains
-                    -   file: 50-duckiematrix/additional-functionalities/demonstrations
+                -   file: 70-developer-manual/simulation/gym-simulation-in-duckietown
 
             -   file: 40-demonstrations/db-demo-intro
                 sections:
@@ -136,59 +121,61 @@ parts:
             -   file: 70-developer-manual/basics/intro
                 sections:
                     -   file: 70-developer-manual/basics/terminal/terminal-basics
-                    -   file: 70-developer-manual/basics/development/foreword
-                        sections:
-                            - file: 70-developer-manual/basics/development/iso-iec9126
-                            - file: 70-developer-manual/basics/development/linux
-                            - file: 70-developer-manual/basics/development/developer-basics-git
-                            - file: 70-developer-manual/basics/development/developer-basics-docker
-                            - file: 70-developer-manual/basics/development/dts-duckietown-shell
+                    -   file: 70-developer-manual/basics/development/iso-iec9126
+                    -   file: 70-developer-manual/basics/development/linux
+                    -   file: 70-developer-manual/basics/development/developer-basics-git
+                    -   file: 70-developer-manual/basics/development/developer-basics-docker
 
-            -   file: 70-developer-manual/beginner/intro
+            -   file: 70-developer-manual/dtproject/introduction-to-duckietown-projects
                 sections:
-                    -   file: 70-developer-manual/beginner/dtproject/introduction-to-duckietown-projects
-                        sections:
-                            - file: 70-developer-manual/beginner/dtproject/how-to-create-a-duckietown-project
-                            - file: 70-developer-manual/beginner/dtproject/adding-code-to-a-dtproject
-                            - file: 70-developer-manual/beginner/dtproject/working-with-dtproject-dependencies
-                            - file: 70-developer-manual/beginner/dtproject/running-a-dtproject-on-duckietown-robot
-                            - file: 70-developer-manual/beginner/dtproject/managing-dt-project-launchers
-                            - file: 70-developer-manual/beginner/dtproject/duckietown-project-templates
+                    - file: 70-developer-manual/dtproject/how-to-create-a-duckietown-project
+                    - file: 70-developer-manual/dtproject/adding-code-to-a-dtproject
+                    - file: 70-developer-manual/dtproject/working-with-dtproject-dependencies
+                    - file: 70-developer-manual/dtproject/running-a-dtproject-on-duckietown-robot
+                    - file: 70-developer-manual/dtproject/managing-dt-project-launchers
+                    - file: 70-developer-manual/dtproject/duckietown-project-templates
 
-                    -   file: 70-developer-manual/beginner/ros/introduction-to-using-ros-with-duckietown
-                        sections:
-                            - file: 70-developer-manual/beginner/ros/create-new-ros-project
-                            - file: 70-developer-manual/beginner/ros/catkin-packages
-                            - file: 70-developer-manual/beginner/ros/ros-publisher
-                            - file: 70-developer-manual/beginner/ros/ros-subscriber
-                            - file: 70-developer-manual/beginner/ros/faster-development-workflow
-                            - file: 70-developer-manual/beginner/ros/duckiebot-camera-subscriber
-                            - file: 70-developer-manual/beginner/ros/duckiebot-wheel-encoder-subscriber
-                            - file: 70-developer-manual/beginner/ros/wheel-control
-                            - file: 70-developer-manual/beginner/ros/twist-control
-                        #    - file: 70-developer-manual/beginner/ros/launch-files
-                        #    - file: 70-developer-manual/beginner/ros/namespace-remapping
-                        #    - file: 70-developer-manual/beginner/ros/cli
-                        #    - file: 70-developer-manual/beginner/ros/gui
-
-                    -   file: 70-developer-manual/beginner/first-python-library/how-to-create-and-update-a-python-library-in-duckietown
-
-                    -   file: 70-developer-manual/beginner/code-hierarchy/duckietown-docker-code-hierarchy-explained
-
-                    -   file: 70-developer-manual/beginner/code-documentation/introduction-to-code-documentation
-                        sections:
-                            - file: 70-developer-manual/beginner/code-documentation/writing-duckietown-code-documentation
-                            - file: 70-developer-manual/beginner/code-documentation/building-duckietown-code-documentation
-
-            -   file: 70-developer-manual/advanced/intro
+            -   file: 70-developer-manual/ros/introduction-to-using-ros-with-duckietown
                 sections:
-                    -   file: 70-developer-manual/advanced/dtros/duckietown-dtros-class
-                    -   file: 70-developer-manual/advanced/diagnostics/index
-                        sections:
-                            - file: 70-developer-manual/advanced/diagnostics/introduction-to-duckietown-diagnostic-tool
-                            - file: 70-developer-manual/advanced/diagnostics/get-started-with-duckietown-diagnostic-tool
-                            - file: 70-developer-manual/advanced/diagnostics/diagnostics-tool-command-reference
-                    -   file: 70-developer-manual/advanced/simulation/gym-simulation-in-duckietown
+                    - file: 70-developer-manual/ros/create-new-ros-project
+                    - file: 70-developer-manual/ros/catkin-packages
+                    - file: 70-developer-manual/ros/ros-publisher
+                    - file: 70-developer-manual/ros/ros-subscriber
+                    - file: 70-developer-manual/ros/faster-development-workflow
+                    - file: 70-developer-manual/ros/duckiebot-camera-subscriber
+                    - file: 70-developer-manual/ros/duckiebot-wheel-encoder-subscriber
+                    - file: 70-developer-manual/ros/wheel-control
+                    - file: 70-developer-manual/ros/twist-control
+                #    - file: 70-developer-manual/ros/launch-files
+                #    - file: 70-developer-manual/ros/namespace-remapping
+                #    - file: 70-developer-manual/ros/cli
+                #    - file: 70-developer-manual/ros/gui
+
+            -   file: 70-developer-manual/first-python-library/how-to-create-and-update-a-python-library-in-duckietown
+
+            -   file: 70-developer-manual/code-documentation/introduction-to-code-documentation
+                sections:
+                    - file: 70-developer-manual/code-documentation/writing-duckietown-code-documentation
+                    - file: 70-developer-manual/code-documentation/building-duckietown-code-documentation
+
+            -   file: 70-developer-manual/dtros/duckietown-dtros-class
+            -   file: 70-developer-manual/diagnostics/index
+                sections:
+                    - file: 70-developer-manual/diagnostics/introduction-to-duckietown-diagnostic-tool
+                    - file: 70-developer-manual/diagnostics/get-started-with-duckietown-diagnostic-tool
+                    - file: 70-developer-manual/diagnostics/diagnostics-tool-command-reference
+            -   file: 70-developer-manual/code-hierarchy/duckietown-docker-code-hierarchy-explained
+            -   file: 70-developer-manual/duckiematrix/intro
+                sections:
+                -   file: 70-developer-manual/duckiematrix/architecture
+                -   file: 70-developer-manual/duckiematrix/world-and-matrix-sides
+                -   file: 70-developer-manual/duckiematrix/dtps-interfaces
+                -   file: 70-developer-manual/duckiematrix/maps/duckiematrix-maps
+                -   file: 70-developer-manual/duckiematrix/maps/custom-duckiematrix-maps
+                -   file: 70-developer-manual/duckiematrix/links
+                -   file: 70-developer-manual/duckiematrix/modes
+                -   file: 70-developer-manual/duckiematrix/engine-reachability-domains
+
             -   file: 90-contributing/introduction
                 sections:
                 -   file: 90-contributing/how-to-edit
@@ -197,10 +184,7 @@ parts:
                     -   file: 90-contributing/edit-the-duckietown-docs-with-local-edits
                 -   file: 90-contributing/format-and-style-guidelines
                 -   file: 90-contributing/duckietown-manual-cheatsheet
-            -   file: 04-software-tools/software-tools-introduction
-                sections:
-                - file: 04-software-tools/duckietown-postal-service-dtps
-                - file: 04-software-tools/duckietown-duckiebot-additional-software-tools
+            -   file: 04-software-tools/duckietown-postal-service-dtps
                 # -   file: 04-software-tools/duckietown-duckiebot-image-viewer
                 # -   file: 04-software-tools/duckiebot-keyboard-controller
                 # -   file: 04-software-tools/duckiebot-led-lights-controller

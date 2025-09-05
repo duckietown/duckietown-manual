@@ -2,11 +2,11 @@
 # The Duckietown Manual
 
 ```{seo}
-:description: Welcome to the Duckiebot Operation Manual - the starting point for setting up your Duckietown experience.
+:description: Welcome to the Duckiebot Manual - the starting point for setting up your Duckietown experience.
 :keywords: duckietown, duckiebot, operation manual, robotics class, getting started, autonomous driving, db21, db21-j4, AV, autonomous vehicle, self-driving car, self-driving, robot autonomy, AI robotics, simulation, hardware, jupyter notebook, nvidia jetson nano 4gb, jetson nano, assembly, calibration, operation, development, robot handling, engineering education
 ```
 
-Welcome to the Duckiebot operation manual!
+Welcome to the Duckietown Manual!
 
 This book is a great place for getting started with Duckietown. 
 
@@ -18,16 +18,21 @@ If you are new to Duckietown, you should find a course that helps you navigate t
 
 If you are a Duckietown veteran, treat this book as a reference manual on how to do specific things. 
 
-If you have suggestions on how to improve this documentation, read the [Duckietown Book Writer Manual]() to learn how to make contributions.
-
-```{todo}
-add intra link to book writer manual once integrated
-```
+If you have suggestions on how to improve this documentation, 
+read the [Duckietown Book Writer Manual](book-devmanual-intro) to learn how to make contributions.
 
 (how-to-get-help-pointer)=
 ## How to get help
 
 Read the [FAQ and Troubleshooting](how-to-get-help) to find out how to get support in Duckietown.
+
+This book is structured in 3 main parts:
+
+1. The first part is about how to build and use the robots, including running our demos and learning experiences.
+2. The second part is about going further and using this platform to do more advanced things that you build
+3. The third part is about using this platform as part of a course that you are teaching. 
+
+Use the navigation bar on the left or below to get started. 
 
 (book-dt-manual-toc)=
 ## Table of Contents

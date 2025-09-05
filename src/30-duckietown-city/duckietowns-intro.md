@@ -1,4 +1,4 @@
-(book-db-opmanual)=
+(duckietowns-intro)=
 # Building Duckietowns
 
 ```{seo}

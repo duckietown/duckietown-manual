@@ -1,4 +1,4 @@
-(db-demos-intro)=
+(db-lx-intro)=
 # Duckiebot Learning Experiences
 
 ```{seo}

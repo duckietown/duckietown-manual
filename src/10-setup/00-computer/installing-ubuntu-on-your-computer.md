@@ -11,7 +11,7 @@
 ```
 
 (setup-computer)=
-# Setup - Computer
+# Your Computer
 
 The first step in Duckietown is to [set up a computer appropriately](setup-install-ubuntu).
 
