@@ -9,7 +9,7 @@
 #  ROS
 
 ```{needget}
-* A computer set up with the [Duckietown software requirements](laptop-setup)
+* A computer set up with the [Duckietown software requirements](setup-computer)
 * An initialized [Duckiebot](duckiebot-setup-intro)
 * [Completed tutorial on DTProject](dtproject)
 ---

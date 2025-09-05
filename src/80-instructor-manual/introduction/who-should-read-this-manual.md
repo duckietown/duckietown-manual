@@ -4,11 +4,11 @@
 ```
 
 (who-should-read)=
-# Who Should Read This Book?
+# Who Should Read This?
 
-This book is intended to be a resource for people who are looking to **build** a class that uses the Duckietown platform in some way. 
+This resource is intended to be a resource for people who are looking to **build** a class that uses the Duckietown platform in some way. 
 
-In other words, this book is designed for:
+In other words, this is designed for:
 
 * **teachers**, instructors or professors; 
 * **teaching assistants** (TAs) may also find the content here useful. 
