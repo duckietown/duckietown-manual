@@ -21,7 +21,7 @@ This chapter describes how to run the Duckiematrix.
 To run a local `Engine` and `Renderer` using the embedded `sandbox` `Map` with the tutorial enabled, run:
 
 ```shell
-dts matrix run --standalone --embedded --map sandbox --tutorial
+dts matrix run --standalone --embedded --map sandbox
 ```
 
 ```{note}
