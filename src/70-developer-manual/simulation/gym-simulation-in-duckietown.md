@@ -3,7 +3,7 @@
 :keywords: Duckietown simulator, gym-duckietown, robotics simulation, domain randomisation, reinforcement learning, Python OpenGL
 ```
 
-(duckietown-simulation)=
+(duckietown-gym-simulation)=
 # OpenGL-based Gym Environment (legacy)
 
 ```{needget}

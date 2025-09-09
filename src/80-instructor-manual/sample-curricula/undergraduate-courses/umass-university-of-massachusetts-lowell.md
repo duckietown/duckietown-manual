@@ -1,6 +1,12 @@
 (undergraduate-curricula-lowell)=
 # EECE 5560 at the University of Massachusetts Lowell
 
+```{seo}
+:description: Sample curriculum from Prof Paul Robinette at UMass Lowell
+:keywords: Duckietown, education, UMass Lowell
+```
+
+
 Prof. Paul Robinette has been teaching an undergraduate course in robotics at the University of Massachusetts Lowell for a number of years. The course focuses on the basics of robotic systems. 
 
 See full details of the courses including syllabus and assignments at the following links:

@@ -1,5 +1,11 @@
 (db-troubleshooting-duckiebattery)=
-# Debug - Duckiebattery
+# The Duckiebattery
+
+```{seo}
+:description: Troubleshooting the Duckiebattery
+:keywords: Duckietown, Duckiebot, Duckiebattery
+```
+
 
 Refer to [](setup-duckiebot-battery-safety-basics) to learn about the Duckiebattery and how to handle it. 
 

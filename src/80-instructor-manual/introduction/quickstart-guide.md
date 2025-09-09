@@ -21,7 +21,7 @@ You should be reading this section if your class start is imminent, and you have
 
  - [Join the Duckietown Slack](https://duckietown.com/join-slack) (and invite your staff to do so as well) to facilitate communication with the Duckietown staff. 
 
- - Decide how you are going to evaluate the students. We have a set of curated [exercises](learning-experiences), but you are also free to [build your own](temp-lx-devmanual-lx-dev-intro). These exercises are automatically graded with an [automated evaluation](evaluation) system but also can be run on real robot hardware. You may also want your students to do more involved [projects](student-projects). 
+ - Decide how you are going to evaluate the students. We have a set of curated [learning experiences](db-lx-intro), but you are also free to [build your own](temp-lx-devmanual-lx-dev-intro). These exercises are automatically graded with an [automated evaluation](evaluation) system but also can be run on real robot hardware. You may also want your students to do more involved [projects](student-projects). 
 
  - Someone in your course staff will want to develop some level of familiarity with [the code](code). 
 

@@ -6,30 +6,38 @@
 # Activities and Exercises: Learning Experiences (LXs)
 
 ```{note}
-Duckietown learning experiences (LXs) a ready-to-go "weeks" of class. They include videos, notes, interactive activities, and exercises, and are integrated with the Duckietown technical infrastructure (simulator, hardware, evaluation infrastructure).  
+Duckietown learning experiences (LXs) are ready-to-go "weeks" of class. They include videos, notes, interactive activities, 
+and exercises, and are integrated with the Duckietown technical infrastructure (Duckiematrix + real Duckiebot hardware).  
 ```
 
 We define: 
 * "activities" as learning tasks to which solutions are provided. Activities are designed to be "tutorials" for specific topics.
-* "exercises" as learning tasks to which solutions are not provided. Solutions to exercises are typically matched to "challenges", which provide [evaluations of performance](evaluation) across engineering metrics. These evaluations can be leveraged to, e.g., automatically grade student assignments. 
+* "exercises" as learning tasks to which solutions are not provided.  
 * Duckietown "learning activities" (LX): as standalone classes on specific topics, typically containing activities, exercises, videos, slides, quizzes and pointers to further reading. LXs can be thought of as a week of (university-level) classes.
 
 Both activities and exercises are structured to include [Jupyter Notebooks](https://jupyter.org/) that introduce a concept followed by coding blocks. For the most part, the result is a piece of code that can be easily:
 
  - Run in a simulation environment;
  - Run on robot hardware;
- - Submit for automatic evaluation.
  
 The pedagogical goal in general is to explore some narrowly scoped component of the autonomy stack with everything else being "hidden" (or provided) so that the student may experience the impact of that component on the others. Whenever possible, the result of the exercise should be an "end-to-end" experience that makes the robot do something (e.g., move). 
 
-For a complete description of the technical components of the learning experiences (LXs) please refer to the [Learning Experiences Manual](temp-lx-devmanual-lx-dev-intro). This includes information about the workflow for completing an exercise and the procedure for creating your own learning experience from scratch. 
+For a complete description of the components of the learning experiences (LXs) please refer to the [](duckiebot-lxs). 
+For a guide for creating new learning experiences see [](creating-new-lxs). 
 
-For help on how to create learning experiences, [open a question on Stack Overflow with the tag `LX`](https://stackoverflow.com/questions/ask?tags=LX) (preferred), or ask on the [#help-build-lxs channel](https://duckietown.slack.com/archives/C067EHWQ09Y) on Slack.
+For help on how to create learning experiences, [open a question on Stack Overflow with the tag `LX`](https://stackoverflow.com/questions/ask?tags=LX) (preferred), 
+or ask on the [#help-build-lxs channel](https://duckietown.slack.com/archives/C067EHWQ09Y) on Slack.
 
 (mooc-exercises)=
 ## MOOC Activities and Exercises
 
-The [Self-driving Cars with Duckietown Massive Online Open Class](https://duckietown.com/self-driving-cars-with-duckietown-mooc/) comprises the following learning experiences. Activities and exercises can be accessed independently of the MOOC at:
+```{warning}
+The current version of the MOOC is still using the `daffy` version of the code and exercise. If you would like to use it, 
+you should probably refer to the [daffy version of the documentation](https://docs.duckietown.org/daffy)
+```
+
+The [Self-driving Cars with Duckietown Massive Online Open Class](https://duckietown.com/self-driving-cars-with-duckietown-mooc/) comprises the following learning experiences. 
+Activities and exercises can be accessed independently of the MOOC at:
 
 ```{list-table}
 :header-rows: 1

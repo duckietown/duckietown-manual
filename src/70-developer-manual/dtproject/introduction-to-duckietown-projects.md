@@ -4,7 +4,7 @@
 ```
 
 (dtproject)=
-# The `DTProject`
+# Overview of the  `DTProject`
 
 ```{needget}
 * [Working environment setup](setup-computer)
@@ -14,11 +14,6 @@
 * Learn how to use DTProjects, the most important building block in Duckietown
 ```
 
-
-## Table of contents
-
-```{tableofcontents}
-```
 
 (dtproject-intro)=
 ## Introduction

@@ -111,6 +111,6 @@ Similarly to Docker, although we make some effort to abstract things away in Pyt
 
 ROS is a "middleware" software that acts as a _glue_ for the different components of the robot autonomy stack and provides tools for message passing, parameter tuning, and debugging among other things. 
 
-We have some [specific resources](temp-sw-devmanual-dtproject-ros) for getting started with ROS in the context of Duckietown. It is worth getting familiar with these (and even potentially assigning them as homework assignments for the students).
+We have some [specific resources](dtproject-ros) for getting started with ROS in the context of Duckietown. It is worth getting familiar with these (and even potentially assigning them as homework assignments for the students).
 
 Going forward, Duckietown will support different middleware solutions, such as ROS2. For additional information on this effort, or if you would like to help, please reach out to us on Slack or at [info@duckietown.com](mailto:info@duckietown.com).

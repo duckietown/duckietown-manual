@@ -49,8 +49,14 @@ If you decide to make the project groups submit progress reports, you may find t
 (project-development-workflow)=
 ## Development Workflow for Projects
 
-Although you may exclusively use the [`dts code` workflow](temp-lx-devmanual-devmanual-lx-dts-code-workflow) for the exercises, you may find this limiting for more expansive projects. The `dts code` workflow is designed specifically for learning experiences that are quite narrowly scoped and specific. 
+Although you may exclusively use the [`dts code` workflow](duckiebot-lxs) for the exercises, you may find this limiting 
+for more expansive projects. The `dts code` workflow is designed specifically for learning experiences that are quite narrowly scoped and specific. 
 
-In the context of projects, the scope may be larger and your students may need more flexibility. As a result, in general, we recommend that students get familiar with the [`DTProjects`](temp-sw-devmanual-dtproject) structure. In particular, we have [project template](temp-sw-devmanual-project-templates-docs) repositories for different types of projects. This workflow uses the `dts devel` interface as opposed to `dts code`. A good place to start is [](temp-sw-devmanual-ros-project-create-new).
+In the context of projects, the scope may be larger and your students may need more flexibility. As a result, in general, 
+we recommend that students get familiar with the [`DTProjects`](dtproject) structure. 
+In particular, we have [project template](project-templates) repositories for different types of projects. 
+This workflow uses the `dts devel` interface as opposed to `dts code`. 
+A good place to start is [](creating-new-demos) to learn about creating demos and specifically [](dtproject-ros) if you
+would like to use ROS.
 
  To discuss this topic you can reach out on the [#devel-dt-projects](https://duckietown.slack.com/archives/C067CHR5H8D) Slack channel.

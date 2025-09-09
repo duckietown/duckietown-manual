@@ -126,8 +126,9 @@ parts:
                     -   file: 70-developer-manual/basics/development/developer-basics-git
                     -   file: 70-developer-manual/basics/development/developer-basics-docker
 
-            -   file: 70-developer-manual/dtproject/introduction-to-duckietown-projects
+            -   file: 70-developer-manual/dtproject/creating-demos
                 sections:
+                    - file: 70-developer-manual/dtproject/introduction-to-duckietown-projects
                     - file: 70-developer-manual/dtproject/how-to-create-a-duckietown-project
                     - file: 70-developer-manual/dtproject/adding-code-to-a-dtproject
                     - file: 70-developer-manual/dtproject/working-with-dtproject-dependencies

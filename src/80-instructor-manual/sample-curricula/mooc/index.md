@@ -1,6 +1,12 @@
 (mooc-sample-curricula)=
 # Self-Driving Cars with Duckietown (MOOC)
 
+```{seo}
+:description: Description of the Duckietown MOOC which is hosted on EdX
+:keywords: Duckietown, education, MOOC, EdX
+```
+
+
 "Self-Driving Cars with Duckietown" is a massive open online course (MOOC): a completely remote course that can be attended by anyone for free. 
 
 * For general information, see [our website](https://duckietown.com/mooc/);
