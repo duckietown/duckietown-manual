@@ -1,5 +1,5 @@
 (db-testing-hw-components)=
-# Testing - Duckiebot Hardware Components
+# Testing the Hardware Components
 
 ```{seo}
 :description: How to test hardware components on a Duckiebot using the Duckietown Dashboard

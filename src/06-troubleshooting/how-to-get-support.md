@@ -4,7 +4,7 @@
 ```
 
 (how-to-get-help)=
-# How to get help in Duckietown
+# How to get Help 
 
 Getting (and providing) help is part of the learning process.
 

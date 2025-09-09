@@ -7,7 +7,7 @@
 In this section, some tricks for a much faster development workflow using `dts` are presented.
 
 (dtproject-ros-faster-development-trick-run-locally)=
-## Run locally
+## Run Locally
 
 As demonstrated previously, it is possible to add new code to a DTProject or modify existing code and then build and run either locally or directly on a Duckiebot. While working with ROS, examples so far have executed all nodes on the Duckiebot. 
 

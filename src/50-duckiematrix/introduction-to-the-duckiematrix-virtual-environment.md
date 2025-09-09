@@ -4,7 +4,7 @@
 ```
 
 (the-duckiematrix-manual)=
-# The Duckiematrix
+# Simulation and the Duckiematrix
 
 ```{figure} ../_images/duckiematrix/introduction/duckiematrix-crop.jpg
 :name: fig:duckiematrix-crop
@@ -20,6 +20,11 @@ as well as the sensing and acting capabilities of Duckietown robots within that 
 
 Of course simulation is never exactly like reality, but, from a functionality standpoint, you should be able 
 to simulate everything that you could do on a real Duckiebot in the Duckiematrix. 
+
+It is worth knowing that, at a high level, the Duckiematrix is composed of two main components:
+
+1. The **engine** which performs the simulation the movement (kinematics and dynamics) of the entities in the simulated world
+2. The **renderer** which produces the visualization of the environment and is used to simulate the sensors (in particular the camera)
 
 This section includes the basics of how to install and use the Duckiematrix, for more details about how it works
 and how you can build on top of it see [the section in the part of this book about developing with the Duckiematrix](advanced-duckiematrix-development)

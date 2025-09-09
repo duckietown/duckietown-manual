@@ -11,7 +11,7 @@ An operational (assembled + initialized) Duckiebot.
 ```
 
 (duckiebot-setup-intro)=
-# Setting up your Duckiebot
+# Getting Started with your Duckiebot
 
 In this section we will describe how you can get started with the Duckiebot. 
 At the end of these steps you should have a Duckiebot that is assembled, that 

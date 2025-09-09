@@ -1,13 +1,10 @@
 (dtmatrix-virtual-duckiebots)=
-# Virtual Duckietown Robots
+# Virtual Duckiebots
 
 ```{seo}
 :description: Virtual Duckietown robots.
 :keywords: Duckietown, Duckiematrix, virtual, robot
 ```
-
-This chapter describes virtual Duckietown robots.
-
 ```{needget}
 - Successful Duckiematrix installation: [](duckiematrix-installation)
 ---
@@ -24,7 +21,7 @@ Once a virtual Duckietown robot is running, it will behave in accordance with it
 including how it responds to `dts` commands.
 
 The most common thing you will likely want to do is [create](intermediate-virtual-duckietown-robots-dts-commands-create)
-a virtual robot and [start](intermediate-virtual-duckietown-robots-dts-commands-start). Once it's up and running (you 
+a virtual robot and then [start](intermediate-virtual-duckietown-robots-dts-commands-start) it. Once it's up and running (you 
 see it when you run the command `dts fleet discover` just like any other Duckiebot), you probably will want to 
 [attach](introduction-attaching-a-duckietown-robot-to-a-duckiematrix-entity-introduction) it to an entity in the Duckiematrix. Once this attachment is complete, 
 all the data that is collected by the entity in the Duckiematrix will be fed to the virtual robot and, conversely, any

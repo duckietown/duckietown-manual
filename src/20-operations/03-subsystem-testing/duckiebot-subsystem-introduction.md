@@ -1,5 +1,5 @@
 (ops-db-subsys-testing-intro)=
-# Duckiebot subsystems
+# Duckiebot Subsystems
 
 ```{seo}
 :description: After having tested the hardware components on your Duckiebot, perform system level testing by verifying the ability of the duckiebot to move, stream images, and control its addressable LEDs.

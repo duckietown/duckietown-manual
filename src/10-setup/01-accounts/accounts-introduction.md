@@ -3,7 +3,7 @@
 :keywords: duckietown setup, accounts, slack, stack overflow, docker, github, open source robotics, how to create duckietown account
 ```
 (dt-account)=
-# Setup - Accounts
+# Accounts
 
 ```{needget}
 - An internet connection
@@ -23,7 +23,7 @@ All these accounts are free, and when paid options exist, those are not necessar
 You can re-use these accounts for other projects. If you already have some of these accounts from other projects, you can skip the respective sections. 
 
 ```{tip}
-Although not strictly necessary, it is a good idea to use teh same email address for all the following accounts. 
+Although not strictly necessary, it is a good idea to use the same email address for all the following accounts. 
 ```
 
 ## In this Section

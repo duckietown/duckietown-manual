@@ -14,7 +14,7 @@
 ```
 
 (setup-db-sd-card-flashing-fast)=
-# The Fast Way - Initialization
+# The Fast Way 
 
 Use this procedure if you want a quicker result, and do not mind having [default settings](db-init-fast-default-settings).
 

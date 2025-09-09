@@ -24,6 +24,12 @@ parts:
                             -   file: 10-setup/02-software/docker-installation
                             -   file: 10-setup/02-software/github-installation
                             -   file: 10-setup/02-software/duckietown-shell-dts-installation
+                    -   file: 50-duckiematrix/introduction-to-the-duckiematrix-virtual-environment
+                        sections:
+                            - file: 50-duckiematrix/getting-started/duckiematrix-first-steps
+                            - file: 50-duckiematrix/virtual-duckietown-robots/introduction-to-virtual-duckiebots
+                            - file: 70-developer-manual/simulation/gym-simulation-in-duckietown
+
             -   file: 09-db-opmanual-intro/setup-duckiebot-intro
                 sections:
                     - file: 09-db-opmanual-intro/db-opmanual-intro
@@ -39,6 +45,7 @@ parts:
                     -   file: 10-setup/03-duckiebot/network-configuration
                     -   file: 10-setup/03-duckiebot/duckiebot-first-boot
                     -   file: 10-setup/03-duckiebot/dashboard-setup
+                    -   file: 06-troubleshooting/how-to-get-support
             -   file: 20-operations/how-to-use-a-duckiebot-intro
                 sections:
                     -   file: 20-operations/01-duckiebot-handling/instruction-handling-duckiebot-db21m-db21j
@@ -60,7 +67,6 @@ parts:
                   -   file: 21-testing-debugging/02-components-testing/introduction-to-hardware-component-testing # detail on individual hardware component tests
                   -   file: 21-testing-debugging/db21-hardware-update-hut # keep hardware up to date
                   -   file: 21-testing-debugging/db21-hardware-update-duckiebattery
-                  -   file: 06-troubleshooting/how-to-get-support
                   -   file: 04-software-tools/duckietown-duckiebot-additional-software-tools
                   -   file: 06-troubleshooting/duckiebot-network-faqs
              #    -   file: 06-troubleshooting/duckiebot-hardware-components
@@ -93,12 +99,6 @@ parts:
                                 sections:
                                     - file: 30-duckietown-city/assembly/traffic-lights/duckietown-traffic-light-dt21-tl-assembly-instructions
                                     - file: 30-duckietown-city/assembly/traffic-lights/duckietown-legacy-traffic-light-dt18_tl-assembly-instructions
-            -   file: 50-duckiematrix/introduction-to-the-duckiematrix-virtual-environment
-                sections:
-                -   file: 50-duckiematrix/getting-started/duckiematrix-first-steps
-                -   file: 50-duckiematrix/getting-started/running-the-duckiematrix
-                -   file: 50-duckiematrix/virtual-duckietown-robots/introduction-to-virtual-duckiebots
-                -   file: 70-developer-manual/simulation/gym-simulation-in-duckietown
 
             -   file: 40-demonstrations/db-demo-intro
                 sections:
@@ -175,7 +175,7 @@ parts:
                 -   file: 70-developer-manual/duckiematrix/links
                 -   file: 70-developer-manual/duckiematrix/modes
                 -   file: 70-developer-manual/duckiematrix/engine-reachability-domains
-
+            -   file: 70-developer-manual/creating-lxs/creating-lxs
             -   file: 90-contributing/introduction
                 sections:
                 -   file: 90-contributing/how-to-edit

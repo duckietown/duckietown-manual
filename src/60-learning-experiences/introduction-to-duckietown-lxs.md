@@ -10,8 +10,8 @@ This page describes the general workflow for learning experiences. There might
 be slight differences in some cases, you should follow the specific instructions
 provided for the specific learning experiences.
 
-```{todo}
-Add link to instructor manual page on creating LXs
+```{note}
+If you are interested to learn about creating your own learning experiences, see [](creating-new-lxs).
 ```
 
 **NOTE:** All commands below are intended to be executed from the root directory of 

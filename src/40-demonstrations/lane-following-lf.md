@@ -1,5 +1,5 @@
 (duckiebot-demo-lf)=
-# Demo - Lane Following
+# Lane Following
 
 ```{seo}
 :description: The Lane Following demo (demonstration) for a Duckiebot.
@@ -12,7 +12,7 @@ This chapter describes the `Lane Following (LF)` demo (demonstration) for Duckie
 - A calibrated Duckiebot: [](ops-db-calibrations)
 * Completed [](db-camera-calibration).
 * Completed [](db-wheels-calibration).
-* A Duckietown, as defined in [](book-opmanual-duckietown:book).
+* A Duckietown, as defined in [](duckietowns-intro).
 * Good lighting (ideally white diffused light).
   This demo relies on images from the camera and color detections.
   Therefore, avoid colored lights, reflections or other conditions that may confuse or blind the on-board image sensor.

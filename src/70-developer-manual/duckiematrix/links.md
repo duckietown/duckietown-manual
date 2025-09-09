@@ -9,7 +9,7 @@
 This chapter describes Duckiematrix Links.
 
 ```{needget}
-- Completed [](dtmatrix-run)
+- Completed [](the-duckiematrix-first-steps)
 ---
 - Knowledge on Duckiematrix Links
 ```

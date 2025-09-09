@@ -1,5 +1,5 @@
 (setup-duckiebot-battery-safety-basics)=
-# Safety First - On Lithium-Ion Batteries
+# On Lithium-Ion Batteries
 
 ```{seo}
 :description: Batteries are potentially dangerous and should be handled with care. Learn about Duckiebot batteries and how to handle them. 

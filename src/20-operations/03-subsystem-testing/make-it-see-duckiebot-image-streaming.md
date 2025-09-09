@@ -1,5 +1,5 @@
 (ops-db-subsys-make-it-see)=
-# Operations - Image Streaming (Make it See)
+# Image Streaming (Make it See!)
 
 
 ```{seo}

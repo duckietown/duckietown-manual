@@ -1,6 +1,12 @@
 (part:sw_diagnostics)=
 # Diagnostics
 
+```{seo}
+:description: Description of diagnostics tools for duckietown.
+:keywords: Duckietown, Diagnostics
+```
+
+
 ```{needget}
 * Basic experience running code on the Duckiebot
 * Understanding of the [DTROS node structure](sec:advanced-dtros)

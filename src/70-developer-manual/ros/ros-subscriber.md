@@ -1,6 +1,12 @@
 (ros-sub-node)=
 # ROS Subscriber
 
+```{seo}
+:description: Defining ROS subscribers in Duckietown.
+:keywords: Duckietown, ROS, subscribers
+```
+
+
 ```{needget}
 * A Duckietown robot turned ON and visible on `dts fleet discover`
 ---

@@ -9,7 +9,7 @@
 This chapter describes how to view `DTPS` (`Duckietown Postal Service`) topics coming from the Duckiematrix.
 
 ```{needget}
-* Completed [](dtmatrix-run).
+* Completed [](the-duckiematrix-first-steps).
 * Completed [](sw-tools-dtps).
 ---
 Knowledge on how to view `DTPS` topics coming from the Duckiematrix.

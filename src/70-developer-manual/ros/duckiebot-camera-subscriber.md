@@ -137,10 +137,6 @@ on the Duckiebot (using the `-H ROBOT_NAME`) flag, you will be presented the err
 
 ```
 
-```{todo}
-Add a section explaining the `-X` flag in the Basic part of the book and update this note accordingly.
-```
-
 ```{admonition} Congratulations 🎉
 You just built and ran your first ROS node that displays the Duckiebot camera feed on your screen.
 ```

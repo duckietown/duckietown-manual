@@ -1,5 +1,5 @@
 (ops-db-calibrations)=
-# Operations - Calibrations
+# Calibrating your Duckiebot
 
 ```{seo}
 :description: Get you Duckiebot ready to operate autonomously by performing calibrations for its sensors and actuators.

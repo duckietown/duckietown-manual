@@ -1,6 +1,12 @@
 (general-demo-procedure)=
 # General Procedure for Running Demos
 
+```{seo}
+:description: General procedure for running duckietown demos.
+:keywords: Duckietown, Demos
+```
+
+
 In general, any duckietown repository that has been built from one of the [templates](project-templates).
 
 In some cases, you may have an option to run the actual demo code on your *laptop* and communicate with the robot, or
@@ -48,8 +54,3 @@ credentials to the robot with:
 you will have ente your password to complete this but then you should never be asked for your password again. 
 ```
 
-You may want to look at more of the details of the `dts devel` API for more advanced features.
-
-```{todo}
-where?
-```
