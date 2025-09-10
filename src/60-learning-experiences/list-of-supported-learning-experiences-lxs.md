@@ -6,6 +6,7 @@
 :keywords: Duckietown, Duckiebot, LXs, Learning Experiences
 ```
 
+<<<<<<< HEAD:src/60-learning-experiences/introduction-to-duckietown-lxs.md
 This page describes the general workflow for learning experiences. There might
 be slight differences in some cases, you should follow the specific instructions
 provided for the specific learning experiences.
@@ -84,6 +85,21 @@ dts code editor
 Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar
 of your browser to access the code editor. The first thing you will see in the code editor is
 this same document, you can continue there.
+=======
+<!--
+(duckiedrone-lxs-list)=
+## Supported Duckiedrone LXs
+
+
+-->
+
+```{todo}
+All content below is a duplicate/triplicate and should be proofread and moved elsewhere.
+```
+
+
+- See [Dev Manual](https://docs.duckietown.com/ente/devmanual-lx/consume/01-duckietown-lx-environment-setup.html#env-setup) for setup instructions
+>>>>>>> origin:src/60-learning-experiences/list-of-supported-learning-experiences-lxs.md
 
 
 ### Walkthrough of notebooks

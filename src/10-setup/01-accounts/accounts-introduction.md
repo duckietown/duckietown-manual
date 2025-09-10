@@ -2,6 +2,7 @@
 :description: Learn how to create free accounts with Docker, GitHub and other resources needed to best experience Duckietown.
 :keywords: duckietown setup, accounts, slack, stack overflow, docker, github, open source robotics, how to create duckietown account
 ```
+
 (dt-account)=
 # Accounts
 
