@@ -21,7 +21,7 @@ Space is an important consideration. You will need a space that is:
 
 * indoors;
 
-* large enough to accommodate an [assembled Duckietown](book-opmanual-duckietown:book), built in compliance with Duckietown appearance specifications, and the working positions for students operating it;
+* large enough to accommodate an [assembled Duckietown](duckietowns-intro), built in compliance with Duckietown appearance specifications, and the working positions for students operating it;
 
 * reserved for the duration of the class as reconstructing the Duckietown for every lab session will become tedious. 
 

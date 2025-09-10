@@ -8,7 +8,7 @@
 
 In this section, we give a brief overview of how the code is structured at a high level, and where you can find various things. 
 
-We make extensive use of [Docker](preliminaries-docker-basics) in our infrastructure. This enables us to keep things compartmentalized. It means that we can take the same "agent", e.g., one that is built as part of a [learning experience](learning-experiences), and run it many different ways: as locally but in simulation, on an actual Duckiebot, or on a cloud server for evaluation. 
+We make extensive use of [Docker](sec:developer_basics_docker) in our infrastructure. This enables us to keep things compartmentalized. It means that we can take the same "agent", e.g., one that is built as part of a [learning experience](learning-experiences), and run it many different ways: as locally but in simulation, on an actual Duckiebot, or on a cloud server for evaluation. 
 
 ```{image} ../../_images/instructor-manual/duckietown-power-user.jpg
 :scale: 40%
@@ -38,7 +38,7 @@ The [`dt-ros-commons`][dt-ros-commons] repository is *upstream* of [`dt-core`][d
 
 This repository contains [ROS](dtproject-ros)-related configurations and details.
 
-For example, we created a parent class for all ROS nodes called [`dtros`](sec:intermediate-dtros), and you will also find all of the message definitions for topics that ROS nodes use to communicate in this repository. 
+For example, we created a parent class for all ROS nodes called [`dtros`](sec:advanced-dtros), and you will also find all of the message definitions for topics that ROS nodes use to communicate in this repository. 
 
 It is relatively unlikely that you should need to look into or understand in detail the code in this repository.
 

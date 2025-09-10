@@ -1,5 +1,5 @@
 (instructor-manual)=
-# Becoming a Duckietown Intructor
+# Becoming a Duckietown Instructor
 
 ```{seo}
 :description: Duckietown manual for higher education instructors. Describes the tools made available for teaching robot autonomy, and to build a class using them.

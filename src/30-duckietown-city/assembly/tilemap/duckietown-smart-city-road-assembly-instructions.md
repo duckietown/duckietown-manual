@@ -7,7 +7,7 @@
 # Assembly - Road Tiles
 
 ```{needget}
-* Knowledge of the [Duckietown Appearance Specifications](book)
+* Knowledge of the [Duckietown Appearance Specifications](duckietown-app-specs-intro)
 * Materials: compliant tiles, white, yellow and red road markings ([Duckietown project shop](https://get.duckietown.com/products/duckietown-navigation-starter-pack))
 * Tools: scissors (or a sharp cutter) and a ruler
 ---

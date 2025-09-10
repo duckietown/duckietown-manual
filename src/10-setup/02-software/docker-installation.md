@@ -125,6 +125,7 @@ For more examples and ideas, visit:
 
 
 ```{seealso}
-If you are unfamiliar with Docker, we strongly recommend reading the following reference page to gain a working understanding of this tool: [The Duckietown Intro to Docker](preliminaries-docker-basics)
+If you are unfamiliar with Docker, we strongly recommend reading the following reference page to gain a working 
+understanding of [this page](sec:developer_basics_docker)
 ```
 

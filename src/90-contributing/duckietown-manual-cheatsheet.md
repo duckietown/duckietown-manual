@@ -208,9 +208,9 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
     [text](relative_path)
     ```
   - ```md
-    [Another page](../language/documentation-style-guide)
+    [Another page](../welcome-to-the-duckietown-manual)
     ```
-  - [Another page](../language/documentation-style-guide)
+  - [Another page](../welcome-to-the-duckietown-manual)
 * - ```md
     <target>
     ```
@@ -1075,86 +1075,6 @@ To glue a math equation try:
 ```{glue:math} example_eq
 :label: glue-eq-example
 ```
-
-## Reference documents
-
-``````{list-table}
-:header-rows: 1
-:widths: 10 20 20
-
-* - Syntax
-  - Example
-  - Result
-* - ```md
-    [](path/to/document)
-    ```
-  - ```md
-    Ref to [](../style/index)
-    ```
-  - Ref to [](../style/index)
-* - ```md
-    [text](path/to/document)
-    ```
-  - ```md
-    See [here](../style/index)
-    for more information.
-    ```
-  - See [here](../style/index)
-    for more information.
-``````
-
-<!--
-### Cross-book references
-
-The cross-book referencing is achieved using the 
-[intersphinx](https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html)
-plugin for sphinx.
-For a cross-book reference, you need to know the book name and the label defined within that book.
-
-```{note}
-All books hosted on `docs.duckietown.com` are automatically made available to be linked from any other Duckietown book. The book name is the repository name.
-```
-
-#### Example
-
-```{example}
-Link to a [page on another book](book-opmanual-duckiebot:duckiebot-boot).
-```
--->
-
-### How to configure
-
-The mapping between book names and their remote location is defined in the `_config.yml` file.
-For example, we can add a link to the book `jupyter-book-docs` as follows,
-
-```yaml
-sphinx:
-  ...
-  config:
-    intersphinx_mapping:
-      jupyter-book-docs:
-        - "https://jupyterbook.org/en/stable"
-        - null
-```
-
-````{admonition} Advanced: list all labels for a given book
-:class: dropdown
-
-To conveniently find the available labels in other books, a utility comes with jupyter-book installation.
-Take the above linked book for example:
-
-```bash
-python -m sphinx.ext.intersphinx https://jupyterbook.org/en/stable/objects.inv
-```
-
-Or, use it in a script (example outcomes provided below)
-
-```python
-from sphinx.ext.intersphinx import inspect_main
-inspect_main(["https://jupyterbook.org/en/stable/objects.inv"])
-```
-
-````
 
 
 ## Footnotes

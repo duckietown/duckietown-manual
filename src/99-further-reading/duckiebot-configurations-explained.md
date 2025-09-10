@@ -74,7 +74,7 @@ The Duckiebot version `DB21M`.
 
 The `DB21M` is readily recognized by its blazing blue chassis and triple-decker configuration. It is equipped with a sensor suite including: camera, time-of-flight sensor, inertial measurement unit (IMU) and wheel encoders. Moreover, the `DB21M` features new electronics (HUT v3.1, front and back bumpers), a screen, a button and a custom designed [Duckiebattery](db-opmanual-dtbattery-v2) (not to be confused with the older Duckie-power-bank).
 
-To assemble a `DB21` Duckiebot, refer to [](intro-db-assembly).
+To assemble a `DB21` Duckiebot, refer to [](assembly-instructions-db21j).
 
 ```{note}
 The commercially available Duckiebots are listed on the [Official Duckietown Online Store](https://get.duckietown.com).

@@ -5,7 +5,7 @@
 (code-hierarchy)=
 # Code Hierarchy
 ```{needget}
-* An understanding of the basics of [Docker](preliminaries-docker-basics)
+* An understanding of the basics of [Docker](sec:developer_basics_docker)
 * An initialized [Duckiebot](duckiebot-setup-intro)
 ---
 * Knowledge of the software architecture on a Duckiebot
