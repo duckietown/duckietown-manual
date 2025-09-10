@@ -1,5 +1,5 @@
 (setup-sw-docker)=
-# Docker installation
+# Docker
 
 ```{seo}
 :description: How to install and set up Docker on your computer. This is a necessary step to use Duckietown software. 

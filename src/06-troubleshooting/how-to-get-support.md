@@ -4,7 +4,7 @@
 ```
 
 (how-to-get-help)=
-# How to get Help 
+# How to Get Help 
 
 Getting (and providing) help is part of the learning process.
 

@@ -1,5 +1,5 @@
 (setup-sw-dependencies-installation)=
-# Software dependencies installation
+# Software Dependencies 
 
 ```{seo}
 :description: Learn how to install the software dependencies necessary to work with Duckietown. 
