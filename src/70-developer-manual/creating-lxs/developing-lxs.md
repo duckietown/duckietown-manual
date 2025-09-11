@@ -1,10 +1,41 @@
 ```{seo}
-:description: Learn how to implement notebook activities in Duckietown Learning Experiences, including adding content, code, and visualizations, and ensuring proper setup.
-:keywords: Duckietown, learning experience, LX, notebook activities, Jupyter, robotics, development goals, testing, solution code
+:description: Learn how to develop Duckietown Learning Experience (LX) activities aligned with your desired learning outcomes.
+:keywords: Duckietown, learning experience, LX, activity development, Duckiebot, robotics curriculum, development tutorial, backwards design
 ```
 
+(tips-building-lxs)
+# Tips for Building LXs
+
+This page is intended to provide some design considerations when creating a learning experience. 
+
+
+## Intended Learning Outcomes (ILOs)
+
+Learning outcomes after completing a learning experience should generally be actionable skills to demonstrate new knowledge.  
+
+These skills are exercised in a final activity in each LX that can be run on a virtual or real physical Duckiebot.
+
+## Learning Goals
+
+LX developers should answer the following questions in the LX description contained in each README. 
+Anyone working through an LX should use this information to direct their efforts as they choose and work through LX:
+
+```{list-table}
+:header-rows: 1
+:name: learning-goals-tab
+* - Question
+  - Example
+* - What will the LX learner gain from this experience? 
+  - Learners will be able to describe and implement a PID controller for a differential drive robot.
+* - What are the output activities of the experience?
+  - Learners will tune and test their PID controller on a Simulated Duckiebot to achieve a distance traveled goal.
+* - What is the prerequisite knowledge and where can learners find it?
+  - This LX depends on students having completed the Duckietown ROS LX for the fundamentals of using ROS messages.
+```
+
+
 (lx-notebooks)=
-# Notebook Activities
+## Notebook Notebook Activities
 
 Notebooks offer a clean interface to provide lesson content, visualizations, and instructions for proceeding through an LX.
 
@@ -22,7 +53,7 @@ Each challenge and linked learner submissions can be found on the Duckietown Cha
 
 Take a moment to explore the notebooks in the [Demo Learning Experience](https://github.com/duckietown/duckietown-lx/tree/demo-lx/demo-lx/notebooks) to see a few of the integration options.
 
-## Edit zones
+### Edit zones
 
 The following table contains a list of the files and directories that you may need to update to implement this type of LX activity. If you would like a full walkthrough showing how to implement notebooks, skip to the next section.
 
@@ -71,11 +102,11 @@ Within this framework, shorter notebooks with concrete goals that build learner 
 
 ## Tutorial: Adding Content to Notebooks
 
-### Step 0: Confirm your LX workspace setup
+### Confirm your LX workspace setup
 
 The first step after creating a new development project should always be to run `dts code build  --recipe ../recipe` in the `<your-lx-workspace>/lx` directory, to ensure the template was initialized properly.
 
-### Step 1: Backwards design: start from the intended learning outcomes (ILOs)
+### Backwards design: start from the intended learning outcomes (ILOs)
 
 What do you want your students to take away from this learning experience? Try to write it down as a skill, starting with an active verb, e.g.:
 
@@ -86,7 +117,7 @@ Defining the intended learning outcomes will inform the content and visualizatio
 
 We recommend to limit the number of ILOs for each learning experience to 3-5. When you find yourself wanting learners to take away a larger number of learning outcomes, consider breaking down your LX into multiple LXs. 
 
-### Step 2: Determine the prerequisites and dependencies
+### Determine the prerequisites and dependencies
 
 Having formalized the end point of your soon-to-be LX, i.e., the ILOs, it is good practice to similarly define what are the prerequisites for engaging in this LX. Prerequisites can be:
 
@@ -98,16 +129,16 @@ Moreover, if possible determine the required Duckietown and external libraries t
 
 You can install external libraries by adding to the `recipe/dependencies-apt.txt` and `recipe/dependencies-py3.txt` files.  Any dependencies listed added here will be available in the VSCode editor environment.
 
-### Step 3: Content and code recommendations
+### Content and Code Recommendations
 
 Content is added to a LX notebooks in the same Markdown format as any standard Jupyter notebook.  For more information, see the [Jupyter notebook docs](https://docs.jupyter.org/en/latest/).
 
 As noted above, students should be editing package files to implement their work as directed by the notebook instructions, and the solution should be hidden in 
 the separate solutions repository to enable evaluation. This means that there are three places you can choose to have learners write solution code.
 
-1) Directly in the notebook cells. This should be used for content examples and practice.
-2) In a solution Python script in the `lx/packages/solution` directory that is imported into the notebook for visualization.  All functions should be predefined with clear **TODOs** marked for learners to complete as directed by the notebook.
-3) In a solution Python script in the `lx/packages/solution` directory that is then imported into the Duckiebot agent code located in the `recipe` for simulation and workbench activities (more on this in the following sections).
+1. Directly in the notebook cells. This should be used for content examples and practice.
+2. In a solution Python script in the `lx/packages/solution` directory that is imported into the notebook for visualization.  All functions should be predefined with clear **TODOs** marked for learners to complete as directed by the notebook.
+3. In a solution Python script in the `lx/packages/solution` directory that is then imported into the Duckiebot agent code located in the `recipe` for simulation and workbench activities (more on this in the following sections).
 
 As a general rule, notebooks **do not** have access to the packages in the `recipe/solutions` directory where the base code is placed for Duckiebot agents.  This is to prevent learners from editing agent code to a confusing or unusable state.
 
@@ -123,6 +154,6 @@ This will confirm that their solution performs as expected before any attempts t
 :align: center
 ```
 
-### Step 4: Clean up and publish
+### Clean up and Publish
 
-Clear all cells of output to avoid publishing solutions. Then follow the workflow in [Publishing your LX](how-to-publish-lx) to add your notebook and recipe updates to your Learning Experience repositories.
+Clear all cells of output to avoid publishing solutions. Then push your recipe and new LX repositories.  

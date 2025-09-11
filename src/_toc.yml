@@ -110,7 +110,9 @@ parts:
 
             -   file: 60-learning-experiences/db-lx-intro
                 sections:
-                -   file: 60-learning-experiences/introduction-to-duckietown-lxs
+                -   file: 60-learning-experiences/what-is-a-duckietown-learning-experience
+                -   file: 60-learning-experiences/lx-components
+                -   file: 60-learning-experiences/lx-general-procedure
 
             -   file: 25-duckiedrone/duckiedrone
 
@@ -176,7 +178,11 @@ parts:
                 -   file: 70-developer-manual/duckiematrix/links
                 -   file: 70-developer-manual/duckiematrix/modes
                 -   file: 70-developer-manual/duckiematrix/engine-reachability-domains
-            -   file: 70-developer-manual/creating-lxs/creating-lxs
+            -   file: 70-developer-manual/creating-lxs/creating-lxs-intro
+                sections:
+                  - file: 70-developer-manual/creating-lxs/creating-lxs
+                  - file: 70-developer-manual/creating-lxs/developing-lxs
+                  - file: 70-developer-manual/creating-lxs/testing-lxs
             -   file: 90-contributing/introduction
                 sections:
                 -   file: 90-contributing/how-to-edit

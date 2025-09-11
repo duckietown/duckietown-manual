@@ -1,14 +1,15 @@
+(creating-lxs-intro)=
+# Duckiebot Learning Experiences
+
 ```{seo}
 :description: The Duckietown learning experiences (LXs) are a code template to harmonize theory, simulation and hardware experiments in learning robot autonomy. This is a manual for creating Duckietown LXs.
 :keywords: hands-on learning, learning experience, duckietown, robotics, simulation, digital twin, robot autonomy, learning autonomy
 ```
 
-(lx-dev-intro)=
-# The Learning Experiences Developer Manual
+Learning experiences are small pedagogical units that can be followed in the hope you 
+might learn something. Most of them contain notebooks that you can follow along with
+and then some code that you have write and then test on your Duckiebot. 
 
-A Duckietown Learning Experience (LX) provides a structured template for creating and working through learning activities.
-
-This developer manual provides tools to work through LXs and to create custom ones. 
 
 ```{tableofcontents}
 ```

@@ -8,27 +8,35 @@
 
 Let us start by understanding each of the learning experience activities available and how they might be used.
 
+
 The `duckietown-lx` repository on GitHub contains the learning experiences developed by the Duckietown team - we will 
 break down the [Object Detection](https://github.com/duckietown/duckietown-lx/tree/mooc2022/object-detection) LX as the main example here.
 
+```{todo}
+update once new ente LXs are released
+```
+
 ```{note}
-Learning Experiences are run using the `dts code` workflow as described in [How To - Progress Through an LX](env-setup). This command set gives students a streamlined environment and powerful tools to complete activities.
+Learning Experiences are run using the `dts code` workflow as described in 
+the [](duckiebot-lxs) page. This command set gives students a streamlined environment and powerful tools to complete activities.
 ```
 
 The following activity types can be implemented with the Duckietown Learning Experience infrastructure:
 
 * [Notebook](notebooks-intro)
 * [Workbench Tool](workbench-intro)
-* [Simulated Agent](simulator-intro)
-* [Duckiebot Agent](agents-intro)
-* [Evaluation](evaluation-intro)
+* [Running on a Virtual Duckiebotd](simulator-intro)
+* [Running on a Real Duckiebot](agents-intro)
 
 ---
 
 (notebooks-intro)=
 ## Activity: Notebooks
 
-Learners are immediately presented with the goals and workflow instructions for a learning experience when they use `dts code editor` to spin up the preconfigured VSCode editor. Installing a local editor is not necessary, and everyone begins with a uniform environment to complete the learning experience. The `notebooks` directory will always contain the first activity.
+Learners are immediately presented with the goals and workflow instructions for a learning experience when they 
+use `dts code editor` to spin up the preconfigured VSCode editor. Installing a local editor is not necessary, and 
+everyone begins with a uniform environment to complete the learning experience. The `notebooks` directory will always 
+contain the first activity.
 
 ```{figure} ../_images/lx-devmanual/intro/obj-det-editor.png
 :name: editor-activity-intro-1
@@ -39,7 +47,7 @@ Learners are immediately presented with the goals and workflow instructions for 
 Editor interface for launching notebooks in a learning experience
 ```
 
-A _Notebook Activity_ introduces key concepts within a Jupyter notebook that learners can work through to cement, visualize, and implement their understanding. Tab through the gallery of notebooks below for a few examples of notebook features.
+A _notebook activity_ introduces key concepts within a Jupyter notebook that learners can work through to cement, visualize, and implement their understanding. Tab through the gallery of notebooks below for a few examples of notebook features.
 
 `````{tab-set}
 ````{tab-item} Image Filtering
@@ -100,11 +108,14 @@ The Object Detection learning experience will take you through the process of co
 ---
 
 (workbench-intro)=
-## Activity: Workbench Tool
+## Activity: Workbench
 
-A _Workbench Activity_ provides a VNC that is used for running tool, simulation, and agent based activities. This is a fully functional Desktop environment with the Duckietown and ROS dependencies installed and can be started by simply running `dts code workbench`. Instructors can develop custom tools or incorporate any standard ROS tool into the LX activity.
+A _workbench activity_ provides a VNC that is used for running tools, simulation, and agent-based activities. 
+This is a fully functional Desktop environment with the Duckietown and ROS dependencies installed and can be started by 
+simply running `dts code workbench`. Instructors can develop custom tools or incorporate any standard ROS tool into 
+the LX activity.
 
-The Object Detection LX uses the workbench environment to run a dataset augmentation tool for learners.
+The object detection LX uses the workbench environment to run a dataset augmentation tool for learners.
 
 ```{figure} ../_images/lx-devmanual/intro/obj-det-workbench.png
 :name: workbench-activity-intro-1
@@ -115,7 +126,8 @@ The Object Detection LX uses the workbench environment to run a dataset augmenta
 Workbench environment enables development of various tools, e.g., for running dataset augmentation for object detection
 ```
 
-It can also be used to display the Object Detection model results as applied to an image stream from the Duckiebot for visual analysis.
+It can also be used to display the object detection model results as applied to an image stream from the Duckiebot 
+for visual analysis.
 
 ```{figure} ../_images/lx-devmanual/intro/workbench-detector.jpeg
 :name: workbench-activity-detector
@@ -129,9 +141,10 @@ Object detection visual output inside dts workbench environment
 ---
 
 (simulator-intro)=
-## Activity: Simulated Agent
+## Running Code in Simulation
 
-The _Workbench_ can also run simulated Duckiebot agents, allowing learners to test their robot behaviors in a virtual environment.
+The workbench can also run simulated (virtual) Duckiebot agents, allowing learners to test their robot behaviors in a 
+virtual environment.
 
 ```{figure} ../_images/lx-devmanual/intro/workbench-sim-view.png
 :name: sim-activity-intro
@@ -145,9 +158,10 @@ Workbench simulation for Duckiebot agent
 ---
 
 (agents-intro)=
-## Activity: Duckiebot Agent
+## Running Code on Duckiebot
 
-Once their solution works in simulation, learners may wish to run their solution on a real-world Duckiebot in a Duckietown environment like the one shown below.
+Once their solution works in simulation, learners may wish to run their solution on a real-world Duckiebot in a 
+Duckietown environment like the one shown below.
 
 ```{figure} ../_images/lx-devmanual/intro/duckiebot-env.jpg
 :name: duckiebot-env
@@ -158,7 +172,8 @@ Once their solution works in simulation, learners may wish to run their solution
 DB21J4 Duckiebot in a physical Duckietown
 ```
 
-The _Workbench_ can interface with the Duckiebot using the ROS network and run connected tools such as keyboard control or `rviz`. Tab through the gallery below to see examples of a variety of tools for interacting with Duckiebot agents.
+The _workbench_ can interface with the Duckiebot using the ROS network and run connected tools such as keyboard control 
+or `rviz`. Tab through the gallery below to see examples of a variety of tools for interacting with Duckiebot agents.
 
 `````{tab-set}
 ````{tab-item} Image Streams
@@ -194,20 +209,3 @@ Workbench keyboard control interface for Duckiebot
 ```
 ````
 `````
-
----
-
-(evaluation-intro)=
-## Activity: Evaluation
-
-Learners can _evaluate_ their solutions to Learning Experience challenges locally and submit them to the uploads your agent to the 
-[Duckietown Challenges Server](https://challenges.duckietown.org) for evaluation on the cloud.
-
-```{figure} ../_images/lx-devmanual/intro/obj-det-eval.png
-:name: evaluation-activity-intro
-:alt: Interface for uploading Duckiebot agent to Challenges Server
-:align: center
-:width: 90%
-
-Agent upload interface for cloud evaluation
-```

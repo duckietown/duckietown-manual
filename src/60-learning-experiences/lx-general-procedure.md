@@ -6,7 +6,6 @@
 :keywords: Duckietown, Duckiebot, LXs, Learning Experiences
 ```
 
-<<<<<<< HEAD:src/60-learning-experiences/introduction-to-duckietown-lxs.md
 This page describes the general workflow for learning experiences. There might
 be slight differences in some cases, you should follow the specific instructions
 provided for the specific learning experiences.
@@ -15,13 +14,23 @@ provided for the specific learning experiences.
 If you are interested to learn about creating your own learning experiences, see [](creating-new-lxs).
 ```
 
-**NOTE:** All commands below are intended to be executed from the root directory of 
-of the exercise (i.e., the directory containing this README).
+## SSL Certificate
 
-## Initial Setup
+```{note}
+You only need to run this once the first time you run an LX on a new laptop
+```
+
+We use SSL certificates and TLS encryption to guarantee the highest standard of safety and privacy. Set up a local SSL certificate needed to run the LX editor inside your browser:
+
+```shell
+dts setup mkcert
+```
+
+
+## Forking the LX Repository
 
 To store your own code, while also keeping the ability to pull updates 
-from our version of this repo, create your own fork.
+from our version of this repo, we recommend that you create your own fork.
 
 Start by pressing "Fork" in the top right corner of the LX repository page on GitHub. 
 You will be able to create a new 
@@ -54,7 +63,7 @@ exercise will prompt you to pull from the upstream repository - updating your ex
 version,
 
 
-## Make sure your exercise and system is up-to-date
+## Keeping your System Up-To-Date
 
 It's a good idea to pull from the upstream remote in case your instructor or the 
 exercise creator changed something:
@@ -72,9 +81,9 @@ It's also a good idea to:
 - 🚙 Update your Duckiebot: `dts duckiebot update ROBOTNAME` (where `ROBOTNAME` is the name of your Duckiebot chosen during the initialization procedure.)
 
 
-## 3. Work on the exercise
+## Work on the Exercise
 
-### Launch the code editor
+### Launch the Code Editor
 
 Open the code editor by running the following command,
 
@@ -85,7 +94,7 @@ dts code editor
 Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar
 of your browser to access the code editor. The first thing you will see in the code editor is
 this same document, you can continue there.
-=======
+
 <!--
 (duckiedrone-lxs-list)=
 ## Supported Duckiedrone LXs
@@ -93,16 +102,14 @@ this same document, you can continue there.
 
 -->
 
-```{todo}
-All content below is a duplicate/triplicate and should be proofread and moved elsewhere.
+
+```{important}
+All `dts code` commands should be executed inside the root directory of the learning experience.
 ```
 
 
-- See [Dev Manual](https://docs.duckietown.com/ente/devmanual-lx/consume/01-duckietown-lx-environment-setup.html#env-setup) for setup instructions
->>>>>>> origin:src/60-learning-experiences/list-of-supported-learning-experiences-lxs.md
 
-
-### Walkthrough of notebooks
+### Walkthrough of Notebooks
 
 Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the
 `notebooks` directory and open the first notebook.
@@ -112,7 +119,7 @@ In many cases the last notebook will instruct you to write some code inside the
 learning experience directory. Once you've done that you will need to build and test your code. 
 We describe how to do that next. 
 
-### Building your code
+### Building your Code
 
 From inside the learning experience root directory, you can build your code with 
 
@@ -122,8 +129,13 @@ dts code build -R ROBOT_NAME
 
 This will build a docker image with your code compiled inside - you should your ROS node get built during the process. 
 
+```{hint}
+Strengthen your iterative development habits by beginning every work session with a fresh build of your LX. 
+This will help ensure that you do not continue development on top of any previous errors.
+```
 
-### Testing with Duckiematrix
+
+### Testing with the Duckiematrix
 
 In order to test your code in the Duckiematrix you will need a virtual robot. You can create one with the command:
 
@@ -157,7 +169,7 @@ You should see the Unity-based Duckiematrix simulator start up. For more details
 the Duckiematrix see [](the-duckiematrix-manual).
 
 
-### 💻 Testing 
+### Testing on a Duckiebot or in the Duckiematrix 
 
 To test your code on your real Duckiebot you can do:
 
@@ -182,3 +194,16 @@ dts code vnc -R [ROBOT_NAME]
 where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
 
 
+## Troubleshooting
+
+If you run into any issues while building the image, you can search the troubleshooting symptoms below or 
+reference the [](how-to-get-help) section of this manual.
+
+```{trouble}
+
+`dts :  The path '...' does not appear to be a Duckietown project. 
+     :  The metadata file '.dtproject' is missing.`
+
+---
+You need to be in the root directory of the LX in order to run the `dts code` commands.
+```

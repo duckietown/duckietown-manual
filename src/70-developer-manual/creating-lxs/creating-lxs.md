@@ -8,8 +8,20 @@
 
 This page describes the general procedure for creating a learning experience (LX). LXs comprise two main parts:
 
-1. The **recipe**, which is typically created by the instructor and hidden from the students
-2. The LX repository itself, which houses the notebooks and whatever code structure should be visible to the student
+1. The **LX recipe**, which is typically created by the instructor and hidden from the students
+2. The **LX repository itself**, which houses the notebooks and whatever code structure should be visible to the student
+
+An additional third repository is recommended, which has the same structure as the LX repository but contains 
+the **solutions** and is kept private. 
+
+```{tip}
+While developing a new LX, it is good practice to start working on the solution first. Once the solution is
+in place, parts of the solution with relative pedagogical value can be stripped out and replaced with 
+placeholders effectively producing a boilerplate code that can populate the learner's workspace. 
+This procedure guarantees that the resulting boilerplate is (by construction) enough for the learner to
+achieve a valid solution.
+```
+
 
 A recommended way to get started is to create repos from the template repos for both the [recipe](https://github.com/duckietown/template-lx-recipe)
 and the [LX](https://github.com/duckietown/template-lx)
@@ -51,6 +63,18 @@ in the `dt-core` repository.
 Coming soon:
  - ROS2 base image
  - Machine learning base image
+
+
+### Title, Description, and Maintainer
+
+Additionally, in the three Dockerfiles, that is  `Dockerfile`, `Dockerfile.vnc` and `Dockerfile.vscode`
+you will need to update:
+
+ - The `EXERCISE_NAME`: Replace `<LX_NAME_HERE>` with a title for your LX (**Note**: this should not contain spaces)
+ - The `DESCRIPTION`: Replace `<DESCRIPTION_HERE>` with a brief description of your LX
+ - The `MAINTAINER`: Replace `<YOUR_FULL_NAME>` and `<YOUR_EMAIL_ADDRESS>` with appropriate values
+
+
 
 ### Duckiematrix Configuration
 
@@ -128,7 +152,7 @@ In the `notebooks` directory you can place [jupyter notebooks](https://jupyter.o
 VSCode when the student executes: 
 
 ```shell
-dts code lab
+dts code editor
 ```
 
 ### Boilerplate Code
@@ -137,3 +161,9 @@ The code for the LX will go into the `packages` directory in the LX repo. It can
 code so that the students just have to fill in specific parts. It is also recommended that the LX always "work" in the sense
 that if the student runs the launcher through `dts code workbench` nothing breaks. The solution might not be properly 
 implemented, but there are no compilation errors. 
+
+
+```{attention}
+When working in the development workspace, you can append the `--recipe` flag to any `dts code` commands 
+and specify your local development version of the recipe.
+```
