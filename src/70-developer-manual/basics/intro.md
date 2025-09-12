@@ -4,10 +4,11 @@
 ```
 
 (devmanual-intro)=
-# Welcome to the Duckietown Developer Manual
+# Basics
 
+In this section some of the basic infrastructure and tools that we use for development
+in Duckietown. 
 
-This manual is for advanced Duckietown users looking to understand more about the Duckietown software architecture and how to deploy their own code on Duckietown robots. 
 
 ```{tableofcontents}
 ```

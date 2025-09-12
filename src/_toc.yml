@@ -4,235 +4,200 @@
 format: jb-book
 root: welcome-to-the-duckietown-manual
 parts:
-    -   caption: Start Here - Setup
+    -   caption: Part 1 - Duckiebots, Duckiedrones, and Duckietowns
         maxdepth: 3
         numbered: False
         chapters:
-            -   file: 10-setup/db-opmanual-intro
-            -   file: 10-setup/00-computer/installing-ubuntu-on-your-computer
-            -   file: 10-setup/01-accounts/accounts-introduction
+            -   file: 10-setup/setup-introduction
                 sections:
-                    -   file: 10-setup/01-accounts/github-account
-                    -   file: 10-setup/01-accounts/docker-account
-                    -   file: 10-setup/01-accounts/duckietown-hub-account
-                    -   file: 10-setup/01-accounts/duckietown-slack-account
-                    -   file: 10-setup/01-accounts/duckietown-stack-overflow-account
-            -   file: 10-setup/02-software/sw-introduction
+                    -   file: 10-setup/00-computer/installing-ubuntu-on-your-computer
+                    -   file: 10-setup/01-accounts/accounts-introduction
+                        sections:
+                          -   file: 10-setup/01-accounts/github-account
+                          -   file: 10-setup/01-accounts/docker-account
+                          -   file: 10-setup/01-accounts/duckietown-hub-account
+                          -   file: 10-setup/01-accounts/duckietown-slack-account
+                          -   file: 10-setup/01-accounts/duckietown-stack-overflow-account
+                    -   file: 10-setup/02-software/sw-introduction
+                        sections:
+                            -   file: 10-setup/02-software/software-dependencies-installation
+                            -   file: 10-setup/02-software/docker-installation
+                            -   file: 10-setup/02-software/github-installation
+                            -   file: 10-setup/02-software/duckietown-shell-dts-installation
+                    -   file: 50-duckiematrix/introduction-to-the-duckiematrix-virtual-environment
+                        sections:
+                            - file: 50-duckiematrix/getting-started/duckiematrix-first-steps
+                            - file: 50-duckiematrix/virtual-duckietown-robots/introduction-to-virtual-duckiebots
+                            - file: 70-developer-manual/simulation/gym-simulation-in-duckietown
+
+            -   file: 09-db-opmanual-intro/setup-duckiebot-intro
                 sections:
-                    -   file: 10-setup/02-software/software-dependencies-installation
-                    -   file: 10-setup/02-software/docker-installation
-                    -   file: 10-setup/02-software/github-installation
-                    -   file: 10-setup/02-software/duckietown-shell-dts-installation
-            -   file: 10-setup/03-duckiebot/duckiebot-introduction
-                sections:
+                    - file: 09-db-opmanual-intro/db-opmanual-intro
                     -   file: 10-setup/03-duckiebot/safety-lithium-ion-duckiebattery
                     -   file: 10-setup/03-duckiebot/flashing-sd-card-duckiebot-initialization
                         sections:
                             -   file: 10-setup/03-duckiebot/flashing-sd-card-duckiebot-initialization-fast
                             -   file: 10-setup/03-duckiebot/flashing-sd-card-duckiebot-initialization-complete
                     -   file: 10-setup/03-duckiebot/what-is-in-the-duckiebot-db21j4-box
-                        # sections:
-                        #    -   file: 10-setup/03-duckiebot/duckiebot-db21j-components-explained
+                # sections:
+                #    -   file: 10-setup/03-duckiebot/duckiebot-db21j-components-explained
                     -   file: 10-setup/03-duckiebot/assembly-instructions-duckiebot-db21j
                     -   file: 10-setup/03-duckiebot/network-configuration
                     -   file: 10-setup/03-duckiebot/duckiebot-first-boot
                     -   file: 10-setup/03-duckiebot/dashboard-setup
-    -   caption: Duckiebot Operations
-        maxdepth: 2
-        numbered: False
-        chapters:
+                    -   file: 06-troubleshooting/how-to-get-support
             -   file: 20-operations/how-to-use-a-duckiebot-intro
                 sections:
-                  -   file: 20-operations/01-duckiebot-handling/instruction-handling-duckiebot-db21m-db21j
-                  -   file: 20-operations/01-duckiebot-handling/duckietown-dashboard-browser-ui
-                  -   file: 20-operations/01-duckiebot-handling/db21-power-management # turn on, off, charge
-                  -   file: 20-operations/01-duckiebot-handling/db21-software-update # keep sw up to date
-                  -   file: 20-operations/01-duckiebot-handling/db21-hardware-update-hut # keep hardware up to date
-                  -   file: 20-operations/01-duckiebot-handling/db21-hardware-update-duckiebattery
-            -   file: 20-operations/02-components-testing/index # components testing - check if duckiebot is assembled correctly
-                sections:
-                  -   file: 20-operations/02-components-testing/introduction-to-hardware-component-testing # detail on individual hardware component tests
-            -   file: 20-operations/03-subsystem-testing/duckiebot-subsystem-introduction # this should be subsystems testing
-                sections:
-                  -   file: 20-operations/03-subsystem-testing/make-it-move-duckiebot-keyboard-control
-                  -   file: 20-operations/03-subsystem-testing/make-it-see-duckiebot-image-streaming
-                  -   file: 20-operations/03-subsystem-testing/make-it-shine-duckiebot-led-control
-            -   file: 20-operations/04-calibrations/duckiebot-calibrations-intro # now calibrate
-                sections:
-                  -   file: 20-operations/04-calibrations/duckiebot-camera-calibration
-                  -   file: 20-operations/04-calibrations/duckiebot-motor-odometry-calibration
+                    -   file: 20-operations/01-duckiebot-handling/instruction-handling-duckiebot-db21m-db21j
+                    -   file: 20-operations/01-duckiebot-handling/duckietown-dashboard-browser-ui
+                    -   file: 20-operations/01-duckiebot-handling/db21-power-management # turn on, off, charge
+                    -   file: 20-operations/01-duckiebot-handling/db21-software-update # keep sw up to date
+                    -   file: 20-operations/03-subsystem-testing/duckiebot-subsystem-introduction # this should be subsystems testing
+                        sections:
+                        -   file: 20-operations/03-subsystem-testing/make-it-move-duckiebot-keyboard-control
+                        -   file: 20-operations/03-subsystem-testing/make-it-see-duckiebot-image-streaming
+                        -   file: 20-operations/03-subsystem-testing/make-it-shine-duckiebot-led-control
+                    -   file: 20-operations/04-calibrations/duckiebot-calibrations-intro # now calibrate
+                        sections:
+                          -   file: 20-operations/04-calibrations/duckiebot-camera-calibration
+                          -   file: 20-operations/04-calibrations/duckiebot-motor-odometry-calibration
 
-    -   caption: Duckiedrone
-        maxdepth: 1
-        numbered: False
-        chapters:
+            -   file: 21-testing-debugging/02-components-testing/index # components testing - check if duckiebot is assembled correctly
+                sections:
+                  -   file: 21-testing-debugging/02-components-testing/introduction-to-hardware-component-testing # detail on individual hardware component tests
+                  -   file: 21-testing-debugging/db21-hardware-update-hut # keep hardware up to date
+                  -   file: 21-testing-debugging/db21-hardware-update-duckiebattery
+                  -   file: 04-software-tools/duckietown-duckiebot-additional-software-tools
+                  -   file: 06-troubleshooting/duckiebot-network-faqs
+             #    -   file: 06-troubleshooting/duckiebot-hardware-components
+                  -   file: 06-troubleshooting/reflashing-jetson-nano-development-kit-4gb-duckietown
+                  -   file: 06-troubleshooting/duckietown-smart-robotics-duckiebattery-5v-2a
+             #    -   file: 06-troubleshooting/duckiebot-raspberrypi-and-nvidia-jetson-nano-hut-faqs
+                  -   file: 06-troubleshooting/frequently-asked-questions-faq
+
+
+            -   file: 30-duckietown-city/duckietowns-intro
+                sections:
+                    - file: 30-duckietown-city/introduction-to-duckietown-urban-environments
+                    -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-appearance-specifications-introduction
+                        sections:
+                        -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-tile-map
+                        -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-traffic-signs-layer
+                            sections:
+                            -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-street-names
+                        -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-infrastructure-layer
+                            sections:
+                                - file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-traffic-lights-layer
+                        -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-parking-lots
+                        -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-non-functional-decorations
+                    -   file: 30-duckietown-city/assembly/introduction
+                        sections:
+                        -   file: 30-duckietown-city/assembly/tilemap/duckietown-smart-city-road-assembly-instructions
+                        -   file: 30-duckietown-city/assembly/traffic-signs/duckietown-smart-city-traffic-signs-assembly-instructions
+                            sections:
+                            -   file: 30-duckietown-city/assembly/traffic-lights/duckietown-smart-city-overview-traffic-lights-assembly-instructions
+                                sections:
+                                    - file: 30-duckietown-city/assembly/traffic-lights/duckietown-traffic-light-dt21-tl-assembly-instructions
+                                    - file: 30-duckietown-city/assembly/traffic-lights/duckietown-legacy-traffic-light-dt18_tl-assembly-instructions
+
+            -   file: 40-demonstrations/db-demo-intro
+                sections:
+                -   file: 40-demonstrations/general_procedure
+                -   file: 40-demonstrations/lane-following-lf
+                # -   file: demonstrations/lane-following-with-obstacles
+                # -   file: demonstrations/lane-following-with-intersections
+                # -   file: demonstrations/lane-following-with-duckiebots
+
+            -   file: 60-learning-experiences/db-lx-intro
+                sections:
+                -   file: 60-learning-experiences/what-is-a-duckietown-learning-experience
+                -   file: 60-learning-experiences/lx-components
+                -   file: 60-learning-experiences/lx-general-procedure
+
             -   file: 25-duckiedrone/duckiedrone
 
-    -   caption: Duckietown City
-        maxdepth: 3
-        numbered: False
-        chapters:
-            -   file: 30-duckietown-city/introduction-to-duckietown-urban-environments
-            -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-appearance-specifications-introduction
-                sections:
-                -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-tile-map
-                -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-traffic-signs-layer
-                    sections:
-                    -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-street-names 
-                -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-infrastructure-layer
-                    sections:
-                        - file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-traffic-lights-layer
-                -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-parking-lots
-                -   file: 30-duckietown-city/appearance-specifications/duckietown-smart-city-non-functional-decorations
-            -   file: 30-duckietown-city/assembly/introduction
-                sections:                  
-                -   file: 30-duckietown-city/assembly/tilemap/duckietown-smart-city-road-assembly-instructions
-                -   file: 30-duckietown-city/assembly/traffic-signs/duckietown-smart-city-traffic-signs-assembly-instructions
-                    sections:
-                    -   file: 30-duckietown-city/assembly/traffic-lights/duckietown-smart-city-overview-traffic-lights-assembly-instructions
-                        sections:
-                            - file: 30-duckietown-city/assembly/traffic-lights/duckietown-traffic-light-dt21-tl-assembly-instructions
-                            - file: 30-duckietown-city/assembly/traffic-lights/duckietown-legacy-traffic-light-dt18_tl-assembly-instructions
-    -   caption: Autonomous Behaviors (Demos)
-        maxdepth: 1
-        numbered: False
-        chapters:
-            - file: 40-demonstrations/general_procedure
-            - file: 40-demonstrations/lane-following-lf
-            # -   file: demonstrations/lane-following-with-obstacles
-            # -   file: demonstrations/lane-following-with-intersections
-            # -   file: demonstrations/lane-following-with-duckiebots
-    -   caption: Duckiematrix Virtual Environment
-        maxdepth: 2
-        numbered: False
-        chapters:
-            -   file: 50-duckiematrix/introduction-to-the-duckiematrix-virtual-environment
-            -   file: 50-duckiematrix/getting-started/duckiematrix-first-steps
-                sections:
-                -   file: 50-duckiematrix/getting-started/architecture
-                -   file: 50-duckiematrix/getting-started/world-and-matrix-sides
-                -   file: 50-duckiematrix/getting-started/running-the-duckiematrix
-                -   file: 50-duckiematrix/getting-started/dtps-interfaces
-            -   file: 50-duckiematrix/virtual-duckietown-robots/introduction-to-virtual-duckiebots
-                sections:
-                -   file: 50-duckiematrix/virtual-duckietown-robots/attaching-a-duckietown-robot-to-a-duckiematrix-entity                
-                -   file: 50-duckiematrix/virtual-duckietown-robots/dts-commands
-                -   file: 50-duckiematrix/virtual-duckietown-robots/drivers
-            #-   file: 50-duckiematrix/test/test
-            -   file: 50-duckiematrix/additional-functionalities/introduction-to-additional-functionalities
-                sections:
-                -   file: 50-duckiematrix/additional-functionalities/maps/duckiematrix-maps
-                -   file: 50-duckiematrix/additional-functionalities/maps/custom-duckiematrix-maps
-                -   file: 50-duckiematrix/additional-functionalities/links
-                -   file: 50-duckiematrix/additional-functionalities/modes
-                -   file: 50-duckiematrix/additional-functionalities/engine-reachability-domains
-                -   file: 50-duckiematrix/additional-functionalities/demonstrations
-    -   caption: Learning Experiences
-        maxdepth: 2
-        numbered: False
-        chapters:
-            -   file: 60-learning-experiences/duckietown-lx-overview
-            -   file: 60-learning-experiences/list-of-supported-learning-experiences-lxs.md
-                sections:
-                -   file: 60-learning-experiences/01-introduction/01-what-is-a-duckietown-learning-experience
-                -   file: 60-learning-experiences/01-introduction/02-lx-features-and-activities
-            -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/00-step-by-step-run-introduction
-                sections:
-                -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/01-duckietown-lx-environment-setup
-                -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/02-instructions-dts-code-workflow-usage
-                    sections:
-                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/03-instructions-how-to-build-duckietown-lx-environment
-                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/04-instructions-how-to-set-up-duckietown-lx-code-editor
-                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/05-instructions-how-to-use-duckietown-lx-workbench-tools
-                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/06-instructions-how-to-evaluate-learning-experience
-                    -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/07-instructions-how-to-submit-duckietown-learning-experience
-                -   file: 60-learning-experiences/02-how-to-complete-a-duckietown-lx/08-instructions-duckietown-lx-whats-next
-            -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/00-step-by-step-create-introduction
-                sections:
-                -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/01-lx-structure-duckietown-learning-experience
-                -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/02-how-to-create-a-duckietown-learning-experience
-                -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/03-how-to-develop-your-learning-activities
-                    sections:
-                    -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/1_notebooks
-    #                -  file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/2_editor
-    #                -  file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/3_workbench_tools
-    #                -  file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/4_workbench_sims
-    #                -  file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/5_workbench_bots
-                    -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/3_develop/6_challenges
-                -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/4_publish/index
-                    sections:
-                    -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/4_publish/1_test
-                    -   file: 60-learning-experiences/03-how-to-create-a-duckietown-lx/4_publish/2_publish
-            -   file: 60-learning-experiences/04-additional-information/2_workflow/index
-                sections:
-        #        - file: background/1_assembly/index
-    #            -  file: background/2_workflow/1_build
-    #            -  file: background/2_workflow/2_editor
-                -   file: 60-learning-experiences/04-additional-information/2_workflow/3_workbench
-    #            -  file: background/2_workflow/4_evaluate
-    #            -  file: background/2_workflow/5_submit
 
-    -   caption: Developer Manual
+    -   caption: Part 2 - Developing with Duckietown
         numbered: False
         chapters:
             -   file: 70-developer-manual/basics/intro
                 sections:
                     -   file: 70-developer-manual/basics/terminal/terminal-basics
-                    -   file: 70-developer-manual/basics/development/foreword
-                        sections:
-                            - file: 70-developer-manual/basics/development/iso-iec9126
-                            - file: 70-developer-manual/basics/development/linux
-                            - file: 70-developer-manual/basics/development/developer-basics-git
-                            - file: 70-developer-manual/basics/development/developer-basics-docker
-                            - file: 70-developer-manual/basics/development/dts-duckietown-shell
+                    -   file: 70-developer-manual/basics/development/iso-iec9126
+                    -   file: 70-developer-manual/basics/development/linux
+                    -   file: 70-developer-manual/basics/development/developer-basics-git
+                    -   file: 70-developer-manual/basics/development/developer-basics-docker
 
-            -   file: 70-developer-manual/beginner/intro
+            -   file: 70-developer-manual/dtproject/creating-demos
                 sections:
-                    -   file: 70-developer-manual/beginner/dtproject/introduction-to-duckietown-projects
-                        sections:
-                            - file: 70-developer-manual/beginner/dtproject/how-to-create-a-duckietown-project
-                            - file: 70-developer-manual/beginner/dtproject/adding-code-to-a-dtproject
-                            - file: 70-developer-manual/beginner/dtproject/working-with-dtproject-dependencies
-                            - file: 70-developer-manual/beginner/dtproject/running-a-dtproject-on-duckietown-robot
-                            - file: 70-developer-manual/beginner/dtproject/managing-dt-project-launchers
-                            - file: 70-developer-manual/beginner/dtproject/duckietown-project-templates
+                    - file: 70-developer-manual/dtproject/introduction-to-duckietown-projects
+                    - file: 70-developer-manual/dtproject/how-to-create-a-duckietown-project
+                    - file: 70-developer-manual/dtproject/adding-code-to-a-dtproject
+                    - file: 70-developer-manual/dtproject/working-with-dtproject-dependencies
+                    - file: 70-developer-manual/dtproject/running-a-dtproject-on-duckietown-robot
+                    - file: 70-developer-manual/dtproject/managing-dt-project-launchers
+                    - file: 70-developer-manual/dtproject/duckietown-project-templates
 
-                    -   file: 70-developer-manual/beginner/ros/introduction-to-using-ros-with-duckietown
-                        sections:
-                            - file: 70-developer-manual/beginner/ros/create-new-ros-project
-                            - file: 70-developer-manual/beginner/ros/catkin-packages
-                            - file: 70-developer-manual/beginner/ros/ros-publisher
-                            - file: 70-developer-manual/beginner/ros/ros-subscriber
-                            - file: 70-developer-manual/beginner/ros/faster-development-workflow
-                            - file: 70-developer-manual/beginner/ros/duckiebot-camera-subscriber
-                            - file: 70-developer-manual/beginner/ros/duckiebot-wheel-encoder-subscriber
-                            - file: 70-developer-manual/beginner/ros/wheel-control
-                            - file: 70-developer-manual/beginner/ros/twist-control
-                        #    - file: 70-developer-manual/beginner/ros/launch-files
-                        #    - file: 70-developer-manual/beginner/ros/namespace-remapping
-                        #    - file: 70-developer-manual/beginner/ros/cli
-                        #    - file: 70-developer-manual/beginner/ros/gui
-
-                    -   file: 70-developer-manual/beginner/first-python-library/how-to-create-and-update-a-python-library-in-duckietown
-
-                    -   file: 70-developer-manual/beginner/code-hierarchy/duckietown-docker-code-hierarchy-explained
-
-                    -   file: 70-developer-manual/beginner/code-documentation/introduction-to-code-documentation
-                        sections:
-                            - file: 70-developer-manual/beginner/code-documentation/writing-duckietown-code-documentation
-                            - file: 70-developer-manual/beginner/code-documentation/building-duckietown-code-documentation
-
-            -   file: 70-developer-manual/advanced/intro
+            -   file: 70-developer-manual/ros/introduction-to-using-ros-with-duckietown
                 sections:
-                    -   file: 70-developer-manual/advanced/dtros/duckietown-dtros-class
-                    -   file: 70-developer-manual/advanced/diagnostics/index
-                        sections:
-                            - file: 70-developer-manual/advanced/diagnostics/introduction-to-duckietown-diagnostic-tool
-                            - file: 70-developer-manual/advanced/diagnostics/get-started-with-duckietown-diagnostic-tool
-                            - file: 70-developer-manual/advanced/diagnostics/diagnostics-tool-command-reference
-                    -   file: 70-developer-manual/advanced/simulation/gym-simulation-in-duckietown
+                    - file: 70-developer-manual/ros/create-new-ros-project
+                    - file: 70-developer-manual/ros/catkin-packages
+                    - file: 70-developer-manual/ros/ros-publisher
+                    - file: 70-developer-manual/ros/ros-subscriber
+                    - file: 70-developer-manual/ros/faster-development-workflow
+                    - file: 70-developer-manual/ros/duckiebot-camera-subscriber
+                    - file: 70-developer-manual/ros/duckiebot-wheel-encoder-subscriber
+                    - file: 70-developer-manual/ros/wheel-control
+                    - file: 70-developer-manual/ros/twist-control
+                #    - file: 70-developer-manual/ros/launch-files
+                #    - file: 70-developer-manual/ros/namespace-remapping
+                #    - file: 70-developer-manual/ros/cli
+                #    - file: 70-developer-manual/ros/gui
 
-    -   caption: Instructor Manual
+            -   file: 70-developer-manual/first-python-library/how-to-create-and-update-a-python-library-in-duckietown
+
+            -   file: 70-developer-manual/code-documentation/introduction-to-code-documentation
+                sections:
+                    - file: 70-developer-manual/code-documentation/writing-duckietown-code-documentation
+                    - file: 70-developer-manual/code-documentation/building-duckietown-code-documentation
+
+            -   file: 70-developer-manual/dtros/duckietown-dtros-class
+            -   file: 70-developer-manual/diagnostics/index
+                sections:
+                    - file: 70-developer-manual/diagnostics/introduction-to-duckietown-diagnostic-tool
+                    - file: 70-developer-manual/diagnostics/get-started-with-duckietown-diagnostic-tool
+                    - file: 70-developer-manual/diagnostics/diagnostics-tool-command-reference
+            -   file: 70-developer-manual/code-hierarchy/duckietown-docker-code-hierarchy-explained
+            -   file: 70-developer-manual/duckiematrix/intro
+                sections:
+                -   file: 70-developer-manual/duckiematrix/architecture
+                -   file: 70-developer-manual/duckiematrix/world-and-matrix-sides
+                -   file: 70-developer-manual/duckiematrix/dtps-interfaces
+                -   file: 70-developer-manual/duckiematrix/maps/duckiematrix-maps
+                -   file: 70-developer-manual/duckiematrix/maps/custom-duckiematrix-maps
+                -   file: 70-developer-manual/duckiematrix/links
+                -   file: 70-developer-manual/duckiematrix/modes
+                -   file: 70-developer-manual/duckiematrix/engine-reachability-domains
+            -   file: 70-developer-manual/creating-lxs/creating-lxs-intro
+                sections:
+                  - file: 70-developer-manual/creating-lxs/creating-lxs
+                  - file: 70-developer-manual/creating-lxs/developing-lxs
+                  - file: 70-developer-manual/creating-lxs/testing-lxs
+            -   file: 90-contributing/introduction
+                sections:
+                -   file: 90-contributing/how-to-edit
+                    sections:
+                    -   file: 90-contributing/edit-the-duckietown-docs-the-simple-way
+                    -   file: 90-contributing/edit-the-duckietown-docs-with-local-edits
+                -   file: 90-contributing/format-and-style-guidelines
+                -   file: 90-contributing/duckietown-manual-cheatsheet
+            -   file: 04-software-tools/duckietown-postal-service-dtps
+                # -   file: 04-software-tools/duckietown-duckiebot-image-viewer
+                # -   file: 04-software-tools/duckiebot-keyboard-controller
+                # -   file: 04-software-tools/duckiebot-led-lights-controller
+
+
+    -   caption: Part 3 - Teaching with Duckietown
         maxdepth: 3
         numbered: False
         chapters: 
@@ -350,37 +315,6 @@ parts:
                     -   file: 80-instructor-manual/sample-curricula/undergraduate-courses/umass-university-of-massachusetts-lowell
                 -   file: 80-instructor-manual/sample-curricula/highschool/index
                 -   file: 80-instructor-manual/sample-curricula/mooc/index            
-    -   caption: Software Tools # this chapter must go (integrate pages inside developer manual, or where otherwise appropriate)
-        maxdepth: 1
-        numbered: False
-        chapters:
-            # -   file: 04-software-tools/duckietown-duckiebot-image-viewer
-            # -   file: 04-software-tools/duckiebot-keyboard-controller
-            # -   file: 04-software-tools/duckiebot-led-lights-controller
-            -   file: 04-software-tools/duckietown-postal-service-dtps
-            -   file: 04-software-tools/duckietown-duckiebot-additional-software-tools
-    -   caption: FAQ and Troubleshooting
-        maxdepth: 1
-        numbered: False
-        chapters:
-            -   file: 06-troubleshooting/how-to-get-support
-            -   file: 06-troubleshooting/duckiebot-network-faqs
-        #    -   file: 06-troubleshooting/duckiebot-hardware-components
-            -   file: 06-troubleshooting/reflashing-jetson-nano-development-kit-4gb-duckietown
-            -   file: 06-troubleshooting/duckietown-smart-robotics-duckiebattery-5v-2a
-        #    -   file: 06-troubleshooting/duckiebot-raspberrypi-and-nvidia-jetson-nano-hut-faqs
-            -   file: 06-troubleshooting/frequently-asked-questions-faq
-    -   caption: Contributing to the Duckietown Manual
-        maxdepth: 2
-        numbered: False
-        chapters:
-            -   file: 90-contributing/introduction
-            -   file: 90-contributing/how-to-edit
-                sections:
-                -   file: 90-contributing/edit-the-duckietown-docs-the-simple-way
-                -   file: 90-contributing/edit-the-duckietown-docs-with-local-edits
-            -   file: 90-contributing/format-and-style-guidelines
-            -   file: 90-contributing/duckietown-manual-cheatsheet
     -   caption: Further Reading
         maxdepth: 1
         numbered: False

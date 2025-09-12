@@ -1,5 +1,5 @@
 (ops-db-subsys-make-it-shine)=
-# Operations - LED control (Make it Shine)
+# LED control (Make it Shine!)
 
 ```{seo}
 :description: Learn how to actuate the Duckiebot addressable light emitting diodes (LEDs) changing color and intensity.

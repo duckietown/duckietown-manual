@@ -10,7 +10,7 @@
 ```
 
 (ops-db-subsys-make-it-move)=
-# Operations - Keyboard Control (Make it move)
+# Keyboard Control (Make it Move!)
 
 This chapter describes the `Keyboard Controller`.
 

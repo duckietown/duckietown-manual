@@ -16,7 +16,7 @@ We discuss the different types of testing that are needed for developing autonom
 
 ## Testing in Duckietown
 
-We give some more concrete examples of how automated testing is performed in the [Duckietown codebase](code). 
+We give some more concrete examples of how automated testing is performed in the [Duckietown codebase](dt-code-structure). 
 
 
 ```{slides} ../../../../_assets/instructor-manual/testing-2.pdf

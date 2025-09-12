@@ -15,4 +15,5 @@ Materials are currently available in the following subject areas:
 ```{tableofcontents}
 ```
 
-If you would like to recommend a specific topic for new materials, do not hesitate to let us know by reaching out, or start building a [Duckietown learning experience](temp-lx-devmanual-lx-dev-intro) yourself. 
+If you would like to recommend a specific topic for new materials, do not hesitate to let us know by reaching out, or 
+start [creating a new learning experience](creating-new-lxs) yourself. 

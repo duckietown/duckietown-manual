@@ -1,5 +1,5 @@
 (how-to-handle-a-duckiebot-db21)=
-# Duckiebot Handling Cheatsheet (`DB21`)
+# Overview (`DB21`)
 
 ```{seo}
 :description: A compendium of common operations for interacting with a Duckiebot.

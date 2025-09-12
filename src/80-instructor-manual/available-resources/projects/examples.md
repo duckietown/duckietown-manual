@@ -17,7 +17,9 @@ We keep a non-exhaustive collection of [videos of past student projects on Vimeo
 (student-projects-improving)=
 ## Improving Existing Components
 
-A sound strategy for coming up with potential projects is to build upon existing behaviors. The main code repository that contains the algorithmic components that run on the Duckiebot is the [dt-core](https://github.com/duckietown/dt-core) (see [](code) for details on the code structure in Duckietown). Within it are packages that are part of the core [lane following](duckiebot-demo-lf), or more advanced indefinite navigation, demos. 
+A sound strategy for coming up with potential projects is to build upon existing behaviors. The main code repository 
+that contains the algorithmic components that run on the Duckiebot is the [dt-core](https://github.com/duckietown/dt-core) (see [](dt-code-structure) for details 
+on the code structure in Duckietown). Within it are packages that are part of the core [lane following](duckiebot-demo-lf), or more advanced indefinite navigation, demos. 
 
 The core components of lane following include:
 

@@ -1,6 +1,12 @@
 (highschool-sample-curricula)=
 # High School level
 
+```{seo}
+:description: Duckietown high school
+:keywords: Duckietown, education, high school
+```
+
+
 Duckietown is designed for university-level education, so there are no readily available curricula we offer at this point. 
 
 Nonetheless, several high schools have used Duckietown.  

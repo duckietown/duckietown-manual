@@ -1,5 +1,5 @@
 (setup-sw-github)=
-# GitHub and Git LFS installation
+# GitHub and Git LFS
 
 ```{seo}
 :description: Set up your GitHub account with public SSH keys to flawlessly use Duckietown software.
@@ -659,5 +659,5 @@ If you have never heard of Git or GitHub before, you can do some background read
 
 * See: [GitHub Documentation](https://guides.github.com/introduction/Llow/)
 
-You can then go through the [Duckietown introduction to version control with Git](version_control_with_git). 
+You can then go through the [Duckietown introduction to version control with Git](sec:developer_basics_git). 
 ```

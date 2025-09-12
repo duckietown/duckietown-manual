@@ -16,6 +16,7 @@ Duckietown is a *platform*, i.e., a set of tools designed to simplify teaching a
 
 Software, hardware and pedagogical resources are integrated with each other to provide _joyful_ learning experiences. 
 
-Once familiar with these tools, you will be able to [develop new autonomous behaviors](temp-sw-devmanual-devmanual-intro) for Duckiebots, Duckiedrones and Duckietown Autolabs, and [build new learning experiences](temp-lx-devmanual-lx-dev-intro) for your students.
+Once familiar with these tools, you will be able to [develop new autonomous behaviors](creating-new-demos) for Duckiebots, 
+Duckiedrones and Duckietown Autolabs, and [build new learning experiences](creating-new-lxs) for your students.
 
 In this section, we list some of the existing components that could be useful to build a class.

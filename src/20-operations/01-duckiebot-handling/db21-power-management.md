@@ -14,7 +14,7 @@
 ```
 
 (ops-db-power-mgmt)=
-# Operations - Duckiebot Power Management
+# Power Management
 
 Robots, as well as humans, need energy to operate. Duckiebots take their energy from the Duckiebattery. This section covers the basic operations for power management. 
 

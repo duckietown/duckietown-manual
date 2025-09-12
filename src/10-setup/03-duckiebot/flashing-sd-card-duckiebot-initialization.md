@@ -1,5 +1,5 @@
 (setup-db-sd-card-flashing-intro)=
-# Duckiebot SD Card preparation - introduction
+# Duckiebot SD Card Initialization
 
 ```{seo}
 :description: Instructions on how to flash an SD card to initialize a Duckiebot, Duckiedrone, Traffic Light or Watchtower.

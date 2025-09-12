@@ -3,25 +3,18 @@
 :keywords: duckietown, documentation, overview, markdown, html, sphynx
 ```
 
-```{todo}
-rewrite this section in lieu of single-repo megabook 
-```
 
 (duckumentation-intro)=
 # Overview
 
 (where_documentation_is)=
-## Where the documentation is
+## Where the Documentation is Stored and Hosted
 
-The documentation is broken down into a collection of books, with each book contained in a separate repository called `book-[name]`:
-
-For example:
-
-* [`book-devmanual-docs`](https://github.com/duckietown/book-devmanual-docs) (this book)
-* [`book-opmanual-duckiebot`](https://github.com/duckietown/book-opmanual-duckiebot)
+The documentation is all stored in a [Github repository](https://github.com/duckietown/duckietown-manual).
+When a change is pushed to the repository, it automatically triggers the book to be rebuilt and updated. 
 
 (documentation_format)=
-## Documentation format
+## Documentation Format
 
 The documentation is written as a series of small files in Markedly Structured Text (MyST), a Markdown format inspired by Sphinx and reStructuredText (RST).
 
@@ -30,14 +23,21 @@ It is then processed by a series of scripts to create publication-quality PDF an
 You can find all these artifacts produced at the site [`https://docs.duckietown.com`](https://docs.duckietown.com).
 
 (documentation_branches_and_more)=
-## Documentation branches
+## Previous Version of the Documentation
 
-Each book repository has several branches. In particular, the `daffy` branch includes documentation related to the `daffy` Duckietown software distribution. The `ente` branch describes the `ente` version of Duckietown software distribution, and it is substantially different from the older `daffy` version. 
+Previous, in the `daffy` version, the documentation was split amongst several books. With the `ente` version
+and beyond, the documentation is merged into one monolithic book that can be searched and indexed more 
+easily. 
 
-`Daffy` documentation can be found at [`https://docs.duckietown.com/daffy`](https://docs.duckietown.com/daffy), and the respective content available on the [Duckietown GitHub](https://github.com/duckietown), in repositories named `docs-[book name]`, e.g., the [Old Duckiebot operation manual](https://github.com/duckietown/docs-opmanual_duckiebot). 
+The "version" of the documentation corresponds to the branch in the repository. 
+`Daffy` documentation can be found at [`https://docs.duckietown.com/daffy`](https://docs.duckietown.com/daffy), and the respective content available 
+on the [Duckietown GitHub](https://github.com/duckietown), in repositories named `docs-[book name]`, e.g., the [Old Duckiebot operation manual](https://github.com/duckietown/docs-opmanual_duckiebot). 
 
 `Ente` documentation can be found at [`https://docs.duckietown.com/ente`](https://docs.duckietown.com/ente).
 
-### Deprecated documentation system
+Future versions of the documentation will be new branches of this repository. 
 
-The older, now deprecated, Duckietown documentation system is available at: [https://docs-old.duckietown.org/daffy/](https://docs-old.duckietown.org/daffy/). 
+### Deprecated Documentation System
+
+The even older, now deprecated, Duckietown documentation system is 
+available at: [https://docs-old.duckietown.org/daffy/](https://docs-old.duckietown.org/daffy/). 

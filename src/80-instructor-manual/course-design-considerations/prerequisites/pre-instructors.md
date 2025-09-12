@@ -37,7 +37,7 @@ Duckietown's stack uses several technologies, some of which are considered prere
 
 Python is a versatile programming language, amongst the most used in the world. Although it might not be the most performant for robotic applications, it strikes a good balance between simplicity to use and performance. 
 
-All the Duckietown [notebooks and exercises](learning-experiences) as well as the [code that runs the robot](code) are written in Python. 
+All the Duckietown [notebooks and exercises](learning-experiences) as well as the [code that runs the robot](dt-code-structure) are written in Python. 
 
 ```{note}
 To help students debug their solutions, someone on staff should be quite familiar with coding in Python. 
@@ -52,16 +52,14 @@ There are many resources out there to learn Python for free, e.g.,
 (This is just an example, we are not affiliated with this resource. Additional options: [additional resources](https://www.reddit.com/r/learnpython/comments/10hwp8f/where_do_i_learn_python_for_free/)).
 
 (prerequisites-git)=
-## Version control with Git 
+## Version Control with Git 
 
-```{todo}
-review exercise workflow instructions and related repo links
-```
 
-The [workflow that we propose for completing the exercises](https://github.com/duckietown/duckietown-lx#readme) includes forking and cloning our [`duckietown-lx`](code-duckietown-lx) repository, as well as adding an upstream remote.
+The [workflow that we propose for completing the learning experience](duckiebot-lxs) includes forking and cloning 
+the existing learning experience repositories, as well as adding an upstream remote.
 
 ```{tip}
-If you do not recognize terms such as _repository_, _clone_, _fork_, _merge_ and in general are not familiar with Git, [read the Duckietown pointers on using Git](version_control_with_git).
+If you do not recognize terms such as _repository_, _clone_, _fork_, _merge_ and in general are not familiar with Git, [read the Duckietown pointers on using Git](sec:developer_basics_git).
 ```
 
 (prerequisites-linux)=
@@ -102,7 +100,7 @@ In this way, we can guarantee (if we do things right) that the code will run pro
 
 We can also rigorously specify interfaces between containers, which enables portability in a very seamless way. This is how we can have one "agent" that can be run in many different ways, such as in the simulator, on the real robot, or in a cloud evaluation. 
 
-You should not need to know the details about how this works as we have made every effort to abstract Docker away, but some [familiarity with the basics](preliminaries-docker-basics) may reduce your anxiety about what is happening. 
+You should not need to know the details about how this works as we have made every effort to abstract Docker away, but some [familiarity with the basics](sec:developer_basics_docker) may reduce your anxiety about what is happening. 
 
 (prerequisites-ros)=
 ## Robot Operating System (ROS)
@@ -111,6 +109,6 @@ Similarly to Docker, although we make some effort to abstract things away in Pyt
 
 ROS is a "middleware" software that acts as a _glue_ for the different components of the robot autonomy stack and provides tools for message passing, parameter tuning, and debugging among other things. 
 
-We have some [specific resources](temp-sw-devmanual-dtproject-ros) for getting started with ROS in the context of Duckietown. It is worth getting familiar with these (and even potentially assigning them as homework assignments for the students).
+We have some [specific resources](dtproject-ros) for getting started with ROS in the context of Duckietown. It is worth getting familiar with these (and even potentially assigning them as homework assignments for the students).
 
 Going forward, Duckietown will support different middleware solutions, such as ROS2. For additional information on this effort, or if you would like to help, please reach out to us on Slack or at [info@duckietown.com](mailto:info@duckietown.com).

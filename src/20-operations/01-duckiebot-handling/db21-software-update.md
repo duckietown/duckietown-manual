@@ -1,5 +1,5 @@
 (ops-db-update)=
-# Operations - Duckiebot Software Update
+# Software Update
 
 ```{seo}
 :description: Learn how to keep your Duckiebot software up to date.  

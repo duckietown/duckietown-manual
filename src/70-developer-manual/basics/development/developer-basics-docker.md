@@ -42,7 +42,7 @@ Containerization, on the other hand, leverages the existing kernel and OS
 and adds only the additional binaries, libraries, and code necessary to run 
 a given application.
 
-```{figure} ../../_images/basics/development/containers_vs_vms.jpg
+```{figure} ../../../_images/developer/basics/development/containers_vs_vms.jpg
 :name: fig-containers-vs-vms
 :alt: Diagram comparing containers and virtual machines
 :align: center

@@ -4,7 +4,7 @@
 ```
 
 (duckiebot-boot)=
-# Setup - Duckiebot First Boot
+# First Boot
 
 ```{needget}
 - A flashed Duckiebot SD card: [](setup-db-sd-card-flashing-intro)

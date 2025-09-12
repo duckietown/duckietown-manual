@@ -9,7 +9,7 @@
 ISO/IEC 9126 is an international standard for product quality in software engineering. It was officially replaced by ISO/IEC 25010 in 2011, which introduced a few minor changes to the original standard.
 
 
-```{figure} ../../_images/basics/development/iso_9126.png
+```{figure} ../../../_images/developer/basics/development/iso_9126.png
 :width: 28em
 :align: center
 :alt: ISO/IEC 9126

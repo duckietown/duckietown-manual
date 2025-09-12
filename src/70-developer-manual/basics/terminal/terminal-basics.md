@@ -5,10 +5,10 @@
 
 
 (sec:terminal-basics)=
-# Basics - Terminal
+# The Linux Terminal
 
 ```{needget}
-* [Laptop setup](laptop-setup)
+* [Laptop setup](setup-computer)
 * [Duckietown account](dt-account)
 ---
 * Know how to use a terminal
@@ -40,4 +40,4 @@ The underlying idea is that most of the Duckietown functionalities are implement
 
 These functionalities range from calibrating your Duckiebot's camera or wheels and running demos, to building this documentation (a.k.a., the Duckumentation), submitting agents to challenges and monitoring your evaluations and leaderboard positioning, or developing and deploying your own code in Duckietown agents. 
 
-Before proceeding further, ensure the [laptop setup instructions](laptop-setup) have been followed and `dts` is installed on your system. If not, now is the time to go back and do it.
+Before proceeding further, ensure the [laptop setup instructions](setup-computer) have been followed and `dts` is installed on your system. If not, now is the time to go back and do it.

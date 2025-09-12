@@ -3,12 +3,12 @@
 :keywords: Duckietown, code structure, code, Docker, Python, ROS, dts, Duckietown Shell, code hierarchy
 ```
 
-(code)=
+(dt-code-structure)=
 # The Code Structure
 
 In this section, we give a brief overview of how the code is structured at a high level, and where you can find various things. 
 
-We make extensive use of [Docker](preliminaries-docker-basics) in our infrastructure. This enables us to keep things compartmentalized. It means that we can take the same "agent", e.g., one that is built as part of a [learning experience](learning-experiences), and run it many different ways: as locally but in simulation, on an actual Duckiebot, or on a cloud server for evaluation. 
+We make extensive use of [Docker](sec:developer_basics_docker) in our infrastructure. This enables us to keep things compartmentalized. It means that we can take the same "agent", e.g., one that is built as part of a [learning experience](learning-experiences), and run it many different ways: as locally but in simulation, on an actual Duckiebot, or on a cloud server for evaluation. 
 
 ```{image} ../../_images/instructor-manual/duckietown-power-user.jpg
 :scale: 40%
@@ -19,7 +19,7 @@ We make extensive use of [Docker](preliminaries-docker-basics) in our infrastruc
 
 
 ```{seealso}
-For more details, you may want to refer to [code hierarchy](temp-sw-devmanual-code-hierarchy) page the Developer manual. 
+For more details, you may want to refer to the [code hierarchy](code-hierarchy) page. 
 ```
 
 
@@ -38,7 +38,7 @@ The [`dt-ros-commons`][dt-ros-commons] repository is *upstream* of [`dt-core`][d
 
 This repository contains [ROS](dtproject-ros)-related configurations and details.
 
-For example, we created a parent class for all ROS nodes called [`dtros`](sec:intermediate-dtros), and you will also find all of the message definitions for topics that ROS nodes use to communicate in this repository. 
+For example, we created a parent class for all ROS nodes called [`dtros`](sec:advanced-dtros), and you will also find all of the message definitions for topics that ROS nodes use to communicate in this repository. 
 
 It is relatively unlikely that you should need to look into or understand in detail the code in this repository.
 
@@ -73,29 +73,26 @@ For the specific implementations of how these commands are executed, you can ref
 (code-gym-duckietown)=
 ## `gym-duckietown`
 
-The [`gym-duckietown`][gym-duckietown-repo] repository contains the code that implements the [`gym-duckietown` simulator](simulation). 
+The [`gym-duckietown`][gym-duckietown-repo] repository contains the code that implements the [`gym-duckietown` simulator](duckietown-gym-simulation). 
 
 This simulator is written in OpenGL and Python to be as slim as possible, with a view of being useful for machine learning, as it adheres to the [OpenAI Gym API](https://github.com/openai/gym). 
 
 It is also used to evaluate exercise submissions.
 
 (code-duckietown-lx)=
-## `duckietown-lx`
+## Learning Experiences
 
-The [`duckietown-lx`][duckietown-lx] repository contains the starter code and notebooks for the [learning experiences](learning-experiences). 
-
-This is a repository that students will typically fork and use for doing the learning experiences. 
+The learning experiences are now separated into their own repositories. See [](duckiebot-lxs) for details. 
 
 (code-duckietown-lx-recipes)=
-## `duckietown-lx-recipes`
+## Learning Experience Recipes
 
-The [duckietown-lx-recipes][duckietown-lx-recipes] repository contains the configurations for the exercises in the [`duckietown-lx`][duckietown-lx] repository. Unless you are interested in [building your own learning experiences](temp-lx-devmanual-lx-dev-intro), you probably do not need to understand in detail the code in this repository. 
+Each learning experience also has its own recipe. See [](creating-new-lxs) for a description of the LX recipe. 
 
 (code-duckietown-lx-solutions)=
-## `duckietown-lx-solutions`
+## Learning Experience Solutions
 
-The [duckietown-lx-solutions][duckietown-lx-solutions] repository contains solutions for the exercises in the [`duckietown-lx`][duckietown-lx] repository. This repository is private, if you would like to gain access, please [contact us](mailto:info@duckietown.com).
-
+Each learning experience also has its own solution repository that is kept private. 
 
 [dt-core]: https://github.com/duckietown/dt-core
 [dt-ros-commons]: https://github.com/duckietown/dt-ros-commons/
@@ -104,6 +101,4 @@ The [duckietown-lx-solutions][duckietown-lx-solutions] repository contains solut
 [duckietown-shell]: https://github.com/duckietown/duckietown-shell
 [duckietown-shell-commands]: https://github.com/duckietown/duckietown-shell-commands
 [gym-duckietown-repo]: https://github.com/duckietown/gym-duckietown
-[duckietown-lx]: https://github.com/duckietown/duckietown-lx
-[duckietown-lx-recipes]: https://github.com/duckietown/duckietown-lx-recipes
 [duckietown-lx-solutions]: https://github.com/duckietown/duckietown-lx-solutions

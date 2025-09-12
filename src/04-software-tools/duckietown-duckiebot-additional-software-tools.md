@@ -1,4 +1,5 @@
-# Additional Software Tools
+{gui-tools-ros}
+# GUI Tools and ROS
 
 ```{seo}
 :description: Additional software tools.

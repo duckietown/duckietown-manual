@@ -10,7 +10,7 @@
 ```
 
 (setup-db21j4-whats-in-the-box)=
-# What's in the Duckiebot (`DB21-J4`) Box?
+# What's in the Box (`DB21-J4`)?
 
 What should you expect to find inside a Duckiedrone (`DD24`) box, and what is each component? 
 

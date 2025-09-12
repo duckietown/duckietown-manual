@@ -1,5 +1,5 @@
 (setup-db-sd-card-flashing-complete)=
-# The Complete Way - Initialization
+# The Complete Way 
 
 ```{seo}
 :description: Instructions on how to flash an SD card to initialize a Duckiebot, Duckiedrone, Traffic Light or Watchtower.
