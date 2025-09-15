@@ -1,8 +1,8 @@
 (setup-sw-dependencies-installation)=
-# Software Dependencies 
+# Software Dependencies
 
 ```{seo}
-:description: Learn how to install the software dependencies necessary to work with Duckietown. 
+:description: Learn how to install the software dependencies necessary to work with Duckietown.
 :keywords: Duckietown, Duckiebot, dependencies, computer setup
 ```
 
@@ -36,7 +36,7 @@ sudo apt install open-vm-tools
 ## Checkpoint
 
 ```{warning}
-Never skip a checkpoint! If checkpoints fail (for whatever reason), chances are future steps will not work either. [Seek help](https://duckietown.com/contact/) if needed. 
+Never skip a checkpoint! If checkpoints fail (for whatever reason), chances are future steps will not work either. [Seek help](https://duckietown.com/contact/) if needed.
 ```
 
 ```{testexpect}

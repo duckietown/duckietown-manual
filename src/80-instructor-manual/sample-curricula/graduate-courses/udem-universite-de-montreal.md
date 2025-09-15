@@ -7,9 +7,9 @@
 ```
 
 
-Professor [Liam Paull](https://liampaull.ca/) at the University of Montreal and [Mila](https://mila.quebec/) has been using the Duckietown platform to teach a graduate course on robotics for a number of years. 
+Professor [Liam Paull](https://liampaull.ca/) at the University of Montreal and [Mila](https://mila.quebec/) has been using the Duckietown platform to teach a graduate course on robotics for a number of years.
 
-This course is taught in a computer science department but is cross-listed to encourage students 
+This course is taught in a computer science department but is cross-listed to encourage students
 from a wide variety of backgrounds. The class size is typically limited to about 15-20, and students are selected through an application process. The exact format has varied over the years but the course has always had a strong project-based component.
 
 ```{figure} ../../../_images/instructor-manual/udem2022.jpg
@@ -39,4 +39,4 @@ For details please visit the [course website](https://liampaull.ca/ift6757/). In
 * [2020](https://liampaull.ca/ift6757/2020/schedule/)
 * [2019](https://liampaull.ca/ift6757/2019/schedule/)
 
-which can all be used for inspiration. We would particularly recommend looking at the most recent version of the class because, naturally, it is refined and improved each year. 
+which can all be used for inspiration. We would particularly recommend looking at the most recent version of the class because, naturally, it is refined and improved each year.

@@ -1,5 +1,5 @@
 ```{seo}
-:description: The simple way of contributing to the Duckietown documentation is through online edits. 
+:description: The simple way of contributing to the Duckietown documentation is through online edits.
 :keywords: duckietown, documentation, the simple way, online, Git
 ```
 
@@ -7,7 +7,7 @@
 # The simple way: Github
 
 The simplest way to contribute to the documentation is to hover the GitHub icon <i class="fab fa-github"></i>
-at the top the documentation page we want to edit, and then press "suggest edit" from the dropdown menu 
+at the top the documentation page we want to edit, and then press "suggest edit" from the dropdown menu
 as shown in the image below.
 
 ```{figure} ../_images/how-to-contribute/contributing/simple/step1.png
@@ -32,8 +32,8 @@ Let us try this out and perform an edit:
 Perform the edits you had in mind.
 ```
 
-Once done, check the temporary outcome by clicking on `Preview changes`. 
-Note that not all functionalities are visible by the preview. 
+Once done, check the temporary outcome by clicking on `Preview changes`.
+Note that not all functionalities are visible by the preview.
 For significant changes to the documentation, refer to [](local-editor-workflow).
 
 
@@ -45,8 +45,8 @@ A preview of the changes.
 ```
 
 At the end of the webpage, use the form provided to describe your changes.
-Start by choosing "Create a new branch for this commit and start a pull request", 
-this will give you the opportunity to submit your changes for review before they go live. 
+Start by choosing "Create a new branch for this commit and start a pull request",
+this will give you the opportunity to submit your changes for review before they go live.
 Then fill in the commit message and description fields
 before confirming by clicking on the "Propose changes" button ({numref}`fig:simple_way_4`).
 

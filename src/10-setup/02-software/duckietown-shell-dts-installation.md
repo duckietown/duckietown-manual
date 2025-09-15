@@ -2,7 +2,7 @@
 # Duckietown Shell (`dts`)
 
 ```{seo}
-:description: How to install and set up DTS (Duckietown Shell), the terminal based and most powerful UI in Duckietown. 
+:description: How to install and set up DTS (Duckietown Shell), the terminal based and most powerful UI in Duckietown.
 :keywords: Duckietown, Duckiebot, DTS, Duckietown Shell, UI, terminal
 ```
 
@@ -91,7 +91,7 @@ most of the back-end operations involving Docker.
 ```{attention}
 * These credentials are **only stored locally**;
 * **Never use your account password** instead of an personal access tokens (PAT);
-```  
+```
 
 Recall your `DOCKERHUB_USERNAME` from [](dt-account-dockerhub) and create a PAT following [DockerHub instructions on access tokens](https://docs.docker.com/security/access-tokens/).
 
@@ -104,7 +104,7 @@ dts config docker credentials set --username DOCKERHUB_USERNAME --password DOCKE
 ```{admonition} For developers
 :class: dropdown
 
-With an extra **positional** argument, one could specify a custom Docker registry server other than 
+With an extra **positional** argument, one could specify a custom Docker registry server other than
 `docker.io`. Check `dts config docker set --help` for more details.
 ```
 
@@ -154,7 +154,7 @@ The token is a string of letters and numbers that looks something like this:
 
     dt1-7vEuJsaxeXXXXX-43dzqWFnWd8KBa1yev1g3UKnzVxZkkTbfSJnxzuJjWaANeMf4y6XSXBWTpJ7vWXXXX
 
-To find your token, first [log in](https://hub.duckietown.com/signin/) to your account, 
+To find your token, first [log in](https://hub.duckietown.com/signin/) to your account,
 then open [the profile page](https://hub.duckietown.com/profile/) in your browser:
 
 Copy your token to use in the next step.
@@ -165,7 +165,7 @@ Copy your token to use in the next step.
 ```{trouble}
 I mistakenly set a wrong/unwanted username or password. How can I update the credentials?
 ---
-Just run the command again with the correct credentials. 
+Just run the command again with the correct credentials.
 Only the latest inputs are stored for the same Docker registry.
 ```
 

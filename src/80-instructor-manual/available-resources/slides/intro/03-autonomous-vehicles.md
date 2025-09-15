@@ -1,5 +1,5 @@
 ```{seo}
-:description: Duckietown introduction to what are autonomous vehicles (AVs). 
+:description: Duckietown introduction to what are autonomous vehicles (AVs).
 :keywords: autonomous vehicle, AV, AGV, autonomy, robotics
 ```
 
@@ -20,7 +20,7 @@ The "Levels of Autonomy" define a taxonomy introduced by the US governmental bod
 
 ## Visions for Autonomous Vehicles
 
-In connection with the levels introduced previously, different stakeholders view the pathway to achieving full self-driving cars differently. In this video, we present some of those viewpoints and consider their pros and cons. 
+In connection with the levels introduced previously, different stakeholders view the pathway to achieving full self-driving cars differently. In this video, we present some of those viewpoints and consider their pros and cons.
 
 ```{vimeo} 538089904
 :alt: Visions for AVs

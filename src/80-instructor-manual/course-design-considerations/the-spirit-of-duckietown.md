@@ -1,5 +1,5 @@
 ```{seo}
-:description: Understanding the spirit of Duckietown helps deliver joyful learning experiences. 
+:description: Understanding the spirit of Duckietown helps deliver joyful learning experiences.
 :keywords: duckietown spirit
 ```
 
@@ -10,11 +10,11 @@
 Duckietown is a place of joy and relaxed introspection.
 ```
 
-Last but not least, one of the things that can really set the Duckietown class is the spirit. 
+Last but not least, one of the things that can really set the Duckietown class is the spirit.
 
-Some students are more attracted to this narrative than others, but regardless, it can serve as a tool for cultivating a strong sense of community around the class which inevitably results in a better overall experience for the students. 
+Some students are more attracted to this narrative than others, but regardless, it can serve as a tool for cultivating a strong sense of community around the class which inevitably results in a better overall experience for the students.
 
-Below are some innovative aspects of the "spirit of Duckietown" that we try to embody. 
+Below are some innovative aspects of the "spirit of Duckietown" that we try to embody.
 
 (considerations-philosophy)=
 ## Class Philosophy
@@ -45,25 +45,25 @@ We advocate for a setup where each student gets their own personal robot to buil
 (code-lives-on)=
 ## Student code can live on
 
-We strongly encourage you and your students to contribute back to the larger project. This could be through fixing bugs and making pull-requests, or by creating new and creative content or projects that we would be happy to showcase. 
+We strongly encourage you and your students to contribute back to the larger project. This could be through fixing bugs and making pull-requests, or by creating new and creative content or projects that we would be happy to showcase.
 
-Many students tend to be extremely motivated by the possibility that, if they do an excellent job, their project or work could live on beyond just the specific course that they are taking. Students crave to be part of something bigger than the scope of a class. 
+Many students tend to be extremely motivated by the possibility that, if they do an excellent job, their project or work could live on beyond just the specific course that they are taking. Students crave to be part of something bigger than the scope of a class.
 
 
 (spirit-duckies)=
 ## The Duckies!
 
 ```{attention}
-Duckies are entirely non-functional, purely decorative, _yet essential_. 
+Duckies are entirely non-functional, purely decorative, _yet essential_.
 ```
 
-Robots are typically thought of as dangerous, strong, fast, aggressive and unpredictable. We designed Duckiebots instead to be safe, weak and slow. Moreover, through the use of the duckie theme, they are perceived as curious, friendly and fun, breaking preconceptions about robotics: igniting curiosity and attracting broad attention. The Duckietown in our laboratory attracts plenty of attention, even when there are no robots. 
+Robots are typically thought of as dangerous, strong, fast, aggressive and unpredictable. We designed Duckiebots instead to be safe, weak and slow. Moreover, through the use of the duckie theme, they are perceived as curious, friendly and fun, breaking preconceptions about robotics: igniting curiosity and attracting broad attention. The Duckietown in our laboratory attracts plenty of attention, even when there are no robots.
 
 ```{figure} ../../_images/instructor-manual/duckies.jpeg
 :name: duckies
 ```
 
-We strongly recommend that everybody gets a Duckiebot (with duckies included) when they start the class, as part of a "box ceremony" where each student receives their robot. 
+We strongly recommend that everybody gets a Duckiebot (with duckies included) when they start the class, as part of a "box ceremony" where each student receives their robot.
 
 ```{figure} ../../_images/instructor-manual/box-ceremony.jpeg
 :name: box-ceremony
@@ -72,9 +72,9 @@ We strongly recommend that everybody gets a Duckiebot (with duckies included) wh
 (spirit-duckietown)=
 ## Customizing your Duckietown
 
-Your Duckietown is an opportunity to create something playful and fun. You may be surprised at the positive impact and impression that this has on your students. Your students may also become inspired to contribute. 
+Your Duckietown is an opportunity to create something playful and fun. You may be surprised at the positive impact and impression that this has on your students. Your students may also become inspired to contribute.
 
-The fusion of art and technology is a powerful tool for unleashing creativity. It is somewhat customary to include in each Duckietown non-functional elements, such as decorative buildings or a background "horizon" from the robot's point of view, that recall landmarks of the city or region you are in. 
+The fusion of art and technology is a powerful tool for unleashing creativity. It is somewhat customary to include in each Duckietown non-functional elements, such as decorative buildings or a background "horizon" from the robot's point of view, that recall landmarks of the city or region you are in.
 
 ```{figure} ../../_images/instructor-manual/duckietown.jpeg
 :name: duckietown-instructor-manual
@@ -84,10 +84,10 @@ The fusion of art and technology is a powerful tool for unleashing creativity. I
 (public-demonstration)=
 ## Public Demonstration
 
-Whenever possible, we try to end the course with a **public** demonstration. This has many potential benefits: 
-1. it acts as a strong motivation for students to produce something that they are proud of to show the world. 
+Whenever possible, we try to end the course with a **public** demonstration. This has many potential benefits:
+1. it acts as a strong motivation for students to produce something that they are proud of to show the world.
 2. it teaches students how to communicate about their work to a more general audience (this is one possible [intended learning outcome](consideration-ilo-communication)).
-3. the pressure of the demo is an essential aspect of robotics - it is possible to make something work *once* and produce a video, but doing a public demonstration requires ensuring that it works _reliably every time_. 
+3. the pressure of the demo is an essential aspect of robotics - it is possible to make something work *once* and produce a video, but doing a public demonstration requires ensuring that it works _reliably every time_.
 4. it teaches students how to operate under stressful conditions, a skill that is very useful in the real world.
 5. it teaches students that evaluation comes from other individuals in the real world, and not from grades derived from tests.
 
@@ -99,7 +99,7 @@ Whenever possible, we try to end the course with a **public** demonstration. Thi
 (hero-quest)=
 ## The Hero Journey
 
-Learning is an adventure, and in every proper adventure the hero has ups and downs, companions and mentors, moments of near-despair and eventually of cathartic celebration. 
+Learning is an adventure, and in every proper adventure the hero has ups and downs, companions and mentors, moments of near-despair and eventually of cathartic celebration.
 
 What will lead most of your students away is a drop in motivation coming from repeated failure. But "the master has failed more times than the novice has tried", and we like to make our students aware of this from the get-go.
 

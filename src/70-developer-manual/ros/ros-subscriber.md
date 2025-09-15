@@ -19,7 +19,7 @@ ROS implements the `publish-subscribe` pattern using **ROS Publishers** and **RO
 In this section, we will learn to create a **ROS Subscriber**.
 
 The general concept is simple: a subscriber has the job of listening for messages about a specific _topic_
-that are published by other ROS nodes (using **ROS Publishers**) over a ROS network. 
+that are published by other ROS nodes (using **ROS Publishers**) over a ROS network.
 
 
 (ros-sub-node-create)=
@@ -122,7 +122,7 @@ This will show the following messages before hanging,
 ```
 
 This is because the ROS Subscriber is now waiting for messages to come in. Let us open a new terminal at the
-root of the project and launch an instance of the publisher we built previously. We can do so by running the 
+root of the project and launch an instance of the publisher we built previously. We can do so by running the
 following command,
 
     dts devel run -H ROBOT_NAME -L my-publisher -n publisher

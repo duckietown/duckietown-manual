@@ -38,7 +38,7 @@ dt-exec python3 -m "my_package.my_script"
 
 
 ```{note}
-Always prepend `dt-exec` to the command in `./launchers/default.sh`. 
+Always prepend `dt-exec` to the command in `./launchers/default.sh`.
 
 This utility ensures proper signal handling and process cleanup inside the container ("[The zombie reaping problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/)").
 ```
@@ -47,7 +47,7 @@ For information on defining additional launcher scripts, refer to [](dtproject-l
 
 Now rebuild the Docker image with:
 
-    dts devel build -f 
+    dts devel build -f
 
 and run it:
 

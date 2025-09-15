@@ -1,12 +1,12 @@
 ```{seo}
 :description: How to craft effective intended learning outcomes (ILOs) in Duckietown classes.
-:keywords: duckietown, intended learning outcome, ILO, syllabus, creating a Duckietown course 
+:keywords: duckietown, intended learning outcome, ILO, syllabus, creating a Duckietown course
 ```
 
 (considerations-ilo)=
 # Intended Learning Outcomes
 
-It is important to converge on what you are expecting your students to learn by the end of the course: the intended learning outcomes (ILOs). 
+It is important to converge on what you are expecting your students to learn by the end of the course: the intended learning outcomes (ILOs).
 
 Here are some potential learning outcomes to consider:
 
@@ -16,7 +16,7 @@ Here are some potential learning outcomes to consider:
 By the end of the course, students can use operational tools to:
 
  * Build a Duckietown robot (Duckiebot, Duckiedrone), given the hardware and a set of instructions. Includes best practices on assembly, calibration and maintenance;
- * Configure the software and network, and establish reliable connection between robots and base stations (e.g., the student laptop); 
+ * Configure the software and network, and establish reliable connection between robots and base stations (e.g., the student laptop);
  * Be comfortable using the Linux command line;
  * Understand the design concepts of the Robotic Operating System (ROS);
  * Understand the design concepts of Docker;

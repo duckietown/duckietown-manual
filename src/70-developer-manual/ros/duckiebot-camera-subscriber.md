@@ -15,21 +15,21 @@
 ## Topic and message type of interest
 
 ROS enables processes to exchange _messages_ over named _topics_. To communicate, two ROS nodes must agree on:
-- A **topic name** (e.g., camera images)  
+- A **topic name** (e.g., camera images)
 - A **message type** (e.g., JPEG frames)
 
 For the Duckiebot camera sensor:
-- **Topic**: `/ROBOT_NAME/camera_node/image/compressed`  
-- **Message type**: `sensor_msgs/CompressedImage`  
+- **Topic**: `/ROBOT_NAME/camera_node/image/compressed`
+- **Message type**: `sensor_msgs/CompressedImage`
   ```text
   std_msgs/Header header
   string format
   uint8[] data
   ```
   where:
-  - `header`: standard ROS header  
-  - `format`: image format (e.g., `png`, `jpeg`)  
-  - `data`: byte array containing the encoded image  
+  - `header`: standard ROS header
+  - `format`: image format (e.g., `png`, `jpeg`)
+  - `data`: byte array containing the encoded image
 
 (ros-camera-feed-node-create)=
 ## Create Subscriber ROS Node
@@ -161,8 +161,8 @@ name (e.g., camera images), and a message type (e.g., each message is a JPEG ima
 In ROS, a topic is identified by a string (e.g., `camera/image`), while message types are defined using
 the [official messages description language](http://wiki.ros.org/msg).
 
-In the case of the camera sensor, the topic used by the Duckiebot to publish camera frames 
-is `/ROBOT_NAME/camera_node/image/compressed`, while the message type used over this topic is the standard 
+In the case of the camera sensor, the topic used by the Duckiebot to publish camera frames
+is `/ROBOT_NAME/camera_node/image/compressed`, while the message type used over this topic is the standard
 [sensor_msgs/CompressedImage](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/CompressedImage.html),
 and contains the following fields.
 
@@ -286,9 +286,9 @@ We used the flag `-X` to instruct `dts` to allow this project to create new wind
 ```{attention}
 The trick we learned in [](dtproject-ros-faster-development-trick-run-locally) to speed up our development
 workflow becomes mandatory here. In fact, this particular node needs access to a screen to be able to open
-the window showing the camera feed, hence the need to run it locally as the Duckiebot is not connected to 
+the window showing the camera feed, hence the need to run it locally as the Duckiebot is not connected to
 a monitor.
-You can put this to the test by attempting to build and run this node 
+You can put this to the test by attempting to build and run this node
 on the Duckiebot (using the `-H ROBOT_NAME`) flag, you will be presented the error `cannot open display`.
 ```
 

@@ -13,9 +13,9 @@
 * Ability to create a well‑structured, documented Duckietown ROS node that inherits from `DTROS`
 ```
 
-This chapter explains **how to write and organize the code of a ROS node** in Duckietown.  
+This chapter explains **how to write and organize the code of a ROS node** in Duckietown.
 
-Correct structure is mandatory: it improves readability, performance, and integration with the rest of the stack.  
+Correct structure is mandatory: it improves readability, performance, and integration with the rest of the stack.
 
 Inline documentation goes hand‑in‑hand with code structure; detailed guidance is provided in [](sec:dt_way_code_docs).
 
@@ -23,9 +23,9 @@ Inline documentation goes hand‑in‑hand with code structure; detailed guidanc
 
 ## 1 · General file layout
 
-* Each ROS node lives in the package’s `src/` directory.  
-* File name convention: if the node is called `some_name`, the file **must** be `some_name_node.py`.  
-* The file must be executable (`chmod +x`).  
+* Each ROS node lives in the package’s `src/` directory.
+* File name convention: if the node is called `some_name`, the file **must** be `some_name_node.py`.
+* The file must be executable (`chmod +x`).
 * Implement the logic inside a **single class** named `SomeNameNode`, which **inherits from `DTROS`**.
 
 Skeleton example of `some_name_node.py` structure:
@@ -65,11 +65,11 @@ Observe that all nodes in Duckietown should inherit from the super class `DTROS`
 This is a hard requirement.
 ```
 
-**Why inherit from `DTROS`?** 
+**Why inherit from `DTROS`?**
 
 The base‑class adds runtime utilities (parameter hot‑reload, timing, debug topics, etc.) and enforces best‑practice defaults making writing and debugging code easier. Common bad practices that should be avoided are:
 
-> Never use wildcard imports (`from pkg import *`).  
+> Never use wildcard imports (`from pkg import *`).
 > Import exactly what needed, and keep aliases only for established standards (`np`, `plt`, …).
 
 ---
@@ -129,7 +129,7 @@ class SomeNameNode(DTROS):
 A typical ROS node is initialized with `rospy.init_node(...)`. DTROS does that acting as super-constructor, given the node name.
 
 `DTROS` wraps `rospy.init_node()` and supports **node categorization** for graph visualization. This is useful to visualize the ROS
-network as a graph, where nodes represent ROS nodes and edges represent ROS topics. 
+network as a graph, where nodes represent ROS nodes and edges represent ROS topics.
 
 In such a graph, it might be convenient to group all the nodes working on the `PERCEPTION` problem together, e.g., to clear the clutter and make the graph easier to read.
 
@@ -144,11 +144,11 @@ NodeType.{GENERIC, DRIVER, PERCEPTION, CONTROL, PLANNING, LOCALIZATION,
 
 ### 2.2 Parameters
 
-* Always use private names (`~param_name`), i.e., names relative to the namespace of the node.  
+* Always use private names (`~param_name`), i.e., names relative to the namespace of the node.
 * All parameters should be in the scope of the instance, not the method,
 so they should always be declared inside the constructor and start with `self.  `.
 * **Do not set default values in code**, but keep them in a YAML configuration file. This avoids potential ambiguities.
-* * Declare with `DTParam`; avoid `rospy.get_param()` polling.  
+* * Declare with `DTParam`; avoid `rospy.get_param()` polling.
 
 
 In classic ROS, you get the value of a parameter with `rospy.get_param(...)`.
@@ -213,8 +213,8 @@ Only declare a topic type in a `rospy.Publisher` call.
 
 ## 3 · Naming conventions
 
-* **snake_case** for variables, functions, methods.  
-* **CamelCase** only for class names.  
+* **snake_case** for variables, functions, methods.
+* **CamelCase** only for class names.
 * Prefixes: `sub_…`, `pub_…`, `cb_…` for subscribers, publishers, callbacks.
 * Initalizing publishers and subscribers should always be in the scope of the instance, hence starting with `self.`.
 
@@ -322,8 +322,8 @@ By following these guidelines—and leveraging the capabilities baked into **`DT
 (sec:advanced-dtros)=
 # The **DTROS** class
 
-This section deals with how you should write the code in a ROS node. 
-In particular, how to structure it. Writing the code of a node goes hand-in-hand with documenting it, 
+This section deals with how you should write the code in a ROS node.
+In particular, how to structure it. Writing the code of a node goes hand-in-hand with documenting it,
 but this will be discussed in more detail in [](sec:dt_way_code_docs).
 
 ## General structure
@@ -403,7 +403,7 @@ class SomeNameNode(DTROS):
             node_name=node_name,
             node_type=NodeType.PERCEPTION
         )
-        
+
         # Setting up parameters
         self.detection_freq = DTParam(
             '~detection_freq',
@@ -412,7 +412,7 @@ class SomeNameNode(DTROS):
             max_value=30
         )
         # ...
-        
+
         # Generic attributes
         self.something_happened = None
         self.arbitrary_counter = 0
@@ -420,13 +420,13 @@ class SomeNameNode(DTROS):
 
         # Subscribers
         self.sub_img = rospy.Subscriber(
-            'image_rect', 
-            Image, 
+            'image_rect',
+            Image,
             self.cb_img
         )
         self.sub_cinfo = rospy.Subscriber(
-            'camera_info', 
-            CameraInfo, 
+            'camera_info',
+            CameraInfo,
             self.cb_cinfo
         )
         # ...
@@ -439,8 +439,8 @@ class SomeNameNode(DTROS):
             dt_topic_type=TopicType.VISUALIZATION
         )
         self.pub_tag = rospy.Publisher(
-            'tag_detections', 
-            AprilTagDetectionArray, 
+            'tag_detections',
+            AprilTagDetectionArray,
             queue_size=1,
             dt_topic_type=TopicType.PERCEPTION
         )

@@ -4,7 +4,7 @@
 ```
 
 ```{needget}
-- A Duckiebot (`DB21-J4`) box: [get one from the Duckietown online store](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) 
+- A Duckiebot (`DB21-J4`) box: [get one from the Duckietown online store](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311)
 ---
 - Knowledge of nominal content of the Duckiebot DB21-J4 box.
 ```
@@ -12,7 +12,7 @@
 (setup-db21j4-whats-in-the-box)=
 # What's in the Box (`DB21-J4`)?
 
-What should you expect to find inside a Duckiedrone (`DD24`) box, and what is each component? 
+What should you expect to find inside a Duckiedrone (`DD24`) box, and what is each component?
 
 First things first: here is how a Duckiedrone box looks like:
 
@@ -39,7 +39,7 @@ What's inside the Duckiebot DB21-J4 box (selected components).
 ## List of components (`DB21J4(v2)`)
 
 ```{admonition} This list is representative. Details vary between production rounds.
-We are always striving to improve, so minor details - e.g. the number and type of nuts and screws - can change between different manufacturing rounds of the same Duckiebot model. Most notably, all Duckiebots labeled as DB21J4(v3) (post September 2025) will replace chassis-related metal screws with nylon ones, and improve the omnidirectional wheel design, as well as presenting minor chassis design modification to accommodate for more Jetson Nano development kits. 
+We are always striving to improve, so minor details - e.g. the number and type of nuts and screws - can change between different manufacturing rounds of the same Duckiebot model. Most notably, all Duckiebots labeled as DB21J4(v3) (post September 2025) will replace chassis-related metal screws with nylon ones, and improve the omnidirectional wheel design, as well as presenting minor chassis design modification to accommodate for more Jetson Nano development kits.
 ```
 
 | Number | Component                                                            |
@@ -102,5 +102,5 @@ We are always striving to improve, so minor details - e.g. the number and type o
 
 
 <!--
-In the following section [](prelim-dd24-box-component-description) we provide a brief description of each component. 
+In the following section [](prelim-dd24-box-component-description) we provide a brief description of each component.
 -->

@@ -27,15 +27,15 @@ dts matrix install
 (duckiematrix-how-to-start)=
 ## How to Run the Duckiematrix
 
-The basic command to run the Duckiematrix is `dts matrix run`. However, in order to run the 
+The basic command to run the Duckiematrix is `dts matrix run`. However, in order to run the
 Duckiematrix you need to provide two pieces of information:
 
 1. Where the engine is running
 2. What map to load
 
-In *most* cases, you will probably want to run the engine locally. You can do so by adding the `--standalone` flag. 
-With respect to the map, you can choose to either define your own map and tell the Duckiematrix where to find it 
-on the file system, or you can choose to use one of the default maps that are provided by including the `--embedded` flag.   
+In *most* cases, you will probably want to run the engine locally. You can do so by adding the `--standalone` flag.
+With respect to the map, you can choose to either define your own map and tell the Duckiematrix where to find it
+on the file system, or you can choose to use one of the default maps that are provided by including the `--embedded` flag.
 The default maps are named:
 
  - `sandbox`
@@ -52,15 +52,15 @@ In summary, the following command
 dts matrix run --standalone --embedded --map sandbox
 ```
 would start the Duckiematrix on your local machine and load the `sandbox` map that is predefined.
-By default, the Duckiematrix runs in *tutorial* mode, where the key bindings are introduced. If you 
-want to disable this behavior your can add the `--no-tutorial` flag. If something is going wrong and 
-you don't see the renderer initializing, you can see what's going wrong by adding the `--verbose` flag.
+By default, the Duckiematrix runs in *tutorial* mode, where the key bindings are introduced. If you
+want to disable this behavior your can add the `--no-tutorial` flag. If something is going wrong and
+you do not see the renderer initializing, you can see what is going wrong by adding the `--verbose` flag.
 
 
 (introduction-running-the-duckiematrix-using-a-remote-engine)=
 ## Using a Remote Engine
 
-To run a local **renderer** and connect it to a remote **engine**, you simply need to specify the location 
+To run a local **renderer** and connect it to a remote **engine**, you simply need to specify the location
 of the engine (as a hostname or IP address) using the `--engine` flag:
 
 ```shell
@@ -68,7 +68,7 @@ dts matrix run --engine ENGINE_HOSTNAME
 ```
 
 In this case you do not need to specify a `map` since that was already specified when the Duckiematrix engine
-was initially run. 
+was initially run.
 
 ## Using a Custom Map
 

@@ -9,8 +9,8 @@
 Every time there is a large project, with many contributors and
 the need for code versioning and history, developers rely on VCS
 (Version Control Systems) tools.
-Duckietown uses **Git** as VCS and [GitHub](https://github.com) 
-as a service provider for it. The Duckietown organization page on GitHub is 
+Duckietown uses **Git** as VCS and [GitHub](https://github.com)
+as a service provider for it. The Duckietown organization page on GitHub is
 [github.com/duckietown](http://github.com/duckietown).
 
 
@@ -18,9 +18,9 @@ as a service provider for it. The Duckietown organization page on GitHub is
 
 Whether a software project should be monolithic or modular is
 one of the most debated decisions that a group of developers
-faces at the beginning of a software project. Books have been 
-written about it. Duckietown started as a monolithic project, 
-and some of us still remember the infamous 
+faces at the beginning of a software project. Books have been
+written about it. Duckietown started as a monolithic project,
+and some of us still remember the infamous
 [Software](http://github.com/duckietown/Software) repository,
 and only later transitioned to a full modular approach.
 
@@ -42,14 +42,14 @@ The most frequently used Git concepts are summarised below.
 
 ### **Repository**
 
-A repository (or _repo_) holds the complete file set for a project plus the entire revision history, i.e., the history of every change done on each file. 
+A repository (or _repo_) holds the complete file set for a project plus the entire revision history, i.e., the history of every change done on each file.
 
 
 ### **Branch**
 
 Branches constitute threads of changes within a repository. Though we
-call them branches, do not try to force an analogy with tree 
-branches, they are similar in spirit but quite different in how 
+call them branches, do not try to force an analogy with tree
+branches, they are similar in spirit but quite different in how
 they work.
 
 A repository is not allowed to exist without a branch, and
@@ -57,7 +57,7 @@ every operation inside a repository only makes sense in the context
 of a branch (the _active_ branch).
 A repository can have many branches, but only one active at the time.
 
-Every Git project has at least one main branch, usually called 
+Every Git project has at least one main branch, usually called
 the `master` or `main` branch.
 
 Branches are used in different scenarios, allowing different developers to work simultaneously on their own task without having their work affect or be affected by the others.
@@ -68,9 +68,9 @@ Branch operations, like switching between branches or checking which is the acti
 
 ### **Commit**
 
-A commit is an atomic set of changes recorded in the repository history and is identified by a unique `SHA-1` hash. 
+A commit is an atomic set of changes recorded in the repository history and is identified by a unique `SHA-1` hash.
 
-When you create/delete/edit one or more files in a repository, 
+When you create/delete/edit one or more files in a repository,
 and you are confident enough about those changes, you can commit (or, "save" them to the online version system) them to the branch using the workflow:
 * `git add <file(s)>`, e.g., `git add .` to indicate all changes
 * `git commit -m "Replace me with some informative message regarding the commit."`.
@@ -79,9 +79,9 @@ and you are confident enough about those changes, you can commit (or, "save" the
 A commit is not a snapshot (or a copy) of the entire repository
 at a given point in time. Each commit contains only the incremental
 difference from the previous commit, called *delta* in Git.
-``` 
+```
 
-A chain of commits in which all the ancestors are included makes a 
+A chain of commits in which all the ancestors are included makes a
 branch. Since every commit is linked to its parent, a branch is
 simply a *pointer* to a commit (the full chain of commits can always
 be reconstructed from the commit).
@@ -96,15 +96,15 @@ A tag is a human friendly name for a commit but unlike branches, tags
 are read-only. Once created, they cannot be modified to point to
 a different commit.
 
-Tags are commonly used for labeling commits that constitute 
+Tags are commonly used for labeling commits that constitute
 milestones in the project development timeline, for example a release.
 
 
 ### **Fork**
 
-A fork is basically a copy of someone else's repository. 
-Usually, you cannot create branches or change code in other 
-people's repositories, that is why you create your own copy of it. 
+A fork is basically a copy of someone else's repository.
+Usually, you cannot create branches or change code in other
+people's repositories, that is why you create your own copy of it.
 This is called `forking` and allows you to experiment without affecting the original.
 
 
@@ -113,7 +113,7 @@ This is called `forking` and allows you to experiment without affecting the orig
 A git *remote* is a copy of your repository hosted by a Git service
 provider, e.g. [GitHub](https://github.com). Remotes allow you to
 share (`push`) your commits and branches so that other developers can `fetch`
-them. Remotes are the same as local repositories, but they are reachable 
+them. Remotes are the same as local repositories, but they are reachable
 over the internet.
 
 You can use the commands `git fetch` and `git push` to bring your
@@ -130,23 +130,23 @@ to `master`.
 
 Often Git will manage to apply these changes seamlessly. However,
 if both `new-patch` and `master` have changes to the same line of code, Git
-will not be able to determine automatically which of the two changes should be preserved. These are called _merge conflict_ and will have to be solved manually, by selecting which of the two version to keep. 
-    
+will not be able to determine automatically which of the two changes should be preserved. These are called _merge conflict_ and will have to be solved manually, by selecting which of the two version to keep.
+
 ### **Pull Requests**
 
 A pull request (or, **PR**) on GitHub proposes that changes from one branch (often in a fork) be merged into another branch and provides a discussion and review interface before the merge is executed.
 
-A pull request can be seen as a three-step merge operation between two 
+A pull request can be seen as a three-step merge operation between two
 branches where the changes are first _proposed_, then _discussed and adapted_
 (if requested), and finally _merged_.
 
-PRs are a better practice than direct merging, as it provides an extra-layer of revision before potentially compromising the main code with undesirable changes. 
+PRs are a better practice than direct merging, as it provides an extra-layer of revision before potentially compromising the main code with undesirable changes.
 
 ## Common operations
 
 ### **Fork a repository on GitHub**
 
-To fork a repo you have to go to the repository's webpage and click 
+To fork a repo you have to go to the repository's webpage and click
 on the fork button in the upper right corner.
 
 
@@ -156,23 +156,23 @@ Cloning a repository is the act of creating a local copy of a remote
 repository. A repo is cloned only at the very beginning, when you
 still do not have a local copy of it.
 
-To clone a repository, either copy the HTTPS or SSH URL given on 
+To clone a repository, either copy the HTTPS or SSH URL given on
 the repository's webpage, then:
 
     git clone [REPOSITORY-URL]
-    
-This will create a directory in the current working path with 
-the same name of the repository and the entire history of commits 
+
+This will create a directory in the current working path with
+the same name of the repository and the entire history of commits
 will be downloaded onto your computer.
 
 
 ### **Create a new branch**
 
-The command for creating a new branch is a little bit 
+The command for creating a new branch is a little bit
 counter-intuitive, but you will get use to it:
 
     git checkout -b [NEW-BRANCH-NAME]
-    
+
 This creates a new branch pointing at the same commit your
 currently active branch is pointing at. In other words, you will
 end up with two branches pointing at the same commit. Note that
@@ -181,9 +181,9 @@ your active branch.
 
 ### **Inspecting working tree status**
 
-In Git, the term *working tree* indicates all the changes 
+In Git, the term *working tree* indicates all the changes
 that are not committed yet. You can think of it as your workspace.
-When you create a new commit, the hash for the current working tree 
+When you create a new commit, the hash for the current working tree
 is computed and assigned to the new commit together with the changes
 since the last commit. The working tree clears as you commit changes.
 
@@ -197,13 +197,13 @@ tree.
 
 ### **Create a new commit**
 
-A commit is created through a two-step process. First, mark all the 
+A commit is created through a two-step process. First, mark all the
 changes that will be part of the new commit:
 
     git add <file(s)>
 
 ```{tip}
-The command `git status` will always show you which changes are 
+The command `git status` will always show you which changes are
 marked to be used for a new commit and which changes are not.
 ```
 Second, create the actual commit:
@@ -228,18 +228,18 @@ repository so that the two repositories can get in sync.
 ### **Fetch changes**
 
 If you suspect that new changes might be available on the remote
-repository that are not synced to your local repo, you can use the command 
+repository that are not synced to your local repo, you can use the command
 
     git fetch origin [BRANCH-NAME]
 
 to download the new commits available on the remote (if any).
-These new changes will be appended to the branch called 
+These new changes will be appended to the branch called
 `origin/[BRANCH-NAME]` in your local repository.
 
 If you want to apply them to your current branch, use the command
 
     git merge origin/[BRANCH-NAME]
-    
+
 Use the command `git pull origin/[BRANCH-NAME]` to perform *fetch*
 and then *merge*.
 
@@ -262,17 +262,17 @@ run the command:
 
 ### **Open a GitHub Issue**
 
-If you are experiencing issues with any code or content of a repository, 
+If you are experiencing issues with any code or content of a repository,
 such as this manual, you can submit GitHub "issues" by navigating to the `Issues` tab of the desired repo and selecting _New issue_.
 
-For example, when you find a typo or a mistake in this instruction manual, 
-you can (and should!) visit the [Duckietown developer manual issues page](https://github.com/duckietown/book-devmanual-docs/issues) and report an issue, so it can be reviewed and addressed. 
+For example, when you find a typo or a mistake in this instruction manual,
+you can (and should!) visit the [Duckietown developer manual issues page](https://github.com/duckietown/book-devmanual-docs/issues) and report an issue, so it can be reviewed and addressed.
 
-Even better, you could fork this repo, fix the issue, and make a PR. We have a different manual with [tips and tricks on how to contribute to the Duckietown documentation system](https://docs.duckietown.com/daffy/devmanual-docs/intro.html).   
+Even better, you could fork this repo, fix the issue, and make a PR. We have a different manual with [tips and tricks on how to contribute to the Duckietown documentation system](https://docs.duckietown.com/daffy/devmanual-docs/intro.html).
 
 GitHub Issues are a crucial part of the lifecycle of a software product, as
 they provide a feedback loop that goes directly from the end-user to the  developers. You do not have to be a developer or an expert in software
-engineering to open an Issue, and issue cannot "break the build", so you can dare and open issues even when you are not super confident. 
+engineering to open an Issue, and issue cannot "break the build", so you can dare and open issues even when you are not super confident.
 
 
 ## Hands-On resources

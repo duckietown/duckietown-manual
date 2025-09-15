@@ -166,7 +166,7 @@ We can do so by running the following command from the root of our DTProject.
 
     mkdir -p ./packages/my_package/src
 
-We now use our favorite text editor to create the file 
+We now use our favorite text editor to create the file
 `my_publisher_node.py` inside the `src/` directory we just created and place the following code in it:
 
 ```python
@@ -211,7 +211,7 @@ Using the super class `DTROS` provided by the Python module `duckietown.dtros` i
 is highly suggested as it provides a lot of useful features that plain ROS does not. More on these later.
 ```
 
-We now need to the tell our file system that we want our file `my_publisher_node.py` be treated 
+We now need to the tell our file system that we want our file `my_publisher_node.py` be treated
 as an executable file. We do so by running the following command from the root of our DTProject:
 
     chmod +x ./packages/my_package/src/my_publisher_node.py
@@ -220,13 +220,13 @@ as an executable file. We do so by running the following command from the root o
 
 ## Define launcher
 
-As we discussed above, everything in Duckietown runs inside Docker containers. This means that we also need 
+As we discussed above, everything in Duckietown runs inside Docker containers. This means that we also need
 to tell Docker what to run when the container is started. In this case, we want our new ROS publisher node
 to run.
 
-Each DTProject compiles into a single Docker image, but we can declare multiple start "behaviors" for the 
+Each DTProject compiles into a single Docker image, but we can declare multiple start "behaviors" for the
 same project/image so that the same project can serve multiple (though related) purposes. As we learned
-in [](dtproject-launchers), we can use **launchers** to accomplish this. As we learned in 
+in [](dtproject-launchers), we can use **launchers** to accomplish this. As we learned in
 [](dtproject-launcher-add-new), we create a new launcher to allow for this new start behavior.
 
 In order to do so, we create the file `./launchers/my-publisher.sh` and add the following content,

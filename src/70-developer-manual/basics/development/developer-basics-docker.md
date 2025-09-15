@@ -9,7 +9,7 @@
 This section introduces Docker and the specific features employed by the Duckietown community. For a broader overview, consult [Docker’s official Get Started guide](https://docs.docker.com/get-started/overview/).
 
 ```{tip}
-Check out the [Duckietown Introduction to Containerization lecture](https://app-na1.hubspotdocuments.com/documents/8795519/view/717428738?accessId=475a8d) for additional insight. 
+Check out the [Duckietown Introduction to Containerization lecture](https://app-na1.hubspotdocuments.com/documents/8795519/view/717428738?accessId=475a8d) for additional insight.
 ```
 
 (basic-docker-what-is)=
@@ -17,29 +17,29 @@ Check out the [Duckietown Introduction to Containerization lecture](https://app-
 
 Docker provides operating-system-level virtualization, commonly called _containerization_. Containers isolate user-space instances so that programs perceive a dedicated environment while sharing the host kernel. This approach yields lightweight, reproducible deployments—ideal for distributed robotics platforms such as the Raspberry Pi used in Duckietown.
 
-In other words, containerization allows the existence of multiple isolated user space instances called containers. These containers may look like real computers from the point of view of programs running in them. 
+In other words, containerization allows the existence of multiple isolated user space instances called containers. These containers may look like real computers from the point of view of programs running in them.
 
 A computer program running on an ordinary operating system can see all resources available to the system, e.g., network devices, CPU, RAM; However, programs running inside a container can only see the container's resources. Resources assigned to the container become thus available to all processes that live inside that container.
 
 (basic-docker-containers-vs-vms)=
 ## What is the difference between containers and Virtual Machines?
 
-Containers are often compared to virtual machines (VMs), but there are important differences. Containers differ from virtual machines (VMs) because they _reuse the host kernel_ instead of bundling a full guest operating system. 
+Containers are often compared to virtual machines (VMs), but there are important differences. Containers differ from virtual machines (VMs) because they _reuse the host kernel_ instead of bundling a full guest operating system.
 
 |                 | Virtual Machine | Docker Container |
 |-----------------|-----------------|------------------|
 |Guest OS needed? | Yes             | No               |
 |Storage / RAM    | High            | Low              |
 |Startup latency  | Seconds-minutes | Milliseconds     |
- 
-The main difference is that VMs require a host operating system (OS) with a 
-hypervisor and a number of guest OSs, each with their own libraries and 
-application code. This can result in a significant overhead. 
 
-Imagine running an Ubuntu server inside an Ubuntu VM. Most 
-of the kernel libraries, binaries, and processes will be duplicated on the host and on the guest OS. 
-Containerization, on the other hand, leverages the existing kernel and OS 
-and adds only the additional binaries, libraries, and code necessary to run 
+The main difference is that VMs require a host operating system (OS) with a
+hypervisor and a number of guest OSs, each with their own libraries and
+application code. This can result in a significant overhead.
+
+Imagine running an Ubuntu server inside an Ubuntu VM. Most
+of the kernel libraries, binaries, and processes will be duplicated on the host and on the guest OS.
+Containerization, on the other hand, leverages the existing kernel and OS
+and adds only the additional binaries, libraries, and code necessary to run
 a given application.
 
 ```{figure} ../../../_images/developer/basics/development/containers_vs_vms.jpg
@@ -68,19 +68,19 @@ Docker uses three main entities: images → layers → containers. Containers ar
 
 ### Docker images, layers, and containers
 
-Docker images are _build-time_ artifacts while Docker containers are _run-time_ constructs. 
+Docker images are _build-time_ artifacts while Docker containers are _run-time_ constructs.
 In other words, a Docker image is static, like a `.zip` or `.iso` file. A container, on the other hand, starts from a static image but as it is used, files and configurations might change.
 
 Docker images are built from layers. The initial, or lowest-level one being the *base layer*. Typically, this is a stripped-down version of an OS. For example, many Docker images in Duckietown run `ubuntu:18.04` as a base.
 
-Each layer on top of the base layer represents a change to the layers below. Docker translates this sequence of changes to a file system that the container can then use. 
+Each layer on top of the base layer represents a change to the layers below. Docker translates this sequence of changes to a file system that the container can then use.
 
 Small changes to a single file typically only modify one layer. Therefore, when Docker attempts to pull the new version, it will need to download and store only the modified layer, saving space, time, and bandwidth.
 
 ### Docker Hub and image tags
 
-In the Docker world, images are organized by their repository name, image 
-name, and _tags_. As with Git and GitHub, Docker images are stored in image 
+In the Docker world, images are organized by their repository name, image
+name, and _tags_. As with Git and GitHub, Docker images are stored in image
 _registers_. The most popular Docker register, and the one used in Duckietown, [Docker Hub](https://hub.docker.com/). Docker Hub organizes images as:
 
     [repository/]image[:tag]
@@ -93,13 +93,13 @@ For example, in the Duckietown Docker image:
 
     duckietown/dt-core:ente-arm64v8
 
-* repository name `duckietown`, 
+* repository name `duckietown`,
 * image name `dt-core`, and
-* tag `ente-arm64v8`, 
+* tag `ente-arm64v8`,
 
 The tag specifies the Duckietown software distribution that the image contains, i.e., `ente`, and the CPU architecture that this image is targeting, i.e., `arm64v8`. We will talk about different CPU architectures and why they need to be part of the Docker image tag in [](basic-docker-arch).
 
-All Duckietown-related images are in the `duckietown` Docker Hub repository, although images can be very different from each other and for used for various 
+All Duckietown-related images are in the `duckietown` Docker Hub repository, although images can be very different from each other and for used for various
 applications.
 
 (basic-docker-arch)=
@@ -109,14 +109,14 @@ Docker images contain binaries, executable files that are compiled to
 the level of CPU instructions, which are not portable across
 different CPU architectures, due to different instruction sets.
 
-Most modern computers with Intel or AMD CPUs use the `amd64` architecture, so it is possible to never have to worry about CPU architecture distinctions. 
+Most modern computers with Intel or AMD CPUs use the `amd64` architecture, so it is possible to never have to worry about CPU architecture distinctions.
 
 But in Duckietown we use "edge" devices like the Raspberry Pi and NVIDIA Jetson Nanos. These small computers employ ARM processors, based on the `arm32v7` architecture.
 
 <!--
 Note: Full disclosure, while all devices officially supported in Duckietown
-are based on 64-bit capable Arm processors, thus using the `arm64v8` 
-instructions set, the Raspbian OS only supports 32-bit, which is the reason 
+are based on 64-bit capable Arm processors, thus using the `arm64v8`
+instructions set, the Raspbian OS only supports 32-bit, which is the reason
 why we use `arm32v7` images.
 -->
 
@@ -150,7 +150,7 @@ To remove an image instead:
 |------------------|--------|-------|----------------|--------|
 | ubuntu | latest | 602eb6fb314b | 30 minutes ago | 78.1MB |
 
-You can also remove images by their `IMAGE ID` as printed by the 
+You can also remove images by their `IMAGE ID` as printed by the
 `list` command above. A shortcut for `docker image rm` is `docker rmi`.
 
 To remove all "dangling images", i.e., those not supporting any container:
@@ -185,9 +185,9 @@ Containers are the run-time equivalent of images. To start a container, Docker:
 * attaches all the specified devices and directories,
 * "boots" it up,
 * sets up the environment, and
-* starts a pre-determined process inside this container. 
+* starts a pre-determined process inside this container.
 
-All this magic happens with the simple command: `docker run`. 
+All this magic happens with the simple command: `docker run`.
 
 ```{note}
 It is not necessary to pull the image layers beforehand. If Docker does not find them locally, it will look for them on Docker Hub.
@@ -197,11 +197,11 @@ It is not necessary to pull the image layers beforehand. If Docker does not find
 
 Here is an example:
 
-    docker run ubuntu  
+    docker run ubuntu
 
 This will take the `ubuntu` image with `latest` tag (previously pulled - `docker pull ubuntu` again if it has been removed) and will start a container from it.
 
-This command will not do much, as the container will immediately exit as it has nothing to execute. When the main process of a container exits, the container exits as well. 
+This command will not do much, as the container will immediately exit as it has nothing to execute. When the main process of a container exits, the container exits as well.
 
 By default, the `ubuntu` image runs `bash`. As we have not specified any commands, it exits immediately.
 
@@ -215,9 +215,9 @@ The terminal will now show something similar to:
 
 The part after `@` will be different --- that is your container ID.
 
-We are now inside the `ubuntu` container and can use basic `bash` commands like `ls`, `cd`, and `cat`, and verify we no longer have access to the host machine through this terminal.  
+We are now inside the `ubuntu` container and can use basic `bash` commands like `ls`, `cd`, and `cat`, and verify we no longer have access to the host machine through this terminal.
 
-Running containers can be listed with the `docker ps` command --- analogous to the `docker image list` command for images. 
+Running containers can be listed with the `docker ps` command --- analogous to the `docker image list` command for images.
 
 Open a new terminal window (do not close the other one yet) and type:
 
@@ -227,10 +227,10 @@ An alternative (more explicit) syntax is
 
     docker container list
 
-Go back to the terminal running the `ubuntu` container and type `exit`. This will stop the container and revert control over to the host machine. 
-Running the `docker ps` command again will show that the ubuntu container disappeared. 
+Go back to the terminal running the `ubuntu` container and type `exit`. This will stop the container and revert control over to the host machine.
+Running the `docker ps` command again will show that the ubuntu container disappeared.
 
-Does this mean that this container and all changes you might have made in it are gone? 
+Does this mean that this container and all changes you might have made in it are gone?
 
 Not at all, `docker ps` and `docker container list` only list the *currently running* containers.
 
@@ -238,9 +238,9 @@ You can see all containers, including the stopped ones with:
 
     docker container list -a
 
-(or, `docker ps -a`). Here `-a` stands for *all*. 
+(or, `docker ps -a`). Here `-a` stands for *all*.
 
-At least two `ubuntu` containers should show here, because every time `docker run` is used a new container is created. 
+At least two `ubuntu` containers should show here, because every time `docker run` is used a new container is created.
 
 ```{note}
 The container `NAMES` seem strangely random. We could have added custom, more descriptive names --- more on this later.
@@ -259,7 +259,7 @@ Other common container operations are intuitive:
     docker container restart [container name]
 
 ```{attention}
-Finally, a powerful command. Imagine running a container in the background, with the main process running but no open shell. How to interact with what is going on inside the container? 
+Finally, a powerful command. Imagine running a container in the background, with the main process running but no open shell. How to interact with what is going on inside the container?
 ```
 
 Open a terminal in the container with:
@@ -269,7 +269,7 @@ Open a terminal in the container with:
 (basic-docker-running-options)=
 ## Running images
 
-Often it will be necessary to run containers with more sophisticated 
+Often it will be necessary to run containers with more sophisticated
 options. Look at the following example: (do not try to run it, it will not do much).
 
     docker -H hostname.local run -dit --privileged --name joystick --network=host -v /data:/data duckietown/rpi-duckiebot-joystick-demo:master18
@@ -295,7 +295,7 @@ options. Look at the following example: (do not try to run it, it will not do mu
   - Run container in the background and print container ID.
 * -
   - `--name`
-  - Sets a name for the container. If you don't specify one, a random name will be generated.
+  - Sets a name for the container. If you do not specify one, a random name will be generated.
 * - `-v`
   - `--volume`
   - Bind mount a volume, exposes a folder on your host as a folder in your container. Be vigilant when using this.
@@ -362,7 +362,7 @@ Sometimes your Docker system will be clogged with images, containers, networks, 
 
 For simple operations and basic commands, one can use _Portainer_.
 
-Portainer is a Docker container that allows control of the Docker 
+Portainer is a Docker container that allows control of the Docker
 daemon through a browser. Portainer can be installed by running:
 
     docker volume create portainer_data
@@ -381,7 +381,7 @@ comfortable with Docker and its tools. Complete these Docker tutorials before pr
 3. [Build and run your image](https://docs.docker.com/get-started/part2/)
 4. [Share images on Docker Hub](https://docs.docker.com/get-started/part3/)
 
-Additional insights fore the curious learner can be found in this 
+Additional insights fore the curious learner can be found in this
 ["Docker Curriculum" guide](https://docker-curriculum.com/).
 
 

@@ -11,7 +11,7 @@ kernelspec:
 ---
 
 ```{seo}
-:description: This is a cheatsheet summarizing the environments for contributing to the Duckietown documentation. 
+:description: This is a cheatsheet summarizing the environments for contributing to the Duckietown documentation.
 :keywords: myst, cheatsheet, duckietown, documentation
 ```
 
@@ -86,7 +86,7 @@ You can also specify a target in another book using the syntax:
 [](book-BOOKNAME:target)
 ```
 
-Example here is link to the Duckiebot Operation Manual page about DB21J assembly [](book-opmanual-duckiebot:assembling-duckiebot-db21j). 
+Example here is link to the Duckiebot Operation Manual page about DB21J assembly [](book-opmanual-duckiebot:assembling-duckiebot-db21j).
 -->
 ## Quote
 
@@ -399,23 +399,23 @@ Related content that does not include some duplication should be shown in a tabl
   - Result
 * - `````md
     ````{tab-set}
-    
+
     ```{tab-item} DB19
     This is example content for the DB19
     ```
-    
+
     ```{tab-item} DB21
     This is example content for the DB21
     ```
     ````
     `````
-    
+
   - ````{tab-set}
-    
+
     ```{tab-item} DB19
     This is example content for the DB19
     ```
-    
+
     ```{tab-item} DB21
     This is example content for the DB21
     ```
@@ -440,7 +440,7 @@ Related content that does not include some duplication should be shown in a tabl
     ```
 * - ````md
     ```{warning}
-    Use warnings for situations that might 
+    Use warnings for situations that might
     cause harm, but can be fixed.
     ```
     ````
@@ -466,7 +466,7 @@ Related content that does not include some duplication should be shown in a tabl
     ```
 * - ````md
     ```{danger}
-    Used for situations that might 
+    Used for situations that might
     cause irreparable harm (to people or robots).
     ```
     ````
@@ -543,7 +543,7 @@ The complete list of icons available can be found [here](https://fontawesome.com
     ````
   - ```{icon} ice-cream
     ```
-    
+
 ``````
 
 ## Figures
@@ -600,7 +600,7 @@ The complete list of icons available can be found [here](https://fontawesome.com
     ![](https://tinyurl.com/39ewhkab)
     ````
   - ![](https://tinyurl.com/39ewhkab)
-    
+
 ``````
 
 ### Framed figures
@@ -629,7 +629,7 @@ Use the `:class: framed` parameter to add a border around the image.
     :width: 50px
     :class: framed
     ```
-    
+
 ``````
 
 :::{note}
@@ -701,7 +701,7 @@ Use the `:class: framed` parameter to add a border around the image.
 
 Videos can be referenced using the following methods:
 
-1) `vimeo` - When possible, video content should be added to the Vimeo account and formatted with the custom Duckietown `vimeo` directive.  
+1) `vimeo` - When possible, video content should be added to the Vimeo account and formatted with the custom Duckietown `vimeo` directive.
 2) `videoembed` - For other video content accessible via a web link, use the `videoembed` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_iframe.ASP) are available mimicking the `:alt:` parameter syntax below.
 3) `video` - For videos stored locally to the book project (this is not recommended), use the `video` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_video.asp) are available mimicking the `:alt:` parameter syntax below.
 
@@ -749,7 +749,7 @@ Videos can be referenced using the following methods:
     :alt: alt text
     ```
     ````
-  - 
+  -
 ``````
 
 ### Referencing local videos
@@ -766,7 +766,7 @@ Supported file types: `.mp4`, `.ogm`, `.ogv`, `.ogg`, `.webm`.
   - Example
   - Result
 * - ````md
-    ```{video} file_path 
+    ```{video} file_path
     :alt: alt
     ```
     ````

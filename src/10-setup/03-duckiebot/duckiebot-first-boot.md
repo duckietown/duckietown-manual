@@ -1,5 +1,5 @@
 ```{seo}
-:description: Guide on turning on your Duckiebot for the first time. During the first boot, the Duckiebot completes its initialization procedure. 
+:description: Guide on turning on your Duckiebot for the first time. During the first boot, the Duckiebot completes its initialization procedure.
 :keywords: Duckietown, Duckiebot, first boot, booting up a Duckiebot
 ```
 
@@ -17,8 +17,8 @@
 
 ## You are now ready to boot up your Duckiebot
 
-Insert the initialized SD card into your Duckiebot's Jetson Nano until your feel a "click". Then, push the button on the 
-battery to power up the Duckiebot. 
+Insert the initialized SD card into your Duckiebot's Jetson Nano until your feel a "click". Then, push the button on the
+battery to power up the Duckiebot.
 
 
 ```{vimeo} 527364179
@@ -28,7 +28,7 @@ battery to power up the Duckiebot.
 ```{warning}
 Be sure your Duckiebattery is well charged before attempting to boot the Duckiebot for the first time.
 
-The external power supply might not be able to provide sufficient current if the battery is low, causing the on-board 
+The external power supply might not be able to provide sufficient current if the battery is low, causing the on-board
 computer to reboot. Should that happen during the first boot, you will likely have to burn the SD card again.
 ```
 
@@ -40,7 +40,7 @@ Make sure your desktop or laptop computer is connected to the same Wi-Fi network
 
 Then open a terminal and run:
 
-``` 
+```
 dts fleet discover
 ```
 
@@ -89,7 +89,7 @@ Duckiebot's dashboard first setup page
 This is the dashboard of your Duckiebot. The Dashboard is built using a
 framework called \\compose\\. You configure it in [](duckiebot-dashboard-setup).
 
-If you can't access the dashboard, check out the Troubleshooting guide at 
+If you cannot access the dashboard, check out the Troubleshooting guide at
 the end of this page.
 -->
 
@@ -98,8 +98,8 @@ the end of this page.
 ## Powering off the Duckiebot
 
 ```{warning}
-Do not test these commands before the Duckiebot has completed its first boot. 
-If the Duckiebot gets rebooted/shutdown while the first boot has not finished, 
+Do not test these commands before the Duckiebot has completed its first boot.
+If the Duckiebot gets rebooted/shutdown while the first boot has not finished,
 the Duckiebot might become unreachable and you will have to reflash the SD card.
 ```
 
@@ -119,7 +119,7 @@ You will learn more about how to handle your Duckiebot in [](how-to-handle-a-duc
 <!--
 ### (optional) HUT Microcontroller Update
 
-We call Duckiebot "HUT" (not a typo) the electronic board that connects to the GPIO pins of the onboard computer. 
+We call Duckiebot "HUT" (not a typo) the electronic board that connects to the GPIO pins of the onboard computer.
 
 ```{warning}
 It is not necessary to run this procedure after the first boot. We add this link here for completeness and to inform you of the existence of a microcontroller on the HUT.
@@ -136,15 +136,15 @@ If facing challenges with moving your Duckiebot or controlling the LEDs, it is p
 ```{trouble}
 I pressed the power button on top but nothing happened.
 ---
-Power on your Duckiebot using the button on the side of the Duckiebattery.  The top button is only for powering off. 
+Power on your Duckiebot using the button on the side of the Duckiebattery.  The top button is only for powering off.
  You can also learn more about how to handle your Duckiebot in [](how-to-handle-a-duckiebot-db21).
 ```
 
 ```{trouble}
-My Duckiebot does not appear to boot after pressing the power button on the battery. I don't see a green light on 
+My Duckiebot does not appear to boot after pressing the power button on the battery. I do not see a green light on
 the HUT or the Jetson Nano.
 ---
-Refer back to [](assembly-instructions-db21j), and check each of your cable connections.  Confirm the start and end 
+Refer back to [](assembly-instructions-db21j), and check each of your cable connections.  Confirm the start and end
 port of each power cable from the battery.  The battery must be charged fully as shown in the first assembly step.
 ```
 
@@ -170,22 +170,22 @@ If you are not using a Jetson Nano, the model is the model of your Duckiebot (e.
 The Duckiebot screen does no turn on even though it shows up in `dts fleet discover` and the dashboard is accessible.
  The time of flight (ToF) sensor and front bumper are not detected on the Dashboard Components page.
 ---
-Disconnect the ToF sensor from the front bumper and use the long cable that originally connected the front bumper to 
-the HUT to connect the ToF sensor directly to that same HUT port. Then reboot. This bypasses a known multiplexer 
+Disconnect the ToF sensor from the front bumper and use the long cable that originally connected the front bumper to
+the HUT to connect the ToF sensor directly to that same HUT port. Then reboot. This bypasses a known multiplexer
 issue affecting some front bumpers.
 ```
 
 ```{trouble}
-My Duckiebot appears to be booted and the screen is on, but I can't see it using `dts fleet discover`.
+My Duckiebot appears to be booted and the screen is on, but I cannot see it using `dts fleet discover`.
 ---
-Your Duckiebot must be connected to the same network as the computer you are using to run the `dts` commands.  Check 
+Your Duckiebot must be connected to the same network as the computer you are using to run the `dts` commands.  Check
 the [networking section](setup-duckiebot-network) of the book to see if your network is set up correctly.
 ```
 
 ```{trouble}
 I am not sure whether my Duckiebot is properly initialized.
 ---
-As long as the `fleet discover` tool shows ready, your Duckiebot should be ready. 
-You can also visit the dashboard to confirm that the Duckiebot is serving its status. 
+As long as the `fleet discover` tool shows ready, your Duckiebot should be ready.
+You can also visit the dashboard to confirm that the Duckiebot is serving its status.
 Generally as long as you see the Duckiebot dashboard is up, your Duckiebot should be correctly initialized.
 ```

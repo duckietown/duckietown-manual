@@ -1,5 +1,5 @@
 (book-db-opmanual)=
-# Overview 
+# Overview
 
 ```{seo}
 :description: Welcome to the Duckiebot Operation Manual - the starting point for setting up your Duckietown experience.
@@ -8,15 +8,15 @@
 
 Welcome to the Duckiebot operation manual!
 
-This is a great place for getting started with Duckietown. 
+This is a great place for getting started with Duckietown.
 
 It contains step-by-step instructions on how to set up your computer, assemble, calibrate, and operate a Duckiebot, along with troubleshooting tips.
 
 ```{note}
-If you are new to Duckietown, you should find a course that helps you navigate this content. For example, our [massive open online course "Self-Driving Cars with Duckietown"](https://duckietown.com/self-driving-cars-with-duckietown-mooc/). 
+If you are new to Duckietown, you should find a course that helps you navigate this content. For example, our [massive open online course "Self-Driving Cars with Duckietown"](https://duckietown.com/self-driving-cars-with-duckietown-mooc/).
 ```
 
-If you are a Duckietown veteran, treat this book as a reference manual on how to do specific things. 
+If you are a Duckietown veteran, treat this book as a reference manual on how to do specific things.
 
 If you have suggestions on how to improve this documentation, read the [Duckietown Book Writer Manual](https://docs.duckietown.com/daffy/devmanual-docs/intro.html) to learn how to make contributions.
 

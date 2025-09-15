@@ -8,10 +8,10 @@
 
 ## Introduction to SLAM
 
-Simultaneous localization and mapping (SLAM) is the problem where a robot must use the sensor data that it is collecting to build a representation of the environment while concurrently placing itself within that representation. 
+Simultaneous localization and mapping (SLAM) is the problem where a robot must use the sensor data that it is collecting to build a representation of the environment while concurrently placing itself within that representation.
 
-In this lecture, we present first the mapping problem, assuming the robot knows where it is (i.e., is _localized_), then the localization problem assuming that the map is provided, and then finally the full joint SLAM problem. 
+In this lecture, we present first the mapping problem, assuming the robot knows where it is (i.e., is _localized_), then the localization problem assuming that the map is provided, and then finally the full joint SLAM problem.
 
-We discuss three approaches to the SLAM problem, the first based on the Kalman filter, the second based on the particle filter, and the third a maximum a-posteriori optimization-based approach. 
+We discuss three approaches to the SLAM problem, the first based on the Kalman filter, the second based on the particle filter, and the third a maximum a-posteriori optimization-based approach.
 
 ```{slides} ../../../../_assets/instructor-manual/slam.pdf

@@ -36,5 +36,5 @@ This ensures that the specified packages are installed and available inside the 
 (exercise:dtproject-deps-numpy)=
 ## Exercise: Basic NumPy program
 
-Write a program that performs the sum of two numbers using [NumPy](https://numpy.org/). 
+Write a program that performs the sum of two numbers using [NumPy](https://numpy.org/).
 Add `numpy` to the file `dependencies-py3.txt` to have it installed in the Docker image.

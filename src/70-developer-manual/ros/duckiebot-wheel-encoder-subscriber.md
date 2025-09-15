@@ -30,10 +30,10 @@ uint16 resolution
 uint8 type
 ```
 
-- `header`: standard ROS header  
-- `data`: accumulated tick count  
-- `resolution`: ticks per full revolution  
-- `type`: encoder mode (`ENCODER_TYPE_ABSOLUTE` or `ENCODER_TYPE_INCREMENTAL`)  
+- `header`: standard ROS header
+- `data`: accumulated tick count
+- `resolution`: ticks per full revolution
+- `type`: encoder mode (`ENCODER_TYPE_ABSOLUTE` or `ENCODER_TYPE_INCREMENTAL`)
 
 For example, on the DB21 series robot, `resolution=135` and `type=1` (incremental), meaning there are 135 ticks per revolution.
 
@@ -190,7 +190,7 @@ If the wheels are spun by hand, the ticks only increase. The robot can only sens
 (ros-wheel-encoder-reader-node-create)=
 ## Create Subscriber ROS Node
 
-We now use our favorite text editor to create the file 
+We now use our favorite text editor to create the file
 `wheel_encoder_reader_node.py` inside the `src/` directory of our catkin package and add the following content,
 
 ```python

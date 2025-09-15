@@ -2,7 +2,7 @@
 # Docker
 
 ```{seo}
-:description: How to install and set up Docker on your computer. This is a necessary step to use Duckietown software. 
+:description: How to install and set up Docker on your computer. This is a necessary step to use Duckietown software.
 :keywords: Duckietown, Duckiebot, Docker, computer setup
 ```
 
@@ -68,7 +68,7 @@ Then,
 docker login -u DOCKERHUB_USERNAME
 ```
 
-Where `DOCKERHUB_USERNAME` is your Docker Hub username, created during [](setup-account-docker). You will then be prompted for your password, paste the access token we created earlier, and press 
+Where `DOCKERHUB_USERNAME` is your Docker Hub username, created during [](setup-account-docker). You will then be prompted for your password, paste the access token we created earlier, and press
 <kbd>Enter</kbd>.
 
 
@@ -125,7 +125,7 @@ For more examples and ideas, visit:
 
 
 ```{seealso}
-If you are unfamiliar with Docker, we strongly recommend reading the following reference page to gain a working 
+If you are unfamiliar with Docker, we strongly recommend reading the following reference page to gain a working
 understanding of [this page](sec:developer_basics_docker)
 ```
 

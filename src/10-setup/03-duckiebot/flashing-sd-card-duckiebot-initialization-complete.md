@@ -1,5 +1,5 @@
 (setup-db-sd-card-flashing-complete)=
-# The Complete Way 
+# The Complete Way
 
 ```{seo}
 :description: Instructions on how to flash an SD card to initialize a Duckiebot, Duckiedrone, Traffic Light or Watchtower.
@@ -42,10 +42,10 @@ dts init_sd_card --hostname HOSTNAME --type TYPE --configuration CONFIGURATION -
 
 Where:
 
-* `--hostname` is the name of the robot you are flashing the SD card for. 
+* `--hostname` is the name of the robot you are flashing the SD card for.
 
 ```{attention}
-The `HOSTNAME`, or robot name, is going to be used extensively in future interactions with the robot, and can only be changed by reflashing your SD card. 
+The `HOSTNAME`, or robot name, is going to be used extensively in future interactions with the robot, and can only be changed by reflashing your SD card.
 
 Choose a hostname for your robot such that it:
 
@@ -69,12 +69,12 @@ For example:
 
 ```{attention}
 * If you have a Duckiebot with a **4GB** Jetson Nano - the model is **DB21J**
-* If you have a Duckiebot with a **2GB** Jetson Nano (you shouldn't) - the model is **DB21M**
+* If you have a Duckiebot with a **2GB** Jetson Nano (you should not) - the model is **DB21M**
 * If you are not using a Jetson Nano, the model is the model of your Duckiebot (e.g., DB19 or DBR4)
 * If you are not sure what Duckiebot you have, refer to [](duckiebot-configurations) or [reach out to support](how-to-get-help).
 ```
 
-* `--wifi` is a comma-separated list of Wi-Fi networks, each passed in the format `wifiname:wifipassword`. E.g., (default) `duckietown:quackquack`. [Networks can be edited after the robot is initialized too](db-troubleshooting-network), without needing to reflash the SD card. Nonetheless, making sure your initial credentials are correct simplifies next steps. 
+* `--wifi` is a comma-separated list of Wi-Fi networks, each passed in the format `wifiname:wifipassword`. E.g., (default) `duckietown:quackquack`. [Networks can be edited after the robot is initialized too](db-troubleshooting-network), without needing to reflash the SD card. Nonetheless, making sure your initial credentials are correct simplifies next steps.
 
 ````{attention}
 * If you plan on the robot connecting over different networks (e.g., at home and in class), list all your networks *without spaces after the commas*:
@@ -97,7 +97,7 @@ dts init_sd_card ... -wifi "my fancy network name:quackquack"
 
 * `--country` is an optional argument but highly recommended. Neglecting this sometimes will result in specific Wi-Fi hotspots not being seen by the Duckiebot. `COUNTRY` arguments could be, e.g., `CA` for Canada, `CH` for Switzerland, or `US` for the United States of America. A full list of codes can be found, e.g., on Wikipedia: [ISO 3166-1 alpha-2 codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
-* `--version` is an optional numeric argument to download a specific version of the Duckietown image for the specific `CONFIGURATION` and `TYPE`. In default (recommended), it will download the latest available. Example `VERSION` parameters could be `2.0.1` or `1.4.2`. 
+* `--version` is an optional numeric argument to download a specific version of the Duckietown image for the specific `CONFIGURATION` and `TYPE`. In default (recommended), it will download the latest available. Example `VERSION` parameters could be `2.0.1` or `1.4.2`.
 
 Additional options for `init_sd_card` exist. For a full list of the options, run:
 
@@ -114,19 +114,19 @@ party software in the SD card. Acceptance is mandatory, resistance is futile.
 
 ### Downloading the compressed image
 
-The process will start by downloading the image to your `/tmp/duckietown/` folder. Note that if a compliant image is detected in that path, this step will be skipped. It is not necessary to re-download the image repeatedly if flashing multiple SD cards in the same session. 
+The process will start by downloading the image to your `/tmp/duckietown/` folder. Note that if a compliant image is detected in that path, this step will be skipped. It is not necessary to re-download the image repeatedly if flashing multiple SD cards in the same session.
 
-### Extracting the archive 
+### Extracting the archive
 
-The process will continue with extracting the `.img` image from the downloaded file. 
+The process will continue with extracting the `.img` image from the downloaded file.
 
 ```{warning}
-You might feel tempted to abort the procedure at this stage and flash this `.img` file to an SD card using a third-party tool, e.g., Balena Etcher. Resist this temptation, it will not work (yet). Carry on reading. 
+You might feel tempted to abort the procedure at this stage and flash this `.img` file to an SD card using a third-party tool, e.g., Balena Etcher. Resist this temptation, it will not work (yet). Carry on reading.
 ```
 
 ### Writing the image
 
-At this stage you will be prompted to choose the device where to flash the image file to. All storage devices connected to your computer are candidates. 
+At this stage you will be prompted to choose the device where to flash the image file to. All storage devices connected to your computer are candidates.
 
 Given the danger (from data loss to OS files corruption) of choosing a wrong device, the procedure will prompt you for the nominal size of the SD card you want to flash the image to. Devices that do not match the given size will not be shown. A standard Duckietown SD is nominally `64` GB.
 
@@ -145,7 +145,7 @@ If you experience any issues while flashing the SD card, make sure you check the
 ## Troubleshooting
 
 ```{trouble}
-- The SD card doesn't seem to be written.
+- The SD card does not seem to be written.
 - The flashing process seemed too fast, there is no data on my SD card.
 ---
 - Check if your SD card adapter has a write protection switch.

@@ -7,10 +7,10 @@
 # Introduction to the Diagnostics Tool
 
 ```{needget}
-* Ability to launch and modify ROS nodes on a Duckiebot  
+* Ability to launch and modify ROS nodes on a Duckiebot
 * Basic familiarity with Raspberry Pi or Jetson Nano resource constraints
 ---
-* Decide whether to run a steady-state or transient-state diagnostic session  
+* Decide whether to run a steady-state or transient-state diagnostic session
 * Interpret the resulting resource-usage traces
 ```
 
@@ -27,8 +27,8 @@ Assume a **single-camera Duckiebot** whose driver publishes frames at **20 Hz**.
 
 Execute the tool **each time you modify code** and need to gauge its footprint on system resources.
 
-*Expected consequences*  
-- Higher frame rate → more CPU time, RAM, and bus bandwidth  
+*Expected consequences*
+- Higher frame rate → more CPU time, RAM, and bus bandwidth
 - Possible *secondary* effects: increased SoC temperature, extra network traffic if frames are forwarded downstream
 
 Diagnostics offers a repeatable method for measuring and analyzing these effects.
@@ -45,7 +45,7 @@ The tool supports two common scenarios:
 | **Transient-state analysis** | Observe short bursts triggered by an event | Start anytime; record for *t* > *T* to include at least one event cycle |
 
 ### Example – tuning camera FPS
-* **Steady state**: run diagnostics overnight and inspect RAM usage to reveal leaks at 30 Hz.  
+* **Steady state**: run diagnostics overnight and inspect RAM usage to reveal leaks at 30 Hz.
 * **Transient state**: capture several seconds around a frame-grab burst to confirm CPU spikes remain acceptable.
 
 By selecting the appropriate window, actionable insight can be obtained without overwhelming the storage with unnecessary data.
@@ -61,7 +61,7 @@ By selecting the appropriate window, actionable insight can be obtained without 
 ## Running example
 
 Throughout this section we will refer to the toy example of a robot
-with a single camera (just like our Duckiebots) in which camera drivers 
+with a single camera (just like our Duckiebots) in which camera drivers
 produce image frames at a frequency of `20Hz` and we are interested in
 pushing the camera to its limit, i.e., `30Hz`.
 
@@ -69,17 +69,17 @@ pushing the camera to its limit, i.e., `30Hz`.
 ## When do I need it?
 
 You need to run the diagnostics tool every time you have made changes
-to a piece of code and you want to test how these changes affect the 
+to a piece of code and you want to test how these changes affect the
 footprint of your code on the system resources and the system as a whole.
 
 Considering our toy example above, we expect that changing the drivers
 frequency will likely result in higher usage of resources in order to
 cope with the increase in images that need to be processed.
-Sometimes these changes have a direct and expected effect on the 
+Sometimes these changes have a direct and expected effect on the
 system's resources, e.g., CPU cycles, RAM, etc. Others, they have effects
 that are legitimate from a theoretical point of view but hard to
 exhaustively enumerate a priori, e.g., increase in CPU temperature due
-to higher clock frequencies, increase in network traffic if the images 
+to higher clock frequencies, increase in network traffic if the images
 are transferred over the network.
 
 The diagnostics tool provides a standard way of analyzing the response of
@@ -97,22 +97,22 @@ The _steady state_ analysis consists of measuring the activity of a system
 in the long run and in the absence of anomaly or changes. For example,
 if we want to check for memory leaks in a system, we would run a _steady state_
 analysis and look at the RAM usage in a long period of time.
-In this case, we would run the diagnostics tool only after the system reached a 
-stable (steady) state and we don't expect significant events to happen.
+In this case, we would run the diagnostics tool only after the system reached a
+stable (steady) state and we do not expect significant events to happen.
 
 The _transient state_ analysis consists of measuring how a system reacts to
-a change in the short run. For example, you have a process that receives 
-point clouds from a sensor and stores them in memory to perform ICP alignment 
-on them every `T` seconds. In this case, we expect that this process will be 
+a change in the short run. For example, you have a process that receives
+point clouds from a sensor and stores them in memory to perform ICP alignment
+on them every `T` seconds. In this case, we expect that this process will be
 fairly inactive in terms of CPU usage for most of the time with periodical spikes
-every `T` seconds. Clearly, small values of `T` mean fewer point clouds to align 
+every `T` seconds. Clearly, small values of `T` mean fewer point clouds to align
 every time ICP fires but more frequent alignments while large values of `T` mean
-longer queues of point clouds to align every time ICP fires. 
+longer queues of point clouds to align every time ICP fires.
 We might be interested in tuning the value of `T` so that those
 spikes do not starve other processes of resources while still maximizing `T`.
 In this case, we would monitor the system around those ICP events for different
 values of `T`.
-In this case, we would run the diagnostics tool at any point in time for a 
-duration of `t > T` seconds so that at least one event of interest (e.g., ICP event) 
+In this case, we would run the diagnostics tool at any point in time for a
+duration of `t > T` seconds so that at least one event of interest (e.g., ICP event)
 is captured.
 -->

@@ -6,7 +6,7 @@
 :keywords: filtering, state estimation, duckietown
 ```
 
-These slides present the previous four filtering approaches. 
+These slides present the previous four filtering approaches.
 
 ```{slides} ../../../../_assets/instructor-manual/state-estimation.pdf
 ```

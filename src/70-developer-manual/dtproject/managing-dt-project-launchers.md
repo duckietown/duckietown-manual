@@ -11,8 +11,8 @@ As previously described, the `launchers/` directory contains entry scripts for D
 ```{attention}
 **If you are familiar with Docker.**
 
-We purposefully refer to these scripts as **entry scripts** as not to confuse them with **entrypoints** as they are defined by Docker. 
-In fact, launcher scripts **will not** be directly used as container entrypoints. A generic entrypoint is defined in all Duckietown images and is used to configure the containers' network, environment, etc. 
+We purposefully refer to these scripts as **entry scripts** as not to confuse them with **entrypoints** as they are defined by Docker.
+In fact, launcher scripts **will not** be directly used as container entrypoints. A generic entrypoint is defined in all Duckietown images and is used to configure the containers' network, environment, etc.
 ```
 
 (dtproject-launcher-default)=

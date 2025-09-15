@@ -24,7 +24,7 @@ To ensure a compliant parking lot design, follow these rules:
 
 ```{note}
 If you are building parking lots in your Duckietown and would like to share your specifications, let us know!
-``` 
+```
 
 ```{seo}
 :description: Learn about experimental parking lots in Duckietown, including tile types and rules for ensuring functional and compliant parking spaces for Duckiebots.

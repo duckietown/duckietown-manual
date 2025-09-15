@@ -29,9 +29,9 @@ float32 vel_left
 float32 vel_right
 ```
 
-- `header`: standard ROS header  
-- `vel_left`: duty cycle for left wheel (−1.0 backward to 1.0 forward)  
-- `vel_right`: duty cycle for right wheel (−1.0 backward to 1.0 forward)  
+- `header`: standard ROS header
+- `vel_left`: duty cycle for left wheel (−1.0 backward to 1.0 forward)
+- `vel_right`: duty cycle for right wheel (−1.0 backward to 1.0 forward)
 
 ```{note}
 These values represent PWM duty cycles, not physical velocities, and may vary across motors.
@@ -162,7 +162,7 @@ where,
 (ros-wheel-control-node-create)=
 ## Create Publisher ROS Node
 
-We now use our favorite text editor to create the file 
+We now use our favorite text editor to create the file
 `wheel_control_node.py` inside the `src/` directory of our catkin package and add the following content,
 
 ```python
@@ -250,8 +250,8 @@ Let us now re-compile our project using the command
 
 
 ```{danger}
-The robot's wheels will start spinning as soon as the node is launched. Please, make sure that 
-your robot has enough space to drive around without the risk of harming somebody or himself 
+The robot's wheels will start spinning as soon as the node is launched. Please, make sure that
+your robot has enough space to drive around without the risk of harming somebody or himself
 (e.g., by falling off a desk).
 ```
 
@@ -260,7 +260,7 @@ We run the node,
     dts devel run -R ROBOT_NAME -L wheel-control
 
 And observe the wheels rotate as instructed.
-If you want to stop it, just use `Ctrl+C`, and the wheels should stop spinning as per the behavior 
+If you want to stop it, just use `Ctrl+C`, and the wheels should stop spinning as per the behavior
 defined in the function `on_shutdown()` above.
 
 ```{admonition} Congratulations 🎉

@@ -57,12 +57,12 @@ the one you are looking at right now.
 ```
 
 (project-templates-lxs)=
-## Duckietown Learning Experiences (LXs) project templates 
+## Duckietown Learning Experiences (LXs) project templates
 
-These project templates are designed for the development of web-based dashboards based on `\compose\`. 
+These project templates are designed for the development of web-based dashboards based on `\compose\`.
 A project based on this template is the robot dashboard.
 
-```{list-table} Duckietown Learning Experiences (LXs) project templates 
+```{list-table} Duckietown Learning Experiences (LXs) project templates
 :header-rows: 1
 :name: project-templates-lx
 

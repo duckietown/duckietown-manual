@@ -8,8 +8,8 @@
 
 
 This section describes the Duckietown appearance specifications and assembly instructions.
- 
-Specifications are a set of rules for which a functional system has been verified. 
+
+Specifications are a set of rules for which a functional system has been verified.
 
 This means that if these rules are followed while building a Duckietown, Duckiebots will work as expected.
 

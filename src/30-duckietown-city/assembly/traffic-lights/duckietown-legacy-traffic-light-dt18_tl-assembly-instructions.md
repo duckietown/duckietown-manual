@@ -23,7 +23,7 @@ The small parts with holes in the middle, as shown on the left of [](fig:G-1), a
 
 For enhanced structural stability, all parts should be glued together as shown in the images.
 
-### Tube Holder with Big Ground Plate  
+### Tube Holder with Big Ground Plate
 
 ```{figure} ../../../_images/duckietown-city/assembly/traffic_light_18/G-1.jpg
 :width: 80%

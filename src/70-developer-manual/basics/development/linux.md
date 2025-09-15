@@ -24,30 +24,30 @@ We recommend installing Ubuntu directly on your laptop or as a dual-boot operati
 
 ### Dual Boot Ubuntu Installation
 
-* First you need to download a `.iso` image file which contains the version of Ubuntu you want. 
-    Here is [22.04 LTS](http://releases.ubuntu.com/22.04/) make sure to download the desktop image, and one of the [architecture that matches your computer](https://help.ubuntu.com/community/SupportedArchitectures#:~:text=Ubuntu%20is%20currently%20officially%20compatible,x86%2C%20PowerPC%2C%20and%20SPARC64.). 
+* First you need to download a `.iso` image file which contains the version of Ubuntu you want.
+    Here is [22.04 LTS](http://releases.ubuntu.com/22.04/) make sure to download the desktop image, and one of the [architecture that matches your computer](https://help.ubuntu.com/community/SupportedArchitectures#:~:text=Ubuntu%20is%20currently%20officially%20compatible,x86%2C%20PowerPC%2C%20and%20SPARC64.).
 * Next, you need a free USB drive with at least 2GB of space. The drive will be completely written over.
 * You need some software to write the .iso to the USB. If on Windows you can use [Rufus](https://rufus.ie/), if on macOS [Balena Etcher](https://etcher.balena.io/)
 * Create the bootable USB drive, disconnect the USB then reconnect to your computer.
 * Restart your computer:
-  * If your computer boots into the existing operating system, you will need to change the boot order in your BIOS. 
+  * If your computer boots into the existing operating system, you will need to change the boot order in your BIOS.
   * Restart your computer again and press the key that accesses the BIOS during startup. This key varies by model (e.g., F1 or F2 for Lenovo laptops). Consult your laptop’s manual or search online for guidance
   * Change the boot order to prioritize the USB drive.
-  
+
 * Your computer should now boot into the Ubuntu installation. Follow the instructions for dual boot setup.
 
 ### Virtual Machine
 
-* Download the desired Ubuntu `.iso` image file. 
+* Download the desired Ubuntu `.iso` image file.
     The [22.04 LTS](http://releases.ubuntu.com/22.04/) desktop image is recommended.
-* Download and install your preferred Virtual Machine platform, such as VirtualBox or VMware. [UTM](https://mac.getutm.app/) is a good choice if you have an M1-M4 mac. 
+* Download and install your preferred Virtual Machine platform, such as VirtualBox or VMware. [UTM](https://mac.getutm.app/) is a good choice if you have an M1-M4 mac.
 
 ```{note}
 When using a Virtual Machine, specific networking settings may need to be adjusted. ***The virtual machine must appear as a device on your local network***. For example, in VirtualBox, you will need to set up a **Bridged Network**, though this configuration might differ for other hypervisors.
 ```
 
 ```{attention}
-The Virtual Machine path is possible, but definitely less straightforward than the dual-boot installation, as it adds an extra layer of complexity especially when it comes to networking. We strongly recommend a native/dual-boot Ubuntu installation unless you are comfortable with discomfort. 
+The Virtual Machine path is possible, but definitely less straightforward than the dual-boot installation, as it adds an extra layer of complexity especially when it comes to networking. We strongly recommend a native/dual-boot Ubuntu installation unless you are comfortable with discomfort.
 ```
 
 ## Terminal

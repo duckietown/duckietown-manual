@@ -43,10 +43,10 @@ cd my-library
 (template-features)=
 ## Features of the library template
 
-* Unit‑tests with [Nose](https://nose.readthedocs.io/en/latest/)  
-* Docker‑based local build/test  
-* [CircleCI](https://circleci.com/gh/duckietown) integration  
-* [CodeCov](https://codecov.io/gh/duckietown) coverage reports  
+* Unit‑tests with [Nose](https://nose.readthedocs.io/en/latest/)
+* Docker‑based local build/test
+* [CircleCI](https://circleci.com/gh/duckietown) integration
+* [CodeCov](https://codecov.io/gh/duckietown) coverage reports
 * Integration with [Sphinx](https://www.sphinx-doc.org/en/master/) to build code docs. (So far, only built locally.)
 * [Jupyter](https://jupyter.org/) notebooks, which are run also in CircleCI as tests.
 * Version bump using [Bumpversion](https://github.com/peritus/bumpversion).
@@ -77,12 +77,12 @@ This repository describes a library called "`duckietown_pondcleaner`" and there 
 
 * `requirements.txt`: Contains the *pinned* versions of your requirement that
  are used to run tests.
- 
+
 * `MANIFEST.in`: Deselects the tests to be included in the egg.
 
 
 * `setup.py`: Contains meta information, definition of the scripts, and
- the dependencies information. 
+ the dependencies information.
 
 
 ### Python code
@@ -147,20 +147,20 @@ These are files to build and run a testing container.
 
 ## Step 2: Creating your Library
 
-1. Clone your repository  
-2. Place Python packages in `src/`  
-3. List Python dependencies in `dependencies.txt`  
-4. Update `setup.py` metadata  
-5. Clean leftover references:  
+1. Clone your repository
+2. Place Python packages in `src/`
+3. List Python dependencies in `dependencies.txt`
+4. Update `setup.py` metadata
+5. Clean leftover references:
    ```bash
    grep -r . pondcleaner
-   ```  
-6. Update branch names in `README.md`  
+   ```
+6. Update branch names in `README.md`
 
 ### Admin setup
 
-1. Enable CircleCI, ensure build passes  
-2. Enable CodeCov, set `CODECOV_TOKEN` in CircleCI environment  
+1. Enable CircleCI, ensure build passes
+2. Enable CodeCov, set `CODECOV_TOKEN` in CircleCI environment
 
 (template-utils)=
 ## Step 3: Using the library template utilities
@@ -170,7 +170,7 @@ These are files to build and run a testing container.
 Test the code using Docker by:
 
     make test-docker
-  
+
 This runs the test using a Docker container built from scratch
 with the pinned dependencies in `requirements.txt`.
 
@@ -196,14 +196,14 @@ duckietown/bin/activate`. In order to install the requirements to run the test d
 In the same virtual environment as above run:
 
     python setup.py develop
-  
+
 This will install the library in an editable way (rather than copying the sources somewhere else).
 
 To skip installing dependencies, use `--no-deps`:
 
 
     python setup.py develop --no-deps
-  
+
 For example, this is done in the Dockerfile so that we know we are only using the dependencies in `requirements.txt` with the exact pinned version.
 
 ### Adding tests
@@ -222,7 +222,7 @@ Make sure that the tests are actually run by looking at the coverage results.
 Always clean the notebooks before committing them:
 
     make -C notebooks cleanup
-            
+
 ```{warning}
 If you do not think you can be diligent about this, then add the notebooks using Git LFS.
 ```
@@ -241,7 +241,7 @@ The tool can be called by:
 
 
     make bump    # bump the version, tag the tree
-  
+
 If you need to include the version in a new file, list it inside the file `.bumpversion.cfg` using the
 syntax `[bumpversion:file: &lt;FILE_PATH &gt;]`.
 
@@ -336,12 +336,12 @@ This repository describes a library called "`duckietown_pondcleaner`" and there 
 ### Python packaging
 
 * `requirements.txt`: Contains the *pinned* versions of your requirement that
-  are used to run tests. 
-   
+  are used to run tests.
+
 * `MANIFEST.in`: Deselects the tests to be included in the egg.
- 
-* `setup.py`: Contains meta information, definition of the scripts, and 
-  the dependencies information.  
+
+* `setup.py`: Contains meta information, definition of the scripts, and
+  the dependencies information.
 
 ### Python code
 
@@ -372,7 +372,7 @@ These are files to build and run a testing container.
 
 ### Coverage
 
-* `.coveragerc`: Options for code coverage. 
+* `.coveragerc`: Options for code coverage.
 
 
 ### Notebooks
@@ -384,7 +384,7 @@ These are files to build and run a testing container.
 * `notebooks/*.ipynb`: The notebooks themselves.
 
 
-## Step 2: Creating your Library 
+## Step 2: Creating your Library
 
 Using the repo you have already created:
 
@@ -405,7 +405,7 @@ The following are necessary steps for admins to do:
 
 1. Activate on CircleCI. Make one build successful.
 
-2. Activate on CodeCov. Get the `CODECOV_TOKEN`. Put this token in CircleCI environment. 
+2. Activate on CodeCov. Get the `CODECOV_TOKEN`. Put this token in CircleCI environment.
 
 
 (template-utils)=
@@ -416,7 +416,7 @@ The following are necessary steps for admins to do:
 Test the code using Docker by:
 
     make test-docker
-    
+
 This runs the test using a Docker container built from scratch
 with the pinned dependencies in `requirements.txt`.
 This is equivalent to what is run on CircleCI.
@@ -431,7 +431,7 @@ To run the tests you will need to have installed the libraries listed in the fil
 
 For that we assume you have already set up a Python virtual environment.
 
-To use a Python virtual environment you will need to `pip install virtualenv` then `virtualenv duckietown` then `source 
+To use a Python virtual environment you will need to `pip install virtualenv` then `virtualenv duckietown` then `source
 duckietown/bin/activate`. In order to install the requirements to run the test do `pip install -r requirements.txt`.
 ```
 
@@ -439,25 +439,25 @@ duckietown/bin/activate`. In order to install the requirements to run the test d
 
 In the same virtual environment as above run:
 
-    python setup.py develop 
-    
+    python setup.py develop
+
 This will install the library in an editable way (rather than copying the sources somewhere else).
 
-If you don't want to install the deps, do:
+If you do not want to install the deps, do:
 
     python setup.py develop  --no-deps
-    
-For example, this is done in the Dockerfile so that 
-we know we are only using the dependencies in `requirements.txt` with the 
+
+For example, this is done in the Dockerfile so that
+we know we are only using the dependencies in `requirements.txt` with the
 exact pinned version.
 
- 
+
 ### Adding tests
 
-To add another tests, add files with the name `test_*py` in the 
+To add another tests, add files with the name `test_*py` in the
 package `duckietown_podcleaner_tests`. The name is important.
 
-```{tip} 
+```{tip}
 Make sure that the tests are actually run by looking at the coverage results.
 ```
 
@@ -466,9 +466,9 @@ Make sure that the tests are actually run by looking at the coverage results.
 Always clean the notebooks before committing them:
 
     make -C notebooks cleanup
-              
+
 ```{warning}
-If you don't think you can be diligent about this, then add the notebooks using Git LFS.
+If you do not think you can be diligent about this, then add the notebooks using Git LFS.
 ```
 
 (release-library)=
@@ -476,21 +476,21 @@ If you don't think you can be diligent about this, then add the notebooks using 
 
 ### Updating the version
 
-The first step is to change the version and tag the repo. 
+The first step is to change the version and tag the repo.
 **DO NOT** change the version manually; use the CLI tool `bumpversion` instead.
 
 The tool can be called by:
 
     make bump    # bump the version, tag the tree
-    
+
 If you need to include the version in a new file, list it inside the file `.bumpversion.cfg` using the
 syntax `[bumpversion:file: &lt;FILE_PATH &gt;]`.
 
 ### Releasing the package
 
-The next step is to upload the package to PyPy. 
-We use [twine](https://pypi.org/project/twine/). Invoke it using: 
- 
+The next step is to upload the package to PyPy.
+We use [twine](https://pypi.org/project/twine/). Invoke it using:
+
     make upload  # upload to PyPI
 
 For this step, you need to have admin permissions on PyPy.

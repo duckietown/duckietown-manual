@@ -6,7 +6,7 @@
 :keywords: ROS, middleware, ROS robot, messages
 ```
 
-[ROS](https://www.ros.org/) is a popular robotics "middleware". It provides mechanisms for communication between components of a robot system, as well as debugging and many other features. ROS is sometimes affectionately referred to as the "McDonalds" of robotics. Duckietown robots, including Duckiebots, Duckiedrones and smart Duckietown infrastructure use ROS (and from mid 2024 will start supporting other middlewares, such as ROS2). 
+[ROS](https://www.ros.org/) is a popular robotics "middleware". It provides mechanisms for communication between components of a robot system, as well as debugging and many other features. ROS is sometimes affectionately referred to as the "McDonalds" of robotics. Duckietown robots, including Duckiebots, Duckiedrones and smart Duckietown infrastructure use ROS (and from mid 2024 will start supporting other middlewares, such as ROS2).
 
 
 ```{slides} ../../../../_assets/instructor-manual/introduction_to_ros.pdf

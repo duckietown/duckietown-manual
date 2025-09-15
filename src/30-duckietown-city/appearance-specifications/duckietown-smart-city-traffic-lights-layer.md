@@ -17,7 +17,7 @@ Traffic lights are urban robots equipped to:
 ## Assembly
 
 The assembly instructions for traffic lights are available here:
- 
+
 - [Traffic light assembly instructions](traffic-light-assembly-21)
 - [Legacy traffic light assembly instructions](traffic-light-assembly-18)
 
@@ -30,7 +30,7 @@ Traffic lights are typically positioned diagonally over intersection tiles. Any 
 The lights must be installed at a height of 20 cm above the center of the intersection tile.
 ```
 
-The computational stack is mounted in the appropriate housing and positioned outside the allowable driving region. The cables are integrated into the traffic light structure, as detailed in the [assembly instructions](specs-layer-traffic-lights-assembly). 
+The computational stack is mounted in the appropriate housing and positioned outside the allowable driving region. The cables are integrated into the traffic light structure, as detailed in the [assembly instructions](specs-layer-traffic-lights-assembly).
 
 Traffic light pillars must be positioned so that the embedded traffic signs adhere to the [appearance specifications](specs-layer-traffic-signs-placement).
 

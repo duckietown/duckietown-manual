@@ -6,7 +6,7 @@
 :keywords: robot autonomy, teach, robotics, university teaching, course planning
 ```
 
-Here we share the resources and experiences that may be useful for constructing and delivering classes using the Duckietown platform. 
+Here we share the resources and experiences that may be useful for constructing and delivering classes using the Duckietown platform.
 
 
 ```{tableofcontents}

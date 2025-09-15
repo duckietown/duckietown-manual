@@ -9,14 +9,14 @@
 
 ## Testing Autonomous Vehicles
 
-We discuss the different types of testing that are needed for developing autonomous cars. 
+We discuss the different types of testing that are needed for developing autonomous cars.
 
 ```{slides} ../../../../_assets/instructor-manual/testing-1.pdf
 ```
 
 ## Testing in Duckietown
 
-We give some more concrete examples of how automated testing is performed in the [Duckietown codebase](dt-code-structure). 
+We give some more concrete examples of how automated testing is performed in the [Duckietown codebase](dt-code-structure).
 
 
 ```{slides} ../../../../_assets/instructor-manual/testing-2.pdf

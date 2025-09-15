@@ -8,7 +8,7 @@
 
 This section contains a list of things you may want to consider when you are building your course. They
 stem from previous experiences and feedback from instructors who have used the Duckietown platform to build
-courses. 
+courses.
 
 ```{tableofcontents}
 ```

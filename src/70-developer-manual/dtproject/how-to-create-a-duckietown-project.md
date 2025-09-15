@@ -17,15 +17,15 @@
 
 Duckietown-compliant Docker images are built from Duckietown Projects, abbreviated as `DTProjects`. Read the [introduction to DTprojects](dtproject) if not already done.
 
-A boilerplate for the simplest DTProject is provided by the 
-[duckietown/template-basic](https://github.com/duckietown/template-basic/) 
+A boilerplate for the simplest DTProject is provided by the
+[duckietown/template-basic](https://github.com/duckietown/template-basic/)
 repository.
 
 (dtproject-template-create)=
 ## Create a DTproject from a template
 
-Visit the template repository page:  
-[duckietown/template-basic](https://github.com/duckietown/template-basic/).  
+Visit the template repository page:
+[duckietown/template-basic](https://github.com/duckietown/template-basic/).
 Select the button labeled **Use this template**, then choose **Create a new repository** from the dropdown menu.
 
 ```{figure} ../../_images/developer/beginner/github_use_template.jpg

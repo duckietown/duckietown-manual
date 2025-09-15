@@ -8,7 +8,7 @@
 
 ## Introduction to Machine Learning
 
-These slides provide a basic introduction to machine learning, deep learning, neural networks and convolutional neural networks. 
+These slides provide a basic introduction to machine learning, deep learning, neural networks and convolutional neural networks.
 
 ```{slides} ../../../../_assets/instructor-manual/machine-learning-in-robotics.pdf
 ```
@@ -17,12 +17,12 @@ These slides provide a basic introduction to machine learning, deep learning, ne
 ## Visual Perception
 
 
-These slides combine the sections: [](slides-and-recordings-intro-visual-perception), [](slides-and-recordings-intro-neural-networks), [](slides-and-recordings-cnn), and [](slides-and-recordings-object-detection), into one full-length lecture. 
+These slides combine the sections: [](slides-and-recordings-intro-visual-perception), [](slides-and-recordings-intro-neural-networks), [](slides-and-recordings-cnn), and [](slides-and-recordings-object-detection), into one full-length lecture.
 
 ```{slides} ../../../../_assets/instructor-manual/visual-perception.pdf
 ```
 
-These are a slightly older version with mostly similar material but slightly different emphasis. 
+These are a slightly older version with mostly similar material but slightly different emphasis.
 
 ```{slides} ../../../../_assets/instructor-manual/visual-perception-2.pdf
 ```

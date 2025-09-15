@@ -16,4 +16,4 @@ Duckietown cities are built in layers, with each layer providing information of 
 - **Signals**: Includes visual markers and traffic signs.
 - **Smart infrastructure**: Adds dynamic, responsive systems to aid robot navigation and operation.
 
-In addition, "non-functional" elements, such as aesthetic or structural components, complement the construction of every Duckietown to ensure a cohesive and engaging environment. 
+In addition, "non-functional" elements, such as aesthetic or structural components, complement the construction of every Duckietown to ensure a cohesive and engaging environment.

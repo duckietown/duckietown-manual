@@ -1,5 +1,5 @@
 ```{seo}
-:description: Learn how to contribute to the Duckietown online documentation system. 
+:description: Learn how to contribute to the Duckietown online documentation system.
 :keywords: duckietown, documentation
 ```
 

@@ -64,7 +64,7 @@ You can find your duckietown Dashboard at:
 
     http://ROBOT_NAME.local/
 
-If the above address does not work, remove the `.local` part and just use 
+If the above address does not work, remove the `.local` part and just use
 
     http://ROBOT_NAME/
 
@@ -132,7 +132,7 @@ Since your Dashboard does not have an administrator account yet, the first user 
 administrator. If you have multiple tokens, make sure to keep note of which one you used for the first login.
 ```
 
-If you have not retrieved your personal Duckietown Token as described in [](duckietown-token) yet, it is now time to do so. 
+If you have not retrieved your personal Duckietown Token as described in [](duckietown-token) yet, it is now time to do so.
 
 Once you have your token click on **Sign in with Duckietown**.
 

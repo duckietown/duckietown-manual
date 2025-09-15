@@ -7,7 +7,7 @@
 :keywords: reinforcement learning, machine learning, ML, RL, policies, duckietown, AI, embedded AI, robotics
 ```
 
-This lecture contains presents the material on [](slides-and-recordings-mdp), [](slides-and-recordings-policy-iteration), [](slides-and-recordings-q-learning), and [](slides-and-recordings-sim-to-real), as well as an additional section on policy gradients, an approach to learning an RL policy that does not explicitly estimate a value function. 
+This lecture contains presents the material on [](slides-and-recordings-mdp), [](slides-and-recordings-policy-iteration), [](slides-and-recordings-q-learning), and [](slides-and-recordings-sim-to-real), as well as an additional section on policy gradients, an approach to learning an RL policy that does not explicitly estimate a value function.
 ```{slides} ../../../../_assets/instructor-manual/reinforcement-learning.pdf
 ```
 

@@ -8,9 +8,9 @@
 (slides-and-recordings-advanced)=
 # Advanced Topics
 
-In this section, we collect slides that cover more advanced topics (i.e., topics that are still very much the subject of active research). 
+In this section, we collect slides that cover more advanced topics (i.e., topics that are still very much the subject of active research).
 
-These resources would likely be too advanced to include in an undergraduate course. 
+These resources would likely be too advanced to include in an undergraduate course.
 
 ```{tableofcontents}
 ```

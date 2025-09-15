@@ -23,7 +23,7 @@
 Each picture in the assembly guide includes a small yellow box in the top-left corner. This box indicates the parts required for that step.
 
 :::{note}
-If a glue icon appears in the yellow box, it means some parts will be permanently connected, regardless of whether you're building a Watchtower (WT) or a Traffic Light (TL). While actual glue might not be necessary, we recommend a rigid connection for stability.
+If a glue icon appears in the yellow box, it means some parts will be permanently connected, regardless of whether you are building a Watchtower (WT) or a Traffic Light (TL). While actual glue might not be necessary, we recommend a rigid connection for stability.
 :::
 
 (subsec:howto-ground-structure-TL21)=

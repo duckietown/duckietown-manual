@@ -6,11 +6,11 @@
 (prerequisites-students)=
 # Student background
 
-What you require students to know before joining your class is very much a design decision that will guide how rapidly your course can progress. 
+What you require students to know before joining your class is very much a design decision that will guide how rapidly your course can progress.
 
-In particular, it will affect the [learning experiences](learning-experiences) and homework assignments that the students will be able to complete. 
+In particular, it will affect the [learning experiences](learning-experiences) and homework assignments that the students will be able to complete.
 
-You may have no say in the matter, depending on your institution's dynamics, but we recommend that you at least ask students at the beginning of the course what their perceived proficiency in certain technical topics is. 
+You may have no say in the matter, depending on your institution's dynamics, but we recommend that you at least ask students at the beginning of the course what their perceived proficiency in certain technical topics is.
 
 Here are a few example course introduction forms for you to take inspiration from:
 
@@ -24,16 +24,16 @@ In general, your life will be easier if your students have some level of compute
 
 Specifics may vary significantly from department to department, e.g., mechanical engineering students might be stronger in control systems and weaker in coding with respect to their computer science peers.
 
-Moreover, technical prerequisites will vary depending on the intended learning outcomes of the class, and in some sense on the level at which it is taught (undergraduate or graduate level). 
+Moreover, technical prerequisites will vary depending on the intended learning outcomes of the class, and in some sense on the level at which it is taught (undergraduate or graduate level).
 
 Here are some **technical prerequisites** that should be considered as guidelines:
 
-* Basic coding skills and tools: 
+* Basic coding skills and tools:
 
   * **Linux/Ubuntu terminal interface**: the most complete way to interface with Duckietown is via terminal, so basic knowledge of Bash is required (`cd`, `ls`, `mkdir`, ...). Using Linux (Ubuntu) typically comes as a shock to some instructors as well as learners, but we strongly recommend throwing your heart over the obstacle and start learning. A life is not enough to learn _everything_ there is to know in Linux and we provide step-by-step instructions as well an "operating system", the [Duckietown Shell](https://github.com/duckietown/duckietown-shell) (`dts`) to streamline everything;
-  
+
   * **Python**: We are going to write "autonomy" code in Python;
-  
+
   * **Git/GitHub**: We are going to pull, fork, push, branch repositories, etc.
 
 (prerequisites-students-academic)=

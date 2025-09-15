@@ -1,4 +1,4 @@
-```{seo} 
+```{seo}
 :description: Learn how to incorporate experimental street name signs into Duckietown, for enhanced aesthetics and outreach.
 :keywords: Duckietown, street name signs, non-functional elements, robotics, autonomous robots, road signs, Duckiebots, traffic signs, robotics outreach, modular cities
 ```
@@ -22,7 +22,7 @@ Consider naming the main avenue in your Duckietown after someone significant in 
 - **Alphabet**: English uppercase. Different writing systems may require adjusted algorithms.
 - **Color**: White foreground and green background.
 - **Border**: No additional borders.
-- **Width**: 
+- **Width**:
   - 4.5 in for ID 500-511.
   - **6.1 in +1.1 in "ST"** or **5.5 in +1.7 in "AVE"**.
 - **Text direction**: Horizontal for alphabetical languages.

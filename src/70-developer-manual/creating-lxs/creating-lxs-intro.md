@@ -6,9 +6,9 @@
 :keywords: hands-on learning, learning experience, duckietown, robotics, simulation, digital twin, robot autonomy, learning autonomy
 ```
 
-Learning experiences are small pedagogical units that can be followed in the hope you 
+Learning experiences are small pedagogical units that can be followed in the hope you
 might learn something. Most of them contain notebooks that you can follow along with
-and then some code that you have to write and test on your Duckiebot. 
+and then some code that you have to write and test on your Duckiebot.
 
 
 ```{tableofcontents}
