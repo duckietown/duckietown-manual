@@ -104,7 +104,7 @@ milestones in the project development timeline, for example a release.
 
 A fork is basically a copy of someone else's repository. 
 Usually, you cannot create branches or change code in other 
-people's repositories, that's why you create your own copy of it. 
+people's repositories, that is why you create your own copy of it. 
 This is called `forking` and allows you to experiment without affecting the original.
 
 

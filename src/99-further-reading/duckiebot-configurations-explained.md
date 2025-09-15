@@ -16,7 +16,7 @@ We define the different Duckiebot configurations, from the first `DB17` used dur
 
 Duckiebots `DB18` onwards can be obtained from the [Duckietown project store](https://cutt.ly/u81K1MU).
 
-(duckiebot-configurations-overview)= 
+(duckiebot-configurations-overview)=
 ## Overview
 
 | Model |  Computation  |              Sensing|             Actuation| Memory |       Power |       Notes   |
@@ -50,10 +50,10 @@ Later revisions, referred to under the broader label `DB21` and then `DB21J`, im
 To assemble a `DB21J` Duckiebot, follow the [](assembly-instructions-db21j).
 
 ```{note}
-You can obtain a `DB21J` Duckiebot from the [Duckietown project shop](https://cutt.ly/Q81Lg4q).  
+You can obtain a `DB21J` Duckiebot from the [Duckietown project shop](https://cutt.ly/Q81Lg4q).
 ```
 
-(duckiebot-config-db21m)= 
+(duckiebot-config-db21m)=
 ## Duckiebot MOOC Founder's edition, or `DB21M`
 
 The `DB21M` is the first Duckiebot equipped with an NVIDIA Jetson Nano 2 GB computational unit instead of a Raspberry Pi.
@@ -79,7 +79,7 @@ To assemble a `DB21` Duckiebot, refer to [](assembly-instructions-db21j).
 ```{note}
 The commercially available Duckiebots are listed on the [Official Duckietown Online Store](https://get.duckietown.com).
 
-If you are looking for a vintage Duckiebot, reach out to the [Duckietown hardware team](mailto:hardware@duckietown.com).  
+If you are looking for a vintage Duckiebot, reach out to the [Duckietown hardware team](mailto:hardware@duckietown.com).
 ```
 
 (duckiebot-config-db19)=
@@ -117,14 +117,14 @@ The complete Duckiebot `DB19`.
 `DB19` Duckiebot assembly instructions are now obsolete, and to avoid creating confusion, we make them available only upon request. Reach out to the [Duckietown hardware team](mailto:hardware@duckietown.com).
 
 ```{note}
-`DB19` Duckiebots have been extremely successful, and are still operating worldwide, but are no longer manufactured. 
+`DB19` Duckiebots have been extremely successful, and are still operating worldwide, but are no longer manufactured.
 ```
 <!--
-You can obtain a `DB19` Duckiebot from the [Duckietown project shop](https://get.duckietown.com/products/duckiebot-db19).  
+You can obtain a `DB19` Duckiebot from the [Duckietown project shop](https://get.duckietown.com/products/duckiebot-db19).
 -->
 
 (duckiebot-config-db18)=
-## Duckiebot version 2018, or `DB18` 
+## Duckiebot version 2018, or `DB18`
 
 You have a `DB18` Duckiebot if, e.g., you have pledged to the Kickstarter.
 
@@ -173,7 +173,7 @@ To assemble a `DB18` Duckiebot, follow [these](assembling-duckiebot-db18) instru
 ```
 
 <!--
-You can obtain a `DB18` Duckiebot from the [Duckietown project shop](https://get.duckietown.com/products/duckiebot-db18).  
+You can obtain a `DB18` Duckiebot from the [Duckietown project shop](https://get.duckietown.com/products/duckiebot-db18).
 -->
 <!--
 (duckiebot-config-db18-robotarium)=
@@ -181,7 +181,7 @@ You can obtain a `DB18` Duckiebot from the [Duckietown project shop](https://get
 
 The `DB18-Robotarium` configuration adds to the `DB18` the hardware necessary to operate in Robotariums (a.k.a. Duckietown Autolabs): continuously operating Duckietowns. They are otherwise identical to the `DB18`.
 
-The additional hardware consists of a top localization April Tag infrastructure and an "auto-charging" mod, which allows Duckiebots to dock to charging stations and estimate the residual battery charge.  
+The additional hardware consists of a top localization April Tag infrastructure and an "auto-charging" mod, which allows Duckiebots to dock to charging stations and estimate the residual battery charge.
 
 Autolabs are experimental Duckietown features, currently under development. You will find `DB18-Robotarium` models in university research labs.
 
@@ -243,7 +243,7 @@ Note: introducing the PWM hat in `DB17-l1` induces a _replacement_ of the [splic
 - **Functions**: `DB17-l` is the necessary configuration to enable communication between Duckiebots, hence fleet behaviors (e.g., negotiating the crossing of an intersection). Subset configurations are sometimes used in a standalone way for: (`DB17-l1`) avoid using a sliced power cable to power the DC motor hat in `DB17`, and (`DB17-l2`) for purely aesthetic reasons.
 
 ```{tip}
-If you got this far, you deserve to know a Duckietown trivia. Have you wondered why there is no `DB20`? 
+If you got this far, you deserve to know a Duckietown trivia. Have you wondered why there is no `DB20`?
 
-Actually, there is! The [DB20](https://duckietown.com/ackermann-steering-duckiebot/) was the only Ackermann steering version of the Duckiebot, and while it reached manufacturing prototype stage, it was never commercialized. 
+Actually, there is! The [DB20](https://duckietown.com/ackermann-steering-duckiebot/) was the only Ackermann steering version of the Duckiebot, and while it reached manufacturing prototype stage, it was never commercialized.
 ```

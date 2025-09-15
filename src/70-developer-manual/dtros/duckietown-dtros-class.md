@@ -393,7 +393,7 @@ directory of the package.
 
 ## Node initialization
 
-There are a lot of details regarding the initialization of the node so let's
+There are a lot of details regarding the initialization of the node so let us
 take a look at an example structure of the `__init__` method of our sample node.
 
 ```python
@@ -447,7 +447,7 @@ class SomeNameNode(DTROS):
         # ...
 ```
 
-Now, let's take a look at it section by section.
+Now, let us take a look at it section by section.
 
 ### Node Creation
 
