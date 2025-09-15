@@ -61,7 +61,7 @@ These may serve as starting points or inspiration, but the students will in all 
 
 We note that a neat hierarchy of autonomous behaviors may be envisioned for Duckiebots driving in Duckietowns. 
 
-We briefly describe each behavior as source of potential inspiration for additional student projects. This is not a comprehensive list, as other behaviors may be conceived that don't even require city environments. 
+We briefly describe each behavior as source of potential inspiration for additional student projects. This is not a comprehensive list, as other behaviors may be conceived that do not even require city environments. 
 
 ```{figure} ../../../_images/instructor-manual/auto-behaviors-hierarchy.png
 :name: other autonomous behaviors

@@ -55,7 +55,7 @@ The best way to mitigate stress is reducing uncertainty.
 
 There is great value is having teaching assistants support you in teaching a class with Duckietown, especially if they have previously gained familiarity with the hardware, software and teaching materials. 
 
-If allowed by your institution, don't shy away from the notion of student-TAs. Yes, you can have someone at the same time taking and (help) teaching the class! 
+If allowed by your institution, do not shy away from the notion of student-TAs. Yes, you can have someone at the same time taking and (help) teaching the class! 
 
 
 ### Align goals and create win-win scenarios

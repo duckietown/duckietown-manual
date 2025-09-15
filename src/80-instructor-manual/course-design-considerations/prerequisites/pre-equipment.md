@@ -94,7 +94,7 @@ Other than the speed, there are a few other technical requirements for your netw
 
 1. Students will need to be able to [SSH](secure-shell) into their robots, therefore port 22 needs to be open on the router;
 
-2. We make extensive use of the name-discovery tool called [Avahi](https://www.avahi.org/). This is needed so that we don't need to know the IP of the robot to be able to communicate with it. Instead, we can assign a unique name to each robot and then refer to it by name. For example:
+2. We make extensive use of the name-discovery tool called [Avahi](https://www.avahi.org/). This is needed so that we do not need to know the IP of the robot to be able to communicate with it. Instead, we can assign a unique name to each robot and then refer to it by name. For example:
 
     ```
     ping robot_name.local

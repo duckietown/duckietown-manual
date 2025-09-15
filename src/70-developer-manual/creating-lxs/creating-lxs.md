@@ -106,7 +106,7 @@ likely want to call a ROS launch file with `roslaunch`.
 
 ### Code Hidden from Students
 
-You can equally write any code that you don't want the students to see and include it in the `packages` directory
+You can equally write any code that you do not want the students to see and include it in the `packages` directory
 in the recipe repository. For example, this could be the file that calls the functions that are going to be 
 written by the student as part of the LX which is in turn run by the launcher. You could also define ROS packages 
 that will be used but are not important for the student to understand (such as debugging or visualization tools). 
