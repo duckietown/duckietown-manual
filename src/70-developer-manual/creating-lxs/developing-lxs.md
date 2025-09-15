@@ -35,7 +35,7 @@ Anyone working through an LX should use this information to direct their efforts
 
 
 (lx-notebooks)=
-## Notebook Notebook Activities
+## Notebook Activities
 
 Notebooks offer a clean interface to provide lesson content, visualizations, and instructions for proceeding through an LX.
 

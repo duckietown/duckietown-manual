@@ -42,6 +42,6 @@ Note that this does **not** let you do
 
     ping ![ROBOT]
 
-You haven't created another hostname, just an alias for SSH.
+You have not created another hostname, just an alias for SSH.
 
 However, you can use the alias with all the tools that rely on SSH, including `rsync` and `scp`.

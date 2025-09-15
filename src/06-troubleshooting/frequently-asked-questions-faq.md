@@ -45,7 +45,7 @@ The top button is only for turning your Duckiebot off.
 ```
 
 ```{trouble}
-My Duckiebot does not appear to boot after pressing the button on the Duckiebattery (i.e., I don't see a green light on the Jetson Nano or HUT).
+My Duckiebot does not appear to boot after pressing the button on the Duckiebattery (i.e., I do not see a green light on the Jetson Nano or HUT).
 ---
 Follow [](assembly-instructions-db21j), checking each cable connection.
 Confirm the start and end port of each power cable from the Duckiebattery.

@@ -91,7 +91,7 @@ To see it, open a terminal on your laptop and run:
 
     dts start_gui_tools ROBOT_NAME
 
-This will start a container with access to the ROS messages of the Duckiebot, including the image stream from the camera. 
+This will start a container with access to the ROS messages of the Duckiebot, including the image stream from the camera.
 
 Your terminal has now turned into a command line interface running inside of that container within the Duckiebot. You can exit the container back to your normal terminal interface at any time by running the `exit` command.
 
@@ -118,7 +118,7 @@ The rqt image view window with dropdown menu - select the `camera_node/image/com
 
 ### How to save a picture from `rqt_image_view`
 
-On the top right of the `rqt_image_view` window, there is a button to save the current frame to an image. But don't save it yet. A little extra setup is needed to be able to view that file later.
+On the top right of the `rqt_image_view` window, there is a button to save the current frame to an image. But do not save it yet. A little extra setup is needed to be able to view that file later.
 
 Create a folder on you laptop for where you would like to have the image saved to, say `~/duckiebot_images/`. Then, launch the `start_gui_tools` with the following command:
 

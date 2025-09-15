@@ -154,7 +154,7 @@ on the fork button in the upper right corner.
 
 Cloning a repository is the act of creating a local copy of a remote
 repository. A repo is cloned only at the very beginning, when you
-still don't have a local copy of it.
+still do not have a local copy of it.
 
 To clone a repository, either copy the HTTPS or SSH URL given on 
 the repository's webpage, then:

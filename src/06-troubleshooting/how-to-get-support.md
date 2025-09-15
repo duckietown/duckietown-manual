@@ -28,5 +28,5 @@ When asking for help make sure to provide sufficient information for others to r
 - error you are getting.
 
 ```{tip} 
-Saying "it doesn't work" is rarely helpful, as it could imply too many things.
+Saying "it does not work" is rarely helpful, as it could imply too many things.
 ```

@@ -493,7 +493,7 @@ The parameters should never have default values set in the code.
 All default values should be in the configuration file!
 ```
 
-This makes sure that we don't end up in a situation where there are two different
+This makes sure that we do not end up in a situation where there are two different
 default values in two different files related to the node.
 
 In classic ROS, you get the value of a parameter with `rospy.get_param(...)`.

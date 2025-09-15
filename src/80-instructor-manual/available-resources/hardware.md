@@ -5,7 +5,7 @@
 (hardware)=
 # Duckietown Hardware
 
-We are firm believers that you can't learn about robotics without a robot. 
+We are firm believers that you cannot learn about robotics without a robot. 
 
 Our core objective in the design of the hardware was to provide a platform that is as simple and inexpensive as possible, but still able to provide a wide range of challenging and reproducible learning experiences. 
 

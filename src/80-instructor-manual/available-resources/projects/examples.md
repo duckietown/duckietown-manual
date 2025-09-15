@@ -49,7 +49,7 @@ Projects of this type are possibly slightly more ambitious projects as these pac
 One idea could be to structure the entire suite of projects as having the objective to get one more complex behavior such as indefinite navigation to work. 
 ```
 
-Finally, other packages exist in the repository that worked at some point but probably haven't been tested in a while, such as:
+Finally, other packages exist in the repository that worked at some point but probably have not been tested in a while, such as:
 
 * [Vehicle detection](https://github.com/duckietown/dt-core/tree/ente/packages/vehicle_detection)
 * [Dead Reckoning](https://github.com/duckietown/dt-core/tree/ente/packages/deadreckoning)

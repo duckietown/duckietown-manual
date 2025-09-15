@@ -52,7 +52,7 @@ running of the exercise.
 Reasonable choices could be:
 
  - [`dt-commons`](https://github.com/duckietown/dt-commons): likely a good choice
-if the LX is pure python and doesn't require ROS.
+if the LX is pure python and does not require ROS.
  - [`dt-ros-commons`](https://github.com/duckietown/dt-ros-commons): likely
 a good choice if you would like to use ROS in a standalone fashion (i.e., 
 your exercise includes all the nodes that are needed)

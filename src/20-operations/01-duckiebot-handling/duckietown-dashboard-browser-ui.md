@@ -9,9 +9,9 @@
 This chapter describes the Duckietown Duckiebot Dashboard (also known as just "the Dashboard"), i.e., a browser-based interface for Duckiebots (and Duckiedrones).
 
 ```{needget}
-- Duckiebot Dashboard correctly set up: [](duckiebot-dashboard-setup). 
+- Duckiebot Dashboard correctly set up: [](duckiebot-dashboard-setup).
 ---
-- Understanding of the Duckiebot Dashboard resources. 
+- Understanding of the Duckiebot Dashboard resources.
 ```
 
 
