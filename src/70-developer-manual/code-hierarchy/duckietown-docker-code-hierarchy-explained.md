@@ -63,7 +63,7 @@ If you are curious to see all the ROS packages available in each of these images
 - [`dt-core`](https://github.com/duckietown/dt-core/tree/ente)
 
 ```{note}
-Make sure to look at the `ente` branches of these repositories! This is the most current release of the Duckietown software. You can switch to the `daffy` version from the links above if you are using teh `daffy` Duckietown distribution.
+Make sure to look at the `ente` branches of these repositories! This is the most current release of the Duckietown software. You can switch to the `daffy` version from the links above if you are using the `daffy` Duckietown distribution.
 ```
 
 Inline documentation is provided within the code.

@@ -28,4 +28,4 @@ There are several reasons for this:
 
 We have found that it is preferable to have as diverse a student body as possible. This refers to not only the demographics of the students but also their academic background. This is particularly true if you choose to teach a curriculum that is relatively high breadth such as [the graduate-level Duckietown curricula](graduate-sample-curricula).
 
-It is useful to have students who are relatively knowledgeable about the covered topics, so that **each student feels like they have something to contribute**. This is is useful in helping to build a sense of community and strong and balanced student teams if doing projects. 
+It is useful to have students who are relatively knowledgeable about the covered topics, so that **each student feels like they have something to contribute**. This is useful in helping to build a sense of community and strong and balanced student teams if doing projects. 

@@ -69,7 +69,7 @@ It is possible to run Ubuntu inside a virtual machine on both Windows and macOS 
 Given the many possible combinations of virtual machines, OSs, and architectures, Duckietown staff will not be able to support you in case of need. Again, you can find hints and Q&As in the [Duckietown archives](setup-account-stack-overflow)) and/or in the [Duckietown community on Slack](setup-account-slack). 
 
 ```{todo}
-we should have specific instructions for apple M chips since it's not as simple as dual booting. Do we support Ubuntu arm64v8 VM? I feel we should. 
+we should have specific instructions for apple M chips since it is not as simple as dual booting. Do we support Ubuntu arm64v8 VM? I feel we should. 
 what about Asahi Linux? 
 ```
 

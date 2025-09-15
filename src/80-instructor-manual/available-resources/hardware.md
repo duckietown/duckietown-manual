@@ -40,7 +40,7 @@ To guarantee the reliable performance of the Duckiebot, we have also designed a 
 :scale: 40%
 :align: center
 
-Duckiebots operate in Duckietowns, which can have aribitrary topologies as long as the appearance specifications are respected.
+Duckiebots operate in Duckietowns, which can have arbitrary topologies as long as the appearance specifications are respected.
 ```
 
 The environment is very tightly specified. For full details, visit the [Duckietown Operation Manual](duckietowns-intro). 

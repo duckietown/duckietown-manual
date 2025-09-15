@@ -242,7 +242,7 @@ There can be several reasons why a charge is not being accepted. Below are the m
 
 - The input voltage is too low or too high. Make sure you apply 5V via the micro USB connector
 
-- The battery is in battery protection mode and does not look like it's charging, but it is. Come back in >30 minutes and press the button once to enter `idle` mode.
+- The battery is in battery protection mode and does not look like it is charging, but it is. Come back in >30 minutes and press the button once to enter `idle` mode.
 
 - The battery is in a fault state. This can be caused by over-temperature on the battery cell and/or its internal PCB. Leave the battery to cool down for 1h then attempt to charge it again.
 ```
