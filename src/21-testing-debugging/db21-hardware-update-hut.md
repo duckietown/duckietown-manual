@@ -230,4 +230,4 @@ and finally reboot the Duckiebot:
 
     sudo reboot
 
-After reboot your Duckiebot should move normally, and LEDs respond nominally. The Dashboard / components page will show a green status for the HUT, too.
+After the reboot your Duckiebot should move normally, and LEDs respond nominally. The Dashboard / components page will show a green status for the HUT, too.
