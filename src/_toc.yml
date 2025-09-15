@@ -126,7 +126,9 @@ parts:
                     -   file: 70-developer-manual/basics/development/iso-iec9126
                     -   file: 70-developer-manual/basics/development/linux
                     -   file: 70-developer-manual/basics/development/developer-basics-git
-                    -   file: 70-developer-manual/basics/development/developer-basics-docker
+            -   file: 70-developer-manual/basics/development/developer-basics-docker
+                sections:
+                    - file: 70-developer-manual/basics/development/vscode-development-on-duckiebot
 
             -   file: 70-developer-manual/dtproject/creating-demos
                 sections:
