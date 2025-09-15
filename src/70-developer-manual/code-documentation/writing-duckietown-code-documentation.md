@@ -32,7 +32,7 @@ Sphinx is the de‑facto standard for Python to parse docstrings and build pages
 
 The short and cheeky answer to this question is "everything, and in the right place". The long answer is the same, in other words: **everything that users may touch should be documented in its closest context.**
 
-For exmaple: 
+For example: 
 
 * **ROS nodes**  
   * Provide an overview of purpose and algorithm.  

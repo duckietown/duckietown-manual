@@ -39,7 +39,7 @@ What's inside the Duckiebot DB21-J4 box (selected components).
 ## List of components (`DB21J4(v2)`)
 
 ```{admonition} This list is representative. Details vary between production rounds.
-We are always striving to improve, so minor details - e.g. the number and type of nuts and screws - can change between different manufacturing rounds of the same Duckiebot model. Most notably, all Duckiebots labeled as DB21J4(v3) (post September 2025) will replace chassis-related metal screws with nylon ones, and improve the omnidirectional wheel design, as well as presenting minor chassis design modification to accomodate for more Jetson Nano development kits. 
+We are always striving to improve, so minor details - e.g. the number and type of nuts and screws - can change between different manufacturing rounds of the same Duckiebot model. Most notably, all Duckiebots labeled as DB21J4(v3) (post September 2025) will replace chassis-related metal screws with nylon ones, and improve the omnidirectional wheel design, as well as presenting minor chassis design modification to accommodate for more Jetson Nano development kits. 
 ```
 
 | Number | Component                                                            |

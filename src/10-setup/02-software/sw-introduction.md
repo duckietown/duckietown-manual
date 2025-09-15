@@ -45,7 +45,7 @@ If using a M-series Mac (ARM architecture), some success has been achieved by em
 
 ```{attention}
 While VMs on different host OS might work:
-1. We _strongly_ reccomend using a native (or, dual boot) Ubuntu installation, especially if it is your first run with Duckietown
+1. We _strongly_ recommend using a native (or, dual boot) Ubuntu installation, especially if it is your first run with Duckietown
 2. Only native Ubuntu setups are officially supported by the Duckietown team (community resources are still available for other setups). 
 ```
 

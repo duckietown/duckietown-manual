@@ -87,7 +87,7 @@ Duckiebot's dashboard first setup page
 ```
 
 This is the dashboard of your Duckiebot. The Dashboard is built using a
-framework called \\compose\\. You configure it in in [](duckiebot-dashboard-setup).
+framework called \\compose\\. You configure it in [](duckiebot-dashboard-setup).
 
 If you can't access the dashboard, check out the Troubleshooting guide at 
 the end of this page.
