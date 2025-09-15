@@ -51,6 +51,6 @@ credentials to the robot with:
 
     ssh-copy-id duckie@ROBOT_NAME.local
 
-you will have ente your password to complete this but then you should never be asked for your password again.
+you will have to enter your password to complete this but then you should never be asked for your password again.
 ```
 
