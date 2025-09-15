@@ -55,7 +55,7 @@ Activities and exercises can be accessed independently of the MOOC at:
 * - [State Estimation](https://github.com/duckietown/duckietown-lx/tree/mooc2022/state-estimation)
   - A somewhat more advanced exercise that takes the detections of the road markings and uses them to calculate an estimate of the robot's state
 * - [Collision Checker](https://github.com/duckietown/duckietown-lx/tree/mooc2022/collision-checker) 
-  - We build an algorithm to detect if the robot will collide with it's environment by understanding its state and geometry
+  - We build an algorithm to detect if the robot will collide with its environment by understanding its state and geometry
 * - [Planning](https://github.com/duckietown/duckietown-lx/tree/mooc2022/planning)
   - We explore algorithms that the Duckiebot can use to successfully navigate in a cluttered environment
 ```

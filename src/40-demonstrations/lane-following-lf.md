@@ -351,7 +351,7 @@ Tuning the PID gains is one of the most important aspects for the stability and 
 ```{trouble}
 The demo does not respond when pressing <kbd>F</kbd>.
 ---
-Before trying to use the `Keyboard Controller`, make sure that it is active by selecting it's window.
+Before trying to use the `Keyboard Controller`, make sure that it is active by selecting its window.
 ```
 
 ```{trouble}

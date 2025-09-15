@@ -79,7 +79,7 @@ The <kbd>F</kbd> key's function (`Autopilot`) requires software, such as for [](
 ```{trouble}
 My Duckiebot does not move.
 ---
-Before trying to use the `Keyboard Controller`, make sure that it is active by selecting it's window.
+Before trying to use the `Keyboard Controller`, make sure that it is active by selecting its window.
 ```
 
 ```{trouble}

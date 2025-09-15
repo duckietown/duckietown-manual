@@ -236,7 +236,7 @@ Note the keys in the table below.
 
 To perform the extrinsic calibration procedure:
 
-1. (optional) Click the `Check error` switch to enforce a pose error bound for your Duckiebot's camera based on it's known intrinsic parameters (a trapezoid in the image under `Camera View` should appear).
+1. (optional) Click the `Check error` switch to enforce a pose error bound for your Duckiebot's camera based on its known intrinsic parameters (a trapezoid in the image under `Camera View` should appear).
 2. Position your Duckiebot on the calibration board such that it faces the checkerboard pattern, your Duckiebot's axle is parallel to and directly above the **large** `y`-axis of the calibration board, and the axis that is perpendicular to and midway between your Duckiebot's axle is directly above the **large** `x`-axis of the calibration board (if the `Check error` switch is set to `on`, the trapezoid in the image under `Camera View` should turn from black to blue).
 3. Click the `Calibrate` button.
 4. Wait for the spinner to disappear.

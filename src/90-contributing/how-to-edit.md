@@ -1,6 +1,6 @@
 ```{seo}
 :description: Learn about the general layout of Duckietown documentation and how to contribute.  
-:keywords: duckietown, documentation, overview, markdown, html, sphynx
+:keywords: duckietown, documentation, overview, markdown, html, sphinx
 ```
 
 
@@ -25,7 +25,7 @@ You can find all these artifacts produced at the site [`https://docs.duckietown.
 (documentation_branches_and_more)=
 ## Previous Version of the Documentation
 
-Previous, in the `daffy` version, the documentation was split amongst several books. With the `ente` version
+Previously, in the `daffy` version, the documentation was split amongst several books. With the `ente` version
 and beyond, the documentation is merged into one monolithic book that can be searched and indexed more 
 easily. 
 
