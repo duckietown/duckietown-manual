@@ -56,9 +56,9 @@ When creating a new image:
 
 5. Configure the network on the Duckiebot
 
-    This image is pre-configured to so that the Duckiebot will connects to a network with SSID `duckietown` and password `quackquack`.
+    This image is pre-configured so that the Duckiebot will connect to a network with SSID `duckietown` and password `quackquack`.
 
-    To have the Duckiebot connect to a different network, your will have to [edit the Wi-Fi settings on your Duckiebot](setup-duckiebot-edit-networks).
+    To have the Duckiebot connect to a different network, you will have to [edit the Wi-Fi settings on your Duckiebot](setup-duckiebot-edit-networks).
 
     To access the `/etc/wpa_supplicant.conf` file on your Duckiebot, choose one of these options:
 

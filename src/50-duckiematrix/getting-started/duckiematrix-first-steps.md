@@ -53,7 +53,7 @@ dts matrix run --standalone --embedded --map sandbox
 ```
 would start the Duckiematrix on your local machine and load the `sandbox` map that is predefined.
 By default, the Duckiematrix runs in *tutorial* mode, where the key bindings are introduced. If you
-want to disable this behavior your can add the `--no-tutorial` flag. If something is going wrong and
+want to disable this behavior you can add the `--no-tutorial` flag. If something is going wrong and
 you do not see the renderer initializing, you can see what is going wrong by adding the `--verbose` flag.
 
 
