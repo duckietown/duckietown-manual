@@ -1,5 +1,5 @@
 (ops-db-components-testing)=
-# Duckiebot Testing and Debugging 
+# Duckiebot Testing and Debugging
 
 ```{seo}
 :description: Learn how to test all hardware components of a Duckiebot and make sure the robot is correctly assembled.

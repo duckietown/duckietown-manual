@@ -3,7 +3,7 @@
 :keywords: Duckietown, Duckiebot, configurations
 ```
 
-(duckiebot-configurations)= 
+(duckiebot-configurations)=
 # Duckiebot Models
 
 ```{needget}
@@ -12,9 +12,9 @@
 * Knowledge of Duckiebot configuration naming conventions and their respective functionalities.
 ```
 
-We define the different Duckiebot configurations, from the first `DB17` used during the MIT course 2.166 in 2017 to the latest available.  
+We define the different Duckiebot configurations, from the first `DB17` used during the MIT course 2.166 in 2017 to the latest available.
 
-Duckiebots `DB18` onwards can be obtained from the [Duckietown project store](https://cutt.ly/u81K1MU). 
+Duckiebots `DB18` onwards can be obtained from the [Duckietown project store](https://cutt.ly/u81K1MU).
 
 (duckiebot-configurations-overview)= 
 ## Overview

@@ -13,10 +13,10 @@
 * A flashed microcontroller (not SD card) on the HUT board, with the latest code version.
 ```
 
-The Duckiebot HUT manages, through an onboard microcontroller, the functionality of wheels and LEDs on the Duckiebot. HUTs are all pre-flashed and tested during manufacturing. 
+The Duckiebot HUT manages, through an onboard microcontroller, the functionality of wheels and LEDs on the Duckiebot. HUTs are all pre-flashed and tested during manufacturing.
 
 ```{warning}
-This procedure is only needed if your Duckiebot does not recognize the HUT (Dashboard > Robot > Components). Although often unnecessary, it is safe to perform on any HUT of version `2.0` and above.   
+This procedure is only needed if your Duckiebot does not recognize the HUT (Dashboard > Robot > Components). Although often unnecessary, it is safe to perform on any HUT of version `2.0` and above.
 ```
 
 (reflash-microcontroller-when)=
@@ -27,9 +27,9 @@ This procedure flashes the microcontroller on the Duckietown HUT. This microcont
 A typical example of when is necessary to flash the microcontroller is when:
 
 (a) commands are sent to the motors, e.g., through keyboard control,
-(b) the motors signals on the dashboard/mission control show that signals are correctly being sent, 
+(b) the motors signals on the dashboard/mission control show that signals are correctly being sent,
 
-but the Duckiebot does not move.  
+but the Duckiebot does not move.
 
 This procedure will not be useful to fix problems such as one motor working and not the other, or LEDs showing unexpected colors when the motors work.
 
@@ -87,7 +87,7 @@ Start by making sure your Duckiebot and computer are on the same network by:
 
     ping ROBOT_NAME.local
 
-### SSH into your Duckiebot    
+### SSH into your Duckiebot
 
 SSH into your Duckiebot by running:
 

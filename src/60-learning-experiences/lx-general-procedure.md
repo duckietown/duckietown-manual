@@ -116,7 +116,7 @@ Inside the code editor, use the navigator sidebar on the left-hand side to navig
 
 Follow the instructions on the notebook and work through the notebooks in sequence.
 In many cases the last notebook will instruct you to write some code inside the 
-learning experience directory. Once you've done that you will need to build and test your code. 
+learning experience directory. Once you have done that you will need to build and test your code. 
 We describe how to do that next. 
 
 ### Building your Code

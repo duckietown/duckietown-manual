@@ -2,7 +2,7 @@
 # Duckiebattery Software Update
 
 ```{seo}
-:description: Learn how to update the software on your Duckiebattery, a smart battery for autonomous robotics applications. 
+:description: Learn how to update the software on your Duckiebattery, a smart battery for autonomous robotics applications.
 :keywords: duckiebattery update, duckiebattery software update, duckiebot battery update
 ```
 
@@ -13,7 +13,7 @@
 - An up to date Duckiebattery
 ```
 
-The Duckiebattery is a programmable smart battery, custom designed for autonomous robotics applications. 
+The Duckiebattery is a programmable smart battery, custom designed for autonomous robotics applications.
 
 (duckiebattery-update)=
 ## Duckiebattery software update

@@ -28,10 +28,10 @@ You can set up SSH so that you can use:
 
     ssh ![ROBOT]
 
-During your init_sd_card process described later in the book, the command will automatically setup `~/.ssh/config`. 
+During your init_sd_card process described later in the book, the command will automatically setup `~/.ssh/config`.
 If you are having trouble using it, you can follow the instructions below.
 
-To manually create an SSH alias, create a host section in 
+To manually create an SSH alias, create a host section in
 `~/.ssh/config` on your laptop with the following contents:
 
     Host ![ROBOT]
