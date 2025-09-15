@@ -16,7 +16,7 @@ This chapter describes how to perform the camera calibration procedure for your 
 
 ## Introduction to camera calibration
 
-Every camera is unique due to manufacturing and assembly differences. Therefore, a camera calibration procedure needs to be performed to account for small manufacturing discrepancies. 
+Every camera is unique due to manufacturing and assembly differences. Therefore, a camera calibration procedure needs to be performed to account for small manufacturing discrepancies.
 
 This procedure involves displaying a predetermined pattern in front of the camera and using it to solve for the camera's parameters.
 
@@ -185,7 +185,7 @@ Within the Camera Intrinsic panel, under `Local`, you should see a tick next to 
 (operation-camera-extrinsic-calibration)=
 ## Extrinsic camera calibration procedure
 
-This camera calibration procedure outputs the relative pose between the camera and Duckiebot frame. 
+This camera calibration procedure outputs the relative pose between the camera and Duckiebot frame.
 
 For optimal performance, repeat this procedure if you ship the Duckiebot or otherwise touch the camera holder.
 

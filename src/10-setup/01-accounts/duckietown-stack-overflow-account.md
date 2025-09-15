@@ -23,7 +23,7 @@ You can self-invite by first joining the Duckietown Community on Slack, and then
 ## Access Troubleshooting
 
 ```{trouble}
-The invitation bot is down, I can't self-invite. 
+The invitation bot is down, I cannot self-invite. 
 ---
 Reach out on the #help-accounts channel of the Duckietown Community. A manual invitation will have to be sent by Duckietown staff. 
 ```

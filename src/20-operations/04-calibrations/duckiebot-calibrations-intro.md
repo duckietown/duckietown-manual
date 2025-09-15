@@ -12,7 +12,7 @@
 - A calibrated Duckiebot
 ```
 
-While all Duckiebots might look the same, each one is unique and different from the others due to manufacturing, assembly and sometimes handling differences. 
+While all Duckiebots might look the same, each one is unique and different from the others due to manufacturing, assembly and sometimes handling differences.
 
 Performing calibration procedures for the Duckiebot's sensors and actuators is a prerequisite for obtaining smooth autonomous behaviors. In particular:
 

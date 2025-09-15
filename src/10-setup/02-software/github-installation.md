@@ -498,7 +498,7 @@ After adding a new SSH authentication key to your account on GitHub.com, you can
     # Copies the contents of the id_ed25519.pub file to your clipboard
     ```
     ```{tip}
-    If `pbcopy` isn't working, you can locate the hidden `.ssh` folder, open the file in your favorite text editor, and copy it to your clipboard.
+    If `pbcopy` is not working, you can locate the hidden `.ssh` folder, open the file in your favorite text editor, and copy it to your clipboard.
     ```
 
 2. In the upper-right corner of any page on GitHub, click your profile photo, then click `Settings`.
@@ -531,7 +531,7 @@ After adding a new SSH authentication key to your account on GitHub.com, you can
     # Copies the contents of the id_ed25519.pub file to your clipboard
     ```
     ````{note}
-    * With Windows Subsystem for Linux (WSL), you can use `clip.exe`. Otherwise if `clip` isn't working, you can locate the hidden `.ssh` folder, open the file in your favorite text editor, and copy it to your clipboard.
+    * With Windows Subsystem for Linux (WSL), you can use `clip.exe`. Otherwise if `clip` is not working, you can locate the hidden `.ssh` folder, open the file in your favorite text editor, and copy it to your clipboard.
     * On newer versions of Windows that use the Windows Terminal, or anywhere else that uses the PowerShell command line, you may receive a `ParseError` stating that `The '&lt;' operator is reserved for future use.` In this case, the following alternative `clip` command should be used:
     ```
     $ cat ~/.ssh/id_ed25519.pub | clip
