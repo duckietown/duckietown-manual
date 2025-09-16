@@ -82,7 +82,7 @@ Run:
 ```shell
 docker --version
 ---
-The version number for `docker`.
+Make sure the Docker version is v1.4.0+ 
 ```
 
 ```{testexpect}
@@ -91,7 +91,7 @@ Run:
 ```shell
 docker buildx version
 ---
-The version number for `buildx`.
+The buildx version v.0.8.0+
 ```
 
 ```{testexpect}
