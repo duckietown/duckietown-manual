@@ -94,11 +94,10 @@ parts:
                         sections:
                         -   file: 30-duckietown-city/assembly/tilemap/duckietown-smart-city-road-assembly-instructions
                         -   file: 30-duckietown-city/assembly/traffic-signs/duckietown-smart-city-traffic-signs-assembly-instructions
+                        -   file: 30-duckietown-city/assembly/traffic-lights/duckietown-smart-city-overview-traffic-lights-assembly-instructions
                             sections:
-                            -   file: 30-duckietown-city/assembly/traffic-lights/duckietown-smart-city-overview-traffic-lights-assembly-instructions
-                                sections:
-                                    - file: 30-duckietown-city/assembly/traffic-lights/duckietown-traffic-light-dt21-tl-assembly-instructions
-                                    - file: 30-duckietown-city/assembly/traffic-lights/duckietown-legacy-traffic-light-dt18_tl-assembly-instructions
+                                - file: 30-duckietown-city/assembly/traffic-lights/duckietown-traffic-light-dt21-tl-assembly-instructions
+                                - file: 30-duckietown-city/assembly/traffic-lights/duckietown-legacy-traffic-light-dt18_tl-assembly-instructions
 
             -   file: 40-demonstrations/db-demo-intro
                 sections:
