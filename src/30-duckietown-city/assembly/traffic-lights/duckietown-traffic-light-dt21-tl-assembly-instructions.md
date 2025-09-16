@@ -30,92 +30,92 @@ If a glue icon appears in the yellow box, it means some parts will be permanentl
 
 Follow the steps illustrated in the images below to assemble the ground structure:
 
-```{figure} ../../_images/assembly/traffic_light_21/STEP_01.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_01.png
 :width: 100%
 :name: fig:TL_STEP_01
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_02.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_02.png
 :width: 100%
 :name: fig:TL_STEP_02
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_03.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_03.png
 :width: 100%
 :name: fig:TL_STEP_03
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_04.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_04.png
 :width: 100%
 :name: fig:TL_STEP_04
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_05.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_05.png
 :width: 100%
 :name: fig:TL_STEP_05
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_06.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_06.png
 :width: 100%
 :name: fig:TL_STEP_06
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_07.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_07.png
 :width: 100%
 :name: fig:TL_STEP_07
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_08.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_08.png
 :width: 100%
 :name: fig:TL_STEP_08
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_09.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_09.png
 :width: 100%
 :name: fig:TL_STEP_09
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_10.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_10.png
 :width: 100%
 :name: fig:TL_STEP_10
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_11.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_11.png
 :width: 100%
 :name: fig:TL_STEP_11
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_12.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_12.png
 :width: 100%
 :name: fig:TL_STEP_12
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_13.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_13.png
 :width: 100%
 :name: fig:TL_STEP_13
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_14.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_14.png
 :width: 100%
 :name: fig:TL_STEP_14
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_15.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_15.png
 :width: 100%
 :name: fig:TL_STEP_15
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_16.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_16.png
 :width: 100%
 :name: fig:TL_STEP_16
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_17.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_17.png
 :width: 100%
 :name: fig:TL_STEP_17
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_18.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_18.png
 :width: 100%
 :name: fig:TL_STEP_18
 ```
@@ -124,27 +124,27 @@ Follow the steps illustrated in the images below to assemble the ground structur
 Make sure to connect the LED cables exactly as indicated in the picture. Otherwise, the LEDs will break irreversibly.
 :::
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_19.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_19.png
 :width: 100%
 :name: fig:TL_STEP_19
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_20.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_20.png
 :width: 100%
 :name: fig:TL_STEP_20
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_21.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_21.png
 :width: 100%
 :name: fig:TL_STEP_21
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_22.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_22.png
 :width: 100%
 :name: fig:TL_STEP_22
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_23.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_23.png
 :width: 100%
 :name: fig:TL_STEP_23
 ```
@@ -154,23 +154,23 @@ Make sure to connect the LED cables exactly as indicated in the picture. Otherwi
 
 Assemble the TL Corner by following these steps:
 
-```{figure} ../../_images/assembly/traffic_light_21/STEP_24.png
+```{figure} ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_24.png
 :width: 100%
 :name: fig:TL_STEP_24
 ```
 
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_25.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_25.png
 :width: 100%
 :name: fig:TL_STEP_25
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_26.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_26.png
 :width: 100%
 :name: fig:TL_STEP_26
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_27.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_27.png
 :width: 100%
 :name: fig:TL_STEP_27
 ```
@@ -181,37 +181,37 @@ Assemble the TL Corner by following these steps:
 
 Assemble the camera housing as shown below:
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_28.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_28.png
 :width: 100%
 :name: fig:TL_STEP_28
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_29.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_29.png
 :width: 100%
 :name: fig:TL_STEP_29
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_30.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_30.png
 :width: 100%
 :name: fig:TL_STEP_30
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_31.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_31.png
 :width: 100%
 :name: fig:TL_STEP_31
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_32.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_32.png
 :width: 100%
 :name: fig:TL_STEP_32
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_33.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_33.png
 :width: 100%
 :name: fig:TL_STEP_33
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_34.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_34.png
 :width: 100%
 :name: fig:TL_STEP_34
 ```
@@ -222,27 +222,27 @@ Assemble the camera housing as shown below:
 
 Assemble the TL Base as follows:
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_35.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_35.png
 :width: 100%
 :name: fig:TL_STEP_35
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_36.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_36.png
 :width: 100%
 :name: fig:TL_STEP_36
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_37.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_37.png
 :width: 100%
 :name: fig:TL_STEP_37
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_38.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_38.png
 :width: 100%
 :name: fig:TL_STEP_38
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_39.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_39.png
 :width: 100%
 :name: fig:TL_STEP_39
 ```
@@ -253,27 +253,27 @@ Assemble the TL Base as follows:
 
 Follow these steps to assemble a single TL Corner:
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_40.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_40.png
 :width: 100%
 :name: fig:TL_STEP_40
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_41.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_41.png
 :width: 100%
 :name: fig:TL_STEP_41
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_42.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_42.png
 :width: 100%
 :name: fig:TL_STEP_42
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_43.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_43.png
 :width: 100%
 :name: fig:TL_STEP_43
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_44.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_44.png
 :width: 100%
 :name: fig:TL_STEP_44
 ```
@@ -284,22 +284,22 @@ Follow these steps to assemble a single TL Corner:
 
 Install the LED housing by following these steps:
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_45.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_45.png
 :width: 100%
 :name: fig:TL_STEP_45
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_46.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_46.png
 :width: 100%
 :name: fig:TL_STEP_46
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_47.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_47.png
 :width: 100%
 :name: fig:TL_STEP_47
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_48.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_48.png
 :width: 100%
 :name: fig:TL_STEP_48
 ```
@@ -310,27 +310,27 @@ Install the LED housing by following these steps:
 
 Once all components are assembled, you should have a complete traffic light:
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_49.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_49.png
 :width: 100%
 :name: fig:TL_STEP_49
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_50.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_50.png
 :width: 100%
 :name: fig:TL_STEP_50
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_51.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_51.png
 :width: 100%
 :name: fig:TL_STEP_51
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/STEP_52.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/STEP_52.png
 :width: 100%
 :name: fig:TL_STEP_52
 ```
 
-```{figure}  ../../_images/assembly/traffic_light_21/Complete_Traffic_Light.png
+```{figure}  ../../../_images/duckietown-city/assembly/traffic_light_21/Complete_Traffic_Light.png
 :width: 100%
 :name: fig:Complete_Traffic_Light
 ```
