@@ -26,7 +26,7 @@ Since _repetita iuvant_, try again:
 (howto-git-local-config)=
 ### Setting up global configurations for Git
 
-Use these commands to tell Git who you are:
+Use these commands to tell Git who you are, replacing `![email]` and `![full name]` with your email address and name:
 
     git config --global user.email "![email]"
     git config --global user.name  "![full name]"
@@ -42,20 +42,10 @@ If you are setting up GitHub on your personal computer, and you use two-factor a
 
     git config --global credential.helper store
 
-
-### SSH key setup
-
-To seamlessly access GitHub through terminal without having to enter the password each time, you can establish a SSH key and adding it to the GitHub SSH agent. 
-
-Follow the official GitHub documentation to create a SSH Key [Link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).  
-
-Once you have a GitHub username and SSH key associated with your account, you can continue on to the next page to set up your Duckietown account.
--->
-
 (prelim-sw-ssh)=
 ## Connect with SSH
 
-To seamlessly access GitHub through terminal without having to enter the password each time, you can establish an SSH key and adding it to the GitHub SSH agent. 
+To seamlessly access GitHub through terminal without having to enter the password each time, you can generate a SSH key pair and add it to the SSH agent. 
 
 Follow the [SSH instructions on GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), or continue reading below.
 
@@ -69,7 +59,7 @@ Before you generate a new SSH key, you should check your local machine for exist
 
 1. Open Terminal.
 
-2. Enter `ls -al ~/.ssh` to see if existing SSH keys are present.
+2. Run `ls -al ~/.ssh` to see if existing SSH keys are present.
     ```
     $ ls -al ~/.ssh
     # Lists the files in your .ssh directory, if they exist
@@ -79,6 +69,7 @@ Before you generate a new SSH key, you should check your local machine for exist
     * `id_rsa.pub`
     * `id_ecdsa.pub`
     * `id_ed25519.pub`
+
     ```{tip}
     If you receive an error that `~/.ssh` doesn't exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
     ```
