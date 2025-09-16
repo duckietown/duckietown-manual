@@ -10,7 +10,7 @@
 ```{needget}
 *   Traffic light components ([Duckietown project shop](https://get.duckietown.com/products/duckietown-traffic-light-dt22-tl))
 
-*   An appropriately [configured SD-card](book-opmanual-duckiebot:setup-duckiebot-sd-card).
+*   An appropriately [configured SD-card](setup-db-sd-card-flashing-intro).
 
 *   Tools: (strong) wood glue or hot glue gun, tape, double-sided tape.
 ---
