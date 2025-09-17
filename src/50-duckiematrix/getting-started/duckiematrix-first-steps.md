@@ -79,8 +79,7 @@ to an entity in the Duckiematrix. You can do this with the command:
 dts matrix attach [--engine ENGINE_HOSTNAME] DUCKIEBOT_NAME ENTITY_NAME
 ```
 
-where you can omit `ENGINE_NAME` if the engine is running locally. You can find the name of the matrix 
-entity by looking through the map configurations or more simply by clicking on the `Robots`
+where you can omit `ENGINE_HOSTNAME` if the engine is running locally. You can find the name of the matrix entity by looking through the map configurations or more simply by clicking on the `Robots`
 tab at the bottom of a Duckiematrix rendering window and then looking at the `Name`. The default
 for a Duckiebot is `map_0/vehicle_0` so that's usually a good guess. 
 
