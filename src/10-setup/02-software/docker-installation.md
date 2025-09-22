@@ -58,7 +58,7 @@ sudo reboot # this will reboot your device
 (dt-account-dockerhub-make-access-token)=
 ### Generate an access token
 
-We will need to provide login credentials for Docker Hub to the docker client:
+We will need to provide login credentials for Docker Hub to the Docker client:
 
 1. [Create a new personal access token](https://docs.docker.com/docker-hub/access-tokens/) on DockerHub.
 
