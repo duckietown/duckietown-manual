@@ -18,6 +18,14 @@ This section describes how to install and set up `DTS` (`Duckietown Shell`), a C
 
 ## `dts` Installation
 
+````{attention}
+If you have already installed `dts` using `pip3`, run the following command and follow the on-screen instructions:
+
+```shell
+pip3 uninstall duckietown-shell
+```
+````
+
 To install `dts`, run:
 
 ```shell
