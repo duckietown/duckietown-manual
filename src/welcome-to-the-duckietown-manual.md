@@ -23,6 +23,10 @@ version of the documentation please see the [daffy version](https://docs.duckiet
 
 If you are a Duckietown veteran, treat this book as a reference manual on how to do specific things. 
 
+```{attention}
+If you are switching from `daffy` to `ente`, you may want to start [here](dt-account-switch-profile).
+```
+
 If you have suggestions on how to improve this documentation, 
 read the [](book-devmanual-intro) section to learn how to make contributions.
 
