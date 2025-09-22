@@ -89,7 +89,7 @@ The camera image is streaming from your Duckiebot by default on startup.
 
 To see it, open a terminal on your laptop and run:
 
-    dts start_gui_tools ROBOT_NAME
+    dts gui ROBOT_NAME
 
 This will start a container with access to the ROS messages of the Duckiebot, including the image stream from the camera. 
 
