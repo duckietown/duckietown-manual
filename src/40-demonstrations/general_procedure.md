@@ -42,15 +42,3 @@ dts devel run -H [!ROBOTNAME] -L [!LAUNCHER_NAME]
 
 Again, this will run the code on the robot. If you would like to run the code on laptop you can switch the `-H`, which
 specifies the *machine* to run the code on, with a `-R`, which specifies which *robot* to connect to. 
-
-```{tip}
-When you do `dts devel run` the code from your laptop will be copied to the robot with a command called 
-[rsync](https://linux.die.net/man/1/rsync). This uses the same protocal as (SSH)[secure-shell]. As a result it 
-will ask you for a password, which can get a annoying. It is recommended to avoid this by copying your SSH
-credentials to the robot with:
-
-    ssh-copy-id duckie@ROBOT_NAME.local
-
-you will have ente your password to complete this but then you should never be asked for your password again. 
-```
-
