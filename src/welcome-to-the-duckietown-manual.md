@@ -18,20 +18,23 @@ If you are new to Duckietown, you should find a course that helps you navigate t
 
 ```{note}
 This manual is entended to be paired with the `ente` version of Duckietown (and beyond). For the previous
-version of the documentation please see the [daffy version](https://docs.duckietown.com/daffy).
+version of the documentation, see the [daffy version Duckietown documentation](https://docs.duckietown.com/daffy).
 ```
 
-If you are a Duckietown veteran, treat this book as a reference manual on how to do specific things. 
+If you are a Duckietown veteran, you can use this book as a reference manual for specific tasks. 
 
-If you have suggestions on how to improve this documentation, 
-read the [](book-devmanual-intro) section to learn how to make contributions.
+```{attention}
+If you are switching from `daffy` to `ente`, check out [](dt-account-switch-profile).
+```
+
+If you have suggestions on how to improve this documentation, read the [](book-devmanual-intro) section to learn how to make contributions.
 
 (how-to-get-help-pointer)=
 ## How to Get Help
 
 Read the [FAQ and Troubleshooting](how-to-get-help) to find out how to get support in Duckietown.
 
-This book is structured in 3 main parts:
+This book is structured into 3 main parts:
 
 1. The first part is about how to build and use the robots, including running the demos and learning experiences.
 2. The second part is about going further and using this platform to do more advanced things that you build.

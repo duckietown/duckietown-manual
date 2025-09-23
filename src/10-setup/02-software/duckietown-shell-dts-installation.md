@@ -18,6 +18,14 @@ This section describes how to install and set up `DTS` (`Duckietown Shell`), a C
 
 ## `dts` Installation
 
+````{attention}
+If you have already installed `dts` using `pip3`, run the following command and follow the on-screen instructions:
+
+```shell
+pip3 uninstall duckietown-shell
+```
+````
+
 To install `dts`, run:
 
 ```shell
@@ -64,14 +72,6 @@ dts :  Correctly identified as uid = UID
 ```
 ````
 
-````{note}
-To switch your `DTS` profile from `daffy` to `ente`, run:
-
-```shell
-dts profile switch ente
-```
-````
-
 You can change the token/login as a different user with:
 
     dts tok set
@@ -80,7 +80,29 @@ and verify it with:
 
     dts tok status
 
+(dt-account-switch-profile)=
+### Switch to a different `dts` profile
 
+To get a list of the available `dts` profiles, run:
+
+```shell
+dts profile list
+```
+
+To create a new `dts` profile:
+
+1. Run `dts profile new`.
+2. Select the name of the profile to create using <kbd>UpArrow</kbd> and <kbd>DownArrow</kbd>.
+3. Press <kbd>Enter</kbd>.
+4. Copy your [Duckietown Token](https://hub.duckietown.com/token).
+5. Paste your Duckietown Token into the terminal.
+6. Press <kbd>Enter</kbd>.
+
+To switch to a different `dts` profile, run the following command, where `PROFILE` is the name of the profile:
+
+```shell
+dts profile switch PROFILE
+```
 
 (dt-account-dockerhub-config-docker-set)=
 ### Configure Docker in the Duckietown Shell
