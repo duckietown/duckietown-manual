@@ -89,7 +89,7 @@ The camera image is streaming from your Duckiebot by default on startup.
 
 To see it, open a terminal on your laptop and run:
 
-    dts start_gui_tools ROBOT_NAME
+    dts gui ROBOT_NAME
 
 This will start a container with access to the ROS messages of the Duckiebot, including the image stream from the camera.
 
@@ -120,10 +120,10 @@ The rqt image view window with dropdown menu - select the `camera_node/image/com
 
 On the top right of the `rqt_image_view` window, there is a button to save the current frame to an image. But do not save it yet. A little extra setup is needed to be able to view that file later.
 
-Create a folder on you laptop for where you would like to have the image saved to, say `~/duckiebot_images/`. Then, launch the `start_gui_tools` with the following command:
+Create a folder on you laptop for where you would like to have the image saved to, say `~/duckiebot_images/`. Then, launch the `gui` with the following command:
 
 ```
-dts start_gui_tools --mount ~/duckiebot_images/:/duckiebot_images [DUCKIEBOT_NAME]
+dts gui --mount ~/duckiebot_images/:/duckiebot_images [DUCKIEBOT_NAME]
 ```
 
 Then, run `rqt_image_view` again, and use the top-right "**Save as image**" button to save to the `/duckiebot_images` folder. To find that folder, you might need to navigate to `Computer` and select `/` directory in the pop-up dialogue.
