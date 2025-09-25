@@ -36,8 +36,7 @@ html:
   extra_navbar: ""
 
 sphinx:
-  extra_extensions:
-    - sphinx_examples  
+  extra_extensions: []
   config:
     intersphinx_mapping:
       jupyter-book-docs:

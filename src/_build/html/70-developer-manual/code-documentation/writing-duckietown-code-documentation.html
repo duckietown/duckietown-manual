@@ -1,0 +1,1177 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Writing Code Documentation &#8212; The Duckietown Manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '70-developer-manual/code-documentation/writing-duckietown-code-documentation';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Building Code Documentation" href="building-duckietown-code-documentation.html" />
+    <link rel="prev" title="Code Documentation" href="introduction-to-code-documentation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../welcome-to-the-duckietown-manual.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-dtmatrix.png" class="logo__image only-light" alt="The Duckietown Manual - Home"/>
+    <script>document.write(`<img src="../../_static/logo-dtmatrix.png" class="logo__image only-dark" alt="The Duckietown Manual - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../welcome-to-the-duckietown-manual.html">
+                    The Duckietown Manual
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 - Duckiebots, Duckiedrones, and Duckietowns</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../10-setup/setup-introduction.html">Initial Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../10-setup/00-computer/installing-ubuntu-on-your-computer.html">Your Computer</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../10-setup/01-accounts/accounts-introduction.html">Accounts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/01-accounts/github-account.html">GitHub Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/01-accounts/docker-account.html">Docker Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/01-accounts/duckietown-hub-account.html">Duckietown Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/01-accounts/duckietown-slack-account.html">Joining the Duckietown Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/01-accounts/duckietown-stack-overflow-account.html">Joining the Duckietown Archives</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../10-setup/02-software/sw-introduction.html">Software</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/02-software/software-dependencies-installation.html">Software Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/02-software/docker-installation.html">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/02-software/github-installation.html">GitHub and Git LFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/02-software/duckietown-shell-dts-installation.html">Duckietown Shell (<code class="docutils literal notranslate"><span class="pre">dts</span></code>)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../50-duckiematrix/introduction-to-the-duckiematrix-virtual-environment.html">Simulation and the Duckiematrix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../50-duckiematrix/getting-started/duckiematrix-first-steps.html">Installing and Running the Duckiematrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../50-duckiematrix/virtual-duckietown-robots/introduction-to-virtual-duckiebots.html">Virtual Duckiebots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../simulation/gym-simulation-in-duckietown.html">OpenGL-based Gym Environment (legacy)</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../09-db-opmanual-intro/setup-duckiebot-intro.html">Getting Started with your Duckiebot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../09-db-opmanual-intro/db-opmanual-intro.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10-setup/03-duckiebot/safety-lithium-ion-duckiebattery.html">On Lithium-Ion Batteries</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../10-setup/03-duckiebot/flashing-sd-card-duckiebot-initialization.html">Duckiebot SD Card Initialization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/03-duckiebot/flashing-sd-card-duckiebot-initialization-fast.html">The Fast Way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10-setup/03-duckiebot/flashing-sd-card-duckiebot-initialization-complete.html">The Complete Way</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10-setup/03-duckiebot/what-is-in-the-duckiebot-db21j4-box.html">What’s in the Box (<code class="docutils literal notranslate"><span class="pre">DB21-J4</span></code>)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10-setup/03-duckiebot/assembly-instructions-duckiebot-db21j.html">Assembly Instructions (<code class="docutils literal notranslate"><span class="pre">DB21J</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10-setup/03-duckiebot/network-configuration.html">Network Configuration in Duckietown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10-setup/03-duckiebot/duckiebot-first-boot.html">First Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10-setup/03-duckiebot/dashboard-setup.html">Dashboard Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/how-to-get-support.html">How to Get Help</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../20-operations/how-to-use-a-duckiebot-intro.html">Using Your Duckiebot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../20-operations/01-duckiebot-handling/instruction-handling-duckiebot-db21m-db21j.html">Overview (<code class="docutils literal notranslate"><span class="pre">DB21</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../20-operations/01-duckiebot-handling/duckietown-dashboard-browser-ui.html">Duckiebot Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../20-operations/01-duckiebot-handling/db21-power-management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../20-operations/01-duckiebot-handling/db21-software-update.html">Software Update</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../20-operations/03-subsystem-testing/duckiebot-subsystem-introduction.html">Duckiebot Subsystems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/03-subsystem-testing/make-it-move-duckiebot-keyboard-control.html">Keyboard Control (Make it Move!)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/03-subsystem-testing/make-it-see-duckiebot-image-streaming.html">Image Streaming (Make it See!)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/03-subsystem-testing/make-it-shine-duckiebot-led-control.html">LED control (Make it Shine!)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../20-operations/04-calibrations/duckiebot-calibrations-intro.html">Calibrating your Duckiebot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/04-calibrations/duckiebot-camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/04-calibrations/duckiebot-motor-odometry-calibration.html">Wheel Calibration</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../21-testing-debugging/02-components-testing/index.html">Duckiebot Testing and Debugging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../21-testing-debugging/02-components-testing/introduction-to-hardware-component-testing.html">Testing the Hardware Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../21-testing-debugging/db21-hardware-update-hut.html">Re-flashing the “HUT”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../21-testing-debugging/db21-hardware-update-duckiebattery.html">Duckiebattery Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-software-tools/duckietown-duckiebot-additional-software-tools.html">GUI Tools and ROS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/duckiebot-network-faqs.html">Network troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/reflashing-jetson-nano-development-kit-4gb-duckietown.html">Reflashing Jetson Nano Development Kit 4GB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/duckietown-smart-robotics-duckiebattery-5v-2a.html">The Duckiebattery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/frequently-asked-questions-faq.html">Frequently Asked Questions (FAQs)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../30-duckietown-city/duckietowns-intro.html">Building Duckietowns</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../30-duckietown-city/introduction-to-duckietown-urban-environments.html">Overview</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-appearance-specifications-introduction.html">Introduction to Duckietown Appearance Specifications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-tile-map.html">Layer - Tilemap</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-traffic-signs-layer.html">Layer - Traffic Signs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-street-names.html">Traffic Signs - Street Name Signs</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-infrastructure-layer.html">Layer - Infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-traffic-lights-layer.html">Infrastructure - Traffic Lights</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-parking-lots.html">Layer - Parking Lots {bdg-warning} (<code class="docutils literal notranslate"><span class="pre">BETA</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-non-functional-decorations.html">Decorations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../30-duckietown-city/assembly/introduction.html">Duckietown Assembly Instructions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/assembly/tilemap/duckietown-smart-city-road-assembly-instructions.html">Assembly - Road Tiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/assembly/traffic-signs/duckietown-smart-city-traffic-signs-assembly-instructions.html">Assembly - Traffic Signs</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../30-duckietown-city/assembly/traffic-lights/duckietown-smart-city-overview-traffic-lights-assembly-instructions.html">Assembly - Traffic Light</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../30-duckietown-city/assembly/traffic-lights/duckietown-traffic-light-dt21-tl-assembly-instructions.html">Assembly - Traffic Light <code class="docutils literal notranslate"><span class="pre">DT21-TL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../30-duckietown-city/assembly/traffic-lights/duckietown-legacy-traffic-light-dt18_tl-assembly-instructions.html">Assembly - (Legacy) Traffic Light <code class="docutils literal notranslate"><span class="pre">DT18-TL</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../40-demonstrations/db-demo-intro.html">Duckiebot Demos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../40-demonstrations/general_procedure.html">General Procedure for Running Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../40-demonstrations/lane-following-lf.html">Lane Following</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../60-learning-experiences/db-lx-intro.html">Duckiebot Learning Experiences (LXs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../60-learning-experiences/what-is-a-duckietown-learning-experience.html">What is a Duckietown LX?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../60-learning-experiences/lx-components.html">LX Features and Activities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../60-learning-experiences/lx-general-procedure.html">General Procedure for Running Learning Experiences</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../25-duckiedrone/duckiedrone.html">Duckiedrone</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 - Developing with Duckietown</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/intro.html">Basics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/terminal/terminal-basics.html">The Linux Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/development/iso-iec9126.html">ISO/IEC 9126</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/development/linux.html">Linux distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/development/developer-basics-git.html">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/development/developer-basics-docker.html">Docker</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dtproject/creating-demos.html">Creating New Demos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dtproject/introduction-to-duckietown-projects.html">Overview of the  <code class="docutils literal notranslate"><span class="pre">DTProject</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dtproject/how-to-create-a-duckietown-project.html">Creating a New <code class="docutils literal notranslate"><span class="pre">DTProject</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dtproject/adding-code-to-a-dtproject.html">Adding your Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dtproject/working-with-dtproject-dependencies.html">Defining dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dtproject/running-a-dtproject-on-duckietown-robot.html">Running a <code class="docutils literal notranslate"><span class="pre">DTproject</span></code> on your Duckiebot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dtproject/managing-dt-project-launchers.html">Launchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dtproject/duckietown-project-templates.html">Project Templates</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ros/introduction-to-using-ros-with-duckietown.html">ROS</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/create-new-ros-project.html">New ROS DTProject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin-packages.html">Catkin Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/ros-publisher.html">ROS Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/ros-subscriber.html">ROS Subscriber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/faster-development-workflow.html">Faster Development Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/duckiebot-camera-subscriber.html">Subscribe to the Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/duckiebot-wheel-encoder-subscriber.html">Subscribe to the Wheel Encoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/wheel-control.html">Publish to the Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/twist-control.html">Publish Chassis-level Commands</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-python-library/how-to-create-and-update-a-python-library-in-duckietown.html">Python Libraries</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction-to-code-documentation.html">Code Documentation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Writing Code Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building-duckietown-code-documentation.html">Building Code Documentation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../dtros/duckietown-dtros-class.html">The <code class="docutils literal notranslate"><span class="pre">DTROS</span></code> class</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../diagnostics/index.html">Diagnostics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../diagnostics/introduction-to-duckietown-diagnostic-tool.html">Introduction to the Diagnostics Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagnostics/get-started-with-duckietown-diagnostic-tool.html">Get Started with Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagnostics/diagnostics-tool-command-reference.html">Diagnostics Command Reference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-hierarchy/duckietown-docker-code-hierarchy-explained.html">Code Hierarchy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../duckiematrix/intro.html">Developing with the Duckiematrix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../duckiematrix/architecture.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../duckiematrix/world-and-matrix-sides.html">The World and Matrix Sides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../duckiematrix/dtps-interfaces.html">DTPS interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../duckiematrix/maps/duckiematrix-maps.html">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../duckiematrix/maps/custom-duckiematrix-maps.html">Customizing Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../duckiematrix/links.html">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../duckiematrix/modes.html">Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../duckiematrix/engine-reachability-domains.html">Engine Reachability Domains</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../creating-lxs/creating-lxs-intro.html">Duckiebot Learning Experiences</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../creating-lxs/creating-lxs.html">Creating New Learning Experiences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../creating-lxs/developing-lxs.html">Tips for Building LXs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../creating-lxs/testing-lxs.html">Testing Your LX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../90-contributing/introduction.html">Contributing to this Book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../90-contributing/how-to-edit.html">Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../90-contributing/edit-the-duckietown-docs-the-simple-way.html">The simple way: Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../90-contributing/edit-the-duckietown-docs-with-local-edits.html">The right way: Local editor</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../90-contributing/format-and-style-guidelines.html">Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../90-contributing/duckietown-manual-cheatsheet.html">MyST syntax cheat sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04-software-tools/duckietown-postal-service-dtps.html">Duckietown Postal Service (<code class="docutils literal notranslate"><span class="pre">DTPS</span></code>)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3 - Teaching with Duckietown</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../80-instructor-manual/introduction-to-the-instructor-manual.html">Becoming a Duckietown Instructor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/who-should-read-this-manual.html">Who Should Read This?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/how-to-get-started.html">How to Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/how-to-use-this-manual.html">How to Use This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/quickstart-guide.html">Quickstart Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/duckietown-professor-journey.html">The Professor’s journey</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/overview-of-available-resources.html">Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/index-of-slides-for-instructors.html">Lecture Slides and Recordings</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/00-intro-overview.html">Introductions to Duckietown</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/01-introductions.html">Getting started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/02-autonomy.html">Autonomy and Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/03-autonomous-vehicles.html">Autonomous Vehicles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/04-robots.html">Robots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/05-architectures.html">Architectures in Robotics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/06-testing.html">Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/07-signal-processing.html">Signal Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/08-networking.html">Networking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/09-full-lecture.html">Full Introductory Lectures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/tools/00-tools-overview.html">Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/tools/01-docker.html">Containerization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/tools/02-ros.html">Middlewares and the Robot Operating System (ROS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/tools/03-git.html">Git</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/models/00-models-overview.html">Modeling</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/models/01-representations.html">Robot Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/models/02-differential-drive.html">Modeling a Differential Drive Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/models/03-full-lecture-modeling.html">Full Lecture on Modeling</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/00-control-overview.html">Control Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/01-controls-intro.html">Introduction to Control Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/02-odometry.html">Odometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/03-pid.html">PID Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/04-full-lecture-control.html">Full Lecture on Control</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/00-vision-overview.html">Computer Vision</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/01-projective-geometry.html">Projective Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/02-camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/03-image-filtering.html">Image Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/06-full-lecture-vision.html">Full Lectures on Computer Vision</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/00-visual-perception-overview.html">Visual Perception</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/01-intro-visual-perception.html">Introduction to Visual Perception</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/02-intro-nn.html">Introduction to Neural Networks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/03-cnn.html">Deep Convolutional Neural Networks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/04-object-detection.html">Object Detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/05-full-lecture-visual-perception.html">Full Lectures on Visual Perception</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/00-estimation-overview.html">State Estimation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/01-representations.html">Probabilistic Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/02-bayes-filter.html">Bayes Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/03-kalman-filter.html">Kalman Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/04-particle-filter.html">Particle Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/05-histogram-filter.html">Histogram Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/06-full-lecture-filtering.html">Full Lecture on Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/07-ransac.html">Robust Estimation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/08-slam.html">Full Lecture on Simultaneous Localization and Mapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/00-planning-overview.html">Planning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/01-motion-planning.html">Motion Planning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/02-graphs.html">Planning on Graphs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/03-sampling.html">Sampling-based Planning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/04-planning-full.html">Full Lecture on Planning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/00-learning-overview.html">End-to-End Learning Approaches</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/01-mdp.html">Markov Decision Processes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/02-policy-iteration.html">Policy Iteration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/03-q-learning.html">Q Learning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/04-sim-to-real.html">Simulation and Sim-to-real</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/05-rl-full.html">Full Lecture on Reinforcement Learning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/06-imitation-full.html">Imitation Learning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/00-advanced-overview.html">Advanced Topics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/01-multi.html">Multi-vehicle Planning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/02-safety.html">Safety</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/03-uncertainty-machine-learning.html">Estimating Uncertainty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/04-estimation-from-blur.html">Estimation from Motion Blur</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/exercises.html">Activities and Exercises: Learning Experiences (LXs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/simulation.html">Duckietown Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/code.html">The Code Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/hardware.html">Duckietown Hardware</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/projects/index.html">Projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/available-resources/projects/examples.html">Student Project Ideas</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/support.html">Support</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/introduction-to-course-design.html">Course Design Considerations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/prerequisites/pre-index.html">Prerequisites</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/prerequisites/pre-instructors.html">Instructor background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/prerequisites/pre-students.html">Student background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/prerequisites/pre-equipment.html">Space, infrastructure and equipment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/composition.html">Class Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/intended-learning-outcomes-ilo.html">Intended Learning Outcomes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/how-to-structure-a-duckietown-course-suggestions.html">Course Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/common-pitfalls.html">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/feedback.html">Getting Student Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/the-spirit-of-duckietown.html">Duckietown Spirit</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/duckietown-courses-examples.html">Sample Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/graduate-courses/sample-curricula-graduate-level-index.html">Graduate level</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/graduate-courses/udem-universite-de-montreal.html">Autonomous Vehicles (IFT 6757) at the University of Montreal / Mila</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/graduate-courses/ethz-swiss-federal-institute-of-technology-zurich.html">ETH Zurich</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/undergraduate-courses/sample-curricula-undergraduate-level-index.html">Undergraduate level</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/undergraduate-courses/umass-university-of-massachusetts-lowell.html">EECE 5560 at the University of Massachusetts Lowell</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/highschool/index.html">High School level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/mooc/index.html">Self-Driving Cars with Duckietown (MOOC)</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Further Reading</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../99-further-reading/protip-setting-up-remote-duckiebot-control-with-zerotier.html">Remote Duckiebot control with ZeroTier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../99-further-reading/duckiebot-configurations-explained.html">Duckiebot Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../99-further-reading/ssh-aliases-setup.html">Secure shell (SSH)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/duckietown/duckietown-manual" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/duckietown/duckietown-manual/edit/master/src/70-developer-manual/code-documentation/writing-duckietown-code-documentation.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/duckietown/duckietown-manual/issues/new?title=Issue%20on%20page%20%2F70-developer-manual/code-documentation/writing-duckietown-code-documentation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/70-developer-manual/code-documentation/writing-duckietown-code-documentation.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Writing Code Documentation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-inline-documentation-important">Why is (inline) documentation important?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-be-documented-and-where">What should be documented.. and where?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-ros-node-docstring">Example: ROS node docstring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-library-docstring">Example: library docstring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-ros-package">Example: ROS package</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#style-guide">Style guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-styles">Basic styles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-documenting-class-attributes">Example: documenting class attributes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referencing-other-objects">Referencing other objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-sections">Custom sections</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-autodoc">Using <code class="docutils literal notranslate"><span class="pre">autodoc</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="writing-code-documentation">
+<span id="id1"></span><h1>Writing Code Documentation<a class="headerlink" href="#writing-code-documentation" title="Link to this heading">#</a></h1>
+<section id="why-is-inline-documentation-important">
+<h2>Why is (inline) documentation important?<a class="headerlink" href="#why-is-inline-documentation-important" title="Link to this heading">#</a></h2>
+<p>Well‑written documentation determines whether code is <em>usable</em> or <em>ignored</em>.</p>
+<p>A brilliant package that saves developers weeks of effort is worthless if no‑one can discover or understand it.</p>
+<p>Inline docstrings are especially powerful because they live next to the code they explain, are simple to update, and mirror the project’s structure. Tools such as <strong><a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a></strong> then transform those docstrings into polished HTML pages.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The book you are reading is <em>stand‑alone</em> documentation. Inline documentation complements, rather than replaces, such higher‑level material.</p>
+</div>
+<p>Sphinx is the de‑facto standard for Python to parse docstrings and build pages. The magic happens automatically, and success depends on adopting the correct formatting, which we detail below.</p>
+</section>
+<hr class="docutils" />
+<section id="what-should-be-documented-and-where">
+<h2>What should be documented.. and where?<a class="headerlink" href="#what-should-be-documented-and-where" title="Link to this heading">#</a></h2>
+<p>The short and cheeky answer to this question is “everything, and in the right place”. The long answer is the same, in other words: <strong>everything that users may touch should be documented in its closest context.</strong></p>
+<p>For example:</p>
+<ul class="simple">
+<li><p><strong>ROS nodes</strong></p>
+<ul>
+<li><p>Provide an overview of purpose and algorithm.</p></li>
+<li><p>List configuration parameters, default values, publishers, subscribers, and services.</p></li>
+<li><p>Document every method: arguments, types, return values.</p></li>
+</ul>
+</li>
+<li><p><strong>Libraries (<code class="docutils literal notranslate"><span class="pre">include/</span></code> or <code class="docutils literal notranslate"><span class="pre">src/</span></code>)</strong></p>
+<ul>
+<li><p>Each module and package needs a short description.</p></li>
+<li><p>All public classes, functions, and methods require docstrings.</p></li>
+</ul>
+</li>
+<li><p><strong>Repository and package level</strong></p>
+<ul>
+<li><p>Add an RST file under <code class="docutils literal notranslate"><span class="pre">docs/packages/</span></code> named <code class="docutils literal notranslate"><span class="pre">&lt;package&gt;.rst</span></code> that pulls together node‑ and library‑level docs via Sphinx directives.</p></li>
+</ul>
+</li>
+</ul>
+<section id="example-ros-node-docstring">
+<h3>Example: ROS node docstring<a class="headerlink" href="#example-ros-node-docstring" title="Link to this heading">#</a></h3>
+<p>The documentation of the node itself should <em>always</em> be as a docstring after the class definition. <em>Do not</em> put it, or anything else as a docstring for the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method. This will not be rendered in the final output.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">class</span> <span class="nc">CameraNode</span><span class="p">(</span><span class="n">DTROS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    The node handles the image stream, initializing it, publishing frames</span>
+<span class="sd">    according to the required frequency and stops it at shutdown.</span>
+<span class="sd">    `Picamera &lt;https://picamera.readthedocs.io/&gt;`_ is used for handling</span>
+<span class="sd">    the image stream.</span>
+
+<span class="sd">    Note that only one :obj:`PiCamera` object should be used at a time.</span>
+<span class="sd">    If another node tries to start an instance while this node is running,</span>
+<span class="sd">    it will likely fail with an `Out of resource` exception.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        node_name (:obj:`str`): a unique, descriptive name for the node that ROS will use</span>
+
+<span class="sd">    Configuration:</span>
+<span class="sd">        ~framerate (:obj:`float`): The camera image acquisition framerate, default is 30.0 fps</span>
+<span class="sd">        ~res_w (:obj:`int`): The desired width of the acquired image, default is 640px</span>
+<span class="sd">        ~res_h (:obj:`int`): The desired height of the acquired image, default is 480px</span>
+<span class="sd">        ~exposure_mode (:obj:`str`): PiCamera exposure mode</span>
+
+<span class="sd">    Publisher:</span>
+<span class="sd">        ~image/compressed (:obj:`CompressedImage`): The acquired camera images</span>
+
+<span class="sd">    Service:</span>
+<span class="sd">        ~set_camera_info:</span>
+<span class="sd">            Saves a provided camera info to `/data/config/calibrations/camera_intrinsic/HOSTNAME.yaml`.</span>
+
+<span class="sd">            input:</span>
+<span class="sd">                camera_info (obj:`CameraInfo`): The camera information to save</span>
+
+<span class="sd">            outputs:</span>
+<span class="sd">                success (:obj:`bool`): `True` if the call succeeded</span>
+<span class="sd">                status_message (:obj:`str`): Used to give details about success</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_name</span><span class="p">):</span>
+
+        <span class="c1"># Initialize the DTROS parent class</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CameraNode</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">node_name</span><span class="o">=</span><span class="n">node_name</span><span class="p">,</span>
+                                         <span class="n">node_type</span><span class="o">=</span><span class="n">NodeType</span><span class="o">.</span><span class="n">PERCEPTION</span><span class="p">)</span>
+
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">save_camera_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">camera_info_msg</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Saves intrinsic calibration to file.</span>
+
+<span class="sd">            Args:</span>
+<span class="sd">                camera_info_msg (:obj:`CameraInfo`): Camera Info containing calibration</span>
+<span class="sd">                filename (:obj:`str`): filename where to save calibration</span>
+
+<span class="sd">            Returns:</span>
+<span class="sd">                :obj:`bool`: whether the camera info was successfully written</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Convert camera_info_msg and save to a yaml file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;[saveCameraInfo] filename: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+
+        <span class="c1"># Converted from camera_info_manager.py</span>
+        <span class="n">calib</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;image_width&#39;</span><span class="p">:</span> <span class="n">camera_info_msg</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;[saveCameraInfo] calib </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">calib</span><span class="p">))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+            <span class="n">yaml</span><span class="o">.</span><span class="n">safe_dump</span><span class="p">(</span><span class="n">calib</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+</pre></div>
+</div>
+<p>Start with a high-level description of the function of the node, where it fits in the bigger picture of the package and repository, and what it receives as input(s) and produces as output(s). Feel generous with the description here; remember the latin saying: “<em>Melius abundare est quam deficere</em>.” (“It is better to have too much than too little”).</p>
+<p>Following the general introduction section, include:</p>
+<ul class="simple">
+<li><p>a section with the arguments needed for initializing the node (the arguments of the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method), which will almost always be exactly the same as shown.</p></li>
+<li><p>a configuration section with the parameters for the node, their type, a short description, and their default value.</p></li>
+<li><p>additional section describing the subscribers, publishers and services, in this order.</p></li>
+</ul>
+<p>If the node has no subscribers, as e.g., the camera node, skip this section.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note the specific way of structuring the documentation of the service.</p>
+</div>
+<p>Every method should be documented as a docstring immediately after the function definition (as the <code class="docutils literal notranslate"><span class="pre">save_camera_info</span></code> example). Add a short description of the method, the arguments it expects, and the return value (when applicable).</p>
+</section>
+<section id="example-library-docstring">
+<h3>Example: library docstring<a class="headerlink" href="#example-library-docstring" title="Link to this heading">#</a></h3>
+<p>Libraries should be documented similarly to nodes. However, when documenting libraries, it is important to actually invoke the Sphinx commands for documenting particular objects in the <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file. Furthermore, this file should contain a description of the package itself. Here is an example from the <code class="docutils literal notranslate"><span class="pre">line_detector</span></code> library’s <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    line_detector</span>
+<span class="sd">    -------------</span>
+
+<span class="sd">    The ``line_detector`` library packages classes and tools for handling line section extraction from images. The</span>
+<span class="sd">    main functionality is in the :py:class:`LineDetector` class. :py:class:`Detections` is the output data class for</span>
+<span class="sd">    the results of a call to :py:class:`LineDetector`, and :py:class:`ColorRange` is used to specify the color ranges</span>
+<span class="sd">    in which :py:class:`LineDetector` is looking for line segments.</span>
+
+<span class="sd">    There are two plotting utilities also included: :py:func:`plotMaps` and :py:func:`plotSegments`</span>
+
+<span class="sd">    .. autoclass:: line_detector.Detections</span>
+
+<span class="sd">    .. autoclass:: line_detector.ColorRange</span>
+
+<span class="sd">    .. autoclass:: line_detector.LineDetector</span>
+
+<span class="sd">    .. autofunction:: line_detector.plotMaps</span>
+
+<span class="sd">    .. autofunction:: line_detector.plotSegments</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>The documentation describes the library and its elements prior to calling the <a class="reference internal" href="#sphinx-style-guide"><span class="std std-ref">Sphinx commands</span></a> to parse these classes and functions.</p>
+</section>
+<section id="example-ros-package">
+<h3>Example: ROS package<a class="headerlink" href="#example-ros-package" title="Link to this heading">#</a></h3>
+<p>Similarly, every ROS package needs a documentation file. This should go in the <code class="docutils literal notranslate"><span class="pre">docs/packages</span></code> directory of the project’s repository and should be named <code class="docutils literal notranslate"><span class="pre">package_name.rst</span></code>. It should describe the package and then should invoke the Sphinx commands for building the documentation for the individual nodes and libraries. E.g.:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh">ROS Package: ground\_projection</span>
+<span class="gh">===============================</span>
+
+.. contents::
+
+The ``ground_projection`` package provides the tools for projecting line segments from an image reference frame to the ground reference frame, as well as a ROS node that implements this functionality. It has been designed to be a part of the lane localization pipeline. Consists of the ROS node :py:class:`nodes.GroundProjectionNode` and the :py:mod:`ground_projection` library.
+
+
+<span class="gu">GroundProjectionNode</span>
+<span class="gu">--------------------</span>
+
+.. autoclass:: nodes.GroundProjectionNode
+
+<span class="gu">Included libraries</span>
+<span class="gu">------------------</span>
+
+.. automodule:: ground_projection
+</pre></div>
+</div>
+</section>
+</section>
+<section id="style-guide">
+<span id="sphinx-style-guide"></span><h2>Style guide<a class="headerlink" href="#style-guide" title="Link to this heading">#</a></h2>
+<p>Sphinx uses commands called <em>directives</em>. The basic style of the documentation comes from <em>reStructuredText</em>, which is the default plaintext markup language used by Sphinx.</p>
+<section id="basic-styles">
+<h3>Basic styles<a class="headerlink" href="#basic-styles" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">*text*</span></code> to italicize the text.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">**text**</span></code> to make it in boldface.</p></li>
+<li><p>Values, names of variables, errors, messages, etc. should be in grave accent quotes:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>``like that``
+</pre></div>
+</div>
+</li>
+<li><p>Sections are created by underlying section title with a punctuation character, at least as long as the text:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh">What a cool heading</span>
+<span class="gh">===================</span>
+
+<span class="gu">Nice subsection</span>
+<span class="gu">---------------</span>
+
+A neat subsubsection
+^^^^^^^^^^^^^^^^^^^^
+</pre></div>
+</div>
+</li>
+<li><p>External links can be added like this:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>    For this, we use <span class="sb">`Duckietown &lt;https://duckietown.com/&gt;`</span>_ which is a lifesaver.
+</pre></div>
+</div>
+</li>
+<li><p>When describing standard types (like <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, etc.) use</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:obj:`int`
+</pre></div>
+</div>
+</li>
+<li><p>If the type is an object of one of the libraries in the repository, then use the referencing directives from the next section to create hyperlinks. If it is a message, use the message type. If a list, a dictionary, or a tuple, use expressions like <code class="docutils literal notranslate"><span class="pre">:obj:`list`</span> <span class="pre">of</span> <span class="pre">:obj:`float`</span></code></p></li>
+<li><p>Attributes of a class can also be documented. The best practice is to do that for all important attributes and for constants.</p></li>
+</ul>
+</section>
+<section id="example-documenting-class-attributes">
+<h3>Example: documenting class attributes<a class="headerlink" href="#example-documenting-class-attributes" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+    <span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Docstring for class Foo.&quot;&quot;&quot;</span>
+
+        <span class="c1">#: Doc comment for class attribute Foo.bar.</span>
+        <span class="c1">#: It can have multiple lines.</span>
+        <span class="n">bar</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="n">flox</span> <span class="o">=</span> <span class="mf">1.5</span>   <span class="c1">#: Doc comment for Foo.flox. One line only.</span>
+
+        <span class="n">baz</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Docstring for class attribute Foo.baz.&quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="c1">#: Doc comment for instance attribute qux.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">qux</span> <span class="o">=</span> <span class="mi">3</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">spam</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Docstring for instance attribute spam.&quot;&quot;&quot;</span>
+
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Additional examples:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText basics</a></p></li>
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">Quick references</a></p></li>
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html">Detailed specifications</a>.</p></li>
+</ul>
+</div>
+</section>
+<section id="referencing-other-objects">
+<h3>Referencing other objects<a class="headerlink" href="#referencing-other-objects" title="Link to this heading">#</a></h3>
+<p>Links to a different package, node, method, or object are added with:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>    :py:mod:`duckietown`
+    :py:class:`duckietown.DTROS`
+    :py:meth:`duckietown.DTROS.publisher`
+    :py:attr:`duckietown.DTROS.switch`
+</pre></div>
+</div>
+<p>All of these refer to the <code class="docutils literal notranslate"><span class="pre">duckietown</span></code> Python package.</p>
+<p>When dealing with nodes things are a bit trickier because they are not a part of a package. To make Sphinx work nicely with ROS nodes, we create a fake package that has them all as classes. Hence, to refer to the <code class="docutils literal notranslate"><span class="pre">CameraNode</span></code>:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>    :py:class:`nodes.CameraNode`
+</pre></div>
+</div>
+</section>
+<section id="custom-sections">
+<h3>Custom sections<a class="headerlink" href="#custom-sections" title="Link to this heading">#</a></h3>
+<p>When documenting a node, make use of the following ROS-specific sections: <code class="docutils literal notranslate"><span class="pre">Examples</span></code>, <code class="docutils literal notranslate"><span class="pre">Raises</span></code>, <code class="docutils literal notranslate"><span class="pre">Configuration</span></code>, <code class="docutils literal notranslate"><span class="pre">Subscribers</span></code>, <code class="docutils literal notranslate"><span class="pre">Subscriber</span></code>, <code class="docutils literal notranslate"><span class="pre">Publishers</span></code>, <code class="docutils literal notranslate"><span class="pre">Publisher</span></code>, <code class="docutils literal notranslate"><span class="pre">Services</span></code>, <code class="docutils literal notranslate"><span class="pre">Service</span></code>, <code class="docutils literal notranslate"><span class="pre">Fields</span></code>, <code class="docutils literal notranslate"><span class="pre">inputs</span></code>, <code class="docutils literal notranslate"><span class="pre">input</span></code>, <code class="docutils literal notranslate"><span class="pre">outputs</span></code>, <code class="docutils literal notranslate"><span class="pre">output</span></code>.</p>
+<p>To add custom sections edit <code class="docutils literal notranslate"><span class="pre">docs/config.yaml</span></code>.</p>
+</section>
+<section id="using-autodoc">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">autodoc</span></code><a class="headerlink" href="#using-autodoc" title="Link to this heading">#</a></h3>
+<p>We use the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">autodoc extension</a> of Sphinx to automatically create the markup from the docstrings in our Python code using the following directives:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>.. automodule:: ground_projection
+
+.. autoclass:: line_detector.ColorRange
+
+.. autofunction:: line_detector.plotMaps
+
+.. automethod:: nodes.CameraNode.save_camera_info
+</pre></div>
+</div>
+<p>More <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">autodoc details</a> are available on the Sphinx website.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./70-developer-manual/code-documentation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="introduction-to-code-documentation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Code Documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="building-duckietown-code-documentation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Building Code Documentation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-inline-documentation-important">Why is (inline) documentation important?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-be-documented-and-where">What should be documented.. and where?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-ros-node-docstring">Example: ROS node docstring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-library-docstring">Example: library docstring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-ros-package">Example: ROS package</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#style-guide">Style guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-styles">Basic styles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-documenting-class-attributes">Example: documenting class attributes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referencing-other-objects">Referencing other objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-sections">Custom sections</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-autodoc">Using <code class="docutils literal notranslate"><span class="pre">autodoc</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Duckietown, Inc.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

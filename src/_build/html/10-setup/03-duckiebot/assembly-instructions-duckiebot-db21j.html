@@ -1,0 +1,1871 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Assembly Instructions (DB21J) &#8212; The Duckietown Manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '10-setup/03-duckiebot/assembly-instructions-duckiebot-db21j';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Network Configuration in Duckietown" href="network-configuration.html" />
+    <link rel="prev" title="What’s in the Box (DB21-J4)?" href="what-is-in-the-duckiebot-db21j4-box.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../welcome-to-the-duckietown-manual.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-dtmatrix.png" class="logo__image only-light" alt="The Duckietown Manual - Home"/>
+    <script>document.write(`<img src="../../_static/logo-dtmatrix.png" class="logo__image only-dark" alt="The Duckietown Manual - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../welcome-to-the-duckietown-manual.html">
+                    The Duckietown Manual
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 - Duckiebots, Duckiedrones, and Duckietowns</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup-introduction.html">Initial Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../00-computer/installing-ubuntu-on-your-computer.html">Your Computer</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01-accounts/accounts-introduction.html">Accounts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01-accounts/github-account.html">GitHub Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-accounts/docker-account.html">Docker Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-accounts/duckietown-hub-account.html">Duckietown Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-accounts/duckietown-slack-account.html">Joining the Duckietown Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-accounts/duckietown-stack-overflow-account.html">Joining the Duckietown Archives</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02-software/sw-introduction.html">Software</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02-software/software-dependencies-installation.html">Software Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02-software/docker-installation.html">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02-software/github-installation.html">GitHub and Git LFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02-software/duckietown-shell-dts-installation.html">Duckietown Shell (<code class="docutils literal notranslate"><span class="pre">dts</span></code>)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../50-duckiematrix/introduction-to-the-duckiematrix-virtual-environment.html">Simulation and the Duckiematrix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../50-duckiematrix/getting-started/duckiematrix-first-steps.html">Installing and Running the Duckiematrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../50-duckiematrix/virtual-duckietown-robots/introduction-to-virtual-duckiebots.html">Virtual Duckiebots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../70-developer-manual/simulation/gym-simulation-in-duckietown.html">OpenGL-based Gym Environment (legacy)</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../09-db-opmanual-intro/setup-duckiebot-intro.html">Getting Started with your Duckiebot</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../09-db-opmanual-intro/db-opmanual-intro.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety-lithium-ion-duckiebattery.html">On Lithium-Ion Batteries</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="flashing-sd-card-duckiebot-initialization.html">Duckiebot SD Card Initialization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="flashing-sd-card-duckiebot-initialization-fast.html">The Fast Way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flashing-sd-card-duckiebot-initialization-complete.html">The Complete Way</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="what-is-in-the-duckiebot-db21j4-box.html">What’s in the Box (<code class="docutils literal notranslate"><span class="pre">DB21-J4</span></code>)?</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Assembly Instructions (<code class="docutils literal notranslate"><span class="pre">DB21J</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network-configuration.html">Network Configuration in Duckietown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="duckiebot-first-boot.html">First Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard-setup.html">Dashboard Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/how-to-get-support.html">How to Get Help</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../20-operations/how-to-use-a-duckiebot-intro.html">Using Your Duckiebot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../20-operations/01-duckiebot-handling/instruction-handling-duckiebot-db21m-db21j.html">Overview (<code class="docutils literal notranslate"><span class="pre">DB21</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../20-operations/01-duckiebot-handling/duckietown-dashboard-browser-ui.html">Duckiebot Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../20-operations/01-duckiebot-handling/db21-power-management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../20-operations/01-duckiebot-handling/db21-software-update.html">Software Update</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../20-operations/03-subsystem-testing/duckiebot-subsystem-introduction.html">Duckiebot Subsystems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/03-subsystem-testing/make-it-move-duckiebot-keyboard-control.html">Keyboard Control (Make it Move!)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/03-subsystem-testing/make-it-see-duckiebot-image-streaming.html">Image Streaming (Make it See!)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/03-subsystem-testing/make-it-shine-duckiebot-led-control.html">LED control (Make it Shine!)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../20-operations/04-calibrations/duckiebot-calibrations-intro.html">Calibrating your Duckiebot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/04-calibrations/duckiebot-camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../20-operations/04-calibrations/duckiebot-motor-odometry-calibration.html">Wheel Calibration</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../21-testing-debugging/02-components-testing/index.html">Duckiebot Testing and Debugging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../21-testing-debugging/02-components-testing/introduction-to-hardware-component-testing.html">Testing the Hardware Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../21-testing-debugging/db21-hardware-update-hut.html">Re-flashing the “HUT”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../21-testing-debugging/db21-hardware-update-duckiebattery.html">Duckiebattery Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-software-tools/duckietown-duckiebot-additional-software-tools.html">GUI Tools and ROS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/duckiebot-network-faqs.html">Network troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/reflashing-jetson-nano-development-kit-4gb-duckietown.html">Reflashing Jetson Nano Development Kit 4GB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/duckietown-smart-robotics-duckiebattery-5v-2a.html">The Duckiebattery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-troubleshooting/frequently-asked-questions-faq.html">Frequently Asked Questions (FAQs)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../30-duckietown-city/duckietowns-intro.html">Building Duckietowns</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../30-duckietown-city/introduction-to-duckietown-urban-environments.html">Overview</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-appearance-specifications-introduction.html">Introduction to Duckietown Appearance Specifications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-tile-map.html">Layer - Tilemap</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-traffic-signs-layer.html">Layer - Traffic Signs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-street-names.html">Traffic Signs - Street Name Signs</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-infrastructure-layer.html">Layer - Infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-traffic-lights-layer.html">Infrastructure - Traffic Lights</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-parking-lots.html">Layer - Parking Lots {bdg-warning} (<code class="docutils literal notranslate"><span class="pre">BETA</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/appearance-specifications/duckietown-smart-city-non-functional-decorations.html">Decorations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../30-duckietown-city/assembly/introduction.html">Duckietown Assembly Instructions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/assembly/tilemap/duckietown-smart-city-road-assembly-instructions.html">Assembly - Road Tiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../30-duckietown-city/assembly/traffic-signs/duckietown-smart-city-traffic-signs-assembly-instructions.html">Assembly - Traffic Signs</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../30-duckietown-city/assembly/traffic-lights/duckietown-smart-city-overview-traffic-lights-assembly-instructions.html">Assembly - Traffic Light</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../30-duckietown-city/assembly/traffic-lights/duckietown-traffic-light-dt21-tl-assembly-instructions.html">Assembly - Traffic Light <code class="docutils literal notranslate"><span class="pre">DT21-TL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../30-duckietown-city/assembly/traffic-lights/duckietown-legacy-traffic-light-dt18_tl-assembly-instructions.html">Assembly - (Legacy) Traffic Light <code class="docutils literal notranslate"><span class="pre">DT18-TL</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../40-demonstrations/db-demo-intro.html">Duckiebot Demos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../40-demonstrations/general_procedure.html">General Procedure for Running Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../40-demonstrations/lane-following-lf.html">Lane Following</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../60-learning-experiences/db-lx-intro.html">Duckiebot Learning Experiences (LXs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../60-learning-experiences/what-is-a-duckietown-learning-experience.html">What is a Duckietown LX?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../60-learning-experiences/lx-components.html">LX Features and Activities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../60-learning-experiences/lx-general-procedure.html">General Procedure for Running Learning Experiences</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../25-duckiedrone/duckiedrone.html">Duckiedrone</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 - Developing with Duckietown</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../70-developer-manual/basics/intro.html">Basics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/basics/terminal/terminal-basics.html">The Linux Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/basics/development/iso-iec9126.html">ISO/IEC 9126</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/basics/development/linux.html">Linux distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/basics/development/developer-basics-git.html">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/basics/development/developer-basics-docker.html">Docker</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../70-developer-manual/dtproject/creating-demos.html">Creating New Demos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/dtproject/introduction-to-duckietown-projects.html">Overview of the  <code class="docutils literal notranslate"><span class="pre">DTProject</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/dtproject/how-to-create-a-duckietown-project.html">Creating a New <code class="docutils literal notranslate"><span class="pre">DTProject</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/dtproject/adding-code-to-a-dtproject.html">Adding your Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/dtproject/working-with-dtproject-dependencies.html">Defining dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/dtproject/running-a-dtproject-on-duckietown-robot.html">Running a <code class="docutils literal notranslate"><span class="pre">DTproject</span></code> on your Duckiebot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/dtproject/managing-dt-project-launchers.html">Launchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/dtproject/duckietown-project-templates.html">Project Templates</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../70-developer-manual/ros/introduction-to-using-ros-with-duckietown.html">ROS</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/ros/create-new-ros-project.html">New ROS DTProject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/ros/catkin-packages.html">Catkin Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/ros/ros-publisher.html">ROS Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/ros/ros-subscriber.html">ROS Subscriber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/ros/faster-development-workflow.html">Faster Development Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/ros/duckiebot-camera-subscriber.html">Subscribe to the Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/ros/duckiebot-wheel-encoder-subscriber.html">Subscribe to the Wheel Encoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/ros/wheel-control.html">Publish to the Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/ros/twist-control.html">Publish Chassis-level Commands</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../70-developer-manual/first-python-library/how-to-create-and-update-a-python-library-in-duckietown.html">Python Libraries</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../70-developer-manual/code-documentation/introduction-to-code-documentation.html">Code Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/code-documentation/writing-duckietown-code-documentation.html">Writing Code Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/code-documentation/building-duckietown-code-documentation.html">Building Code Documentation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../70-developer-manual/dtros/duckietown-dtros-class.html">The <code class="docutils literal notranslate"><span class="pre">DTROS</span></code> class</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../70-developer-manual/diagnostics/index.html">Diagnostics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/diagnostics/introduction-to-duckietown-diagnostic-tool.html">Introduction to the Diagnostics Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/diagnostics/get-started-with-duckietown-diagnostic-tool.html">Get Started with Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/diagnostics/diagnostics-tool-command-reference.html">Diagnostics Command Reference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../70-developer-manual/code-hierarchy/duckietown-docker-code-hierarchy-explained.html">Code Hierarchy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../70-developer-manual/duckiematrix/intro.html">Developing with the Duckiematrix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/duckiematrix/architecture.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/duckiematrix/world-and-matrix-sides.html">The World and Matrix Sides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/duckiematrix/dtps-interfaces.html">DTPS interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/duckiematrix/maps/duckiematrix-maps.html">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/duckiematrix/maps/custom-duckiematrix-maps.html">Customizing Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/duckiematrix/links.html">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/duckiematrix/modes.html">Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/duckiematrix/engine-reachability-domains.html">Engine Reachability Domains</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../70-developer-manual/creating-lxs/creating-lxs-intro.html">Duckiebot Learning Experiences</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/creating-lxs/creating-lxs.html">Creating New Learning Experiences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/creating-lxs/developing-lxs.html">Tips for Building LXs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../70-developer-manual/creating-lxs/testing-lxs.html">Testing Your LX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../90-contributing/introduction.html">Contributing to this Book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../90-contributing/how-to-edit.html">Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../90-contributing/edit-the-duckietown-docs-the-simple-way.html">The simple way: Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../90-contributing/edit-the-duckietown-docs-with-local-edits.html">The right way: Local editor</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../90-contributing/format-and-style-guidelines.html">Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../90-contributing/duckietown-manual-cheatsheet.html">MyST syntax cheat sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../04-software-tools/duckietown-postal-service-dtps.html">Duckietown Postal Service (<code class="docutils literal notranslate"><span class="pre">DTPS</span></code>)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3 - Teaching with Duckietown</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../80-instructor-manual/introduction-to-the-instructor-manual.html">Becoming a Duckietown Instructor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/who-should-read-this-manual.html">Who Should Read This?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/how-to-get-started.html">How to Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/how-to-use-this-manual.html">How to Use This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/quickstart-guide.html">Quickstart Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/introduction/duckietown-professor-journey.html">The Professor’s journey</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/overview-of-available-resources.html">Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/index-of-slides-for-instructors.html">Lecture Slides and Recordings</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/00-intro-overview.html">Introductions to Duckietown</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/01-introductions.html">Getting started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/02-autonomy.html">Autonomy and Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/03-autonomous-vehicles.html">Autonomous Vehicles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/04-robots.html">Robots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/05-architectures.html">Architectures in Robotics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/06-testing.html">Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/07-signal-processing.html">Signal Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/08-networking.html">Networking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/intro/09-full-lecture.html">Full Introductory Lectures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/tools/00-tools-overview.html">Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/tools/01-docker.html">Containerization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/tools/02-ros.html">Middlewares and the Robot Operating System (ROS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/tools/03-git.html">Git</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/models/00-models-overview.html">Modeling</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/models/01-representations.html">Robot Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/models/02-differential-drive.html">Modeling a Differential Drive Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/models/03-full-lecture-modeling.html">Full Lecture on Modeling</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/00-control-overview.html">Control Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/01-controls-intro.html">Introduction to Control Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/02-odometry.html">Odometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/03-pid.html">PID Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/control/04-full-lecture-control.html">Full Lecture on Control</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/00-vision-overview.html">Computer Vision</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/01-projective-geometry.html">Projective Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/02-camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/03-image-filtering.html">Image Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/vision/06-full-lecture-vision.html">Full Lectures on Computer Vision</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/00-visual-perception-overview.html">Visual Perception</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/01-intro-visual-perception.html">Introduction to Visual Perception</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/02-intro-nn.html">Introduction to Neural Networks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/03-cnn.html">Deep Convolutional Neural Networks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/04-object-detection.html">Object Detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/perception/05-full-lecture-visual-perception.html">Full Lectures on Visual Perception</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/00-estimation-overview.html">State Estimation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/01-representations.html">Probabilistic Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/02-bayes-filter.html">Bayes Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/03-kalman-filter.html">Kalman Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/04-particle-filter.html">Particle Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/05-histogram-filter.html">Histogram Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/06-full-lecture-filtering.html">Full Lecture on Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/07-ransac.html">Robust Estimation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/estimation/08-slam.html">Full Lecture on Simultaneous Localization and Mapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/00-planning-overview.html">Planning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/01-motion-planning.html">Motion Planning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/02-graphs.html">Planning on Graphs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/03-sampling.html">Sampling-based Planning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/planning/04-planning-full.html">Full Lecture on Planning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/00-learning-overview.html">End-to-End Learning Approaches</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/01-mdp.html">Markov Decision Processes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/02-policy-iteration.html">Policy Iteration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/03-q-learning.html">Q Learning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/04-sim-to-real.html">Simulation and Sim-to-real</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/05-rl-full.html">Full Lecture on Reinforcement Learning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/learning/06-imitation-full.html">Imitation Learning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/00-advanced-overview.html">Advanced Topics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/01-multi.html">Multi-vehicle Planning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/02-safety.html">Safety</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/03-uncertainty-machine-learning.html">Estimating Uncertainty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../80-instructor-manual/available-resources/slides/advanced/04-estimation-from-blur.html">Estimation from Motion Blur</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/exercises.html">Activities and Exercises: Learning Experiences (LXs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/evaluation.html">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/simulation.html">Duckietown Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/code.html">The Code Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/hardware.html">Duckietown Hardware</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/available-resources/projects/index.html">Projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/available-resources/projects/examples.html">Student Project Ideas</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/available-resources/support.html">Support</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/introduction-to-course-design.html">Course Design Considerations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/prerequisites/pre-index.html">Prerequisites</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/prerequisites/pre-instructors.html">Instructor background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/prerequisites/pre-students.html">Student background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/prerequisites/pre-equipment.html">Space, infrastructure and equipment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/composition.html">Class Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/intended-learning-outcomes-ilo.html">Intended Learning Outcomes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/how-to-structure-a-duckietown-course-suggestions.html">Course Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/common-pitfalls.html">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/feedback.html">Getting Student Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/course-design-considerations/the-spirit-of-duckietown.html">Duckietown Spirit</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/duckietown-courses-examples.html">Sample Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/graduate-courses/sample-curricula-graduate-level-index.html">Graduate level</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/graduate-courses/udem-universite-de-montreal.html">Autonomous Vehicles (IFT 6757) at the University of Montreal / Mila</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/graduate-courses/ethz-swiss-federal-institute-of-technology-zurich.html">ETH Zurich</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/undergraduate-courses/sample-curricula-undergraduate-level-index.html">Undergraduate level</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/undergraduate-courses/umass-university-of-massachusetts-lowell.html">EECE 5560 at the University of Massachusetts Lowell</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/highschool/index.html">High School level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../80-instructor-manual/sample-curricula/mooc/index.html">Self-Driving Cars with Duckietown (MOOC)</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Further Reading</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../99-further-reading/protip-setting-up-remote-duckiebot-control-with-zerotier.html">Remote Duckiebot control with ZeroTier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../99-further-reading/duckiebot-configurations-explained.html">Duckiebot Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../99-further-reading/ssh-aliases-setup.html">Secure shell (SSH)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/duckietown/duckietown-manual" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/duckietown/duckietown-manual/edit/master/src/10-setup/03-duckiebot/assembly-instructions-duckiebot-db21j.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/duckietown/duckietown-manual/issues/new?title=Issue%20on%20page%20%2F10-setup/03-duckiebot/assembly-instructions-duckiebot-db21j.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/10-setup/03-duckiebot/assembly-instructions-duckiebot-db21j.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Assembly Instructions (DB21J)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminary-steps">Preliminary steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unboxing">Unboxing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plastic-cover">Plastic cover</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-components">Connecting components</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hut">HUT</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-the-duckiebattery-via-the-hut">Charging the Duckiebattery via the HUT</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#camera-assembly">Camera assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bottom-assembly">Bottom assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">Step 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5">Step 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6">Step 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7">Step 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8">Step 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9">Step 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10">Step 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11">Step 11</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12">Step 12</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13">Step 13</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14">Step 14</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15">Step 15</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16">Step 16</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-17">Step 17</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-18">Step 18</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computation-unit">Computation unit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-19">Step 19</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-20">Step 20</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-21">Step 21</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-22">Step 22</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-23">Step 23</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-24">Step 24</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-25">Step 25</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-26">Step 26</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-27">Step 27</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-assembly">Back assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-28">Step 28</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-29">Step 29</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-30">Step 30</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-31">Step 31</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-32">Step 32</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-33">Step 33</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-34">Step 34</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-35">Step 35</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-36">Step 36</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-37">Step 37</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-38">Step 38</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-39">Step 39</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-40">Step 40</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-41">Step 41</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#front-assembly">Front assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-42">Step 42</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-43">Step 43</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-44">Step 44</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-45">Step 45</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-46">Step 46</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-47">Step 47</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-48">Step 48</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-49">Step 49</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-50">Step 50</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-51">Step 51</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#top-assembly">Top assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-52">Step 52</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-53">Step 53</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-54">Step 54</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-55">Step 55</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-56">Step 56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-57">Step 57</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-58">Step 58</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-59">Step 59</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-60">Step 60</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-61">Step 61</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckiebattery">Duckiebattery</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-62">Step 62</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sd-card">SD card</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-components">Optional components</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-pattern-assembly">Back pattern assembly</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-63">Step 63</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-64">Step 64</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-65">Step 65</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-66">Step 66</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-67">Step 67</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apriltag">AprilTag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-68">Step 68</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fcc-ce-sticker">FCC-CE sticker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-69">Step 69</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkpoint">Checkpoint</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="assembly-instructions-db21j">
+<span id="id1"></span><h1>Assembly Instructions (<code class="docutils literal notranslate"><span class="pre">DB21J</span></code>)<a class="headerlink" href="#assembly-instructions-db21j" title="Link to this heading">#</a></h1>
+<p>This section describes the assembly procedure for your Duckiebot DB21J.</p>
+<div class="admonition-what-s-in-the-box-and-assembly-video-db21m admonition">
+<p class="admonition-title">What’s in the box and assembly video (DB21M)</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/528621827?h=44014b1b93" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p><a href="https://vimeo.com/528621827">Duckiebot DB21M unpacking and assembly</a> from <a href="https://vimeo.com/duckietown">Duckietown</a> on <a href="https://vimeo.com">Vimeo</a>. Note this video is not from a DB21J4, and details differ.</p>
+</div>
+<section id="preliminary-steps">
+<span id="db21j-preliminary-steps"></span><h2>Preliminary steps<a class="headerlink" href="#preliminary-steps" title="Link to this heading">#</a></h2>
+<section id="unboxing">
+<h3>Unboxing<a class="headerlink" href="#unboxing" title="Link to this heading">#</a></h3>
+<p>Unbox all of the components within your Duckiebox and lay them out on a flat surface.
+Ensure that you have well-lit, uncluttered space to work on.
+Although not necessary, a small (<code class="docutils literal notranslate"><span class="pre">M2.5</span></code>) wrench and pliers may ease some passages.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/db21-allcomponents.jpg" src="../../_images/db21-allcomponents.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">The contents of a DB21J Duckiebox.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Your Duckiebot chassis may be under the white protective foam inside the Duckiebox.
+To reach it, pull the white foam out of the box after removing everything else.
+Note that the upper part of the inside foam has several side pockets in addition to a main compartment where components are located.</p>
+</div>
+</section>
+<section id="plastic-cover">
+<h3>Plastic cover<a class="headerlink" href="#plastic-cover" title="Link to this heading">#</a></h3>
+<p>Peel off the plastic covers from both sides of every chassis component.</p>
+</section>
+<section id="connecting-components">
+<h3>Connecting components<a class="headerlink" href="#connecting-components" title="Link to this heading">#</a></h3>
+<p>Verify each connecting component (screws, nuts and stand-offs) before using them as this may prevent undesirable effects (e.g., nylon screws prevent electrical shorts, bigger screws may damage the chassis, etc.).
+There are also shorter screws, which can be used in some cases.</p>
+<figure class="align-default" id="fig-db21m-rev1-parts-indices">
+<img alt="../../_images/db21-rev1-parts-indices.png" src="../../_images/db21-rev1-parts-indices.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Connecting components.</span><a class="headerlink" href="#fig-db21m-rev1-parts-indices" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="hut">
+<h3>HUT<a class="headerlink" href="#hut" title="Link to this heading">#</a></h3>
+<p>The HUT an electronics board containing the connectors for various sensors (e.g., fan, motors, top button, etc.) that is mounted to the Jetson Nano.</p>
+<figure class="align-default" id="fig-db21-rev1-hut-00">
+<img alt="../../_images/db21-rev1-hut_00.png" src="../../_images/db21-rev1-hut_00.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">The HUT.</span><a class="headerlink" href="#fig-db21-rev1-hut-00" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-db21-rev1-hut-01">
+<img alt="../../_images/db21-rev1-1-hut_01.png" src="../../_images/db21-rev1-1-hut_01.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">The HUT’s components.</span><a class="headerlink" href="#fig-db21-rev1-hut-01" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="charging-the-duckiebattery-via-the-hut">
+<span id="charge-duckiebattery-via-the-hut"></span><h3>Charging the Duckiebattery via the HUT<a class="headerlink" href="#charging-the-duckiebattery-via-the-hut" title="Link to this heading">#</a></h3>
+<p>This preliminary step allows the Duckiebattery to begin charging while confirming the functionality of the HUT.</p>
+<p>To charge the Duckiebattery via the HUT:</p>
+<ul class="simple">
+<li><p>Connect the Duckiebattery to the HUT as shown below and make sure that a green LED on the HUT is lit.</p></li>
+<li><p>Wait <code class="docutils literal notranslate"><span class="pre">30</span> <span class="pre">min</span></code> and then press the button on the Duckiebattery.</p></li>
+<li><p>Check that the state of charge LEDs on the Duckiebattery start blinking.</p></li>
+<li><p>Leave this setup until the Duckiebattery is charged (this may take up to <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">h</span></code>).</p></li>
+</ul>
+<figure class="align-default" id="fig-db21-rev1-step-00">
+<img alt="../../_images/db21-rev1-step_00.png" src="../../_images/db21-rev1-step_00.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">The Duckiebattery charging via the HUT.</span><a class="headerlink" href="#fig-db21-rev1-step-00" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information on the Duckiebattery, follow <a class="reference internal" href="safety-lithium-ion-duckiebattery.html#db-opmanual-dtbattery-v2"><span class="std std-ref">The Duckiebattery (DB-C-DBatt)</span></a>.</p>
+</div>
+</section>
+</section>
+<section id="camera-assembly">
+<span id="howto-camera-assembly-db21"></span><h2>Camera assembly<a class="headerlink" href="#camera-assembly" title="Link to this heading">#</a></h2>
+<p>This section describes the steps to assemble the <em>camera assembly</em>.</p>
+<section id="step-1">
+<h3>Step 1<a class="headerlink" href="#step-1" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Gently open but do not remove the camera cable connector on the camera PCB as shown below.</p></li>
+<li><p>Connect the camera cable to the camera cable connector on the camera PCB such that the pins on the camera cable come into contact with those in the camera cable connector on the camera PCB as shown below (the blue strip on the camera cable should face away from the camera PCB).</p></li>
+<li><p>Close the camera cable connector on the camera PCB as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_01.jpg" src="../../_images/db21-rev1-step_01.jpg" />
+</figure>
+</section>
+<section id="step-2">
+<h3>Step 2<a class="headerlink" href="#step-2" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>From the front side of the camera holder, feed the camera cable through the slot in the camera holder as shown below.</p></li>
+<li><p>Screw the camera PCB onto the front side of the camera holder using four <code class="docutils literal notranslate"><span class="pre">N2x8</span></code> screws and four <code class="docutils literal notranslate"><span class="pre">N2</span></code> nuts as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_02.jpg" src="../../_images/db21-rev1-step_02.jpg" />
+</figure>
+</section>
+</section>
+<section id="bottom-assembly">
+<span id="db21j-bottom-assembly"></span><h2>Bottom assembly<a class="headerlink" href="#bottom-assembly" title="Link to this heading">#</a></h2>
+<p>This section describes the steps to assemble the <em>bottom assembly</em>.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-overview-step_03-18.jpg" src="../../_images/db21-rev1-overview-step_03-18.jpg" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From <a class="reference internal" href="#db21j-bottom-assembly-step-3"><span class="std std-ref">Step 3</span></a> to <a class="reference internal" href="#db21j-bottom-assembly-step-15"><span class="std std-ref">Step 15</span></a>, the bottom side of the bottom plate will be shown.</p>
+</div>
+<section id="step-3">
+<span id="db21j-bottom-assembly-step-3"></span><h3>Step 3<a class="headerlink" href="#step-3" title="Link to this heading">#</a></h3>
+<p>Screw the IMU PCB onto the top side of the bottom plate using two <code class="docutils literal notranslate"><span class="pre">N2.5x12</span></code> screws and two <code class="docutils literal notranslate"><span class="pre">N2.5</span></code> nuts as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_03.jpg" src="../../_images/db21-rev1-step_03.jpg" />
+</figure>
+</section>
+<section id="step-4">
+<span id="db21j-bottom-assembly-step-4"></span><h3>Step 4<a class="headerlink" href="#step-4" title="Link to this heading">#</a></h3>
+<p>Screw two <code class="docutils literal notranslate"><span class="pre">FF3x25</span></code> standoffs onto the top side of the omni wheel using two <code class="docutils literal notranslate"><span class="pre">M3x8</span></code> screws as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_04.jpg" src="../../_images/db21-rev1-step_04.jpg" />
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For this step and <a class="reference internal" href="#db21j-bottom-assembly-step-5"><span class="std std-ref">Step 5</span></a>, try using shorter screws if the suggested screws do not fully insert into the standoffs.</p>
+</div>
+</section>
+<section id="step-5">
+<span id="db21j-bottom-assembly-step-5"></span><h3>Step 5<a class="headerlink" href="#step-5" title="Link to this heading">#</a></h3>
+<p>Screw the standoffs from <a class="reference internal" href="#db21j-bottom-assembly-step-4"><span class="std std-ref">Step 4</span></a> onto the bottom side of the bottom plate using two <code class="docutils literal notranslate"><span class="pre">M3x8</span></code> screws as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_05.jpg" src="../../_images/db21-rev1-step_05.jpg" />
+</figure>
+</section>
+<section id="step-6">
+<span id="db21j-bottom-assembly-step-6"></span><h3>Step 6<a class="headerlink" href="#step-6" title="Link to this heading">#</a></h3>
+<p>Place four <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts into the bottom plate as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_06.jpg" src="../../_images/db21-rev1-step_06.jpg" />
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Occasionally, manufacturing tolerances (on the nut and the chassis) may prevent a flush fit.
+Try using a different nut or changing its orientation to solve this problem.
+It may also be convenient to use pliers.</p>
+</div>
+</section>
+<section id="step-7">
+<span id="db21j-bottom-assembly-step-7"></span><h3>Step 7<a class="headerlink" href="#step-7" title="Link to this heading">#</a></h3>
+<p>Connect a motor cable to a motor as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_07.jpg" src="../../_images/db21-rev1-step_07.jpg" />
+</figure>
+</section>
+<section id="step-8">
+<span id="db21j-bottom-assembly-step-8"></span><h3>Step 8<a class="headerlink" href="#step-8" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Place the motor from <a class="reference internal" href="#db21j-bottom-assembly-step-7"><span class="std std-ref">Step 7</span></a> onto the bottom left side of the bottom plate as shown below.</p></li>
+<li><p>From the front side of the bottom plate, feed the motor cable from <a class="reference internal" href="#db21j-bottom-assembly-step-7"><span class="std std-ref">Step 7</span></a> between the standoffs from <a class="reference internal" href="#db21j-bottom-assembly-step-4"><span class="std std-ref">Step 4</span></a> as shown below.</p></li>
+<li><p>From the bottom side of the bottom plate, feed the motor cable through the back left slot in the bottom plate as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_08.jpg" src="../../_images/db21-rev1-step_08.jpg" />
+</figure>
+</section>
+<section id="step-9">
+<span id="db21j-bottom-assembly-step-9"></span><h3>Step 9<a class="headerlink" href="#step-9" title="Link to this heading">#</a></h3>
+<p>Screw a bottom side plate onto the left side of the bottom plate using two <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws and two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts from <a class="reference internal" href="#db21j-bottom-assembly-step-6"><span class="std std-ref">Step 6</span></a> as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_09.jpg" src="../../_images/db21-rev1-step_09.jpg" />
+</figure>
+</section>
+<section id="step-10">
+<h3>Step 10<a class="headerlink" href="#step-10" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>From the top side of the bottom plate, feed a motor support through the middle left slot in the bottom plate as shown below.</p></li>
+<li><p>Screw the motor onto the left side of the motor support and right side of the bottom side plate from <a class="reference internal" href="#db21j-bottom-assembly-step-9"><span class="std std-ref">Step 9</span></a> using two <code class="docutils literal notranslate"><span class="pre">M3x30</span></code> screws and two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_10.jpg" src="../../_images/db21-rev1-step_10.jpg" />
+</figure>
+</section>
+<section id="step-11">
+<span id="db21j-bottom-assembly-step-11"></span><h3>Step 11<a class="headerlink" href="#step-11" title="Link to this heading">#</a></h3>
+<p>Connect the other motor cable to the other motor as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_11.jpg" src="../../_images/db21-rev1-step_11.jpg" />
+</figure>
+</section>
+<section id="step-12">
+<h3>Step 12<a class="headerlink" href="#step-12" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Place the motor from <a class="reference internal" href="#db21j-bottom-assembly-step-11"><span class="std std-ref">Step 11</span></a> onto the bottom right side of the bottom plate as shown below.</p></li>
+<li><p>From the front side of the bottom plate, feed the motor cable from <a class="reference internal" href="#db21j-bottom-assembly-step-11"><span class="std std-ref">Step 11</span></a> between the standoffs from <a class="reference internal" href="#db21j-bottom-assembly-step-4"><span class="std std-ref">Step 4</span></a> as shown below.</p></li>
+<li><p>From the bottom side of the bottom plate, feed the motor cable through the back right slot in the bottom plate as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_12.jpg" src="../../_images/db21-rev1-step_12.jpg" />
+</figure>
+</section>
+<section id="step-13">
+<span id="db21j-bottom-assembly-step-13"></span><h3>Step 13<a class="headerlink" href="#step-13" title="Link to this heading">#</a></h3>
+<p>Screw the other bottom side plate onto the right side of the bottom plate using two <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws and two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts from <a class="reference internal" href="#db21j-bottom-assembly-step-6"><span class="std std-ref">Step 6</span></a> as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_13.jpg" src="../../_images/db21-rev1-step_13.jpg" />
+</figure>
+</section>
+<section id="step-14">
+<h3>Step 14<a class="headerlink" href="#step-14" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>From the top side of the bottom plate, feed the other motor support through the middle right slot in the bottom plate as shown below.</p></li>
+<li><p>Screw the motor onto the right side of the motor support and left side of the bottom side plate from <a class="reference internal" href="#db21j-bottom-assembly-step-13"><span class="std std-ref">Step 13</span></a> using two <code class="docutils literal notranslate"><span class="pre">M3x30</span></code> screws and two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_14.jpg" src="../../_images/db21-rev1-step_14.jpg" />
+</figure>
+</section>
+<section id="step-15">
+<span id="db21j-bottom-assembly-step-15"></span><h3>Step 15<a class="headerlink" href="#step-15" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Place a spacer onto each motor axle such that the spacer sits flush against the motor housing as shown below.</p></li>
+<li><p>Place a wheel onto each motor axle such that the wheel sits flush against the respective spacer as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_15.jpg" src="../../_images/db21-rev1-step_15.jpg" />
+</figure>
+</section>
+<section id="step-16">
+<span id="db21j-bottom-assembly-step-16"></span><h3>Step 16<a class="headerlink" href="#step-16" title="Link to this heading">#</a></h3>
+<p>Place two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts into the bottom plate as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_16.jpg" src="../../_images/db21-rev1-step_16.jpg" />
+</figure>
+</section>
+<section id="step-17">
+<h3>Step 17<a class="headerlink" href="#step-17" title="Link to this heading">#</a></h3>
+<p>Place the Duckiebattery separator into the slots in the bottom plate and bottom side plates as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_17.jpg" src="../../_images/db21-rev1-step_17.jpg" />
+</figure>
+</section>
+<section id="step-18">
+<span id="db21j-bottom-assembly-step-18"></span><h3>Step 18<a class="headerlink" href="#step-18" title="Link to this heading">#</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Remove any USB cables connected to the Duckiebattery.</p>
+</div>
+<p>Place the Duckiebattery onto the top sides of the motor supports and the screws that are attaching the standoffs from <a class="reference internal" href="#db21j-bottom-assembly-step-4"><span class="std std-ref">Step 4</span></a> to the bottom plate as shown below (the Duckietown logo should face away from the bottom plate).</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_18.jpg" src="../../_images/db21-rev1-step_18.jpg" />
+</figure>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Verify that every component other than the cables, omni wheel sphere and motor axles is fixed.
+Otherwise, gently tighten the screws of the loose components.</p>
+</div>
+</section>
+</section>
+<section id="computation-unit">
+<span id="db21j-computation-unit"></span><h2>Computation unit<a class="headerlink" href="#computation-unit" title="Link to this heading">#</a></h2>
+<p>This section describes the steps to assemble the <em>computation unit</em>.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-overview-step_19-27.jpg" src="../../_images/db21-rev1-overview-step_19-27.jpg" />
+</figure>
+<section id="step-19">
+<span id="db21j-computation-unit-step-19"></span><h3>Step 19<a class="headerlink" href="#step-19" title="Link to this heading">#</a></h3>
+<p>Screw two <code class="docutils literal notranslate"><span class="pre">N2.5</span></code> nuts onto the bottom side of the Jetson Nano using two <code class="docutils literal notranslate"><span class="pre">N2.5x12</span></code> screws as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_19.jpg" src="../../_images/db21-rev1-step_19.jpg" />
+</figure>
+</section>
+<section id="step-20">
+<span id="db21j-computation-unit-step-20"></span><h3>Step 20<a class="headerlink" href="#step-20" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Place two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts into the middle plate as shown below.</p></li>
+<li><p>Screw two <code class="docutils literal notranslate"><span class="pre">N2.5</span></code> nuts onto the top side of the middle plate using two <code class="docutils literal notranslate"><span class="pre">N2.5x12</span></code> screws as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_20.jpg" src="../../_images/db21-rev1-step_20.jpg" />
+</figure>
+</section>
+<section id="step-21">
+<h3>Step 21<a class="headerlink" href="#step-21" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Place the Jetson Nano onto the screws from <a class="reference internal" href="#db21j-computation-unit-step-20"><span class="std std-ref">Step 20</span></a> as shown below.</p></li>
+<li><p>Screw two <code class="docutils literal notranslate"><span class="pre">N2.5</span></code> nuts onto the bottom side of the middle plate using the screws from <a class="reference internal" href="#db21j-computation-unit-step-19"><span class="std std-ref">Step 19</span></a> as shown below.</p></li>
+<li><p>Screw two <code class="docutils literal notranslate"><span class="pre">MF2.5x18</span></code> standoffs onto the top side of the Jetson Nano using the screws from <a class="reference internal" href="#db21j-computation-unit-step-20"><span class="std std-ref">Step 20</span></a> as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_21.jpg" src="../../_images/db21-rev1-step_21.jpg" />
+</figure>
+</section>
+<section id="step-22">
+<h3>Step 22<a class="headerlink" href="#step-22" title="Link to this heading">#</a></h3>
+<p>Screw the fan onto the heat sink of the Jetson Nano using four <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_22.jpg" src="../../_images/db21-rev1-step_22.jpg" />
+</figure>
+</section>
+<section id="step-23">
+<span id="db21j-computation-unit-step-23"></span><h3>Step 23<a class="headerlink" href="#step-23" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Connect the red fan cable to a GPIO pin labeled <code class="docutils literal notranslate"><span class="pre">5V</span></code> on the HUT as shown below (or a GPIO pin labeled <code class="docutils literal notranslate"><span class="pre">3.3V</span></code> on the HUT for a lower fan speed and less noise).</p></li>
+<li><p>Connect the black fan cable to a GPIO pin labeled <code class="docutils literal notranslate"><span class="pre">GND</span></code> on the HUT as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_23.jpg" src="../../_images/db21-rev1-step_23.jpg" />
+</figure>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-hut-pins.png" src="../../_images/db21-rev1-hut-pins.png" />
+</figure>
+</section>
+<section id="step-24">
+<span id="db21j-computation-unit-step-24"></span><h3>Step 24<a class="headerlink" href="#step-24" title="Link to this heading">#</a></h3>
+<p>Place four <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts into the middle plate as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_24.jpg" src="../../_images/db21-rev1-step_24.jpg" />
+</figure>
+</section>
+<section id="step-25">
+<span id="db21j-computation-unit-step-25"></span><h3>Step 25<a class="headerlink" href="#step-25" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Place two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts into the left top side plate as shown below.</p></li>
+<li><p>Screw the left top side plate onto the left side of the middle plate using an <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screw as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_25.jpg" src="../../_images/db21-rev1-step_25.jpg" />
+</figure>
+</section>
+<section id="step-26">
+<span id="db21j-computation-unit-step-26"></span><h3>Step 26<a class="headerlink" href="#step-26" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Place two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts into the right top side plate as shown below.</p></li>
+<li><p>Screw the right top side plate onto the right side of the middle plate using an <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screw as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_26.jpg" src="../../_images/db21-rev1-step_26.jpg" />
+</figure>
+</section>
+<section id="step-27">
+<h3>Step 27<a class="headerlink" href="#step-27" title="Link to this heading">#</a></h3>
+<p>From the bottom side of the middle plate, place the Duckiebattery separator and bottom side plates into the slots in the middle plate as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_27.jpg" src="../../_images/db21-rev1-step_27.jpg" />
+</figure>
+</section>
+</section>
+<section id="back-assembly">
+<span id="db21j-back-assembly"></span><h2>Back assembly<a class="headerlink" href="#back-assembly" title="Link to this heading">#</a></h2>
+<p>This section describes the steps to assemble the <em>back assembly</em>.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-overview-step_28-41.jpg" src="../../_images/db21-rev1-overview-step_28-41.jpg" />
+</figure>
+<section id="step-28">
+<span id="db21j-back-assembly-step-28"></span><h3>Step 28<a class="headerlink" href="#step-28" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Connect a <code class="docutils literal notranslate"><span class="pre">260</span> <span class="pre">mm</span></code> JST cable to the connector on the IMU PCB as shown below.</p></li>
+<li><p>From the bottom side of the middle plate, feed the cable through the front slot in the middle plate as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_28.jpg" src="../../_images/db21-rev1-step_28.jpg" />
+</figure>
+</section>
+<section id="step-29">
+<h3>Step 29<a class="headerlink" href="#step-29" title="Link to this heading">#</a></h3>
+<p>From the bottom side of the middle plate, feed the motor cables through the back side slots in the middle plate as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_29.jpg" src="../../_images/db21-rev1-step_29.jpg" />
+</figure>
+</section>
+<section id="step-30">
+<h3>Step 30<a class="headerlink" href="#step-30" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Connect the middle USB type A connector of the USB type A to USB type A and Micro USB cable to the left USB type A connector on the Duckiebattery as shown below.</p></li>
+<li><p>Connect the other USB type A connector of the USB type A to USB type A and Micro USB cable to a USB type A connector on the Jetson Nano as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_30.jpg" src="../../_images/db21-rev1-step_30.jpg" />
+</figure>
+</section>
+<section id="step-31">
+<h3>Step 31<a class="headerlink" href="#step-31" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Connect the right-angled Micro USB connector of the Micro USB to Micro USB cable to the Micro USB connector on the Duckiebattery as shown below.</p></li>
+<li><p>From the right side of the left top side plate, feed the cable through the back slot in the left top side plate as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_31.jpg" src="../../_images/db21-rev1-step_31.jpg" />
+</figure>
+</section>
+<section id="step-32">
+<h3>Step 32<a class="headerlink" href="#step-32" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Connect the USB type A connector of the USB type A to Micro USB cable to the right USB type A connector on the Duckiebattery as shown below.</p></li>
+<li><p>From the right side of the right top side plate, feed the cable through the back slot in the right top side plate as shown below.</p></li>
+<li><p>From the right side of the left top side plate, feed the cable through the back slot in the left top side plate as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_32.jpg" src="../../_images/db21-rev1-step_32.jpg" />
+</figure>
+</section>
+<section id="step-33">
+<span id="db21j-back-assembly-step-33"></span><h3>Step 33<a class="headerlink" href="#step-33" title="Link to this heading">#</a></h3>
+<p>Connect a <code class="docutils literal notranslate"><span class="pre">120</span> <span class="pre">mm</span></code> JST cable to the connector on the back bumper as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_33.jpg" src="../../_images/db21-rev1-step_33.jpg" />
+</figure>
+</section>
+<section id="step-34">
+<h3>Step 34<a class="headerlink" href="#step-34" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>From the bottom side of the middle plate, feed the cable from <a class="reference internal" href="#db21j-back-assembly-step-33"><span class="std std-ref">Step 33</span></a> through the left back side slot in the middle plate as shown below.</p></li>
+<li><p>Screw the back bumper onto the back sides of the bottom and middle plates using three <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws and three <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts from <a class="reference internal" href="#db21j-bottom-assembly-step-16"><span class="std std-ref">Step 16</span></a> and <a class="reference internal" href="#db21j-computation-unit-step-24"><span class="std std-ref">Step 24</span></a> as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_34.jpg" src="../../_images/db21-rev1-step_34.jpg" />
+</figure>
+</section>
+<section id="step-35">
+<h3>Step 35<a class="headerlink" href="#step-35" title="Link to this heading">#</a></h3>
+<p>Screw the back plate onto the back side of the top side plates using two <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws and two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts from <a class="reference internal" href="#db21j-computation-unit-step-25"><span class="std std-ref">Step 25</span></a> and <a class="reference internal" href="#db21j-computation-unit-step-26"><span class="std std-ref">Step 26</span></a> as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_35.jpg" src="../../_images/db21-rev1-step_35.jpg" />
+</figure>
+</section>
+<section id="step-36">
+<h3>Step 36<a class="headerlink" href="#step-36" title="Link to this heading">#</a></h3>
+<p>Leaving the motor cables and cable from <a class="reference internal" href="#db21j-back-assembly-step-33"><span class="std std-ref">Step 33</span></a> easily accessible (for <a class="reference internal" href="#db21j-back-assembly-step-37"><span class="std std-ref">Step 37</span></a>, <a class="reference internal" href="#db21j-back-assembly-step-38"><span class="std std-ref">Step 38</span></a> and <a class="reference internal" href="#db21j-back-assembly-step-39"><span class="std std-ref">Step 39</span></a>), connect the GPIO header on the HUT to the GPIO pins on the Jetson Nano such that each GPIO pin on the Jetson Nano is in contact with its respective contact in the GPIO header on the HUT as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_36.jpg" src="../../_images/db21-rev1-step_36.jpg" />
+</figure>
+</section>
+<section id="step-37">
+<span id="db21j-back-assembly-step-37"></span><h3>Step 37<a class="headerlink" href="#step-37" title="Link to this heading">#</a></h3>
+<p>Connect the cable from <a class="reference internal" href="#db21j-back-assembly-step-33"><span class="std std-ref">Step 33</span></a> to the connector labeled <code class="docutils literal notranslate"><span class="pre">LED-B</span></code> on the HUT as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_37.jpg" src="../../_images/db21-rev1-step_37.jpg" />
+</figure>
+</section>
+<section id="step-38">
+<span id="db21j-back-assembly-step-38"></span><h3>Step 38<a class="headerlink" href="#step-38" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>From the bottom of the HUT, feed the motor cables through the slot in the HUT as shown below.</p></li>
+<li><p>Connect the left motor cable to the connector labeled <code class="docutils literal notranslate"><span class="pre">MOT-1</span></code> on the HUT as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_38.jpg" src="../../_images/db21-rev1-step_38.jpg" />
+</figure>
+</section>
+<section id="step-39">
+<span id="db21j-back-assembly-step-39"></span><h3>Step 39<a class="headerlink" href="#step-39" title="Link to this heading">#</a></h3>
+<p>Connect the right motor cable to the connector labeled <code class="docutils literal notranslate"><span class="pre">MOT-2</span></code> on the HUT as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_39.jpg" src="../../_images/db21-rev1-step_39.jpg" />
+</figure>
+</section>
+<section id="step-40">
+<h3>Step 40<a class="headerlink" href="#step-40" title="Link to this heading">#</a></h3>
+<p>Connect the cable from <a class="reference internal" href="#db21j-back-assembly-step-28"><span class="std std-ref">Step 28</span></a> to the middle connector labeled <code class="docutils literal notranslate"><span class="pre">I2C</span></code> on the HUT as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_40.jpg" src="../../_images/db21-rev1-step_40.jpg" />
+</figure>
+</section>
+<section id="step-41">
+<h3>Step 41<a class="headerlink" href="#step-41" title="Link to this heading">#</a></h3>
+<p>Connect the Wi-SFi dongle to a USB type A connector on the Jetson Nano as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_41.jpg" src="../../_images/db21-rev1-step_41.jpg" />
+</figure>
+</section>
+</section>
+<section id="front-assembly">
+<span id="db21j-front-assembly"></span><h2>Front assembly<a class="headerlink" href="#front-assembly" title="Link to this heading">#</a></h2>
+<p>This section describes the steps to assemble the <em>front assembly</em>.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-overview-step_42-51.jpg" src="../../_images/db21-rev1-overview-step_42-51.jpg" />
+</figure>
+<section id="step-42">
+<h3>Step 42<a class="headerlink" href="#step-42" title="Link to this heading">#</a></h3>
+<p>Screw the front bumper onto the front side of the camera holder using a <code class="docutils literal notranslate"><span class="pre">N2.5x12</span></code> screw fed through the left screw hole of the camera holder and a <code class="docutils literal notranslate"><span class="pre">N2.5</span></code> nut as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_42.jpg" src="../../_images/db21-rev1-step_42.jpg" />
+</figure>
+</section>
+<section id="step-43">
+<span id="db21j-front-assembly-step-43"></span><h3>Step 43<a class="headerlink" href="#step-43" title="Link to this heading">#</a></h3>
+<p>Screw an <code class="docutils literal notranslate"><span class="pre">MF2.5x18</span></code> standoff onto the front side of the front bumper using an <code class="docutils literal notranslate"><span class="pre">N2.5x12</span></code> screw fed through the right screw hole of the camera holder as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_43.jpg" src="../../_images/db21-rev1-step_43.jpg" />
+</figure>
+</section>
+<section id="step-44">
+<h3>Step 44<a class="headerlink" href="#step-44" title="Link to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Optionally, complete this step after <a class="reference internal" href="#db21j-front-assembly-step-50"><span class="std std-ref">Step 50</span></a>.</p>
+</div>
+<p>Screw the front bumper onto the front sides of the bottom and middle plates using three <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws and three <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts from <a class="reference internal" href="#db21j-bottom-assembly-step-16"><span class="std std-ref">Step 16</span></a> and <a class="reference internal" href="#db21j-computation-unit-step-24"><span class="std std-ref">Step 24</span></a> as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_44.jpg" src="../../_images/db21-rev1-step_44.jpg" />
+</figure>
+</section>
+<section id="step-45">
+<h3>Step 45<a class="headerlink" href="#step-45" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Gently open but do not remove the/a camera cable connector on the Jetson Nano as shown below.</p></li>
+<li><p>Connect the camera cable to the camera cable connector on the Jetson Nano such that the pins on the camera cable come into contact with those in the camera cable connector on the Jetson Nano as shown below (the blue strip on the camera cable should face away from the Jetson Nano).</p></li>
+<li><p>Close the camera cable connector on the Jetson Nano as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_45.jpg" src="../../_images/db21-rev1-step_45.jpg" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will create a twist in the camera cable.</p>
+</div>
+</section>
+<section id="step-46">
+<h3>Step 46<a class="headerlink" href="#step-46" title="Link to this heading">#</a></h3>
+<p>Screw the ToF sensor PCB onto the standoff from <a class="reference internal" href="#db21j-front-assembly-step-43"><span class="std std-ref">Step 43</span></a> using an <code class="docutils literal notranslate"><span class="pre">N2.5</span></code> nut as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_46.jpg" src="../../_images/db21-rev1-step_46.jpg" />
+</figure>
+</section>
+<section id="step-47">
+<span id="db21j-front-assembly-step-47"></span><h3>Step 47<a class="headerlink" href="#step-47" title="Link to this heading">#</a></h3>
+<p>Connect a <code class="docutils literal notranslate"><span class="pre">260</span> <span class="pre">mm</span></code> JST cable to the connector on the ToF sensor PCB as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_47.jpg" src="../../_images/db21-rev1-step_47.jpg" />
+</figure>
+</section>
+<section id="step-48">
+<h3>Step 48<a class="headerlink" href="#step-48" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>From the bottom side of the middle plate, feed the cable from <a class="reference internal" href="#db21j-front-assembly-step-47"><span class="std std-ref">Step 47</span></a> through the front slot in the middle plate as shown below.</p></li>
+<li><p>Connect the cable to the right connector labeled <code class="docutils literal notranslate"><span class="pre">I2C</span></code> on the HUT as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_48.jpg" src="../../_images/db21-rev1-step_48.jpg" />
+</figure>
+</section>
+<section id="step-49">
+<span id="db21j-front-assembly-step-49"></span><h3>Step 49<a class="headerlink" href="#step-49" title="Link to this heading">#</a></h3>
+<p>Connect a <code class="docutils literal notranslate"><span class="pre">260</span> <span class="pre">mm</span></code> JST cable to the connector labeled <code class="docutils literal notranslate"><span class="pre">LED-F</span></code> on the front bumper as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_49.jpg" src="../../_images/db21-rev1-step_49.jpg" />
+</figure>
+</section>
+<section id="step-50">
+<span id="db21j-front-assembly-step-50"></span><h3>Step 50<a class="headerlink" href="#step-50" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>From the bottom side of the middle plate, feed the cable from <a class="reference internal" href="#db21j-front-assembly-step-49"><span class="std std-ref">Step 49</span></a> through the front slot in the middle plate as shown below.</p></li>
+<li><p>Connect the cable to the connector labeled <code class="docutils literal notranslate"><span class="pre">LED-F</span></code> on the HUT as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_50.jpg" src="../../_images/db21-rev1-step_50.jpg" />
+</figure>
+</section>
+<section id="step-51">
+<h3>Step 51<a class="headerlink" href="#step-51" title="Link to this heading">#</a></h3>
+<p>This step has been removed.</p>
+</section>
+</section>
+<section id="top-assembly">
+<span id="db21j-top-assembly"></span><h2>Top assembly<a class="headerlink" href="#top-assembly" title="Link to this heading">#</a></h2>
+<p>This section describes the steps to assemble the <em>top assembly</em>.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-overview-step_52-62.jpg" src="../../_images/db21-rev1-overview-step_52-62.jpg" />
+</figure>
+<section id="step-52">
+<span id="db21j-top-assembly-step-52"></span><h3>Step 52<a class="headerlink" href="#step-52" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>From the top side of the top plate, feed the top button cables through the top button hole in the top plate as shown below.</p></li>
+<li><p>Screw the top button onto the top side of the top plate using the top button nut as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_52.jpg" src="../../_images/db21-rev1-step_52.jpg" />
+</figure>
+</section>
+<section id="step-53">
+<h3>Step 53<a class="headerlink" href="#step-53" title="Link to this heading">#</a></h3>
+<p>Screw the screen onto the top side of the top plate using four <code class="docutils literal notranslate"><span class="pre">N2.5x12</span></code> screws and four <code class="docutils literal notranslate"><span class="pre">N2.5</span></code> nuts as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_53.jpg" src="../../_images/db21-rev1-step_53.jpg" />
+</figure>
+</section>
+<section id="step-54">
+<span id="db21j-top-assembly-step-54"></span><h3>Step 54<a class="headerlink" href="#step-54" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Connect the blue camera cable to the pin labeled <code class="docutils literal notranslate"><span class="pre">SDA</span></code> on the screen as shown below.</p></li>
+<li><p>Connect the yellow camera cable to the pin labeled <code class="docutils literal notranslate"><span class="pre">SCL</span></code> on the screen as shown below.</p></li>
+<li><p>Connect the black camera cable to the pin labeled <code class="docutils literal notranslate"><span class="pre">GND</span></code> on the screen as shown below.</p></li>
+<li><p>Connect the red camera cable to the pin labeled <code class="docutils literal notranslate"><span class="pre">VCC</span></code> on the screen as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_54.jpg" src="../../_images/db21-rev1-step_54.jpg" />
+</figure>
+</section>
+<section id="step-55">
+<h3>Step 55<a class="headerlink" href="#step-55" title="Link to this heading">#</a></h3>
+<p>Connect the cable from <a class="reference internal" href="#db21j-top-assembly-step-52"><span class="std std-ref">Step 52</span></a> to the connector next to the button on the HUT as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_55.jpg" src="../../_images/db21-rev1-step_55.jpg" />
+</figure>
+</section>
+<section id="step-56">
+<h3>Step 56<a class="headerlink" href="#step-56" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Connect the blue cable from <a class="reference internal" href="#db21j-top-assembly-step-54"><span class="std std-ref">Step 54</span></a> to the pin labeled <code class="docutils literal notranslate"><span class="pre">SDA</span></code> on the HUT as shown below.</p></li>
+<li><p>Connect the yellow cable from <a class="reference internal" href="#db21j-top-assembly-step-54"><span class="std std-ref">Step 54</span></a> to the pin labeled <code class="docutils literal notranslate"><span class="pre">SCL</span></code> on the HUT as shown below.</p></li>
+<li><p>Connect the black cable from <a class="reference internal" href="#db21j-top-assembly-step-54"><span class="std std-ref">Step 54</span></a> to the pin labeled <code class="docutils literal notranslate"><span class="pre">GND</span></code> on the HUT as shown below.</p></li>
+<li><p>Connect the red cable from <a class="reference internal" href="#db21j-top-assembly-step-54"><span class="std std-ref">Step 54</span></a> to the pin labeled <code class="docutils literal notranslate"><span class="pre">3.3V</span></code> on the HUT as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_56.jpg" src="../../_images/db21-rev1-step_56.jpg" />
+</figure>
+</section>
+<section id="step-57">
+<h3>Step 57<a class="headerlink" href="#step-57" title="Link to this heading">#</a></h3>
+<p>From the bottom side of the top plate, place the top side plates into the slots in the top plate as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_57.jpg" src="../../_images/db21-rev1-step_57.jpg" />
+</figure>
+</section>
+<section id="step-58">
+<h3>Step 58<a class="headerlink" href="#step-58" title="Link to this heading">#</a></h3>
+<p>Screw the top plate onto the top sides of the top side plates using two <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws and two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts from <a class="reference internal" href="#db21j-computation-unit-step-25"><span class="std std-ref">Step 25</span></a> and <a class="reference internal" href="#db21j-computation-unit-step-26"><span class="std std-ref">Step 26</span></a> as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_58.jpg" src="../../_images/db21-rev1-step_58.jpg" />
+</figure>
+</section>
+<section id="step-59">
+<h3>Step 59<a class="headerlink" href="#step-59" title="Link to this heading">#</a></h3>
+<p>Connect the Micro USB connector of the Micro USB to Micro USB cable to the connector labeled <code class="docutils literal notranslate"><span class="pre">CHARGER</span></code> <code class="docutils literal notranslate"><span class="pre">IN</span></code> on the HUT as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_59.jpg" src="../../_images/db21-rev1-step_59.jpg" />
+</figure>
+</section>
+<section id="step-60">
+<h3>Step 60<a class="headerlink" href="#step-60" title="Link to this heading">#</a></h3>
+<p>Connect the Micro USB connector of the USB type A to Micro USB cable to the connector labeled <code class="docutils literal notranslate"><span class="pre">5VEXT</span></code> on the HUT as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_60.jpg" src="../../_images/db21-rev1-step_60.jpg" />
+</figure>
+</section>
+<section id="step-61">
+<h3>Step 61<a class="headerlink" href="#step-61" title="Link to this heading">#</a></h3>
+<p>Connect the Micro USB connector of the USB type A to USB type A and Micro USB cable to the connector labeled <code class="docutils literal notranslate"><span class="pre">5VRASPI</span></code> on the HUT as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_61.jpg" src="../../_images/db21-rev1-step_61.jpg" />
+</figure>
+</section>
+</section>
+<section id="duckiebattery">
+<span id="howto-power-db21"></span><h2>Duckiebattery<a class="headerlink" href="#duckiebattery" title="Link to this heading">#</a></h2>
+<p>The connector labeled <code class="docutils literal notranslate"><span class="pre">OUT</span></code> <code class="docutils literal notranslate"><span class="pre">CHARGER</span></code> on the HUT will be used for charging the Duckiebattery.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-how2charge.png" src="../../_images/db21-rev1-how2charge.png" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information on how to charge the Duckiebattery, follow <a class="reference internal" href="../../20-operations/01-duckiebot-handling/db21-power-management.html#how-to-charge-the-duckiebattery"><span class="std std-ref">How to charge the Duckiebot</span></a>.</p>
+</div>
+<section id="step-62">
+<h3>Step 62<a class="headerlink" href="#step-62" title="Link to this heading">#</a></h3>
+<p>The button on the Duckiebattery can be accessed through the slot in the left bottom side plate as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_62.jpg" src="../../_images/db21-rev1-step_62.jpg" />
+</figure>
+</section>
+</section>
+<section id="sd-card">
+<h2>SD card<a class="headerlink" href="#sd-card" title="Link to this heading">#</a></h2>
+<p>Insert the SD card into the Jetson Nano as shown below.</p>
+</section>
+<section id="optional-components">
+<span id="howto-additional-parts-db21"></span><h2>Optional components<a class="headerlink" href="#optional-components" title="Link to this heading">#</a></h2>
+<section id="back-pattern-assembly">
+<h3>Back pattern assembly<a class="headerlink" href="#back-pattern-assembly" title="Link to this heading">#</a></h3>
+<p>The back pattern enables the traffic management behavior used in demonstrations with other Duckiebots.</p>
+<p>This section describes the steps to assemble the <em>back pattern assembly</em>.</p>
+</section>
+<section id="step-63">
+<h3>Step 63<a class="headerlink" href="#step-63" title="Link to this heading">#</a></h3>
+<p>Place the back pattern onto the back side of the back pattern plate as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_63.jpg" src="../../_images/db21-rev1-step_63.jpg" />
+</figure>
+</section>
+<section id="step-64">
+<h3>Step 64<a class="headerlink" href="#step-64" title="Link to this heading">#</a></h3>
+<p>Unscrew the back bumper from the back sides of the bottom and middle plates as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_64.jpg" src="../../_images/db21-rev1-step_64.jpg" />
+</figure>
+</section>
+<section id="step-65">
+<span id="db21j-optional-components-step-65"></span><h3>Step 65<a class="headerlink" href="#step-65" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>From the front side of the back bumper, feed two <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws through the top screw holes of the back bumper as shown below.</p></li>
+<li><p>Screw the back bumper back onto the back sides of the bottom and middle plates using three <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws and three <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts from <a class="reference internal" href="#db21j-bottom-assembly-step-16"><span class="std std-ref">Step 16</span></a> and <a class="reference internal" href="#db21j-computation-unit-step-24"><span class="std std-ref">Step 24</span></a> as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_65.jpg" src="../../_images/db21-rev1-step_65.jpg" />
+</figure>
+</section>
+<section id="step-66">
+<span id="db21j-optional-components-step-66"></span><h3>Step 66<a class="headerlink" href="#step-66" title="Link to this heading">#</a></h3>
+<p>Substeps:</p>
+<ol class="arabic simple">
+<li><p>Screw two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts onto the back side of the back bumper using two <code class="docutils literal notranslate"><span class="pre">M3x12</span></code> screws from <a class="reference internal" href="#db21j-optional-components-step-65"><span class="std std-ref">Step 65</span></a> as shown below.</p></li>
+<li><p>Screw another <code class="docutils literal notranslate"><span class="pre">M3</span></code> nut onto each of the <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts as shown below.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_66.jpg" src="../../_images/db21-rev1-step_66.jpg" />
+</figure>
+</section>
+<section id="step-67">
+<h3>Step 67<a class="headerlink" href="#step-67" title="Link to this heading">#</a></h3>
+<p>Screw the back pattern plate onto the <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts from <a class="reference internal" href="#db21j-optional-components-step-66"><span class="std std-ref">Step 66</span></a> using two <code class="docutils literal notranslate"><span class="pre">M3</span></code> nuts as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_67.jpg" src="../../_images/db21-rev1-step_67.jpg" />
+</figure>
+</section>
+<section id="apriltag">
+<h3>AprilTag<a class="headerlink" href="#apriltag" title="Link to this heading">#</a></h3>
+<p>The top facing AprilTag enables localization in <a class="reference internal" href="#+opmanual_autolab#book"><span class="xref myst">Duckietown Autolabs</span></a>.</p>
+</section>
+<section id="step-68">
+<h3>Step 68<a class="headerlink" href="#step-68" title="Link to this heading">#</a></h3>
+<p>Place the AprilTag onto the top side of the top plate as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_68.jpg" src="../../_images/db21-rev1-step_68.jpg" />
+</figure>
+</section>
+<section id="fcc-ce-sticker">
+<h3>FCC-CE sticker<a class="headerlink" href="#fcc-ce-sticker" title="Link to this heading">#</a></h3>
+<p>Duckiebots are FCC and CE certified, meaning that they comply with (and surpass) material quality (e.g., RoHS 2.0) and electrical interference standards (FCC and CE).</p>
+</section>
+<section id="step-69">
+<h3>Step 69<a class="headerlink" href="#step-69" title="Link to this heading">#</a></h3>
+<p>Place the FCC-CE sticker somewhere on your Duckiebot as shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/db21-rev1-step_69.jpg" src="../../_images/db21-rev1-step_69.jpg" />
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To prevent detection issues in more advanced applications with other Duckiebots, place the FCC-CE sticker in a location that is out of sight for those Duckiebots (e.g., under the wheels).</p>
+</div>
+<figure class="align-default" id="id3">
+<img alt="../../_images/db21-fcc-ce-sticker.jpg" src="../../_images/db21-fcc-ce-sticker.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">An FCC-CE sticker placed under the wheels of a Duckiebot.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="checkpoint">
+<h2>Checkpoint<a class="headerlink" href="#checkpoint" title="Link to this heading">#</a></h2>
+<p>Before proceeding, make sure that:</p>
+<ul class="simple">
+<li><p>You have used every type of connecting component at least once, by referring to <a class="reference internal" href="#fig-db21m-rev1-parts-indices"><span class="std std-ref">Fig. 2</span></a>.</p></li>
+<li><p>Every cable is plugged in correctly but try not use force on your Duckiebot, as it is (almost) never useful and may lead to undesirable outcomes.</p></li>
+<li><p>The SD card is inserted into the dedicated SD card slot under the main board of the Jetson Nano (i.e., not in the adapter or in a USB connector).</p></li>
+</ul>
+<p>Congratulations, your Duckiebot DB21J is now assembled!</p>
+</section>
+<section id="troubleshooting">
+<span id="db21j-troubleshooting"></span><h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./10-setup/03-duckiebot"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="what-is-in-the-duckiebot-db21j4-box.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">What’s in the Box (<code class="docutils literal notranslate"><span class="pre">DB21-J4</span></code>)?</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="network-configuration.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Network Configuration in Duckietown</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminary-steps">Preliminary steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unboxing">Unboxing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plastic-cover">Plastic cover</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-components">Connecting components</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hut">HUT</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-the-duckiebattery-via-the-hut">Charging the Duckiebattery via the HUT</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#camera-assembly">Camera assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bottom-assembly">Bottom assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">Step 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5">Step 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6">Step 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7">Step 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8">Step 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9">Step 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10">Step 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11">Step 11</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12">Step 12</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13">Step 13</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14">Step 14</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15">Step 15</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16">Step 16</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-17">Step 17</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-18">Step 18</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computation-unit">Computation unit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-19">Step 19</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-20">Step 20</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-21">Step 21</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-22">Step 22</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-23">Step 23</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-24">Step 24</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-25">Step 25</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-26">Step 26</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-27">Step 27</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-assembly">Back assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-28">Step 28</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-29">Step 29</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-30">Step 30</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-31">Step 31</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-32">Step 32</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-33">Step 33</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-34">Step 34</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-35">Step 35</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-36">Step 36</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-37">Step 37</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-38">Step 38</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-39">Step 39</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-40">Step 40</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-41">Step 41</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#front-assembly">Front assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-42">Step 42</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-43">Step 43</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-44">Step 44</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-45">Step 45</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-46">Step 46</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-47">Step 47</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-48">Step 48</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-49">Step 49</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-50">Step 50</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-51">Step 51</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#top-assembly">Top assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-52">Step 52</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-53">Step 53</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-54">Step 54</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-55">Step 55</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-56">Step 56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-57">Step 57</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-58">Step 58</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-59">Step 59</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-60">Step 60</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-61">Step 61</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckiebattery">Duckiebattery</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-62">Step 62</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sd-card">SD card</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-components">Optional components</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-pattern-assembly">Back pattern assembly</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-63">Step 63</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-64">Step 64</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-65">Step 65</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-66">Step 66</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-67">Step 67</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apriltag">AprilTag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-68">Step 68</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fcc-ce-sticker">FCC-CE sticker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-69">Step 69</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkpoint">Checkpoint</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Duckietown, Inc.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
