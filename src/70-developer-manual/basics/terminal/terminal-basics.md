@@ -28,7 +28,7 @@ tutorial can be found [on the Ubuntu website](https://tutorials.ubuntu.com/tutor
 The terminal requires using a conding language called [BASH](https://en.wikipedia.org/wiki/Bash_(Unix_shell)), or "Bourne Again SHell". BASH is completely free and works on all major operating systems (e.g., Linux, macOS, Windows). If you are looking for an extensive list of commands that can be used from the terminal, [this command line cheatsheet](https://ss64.com/bash/) is a good resource.
 
 ```{todo}
-1. write section on how to pimp up the terminal; 2. write section on IDEs and provide a preset configuration for Pycharme CE and VisualStudio; 3. Provide some best practices for development; 4. Arguably move this away from the developer manual. It's too basic.
+1. write section on how to pimp up the terminal; 2. write section on IDEs and provide a preset configuration for Pycharme CE and VisualStudio; 3. Provide some best practices for development; 4. Arguably move this away from the developer manual. It is too basic.
 ```
 
 (sec:using-dt-shell)=

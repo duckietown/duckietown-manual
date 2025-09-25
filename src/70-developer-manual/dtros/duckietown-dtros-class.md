@@ -513,7 +513,7 @@ Use `self.my_param = DTParam("~my_param")` to create a `DTParam` object and
 Then we initialize all the non-ROS attributes that we will need for this class.
 Note that this is done _before_ initializing the Publishers and Subscribers.
 The reason is that if a subscriber's callback depends on one of these attributes,
-we need to define it before we use it. Here's an example that might fail:
+we need to define it before we use it. Here is an example that might fail:
 
 ```python
 class CoolNode(DTROS):
@@ -571,7 +571,7 @@ Often we want to publish some information which helps us analyze the behavior an
 A frequent (__but bad design__) way of handling that is to have a topic, to which one can publish a message, which when received will induce the node to start building a publishing the debug message. A much better way, and the one that __should be used__ in Duckietown is to create and publish the debug message _only if_ someone has subscribed to the debug topic.
 This is very easy to achieve with the help of `dtros`.
 Publishers created within a DTROS node exports the utility function `anybody_listening()`.
-Here's an example:
+Here is an example:
 
 ```python
 if self.pub_debug_img.anybody_listening():

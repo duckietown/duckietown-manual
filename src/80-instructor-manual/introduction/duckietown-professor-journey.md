@@ -18,7 +18,7 @@ To do so, consider the following "journey" (although there could be many others)
 (professor-journey-evaluation)=
 ## Semester 0: Evaluate the platform
 
-There are many freely available resources available to get started. It's a great idea for you and/or some people from your group to try out the software,  hardware, and pedagogical materials  before committing to any next step.
+There are many freely available resources available to get started. It is a great idea for you and/or some people from your group to try out the software,  hardware, and pedagogical materials  before committing to any next step.
 
 A great place to start could be to sign up for the [Self-Driving Cars with Duckietown MOOC on EdX](https://www.edx.org/learn/technology/eth-zurich-self-driving-cars-with-duckietown).
 
