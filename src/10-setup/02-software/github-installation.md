@@ -570,7 +570,7 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
 
 3. Verify that the fingerprint in the message you see matches [GitHub's public key fingerprint](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints). If it does, then type `yes`:
     ```
-    > Hi USERNAME! You've successfully authenticated, but GitHub does not
+    > Hi USERNAME! You have successfully authenticated, but GitHub does not
     > provide shell access.
     ```
     You may see this error message:
@@ -605,7 +605,7 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
 
 3. Verify that the fingerprint in the message you see matches [GitHub's public key fingerprint](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints). If it does, then type `yes`:
     ```
-    > Hi USERNAME! You've successfully authenticated, but GitHub does not
+    > Hi USERNAME! You have successfully authenticated, but GitHub does not
     > provide shell access.
     ```
     ```{note}
@@ -632,7 +632,7 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
 
 3. Verify that the fingerprint in the message you see matches [GitHub's public key fingerprint](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints). If it does, then type `yes`:
     ```
-    > Hi USERNAME! You've successfully authenticated, but GitHub does not
+    > Hi USERNAME! You have successfully authenticated, but GitHub does not
     > provide shell access.
     ```
     ```{note}

@@ -65,12 +65,12 @@ version,
 
 ## Keeping your System Up-To-Date
 
-It's a good idea to pull from the upstream remote in case your instructor or the
+It is a good idea to pull from the upstream remote in case your instructor or the
 exercise creator changed something:
 
     git pull upstream ente
 
-It's also a good idea to:
+It is also a good idea to:
 
 - 💻 Always make sure your Duckietown Shell is updated to the latest version: `pipx upgrade duckietown-shell`
 
