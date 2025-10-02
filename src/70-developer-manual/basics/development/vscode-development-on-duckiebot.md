@@ -22,7 +22,7 @@ Short video walkthrough of attaching Visual Studio Code to a running Duckiebot c
 * An IDE (VSCode) connected to the running devcontainer on the Duckiebot.
 ```
 
-## Add the Docker context
+## Add the Docker Context
 
 1) Create a Docker context that points to your Duckiebot over TCP on port 2375:
 
@@ -32,7 +32,7 @@ docker context create ROBOT_NAME --docker "host=tcp://ROBOT_NAME.local:2375"
 
 2) In VS Code, select this context in the Docker view (next section shows how).
 
-## Navigate to the target container
+## Navigate to the Target Container
 
 3) Open the Docker view from the Activity Bar.
 
