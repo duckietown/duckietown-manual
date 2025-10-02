@@ -32,6 +32,14 @@ To install `dts`, run:
 pipx install duckietown-shell
 ```
 
+````{warning}
+If you are installing the dts on an arm machine you will also need to install the `gcc` and `python3-dev` dependencies:
+
+    sudo apt install -y gcc python3-dev
+
+This includes Apple Silicon macs with Ubuntu arm64 virtual machines.
+````
+
 ### Checkpoint 1 ✅
 
 To verify that `dts` has been installed correctly:
