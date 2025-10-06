@@ -87,13 +87,54 @@ This is the only workflow for running Duckietown with a laptop with an Apple Sil
 7. Running the Duckiematrix
 
     The procedure for running the Duckiematrix will be slightly different in this devcontainer workflow. In short, we
-    will run the `ENGINE` inside the devcontainer, but we will run the `RENDERER` natively on your Mac.
+    will run the `ENGINE` inside the devcontainer, but we will run the `RENDERER` (i.e. the GUI interface) natively on your Mac.
 
     To start the engine, inside a terminal in the VSCode devcontainer run:
 
     ```bash
     dts matrix engine run --sandbox
     ```
+
+    To install the renderer on macOS you can download the `.app` file from [this link](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/latest-macosx). After downloading it, you can rename it to `duckiematrix.app` and move it to your `Applications` folder.
+
+
+    Then you can start the Duckiematrix renderer with:
+
+        duckiematrix.app --args -e localhost --token "YOUR_DT2_TOKEN"
+
+    This will connect to the Duckiematrix engine running on localhost. Make sure to replace `YOUR_DT2_TOKEN` with your actual Duckietown token and keep the double quotes.
+
+# MacOS Devcontainer Caveats
+
+This file contains caveats and special instructions for using the macOS development container.
+
+## Duckietown Viewer/Keyboard Controller etc.
+
+On macOS, the viewer and keyboard controller may not work as expected due to limitations with GUI applications in Docker containers. As a workaround, you can use the `--browser` option to open the viewer in your web browser:
+
+    dts duckiebot image_viewer devbot --browser
+
+## Accessing Virtual Robot Dashboard
+
+To access the Virtual Robot you can use the noVNC virtual desktop available at [localhost:6080](http://localhost:6080). You can open the web browser and connect to the dashboard.
+
+## Attaching a virtual duckiebot to the Duckiematrix
+
+When you attach a virtual robot to the Duckiematrix you need to use one of the LAN IP addresses of the engine, not `localhost`:
+
+    dts duckiebot matrix attach ![ROBOT_NAME] -e ![ENGINE_LOCAL_NETWORK_ADDRESS]
+
+## dts code run
+
+1. Run dts setup mkcert  inside the devcontainer
+1. Copy the file /home/vscode/.duckietown/shell/profiles/ente/secrets/mkcert/ca/rootCA.pem from the devcontainer to your mac
+1. Install it in Keychain Access (see following video)
+
+```{vimeo} 1124870202
+:alt: Installing rootCA.pem in Keychain Access
+```
+
+TODO: automate this process in the devcontainer by mounting/copying the rootCA from macOS
 
 ````
 
