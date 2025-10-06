@@ -126,16 +126,8 @@ When you attach a virtual robot to the Duckiematrix you need to use one of the L
 
 ## dts code run
 
-1. Run dts setup mkcert  inside the devcontainer
-1. Copy the file /home/vscode/.duckietown/shell/profiles/ente/secrets/mkcert/ca/rootCA.pem from the devcontainer to your mac
-1. Install it in Keychain Access (see following video)
-
-```{vimeo} 1124870202
-:alt: Installing rootCA.pem in Keychain Access
-```
-
-TODO: automate this process in the devcontainer by mounting/copying the rootCA from macOS
-
+1. Install `mkcert` on your mac, either through `brew install mkcert` or by downloading the `darwin` binary for your system's architecture from [the mkcert releases page](https://github.com/FiloSottile/mkcert/releases/tag/v1.4.4).
+1. Run `mkcert -install` to install the local CA in your system. (It will ask for your sudo password.)
 ````
 
 ````{tab-item} Linux
