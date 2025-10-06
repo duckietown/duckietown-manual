@@ -104,13 +104,13 @@ This is the only workflow for running Duckietown with a laptop with an Apple Sil
 
     This will connect to the Duckiematrix engine running on localhost. Make sure to replace `YOUR_DT2_TOKEN` with your actual Duckietown token and keep the double quotes.
 
-# MacOS Devcontainer Caveats
+# Devcontainer Caveats
 
-This file contains caveats and special instructions for using the macOS development container.
+There are small caveats and special instructions for using the development container.
 
 ## Duckietown Viewer/Keyboard Controller etc.
 
-On macOS, the viewer and keyboard controller may not work as expected due to limitations with GUI applications in Docker containers. As a workaround, you can use the `--browser` option to open the viewer in your web browser:
+The viewer and keyboard controller may not work as expected due to limitations with GUI applications in Docker containers. As a workaround, you can use the `--browser` option to open the viewer in your web browser:
 
     dts duckiebot image_viewer devbot --browser
 
