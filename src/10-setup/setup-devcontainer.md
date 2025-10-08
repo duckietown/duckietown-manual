@@ -2,14 +2,14 @@
 :description: Learn how to run Duckietown code in a devcontainer
 :keywords: duckietown setup, devcontainer
 ```
+
 (setup-devcontainer)=
 # Running Everything in a Devcontainer (Beta)
 
-In this page we will describe a workflow for running Duckietown code inside a [development container](https://containers.dev/).
-This will provide you with a fully functional environment inside of Visual Studio Code. 
+This page describes how to run Duckietown code inside a [development container](https://containers.dev/), providing a functional environment inside of [Visual Studio Code](https://code.visualstudio.com/).
 
 ```{note}
-This is the only workflow for running Duckietown with a laptop with an Apple Silicon (M-series) chip.
+This is the only workflow for running Duckietown on an Apple Silicon (M-series) Mac computer.
 ```
 
 `````{tab-set}
