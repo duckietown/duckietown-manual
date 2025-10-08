@@ -2,7 +2,7 @@
 # Git
 
 ```{seo}
-:description: Duckietown introduction to Git, a tool for building collaborative software projects. 
+:description: Duckietown introduction to Git, a tool for building collaborative software projects.
 :keywords: Git, Github, Duckietown, collaborative software development, push, pull, branch, fork, version control
 ```
 

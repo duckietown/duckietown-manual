@@ -39,7 +39,7 @@ Open a terminal at the root of the DTProject `my-ros-project`. Catkin packages a
 
     mkdir -p ./packages/my_package
 
-A Catkin package (also known as a _ROS package_) requires two files: 
+A Catkin package (also known as a _ROS package_) requires two files:
 `package.xml` and `CMakeLists.txt`.
 
 1. Create `packages/my_package/package.xml` with the following content:
@@ -73,4 +73,4 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package()
 ```
 
-We now have a Catkin package inside a Catkin workspace in a ROS-capable DTProject. We can now proceed to add ROS nodes. 
+We now have a Catkin package inside a Catkin workspace in a ROS-capable DTProject. We can now proceed to add ROS nodes.

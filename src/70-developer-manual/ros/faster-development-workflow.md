@@ -9,7 +9,7 @@ In this section, some tricks for a much faster development workflow using `dts` 
 (dtproject-ros-faster-development-trick-run-locally)=
 ## Run Locally
 
-As demonstrated previously, it is possible to add new code to a DTProject or modify existing code and then build and run either locally or directly on a Duckiebot. While working with ROS, examples so far have executed all nodes on the Duckiebot. 
+As demonstrated previously, it is possible to add new code to a DTProject or modify existing code and then build and run either locally or directly on a Duckiebot. While working with ROS, examples so far have executed all nodes on the Duckiebot.
 
 This is because ROS configures nodes to default to the ROS network on the _local_ machine, and given that the ROS network originates on the Duckiebot, this default configuration can be leveraged by running the nodes directly on the Duckiebot.
 
@@ -62,11 +62,11 @@ In this section we will learn some tricks that enable a much faster development 
 (dtproject-ros-faster-development-trick-run-locally)=
 ## Run locally
 
-As we have seen so far, we can add new code to a DTProject or make a change to existing code and then build 
-and run either locally or directly on a Duckiebot. While working with ROS, we only have seen examples in which 
-all the nodes were run on the Duckiebot. This is because ROS sets up all the nodes to defaultly look for a 
-ROS network on the _local_ machine, and given that our ROS network originates on the Duckiebot, we can leverage 
-the default configuration of ROS by running the nodes directly on the Duckiebot. 
+As we have seen so far, we can add new code to a DTProject or make a change to existing code and then build
+and run either locally or directly on a Duckiebot. While working with ROS, we only have seen examples in which
+all the nodes were run on the Duckiebot. This is because ROS sets up all the nodes to defaultly look for a
+ROS network on the _local_ machine, and given that our ROS network originates on the Duckiebot, we can leverage
+the default configuration of ROS by running the nodes directly on the Duckiebot.
 Unfortunately, building and running on the Duckiebot is not the best option
 when it comes to speed, though having a responsive development workflow is crucial in software development.
 
@@ -77,7 +77,7 @@ There are two major issues with the current workflow,
 Ideally, we would like to be able to build and run ROS nodes on our local computer in a way that is transparent
 to all other ROS nodes. This can be done very easily with `dts`, and we will now see how.
 
-Let us go back to the example in [](ros-sub-node). A block diagram showing the ROS nodes and their location in 
+Let us go back to the example in [](ros-sub-node). A block diagram showing the ROS nodes and their location in
 the network would be the following,
 
 ```{figure} ../../_images/beginner/ros/dts_devel_ros_remote.png
@@ -87,7 +87,7 @@ the network would be the following,
 Block diagram for a Pub-Sub setup with both nodes running on the Duckiebot.
 ```
 
-Let us now keep everything as is for the Publisher and slightly change the commands we use to build and 
+Let us now keep everything as is for the Publisher and slightly change the commands we use to build and
 run the Subscriber.
 In particular, we use the following commands instead,
 
@@ -95,8 +95,8 @@ In particular, we use the following commands instead,
     dts devel run -R ROBOT_NAME -L my-subscriber
 
 We are now telling `dts` to build the project locally (we removed `-H ROBOT_NAME` from the `build` command).
-We are also telling `dts` to run the subscriber node locally (we removed `-H ROBOT_NAME` from the 
-`run` command) but to connect it to the ROS network of the Duckiebot (using the `--ros/-R ROBOT_NAME` 
+We are also telling `dts` to run the subscriber node locally (we removed `-H ROBOT_NAME` from the
+`run` command) but to connect it to the ROS network of the Duckiebot (using the `--ros/-R ROBOT_NAME`
 option on the `run` command).
 A block diagram showing the new configuration of ROS nodes and their location in
 the network would be the following,

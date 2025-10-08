@@ -32,13 +32,13 @@ MyST supports the [`{eval-rst}` directive](https://myst-parser.readthedocs.io/en
 
 ## Automatic API generation *(advanced)*
 
-Sphinx can parse docstrings and create an API reference automatically.  
+Sphinx can parse docstrings and create an API reference automatically.
 
 To enable this:
 
-1. Add [`sphinx.ext.autodoc`](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html) and, if desired, `autodoc_typehints` to `docs/src/conf.py`.  
+1. Add [`sphinx.ext.autodoc`](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html) and, if desired, `autodoc_typehints` to `docs/src/conf.py`.
 
-2. Create stub files (e.g., `reference/api.rst`) that call `.. automodule::` or `.. autofunction::`.  
+2. Create stub files (e.g., `reference/api.rst`) that call `.. automodule::` or `.. autofunction::`.
 
 3. Re‑run `dts docs build`.
 

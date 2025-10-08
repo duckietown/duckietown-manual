@@ -14,7 +14,7 @@ This section describes the assembly procedure for your Duckiebot DB21J.
 An assembled Duckiebot DB21J.
 ```
 
-```{admonition} What's in the box and assembly video (DB21M)
+```{admonition} What is in the box and assembly video (DB21M)
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/528621827?h=44014b1b93" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <p><a href="https://vimeo.com/528621827">Duckiebot DB21M unpacking and assembly</a> from <a href="https://vimeo.com/duckietown">Duckietown</a> on <a href="https://vimeo.com">Vimeo</a>. Note this video is not from a DB21J4, and details differ.</p>
 ```
@@ -828,7 +828,7 @@ Congratulations, your Duckiebot DB21J is now assembled!
 ## Troubleshooting
 
 ```{trouble}
-I can not find the blue chassis.
+I cannot find the blue chassis.
 ---
 It may be under the white foam inside the Duckiebox.
 Try to remove the inner packaging to access it.

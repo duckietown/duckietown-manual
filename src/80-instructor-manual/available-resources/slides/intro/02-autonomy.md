@@ -15,4 +15,4 @@ In this short video, we introduce some of the basic concepts and definitions, su
 ```{slides} ../../../../_assets/instructor-manual/robotic-systems.pdf
 ```
 
-    
+

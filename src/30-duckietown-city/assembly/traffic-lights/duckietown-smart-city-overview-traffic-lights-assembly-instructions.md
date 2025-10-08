@@ -20,7 +20,7 @@ This section describes the physical assembly and installation of traffic lights.
 
 ## Overview
 
-Traffic lights are crucial elements of modern cities, and in Duckietown, they play a similar role by ensuring well-organized traffic. 
+Traffic lights are crucial elements of modern cities, and in Duckietown, they play a similar role by ensuring well-organized traffic.
 
 They can serve as:
 1. Centralized coordinators of traffic at 3- or 4-way intersections in Duckietown.

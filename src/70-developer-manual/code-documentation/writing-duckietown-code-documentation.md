@@ -14,9 +14,9 @@
 
 ## Why is (inline) documentation important?
 
-Well‑written documentation determines whether code is *usable* or *ignored*.  
+Well‑written documentation determines whether code is *usable* or *ignored*.
 
-A brilliant package that saves developers weeks of effort is worthless if no‑one can discover or understand it.  
+A brilliant package that saves developers weeks of effort is worthless if no‑one can discover or understand it.
 
 Inline docstrings are especially powerful because they live next to the code they explain, are simple to update, and mirror the project’s structure. Tools such as **[Sphinx](https://www.sphinx-doc.org)** then transform those docstrings into polished HTML pages.
 
@@ -32,21 +32,21 @@ Sphinx is the de‑facto standard for Python to parse docstrings and build pages
 
 The short and cheeky answer to this question is "everything, and in the right place". The long answer is the same, in other words: **everything that users may touch should be documented in its closest context.**
 
-For exmaple: 
+For example:
 
-* **ROS nodes**  
-  * Provide an overview of purpose and algorithm.  
-  * List configuration parameters, default values, publishers, subscribers, and services.  
+* **ROS nodes**
+  * Provide an overview of purpose and algorithm.
+  * List configuration parameters, default values, publishers, subscribers, and services.
   * Document every method: arguments, types, return values.
 
-* **Libraries (`include/` or `src/`)**  
-  * Each module and package needs a short description.  
+* **Libraries (`include/` or `src/`)**
+  * Each module and package needs a short description.
   * All public classes, functions, and methods require docstrings.
 
-* **Repository and package level**  
+* **Repository and package level**
   * Add an RST file under `docs/packages/` named `<package>.rst` that pulls together node‑ and library‑level docs via Sphinx directives.
 
-  
+
 ### Example: ROS node docstring
 
 The documentation of the node itself should _always_ be as a docstring after the class definition. _Do not_ put it, or anything else as a docstring for the `__init__` method. This will not be rendered in the final output.
@@ -58,10 +58,10 @@ class CameraNode(DTROS):
 
     The node handles the image stream, initializing it, publishing frames
     according to the required frequency and stops it at shutdown.
-    `Picamera <https://picamera.readthedocs.io/>`_ is used for handling 
+    `Picamera <https://picamera.readthedocs.io/>`_ is used for handling
     the image stream.
 
-    Note that only one :obj:`PiCamera` object should be used at a time. 
+    Note that only one :obj:`PiCamera` object should be used at a time.
     If another node tries to start an instance while this node is running,
     it will likely fail with an `Out of resource` exception.
 
@@ -96,7 +96,7 @@ class CameraNode(DTROS):
         super(CameraNode, self).__init__(node_name=node_name,
                                          node_type=NodeType.PERCEPTION)
 
-    [...]    
+    [...]
 
     def save_camera_info(self, camera_info_msg, filename):
         """Saves intrinsic calibration to file.
@@ -126,14 +126,14 @@ class CameraNode(DTROS):
 
 ```
 
-Start with a high-level description of the function of the node, where it fits in the bigger picture of the package and repository, and what it receives as input(s) and produces as output(s). Feel generous with the description here; remember the latin saying: "_Melius abundare est quam deficere_." ("It is better to have too much than too little"). 
+Start with a high-level description of the function of the node, where it fits in the bigger picture of the package and repository, and what it receives as input(s) and produces as output(s). Feel generous with the description here; remember the latin saying: "_Melius abundare est quam deficere_." ("It is better to have too much than too little").
 
 Following the general introduction section, include:
-- a section with the arguments needed for initializing the node (the arguments of the `__init__` method), which will almost always be exactly the same as shown. 
-- a configuration section with the parameters for the node, their type, a short description, and their default value. 
-- additional section describing the subscribers, publishers and services, in this order. 
+- a section with the arguments needed for initializing the node (the arguments of the `__init__` method), which will almost always be exactly the same as shown.
+- a configuration section with the parameters for the node, their type, a short description, and their default value.
+- additional section describing the subscribers, publishers and services, in this order.
 
-If the node has no subscribers, as e.g., the camera node, skip this section. 
+If the node has no subscribers, as e.g., the camera node, skip this section.
 
 ```{note}
 Note the specific way of structuring the documentation of the service.
@@ -141,7 +141,7 @@ Note the specific way of structuring the documentation of the service.
 
 Every method should be documented as a docstring immediately after the function definition (as the `save_camera_info` example). Add a short description of the method, the arguments it expects, and the return value (when applicable).
 
-### Example: library docstring 
+### Example: library docstring
 
 Libraries should be documented similarly to nodes. However, when documenting libraries, it is important to actually invoke the Sphinx commands for documenting particular objects in the `__init__.py` file. Furthermore, this file should contain a description of the package itself. Here is an example from the `line_detector` library's `__init__.py` file:
 
@@ -202,7 +202,7 @@ Included libraries
 (sphinx_style_guide)=
 ## Style guide
 
-Sphinx uses commands called _directives_. The basic style of the documentation comes from _reStructuredText_, which is the default plaintext markup language used by Sphinx. 
+Sphinx uses commands called _directives_. The basic style of the documentation comes from _reStructuredText_, which is the default plaintext markup language used by Sphinx.
 
 ### Basic styles
 
@@ -270,7 +270,7 @@ Sphinx uses commands called _directives_. The basic style of the documentation c
 
 ```{seealso}
 Additional examples:
-- [reStructuredText basics](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) 
+- [reStructuredText basics](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
 - [Quick references](https://docutils.sourceforge.io/docs/user/rst/quickref.html)
 - [Detailed specifications](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html).
 ```
@@ -286,17 +286,17 @@ Links to a different package, node, method, or object are added with:
     :py:attr:`duckietown.DTROS.switch`
 ```
 
-All of these refer to the `duckietown` Python package. 
+All of these refer to the `duckietown` Python package.
 
 When dealing with nodes things are a bit trickier because they are not a part of a package. To make Sphinx work nicely with ROS nodes, we create a fake package that has them all as classes. Hence, to refer to the `CameraNode`:
 
 ```md
-    :py:class:`nodes.CameraNode`    
+    :py:class:`nodes.CameraNode`
 ```
 
 ### Custom sections
 
-When documenting a node, make use of the following ROS-specific sections: ``Examples``, ``Raises``, ``Configuration``, ``Subscribers``, ``Subscriber``, ``Publishers``, ``Publisher``, ``Services``, ``Service``, ``Fields``, ``inputs``, ``input``, ``outputs``, ``output``. 
+When documenting a node, make use of the following ROS-specific sections: ``Examples``, ``Raises``, ``Configuration``, ``Subscribers``, ``Subscriber``, ``Publishers``, ``Publisher``, ``Services``, ``Service``, ``Fields``, ``inputs``, ``input``, ``outputs``, ``output``.
 
 To add custom sections edit `docs/config.yaml`.
 

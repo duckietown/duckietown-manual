@@ -29,11 +29,11 @@ dts setup mkcert
 
 ## Forking the LX Repository
 
-To store your own code, while also keeping the ability to pull updates 
+To store your own code, while also keeping the ability to pull updates
 from our version of this repo, we recommend that you create your own fork.
 
-Start by pressing "Fork" in the top right corner of the LX repository page on GitHub. 
-You will be able to create a new 
+Start by pressing "Fork" in the top right corner of the LX repository page on GitHub.
+You will be able to create a new
 fork: `<your_username>/lx-<lx-name>`
 
 Then clone your new repository, replacing your GitHub username in the command below,
@@ -58,19 +58,19 @@ Confirm that the new upstream repository was added to the list,
 
     git remote -v
 
-You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every 
-exercise will prompt you to pull from the upstream repository - updating your exercises to the latest Duckietown 
+You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every
+exercise will prompt you to pull from the upstream repository - updating your exercises to the latest Duckietown
 version,
 
 
 ## Keeping your System Up-To-Date
 
-It's a good idea to pull from the upstream remote in case your instructor or the 
+It is a good idea to pull from the upstream remote in case your instructor or the
 exercise creator changed something:
 
     git pull upstream ente
 
-It's also a good idea to:
+It is also a good idea to:
 
 - 💻 Always make sure your Duckietown Shell is updated to the latest version: `pipx upgrade duckietown-shell`
 
@@ -115,22 +115,22 @@ Inside the code editor, use the navigator sidebar on the left-hand side to navig
 `notebooks` directory and open the first notebook.
 
 Follow the instructions on the notebook and work through the notebooks in sequence.
-In many cases the last notebook will instruct you to write some code inside the 
-learning experience directory. Once you've done that you will need to build and test your code. 
-We describe how to do that next. 
+In many cases the last notebook will instruct you to write some code inside the
+learning experience directory. Once you have done that you will need to build and test your code.
+We describe how to do that next.
 
 ### Building your Code
 
-From inside the learning experience root directory, you can build your code with 
+From inside the learning experience root directory, you can build your code with
 
 ```
 dts code build -R ROBOT_NAME
 ```
 
-This will build a docker image with your code compiled inside - you should your ROS node get built during the process. 
+This will build a docker image with your code compiled inside - you should your ROS node get built during the process.
 
 ```{hint}
-Strengthen your iterative development habits by beginning every work session with a fresh build of your LX. 
+Strengthen your iterative development habits by beginning every work session with a fresh build of your LX.
 This will help ensure that you do not continue development on top of any previous errors.
 ```
 
@@ -151,10 +151,10 @@ Then you can start your virtual robot with the command:
 dts duckiebot virtual start [VBOT]
 ```
 
-You should see it with a status `Booting` and finally `Ready` if you look at `dts fleet discover`: 
+You should see it with a status `Booting` and finally `Ready` if you look at `dts fleet discover`:
 
 ```
-     | Hardware |   Type    | Model |  Status  | Hostname 
+     | Hardware |   Type    | Model |  Status  | Hostname
 ---  | -------- | --------- | ----- | -------- | ---------
 [VBOT] |  virtual | duckiebot | DB21J |  Ready   | [VBOT].local
 ```
@@ -169,7 +169,7 @@ You should see the Unity-based Duckiematrix simulator start up. For more details
 the Duckiematrix see [](the-duckiematrix-manual).
 
 
-### Testing on a Duckiebot or in the Duckiematrix 
+### Testing on a Duckiebot or in the Duckiematrix
 
 To test your code on your real Duckiebot you can do:
 
@@ -185,7 +185,7 @@ dts code workbench -m -R [VIRTUAL_ROBOT_NAME]
 
 (note the `-m` flag which means that we are running in the `matrix`)
 
-In another terminal, you can launch the `noVNC` viewer for this exercise which can be useful to send commands to the robot and view the odometry that you calculating in the RViZ window. 
+In another terminal, you can launch the `noVNC` viewer for this exercise which can be useful to send commands to the robot and view the odometry that you calculating in the RViZ window.
 
 ```
 dts code vnc -R [ROBOT_NAME]
@@ -196,12 +196,12 @@ where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you r
 
 ## Troubleshooting
 
-If you run into any issues while building the image, you can search the troubleshooting symptoms below or 
+If you run into any issues while building the image, you can search the troubleshooting symptoms below or
 reference the [](how-to-get-help) section of this manual.
 
 ```{trouble}
 
-`dts :  The path '...' does not appear to be a Duckietown project. 
+`dts :  The path '...' does not appear to be a Duckietown project.
      :  The metadata file '.dtproject' is missing.`
 
 ---

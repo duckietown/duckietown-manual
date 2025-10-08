@@ -6,13 +6,13 @@
 (documentation-style-guide)=
 # Style guide
 
-This chapter describes the style guide for our documentation. We will cover the conventions 
+This chapter describes the style guide for our documentation. We will cover the conventions
 for writing the technical documentation.
 
 
 ## Organization
 
-The documentation is divided into **books**, **parts** (labeled `part:`), **chapters** (labeled `chapter:`), 
+The documentation is divided into **books**, **parts** (labeled `part:`), **chapters** (labeled `chapter:`),
 and **sections** (labeled `sec:`).
 
 The structure of each book is stored inside the `src/_toc.yml` file.
@@ -33,7 +33,7 @@ The following holds for all technical writing.
 
   "Please remove the SD card."
   ```
-  
+
   ```{admonition} Better
   :class: success
 
@@ -57,13 +57,13 @@ The following holds for all technical writing.
 - Python is capitalized when used as a name;
   ```{admonition} Wrong
   :class: danger
-  
+
   "If you are using python..."
   ```
-  
+
   ```{admonition} Better
   :class: success
-  
+
   "If you are using Python..."
   ```
 
@@ -72,13 +72,13 @@ The following holds for all technical writing.
 - Do not use contracted forms;
   ```{admonition} Wrong
   :class: danger
-  
+
   it's
   ```
 
   ```{admonition} Better
   :class: success
-  
+
   it is
   ```
 
@@ -98,39 +98,39 @@ The following holds for all technical writing.
 - The English version of the documentation is written in American English;
   ```{admonition} Incorrect
   :class: danger
-  
+
   behaviour
   ```
 
   ```{admonition} Correct
   :class: success
-  
+
   behavior
   ```
 
 - All the filenames and commands must be enclosed in code blocks using Markdown backticks;
   ```{admonition} Incorrect
   :class: danger
-  
+
   "Edit the ~/.ssh/config file using nano."
   ```
 
   ```{admonition} Correct
   :class: success
-  
+
   "Edit the `~/.ssh/config` file using `nano`."
   ```
 
 - <kbd>Ctrl</kbd>-<kbd>C</kbd>, `ssh`, etc. are not verbs;
   ```{admonition} Incorrect
   :class: danger
-  
+
   "<kbd>Ctrl</kbd>-<kbd>C</kbd> from the command line."
   ```
 
   ```{admonition} Correct
   :class: success
-  
+
   "Use <kbd>Ctrl</kbd>-<kbd>C</kbd> from the command line."
   ```
 
@@ -171,7 +171,7 @@ Writing down the command line for editing, like the following:
 
     vi /this/file
 
-is too much detail. Only specify the editor to use if the task at hand requires 
+is too much detail. Only specify the editor to use if the task at hand requires
 functionalities that are only available on a specific editor.
 
 

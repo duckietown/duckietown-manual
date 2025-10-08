@@ -16,7 +16,7 @@ This chapter describes how to perform the camera calibration procedure for your 
 
 ## Introduction to camera calibration
 
-Every camera is unique due to manufacturing and assembly differences. Therefore, a camera calibration procedure needs to be performed to account for small manufacturing discrepancies. 
+Every camera is unique due to manufacturing and assembly differences. Therefore, a camera calibration procedure needs to be performed to account for small manufacturing discrepancies.
 
 This procedure involves displaying a predetermined pattern in front of the camera and using it to solve for the camera's parameters.
 
@@ -185,7 +185,7 @@ Within the Camera Intrinsic panel, under `Local`, you should see a tick next to 
 (operation-camera-extrinsic-calibration)=
 ## Extrinsic camera calibration procedure
 
-This camera calibration procedure outputs the relative pose between the camera and Duckiebot frame. 
+This camera calibration procedure outputs the relative pose between the camera and Duckiebot frame.
 
 For optimal performance, repeat this procedure if you ship the Duckiebot or otherwise touch the camera holder.
 
@@ -236,7 +236,7 @@ Note the keys in the table below.
 
 To perform the extrinsic calibration procedure:
 
-1. (optional) Click the `Check error` switch to enforce a pose error bound for your Duckiebot's camera based on it's known intrinsic parameters (a trapezoid in the image under `Camera View` should appear).
+1. (optional) Click the `Check error` switch to enforce a pose error bound for your Duckiebot's camera based on its known intrinsic parameters (a trapezoid in the image under `Camera View` should appear).
 2. Position your Duckiebot on the calibration board such that it faces the checkerboard pattern, your Duckiebot's axle is parallel to and directly above the **large** `y`-axis of the calibration board, and the axis that is perpendicular to and midway between your Duckiebot's axle is directly above the **large** `x`-axis of the calibration board (if the `Check error` switch is set to `on`, the trapezoid in the image under `Camera View` should turn from black to blue).
 3. Click the `Calibrate` button.
 4. Wait for the spinner to disappear.

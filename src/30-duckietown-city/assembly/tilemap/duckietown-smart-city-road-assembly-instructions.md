@@ -16,9 +16,9 @@
 ```
 
 (dt-ops-tiles-foreword)=
-## Before we begin 
+## Before we begin
 ```{tip}
-To ensure that your streets will last long, make sure to follow these steps: 
+To ensure that your streets will last long, make sure to follow these steps:
 * Clean the tiles with a mixture of water and soap, or alcohol, and let them dry completely before attaching tapes.
 * Place the yellow tape on the tile and cut out pieces rather than pre-cutting them. This ensures proper adhesion by preventing loss of glue.
 ```
@@ -73,7 +73,7 @@ Final result: curved Duckietown tile (with measurements)
 (dt-ops-tiles-curves-assembly)=
 ### Assembly
 
-If you have a laser cutter, use the provided [Duckietown curve tile construction template](https://github.com/duckietown/docs-opmanual_duckietown/tree/daffy/book/opmanual_duckietown/TileTemplates/CurvedTileTemplate) to proceed more swiftly and precisely in the assembly process. 
+If you have a laser cutter, use the provided [Duckietown curve tile construction template](https://github.com/duckietown/docs-opmanual_duckietown/tree/daffy/book/opmanual_duckietown/TileTemplates/CurvedTileTemplate) to proceed more swiftly and precisely in the assembly process.
 
 ```{figure} ../../../_images/duckietown-city/assembly/tilemap/instructions/curved_1_done.png
 :width: 80%
@@ -93,7 +93,7 @@ Without construction template, mark a quarter-circle path for the yellow tape us
 :alt: Building a curved Duckietown tile, first lane
 
 
-Start from the yellow line and then measure the lane width to determine the position of the white tape 
+Start from the yellow line and then measure the lane width to determine the position of the white tape
 ```
 
 ```{figure} ../../../_images/duckietown-city/assembly/tilemap/instructions/curved_5_done.png
@@ -103,7 +103,7 @@ Start from the yellow line and then measure the lane width to determine the posi
 :alt: Building a curved Duckietown tile, second lane
 
 
-Take 3-5 measurement points across the quarter-circumference to identify the location of the outer lane white tape. Aim to having the correct lane width but do not overdo it, autonomy algorithms should be robust to small variations of lane widths. 
+Take 3-5 measurement points across the quarter-circumference to identify the location of the outer lane white tape. Aim to having the correct lane width but do not overdo it, autonomy algorithms should be robust to small variations of lane widths.
 ```
 
 (dt-ops-tiles-intersections)=

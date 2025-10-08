@@ -14,7 +14,7 @@
 ```
 
 (setup-db-sd-card-flashing-fast)=
-# The Fast Way 
+# The Fast Way
 
 Use this procedure if you want a quicker result, and do not mind having [default settings](db-init-fast-default-settings).
 
@@ -23,7 +23,7 @@ Robots on the same network must have unique names. **Do not follow this procedur
 ```
 
 ```{attention}
-By proceeding with these instructions you are accepting the [Duckietown terms of use](initialization-tos). 
+By proceeding with these instructions you are accepting the [Duckietown terms of use](initialization-tos).
 ```
 
 <!--
@@ -31,7 +31,7 @@ Internal note: current ente image version 2.0.8
 When creating a new image:
 0. Use robotname: entebot+[version number], e.g., `entebot208`
 1. Upload to AWS public / images S3 bucket
-2. Upload to (Shared) Duckiebot Images GDrive 
+2. Upload to (Shared) Duckiebot Images GDrive
 3. Create trackable links with Cuttly
 4. Update redirects on Cloudflare > duckietown.com > Rules
 5. update robot name in "default settings" paragraph below
@@ -43,7 +43,7 @@ When creating a new image:
 1. Read and understand the [](initialization-tos) before proceeding. For any questions or doubts, [reach out](mailto:info@duckietown.com).
 
 2. Download the Duckietown compressed image:
-    * [Download non-customizable `DB21J` Duckiebot `ente` image from AWS](https://duckietown.com/download-duckiebot-ente-sdcard-image-aws)  
+    * [Download non-customizable `DB21J` Duckiebot `ente` image from AWS](https://duckietown.com/download-duckiebot-ente-sdcard-image-aws)
     * [Download non-customizable `DB21J` Duckiebot `ente` image from Google Drive](https://duckietown.com/download-duckiebot-ente-sdcard-image-googledrive)
 
     The image is downloaded as a compressed `.zip` file. Programs like Balena Etcher allow flashing this format directly to the SD card. If you are using a different program, unzip the downloaded file to obtain a `.img` file to flash to the SD card.
@@ -56,9 +56,9 @@ When creating a new image:
 
 5. Configure the network on the Duckiebot
 
-    This image is pre-configured to so that the Duckiebot will connects to a network with SSID `duckietown` and password `quackquack`.
+    This image is pre-configured so that the Duckiebot will connect to a network with SSID `duckietown` and password `quackquack`.
 
-    To have the Duckiebot connect to a different network, your will have to [edit the Wi-Fi settings on your Duckiebot](setup-duckiebot-edit-networks).
+    To have the Duckiebot connect to a different network, you will have to [edit the Wi-Fi settings on your Duckiebot](setup-duckiebot-edit-networks).
 
     To access the `/etc/wpa_supplicant.conf` file on your Duckiebot, choose one of these options:
 
@@ -81,7 +81,7 @@ This image has the following default settings:
 - default user password: `quackquack`
 - robot name (hostname): `entebot208`
 - type: `duckiebot`
-- configuration: `DB21J` (works only with Jetson Nano 4GB developer kit) 
+- configuration: `DB21J` (works only with Jetson Nano 4GB developer kit)
 - will connect to Wi-Fi named `duckietown` with password `quackquack`
 - country: `US`
 
@@ -100,7 +100,7 @@ Start by plugging the SD card into your computer using a SD card reader or the U
 ## Troubleshooting
 
 ```{trouble}
-- The SD card doesn't seem to be written.
+- The SD card does not seem to be written.
 - The flashing process seemed too fast, there is no data on my SD card.
 ---
 - Check if your SD card adapter has a write protection switch.

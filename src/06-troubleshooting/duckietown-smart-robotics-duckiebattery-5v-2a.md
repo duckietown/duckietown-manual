@@ -7,7 +7,7 @@
 ```
 
 
-Refer to [](setup-duckiebot-battery-safety-basics) to learn about the Duckiebattery and how to handle it. 
+Refer to [](setup-duckiebot-battery-safety-basics) to learn about the Duckiebattery and how to handle it.
 
 In particular, read [](duckiebattery-troubleshooting) for FAQs.
 

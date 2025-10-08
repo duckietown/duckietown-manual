@@ -6,7 +6,7 @@
 :keywords: Duckietown, Duckiebot, computer setup, set up, preparation, base station, getting started
 ```
 
-This chapter describes how to install software needed to work with Duckietown. 
+This chapter describes how to install software needed to work with Duckietown.
 
 ```{needget}
 * A computer with at least `50 GB` of free space running [Ubuntu 22.04 or newer](setup-computer).
@@ -17,7 +17,7 @@ This chapter describes how to install software needed to work with Duckietown.
 * An Internet connection.
 * Approximately 30 minutes.
 ---
-A computer set up to use Duckietown and interact with Duckiebots. 
+A computer set up to use Duckietown and interact with Duckiebots.
 ```
 
 ```{attention}
@@ -41,12 +41,12 @@ When running a VMware machine on a macOS host, it may be necessary to have the f
 * `Bridged Networking` (for connecting to your Duckiebot).
 ```
 
-If using a M-series Mac (ARM architecture), some success has been achieved by emulating a x86 architecture using [UTM](https://mac.getutm.app/).  
+If using a M-series Mac (ARM architecture), some success has been achieved by emulating a x86 architecture using [UTM](https://mac.getutm.app/).
 
 ```{attention}
 While VMs on different host OS might work:
-1. We _strongly_ reccomend using a native (or, dual boot) Ubuntu installation, especially if it is your first run with Duckietown
-2. Only native Ubuntu setups are officially supported by the Duckietown team (community resources are still available for other setups). 
+1. We _strongly_ recommend using a native (or, dual boot) Ubuntu installation, especially if it is your first run with Duckietown
+2. Only native Ubuntu setups are officially supported by the Duckietown team (community resources are still available for other setups).
 ```
 
 ## In this Section

@@ -22,7 +22,7 @@ In Duckietown, all code runs inside Docker containers.
 
 To run software in Duckietown you will need:
 
-* a Duckietown-compliant Docker image, and 
+* a Duckietown-compliant Docker image, and
 * "payload" software inside it.
 
 Duckietown-compliant Docker images are built out of Duckietown Projects, in short, `DTProjects`.
@@ -42,16 +42,16 @@ A DTProject needs to be built into its corresponding executable Docker image bef
 
 Forcing code to only run inside Docker containers has advantages and disadvantages:
 
-_The bad news:_ The biggest downside of using containers to isolate the execution of Duckietown code is that by doing so the source code is wrapped inside an extra layer of code, the Docker image. 
+_The bad news:_ The biggest downside of using containers to isolate the execution of Duckietown code is that by doing so the source code is wrapped inside an extra layer of code, the Docker image.
 
 This _isolates_ the code, making it harder to do development because it will not be directly accessible through the local file system. This can be frustrating at times.
 
-_The good news:_ the main advantage of a fully Dockerized software architecture is the reproducibility of outcomes. Additional advantages will become evident hereafter. 
+_The good news:_ the main advantage of a fully Dockerized software architecture is the reproducibility of outcomes. Additional advantages will become evident hereafter.
 
 (dtproject-structure)=
 ## Structure of a DTProject
 
-DTProjects standardize locations for source code, configuration files, dependencies lists, and more. 
+DTProjects standardize locations for source code, configuration files, dependencies lists, and more.
 
 (dtproject-meta-files)=
 ### DTProject meta-files
@@ -71,7 +71,7 @@ DTProjects standardize locations for source code, configuration files, dependenc
 ### Source code
 
 * `packages/`: this directory can contain both Python and Catkin packages;
-* `launchers/`: code that can be used as entry scripts inside the project's Docker container; 
+* `launchers/`: code that can be used as entry scripts inside the project's Docker container;
 
 (dtproject-dependencies)=
 ### Dependencies
@@ -90,13 +90,13 @@ DTProjects standardize locations for source code, configuration files, dependenc
 (dtproject-other-files)=
 ### Other
 
-* `LICENSE.pdf`: The Duckietown Software Terms of Use; Note that you must agree to its terms to use DTprojects. 
+* `LICENSE.pdf`: The Duckietown Software Terms of Use; Note that you must agree to its terms to use DTprojects.
 * `README.md`: Brief description of the DTProject;
 
 (dtproject-templates)=
 ## Project Templates
 
-DTProjects expose many tunable parameters, e.g., for the base Docker image, or ROS support, and offer presets (_project templates_) for the most common use cases. Project templates are stored on GitHub as _template repositories_. 
+DTProjects expose many tunable parameters, e.g., for the base Docker image, or ROS support, and offer presets (_project templates_) for the most common use cases. Project templates are stored on GitHub as _template repositories_.
 
 Template repositories are special, in that their main purpose is to initialize new repositories.
 

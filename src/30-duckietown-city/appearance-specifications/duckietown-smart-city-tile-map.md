@@ -21,9 +21,9 @@ The tiles are arranged in specific configurations to create compliant Duckietown
 
 
 ```{note}
-Road markings convey important information to the Duckiebots: 
+Road markings convey important information to the Duckiebots:
 * delimiting the lanes (white and yellow markings), and
-* identifying stop signs (red markings). 
+* identifying stop signs (red markings).
 ```
 
 ```{note}
@@ -77,8 +77,8 @@ Each tile is square and measures `61 cm x 61 cm` (`2 ft x 2 ft`) from the outer 
 
 ```{note}
 * Empty tiles are not actually green, but have a black backround as all other tiles. We represent them as green here (recalling grass) to clearly distinguish them from road tiles.
-* The empty tiles can be of covered with, e.g., felt of any color. We discourage using the same colors as the road 
-markings (red, white and yellow) or any material with reflective surface to minimize disturbances to the Duckiebots. 
+* The empty tiles can be of covered with, e.g., felt of any color. We discourage using the same colors as the road
+markings (red, white and yellow) or any material with reflective surface to minimize disturbances to the Duckiebots.
 ```
 
 For tiles to become road elements, we need to apply road markings. Road markings can be obtained through the application of tapes of different colors and sizes.
@@ -122,7 +122,7 @@ Here are some facts about the yellow tapes:
 
 * Yellow tape must be dashed (not solid);
 
-* Each piece should be **5 cm** long and placed with a **2.5 cm** gap between each piece;  
+* Each piece should be **5 cm** long and placed with a **2.5 cm** gap between each piece;
 
 * The width of the yellow tape is roughly 2.4cm (0.94 inches);
 
@@ -198,7 +198,7 @@ Some examples of **non-conforming** topologies are shown in [the figure below](f
 * - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/violates2.svg
     :name: subfig:violates2
 
-    Topology violates rule 1 since curved tiles are adjacent to intersection tiles 
+    Topology violates rule 1 since curved tiles are adjacent to intersection tiles
     ```
 
 * - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/violates3.svg

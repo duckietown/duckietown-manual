@@ -4,7 +4,7 @@
 ```
 
 ```{needget}
-- A Duckiebot (`DB21-J4`) box 
+- A Duckiebot (`DB21-J4`) box
 ---
 - Understanding of each component in a Duckiebox (`DB21-J4`)
 ```

@@ -7,7 +7,7 @@
 # Get Started with Diagnostics
 
 ```{needget}
-* `dts` installed on your base station and reachable Duckiebot hostname  
+* `dts` installed on your base station and reachable Duckiebot hostname
 * Access to <https://dashboard.duckietown.org/diagnostics>
 ---
 * Run a 60-second diagnostics capture, verify upload, and locate the log online
@@ -36,12 +36,12 @@ INFO:system-monitor:Data transferred successfully!
 ...
 ````
 
-The line `The server says: [200] OK` confirms that the log reached the remote server.  
+The line `The server says: [200] OK` confirms that the log reached the remote server.
 If the upload fails, the data are discarded and the test must be repeated.
 
 ## Visualize the results
 
-Open <https://dashboard.duckietown.com/diagnostics>.  
+Open <https://dashboard.duckietown.com/diagnostics>.
 
 Logs are indexed by **Group**, **Subgroup**, and hostname.
 
@@ -83,7 +83,7 @@ log to the server, the tests data will be lost and the test need to be run again
 
 ## Run a (single test) diagnostics experiment
 
-You can run a diagnostics test for `60` seconds on the target 
+You can run a diagnostics test for `60` seconds on the target
 device `[ROBOT]` with the command
 
 ```bash
@@ -109,7 +109,7 @@ INFO:system-monitor:Workers stopped!
 INFO:system-monitor:Done!
 ```
 
-The most important thing to look for is the line 
+The most important thing to look for is the line
 
 ```
 INFO:system-monitor:The server says: [200] OK
@@ -130,7 +130,7 @@ To check the outcome of a diagnostics test, open your browser and navigate to
 Tests will be available on this page a few seconds after the upload is complete.
 
 Use the dropdowns `Group` and `Subgroup` to find your experiment and test.
-Remember, when the subgroup is not explicitly specified with the argument 
+Remember, when the subgroup is not explicitly specified with the argument
 `-S/--subgroup`, `default` is used.
 
 
@@ -146,7 +146,7 @@ Use the tabs `System`, `Resources`, etc. to see the content of the diagnostics l
 
 ## One experiment, many tests
 
-In many cases, your experiment is that of comparing two or more 
+In many cases, your experiment is that of comparing two or more
 configurations or implementations of part of your system.
 In these cases, you need to run multiple tests as part of a single
 experiment. The diagnostics tool allows you to declare a group
@@ -155,12 +155,12 @@ Use the group argument to name your experiment and the subgroup to
 name the single tests.
 
 Let us recall the example of [](devel_sw_diagnostics_example).
-We want to measure the effects of changing the drivers frequency on the system, 
-so we run (and monitor) the system twice, a first time with the frequency tuned 
-at `20Hz`, and a second time with the frequency at `30Hz`. 
-We call the overall **experiment** `camera_frequency` and the two **tests**, 
+We want to measure the effects of changing the drivers frequency on the system,
+so we run (and monitor) the system twice, a first time with the frequency tuned
+at `20Hz`, and a second time with the frequency at `30Hz`.
+We call the overall **experiment** `camera_frequency` and the two **tests**,
 `20hz` and `30hz` respectively.
-We can use the following commands to run the two tests described above, one 
+We can use the following commands to run the two tests described above, one
 before and the other after applying the change to the camera drivers code.
 
 ```bash
@@ -168,7 +168,7 @@ dts diagnostics run -H [ROBOT] -G camera_frequency -S 20hz -d 60
 dts diagnostics run -H [ROBOT] -G camera_frequency -S 30hz -d 60
 ```
 
-We can now use the Diagnostics page available at 
+We can now use the Diagnostics page available at
 [https://dashboard.duckietown.org/diagnostics](https://dashboard.duckietown.org/diagnostics).
 to visualize both tests side by side.
 Similarly to what we have done in [](devel_sw_diagnostics_dashboard_logs_tag),

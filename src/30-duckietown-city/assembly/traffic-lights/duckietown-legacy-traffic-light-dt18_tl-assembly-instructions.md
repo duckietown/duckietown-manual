@@ -23,10 +23,9 @@ The small parts with holes in the middle, as shown on the left of {numref}`fig:G
 
 For enhanced structural stability, all parts should be glued together as shown in the images.
 
+### Tube Holder with Big Ground Plate
+
 All parts should be glued together as showed in the pictures for enhanced structural stability.
-
-
-### Tube holder with big ground plate  
 
 ```{figure} ../../../_images/duckietown-city/assembly/traffic_light_18/G-1.jpg
 :width: 80%
@@ -296,9 +295,9 @@ Stick the tubes into the sides of the LED housing and pull the cable through one
 ```{figure} ../../../_images/duckietown-city/assembly/traffic_light_18/TL-08.jpg
 :width: 80%
 :name: fig:TL-08
-``` 
+```
 
-Add the joint modules on the side of the tube without the cable.  
+Add the joint modules on the side of the tube without the cable.
 
 ```{figure} ../../../_images/duckietown-city/assembly/traffic_light_18/TL-09.jpg
 :width: 80%
@@ -348,7 +347,7 @@ Pull the cable through longer tube and stick the tube into the joint module.
 :name: fig:TL-15
 ```
 
-Put the tubes into the tube holders.  
+Put the tubes into the tube holders.
 
 ```{figure} ../../../_images/duckietown-city/assembly/traffic_light_18/TL-16.jpg
 :width: 80%
@@ -373,28 +372,28 @@ Use the spacers and the screws to mount the Raspberry Pi on the Raspberry Pi gro
 Raspberry Pi mounted on ground plate
 ```
 
-Plug the shield on top of the Raspberry Pi.  
-Insert the SD card.  
-Connect the LED cable to the shield.  
+Plug the shield on top of the Raspberry Pi.
+Insert the SD card.
+Connect the LED cable to the shield.
 
 ```{figure} ../../../_images/duckietown-city/assembly/traffic_light_18/STEP_18_cropped.png
 :width: 80%
 :name: fig:TL-19
 ```
 
-Connect the Ethernet cable.  
+Connect the Ethernet cable.
 Connect the USB cable.
 
 
 
-If done correctly the LEDs should be on.  
+If done correctly the LEDs should be on.
 
 ```{figure} ../../../_images/duckietown-city/assembly/traffic_light_18/TL-20.jpg
 :width: 80%
 :name: fig:TL-20
-``` 
+```
 
-Close the ground module with the case.    
+Close the ground module with the case.
 
 
 ```{figure} ../../../_images/duckietown-city/assembly/traffic_light_18/TL-21.jpg

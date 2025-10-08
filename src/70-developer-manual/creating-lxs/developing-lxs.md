@@ -6,18 +6,18 @@
 (tips-building-lxs)
 # Tips for Building LXs
 
-This page is intended to provide some design considerations when creating a learning experience. 
+This page is intended to provide some design considerations when creating a learning experience.
 
 
 ## Intended Learning Outcomes (ILOs)
 
-Learning outcomes after completing a learning experience should generally be actionable skills to demonstrate new knowledge.  
+Learning outcomes after completing a learning experience should generally be actionable skills to demonstrate new knowledge.
 
 These skills are exercised in a final activity in each LX that can be run on a virtual or real physical Duckiebot.
 
 ## Learning Goals
 
-LX developers should answer the following questions in the LX description contained in each README. 
+LX developers should answer the following questions in the LX description contained in each README.
 Anyone working through an LX should use this information to direct their efforts as they choose and work through LX:
 
 ```{list-table}
@@ -25,7 +25,7 @@ Anyone working through an LX should use this information to direct their efforts
 :name: learning-goals-tab
 * - Question
   - Example
-* - What will the LX learner gain from this experience? 
+* - What will the LX learner gain from this experience?
   - Learners will be able to describe and implement a PID controller for a differential drive robot.
 * - What are the output activities of the experience?
   - Learners will tune and test their PID controller on a Simulated Duckiebot to achieve a distance traveled goal.
@@ -35,7 +35,7 @@ Anyone working through an LX should use this information to direct their efforts
 
 
 (lx-notebooks)=
-## Notebook Notebook Activities
+## Notebook Activities
 
 Notebooks offer a clean interface to provide lesson content, visualizations, and instructions for proceeding through an LX.
 
@@ -66,11 +66,11 @@ The following table contains a list of the files and directories that you may ne
   - Purpose
 * - Jupyter Notebook
   - ``` lx/notebooks/01_first_notebook.ipynb ```
-  - Notebook files contain the knowledge portion of an LX, walking students through activities, visualizations, and 
+  - Notebook files contain the knowledge portion of an LX, walking students through activities, visualizations, and
   development.
 * - Learner Solution Code
   - `lx/packages/solution_module.py`
-  - Python files for learner implementations should remain in the `packages` directory, with learners filling in TODOs 
+  - Python files for learner implementations should remain in the `packages` directory, with learners filling in TODOs
   as instructed by the notebooks.
 * - Notebook Dependencies
   - `recipe/dependencies-apt.txt`, `recipe/dependencies-py3.txt`
@@ -79,18 +79,18 @@ The following table contains a list of the files and directories that you may ne
 
 ## Duckietown LX Development Guidelines
 
-Here are some suggestions on how to leverage the LX infrastructure to build compelling experiences for your learners.  
+Here are some suggestions on how to leverage the LX infrastructure to build compelling experiences for your learners.
 
 ### Notebooks and packages:
-**Notebooks and Packages**: As a general rule, example code and visualizations should be developed by learners directly in the notebooks.  
+**Notebooks and Packages**: As a general rule, example code and visualizations should be developed by learners directly in the notebooks.
 
 Code for agents and other packages should instead be placed in the `packages/solutions` directory for learners to edit the respective Python files, then imported into the notebooks and unit tests.
 
 
 ### On solutions:
-All but the last notebooks should generally be thought of as guided tutorials (or, _learning activities_), introducing the background and tools required to implement a complex autonomous behavior for the Duckiebots. The final notebook can be thought of as a _learning assessment_ instead, where users are expected to bring together and build upon the learning activities to produce their own solution. Learning assessments should not have solutions publicly available.  
+All but the last notebooks should generally be thought of as guided tutorials (or, _learning activities_), introducing the background and tools required to implement a complex autonomous behavior for the Duckiebots. The final notebook can be thought of as a _learning assessment_ instead, where users are expected to bring together and build upon the learning activities to produce their own solution. Learning assessments should not have solutions publicly available.
 
-Learners should be editing package files during the activities to implement their work, as directed by the notebook instructions. Solutions to the activities should be provided after the students gave an honest attempt at solving them on their own. 
+Learners should be editing package files during the activities to implement their work, as directed by the notebook instructions. Solutions to the activities should be provided after the students gave an honest attempt at solving them on their own.
 
 The solution to the assessment instead should be hidden in the separate solutions repository, to enable evaluation.
 
@@ -115,7 +115,7 @@ What do you want your students to take away from this learning experience? Try t
 
 Defining the intended learning outcomes will inform the content and visualization that you add to the notebook. It helps clearly determine the scope of the learning experience, by formalizing its end.
 
-We recommend to limit the number of ILOs for each learning experience to 3-5. When you find yourself wanting learners to take away a larger number of learning outcomes, consider breaking down your LX into multiple LXs. 
+We recommend to limit the number of ILOs for each learning experience to 3-5. When you find yourself wanting learners to take away a larger number of learning outcomes, consider breaking down your LX into multiple LXs.
 
 ### Determine the prerequisites and dependencies
 
@@ -133,7 +133,7 @@ You can install external libraries by adding to the `recipe/dependencies-apt.txt
 
 Content is added to a LX notebooks in the same Markdown format as any standard Jupyter notebook.  For more information, see the [Jupyter notebook docs](https://docs.jupyter.org/en/latest/).
 
-As noted above, students should be editing package files to implement their work as directed by the notebook instructions, and the solution should be hidden in 
+As noted above, students should be editing package files to implement their work as directed by the notebook instructions, and the solution should be hidden in
 the separate solutions repository to enable evaluation. This means that there are three places you can choose to have learners write solution code.
 
 1. Directly in the notebook cells. This should be used for content examples and practice.
@@ -146,7 +146,7 @@ As a general rule, notebooks **do not** have access to the packages in the `reci
 
 ```{hint}
 
-Strengthen learner test-driven development (TDD) habits by using the Testing interface in the `VSCode` editor, to provide unit tests for each function to be completed in an LX. 
+Strengthen learner test-driven development (TDD) habits by using the Testing interface in the `VSCode` editor, to provide unit tests for each function to be completed in an LX.
 
 This will confirm that their solution performs as expected before any attempts to run it in simulation or on Duckiebots. Note that the beaker symbol to open the Testing interface may not appear in the sidebar until after one of the Python files in the `packages` directory has been opened.
 
@@ -156,4 +156,4 @@ This will confirm that their solution performs as expected before any attempts t
 
 ### Clean up and Publish
 
-Clear all cells of output to avoid publishing solutions. Then push your recipe and new LX repositories.  
+Clear all cells of output to avoid publishing solutions. Then push your recipe and new LX repositories.

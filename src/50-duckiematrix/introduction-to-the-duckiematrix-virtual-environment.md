@@ -10,16 +10,16 @@
 :name: fig:duckiematrix-crop
 :alt: The Duckiematrix is a digital twin virtual simulator for Duckietown
 
-Welcome to the Duckiematrix, where simulation and reality are blurred!  
+Welcome to the Duckiematrix, where simulation and reality are blurred!
 ```
 
 The Duckiematrix is a Unity-based virtual environment for Duckietown supporting digital twins of Duckietown robots.
 
-Its purpose is to simulate the physics and aesthetics of a physical Duckietown environment, 
+Its purpose is to simulate the physics and aesthetics of a physical Duckietown environment,
 as well as the sensing and acting capabilities of Duckietown robots within that environment.
 
-Of course simulation is never exactly like reality, but, from a functionality standpoint, you should be able 
-to simulate everything that you could do on a real Duckiebot in the Duckiematrix. 
+Of course simulation is never exactly like reality, but, from a functionality standpoint, you should be able
+to simulate everything that you could do on a real Duckiebot in the Duckiematrix.
 
 It is worth knowing that, at a high level, the Duckiematrix is composed of two main components:
 

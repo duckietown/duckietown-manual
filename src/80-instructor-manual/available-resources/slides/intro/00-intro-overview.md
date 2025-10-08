@@ -1,5 +1,5 @@
 ```{seo}
-:description: Slides and recording typically used to introduce Duckietown courses and topics. 
+:description: Slides and recording typically used to introduce Duckietown courses and topics.
 :keywords: introduction index, introduction to Duckietown
 ```
 

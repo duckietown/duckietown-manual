@@ -27,7 +27,7 @@ To perform the kinematics calibration procedure for your Duckiebot is by using t
 :name: keyboard_controller_2
 
 
-The Duckiebot keyboard controller is useful to easily open loop control a connected Duckiebot, as well as for adjusting the wheel calibration parameters. 
+The Duckiebot keyboard controller is useful to easily open loop control a connected Duckiebot, as well as for adjusting the wheel calibration parameters.
 ```
 
 To open the `Keyboard Controller`, run:
@@ -108,10 +108,10 @@ Left/right drift is caused by uncalibrated wheels. Modifying the trim parameter 
 ```{figure} ../../_images/calibrations/kinematics/wheel_calibration_measuring_drift.jpg
 :width: 60%
 :align: center
-:alt: Measuring the drift of a Duckiebot from a straight line as part of the wheel calibration procedure 
+:alt: Measuring the drift of a Duckiebot from a straight line as part of the wheel calibration procedure
 :name: wheel_calibration_measuring_drift
 
-Measure the amount of drift, or deviation from the line, after driving forward for about `2 m`, to determine when the calibration is "good enough". 
+Measure the amount of drift, or deviation from the line, after driving forward for about `2 m`, to determine when the calibration is "good enough".
 ```
 
 To confirm that a new kinematics calibration file has been created on your Duckiebot, run the following command and inspect the contents of the `Kinematics` panel:

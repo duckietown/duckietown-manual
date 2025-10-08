@@ -9,7 +9,7 @@
 The signals layer consists of [traffic signs](dt-ops-city-traffic-signs). These traffic signs are placed on the road layer, outside the lanes, serving both functional and non-functional purposes.
 
 ```{seealso}
-The full set of currently existing signs is available 
+The full set of currently existing signs is available
 [here](https://github.com/duckietown/signs-and-tags).
 ```
 
@@ -93,7 +93,7 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
 
     no-left-turn
     ```
-  
+
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/no-enter.png
     :name: subfig:no-enter
     :width: 80%
@@ -164,8 +164,8 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
 
     parking
     ```
-  
-  
+
+
 ````
 
 (specs-layer-traffic-signs-placement)=

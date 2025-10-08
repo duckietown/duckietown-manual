@@ -1,8 +1,8 @@
 (local-editor-workflow)=
-# The right way: Local editor 
+# The right way: Local editor
 
 ```{seo}
-:description: The best way of contributing to the Duckietown documentation is through local edits and pull requests. 
+:description: The best way of contributing to the Duckietown documentation is through local edits and pull requests.
 :keywords: duckietown, documentation, local edits, offline, Git
 ```
 
@@ -63,7 +63,7 @@ Check out the forked repository locally.
 ### Do your edits
 
 Do your edits on your local copy of the repository.
-The source files are in the directory `src/`. 
+The source files are in the directory `src/`.
 
 Images are stored in the directory `src/_images`, while `CSS` and `JS` files can be dropped inside the directory `src/_static` and will be automatically loaded.
 
@@ -104,7 +104,7 @@ Open the file `pdf/book.pdf` to start. Make sure that your changes look the way 
 Commit and push as you would do normally.
 
 ```{attention}
-You need to be part of the [`Developers - Docs`](https://github.com/orgs/duckietown/teams/developers-docs) team on GitHub to be able to push changes to the documentation repositories. Ask your supervisor if you don't have access.
+You need to be part of the [`Developers - Docs`](https://github.com/orgs/duckietown/teams/developers-docs) team on GitHub to be able to push changes to the documentation repositories. Ask your supervisor if you do not have access.
 ```
 
 ### Make a pull request

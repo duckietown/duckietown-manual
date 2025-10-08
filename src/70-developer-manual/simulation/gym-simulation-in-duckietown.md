@@ -8,8 +8,8 @@
 
 ```{needget}
 * Implementing Basic Robot Behaviors
---- 
-* Experience with running and testing on the Duckietown simulator 
+---
+* Experience with running and testing on the Duckietown simulator
 ```
 
 ```{figure} ../../_images/developer/advanced/simulator/simplesim_free.png
@@ -23,12 +23,12 @@ This package is obsolete, it has been superseeded by the Duckiematrix Gym enviro
 
 ## Introduction to the Gym-Duckietown Simulator
 
-Gym-Duckietown is a simulator for the [Duckietown](https://duckietown.com) universe, 
-written in pure Python/OpenGL (Pyglet). It places your agent, a Duckiebot, 
-inside an instance of a Duckietown: a loop of roads with turns, 
+Gym-Duckietown is a simulator for the [Duckietown](https://duckietown.com) universe,
+written in pure Python/OpenGL (Pyglet). It places your agent, a Duckiebot,
+inside an instance of a Duckietown: a loop of roads with turns,
 intersections, obstacles, Duckie pedestrians, and other Duckiebots.
 
-Gym-Duckietown is fast, open, and very customizable. What started as a lane-following simulator has evolved into a fully functioning autonomous driving simulator that you can use to train and test your Machine Learning, Reinforcement Learning, Imitation Learning, or even classical robotics algorithms. Gym-Duckietown offers a wide range of tasks, from simple lane-following to full city navigation with dynamic obstacles. Gym-Duckietown also ships with features, wrappers, and tools that 
+Gym-Duckietown is fast, open, and very customizable. What started as a lane-following simulator has evolved into a fully functioning autonomous driving simulator that you can use to train and test your Machine Learning, Reinforcement Learning, Imitation Learning, or even classical robotics algorithms. Gym-Duckietown offers a wide range of tasks, from simple lane-following to full city navigation with dynamic obstacles. Gym-Duckietown also ships with features, wrappers, and tools that
 can help you bring your algorithms to the real robot, including [domain-randomization](https://blog.openai.com/spam-detection-in-the-physical-world/), accurate camera distortion, and differential-drive physics (and most importantly, realistic waddling).
 
 ```{figure} ../../_images/developer/advanced/simulator/finalmain.gif
@@ -36,6 +36,6 @@ can help you bring your algorithms to the real robot, including [domain-randomiz
 
 ```
 
-The development Gym Duckietown simulator has ended with the previous version of the codebase (`daffy`), therefore it 
+The development Gym Duckietown simulator has ended with the previous version of the codebase (`daffy`), therefore it
 is recommended that you refer [to the daffy documentation](https://docs.duckietown.com/daffy/devmanual-software/intermediate/simulation/gym-simulation-in-duckietown.html)
-for details about its use and features. 
+for details about its use and features.

@@ -1,14 +1,14 @@
 ```{seo}
-:description: Duckietown introduction to Neural Networks, the building blocks of modern AI. 
+:description: Duckietown introduction to Neural Networks, the building blocks of modern AI.
 :keywords: neural networks, AI, machine learning, duckietown, gradient descent, neuron, ML, compositionality, differentiability
 ```
 
 (slides-and-recordings-intro-neural-networks)=
 # Introduction to Neural Networks
 
-Neural networks have become a nearly ubiquitous tool in visual perception systems for robots. 
+Neural networks have become a nearly ubiquitous tool in visual perception systems for robots.
 
-This is due largely to two key properties that they hold: compositionality and differentiability. 
+This is due largely to two key properties that they hold: compositionality and differentiability.
 
 Together, these allow us to compose the atomic building blocks (neurons) and learn parameters by propagating gradients.
 

@@ -11,13 +11,13 @@ This page describes the general procedure for creating a learning experience (LX
 1. The **LX recipe**, which is typically created by the instructor and hidden from the students
 2. The **LX repository itself**, which houses the notebooks and whatever code structure should be visible to the student
 
-An additional third repository is recommended, which has the same structure as the LX repository but contains 
-the **solutions** and is kept private. 
+An additional third repository is recommended, which has the same structure as the LX repository but contains
+the **solutions** and is kept private.
 
 ```{tip}
 While developing a new LX, it is good practice to start working on the solution first. Once the solution is
-in place, parts of the solution with relative pedagogical value can be stripped out and replaced with 
-placeholders effectively producing a boilerplate code that can populate the learner's workspace. 
+in place, parts of the solution with relative pedagogical value can be stripped out and replaced with
+placeholders effectively producing a boilerplate code that can populate the learner's workspace.
 This procedure guarantees that the resulting boilerplate is (by construction) enough for the learner to
 achieve a valid solution.
 ```
@@ -35,30 +35,30 @@ experience.
 
 As mentioned, the LX recipe repository contains all the configurations and details about how the LX should be run
 that are not important for the student to see. In this section we will list the different components that you may
-want to edit for the definition of your LX. 
+want to edit for the definition of your LX.
 
 ### Dependencies
 
-Specify any `apt` or `python` dependencies needed in the 
-`dependencies-apt.txt` and 
-`dependencies-py3.txt,` respectively in the recipe repository. 
+Specify any `apt` or `python` dependencies needed in the
+`dependencies-apt.txt` and
+`dependencies-py3.txt,` respectively in the recipe repository.
 
 ### Base Image
 
 You need to specify a `BASE_IMAGE` in the `Dockerfile` in the recipe repository. This
-choice defines what is already in the docker image and can be used in the 
+choice defines what is already in the docker image and can be used in the
 running of the exercise.
 
 Reasonable choices could be:
 
  - [`dt-commons`](https://github.com/duckietown/dt-commons): likely a good choice
-if the LX is pure python and doesn't require ROS.
+if the LX is pure python and does not require ROS.
  - [`dt-ros-commons`](https://github.com/duckietown/dt-ros-commons): likely
-a good choice if you would like to use ROS in a standalone fashion (i.e., 
+a good choice if you would like to use ROS in a standalone fashion (i.e.,
 your exercise includes all the nodes that are needed)
- - [`dt-core`](https://github.com/duckietown/dt-core): a good choice if you 
-would like to use one or more of the nodes defined in the packages 
-in the `dt-core` repository. 
+ - [`dt-core`](https://github.com/duckietown/dt-core): a good choice if you
+would like to use one or more of the nodes defined in the packages
+in the `dt-core` repository.
 
 Coming soon:
  - ROS2 base image
@@ -80,8 +80,8 @@ you will need to update:
 
 By default, each LX is compatible with the [Duckiematrix](the-duckiematrix-manual).
 See the [general procedure for running LXs](duckiebot-lxs)
-for more details on how to deploy this capability through the `dts code` API. 
-You can define the exact configuration of the Duckiematrix environment in the 
+for more details on how to deploy this capability through the `dts code` API.
+You can define the exact configuration of the Duckiematrix environment in the
 `assets/duckiematrix` directory in the recipe repository. For more details see
 [](advanced-duckiematrix-development).
 
@@ -100,21 +100,21 @@ For inspiration you could take look at [the existing LXs](db-lx-intro).
 ### Launchers
 
 You will need to define exactly what happens when the student executes the `dts workbench` command. The default
-is that this will run a "launcher" called `default.sh`, defined in the `launchers` directory of the recipe repository. 
-The launcher in the template simply runs a python file (`__solution/main.py`). In the case of ROS-based LX, you would 
+is that this will run a "launcher" called `default.sh`, defined in the `launchers` directory of the recipe repository.
+The launcher in the template simply runs a python file (`__solution/main.py`). In the case of ROS-based LX, you would
 likely want to call a ROS launch file with `roslaunch`.
 
 ### Code Hidden from Students
 
-You can equally write any code that you don't want the students to see and include it in the `packages` directory
-in the recipe repository. For example, this could be the file that calls the functions that are going to be 
-written by the student as part of the LX which is in turn run by the launcher. You could also define ROS packages 
-that will be used but are not important for the student to understand (such as debugging or visualization tools). 
+You can equally write any code that you do not want the students to see and include it in the `packages` directory
+in the recipe repository. For example, this could be the file that calls the functions that are going to be
+written by the student as part of the LX which is in turn run by the launcher. You could also define ROS packages
+that will be used but are not important for the student to understand (such as debugging or visualization tools).
 
 
 ## The LX Repository
 
-The LX repository that you create is the one that the students will fork to complete the learning experience. 
+The LX repository that you create is the one that the students will fork to complete the learning experience.
 
 ### The `.dtproject` File
 
@@ -137,19 +137,19 @@ RECIPE_BRANCH=<RECIPE_BRANCH_HERE>
 RECIPE_LOCATION=<RECIPE_LOCATION_HERE>
 ```
 
-You should: 
+You should:
 
  - Change the `<LX_NAME_HERE>` to the name of your LX
  - Change the `<RECIPE_REPOSITORY_HERE`> to the name of the recipe repository that you have created
  - Change the `<RECIPE_BRANCH_HERE`> to the name of the branch that you want to use in your recipe repository
- - Change the `<RECIPE_LOCATION_HERE`> to the path within the recipe repo where the recipe is store. If you used the 
+ - Change the `<RECIPE_LOCATION_HERE`> to the path within the recipe repo where the recipe is store. If you used the
 template then this can simply be left blank
 
 
 ### Notebooks
 
-In the `notebooks` directory you can place [jupyter notebooks](https://jupyter.org/). These will be executed in 
-VSCode when the student executes: 
+In the `notebooks` directory you can place [jupyter notebooks](https://jupyter.org/). These will be executed in
+VSCode when the student executes:
 
 ```shell
 dts code editor
@@ -159,11 +159,11 @@ dts code editor
 
 The code for the LX will go into the `packages` directory in the LX repo. It can be a good idea to provide some boilerplate
 code so that the students just have to fill in specific parts. It is also recommended that the LX always "work" in the sense
-that if the student runs the launcher through `dts code workbench` nothing breaks. The solution might not be properly 
-implemented, but there are no compilation errors. 
+that if the student runs the launcher through `dts code workbench` nothing breaks. The solution might not be properly
+implemented, but there are no compilation errors.
 
 
 ```{attention}
-When working in the development workspace, you can append the `--recipe` flag to any `dts code` commands 
+When working in the development workspace, you can append the `--recipe` flag to any `dts code` commands
 and specify your local development version of the recipe.
 ```

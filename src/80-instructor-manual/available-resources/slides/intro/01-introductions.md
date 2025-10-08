@@ -2,7 +2,7 @@
 # Getting started
 
 ```{seo}
-:description: Duckietown class recordings and lecture slides. Introduction to self-driving cars and to the Self-Driving cars with Duckietown course. 
+:description: Duckietown class recordings and lecture slides. Introduction to self-driving cars and to the Self-Driving cars with Duckietown course.
 :keywords: duckietown introduction, introduction, self-driving cars introduction, autonomous vehicles introduction
 ```
 

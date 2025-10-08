@@ -14,7 +14,7 @@
 ```
 
 
-If you have followed this manual in order, `Git` and `Git Large File System (LFS)` have already been installed during : [](setup-sw-dependencies-installation). 
+If you have followed this manual in order, `Git` and `Git Large File System (LFS)` have already been installed during : [](setup-sw-dependencies-installation).
 
 Since _repetita iuvant_, try again:
 
@@ -71,11 +71,11 @@ Before you generate a new SSH key, you should check your local machine for exist
     * `id_ed25519.pub`
 
     ```{tip}
-    If you receive an error that `~/.ssh` doesn't exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
+    If you receive an error that `~/.ssh` does not exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
     ```
 
 4. Either generate a new SSH key or upload an existing key.
-    * If you don't have a supported public and private key pair, or don't wish to use any that are available, generate a new SSH key.
+    * If you do not have a supported public and private key pair, or do not wish to use any that are available, generate a new SSH key.
     * If you see an existing public and private key pair listed (for example, `id_rsa.pub` and `id_rsa`) that you would like to use to connect to GitHub, you can add the key to the ssh-agent.
 ````
 
@@ -95,11 +95,11 @@ Before you generate a new SSH key, you should check your local machine for exist
     * `id_ecdsa.pub`
     * `id_ed25519.pub`
     ```{tip}
-    If you receive an error that `~/.ssh` doesn't exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
+    If you receive an error that `~/.ssh` does not exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
     ```
 
 4. Either generate a new SSH key or upload an existing key.
-    * If you don't have a supported public and private key pair, or don't wish to use any that are available, generate a new SSH key.
+    * If you do not have a supported public and private key pair, or do not wish to use any that are available, generate a new SSH key.
     * If you see an existing public and private key pair listed (for example, `id_rsa.pub` and `id_rsa`) that you would like to use to connect to GitHub, you can add the key to the ssh-agent.
 ````
 
@@ -119,11 +119,11 @@ Before you generate a new SSH key, you should check your local machine for exist
     * `id_ecdsa.pub`
     * `id_ed25519.pub`
     ```{tip}
-    If you receive an error that `~/.ssh` doesn't exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
+    If you receive an error that `~/.ssh` does not exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
     ```
 
 4. Either generate a new SSH key or upload an existing key.
-    * If you don't have a supported public and private key pair, or don't wish to use any that are available, generate a new SSH key.
+    * If you do not have a supported public and private key pair, or do not wish to use any that are available, generate a new SSH key.
     * If you see an existing public and private key pair listed (for example, `id_rsa.pub` and `id_rsa`) that you would like to use to connect to GitHub, you can add the key to the ssh-agent.
 ````
 `````
@@ -144,7 +144,7 @@ You can generate a new SSH key on your local machine. After you generate the key
     ssh-keygen -t ed25519 -C "your_email@example.com"
     ```
     ````{note}
-    If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+    If you are using a legacy system that does not support the Ed25519 algorithm, use:
     ```
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ```
@@ -153,7 +153,7 @@ You can generate a new SSH key on your local machine. After you generate the key
     ```
     > Generating public/private ALGORITHM key pair.
     ```
-    When you're prompted to "Enter a file in which to save the key", you can press `Enter` to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key, in which case we recommend creating a custom-named SSH key. To do so, type the default file location and replace `id_ALGORITHM` with your custom key name.
+    When you are prompted to "Enter a file in which to save the key", you can press `Enter` to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key, in which case we recommend creating a custom-named SSH key. To do so, type the default file location and replace `id_ALGORITHM` with your custom key name.
     ```
     > Enter a file in which to save the key (/home/YOU/.ssh/id_ALGORITHM):[Press enter]
     ```
@@ -175,7 +175,7 @@ You can generate a new SSH key on your local machine. After you generate the key
     ssh-keygen -t ed25519 -C "your_email@example.com"
     ```
     ````{note}
-    If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+    If you are using a legacy system that does not support the Ed25519 algorithm, use:
     ```
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ```
@@ -184,7 +184,7 @@ You can generate a new SSH key on your local machine. After you generate the key
     ```
     > Generating public/private ALGORITHM key pair.
     ```
-    When you're prompted to "Enter a file in which to save the key", you can press `Enter` to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key, in which case we recommend creating a custom-named SSH key. To do so, type the default file location and replace `id_ALGORITHM` with your custom key name.
+    When you are prompted to "Enter a file in which to save the key", you can press `Enter` to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key, in which case we recommend creating a custom-named SSH key. To do so, type the default file location and replace `id_ALGORITHM` with your custom key name.
     ```
     > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):[Press enter]
     ```
@@ -206,7 +206,7 @@ You can generate a new SSH key on your local machine. After you generate the key
     ssh-keygen -t ed25519 -C "your_email@example.com"
     ```
     ````{note}
-    If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+    If you are using a legacy system that does not support the Ed25519 algorithm, use:
     ```
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ```
@@ -215,7 +215,7 @@ You can generate a new SSH key on your local machine. After you generate the key
     ```
     > Generating public/private ALGORITHM key pair.
     ```
-    When you're prompted to "Enter a file in which to save the key", you can press `Enter` to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key, in which case we recommend creating a custom-named SSH key. To do so, type the default file location and replace `id_ALGORITHM` with your custom key name.
+    When you are prompted to "Enter a file in which to save the key", you can press `Enter` to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key, in which case we recommend creating a custom-named SSH key. To do so, type the default file location and replace `id_ALGORITHM` with your custom key name.
     ```
     > Enter file in which to save the key (c:\Users\YOU\.ssh\id_ALGORITHM):[Press enter]
     ```
@@ -234,7 +234,7 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
 
 ``````{tab-set}
 ````{tab-item} Ubuntu
-Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key. 
+Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key.
 
 1. Start the ssh-agent in the background.
     ```
@@ -263,14 +263,14 @@ Before adding a new SSH key to the ssh-agent to manage your keys, you should hav
     ```
     Depending on your environment, you may need to use a different command. For example, you may need to use root access by running `sudo -s -H` before starting the ssh-agent, or you may need to use `exec ssh-agent bash` or `exec ssh-agent zsh` to run the ssh-agent.
 
-2. If you're using macOS Sierra 10.12.2 or later, you will need to modify your `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+2. If you are using macOS Sierra 10.12.2 or later, you will need to modify your `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
 
     * First, check to see if your `~/.ssh/config` file exists in the default location.
     ```
     $ open ~/.ssh/config
     > The file /Users/YOU/.ssh/config does not exist.
     ```
-    * If the file doesn't exist, create the file.
+    * If the file does not exist, create the file.
     ```
     touch ~/.ssh/config
     ```
@@ -299,7 +299,7 @@ Before adding a new SSH key to the ssh-agent to manage your keys, you should hav
 
     The `--apple-use-keychain` option is in Apple's standard version of `ssh-add`. In macOS versions prior to Monterey (12.0), the `--apple-use-keychain` and `--apple-load-keychain` flags used the syntax `-K` and `-A`, respectively.
 
-    If you don't have Apple's standard version of `ssh-add` installed, you may receive an error.
+    If you do not have Apple's standard version of `ssh-add` installed, you may receive an error.
 
     If you continue to be prompted for your passphrase, you may need to add the command to your `~/.zshrc` file (or your `~/.bashrc` file for bash).
     ```
@@ -308,7 +308,7 @@ Before adding a new SSH key to the ssh-agent to manage your keys, you should hav
 `````
 
 ````{tab-item} Windows
-Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key. 
+Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key.
 
 If you have [GitHub Desktop](https://desktop.github.com/) installed, you can use it to clone repositories and not deal with SSH keys.
 
@@ -447,9 +447,9 @@ You can add an SSH key and use it for authentication, or commit signing, or both
 
 After adding a new SSH authentication key to your account on GitHub.com, you can reconfigure any local repositories to use SSH.
 
-1. Copy the SSH public key to your clipboard. 
+1. Copy the SSH public key to your clipboard.
 
-    If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don't add any newlines or whitespace.
+    If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, do not add any newlines or whitespace.
     ```
     $ cat ~/.ssh/id_ed25519.pub
     # Then select and copy the contents of the id_ed25519.pub file
@@ -460,19 +460,19 @@ After adding a new SSH authentication key to your account on GitHub.com, you can
     ```
 
 2. In the upper-right corner of any page on GitHub, click your profile photo, then click `Settings`.
-   
+
 3. In the "Access" section of the sidebar, click <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-key" aria-hidden="true"><path d="M10.5 0a5.499 5.499 0 1 1-1.288 10.848l-.932.932a.749.749 0 0 1-.53.22H7v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22H5v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22h-2A1.75 1.75 0 0 1 0 14.25v-2c0-.199.079-.389.22-.53l4.932-4.932A5.5 5.5 0 0 1 10.5 0Zm-4 5.5c-.001.431.069.86.205 1.269a.75.75 0 0 1-.181.768L1.5 12.56v1.69c0 .138.112.25.25.25h1.69l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l1.023-1.025a.75.75 0 0 1 .768-.18A4 4 0 1 0 6.5 5.5ZM11 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> `SSH and GPG keys`.
-   
+
 4. Click `New SSH key` or `Add SSH key`.
-   
-5. In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
-   
+
+5. In the "Title" field, add a descriptive label for the new key. For example, if you are using a personal laptop, you might call this key "Personal laptop".
+
 6. Select the type of key, either authentication or signing.
-    
+
 7. In the "Key" field, paste your public key.
-    
+
 8. Click `Add SSH key`.
-    
+
 9. If prompted, confirm access to your account on GitHub.
 ````
 
@@ -481,31 +481,31 @@ You can add an SSH key and use it for authentication, or commit signing, or both
 
 After adding a new SSH authentication key to your account on GitHub.com, you can reconfigure any local repositories to use SSH.
 
-1. Copy the SSH public key to your clipboard. 
+1. Copy the SSH public key to your clipboard.
 
-    If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don't add any newlines or whitespace.
+    If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, do not add any newlines or whitespace.
     ```
     $ pbcopy < ~/.ssh/id_ed25519.pub
     # Copies the contents of the id_ed25519.pub file to your clipboard
     ```
     ```{tip}
-    If `pbcopy` isn't working, you can locate the hidden `.ssh` folder, open the file in your favorite text editor, and copy it to your clipboard.
+    If `pbcopy` is not working, you can locate the hidden `.ssh` folder, open the file in your favorite text editor, and copy it to your clipboard.
     ```
 
 2. In the upper-right corner of any page on GitHub, click your profile photo, then click `Settings`.
-   
+
 3. In the "Access" section of the sidebar, click <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-key" aria-hidden="true"><path d="M10.5 0a5.499 5.499 0 1 1-1.288 10.848l-.932.932a.749.749 0 0 1-.53.22H7v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22H5v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22h-2A1.75 1.75 0 0 1 0 14.25v-2c0-.199.079-.389.22-.53l4.932-4.932A5.5 5.5 0 0 1 10.5 0Zm-4 5.5c-.001.431.069.86.205 1.269a.75.75 0 0 1-.181.768L1.5 12.56v1.69c0 .138.112.25.25.25h1.69l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l1.023-1.025a.75.75 0 0 1 .768-.18A4 4 0 1 0 6.5 5.5ZM11 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> `SSH and GPG keys`.
-   
+
 4. Click `New SSH key` or `Add SSH key`.
-   
-5. In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
-   
+
+5. In the "Title" field, add a descriptive label for the new key. For example, if you are using a personal laptop, you might call this key "Personal laptop".
+
 6. Select the type of key, either authentication or signing.
-    
+
 7. In the "Key" field, paste your public key.
-    
+
 8. Click `Add SSH key`.
-    
+
 9. If prompted, confirm access to your account on GitHub.
 ````
 
@@ -514,15 +514,15 @@ You can add an SSH key and use it for authentication, or commit signing, or both
 
 After adding a new SSH authentication key to your account on GitHub.com, you can reconfigure any local repositories to use SSH.
 
-1. Copy the SSH public key to your clipboard. 
+1. Copy the SSH public key to your clipboard.
 
-    If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don't add any newlines or whitespace.
+    If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, do not add any newlines or whitespace.
     ```
     $ clip < ~/.ssh/id_ed25519.pub
     # Copies the contents of the id_ed25519.pub file to your clipboard
     ```
     ````{note}
-    * With Windows Subsystem for Linux (WSL), you can use `clip.exe`. Otherwise if `clip` isn't working, you can locate the hidden `.ssh` folder, open the file in your favorite text editor, and copy it to your clipboard.
+    * With Windows Subsystem for Linux (WSL), you can use `clip.exe`. Otherwise if `clip` is not working, you can locate the hidden `.ssh` folder, open the file in your favorite text editor, and copy it to your clipboard.
     * On newer versions of Windows that use the Windows Terminal, or anywhere else that uses the PowerShell command line, you may receive a `ParseError` stating that `The '&lt;' operator is reserved for future use.` In this case, the following alternative `clip` command should be used:
     ```
     $ cat ~/.ssh/id_ed25519.pub | clip
@@ -531,19 +531,19 @@ After adding a new SSH authentication key to your account on GitHub.com, you can
     ````
 
 2. In the upper-right corner of any page on GitHub, click your profile photo, then click `Settings`.
-   
+
 3. In the "Access" section of the sidebar, click <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-key" aria-hidden="true"><path d="M10.5 0a5.499 5.499 0 1 1-1.288 10.848l-.932.932a.749.749 0 0 1-.53.22H7v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22H5v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22h-2A1.75 1.75 0 0 1 0 14.25v-2c0-.199.079-.389.22-.53l4.932-4.932A5.5 5.5 0 0 1 10.5 0Zm-4 5.5c-.001.431.069.86.205 1.269a.75.75 0 0 1-.181.768L1.5 12.56v1.69c0 .138.112.25.25.25h1.69l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l1.023-1.025a.75.75 0 0 1 .768-.18A4 4 0 1 0 6.5 5.5ZM11 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> `SSH and GPG keys`.
-   
+
 4. Click `New SSH key` or `Add SSH key`.
-   
-5. In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
-   
+
+5. In the "Title" field, add a descriptive label for the new key. For example, if you are using a personal laptop, you might call this key "Personal laptop".
+
 6. Select the type of key, either authentication or signing.
-    
+
 7. In the "Key" field, paste your public key.
-    
+
 8. Click `Add SSH key`.
-    
+
 9. If prompted, confirm access to your account on GitHub.
 `````
 ``````
@@ -570,7 +570,7 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
 
 3. Verify that the fingerprint in the message you see matches [GitHub's public key fingerprint](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints). If it does, then type `yes`:
     ```
-    > Hi USERNAME! You've successfully authenticated, but GitHub does not
+    > Hi USERNAME! You have successfully authenticated, but GitHub does not
     > provide shell access.
     ```
     You may see this error message:
@@ -580,7 +580,7 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
     debug1: No more authentication methods to try.
     Permission denied (publickey).
     ```
-    This is a known problem with certain Linux distributions. 
+    This is a known problem with certain Linux distributions.
     ```{note}
     The remote command should exit with code 1.
     ```
@@ -605,7 +605,7 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
 
 3. Verify that the fingerprint in the message you see matches [GitHub's public key fingerprint](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints). If it does, then type `yes`:
     ```
-    > Hi USERNAME! You've successfully authenticated, but GitHub does not
+    > Hi USERNAME! You have successfully authenticated, but GitHub does not
     > provide shell access.
     ```
     ```{note}
@@ -632,7 +632,7 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
 
 3. Verify that the fingerprint in the message you see matches [GitHub's public key fingerprint](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints). If it does, then type `yes`:
     ```
-    > Hi USERNAME! You've successfully authenticated, but GitHub does not
+    > Hi USERNAME! You have successfully authenticated, but GitHub does not
     > provide shell access.
     ```
     ```{note}
@@ -644,11 +644,11 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
 `````
 
 ```{seealso}
-If you have never heard of Git or GitHub before, you can do some background reading here: 
+If you have never heard of Git or GitHub before, you can do some background reading here:
 
 * See: [GitHub Hello World](https://guides.github.com/activities/hello-world/)
 
 * See: [GitHub Documentation](https://guides.github.com/introduction/Llow/)
 
-You can then go through the [Duckietown introduction to version control with Git](sec:developer_basics_git). 
+You can then go through the [Duckietown introduction to version control with Git](sec:developer_basics_git).
 ```

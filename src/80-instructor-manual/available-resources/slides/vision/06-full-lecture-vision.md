@@ -8,7 +8,7 @@
 
 ## Projective Geometry
 
-This lectures introduces [](slides-and-recordings-projective-geometry), [](slides-and-recordings-camera-calibration), as well as more detail on homographies and perspective projections. 
+This lectures introduces [](slides-and-recordings-projective-geometry), [](slides-and-recordings-camera-calibration), as well as more detail on homographies and perspective projections.
 
 ```{slides} ../../../../_assets/instructor-manual/projective-geometry.pdf
 ```
@@ -16,7 +16,7 @@ This lectures introduces [](slides-and-recordings-projective-geometry), [](slide
 
 ## Image Processing
 
-This lecture discusses [](slides-and-recordings-image-filtering) in more detail, including edge detectors (with a particular focus on the Canny-edge detector), image features, corner detectors and scale-invariant descriptors (such as SIFT). 
+This lecture discusses [](slides-and-recordings-image-filtering) in more detail, including edge detectors (with a particular focus on the Canny-edge detector), image features, corner detectors and scale-invariant descriptors (such as SIFT).
 
 ```{slides} ../../../../_assets/instructor-manual/image-processing.pdf
 ```

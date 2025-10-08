@@ -2,7 +2,7 @@
 # Duckietown Account
 
 ```{seo}
-:description: Learn how to create a Duckietown account and get a token to authenticate your Duckietown Shell. 
+:description: Learn how to create a Duckietown account and get a token to authenticate your Duckietown Shell.
 :keywords: Duckietown, setup, accounts, Duckietown Hub, Duckietown token, DTS
 ```
 
@@ -23,7 +23,7 @@ Take note of your Duckietown Hub login credentials and move on to the next step.
 (duckietown-token)=
 ## Duckietown Token
 
-Once logged in your Duckietown Hub account, go to [https://hub.duckietown.com/profile/](https://hub.duckietown.com/profile/) and scroll down until you find your Duckietown token. Take note of this token and do not share it publicly. 
+Once logged in your Duckietown Hub account, go to [https://hub.duckietown.com/profile/](https://hub.duckietown.com/profile/) and scroll down until you find your Duckietown token. Take note of this token and do not share it publicly.
 
 ```{figure} ../../_images/setup/accounts/dt-token.png
 :alt: example duckietown token dt2

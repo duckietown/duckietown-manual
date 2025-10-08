@@ -6,7 +6,7 @@
 ```{needget}
 - A correctly assembled Duckiebot: [](db-testing-hw-components)
 ---
-- How to move a manually control a Duckiebot's movement through the "Keyboard Controller" 
+- How to move a manually control a Duckiebot's movement through the "Keyboard Controller"
 ```
 
 (ops-db-subsys-make-it-move)=
@@ -24,7 +24,7 @@ An easy way to make your Duckiebot move is by using the `Keyboard Controller`.
 :width: 60%
 :alt: the duckietown keyboard controller is a software tool that enables manual control of Duckiebots
 
-The Keyboard Controller enables manual control of the Duckiebot. 
+The Keyboard Controller enables manual control of the Duckiebot.
 ```
 
 To open the `Keyboard Controller`, run:
@@ -79,7 +79,7 @@ The <kbd>F</kbd> key's function (`Autopilot`) requires software, such as for [](
 ```{trouble}
 My Duckiebot does not move.
 ---
-Before trying to use the `Keyboard Controller`, make sure that it is active by selecting it's window.
+Before trying to use the `Keyboard Controller`, make sure that it is active by selecting its window.
 ```
 
 ```{trouble}

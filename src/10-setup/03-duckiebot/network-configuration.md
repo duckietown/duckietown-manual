@@ -9,14 +9,14 @@
 ```{needget}
 * [An initialized Duckiebot](duckiebot-boot)
 * A network router with internet connection
-* (optional) an ethernet cable 
+* (optional) an ethernet cable
 ---
 * Learn how to change network configuration on the Duckiebot
 * Basics for debugging network challenges
 * A connected Duckiebot
 ```
 
-Most `dts` commands rely on the connectivity between the Duckiebot, the computer used to interact with it, and the internet. 
+Most `dts` commands rely on the connectivity between the Duckiebot, the computer used to interact with it, and the internet.
 
 To make sure all commands work, the Duckiebot and the computer must:
 
@@ -24,7 +24,7 @@ To make sure all commands work, the Duckiebot and the computer must:
 * the network should have access to the internet.
 
 ```{warning}
-Networks are the most common blocker when using Duckietown. Making sure this step is completely correctly will remove many future headaches. 
+Networks are the most common blocker when using Duckietown. Making sure this step is completely correctly will remove many future headaches.
 ```
 
 ## Wi-Fi connection
@@ -37,7 +37,7 @@ Your network is set up correctly if you can:
 
     ping ROBOT_NAME.local
 
-while being connected to the internet. You can test this by opening a browser, or, e.g., 
+while being connected to the internet. You can test this by opening a browser, or, e.g.,
 
     ping 8.8.8.8
 
@@ -68,9 +68,9 @@ It is possible to add, remove, or edit networks to which a Duckiebot will connec
 (setup-uni-network)=
 ### A word on "corporate" networks, e.g., `eduroam`
 
-Some university networks (e.g., the global `eduroam`) have multiple layers of authentication, i.e., a password is not sufficient to access the network. In these cases, the default network configuration settings used by Duckietown are insufficient to connect to the network. 
+Some university networks (e.g., the global `eduroam`) have multiple layers of authentication, i.e., a password is not sufficient to access the network. In these cases, the default network configuration settings used by Duckietown are insufficient to connect to the network.
 
-It is possible to edit the `wpa_supplicant.conf` file in your Duckiebot to connect to `eduroam`, but data specific to your university will be required. You will have to coordinate with your network administrator to find out this data. 
+It is possible to edit the `wpa_supplicant.conf` file in your Duckiebot to connect to `eduroam`, but data specific to your university will be required. You will have to coordinate with your network administrator to find out this data.
 
 Here is an [example `wpa_supplicant.conf` setup for the University of Bristol `eduroam`](https://www.wireless.bris.ac.uk/eduroam/instructions/go-wpasup/).
 
@@ -88,7 +88,7 @@ These tools are typically deactivated in corporate networks, like in universitie
 
 - use a phone (with unlimited data plan) as hot spot;
 - work from your home network;
-- create a temporary "pirate" network by plugging in a router at work while your IT figures out the main network settings. 
+- create a temporary "pirate" network by plugging in a router at work while your IT figures out the main network settings.
 
 
 ## Ethernet connection between Duckiebot and Base Station

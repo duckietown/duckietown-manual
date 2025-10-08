@@ -2,7 +2,7 @@
 # On Lithium-Ion Batteries
 
 ```{seo}
-:description: Batteries are potentially dangerous and should be handled with care. Learn about Duckiebot batteries and how to handle them. 
+:description: Batteries are potentially dangerous and should be handled with care. Learn about Duckiebot batteries and how to handle them.
 :keywords: Duckietown, Duckiebot, batteries, duckiebattery, duckie-power-bank, handling batteries, Duckiebot autonomy, duckiebattery state diagram
 ```
 
@@ -18,16 +18,16 @@
 
 Duckiebots support different battery (power bank) models, although not all will work.
 
-The Duckiebattery was designed in house to right power requirements, diagnostics and desirable features in robotics applications.  
+The Duckiebattery was designed in house to right power requirements, diagnostics and desirable features in robotics applications.
 
 (db-opmanual-dtbattery-v2)=
 ## The Duckiebattery (`DB-C-DBatt`)
 
 This battery has been the standard battery for the Duckiebots since 2021. For example, models `DB21M`, `DB21J`, and `DBR4` use this battery.
 
-The Duckiebattery is a special battery. It is special because it is programmable, smart, and designed specifically for Duckiebots. 
+The Duckiebattery is a special battery. It is special because it is programmable, smart, and designed specifically for Duckiebots.
 
-Using this battery will allow your Duckiebot to monitor the state of charge and other diagnostics, and shutdown via software. Moreover, it enables advanced features such as auto-charging in Autolabs, because it will guarantee power to the onboard computer when being plugged in or out of charge. 
+Using this battery will allow your Duckiebot to monitor the state of charge and other diagnostics, and shutdown via software. Moreover, it enables advanced features such as auto-charging in Autolabs, because it will guarantee power to the onboard computer when being plugged in or out of charge.
 
 <!--
 ```{figure} ../../_images/preliminaries_hardware/chap_2_1_images/DB-C-DBatt_real2.jpg
@@ -65,9 +65,9 @@ The Duckiebattery is a 5V 2A power bank with two USB-A outputs designed for robo
 - Weight: 189g (fully charged)
 
 ```{caution}
-Lithium-ion batteries like the Duckiebattery are potentially dangerous and must be handled with care. 
+Lithium-ion batteries like the Duckiebattery are potentially dangerous and must be handled with care.
 ```
-Here are some things to do and not to do. 
+Here are some things to do and not to do.
 
 ```{warning}
 Keep reading the following safety precautions: do not skip this section.
@@ -79,7 +79,7 @@ Keep reading the following safety precautions: do not skip this section.
 ```{admonition} Things to do
 :class: seealso
 
-- Dispose of the battery pack immediately if it has been subject to moisture and/or the case is eminently damaged. 
+- Dispose of the battery pack immediately if it has been subject to moisture and/or the case is eminently damaged.
 - In case of fire use a CO2 extinguisher.
 - Store preferably in a cool, dry, and ventilated area subject to moderate temperature change.
 - Storage at high temperatures (>50 C) should be avoided.
@@ -154,7 +154,7 @@ After setting the battery in `idle` mode, charge it by connecting a 5V 2A power 
 Charging the Duckiebattery.
 ```
 
-When the battery's state of charge is particularly depleted (e.g., as soon as you receive the battery), the LEDs might be unresponsive for up to 30 minutes while receiving charge. 
+When the battery's state of charge is particularly depleted (e.g., as soon as you receive the battery), the LEDs might be unresponsive for up to 30 minutes while receiving charge.
 
 <!--
 [comment]: <> (<div figure-id="" figure-caption="Charging the Duckiebattery.">)
@@ -176,7 +176,7 @@ The Duckiebattery has several operation modes (states), the most relevant of whi
 :align: center
 :alt: Duckietown Duckiebattery state diagram
 
-State diagram for the Duckiebattery. 
+State diagram for the Duckiebattery.
 ```
 
 (db-opmanual-dtbattery-v2-protection-mode)=
@@ -212,7 +212,7 @@ Duckiebattery outputs behave differently.
 [comment]: <> (</div>)
 -->
 
-- USB OUT-1: Connect this output to a non-sensitive power load, i.e., motor or LEDs. This output will experience short power drops when plugging and unplugging the charger cable.    
+- USB OUT-1: Connect this output to a non-sensitive power load, i.e., motor or LEDs. This output will experience short power drops when plugging and unplugging the charger cable.
 
 - USB OUT-2: this is a 5V 2A USB output, uninterrupted by the charging process or the status of USB OUT-1. This port should be connected to the computing unit (i.e., NVIDIA Jetson Nano or Raspberry Pi) to allow the unit not to restart when plugging or unplugging the charger of the battery.
 
@@ -242,7 +242,7 @@ There can be several reasons why a charge is not being accepted. Below are the m
 
 - The input voltage is too low or too high. Make sure you apply 5V via the micro USB connector
 
-- The battery is in battery protection mode and does not look like it's charging, but it is. Come back in >30 minutes and press the button once to enter `idle` mode.
+- The battery is in battery protection mode and does not look like it is charging, but it is. Come back in >30 minutes and press the button once to enter `idle` mode.
 
 - The battery is in a fault state. This can be caused by over-temperature on the battery cell and/or its internal PCB. Leave the battery to cool down for 1h then attempt to charge it again.
 ```
@@ -262,7 +262,7 @@ There can be several reasons why the USB output is not working. Below are the mo
 ```
 <!--
 (db-opmanual-dtbattery-v1)=
-## The Duckie-power-bank 
+## The Duckie-power-bank
 
 The Duckie-power-bank (or Duckiebattery version 1) is the standard power source for Duckiebots in `DB18` and `DB19` configurations. Duckie-power-banks are easily recognizable:
 
@@ -373,7 +373,7 @@ The output ports A and B have an unloaded output voltage of around 5.1V. To turn
 
 The output ports will automatically turn off if less than 100mA is being drawn.
 
-To turn the outputs back on simply push the button or reconnect the USB connector.  
+To turn the outputs back on simply push the button or reconnect the USB connector.
 
 The combined output current is limited to 2.8A.
 

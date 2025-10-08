@@ -12,7 +12,7 @@
 - A working Duckiebot, i.e., one that can move, see, and shine its LEDs.
 ```
 
-After having validated the Duckiebot assembly by assessing that all hardware components are recognized and functional, in this section we perform subsystem-level testing, while at the same time gaining familiarity with basic Duckiebot software tools, interfacing commands and functionalities. 
+After having validated the Duckiebot assembly by assessing that all hardware components are recognized and functional, in this section we perform subsystem-level testing, while at the same time gaining familiarity with basic Duckiebot software tools, interfacing commands and functionalities.
 
 
 ```{tableofcontents}

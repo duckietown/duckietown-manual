@@ -6,6 +6,9 @@ html/*
 pdf/*
 !pdf/PDF_WILL_BE_GENERATED_HERE
 
+# jupyter-book build artifacts
+src/_build/
+
 # otherwise CI thinks index not clean
 *.resolved
 

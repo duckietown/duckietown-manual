@@ -12,7 +12,7 @@
 (setup-account-stack-overflow)=
 # Joining the Duckietown Archives
 
-The "[Duckietown Archives](https://stackoverflowteams.com/c/duckietown)" are a private Stack Overflow space with a collection of technical Q&As. 
+The "[Duckietown Archives](https://stackoverflowteams.com/c/duckietown)" are a private Stack Overflow space with a collection of technical Q&As.
 
 - Access is free, but restricted
 - Questions posted in the Duckietown Archives are the most likely to be answered
@@ -23,13 +23,13 @@ You can self-invite by first joining the Duckietown Community on Slack, and then
 ## Access Troubleshooting
 
 ```{trouble}
-The invitation bot is down, I can't self-invite. 
+The invitation bot is down, I cannot self-invite.
 ---
-Reach out on the #help-accounts channel of the Duckietown Community. A manual invitation will have to be sent by Duckietown staff. 
+Reach out on the #help-accounts channel of the Duckietown Community. A manual invitation will have to be sent by Duckietown staff.
 ```
 
 ```{trouble}
-When I receive the invitation email, it redirects to a 404 page ("page not found"). 
+When I receive the invitation email, it redirects to a 404 page ("page not found").
 ---
-Use a different email address and repeat the self-invitation process. 
+Use a different email address and repeat the self-invitation process.
 ```

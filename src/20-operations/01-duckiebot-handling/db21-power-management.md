@@ -16,7 +16,7 @@
 (ops-db-power-mgmt)=
 # Power Management
 
-Robots, as well as humans, need energy to operate. Duckiebots take their energy from the Duckiebattery. This section covers the basic operations for power management. 
+Robots, as well as humans, need energy to operate. Duckiebots take their energy from the Duckiebattery. This section covers the basic operations for power management.
 
 (handling-tutorial-video)=
 ## Tutorial video
@@ -97,7 +97,7 @@ Otherwise, follow [](duckiebattery-update) before proceeding, or perform a [hard
 
 * **Top button shutdown**: to turn your Duckiebot off using the **top** button (**preferred**), press the **top** button (not the button on the Duckiebattery) for `5 s` and then release it.
 
-    You should see the button blinking and the screen showing "Shutdown". It will take a few seconds for the procedure to complete. 
+    You should see the button blinking and the screen showing "Shutdown". It will take a few seconds for the procedure to complete.
 
     ```{attention}
     If the screen switched to the next page and the top button did not blink, try again and fully press the **top** button for a little longer than 5 seconds.

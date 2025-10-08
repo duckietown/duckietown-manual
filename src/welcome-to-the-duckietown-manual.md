@@ -8,12 +8,12 @@
 
 Welcome to the Duckietown Manual!
 
-This book is a great place for getting started with Duckietown. 
+This book is a great place for getting started with Duckietown.
 
 It contains step-by-step instructions on how to set up your computer, assemble, calibrate, and operate a Duckiebot, along with troubleshooting tips.
 
 ```{note}
-If you are new to Duckietown, you should find a course that helps you navigate this content. For example, our [massive open online course "Self-Driving Cars with Duckietown"](https://duckietown.com/self-driving-cars-with-duckietown-mooc/). 
+If you are new to Duckietown, you should find a course that helps you navigate this content. For example, our [massive open online course "Self-Driving Cars with Duckietown"](https://duckietown.com/self-driving-cars-with-duckietown-mooc/).
 ```
 
 ```{note}
@@ -38,9 +38,9 @@ This book is structured into 3 main parts:
 
 1. The first part is about how to build and use the robots, including running the demos and learning experiences.
 2. The second part is about going further and using this platform to do more advanced things that you build.
-3. The third part is about using this platform as part of a course that you are teaching. 
+3. The third part is about using this platform as part of a course that you are teaching.
 
-Use the navigation bar on the left or below to get started. 
+Use the navigation bar on the left or below to get started.
 
 (book-dt-manual-toc)=
 ## Table of Contents

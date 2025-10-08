@@ -14,24 +14,24 @@
 (intermediate-virtual-duckietown-robots-introduction)=
 ## Introduction
 
-Virtual Duckietown robots allow for a Duckietown robot's full software stack to be run on a local machine in its own 
+Virtual Duckietown robots allow for a Duckietown robot's full software stack to be run on a local machine in its own
 Docker environment, allowing for the full simulation of any aspect of that Duckietown robot, enabling integration tests.
 
-Once a virtual Duckietown robot is running, it will behave in accordance with its physical equivalent, 
+Once a virtual Duckietown robot is running, it will behave in accordance with its physical equivalent,
 including how it responds to `dts` commands.
 
 The most common thing you will likely want to do is [create](intermediate-virtual-duckietown-robots-dts-commands-create)
-a virtual robot and then [start](intermediate-virtual-duckietown-robots-dts-commands-start) it. Once it's up and running (you 
-see it when you run the command `dts fleet discover` just like any other Duckiebot), you probably will want to 
-[attach](introduction-attaching-a-duckietown-robot-to-a-duckiematrix-entity-introduction) it to an entity in the Duckiematrix. Once this attachment is complete, 
+a virtual robot and then [start](intermediate-virtual-duckietown-robots-dts-commands-start) it. Once it is up and running (you
+see it when you run the command `dts fleet discover` just like any other Duckiebot), you probably will want to
+[attach](introduction-attaching-a-duckietown-robot-to-a-duckiematrix-entity-introduction) it to an entity in the Duckiematrix. Once this attachment is complete,
 all the data that is collected by the entity in the Duckiematrix will be fed to the virtual robot and, conversely, any
-control actions that you take with your virtual Duckiebot will be executed on the entity in the Duckiematrix. See 
-[below](intermediate-virtual-duckietown-robots-drivers-introduction) for 
-a detailed description of the supported drivers that you can use to send or receive data.  
+control actions that you take with your virtual Duckiebot will be executed on the entity in the Duckiematrix. See
+[below](intermediate-virtual-duckietown-robots-drivers-introduction) for
+a detailed description of the supported drivers that you can use to send or receive data.
 
 ## The Virtual Robot `dts` API
 
-Like most things in Duckietown, the primary way to perform operations on 
+Like most things in Duckietown, the primary way to perform operations on
 virtual robots is through the Duckietown Shell (`dts)
 
 The following is a list of operations you can perform:
