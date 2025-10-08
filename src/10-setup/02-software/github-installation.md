@@ -31,6 +31,11 @@ Use these commands to tell Git who you are, replacing `![email]` and `![full nam
     git config --global user.email "![email]"
     git config --global user.name  "![full name]"
 
+
+## GitHub setup for developers
+
+If you are planning to push to Duckietown repositories, make sure to configure your [SSH keys for password-less access to GitHub](dev-basics-git-github-setup).
+
 <!--
 ### Keep your password stored locally
 
