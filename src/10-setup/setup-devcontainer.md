@@ -92,7 +92,7 @@ This is the only workflow for running Duckietown on an Apple Silicon (M-series) 
     To start the engine, inside a terminal in the VSCode devcontainer run:
 
     ```bash
-    dts matrix engine run --sandbox
+    dts matrix engine run --sandbox --verbose
     ```
 
     To install the renderer on macOS you can download the `.app` file from [this link](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/latest-macosx). After downloading it, you can rename it to `duckiematrix.app` and move it to your `Applications` folder.
