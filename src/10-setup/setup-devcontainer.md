@@ -101,7 +101,7 @@ This is the only workflow for running Duckietown on an Apple Silicon (M-series) 
     Then you can start the Duckiematrix renderer with:
 
         cd /Applications
-        duckiematrix-0.6.1-macosx.app --args -e localhost --token "YOUR_DT2_TOKEN"
+        open duckiematrix.app --args -e localhost --token "YOUR_DT2_TOKEN"
 
     This will connect to the Duckiematrix engine running on localhost. Make sure to replace `YOUR_DT2_TOKEN` with your actual Duckietown token and keep the double quotes.
 
