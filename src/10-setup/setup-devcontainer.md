@@ -95,12 +95,13 @@ This is the only workflow for running Duckietown on an Apple Silicon (M-series) 
     dts matrix engine run --sandbox --verbose
     ```
 
-    To install the renderer on macOS you can download the `.app` file from [this link](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/latest-macosx). After downloading it, you can rename it to `duckiematrix.app` and move it to your `Applications` folder.
+    To install the renderer on macOS you can download the `.app` file from [this link](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/releases/duckiematrix-0.6.1-macosx.zip). After downloading it, you can unzip it and move the `duckiematrix.app` it to your `Applications` folder.
 
 
     Then you can start the Duckiematrix renderer with:
 
-        duckiematrix.app --args -e localhost --token "YOUR_DT2_TOKEN"
+        cd /Applications
+        duckiematrix-0.6.1-macosx.app --args -e localhost --token "YOUR_DT2_TOKEN"
 
     This will connect to the Duckiematrix engine running on localhost. Make sure to replace `YOUR_DT2_TOKEN` with your actual Duckietown token and keep the double quotes.
 
