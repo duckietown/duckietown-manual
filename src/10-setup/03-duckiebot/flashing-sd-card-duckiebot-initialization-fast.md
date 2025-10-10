@@ -43,8 +43,8 @@ When creating a new image:
 1. Read and understand the [](initialization-tos) before proceeding. For any questions or doubts, [reach out](mailto:info@duckietown.com).
 
 2. Download the Duckietown compressed image:
-    * [Download non-customizable `DB21J` Duckiebot `ente` image from AWS](https://duckietown.com/download-duckiebot-ente-sdcard-image-aws)
-    * [Download non-customizable `DB21J` Duckiebot `ente` image from Google Drive](https://duckietown.com/download-duckiebot-ente-sdcard-image-googledrive)
+    * Download non-customizable `DB21J` Duckiebot `ente` image from AWS: https://duckietown.com/download-duckiebot-ente-sdcard-image-aws
+    * Download non-customizable `DB21J` Duckiebot `ente` image from Google Drive: https://duckietown.com/download-duckiebot-ente-sdcard-image-googledrive
 
     The image is downloaded as a compressed `.zip` file. Programs like Balena Etcher allow flashing this format directly to the SD card. If you are using a different program, unzip the downloaded file to obtain a `.img` file to flash to the SD card.
 
