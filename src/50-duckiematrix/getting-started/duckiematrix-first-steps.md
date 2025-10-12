@@ -8,7 +8,6 @@
 
 ```{needget}
 - A working Duckietown Shell installation: [](setup-dts)
--
 ---
 - A successful Duckiematrix installation
 - Knowledge on how to start the Duckiematrix
