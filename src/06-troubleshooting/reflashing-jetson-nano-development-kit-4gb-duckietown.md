@@ -1,12 +1,12 @@
 (db-troubleshooting-jetson-reflashing)=
-# Reflashing Jetson Nano Development Kit 4GB
+# Reflashing Jetson Nano Development Kit 4GB - Duckiebox model
 
 ```{seo}
 :description: How to re-flash the on-board computer.
 :keywords: Duckietown, Duckiebot, on-board computer, re-flash
 ```
 
-This chapter describes how to re-flash the on-board computer.
+This chapter describes how to re-flash the Jetson Nano 4GB Developer Kit that comes inside the Duckiebox.
 
 ```{needget}
 * Completed [](setup-sw-dependencies-installation) with Ubuntu running natively.
@@ -17,7 +17,7 @@ This chapter describes how to re-flash the on-board computer.
 * (optional) An HDMI cable and screen.
 * (optional) A serial cable that can connect to your computer (to see detailed UART logs).
 ---
-A re-flashed NVIDIA Jetson Nano Developer Kit (`4 GB`) with eMMC memory.
+* A re-flashed NVIDIA Jetson Nano Developer Kit (`4 GB`) with eMMC memory.
 ```
 
 ```{attention}
