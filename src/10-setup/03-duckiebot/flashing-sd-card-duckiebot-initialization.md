@@ -22,6 +22,10 @@ While the hardware represents the body of the robot, the software running on it 
 
 In other words, we initialize an SD card for Duckietown robots, e.g., a Duckiebot, by flashing a Duckietown image on an SD card, the hard drive of the robot.
 
+```{attention}
+**Updating from daffy to ente**: If you have a Duckiebot running the `daffy` version and want to update to `ente`, you must reflash a new SD card using the procedures below. The `dts duckiebot update` command does not currently support switching between `daffy` and `ente` versions. For information about updating within the same version, see [](ops-db-update).
+```
+
 We provide two approaches two procedures to do so:
 
 1. ["The Fast Way"](setup-db-sd-card-flashing-fast): requires less time, can be performed with any operating system, does not need to have the Duckietown Shell installed, but allows for no customization of the robot name. Recommended for testing of a single robot.
