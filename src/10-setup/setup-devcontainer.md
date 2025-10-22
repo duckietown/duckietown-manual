@@ -123,7 +123,7 @@ To access the Virtual Robot you can use the noVNC virtual desktop available at [
 
 When you attach a virtual robot to the Duckiematrix you need to use one of the LAN IP addresses of the engine, not `localhost`:
 
-    dts duckiebot matrix attach ![ROBOT_NAME] -e ![ENGINE_LOCAL_NETWORK_ADDRESS]
+    dts matrix attach ![ROBOT_NAME] -e ![ENGINE_LOCAL_NETWORK_ADDRESS]
 
 ## dts code run
 
