@@ -109,15 +109,18 @@ This is the only workflow for running Duckietown on an Apple Silicon (M-series) 
 
 There are small caveats and special instructions for using the development container.
 
-## Duckietown Viewer/Keyboard Controller etc.
+## Accessing Virtual Robot Dashboard and Duckietown Viewer
 
-The viewer and keyboard controller may not work as expected due to limitations with GUI applications in Docker containers. As a workaround, you can use the `--browser` option to open the viewer in your web browser:
+To access the Virtual Robot you can use the NoVNC virtual desktop available at [localhost:6080](http://localhost:6080). You can open the web browser and connect to the dashboard.
 
-    dts duckiebot image_viewer devbot --browser
+The image_viewer, extrinsics/intrinsics calibratrs and keyboard controller may not work as expected due to limitations with GUI applications in Docker containers. As a workaround, you can use the `--browser` option to open the viewer in your web browser:
 
-## Accessing Virtual Robot Dashboard
+    dts duckiebot image_viewer ROBOT_NAME --browser
 
-To access the Virtual Robot you can use the noVNC virtual desktop available at [localhost:6080](http://localhost:6080). You can open the web browser and connect to the dashboard.
+You can also open the GUI apps in the NoVNC virtual desktop using the standard command after connecting to [localhost:6080](http://localhost:6080):
+
+    dts duckiebot image_viewer ROBOT_NAME
+
 
 ## Attaching a virtual duckiebot to the Duckiematrix
 
