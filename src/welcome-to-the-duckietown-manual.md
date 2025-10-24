@@ -24,7 +24,7 @@ version of the documentation, see the [daffy version Duckietown documentation](h
 If you are a Duckietown veteran, you can use this book as a reference manual for specific tasks. 
 
 ```{attention}
-If you are switching from `daffy` to `ente`, check out [](dt-account-switch-profile).
+If you are switching from `daffy` to `ente`, check out [](dt-account-switch-profile) and [](setup-db-sd-card-flashing-intro).
 ```
 
 If you have suggestions on how to improve this documentation, read the [](book-devmanual-intro) section to learn how to make contributions.
