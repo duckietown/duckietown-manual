@@ -141,6 +141,7 @@ In order to use the Duckiematrix with the LXs you need to start the engine and r
 
     dts code start_matrix --no-renderer
 
+and then attaching the renderer as described above.
 ````
 
 ````{tab-item} Linux
