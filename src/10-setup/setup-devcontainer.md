@@ -71,7 +71,12 @@ This is the only workflow for running Duckietown on an Apple Silicon (M-series) 
     to make sure that things are still happening. 
 
 
-6. Test the Shell
+6. Set up the Shell
+
+    Follow [these instructions](dt-account-set-token).
+
+
+7. Test the Shell
 
     In a terminal, run 
 
@@ -86,7 +91,7 @@ This is the only workflow for running Duckietown on an Apple Silicon (M-series) 
 
     **Note**: You may get a popup asking you to input your credentials. You should do so and then click `Always Allow`. 
 
-7. Running the Duckiematrix
+8. Running the Duckiematrix
 
     The procedure for running the Duckiematrix will be slightly different in this devcontainer workflow. In short, we
     will run the `ENGINE` inside the devcontainer, but we will run the `RENDERER` (i.e. the GUI interface) natively on your Mac.
