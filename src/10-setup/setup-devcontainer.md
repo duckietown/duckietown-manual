@@ -27,8 +27,10 @@ This is the only workflow for running Duckietown on an Apple Silicon (M-series) 
 
     Go to the [VSCode download page](https://code.visualstudio.com/download) and download the appropriate version. 
 
-    **Note**: If you have an Apple computer with an M-series chip, you will need to download the `Apple silicon` version
-    of VSCode
+    ```{note}
+    If you have an Apple computer with an M-series chip, you will need to download the `Apple silicon` version
+    of VSCode.
+    ```
 
     Once the `.zip` file downloads you can double click to inflate it and then you may want to move it to your
     `Applications` folder so that you can launch it through spotlight. 
@@ -132,6 +134,14 @@ When you attach a virtual robot to the Duckiematrix you need to use one of the L
 
 1. Install `mkcert` on your mac, either through `brew install mkcert` or by downloading the `darwin` binary for your system's architecture from [the mkcert releases page](https://github.com/FiloSottile/mkcert/releases/tag/v1.4.4).
 1. Run `mkcert -install` to install the local CA in your system. (It will ask for your sudo password.)
+
+## Learning Experiences in the Duckiematrix
+
+In order to use the Duckiematrix with the LXs you need to start the engine and renderer separately. You can do so by adding the `--no-renderer` flag to the `dts code start_matrix` command:
+
+    dts code start_matrix --no-renderer
+
+and then attaching the renderer as described above.
 ````
 
 ````{tab-item} Linux
