@@ -23,6 +23,8 @@ Open a terminal and run, in order:
 sudo apt update
 sudo apt install -y ca-certificates curl git git-lfs git-extras gnupg libfuse2 libnss3-tools pipx
 pipx ensurepath
+curl -sS https://webi.sh/mutagen | sh
+source ~/.config/envman/PATH.env
 ```
 
 ````{note}
