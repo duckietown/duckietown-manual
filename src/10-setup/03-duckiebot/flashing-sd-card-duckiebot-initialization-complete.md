@@ -30,8 +30,6 @@ Use this procedure if you want full control over the configuration settings of y
 The default username (not to be confused with the hostname/robotname) and password are `duckie` and `quackquack`, respectively. This is useful if you want to later `ssh` into your robot.
 ```
 
-
-
 Start by plugging the SD card into your computer using a SD card reader or the USB to microSD card adapter provided in your Duckiebot kit. Make sure the SD card is detected before proceeding.
 
 Then, open a terminal and use the command:
