@@ -114,7 +114,18 @@ parts:
                 sections:
                 -   file: 60-learning-experiences/what-is-a-duckietown-learning-experience
                 -   file: 60-learning-experiences/lx-components
-                -   file: 60-learning-experiences/lx-general-procedure
+            -   file: 60-learning-experiences/lx-general-procedure
+                sections:
+                # -   file: 60-learning-experiences/lx-setup-hello-world
+                -   file: 60-learning-experiences/lx-setup-ros-basics
+                -   file: 60-learning-experiences/lx-setup-braitenberg-vehicles
+                -   file: 60-learning-experiences/lx-setup-modeling-kinematics
+                #-   file: 60-learning-experiences/lx-setup-pid-control
+                #-   file: 60-learning-experiences/lx-setup-computer-vision
+                #-   file: 60-learning-experiences/lx-setup-object-detection
+                #-   file: 60-learning-experiences/lx-setup-bayesian-estimation
+                #-   file: 60-learning-experiences/lx-setup-motion-planning
+                #-   file: 60-learning-experiences/lx-setup-sim-to-real
 
             -   file: 25-duckiedrone/duckiedrone
 

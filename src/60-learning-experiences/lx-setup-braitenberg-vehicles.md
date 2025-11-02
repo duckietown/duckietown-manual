@@ -1,69 +1,74 @@
-(duckiebot-lxs)=
-# General Procedure for Running Learning Experiences
+(lx-setup-bv)=
+# LX: Braitenberg Vehicles
 
 ```{seo}
-:description: Step by step instructions on how to set up your working environment to work with Duckietown learning experiences (LXs).
-:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, Computer setup
+:description: Step by step instructions on how to run the Braitenber Vehicles LX in Duckietown.
+:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, Braitenber Vehicles
 ```
 
 ```{needget}
-- A computer with `dts` installed and correctly set up: [](setup-dts)
-- A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
-- (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
+- Learning experience computer setup: [](duckiebot-lxs)
 ---
-- A computer ready to run any Duckietown learning experience.
+- Running the Braitenberg Vehicles (BV) learning experience.
 ```
 
-This page describes the general setup and workflow for Duckietown learning experiences.
+This page describes how to run the BV learning experience. 
 
-```{note}
-To create your own LXs, see: [](creating-new-lxs).
+```{admonition} Intended Learning Outcomes
+:class: tip
+In this learning experience, learners will:
+- design and implement a vision-based sensorimotor connection-based agent to enable simple autonomous behaviors on Duckiebots
+- deploy the agent on physical or virtual Duckiebots
+- tune the agent to have the Duckiebot avoid a sea of duckies
 ```
 
-(lx-forking)=
-## Forking the LX Repositories
+(lx-forking-bv)=
+## Forking the repo
 
-Forking repositories allows the creation of a personal, local copy that is nevertheless synched with upstream Duckietown code.
+### 1. Create a fork 
 
-1. **Create a fork**: Navigate to the repository of interest, for example: [the Braitenberg vehicles repository](https://github.com/duckietown/lx-braitenberg). All LXs URLs have the same format: `https://github.com/duckietown/lx-<lx-name>`
+Navigate to [the Braitenberg vehicles repository](https://github.com/duckietown/lx-braitenberg).
 
-    Find and press the "Fork" button on the top right:
+Find and press the "Fork" button on the top right:
 
-    ```{figure} /_images/lx-devmanual/intro/duckietown-lx-forking.png
-    :alt: how to fork a Duckietown LX repository
-    :width: 90%
-    :name: duckiebot-lx-forking-4
-    :align: center
+```{figure} /_images/lx-devmanual/intro/duckietown-lx-forking.png
+:alt: how to fork a Duckietown LX repository
+:width: 90%
+:name: duckiebot-lx-forking
+:align: center
 
-    Fork the LX to be able to make local changes while still being able to receive updates.
-    ```
+Fork the LX to be able to make local changes while still being able to receive updates.
+```
 
-    This will create a new repository at: `<your_github_username>/lx-<lx-name>`.
+This will create a new repository at: `<your_github_username>/lx-braitenberg`.
 
-2. **Clone the fork**: clone the fork on your computer, replacing your GitHub username in the command below, and navigate to the new folder:
+### 2. Clone the fork 
 
-    git clone git@github.com:<your_github_username>/lx-<lx-name>
-    cd lx-<lx-name>
+Clone the fork on your computer, replacing your GitHub username in the command below, and navigate to the new folder:
+
+    git clone git@github.com:<your_github_username>/lx-braitenberg
+    cd lx-braitenberg
         
 
+### 3. Configure upstream repo 
 
-3. **Configure upstream repo**: configure the Duckietown version of this repository as the upstream repository to synchronize with your fork.
+Configure the Duckietown version of this repository as the upstream repository to synchronize with your fork.
 
-    List the current remote repository for your fork,
+List the current remote repository for your fork,
 
-        git remote -v
+    git remote -v
 
-    Specify a new remote upstream repository,
+Specify a new remote upstream repository,
 
-        git remote add upstream https://github.com/duckietown/lx-<lx-name>
+    git remote add upstream https://github.com/duckietown/lx-braitenberg
 
-    Confirm that the new upstream repository was added to the list,
+Confirm that the new upstream repository was added to the list,
 
-        git remote -v
+    git remote -v
 
-    You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every exercise will prompt you to pull from the upstream repository, updating your exercises to the latest version.
+You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every exercise will prompt you to pull from the upstream repository, updating your exercises to the latest version (if available).
 
-(lx-system-update)=
+(lx-system-update-bv)=
 ## Keeping your System Up To Date
 
 - 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not, e.g., a `daffy` one). You can check your current profile with:
@@ -88,20 +93,6 @@ Forking repositories allows the creation of a personal, local copy that is never
 
         dts duckiebot virtual restart VBOT
 
-(lx-ssl-setup)=
-## SSL Certificate setup
-
-```{note}
-You only need to run this once the first time you run an LX on a new laptop
-```
-
-We use SSL certificates and TLS encryption to guarantee the highest standard of safety and privacy. Set up a local SSL certificate needed to run the LX editor inside your browser:
-
-```shell
-sudo apt install libnss3-tools
-dts setup mkcert
-```
-
 (lx-code-editor)=
 ## Launching the Code Editor
 
@@ -118,7 +109,7 @@ dts code editor
 Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar
 of your browser to access the code editor. The first thing you will see in the code editor are a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
 
-(lx-navigating-notebooks)=
+(lx-navigating-notebooks-bv)=
 ## Walkthrough of Notebooks
 
 Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the
@@ -131,12 +122,12 @@ learning experience directory.
 
 Once you have done that you will need to **build** your code before **testing** it.
 
-(lx-matrix-testing)=
+(lx-matrix-testing-bv)=
 ### Testing with the Duckiematrix
 
 To test your code in the Duckiematrix you will need a virtual robot attached to an ongoing session. 
 
-(lx-create-vbot)=
+(lx-create-vbot-bv)=
 #### Creating a virtual Duckiebot
 
 To test your code in the Duckiematrix you will need a virtual robot. You can create one with the command:
@@ -170,7 +161,7 @@ dts code start_matrix
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
 
-```{figure} /_images/lx-devmanual/intro/duckiematrix_overhead.png
+```{figure} /_images/lx-devmanual/lx-bv/duckiematrix_overhead.png
 :alt: Welcome to the Duckiematrix after starting the BV LX
 :width: 80%
 :name: duckiebot-lx-start-matrix
@@ -179,7 +170,7 @@ the Duckiematrix see [](the-duckiematrix-manual).
 Example Duckiematrix splash screen after starting the Braitenberg Vehicles LX.
 ```
 
-(lx-code-build)=
+(lx-code-build-bv)=
 ### Building the Code
 
 From inside the learning experience root directory, you can build your code with:
@@ -190,7 +181,7 @@ dts code build -R ROBOT_NAME
 
 where `ROBOT_NAME` can be either a physical or virtual robot. 
 
-(lx-code-test)=
+(lx-code-test-bv)=
 ### Testing on a Duckiebot or in the Duckiematrix
 
 To test your code on your real Duckiebot you can do:
@@ -215,17 +206,11 @@ dts code vnc -R [ROBOT_NAME]
 
 where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
 
+```{figure} /_images/lx-devmanual/lx-bv/duckiematrix_overhead.png
+:alt: Welcome to the Duckiematrix after starting the BV LX
+:width: 80%
+:name: duckiebot-lx-start-matrix
+:align: center
 
-## Troubleshooting
-
-If you run into any issues while building the image, you can search the troubleshooting symptoms below or
-reference the [](how-to-get-help) section of this manual.
-
-```{trouble}
-
-`dts :  The path '...' does not appear to be a Duckietown project.
-     :  The metadata file '.dtproject' is missing.`
-
----
-You need to be in the root directory of the LX in order to run the `dts code` commands.
+Example Duckiematrix splash screen after starting the Braitenberg Vehicles LX.
 ```
