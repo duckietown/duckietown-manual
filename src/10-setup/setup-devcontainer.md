@@ -1,156 +1,169 @@
 ```{seo}
-:description: Learn how to run Duckietown code in a devcontainer
-:keywords: duckietown setup, devcontainer
+:description: Learn how to run Duckietown code in a Dev Container
+:keywords: duckietown setup, Dev Container
 ```
 
 (setup-devcontainer)=
-# Running Everything in a Devcontainer (Beta)
+# Running Everything in a Dev Container (Beta)
 
-This page describes how to run Duckietown code inside a [development container](https://containers.dev/), providing a functional environment inside of [Visual Studio Code](https://code.visualstudio.com/).
+This page describes how to run Duckietown code inside a [Development (Dev) Container](https://containers.dev/), providing a functional environment inside of [Visual Studio Code](https://code.visualstudio.com/).
 
 ```{note}
-This is the only workflow for running Duckietown on an Apple Silicon (M-series) Mac computer.
+This is the only workflow for running Duckietown code on an Apple Silicon (M-series) Mac.
+```
+
+## Installing Orbstack (macOS)
+
+```{attention}
+If you have Docker Desktop installed, [uninstall it](https://docs.docker.com/desktop/uninstall/) and reboot.
+```
+
+To install Orbstack:
+
+1. [Download the Orbstack `.dmg` file](https://orbstack.dev/download).
+
+2. Navigate to your `Downloads` folder.
+
+3. Double-click the `.dmg` file.
+
+4. Move the application to your `Applications` folder.
+
+```{tip}
+If your Mac refuses to open an application because it is not trusted, hold down the `option` key and secondary-click
+it, then select `Open`. Your Mac will inform you that the application is not trusted but will allow you to open it.
+```
+
+## Installing Visual Studio Code
+
+To install Visual Studio Code:
+
+1. [Download the appropriate VS Code `.zip` file](https://code.visualstudio.com/download).
+
+2. Navigate to your `Downloads` folder.
+
+3. Double-click the `.zip` file.
+
+4. Move the application to your `Applications` folder.
+
+## Cloning the `dt-env-developer` repository
+
+To clone the `dt-env-developer` repository, run:
+
+```shell
+git clone git@github.com:duckietown/dt-env-developer.git
+```
+
+```{attention}
+Ignore the instructions in the `README` of this repository. 
+```
+
+## Running the Dev Container in VS Code
+
+To run the Dev Container in VS Code:
+
+1. Open VS Code and navigate to the `dt-env-developer` folder (`File` -> `Open Folder...` -> `/path/to/dt-env-developer`). You should see a popup appear in the bottom-right corner of your screen containing the message "Folder contains a Dev Container configuration file. Reopen folder to develop in a container ([learn more](https://aka.ms/vscode-remote/docker)).".
+
+2. Click the `Reopen in Container` button.
+
+3. (Optional) Click the `Reading Dev Container Configuration (show log)` link.
+
+```{note}
+The first time you load the Dev Container may take some time.
+```
+
+## Setting up the Duckietown Shell
+
+To set up the Duckietown Shell, follow [these instructions](dt-account-set-token).
+
+```{attention}
+If a popup asking you to input your credentials appears, you should do so and then click `Always Allow`. 
+```
+
+## Running the Duckiematrix
+
+The procedure for running the Duckiematrix will be slightly different in this workflow. In short, you
+will run the `Engine` and `Renderer` inside and outside the Dev Container, respectively.
+
+To start the `Engine`, run the following command in the Dev Container:
+
+```shell
+dts matrix engine run --sandbox --verbose
 ```
 
 `````{tab-set}
 
-````{tab-item} MacOSX
+````{tab-item} macOS
 
-1. Completely remove Docker Desktop
+To install the `Renderer`:
 
-    If you have installed docker desktop, you will need to completely remove it. We will be installing a replacement (Orbstack). 
-    To do so you can follow the instructions [here](https://docs.docker.com/desktop/uninstall/) and then it is probably a good
-    idea to reboot your computer. 
+1. [Download the `Renderer` `.zip` file](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/releases/duckiematrix-0.6.2-macosx.zip).
 
+2. Navigate to your `Downloads` folder.
 
-2. Install Visual Studio Code
+3. Double-click the `.zip` file.
 
-    Go to the [VSCode download page](https://code.visualstudio.com/download) and download the appropriate version. 
+4. Move the application to your `Applications` folder.
 
-    ```{note}
-    If you have an Apple computer with an M-series chip, you will need to download the `Apple silicon` version
-    of VSCode.
-    ```
+To start the `Renderer` and connect it to the `Engine` running in the Dev Container, run the following commands, where `TOKEN` is your Duckietown Token (do not forget the double quotes):
 
-    Once the `.zip` file downloads you can double click to inflate it and then you may want to move it to your
-    `Applications` folder so that you can launch it through spotlight. 
+```shell
+cd /Applications
+open duckiematrix.app --args -e localhost --token "TOKEN"
+```
 
-    **Tip**: If Mac refuses to open the application because it is not trusted, you can hold `option` and two finger click
-    with the mouse and choose `Open`. Mac will tell you that this is not trusted but allow you to open the program 
-    anyways. 
-
-3. Install Orbstack
-
-    Go to [Orbstack download page](https://orbstack.dev/download) and download the appropriate version (be sure to choose
-    `Apple Silicon` if you have an M-Series chip.
-
-    Once the `.dmg` file has downloaded you can click on it in your `Downloads` and drag it to your Applications folder. 
-    Then you can open it with spotlight or any other means. 
-
-
-4. Clone the Dev Container repository
-
-    Clone the development repository 
-
-    ```bash
-    git clone git@github.com:duckietown/dt-env-developer.git
-    ```
-    you **do not** need to pay any attention to the instructions in the README of this repository. 
-
-
-5. Run the Dev Container in VSCode  
-
-    Open Visual Studio Code.
-
-    Click File -> Open Folder and navigate to the `dt-env-developer` folder that you clone previously and select it. 
-
-    You should see a Window pop up in the bottom right asking if you would like open this folder in a `devcontainer`. 
-    You should click on the button that you would like to do so. 
-
-    The first time you load the devcontainer it can take some time so be patient. You can always look at the logs
-    to make sure that things are still happening. 
-
-
-6. Set up the Shell
-
-    Follow [these instructions](dt-account-set-token).
-
-
-7. Test the Shell
-
-    In a terminal, run 
-
-    ```bash
-    dts commands
-    ```
-
-    This may take some time to download the commands, and it may ask you for your Duckietown token. You can find your 
-    token on [the profile page of the Duckietown Hub](https://hub.duckietown.com/profile/) (you may have to sign in). 
-
-    Once the shell is configured, you should have a fully functional development environment.
-
-    **Note**: You may get a popup asking you to input your credentials. You should do so and then click `Always Allow`. 
-
-8. Running the Duckiematrix
-
-    The procedure for running the Duckiematrix will be slightly different in this devcontainer workflow. In short, we
-    will run the `ENGINE` inside the devcontainer, but we will run the `RENDERER` (i.e. the GUI interface) natively on your Mac.
-
-    To start the engine, inside a terminal in the VSCode devcontainer run:
-
-    ```bash
-    dts matrix engine run --sandbox --verbose
-    ```
-
-    To install the renderer on macOS you can download the `.app` file from [this link](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/releases/duckiematrix-0.6.1-macosx.zip). After downloading it, you can unzip it and move the `duckiematrix.app` it to your `Applications` folder.
-
-
-    Then you can start the Duckiematrix renderer with:
-
-        cd /Applications
-        open duckiematrix.app --args -e localhost --token "YOUR_DT2_TOKEN"
-
-    This will connect to the Duckiematrix engine running on localhost. Make sure to replace `YOUR_DT2_TOKEN` with your actual Duckietown token and keep the double quotes.
-
-# Devcontainer Caveats
-
-There are small caveats and special instructions for using the development container.
-
-## Accessing Virtual Robot Dashboard and Duckietown Viewer
-
-To access the Virtual Robot you can use the NoVNC virtual desktop available at [localhost:6080](http://localhost:6080). You can open the web browser and connect to the dashboard.
-
-The image_viewer, extrinsics/intrinsics calibratrs and keyboard controller may not work as expected due to limitations with GUI applications in Docker containers. As a workaround, you can use the `--browser` option to open the viewer in your web browser:
-
-    dts duckiebot image_viewer ROBOT_NAME --browser
-
-You can also open the GUI apps in the NoVNC virtual desktop using the standard command after connecting to [localhost:6080](http://localhost:6080):
-
-    dts duckiebot image_viewer ROBOT_NAME
-
-
-## Attaching a virtual duckiebot to the Duckiematrix
-
-When you attach a virtual robot to the Duckiematrix you need to use one of the LAN IP addresses of the engine, not `localhost`:
-
-    dts matrix attach ![ROBOT_NAME] -e ![ENGINE_LOCAL_NETWORK_ADDRESS]
-
-## dts code run
-
-1. Install `mkcert` on your mac, either through `brew install mkcert` or by downloading the `darwin` binary for your system's architecture from [the mkcert releases page](https://github.com/FiloSottile/mkcert/releases/tag/v1.4.4).
-1. Run `mkcert -install` to install the local CA in your system. (It will ask for your sudo password.)
-
-## Learning Experiences in the Duckiematrix
-
-In order to use the Duckiematrix with the LXs you need to start the engine and renderer separately. You can do so by adding the `--no-renderer` flag to the `dts code start_matrix` command:
-
-    dts code start_matrix --no-renderer
-
-and then attaching the renderer as described above.
-````
-
-````{tab-item} Linux
-Coming Soon
 ````
 
 `````
+
+## Caveats
+
+### Accessing a Virtual Robot's Dashboard and the Duckietown Viewer
+
+To access a Virtual Robot's `Dashboard`, open the `noVNC` virtual desktop by navigating to [localhost:6080](http://localhost:6080).
+
+```{note}
+`Duckietown Viewer` applications (i.e., `Image Viewer`, `Keyboard Controller`, etc.) may not work as expected, due to limitations with GUI applications in Docker containers.
+```
+
+To open the `Image Viewer` in your browser, run the following command, where `ROBOT_NAME` is the name of your robot:
+
+```shell
+dts duckiebot image_viewer ROBOT_NAME --browser
+```
+
+To open the `Image Viewer` in the `noVNC` virtual desktop, run the following command after navigating to [localhost:6080](http://localhost:6080), where `ROBOT_NAME` is the name of your robot:
+
+```shell
+dts duckiebot image_viewer ROBOT_NAME
+```
+
+### Attaching a Duckietown robot to the Duckiematrix
+
+To attach a Duckietown robot to the Duckiematrix, run the following command, where `ROBOT_NAME` is the name of your robot and `ENGINE_LOCAL_NETWORK_ADDRESS` is the LAN IP address of the `Engine` (not `localhost`):
+
+```shell
+dts matrix attach ROBOT_NAME -e ENGINE_LOCAL_NETWORK_ADDRESS
+```
+
+### Running `dts code run`
+
+````{tab-set}
+
+```{tab-item} macOS
+
+To be able to run `dts code run`:
+
+1. Run `brew install mkcert` or [download the `darwin` binary for your system's architecture](https://github.com/FiloSottile/mkcert/releases/tag/v1.4.4).
+
+2. Run `mkcert -install` (to install the local CA in your system).
+```
+
+````
+
+### Learning Experiences in the Duckiematrix
+
+To run the Duckiematrix for `LXs`, run the following command to start the `Engine` and then attach the `Renderer`:
+
+```shell
+dts code start_matrix --no-renderer
+```
