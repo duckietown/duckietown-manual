@@ -34,7 +34,7 @@ Find and press the "Fork" button on the top right:
 ```{figure} /_images/lx-devmanual/intro/duckietown-lx-forking.png
 :alt: how to fork a Duckietown LX repository
 :width: 90%
-:name: duckiebot-lx-forking
+:name: duckiebot-lx-forking-1
 :align: center
 
 Fork the LX to be able to make local changes while still being able to receive updates.
