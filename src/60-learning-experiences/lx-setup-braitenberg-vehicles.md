@@ -22,6 +22,10 @@ In this learning experience, learners will:
 - tune the agent to have the Duckiebot avoid a sea of duckies
 ```
 
+```{note}
+This exercise can be run on a [real Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) or on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps). 
+```
+
 (lx-forking-bv)=
 ## Forking the repo
 
@@ -213,4 +217,30 @@ where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you r
 :align: center
 
 Example Duckiematrix splash screen after starting the Braitenberg Vehicles LX.
+```
+
+## Troubleshooting
+
+If you run into any issues while building the image, you can search the troubleshooting symptoms below or
+reference the [](how-to-get-help) section of this manual.
+
+```{trouble}
+
+`dts :  The path '...' does not appear to be a Duckietown project.
+     :  The metadata file '.dtproject' is missing.`
+
+---
+You need to be in the root directory of the LX in order to run the `dts code` commands.
+```
+
+```{trouble}
+When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/workspaces/dt-env-developer/lx'`
+---
+Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-control/`)
+```
+
+```{trouble}
+My virtual robot (named, e.g., `VBOT`) hangs indefinitely when trying to update it.
+---
+Try to restart it with: `dts duckiebot virtual restart VBOT`
 ```

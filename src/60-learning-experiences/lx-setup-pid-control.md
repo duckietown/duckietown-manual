@@ -1,15 +1,16 @@
-(lx-setup-ros-basics)=
-# LX: ROS basics
+(lx-setup-control-pid)=
+# LX: PID Control
 
 ```{seo}
-:description: Step by step instructions on how to run the ROS basics learning experience (LX) in Duckietown.
-:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, ROS, Robot Operating System, Robotics Operating System
+:description: Step by step instructions on how to run the PID control learning experience (LX) in Duckietown.
+:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, control systems, controls, proportional integrative derivative control, PID, PID control, control of a differential drive robot
 ```
 
 ```{needget}
 - Learning experience computer setup: [](duckiebot-lxs)
+- Mathematical model built in Modeling and Kinematics LX: [](lx-setup-mod-kin)
 ---
-- Running the ROS basics learning experience.
+- Running the PID Control learning experience.
 ```
 
 This page describes how to run the BV learning experience. 
@@ -17,45 +18,47 @@ This page describes how to run the BV learning experience.
 ```{admonition} Intended Learning Outcomes
 :class: tip
 In this learning experience, learners will:
-- understand the role of ROS and explain its role in a robot agent
-- use and descibe the importance of many ROS basic functions (`roscd`, `rospack`, `rosls`)
-- familiarize with ROS terminology (topic, message, workspace, publishing, subscribing, etc.)
-- define messages, explore default message types, and build ROS workspaces 
-- build a ROS node in Python that subscribes to, manipulates, and publishes data
-- deploy the ROS node on a physical or virtual Duckiebot
-- learn the basics of ROS debugging
+- 
 ```
+
+## About these learning activities
+
+In this learning experience, you will use the model that we built in the 
+[kinematics and modeling](lx-setup-mod-kin) learning experience. Now we will build a simple controller to make the Duckiebot
+follow a specified set of actions based on our knowledge of how it moves. 
+
+For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
 
 ```{note}
 This exercise can be run on a [real Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) or on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps). 
 ```
 
-(lx-forking-ros-basics)=
+(lx-forking-control-pid)=
 ## Forking the repo
 
 ### 1. Create a fork 
 
-Navigate to [the ROS Basics repository](https://github.com/duckietown/lx-ros-basics).
+Navigate to [the (PID) Control repository](https://github.com/duckietown/lx-contr).
 
 Find and press the "Fork" button on the top right:
 
 ```{figure} /_images/lx-devmanual/intro/duckietown-lx-forking.png
 :alt: how to fork a Duckietown LX repository
 :width: 90%
-:name: duckiebot-lx-forking-3
+:name: duckiebot-lx-forking-control-pid
 :align: center
 
 Fork the LX to be able to make local changes while still being able to receive updates.
 ```
 
-This will create a new repository at: `<your_github_username>/lx-ros-basics`.
+This will create a new repository at: `<your_github_username>/lx-control`.
 
 ### 2. Clone the fork 
 
 Clone the fork on your computer, replacing your GitHub username in the command below, and navigate to the new folder:
 
-    git clone git@github.com:<your_github_username>/lx-ros-basics
-    cd lx-ros-basics
+    git clone git@github.com:<your_github_username>/lx-control
+    cd lx-control
         
 
 ### 3. Configure upstream repo 
@@ -68,7 +71,7 @@ List the current remote repository for your fork,
 
 Specify a new remote upstream repository,
 
-    git remote add upstream https://github.com/duckietown/lx-ros-basics
+    git remote add upstream https://github.com/duckietown/lx-control
 
 Confirm that the new upstream repository was added to the list,
 
@@ -76,7 +79,7 @@ Confirm that the new upstream repository was added to the list,
 
 You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every exercise will prompt you to pull from the upstream repository, updating your exercises to the latest version (if available).
 
-(lx-system-update-ros-basics)=
+(lx-system-update-control-pid)=
 ## Keeping your System Up To Date
 
 - 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not, e.g., a `daffy` one). You can check your current profile with:
@@ -97,11 +100,7 @@ You can now push your work to your own repository using the standard GitHub work
 
 - 🚙 Update your Duckiebot: `dts duckiebot update ROBOTNAME` (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
 
-    **Note**: if your virtual robot (named, e.g., `VBOT`) hangs indefinitely when you try to update it, you can try to restart it with:
-
-        dts duckiebot virtual restart VBOT
-
-(lx-code-editor-lx-ros-basics)=
+(lx-code-editor-lx-control-pid)=
 ## Launching the Code Editor
 
 ```{important}
@@ -117,7 +116,7 @@ dts code editor
 Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar
 of your browser to access the code editor. The first thing you will see in the code editor are a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
 
-(lx-navigating-notebooks-ros-basics)=
+(lx-navigating-notebooks-control-pid)=
 ## Walkthrough of Notebooks
 
 Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the
@@ -130,12 +129,12 @@ learning experience directory.
 
 Once you have done that you will need to **build** your code before **testing** it.
 
-(lx-matrix-testing-ros-basics)=
+(lx-matrix-testing-control-pid)=
 ### Testing with the Duckiematrix
 
 To test your code in the Duckiematrix you will need a virtual robot attached to an ongoing session. 
 
-(lx-create-vbot-ros-basics)=
+(lx-create-vbot-control-pid)=
 #### 1. Creating and starting virtual Duckiebot
 
 To test your code in the Duckiematrix you will need a virtual robot. You can create one with the command:
@@ -160,7 +159,7 @@ You should see it with a status `Booting` and finally `Ready` if you look at `dt
 [VBOT] |  virtual | duckiebot | DB21J |  Ready   | [VBOT].local
 ```
 
-(lx-code-matrix-start-ros-basics)=
+(lx-code-matrix-start-control-pid)=
 #### 2. Starting the Duckiematrix with the virtual Duckiebot
 
 Now that your virtual robot is ready, you can start the Duckiematrix. From this exercise directory do:
@@ -172,16 +171,25 @@ dts code start_matrix
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
 
-```{figure} /_images/lx-devmanual/lx-ros-basics/joy_echo.png
-:alt: Duckietown joystick commands published to a ROS topic
-:width: 80%
-:name: duckiebot-lx-ros-joy-topic-echo
+```{figure} ../_images/lx-devmanual/lx-control-pid/control-lx-duckiematrix-start.png
+:alt: Initial screen in the duckiematrix for the control LX and startup instructions
+:width: 70%
+:name: duckiebot-lx-control-matrix-start
 :align: center
 
-In this learning experience learners will exploring ROS concepts like topics and nodes.
+You start as a duckie. Click <kbd>Enter</kbd> to get started. Move with <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> and rotate the point of view by moving the mouse, as if you were playing a computer game. Approach the Duckiebot and ride it by pressing <kbd>E</kbd>. 
 ```
 
-(lx-code-build-ros-basics)=
+```{figure} ../_images/lx-devmanual/lx-control-pid/control-lx-duckiematrix-riding.png
+:alt: Riding a virtual Duckiebot in the PID control LX
+:width: 70%
+:name: duckiebot-lx-control-riding
+:align: center
+
+In this LX, the world is a long straigth road (all of it?). If you get very lost from the road and you want to come back, you can do so with the <kbd>R</kbd> key.
+```
+
+(lx-code-build-control-pid)=
 ### Building the Code
 
 From inside the learning experience root directory, you can build your code with:
@@ -192,7 +200,7 @@ dts code build -R ROBOT_NAME
 
 where `ROBOT_NAME` can be either a physical or virtual robot. 
 
-(lx-code-test-ros-basics)=
+(lx-code-test-control-pid)=
 ### Testing on a Duckiebot or in the Duckiematrix
 
 🚙 To test your code on your real Duckiebot you can do:
@@ -217,28 +225,7 @@ dts code vnc -R [ROBOT_NAME]
 
 where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
 
-```{figure} /_images/lx-devmanual/lx-ros-basics/rqt_image_view_duckiematrix.png
-:alt: Duckiebot POV in the Duckiematrix
-:width: 80%
-:name: duckiebot-lx-ros-duckiebot-pov
-:align: center
-
-Virtual Duckiebot point of view in the Duckiematrix.
-```
-
 ## Troubleshooting
-
-If you run into any issues while building the image, you can search the troubleshooting symptoms below or
-reference the [](how-to-get-help) section of this manual.
-
-```{trouble}
-
-`dts :  The path '...' does not appear to be a Duckietown project.
-     :  The metadata file '.dtproject' is missing.`
-
----
-You need to be in the root directory of the LX in order to run the `dts code` commands.
-```
 
 ```{trouble}
 When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/workspaces/dt-env-developer/lx'`
