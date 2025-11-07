@@ -28,6 +28,10 @@ After this learning experience, learners will:
 - deploy and tune the designed PID controller on virtual and/or physical Duckiebots
 ```
 
+```{warning}
+If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+```
+
 ## About these learning activities
 
 In this learning experience, you will use the model that we built in the 

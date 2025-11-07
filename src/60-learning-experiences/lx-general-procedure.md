@@ -20,7 +20,7 @@ This page describes the general setup and workflow for Duckietown learning exper
 To create your own LXs, see: [](creating-new-lxs).
 ```
 
-```{note}
+```{warning}
 If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
 ```
 
