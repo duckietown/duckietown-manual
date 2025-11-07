@@ -1,6 +1,10 @@
 ```{seo}
-:description: Learn how to run Duckietown code in a Dev Container
-:keywords: duckietown setup, Dev Container
+:description: Step by step instructions and troubleshooting tips for running a fully fledged Duckietown environment in a development container, enabling smooth operations on macOS (including M-chips) and Windows.
+:keywords: duckietown setup, Dev Container, duckietown macOS, duckietown windows
+```
+
+```{warning}
+This feature is currently under development and is released in Beta mode. Most functionalities are currently working and have been extensively tested on macOS, but not on Windows. Please report all bugs in the Duckietown Slack community channel [#beta-devcontainer](https://duckietown.slack.com/archives/C09KJ1QC46R) or by email at [info@duckietown.com](mailto:info@duckietown.com). 
 ```
 
 (setup-devcontainer)=
@@ -117,9 +121,30 @@ open duckiematrix.app --args -e localhost --token "TOKEN"
 
 ## Caveats
 
-### Accessing a Virtual Robot's Dashboard and the Duckietown Viewer
+### Accessing a Virtual Robot's Dashboard 
 
-To access a Virtual Robot's `Dashboard`, open the `noVNC` virtual desktop by navigating to [localhost:6080](http://localhost:6080).
+To access a Virtual Robot's `Dashboard`, open the `noVNC` virtual desktop by navigating to [localhost:6080](http://localhost:6080). After connecting to the desktop, click on the little triangular icon in the bottom left corner, and then on `Web Browser`. Once the browser is up, proceed as if you were using a physical Duckiebot (i.e., start the virtual Duckiebot, then navigate to `robotname.local`.)
+
+```{figure} ../_images/setup/devcontainer/devcontainer-dashboard-1-1.png
+:alt: how to get to the duckiebot dashboard through a devcontainer
+:width: 90%
+:name: duckiebot-dashboard-devcontainer-1
+:align: center
+
+Connecting to a virtual Duckiebot Dashboard inside a devcontainer requires a few extra steps.
+```
+
+```{figure} ../_images/setup/devcontainer/devcontainer-dashboard-2.png
+:alt: virtual duckiebot inside devcontainer dashboard
+:width: 90%
+:name: duckiebot-dashboard-devcontainer-2
+:align: center
+
+Accessing the Dashboard of a virtual Duckiebot inside a devcontainer. 
+```
+
+
+### Accessing the Duckietown Viewer Apps
 
 ```{note}
 `Duckietown Viewer` applications (i.e., `Image Viewer`, `Keyboard Controller`, etc.) may not work as expected, due to limitations with GUI applications in Docker containers.
