@@ -17,8 +17,13 @@ This page describes how to run the BV learning experience.
 
 ```{admonition} Intended Learning Outcomes
 :class: tip
-In this learning experience, learners will:
-- 
+After this learning experience, learners will:
+- understand what a PID controller is, and how each component (P, I, D) affects the closed loop performance of the controlled robot 
+- be able to describe the difference between discrete time and continuous time implementations of derivatives and integrals
+- write a PID controller for regulating the heading of a Duckiebot, in Python
+- write a PID controller for regulating the (lateral) position of a Duckiebot, in Python
+- performing unit tests (i.e., sanity checks) on specific implementation functions
+- deploy and tune the designed PID controller on virtual and/or physical Duckiebots
 ```
 
 ## About these learning activities
