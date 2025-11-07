@@ -8,7 +8,7 @@
 
 ```{needget}
 - A computer with `dts` installed and correctly set up: [](setup-dts)
-- A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+- (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
 - (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 ---
 - A computer ready to run any Duckietown learning experience.
@@ -20,6 +20,10 @@ This page describes the general setup and workflow for Duckietown learning exper
 To create your own LXs, see: [](creating-new-lxs).
 ```
 
+```{note}
+If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+```
+
 (lx-forking)=
 ## Forking the LX Repositories
 
@@ -29,7 +33,7 @@ Forking repositories allows the creation of a personal, local copy that is never
 
     Find and press the "Fork" button on the top right:
 
-    ```{figure} /_images/lx-devmanual/intro/duckietown-lx-forking.png
+    ```{figure} ../_images/lx-devmanual/intro/duckietown-lx-forking.png
     :alt: how to fork a Duckietown LX repository
     :width: 90%
     :name: duckiebot-lx-forking-4
@@ -44,7 +48,7 @@ Forking repositories allows the creation of a personal, local copy that is never
 
     git clone git@github.com:<your_github_username>/lx-<lx-name>
     cd lx-<lx-name>
-        
+
 
 
 3. **Configure upstream repo**: configure the Duckietown version of this repository as the upstream repository to synchronize with your fork.
@@ -161,7 +165,8 @@ You should see it with a status `Booting` and finally `Ready` if you look at `dt
 [VBOT] |  virtual | duckiebot | DB21J |  Ready   | [VBOT].local
 ```
 
-Now that your virtual robot is ready, you can start the Duckiematrix. From this exercise directory do:
+
+Now that your virtual robot is ready, you can start the Duckiematrix (assuming it is already installed). From this exercise directory do:
 
 ```
 dts code start_matrix
@@ -170,7 +175,7 @@ dts code start_matrix
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
 
-```{figure} /_images/lx-devmanual/intro/duckiematrix_overhead.png
+```{figure} /_images/lx-devmanual/lx-bv/duckiematrix_overhead.png
 :alt: Welcome to the Duckiematrix after starting the BV LX
 :width: 80%
 :name: duckiebot-lx-start-matrix

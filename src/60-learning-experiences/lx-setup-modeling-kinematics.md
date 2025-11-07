@@ -8,6 +8,8 @@
 
 ```{needget}
 - Learning experience computer setup: [](duckiebot-lxs)
+- (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+- (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 - (optional) familiarity with ROS basics: [](lx-setup-ros-basics)
 ---
 - Running the kinematics and odometry learning experience.

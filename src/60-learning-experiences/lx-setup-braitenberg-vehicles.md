@@ -8,6 +8,8 @@
 
 ```{needget}
 - Learning experience computer setup: [](duckiebot-lxs)
+- (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+- (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 ---
 - Running the Braitenberg Vehicles (BV) learning experience.
 ```

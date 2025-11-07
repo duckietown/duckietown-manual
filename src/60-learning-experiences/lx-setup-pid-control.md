@@ -8,12 +8,14 @@
 
 ```{needget}
 - Learning experience computer setup: [](duckiebot-lxs)
+- (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+- (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 - Mathematical model built in Modeling and Kinematics LX: [](lx-setup-mod-kin)
 ---
 - Running the PID Control learning experience.
 ```
 
-This page describes how to run the BV learning experience. 
+This page describes how to run the BV learning experience.
 
 ```{admonition} Intended Learning Outcomes
 :class: tip

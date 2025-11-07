@@ -185,6 +185,7 @@ To be able to run `dts code run`:
 
 ````
 
+(caveat-devcontainer-lx)=
 ### Learning Experiences in the Duckiematrix
 
 To run the Duckiematrix for `LXs`, run the following command to start the `Engine` and then attach the `Renderer`:
