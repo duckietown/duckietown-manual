@@ -49,7 +49,7 @@ This exercise can be run on a [real Duckiebot](https://get.duckietown.com/produc
 
 ### 1. Create a fork 
 
-Navigate to [the (PID) Control repository](https://github.com/duckietown/lx-contr).
+Navigate to [the (PID) Control repository](https://github.com/duckietown/lx-control).
 
 Find and press the "Fork" button on the top right:
 
@@ -226,7 +226,7 @@ dts code workbench -R [ROBOT_NAME]
 dts code workbench -m -R [VIRTUAL_ROBOT_NAME]
 ```
 
-(note the `-m` flag which means that we are running in the `matrix`)
+(note the `-m` flag which means that we are running in the `matrix`.)
 
 In another terminal, you can launch the `noVNC` viewer, which can be useful to interact with the virtual robot in different ways depending on the specific LX.
 
