@@ -182,6 +182,20 @@ the Duckiematrix see [](the-duckiematrix-manual).
 Example Duckiematrix splash screen after starting the Braitenberg Vehicles LX.
 ```
 
+#### Other virtual Duckiebot useful commands
+
+Once you are done for the day, do not forget to stop your virtual robot:
+
+```
+dts duckiebot virtual stop [VBOT]
+```
+
+If in doubt, you can check the status of your virtual scuderia at any time with:
+
+```
+dts duckiebot virtual list
+```
+
 (lx-code-build-bv)=
 ### Building the Code
 

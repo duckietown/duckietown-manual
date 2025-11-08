@@ -70,7 +70,7 @@ Clone the fork on your computer, replacing your GitHub username in the command b
     cd lx-control
         
 
-### 3. Configure upstream repo 
+### 3. Configure the upstream repository
 
 Configure the Duckietown version of this repository as the upstream repository to synchronize with your fork.
 
@@ -146,7 +146,7 @@ To test your code in the Duckiematrix you will need a virtual robot attached to 
 (lx-create-vbot-control-pid)=
 #### 1. Creating and starting virtual Duckiebot
 
-To test your code in the Duckiematrix you will need a virtual robot. You can create one with the command:
+You can create one with the command:
 
 ```
 dts duckiebot virtual create --type duckiebot --configuration DB21J [VBOT]
@@ -166,6 +166,18 @@ You should see it with a status `Booting` and finally `Ready` if you look at `dt
      | Hardware |   Type    | Model |  Status  | Hostname 
 ---  | -------- | --------- | ----- | -------- | ---------
 [VBOT] |  virtual | duckiebot | DB21J |  Ready   | [VBOT].local
+```
+
+Once you are done for the day, do not forget to stop your virtual robot:
+
+```
+dts duckiebot virtual stop [VBOT]
+```
+
+If in doubt, you can check the status of your virtual scuderia at any time with:
+
+```
+dts duckiebot virtual list
 ```
 
 (lx-code-matrix-start-control-pid)=
@@ -246,4 +258,22 @@ Make sure your are executing the commands from inside a learning experience fold
 My virtual robot (named, e.g., `VBOT`) hangs indefinitely when trying to update it.
 ---
 Try to restart it with: `dts duckiebot virtual restart VBOT`
+```
+
+```{trouble}
+When I run `dts code vnc` nothing happens in the browser. 
+---
+It can take some time for noVNC to start (10-45seconds, depending on computer specifications), wait. 
+```
+
+```{trouble}
+When I click on `PID Heading` in the noVNC desktop, I do not see the interaction window with `heading ref`, `v_0`, etc.  
+---
+Enlarge the noVNC window on your computer to see it. It could pop up out of view of the initial window size.
+```
+
+```{trouble}
+When I click on `PID Heading` in the noVNC desktop, I do not see image in the pre-configured RVIZ window popping up.   
+---
+Terminate the process in the terminal where you ran `dts code workbench [-m] -R [robotname]` and run it again after starting the Duckiematrix with `dts start_matrix`. 
 ```

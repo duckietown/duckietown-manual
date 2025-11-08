@@ -165,7 +165,6 @@ You should see it with a status `Booting` and finally `Ready` if you look at `dt
 [VBOT] |  virtual | duckiebot | DB21J |  Ready   | [VBOT].local
 ```
 
-
 Now that your virtual robot is ready, you can start the Duckiematrix (assuming it is already installed). From this exercise directory do:
 
 ```
@@ -182,6 +181,21 @@ the Duckiematrix see [](the-duckiematrix-manual).
 :align: center
 
 Example Duckiematrix splash screen after starting the Braitenberg Vehicles LX.
+```
+
+(lx-stop-list-vbot)=
+#### Other virtual Duckiebot useful commands
+
+Once you are done for the day, do not forget to stop your virtual robot:
+
+```
+dts duckiebot virtual stop [VBOT]
+```
+
+If in doubt, you can check the status of your virtual scuderia at any time with:
+
+```
+dts duckiebot virtual list
 ```
 
 (lx-code-build)=
