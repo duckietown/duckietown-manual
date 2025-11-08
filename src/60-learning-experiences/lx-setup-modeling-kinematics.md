@@ -15,7 +15,7 @@
 - Running the kinematics and odometry learning experience.
 ```
 
-This page describes how to run the BV learning experience. 
+This page describes how to run the "Kinematics and Odometry" learning experience. For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
 
 ```{admonition} Intended Learning Outcomes
 :class: tip

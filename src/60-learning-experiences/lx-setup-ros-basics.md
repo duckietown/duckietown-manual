@@ -14,7 +14,7 @@
 - Running the ROS basics learning experience.
 ```
 
-This page describes how to run the BV learning experience. 
+This page describes how to run the "ROS basics" learning experience. For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
 
 ```{admonition} Intended Learning Outcomes
 :class: tip
@@ -35,6 +35,7 @@ This exercise can be run on a [real Duckiebot](https://get.duckietown.com/produc
 ```{warning}
 If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
 ```
+
 
 (lx-forking-ros-basics)=
 ## Forking the repo

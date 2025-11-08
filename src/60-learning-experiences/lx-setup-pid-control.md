@@ -15,7 +15,7 @@
 - Running the PID Control learning experience.
 ```
 
-This page describes how to run the BV learning experience.
+This page describes how to run the "PID Control" learning experience.
 
 ```{admonition} Intended Learning Outcomes
 :class: tip
@@ -34,9 +34,7 @@ If you are running Duckietown inside a devcontainer and not on a native Ubuntu s
 
 ## About these learning activities
 
-In this learning experience, you will use the model that we built in the 
-[kinematics and modeling](lx-setup-mod-kin) learning experience. Now we will build a simple controller to make the Duckiebot
-follow a specified set of actions based on our knowledge of how it moves. 
+In this learning experience, you will use the model that we built in the [kinematics and odometry](lx-setup-mod-kin) learning experience. Now we will build a simple controller to make the Duckiebot follow a specified set of actions based on our knowledge of how it moves.
 
 For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
 
@@ -45,9 +43,9 @@ This exercise can be run on a [real Duckiebot](https://get.duckietown.com/produc
 ```
 
 (lx-forking-control-pid)=
-## Forking the repo
+## Forking the repository
 
-### 1. Create a fork 
+### 1. Create a fork
 
 Navigate to [the (PID) Control repository](https://github.com/duckietown/lx-control).
 
@@ -222,7 +220,7 @@ dts code workbench -R [ROBOT_NAME]
 
 💻 To test your code in the Duckiematrix:
 
-```
+```git
 dts code workbench -m -R [VIRTUAL_ROBOT_NAME]
 ```
 

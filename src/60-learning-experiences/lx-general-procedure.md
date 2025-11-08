@@ -14,7 +14,7 @@
 - A computer ready to run any Duckietown learning experience.
 ```
 
-This page describes the general setup and workflow for Duckietown learning experiences.
+This page describes the setup and general workflow for Duckietown learning experiences. Specific instructions for each available LX are detailed in the following pages of this manual. 
 
 ```{note}
 To create your own LXs, see: [](creating-new-lxs).
