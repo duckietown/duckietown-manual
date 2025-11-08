@@ -45,7 +45,7 @@ If you are running Duckietown inside a devcontainer and not on a native Ubuntu s
 
 ### 1. Create a fork 
 
-Navigate to [the Modeling and Kinematics LX repository](https://github.com/duckietown/lx-kinematics-odometryol).
+Navigate to [the Modeling and Kinematics LX repository](https://github.com/duckietown/lx-kinematics-odometry).
 
 Find and press the "Fork" button on the top right:
 
