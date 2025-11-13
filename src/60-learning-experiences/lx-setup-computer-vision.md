@@ -242,6 +242,9 @@ dts code vnc -R [ROBOT_NAME]
 
 where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
 
+In the noVNC desktop, click on the icon marked "VLS - Visual Lane Servoing Exercise" and then you should follow the prompts
+in the terminal where you ran `dts code workbench`.
+
 ```{figure} ../_images/lx-devmanual/lx-computer-vision/images/visual_control/lane-markings-angles.png
 :alt: interpreting lane visuals to determine the Duckiebot pose in a visual servoing learning experience
 :width: 70%
