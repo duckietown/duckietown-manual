@@ -3,7 +3,7 @@
 
 ```{seo}
 :description: Step by step instructions on how to run the computer vision - visual servoing learning experience (LX) in Duckietown.
-:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, computer vision, visual servoing, differential drive robot
+:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, computer vision, visual servoing, differential drive robot, pinhole camera model, homographies, camera calibration, extrinsics camera calibration, intrinsics camera calibration
 ```
 
 ```{needget}
@@ -19,8 +19,12 @@ This page describes how to run the "Computer Vision - Visual Servoing" learning 
 ```{admonition} Intended Learning Outcomes
 :class: tip
 After this learning experience, you will:
-- learn about and perform instrinsics and extrinsics camera calibration procedures
-- 
+- Understand the mathematical relationship between objects in the 3D world and their 2D representation on the camera image plane, and learn about homogeneous coordinates
+- Formalize the Pinhole Camera Model, and identify the instrincs camera calibration matrix as well as the extrinsics one
+- Learn to perform the instrinsics and extrinsics camera calibration procedures on both virtual and physical Duckiebots
+- Learn about homographies and their compositions, and be able to explain why they are relevant to the self-driving car problem
+- Learn about image filtering, implement and tune various opeartors to minimize image noise (box filter), blur (Gaussian Blurring), detect edges (image gradients and Sobel operators)
+- Leverage image filtering techniques learned above, along with camera calibrations to design a visual servoing controller, i.e., a controller that keeps the Duckiebot driving in the lane based exclusively on images from the camera.  
 ```
 
 ```{warning}
@@ -239,7 +243,7 @@ dts code vnc -R [ROBOT_NAME]
 where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
 
 ```{figure} ../_images/lx-devmanual/lx-computer-vision/images/visual_control/lane-markings-angles.png
-:alt: 
+:alt: interpreting lane visuals to determine the Duckiebot pose in a visual servoing learning experience
 :width: 70%
 :name: duckiebot-lx-cv-lane-markings
 :align: center
