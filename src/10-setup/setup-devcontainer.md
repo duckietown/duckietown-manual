@@ -167,7 +167,13 @@ dts duckiebot image_viewer ROBOT_NAME
 To attach a Duckietown robot to the Duckiematrix, run the following command, where `ROBOT_NAME` is the name of your robot and `ENGINE_LOCAL_NETWORK_ADDRESS` is the LAN IP address of the `Engine` (not `localhost`):
 
 ```shell
-dts matrix attach ROBOT_NAME -e ENGINE_LOCAL_NETWORK_ADDRESS
+dts matrix attach ROBOT_NAME -e ENGINE_LOCAL_NETWORK_ADDRESS ENTITY_NAME
+```
+
+The `ENGINE_LOCAL_NETWORK_ADDRESS` will be shown in the terminal after starting the engine. The `ENTITY_NAME` default is `map_0/vehicle_0`. A working example could be therefore:
+
+```shell
+dts matrix attach vargo -e 192.168.139.2 map_0/vehicle_0
 ```
 
 ### Running `dts code run`
