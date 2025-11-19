@@ -2,18 +2,18 @@
 # Duckietown Shell (`dts`)
 
 ```{seo}
-:description: How to install and set up DTS (Duckietown Shell), the terminal based and most powerful UI in Duckietown.
-:keywords: Duckietown, Duckiebot, DTS, Duckietown Shell, UI, terminal
+:description: How to install and set up the Duckietown Shell, the terminal based and most powerful UI in Duckietown.
+:keywords: Duckietown, Duckiebot, dts, Duckietown Shell, UI, terminal
 ```
 
-This section describes how to install and set up `DTS` (`Duckietown Shell`), a CLI (Command-Line Interface) program that is used for Duckietown-related operations.
+This section describes how to install and set up `dts` (`Duckietown Shell`), a CLI (Command-Line Interface) program that is used for Duckietown-related operations.
 
 ```{needget}
 - [Docker is installed and set up](setup-sw-docker)
 - [GitHub is installed and set up](setup-sw-github)
 - [Duckietown account](setup-account-duckietown-hub)
 ---
-- A computer with `DTS` installed and correctly set up.
+- A computer with `dts` installed and correctly set up.
 ```
 
 ## `dts` Installation
@@ -63,7 +63,7 @@ To appropriately configure the Duckietown Shell:
 (dt-account-set-token)=
 ### Configure the Duckietown token in the Duckietown Shell
 
-To perform the initial setup of `DTS`:
+To perform the initial setup of `dts`:
 
 1. Run `dts`.
 2. Select `ente` using <kbd>UpArrow</kbd> and <kbd>DownArrow</kbd>.
@@ -71,22 +71,27 @@ To perform the initial setup of `DTS`:
 4. Copy your [Duckietown Token](https://hub.duckietown.com/token).
 5. Paste your Duckietown Token into the terminal.
 6. Press <kbd>Enter</kbd>.
+7. Run `dts update`.
 
 ````{note}
-The resulting output should look like the following, where `UID` is your Duckietown UID (User ID):
+The resulting output after step 6 should look like the following, where `UID` is your Duckietown UID (User ID):
 
 ```shell
 dts :  Correctly identified as uid = UID
 ```
 ````
 
-You can change the token/login as a different user with:
+To set a token, run:
 
-    dts tok set
+```shell
+dts tok set
+```
 
-and verify it with:
+To verify a token, run:
 
-    dts tok status
+```shell
+dts tok status
+```
 
 (dt-account-switch-profile)=
 ### Switch to a different `dts` profile
@@ -136,6 +141,14 @@ dts config docker credentials set --username DOCKERHUB_USERNAME --password DOCKE
 
 With an extra **positional** argument, one could specify a custom Docker registry server other than
 `docker.io`. Check `dts config docker set --help` for more details.
+```
+
+### Resetting the Duckietown Shell
+
+To reset `dts`, run the following command and follow [these instructions](dt-account-set-token) again:
+
+```shell
+rm -rf ~/.duckietown/shell
 ```
 
 ---
