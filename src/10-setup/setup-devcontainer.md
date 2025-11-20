@@ -1,6 +1,6 @@
 ```{seo}
 :description: Step by step instructions and troubleshooting tips for running a fully fledged Duckietown environment in a development container, enabling smooth operations on macOS (including M-chips) and Windows.
-:keywords: duckietown setup, Dev Container, duckietown macOS, duckietown windows
+:keywords: duckietown setup, Dev Container, Duckietown Workspaces, duckietown macOS, duckietown windows
 ```
 
 ```{warning}
@@ -8,7 +8,7 @@ This feature is currently under development and is released in Beta mode. Most f
 ```
 
 (setup-devcontainer)=
-# Using Duckietown in a Dev Container (Beta)
+# Using Duckietown Workspace (Beta)
 
 This page describes how to run Duckietown code inside a [Development (Dev) Container](https://containers.dev/), providing a functional environment inside of [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -80,7 +80,7 @@ Installing Docker Desktop
 2. Start ubuntu by running `wsl` in the Windows Terminal
 
 ```{important}
-From now on cloning and running the devcontainer should be done from the `wsl` terminal, except when specified.
+From now on cloning and running the devcontainer should be done from the `wsl` terminal, except when otherwise specified.
 ```
 
 ::::
