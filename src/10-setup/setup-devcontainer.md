@@ -1,6 +1,6 @@
 ```{seo}
 :description: Step by step instructions and troubleshooting tips for running a fully fledged Duckietown environment in a development container, enabling smooth operations on macOS (including M-chips) and Windows.
-:keywords: duckietown setup, Dev Container, duckietown macOS, duckietown windows
+:keywords: duckietown setup, Dev Container, Duckietown Workspaces, duckietown macOS, duckietown windows
 ```
 
 ```{warning}
@@ -8,15 +8,23 @@ This feature is currently under development and is released in Beta mode. Most f
 ```
 
 (setup-devcontainer)=
-# Running Everything in a Dev Container (Beta)
+# Using Duckietown Workspace (Beta)
 
 This page describes how to run Duckietown code inside a [Development (Dev) Container](https://containers.dev/), providing a functional environment inside of [Visual Studio Code](https://code.visualstudio.com/).
 
 ```{note}
-This is the only workflow for running Duckietown code on an Apple Silicon (M-series) Mac.
+This is the only workflow for running Duckietown code on an Apple Silicon (M-series) Mac and on Windows.
 ```
 
-## Installing Orbstack (macOS)
+## Host System Container Runtime Installation
+
+In order to run Duckietown in a Dev Container, you need to install the following software on your host system, depending on your operating system:
+
+:::::{tab-set}
+
+::::{tab-item} macOS
+
+On macOS we will be installing [Orbstack](https://orbstack.dev/), a lightweight container runtime that supports Apple Silicon (M-series) Macs.
 
 ```{attention}
 If you have Docker Desktop installed, [uninstall it](https://docs.docker.com/desktop/uninstall/) and reboot.
@@ -33,9 +41,50 @@ To install Orbstack:
 4. Move the application to your `Applications` folder.
 
 ```{tip}
-If your Mac refuses to open an application because it is not trusted, hold down the `option` key and secondary-click
+If your Mac refuses to open an application because it is not trusted, hold down the `option` key and right-click
 it, then select `Open`. Your Mac will inform you that the application is not trusted but will allow you to open it.
 ```
+
+::::
+
+::::{tab-item} Windows
+
+On Windows we will be installing WSL with Ubuntu and Docker Desktop.
+
+```{attention}
+The following instructions use Windows Terminal, which comes preinstalled with Windows 11 version 22H2 and later. If you do not have it installed, you can download it from the [Microsoft Store](https://aka.ms/terminal).
+```
+
+To install WSL and Ubuntu on Windows:
+
+1. Install WSL by opening up the Windows Terminal and running
+
+    ```
+    wsl --install
+    ```
+
+2. Reboot your computer after the installation is complete.
+
+3. Install Ubuntu by running
+
+    ```
+    wsl --install ubuntu
+    ```
+
+4. Follow onscreen instructions to setup an account in Ubuntu on WSL.
+
+Installing Docker Desktop
+
+1. Install docker desktop from https://www.docker.com/ 
+
+2. Start ubuntu by running `wsl` in the Windows Terminal
+
+```{important}
+From now on cloning and running the devcontainer should be done from the `wsl` terminal, except when otherwise specified.
+```
+
+::::
+:::::
 
 ## Installing Visual Studio Code
 
@@ -49,6 +98,16 @@ To install Visual Studio Code:
 
 4. Move the application to your `Applications` folder.
 
+## Installing the necessary VS Code extensions
+To install the Remote - Containers extension in VS Code:
+
+1. Open VS Code.
+2. Click on the `Extensions` icon in the left sidebar (or press `Ctrl+Shift+X` on Windows or `Cmd+Shift+X` on macOS).
+3. In the search bar, type `Remote - Containers`.
+4. Click on the `Install` button next to the `Remote - Containers` extension by Microsoft.
+5. (**Windows only**) Follow the same instructions to install also the `WSL` extension (see next section).
+
+
 ## Cloning the `dt-env-developer` repository
 
 To clone the `dt-env-developer` repository, run:
@@ -58,7 +117,9 @@ git clone git@github.com:duckietown/dt-env-developer.git
 ```
 
 ```{attention}
-Ignore the instructions in the `README` of this repository. 
+Ignore the instructions in the `README` of this repository.
+
+(Windows) If you are on Windows, make sure to run the above command from the `wsl` terminal.
 ```
 
 ## Running the Dev Container in VS Code
@@ -72,7 +133,7 @@ To run the Dev Container in VS Code:
 3. (Optional) Click the `Reading Dev Container Configuration (show log)` link.
 
 ```{note}
-The first time you load the Dev Container may take some time.
+The first time you load the Dev Container it may take some time as it is building the environment.
 ```
 
 ## Setting up the Duckietown Shell
@@ -113,6 +174,31 @@ To start the `Renderer` and connect it to the `Engine` running in the Dev Contai
 ```shell
 cd /Applications
 open duckiematrix.app --args -e localhost --token "TOKEN"
+```
+
+````
+
+````{tab-item} Windows
+
+```{important}
+These commands should be run from the Windows Terminal, not from the `wsl` terminal.
+```
+
+To install the `Renderer`:
+
+1. [Download the `Renderer` `.zip` file](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/releases/duckiematrix-0.6.2-windows.zip).
+
+2. Navigate to your `Downloads` folder.
+
+3. Double-click the `.zip` file.
+
+4. Move the application to your `C:\Program Files` folder.
+
+To start the `Renderer` and connect it to the `Engine` running in the Dev Container, run the following commands, where `TOKEN` is your Duckietown Token (do not forget the double quotes):
+
+```shell
+cd C:\Program Files
+.\duckiematrix.exe -e localhost --token "TOKEN"
 ```
 
 ````
@@ -176,20 +262,43 @@ The `ENGINE_LOCAL_NETWORK_ADDRESS` will be shown in the terminal after starting 
 dts matrix attach vargo -e 192.168.139.2 map_0/vehicle_0
 ```
 
-### Running `dts code run`
+### Running `dts code editor`
 
-````{tab-set}
+To be able to run `dts code editor`, you need to install `mkcert` on your host system:
 
-```{tab-item} macOS
+`````{tab-set}
 
-To be able to run `dts code run`:
+````{tab-item} macOS
+
 
 1. Run `brew install mkcert` or [download the `darwin` binary for your system's architecture](https://github.com/FiloSottile/mkcert/releases/tag/v1.4.4).
 
 2. Run `mkcert -install` (to install the local CA in your system).
-```
-
 ````
+
+````{tab-item} Windows
+
+1. Download mkcert for windows from [this link](https://dl.filippo.io/mkcert/v1.4.4?for=windows/amd64), saving it to your Downloads folder.
+
+2. Then, open the Windows Terminal and run:
+
+    ```
+    .\Downloads\mkcert-v1.4.4-windows-amd64.exe --install
+    ```
+
+3. Select `Yes` in the prompt
+4. In the Ubuntu terminal, open the `~/.bashrc` file with a text editor, e.g., by running `nano ~/.bashrc` and append the following lines at the end of the file:
+
+    ```bash
+    WINUSER=$(powershell.exe '$env:USERNAME' | tr -d '\r')
+    export MKCERT_PATH="/mnt/c/Users/$WINUSER/AppData/Local/mkcert"
+    ```
+
+5. Save and exit the text editor (in `nano`, press `Ctrl+X`, `Enter`, then `Enter`).
+
+6. Finally, run `source ~/.bashrc` to update the current shell or open a new `wsl` terminal window.
+````
+`````
 
 (caveat-devcontainer-lx)=
 ### Learning Experiences in the Duckiematrix
