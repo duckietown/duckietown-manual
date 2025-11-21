@@ -236,7 +236,7 @@ To start the `Renderer` and connect it to the `Engine` running in the Dev Contai
 
 ```shell
 cd /Applications
-open duckiematrix.app --args -e localhost --token "TOKEN"
+open duckiematrix.app --args -e localhost --token "DT2-TOKEN"
 ```
 
 ````
