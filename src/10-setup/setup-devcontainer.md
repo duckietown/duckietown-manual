@@ -9,8 +9,7 @@ This feature is currently under development and is released in Beta mode. Most f
 ```
 
 (setup-devcontainer)=
-# Using Duckietown Workspace (Beta)
-# Using Duckietown Workspace (Beta)
+# Using Duckietown Workspaces (Beta)
 
 This page describes how to run Duckietown code inside a [Development (Dev) Container](https://containers.dev/), providing a functional environment inside of [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -28,6 +27,7 @@ In order to run Duckietown in a Dev Container, you need to install the following
 ::::{tab-item} macOS
 
 On macOS we will be installing [Orbstack](https://orbstack.dev/), a lightweight container runtime that supports Apple Silicon (M-series) Macs.
+
 ## Host System Container Runtime Installation
 
 In order to run Duckietown in a Dev Container, you need to install the following software on your host system, depending on your operating system:
@@ -224,7 +224,7 @@ If you are using the Duckiematrix in the context of an LX, [launch the engine wi
 
 To install the `Renderer`:
 
-1. [Download the `Renderer` `.zip` file](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/releases/duckiematrix-0.6.2-macosx.zip).
+1. [Download the `Renderer` `.zip` file](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/releases/duckiematrix-0.6.3-macosx.zip).
 
 2. Navigate to your `Downloads` folder.
 
