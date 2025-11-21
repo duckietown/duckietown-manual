@@ -3,7 +3,7 @@
 
 ```{seo}
 :description: Assembly procedure for a Duckiebot DB21J.
-:keywords: Duckietown, Duckiebot, DB21J, assembly
+:keywords: Duckietown, Duckiebot, DB21J, assembly instructions, how to build a Duckiebot, how to assemble a Duckiebot
 ```
 
 This section describes the assembly procedure for your Duckiebot DB21J.
@@ -12,6 +12,17 @@ This section describes the assembly procedure for your Duckiebot DB21J.
 * The components for a Duckiebot `DB21-J4` (available on the [Duckietown online store](https://get.duckietown.com)).
 ---
 An assembled Duckiebot DB21J.
+```
+
+```{seealso}
+The most recent Duckiebot variant is slightly different from what shown below. It includes:
+- a plastic omnidirectional, instead of a metal one
+- a set of M3 nylon screws and nuts, instead of the same in metal.
+
+Follow the instructions in this page, but:
+
+- replace steps 4 and 5 with these instruction: [](assembly-instructions-db21j-v3)
+- use nylon screws and nuts instead of metal ones when placing them in the chassis.  
 ```
 
 ```{admonition} What is in the box and assembly video (DB21M)
@@ -140,6 +151,10 @@ Screw the IMU PCB onto the top side of the bottom plate using two `N2.5x12` scre
 
 (db21j-bottom-assembly-step-4)=
 ### Step 4
+
+```{seealso}
+If your omnidirectional wheel does not look like this one and is made of plastic instead of metal, follow the instructions at: []() and then continue here from [Step 6](db21j-bottom-assembly-step-6).
+```
 
 Screw two `FF3x25` standoffs onto the top side of the omni wheel using two `M3x8` screws as shown below.
 

@@ -44,6 +44,8 @@ parts:
                 # sections:
                 #    -   file: 10-setup/03-duckiebot/duckiebot-db21j-components-explained
                     -   file: 10-setup/03-duckiebot/assembly-instructions-duckiebot-db21j
+                        sections:
+                        -   file: 10-setup/03-duckiebot/assembly-instructions-duckiebot-db21jv3                   
                     -   file: 10-setup/03-duckiebot/network-configuration
                     -   file: 10-setup/03-duckiebot/duckiebot-first-boot
                     -   file: 10-setup/03-duckiebot/dashboard-setup
