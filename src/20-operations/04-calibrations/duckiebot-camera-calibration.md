@@ -88,7 +88,7 @@ If the pattern is not rigid, the calibrations should not be used. You can print 
 ```
 
 (operation-camera-intrinsic-calibration)=
-## Intrinsic calibration
+## Intrinsic camera calibration
 
 The instrinsic camera calibration procedure identifies parameters that enable creating a relationship between the 2D image plane and the 3D world around the Duckiebot. These parameters account for various optical specifications such as the camera's focal length, the pixel aspect ratio, and the distortion field applied by the fisheye lens.
 
@@ -298,3 +298,41 @@ I do not see what my Duckiebot sees after refreshing the window and following []
 Contact support.
 ```
 -->
+
+(devcontainer-vbot-camera-calibration)=
+## (Beta) Running camera calibrations for a virtual Duckiebot in Duckietown Workspaces
+
+Once a virtual Duckiebot is running, it can be treated as a physical Duckiebot when it comes to running other Duckietown commands, e.g., the calibration ones detailed above. 
+
+To run the camera calibrations in [Duckietown Workspaces](setup-devcontainer) on virtual Duckiebots, follow the instructions below.
+
+
+`````{tab-set}
+
+````{tab-item} macOS
+
+Legend:
+
+📦: commands in workspace terminal 
+🚢: on host machine; 
+🌐: in the Duckiematrix
+
+1. 📦 `dts duckiebot virtual start robotname`
+2. 📦 `dts matrix engine run --sandbox --verbose`
+3. 📦 `dts matrix attach robotname -e [engine 192.xx address] map_0/vehicle_0` 
+4. 🚢 open browser and go to http://localhost:6080/
+5. 🚢 open terminal: `cd /Applications`
+6. 🚢 `open duckiematrix.app --args -e localhost --token "DT2_TOKEN"`
+7. 📦 `dts duckiebot calibrate_intrinsics robotname` 
+8. 🌐 Select window and press <kbd>ENTER</kbd> to activate keyboard commands. Use arrows to move to the Duckiebot, <kbd>E</kbd> to board, and then drive to the laboratory/garage. Press <kbd>E</kbd> to enter the garage. Once parked, Press <kbd>ESC</kbd> to gain back mouse control, and select "Instrinsics tool"
+9. 🚢 You should see what the robot sees in the image viewer in the browser. You are ready to perform the calibration by moving the calibration matrix in the Duckiematrix.
+
+
+````
+
+````{tab-item} Windows
+
+(Work in progess)
+
+````
+`````
