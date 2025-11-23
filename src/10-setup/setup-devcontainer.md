@@ -186,31 +186,6 @@ open duckiematrix.app --args -e localhost --token "TOKEN"
 
 ````
 
-````{tab-item} Windows
-
-```{important}
-These commands should be run from the Windows Terminal, not from the `wsl` terminal.
-```
-
-To install the `Renderer`:
-
-1. [Download the `Renderer` `.zip` file](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/releases/duckiematrix-0.6.2-windows.zip).
-
-2. Navigate to your `Downloads` folder.
-
-3. Double-click the `.zip` file.
-
-4. Move the application to your `C:\Program Files` folder.
-
-To start the `Renderer` and connect it to the `Engine` running in the Dev Container, run the following commands, where `TOKEN` is your Duckietown Token (do not forget the double quotes):
-
-```shell
-cd C:\Program Files
-.\duckiematrix.exe -e localhost --token "TOKEN"
-```
-
-````
-
 `````
 
 ## Caveats
