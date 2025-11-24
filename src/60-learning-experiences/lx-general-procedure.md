@@ -14,10 +14,18 @@
 - A computer ready to run any Duckietown learning experience.
 ```
 
-This page describes the setup and general workflow for Duckietown learning experiences. Specific instructions for each available LX are detailed in the following pages of this manual. 
+This page describes the setup and general workflow for Duckietown learning experiences. Specific instructions for each available LX are detailed in the following pages of this manual. The following LXs are currently supported:
+
+
+(ente-supported-lxs)=
+## Currently supported ente LXs
+
+```{tableofcontents}
+```
 
 ```{note}
-To create your own LXs, see: [](creating-new-lxs).
+- to create your own LXs, see: [](creating-new-lxs).
+- to share your LXs, reach out to [info@duckietown.com](mailto:info@duckietown.com) 
 ```
 
 ```{warning}
