@@ -1,9 +1,9 @@
-(lx-setup-computer-vision)=
-# LX: Computer Vision
+(lx-setup-object-detection)=
+# LX: Object Detection
 
 ```{seo}
-:description: Step by step instructions on how to run the computer vision - visual servoing learning experience (LX) in Duckietown.
-:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, computer vision, visual servoing, differential drive robot, pinhole camera model, homographies, camera calibration, extrinsics camera calibration, intrinsics camera calibration
+:description: Step by step instructions on how to run the object detection learning experience (LX) in Duckietown.
+:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, object detection, machine learning, ai, artificial intelligence, deep learning, duckie detector, car obstacle detection
 ```
 
 ```{needget}
@@ -11,23 +11,28 @@
 - (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
 - (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 ---
-- Running the Computer Vision learning experience.
+- Running the Object Detection learning experience.
 ```
 
-This page describes how to run the "Computer Vision - Visual Servoing" learning experience.
+This page describes how to run the "Object Detection" learning experience.
 
+```{figure} ../_images/lx-devmanual/lx-object-detection/bbox.png
+:alt: duckietown ML object detection LX thumbnail image with annotated duckie
+:width: 60%
+:name: duckiebot-lx-obj-det-bbox
+:align: center
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H7-2YkHiChw?si=J7pPzrXyKJX_VW4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Welcome to the Object Detection LX.  
+```
 
 ```{admonition} Intended Learning Outcomes
 :class: tip
 After this learning experience, you will:
-- Understand the mathematical relationship between objects in the 3D world and their 2D representation on the camera image plane, and learn about homogeneous coordinates
-- Formalize the Pinhole Camera Model, and identify the instrincs camera calibration matrix as well as the extrinsics one
-- Learn to perform the instrinsics and extrinsics camera calibration procedures on both virtual and physical Duckiebots
-- Learn about homographies and their compositions, and be able to explain why they are relevant to the self-driving car problem
-- Learn about image filtering, implement and tune various opeartors to minimize image noise (box filter), blur (Gaussian Blurring), detect edges (image gradients and Sobel operators)
-- Leverage image filtering techniques learned above, along with camera calibrations to design a visual servoing controller, i.e., a controller that keeps the Duckiebot driving in the lane based exclusively on images from the camera.  
+- learn about neural networks, and the tools needed to build one step by step
+- create, optimize and train your own deep net using Pytorch
+- understand how to and set up a Duckietown-themed dataset, run data collection, and preprocess images
+- train an object detector, with particular focus on duckies
+- fine tune the object detector, and test it in simulation and on a physical Duckiebot. 
 ```
 
 ```{warning}
@@ -42,32 +47,32 @@ For guided setup instructions, lecture content, and more related to this LX, see
 This exercise can be run on a [real Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) or on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps). 
 ```
 
-(lx-forking-computer-vision)=
+(lx-forking-object-detection)=
 ## Forking the repository
 
 ### 1. Create a fork
 
-Navigate to [the LX-Computer-Vision repository](https://github.com/duckietown/lx-computer-vision).
+Navigate to [the LX-Object-Detection repository](https://github.com/duckietown/lx-object-detection).
 
 Find and press the "Fork" button on the top right:
 
 ```{figure} /_images/lx-devmanual/intro/duckietown-lx-forking.png
 :alt: how to fork a Duckietown LX repository
 :width: 90%
-:name: duckiebot-lx-forking-computer-vision
+:name: duckiebot-lx-forking-object-detection
 :align: center
 
 Fork the LX to be able to make local changes while still being able to receive updates.
 ```
 
-This will create a new repository at: `<your_github_username>/lx-computer-vision`.
+This will create a new repository at: `<your_github_username>/lx-object-detection`.
 
 ### 2. Clone the fork
 
 Clone the fork on your computer, replacing your GitHub username in the command below, and navigate to the new folder:
 
-    git clone git@github.com:<your_github_username>/lx-computer-vision
-    cd lx-computer-vision
+    git clone git@github.com:<your_github_username>/lx-object-detection
+    cd lx-object-detection
         
 ### 3. Configure the upstream repository
 
@@ -79,7 +84,7 @@ List the current remote repository for your fork,
 
 Specify a new remote upstream repository,
 
-    git remote add upstream https://github.com/duckietown/lx-computer-vision
+    git remote add upstream https://github.com/duckietown/lx-object-detection
 
 Confirm that the new upstream repository was added to the list,
 
@@ -87,28 +92,50 @@ Confirm that the new upstream repository was added to the list,
 
 You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every exercise will prompt you to pull from the upstream repository, updating your exercises to the latest version (if available).
 
-(lx-system-update-computer-vision)=
+(lx-system-update-object-detection)=
 ## Keeping your System Up To Date
 
-- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not, e.g., a `daffy` one). You can check your current profile with:
-
+- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not a `daffy` one). You can check your current profile with: 
+    
+    ```
     dts profile list
+    ```
 
-  To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
+    To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
 
-- 💻 Pull from the upstream remote to synch your fork with the upstream repo:
+- 💻 Pull from the upstream remote to synch your fork with the upstream repo: 
 
+    ```
     git pull upstream ente
+    ```
 
-- 💻 Make sure your Duckietown Shell is updated to the latest version: `pipx upgrade duckietown-shell`
+- 💻 Make sure your Duckietown Shell is updated to the latest version: 
 
-- 💻 Update the shell commands: `dts update`
+    ```
+    pipx upgrade duckietown-shell
+    ```
 
-- 💻 Update your laptop/desktop: `dts desktop update`
+- 💻 Update the shell commands: 
 
-- 🚙 Update your Duckiebot: `dts duckiebot update ROBOTNAME` (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
+    ```
+    dts update
+    ```
 
-(lx-code-editor-lx-computer-vision)=
+- 💻 Update your laptop/desktop: 
+
+    ```
+    dts desktop update
+    ```
+
+- 🚙 Update your Duckiebot: 
+
+    ```
+    dts duckiebot update ROBOTNAME
+    ``` 
+    
+    (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
+
+(lx-code-editor-lx-object-detection)=
 ## Launching the Code Editor
 
 ```{important}
@@ -124,7 +151,7 @@ dts code editor
 Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar
 of your browser to access the code editor. The first thing you will see in the code editor are a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
 
-(lx-navigating-notebooks-computer-vision)=
+(lx-navigating-notebooks-object-detection)=
 ## Walkthrough of Notebooks
 
 Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the
@@ -137,12 +164,12 @@ learning experience directory.
 
 Once you have done that you will need to **build** your code before **testing** it.
 
-(lx-matrix-testing-computer-vision)=
+(lx-matrix-testing-object-detection)=
 ### Testing with the Duckiematrix
 
 To test your code in the Duckiematrix you will need a virtual robot attached to an ongoing session. 
 
-(lx-create-vbot-computer-vision)=
+(lx-create-vbot-object-detection)=
 #### 1. Creating and starting virtual Duckiebot
 
 You can create one with the command:
@@ -179,7 +206,7 @@ If in doubt, you can check the status of your virtual scuderia at any time with:
 dts duckiebot virtual list
 ```
 
-(lx-code-matrix-start-computer-vision)=
+(lx-code-matrix-start-object-detection)=
 #### 2. Starting the Duckiematrix with the virtual Duckiebot
 
 Now that your virtual robot is ready, you can start the Duckiematrix. From this exercise directory do:
@@ -191,25 +218,16 @@ dts code start_matrix
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
 
-```{figure} ../_images/lx-devmanual/lx-computer-vision/extrinsics/scenario0/frame0_distorted.jpg
-:alt: Distorted image from Duckiebot POV in the Duckiematrix, due to uncalibrated camera extrinsics.
+```{figure} ../_images/lx-devmanual/lx-object-detection/normal.png
+:alt: A step in the Duckietown object detection training process
 :width: 70%
-:name: duckiebot-lx-cv-image-distorted
+:name: duckiebot-lx-obj-det-segmentation
 :align: center
 
-The Duckiebot fisheye camera lens distorts images, requiring a camera calibration process. 
+Segmenting duckies.
 ```
 
-```{figure} ../_images/lx-devmanual/lx-computer-vision/extrinsics/scenario0/frame0_rectified.jpg
-:alt: Rectified image from Duckiebot POV in the Duckiematrix, thanks to calibrated camera extrinsics.
-:width: 70%
-:name: duckiebot-lx-cv-image-rectified
-:align: center
-
-Duckiebot images with a calibrated camera.
-```
-
-(lx-code-build-computer-vision)=
+(lx-code-build-object-detection)=
 ### Building the Code
 
 From inside the learning experience root directory, you can build your code with:
@@ -220,7 +238,7 @@ dts code build -R ROBOT_NAME
 
 where `ROBOT_NAME` can be either a physical or virtual robot. 
 
-(lx-code-test-computer-vision)=
+(lx-code-test-object-detection)=
 ### Testing on a Duckiebot or in the Duckiematrix
 
 🚙 To test your code on your real Duckiebot you can do:
@@ -248,22 +266,21 @@ where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you r
 In the noVNC desktop, click on the icon marked "VLS - Visual Lane Servoing Exercise" and then you should follow the prompts
 in the terminal where you ran `dts code workbench`.
 
-```{figure} ../_images/lx-devmanual/lx-computer-vision/images/visual_control/lane-markings-angles.png
-:alt: interpreting lane visuals to determine the Duckiebot pose in a visual servoing learning experience
+```{figure} ../_images/lx-devmanual/lx-object-detection/train_batch1.jpg
+:alt: duckietown object detection learning experience training in batch from real data
 :width: 70%
-:name: duckiebot-lx-cv-lane-markings
+:name: duckiebot-lx-obj-det-training-in-batch
 :align: center
 
-Visual Servoing relies exclusively on images to control the Duckiebot. 
+Object detector training. 
 ```
-
 
 ## Troubleshooting
 
 ```{trouble}
 When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/workspaces/dt-env-developer/lx'`
 ---
-Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-computer-vision/`)
+Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-object-detection/`)
 ```
 
 ```{trouble}

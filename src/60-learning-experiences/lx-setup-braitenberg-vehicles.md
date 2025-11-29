@@ -16,9 +16,19 @@
 
 This page describes how to run the Braitenberg Vehicles learning experience. 
 
+```{figure} /_images/lx-devmanual/lx-bv/duckietown-bv-lx-matrix-iso.webp
+:alt: Welcome to the Duckiematrix after starting the BV LX
+:width: 60%
+:name: duckiebot-lx-bv
+:align: center
+
+Welcome to the Braitenberg Vehicles LX!
+```
+
 ```{admonition} Intended Learning Outcomes
 :class: tip
 In this learning experience, learners will:
+- experience the emergence of autonomy from atoms and bits
 - design and implement a vision-based sensorimotor connection-based agent to enable simple autonomous behaviors on Duckiebots
 - deploy the agent on physical or virtual Duckiebots
 - tune the agent to have the Duckiebot avoid a sea of duckies
@@ -83,27 +93,45 @@ You can now push your work to your own repository using the standard GitHub work
 (lx-system-update-bv)=
 ## Keeping your System Up To Date
 
-- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not, e.g., a `daffy` one). You can check your current profile with:
-
+- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not a `daffy` one). You can check your current profile with: 
+    
+    ```
     dts profile list
+    ```
 
-  To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
+    To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
 
-- 💻 Pull from the upstream remote to synch your fork with the upstream repo:
+- 💻 Pull from the upstream remote to synch your fork with the upstream repo: 
 
+    ```
     git pull upstream ente
+    ```
 
-- 💻 Make sure your Duckietown Shell is updated to the latest version: `pipx upgrade duckietown-shell`
+- 💻 Make sure your Duckietown Shell is updated to the latest version: 
 
-- 💻 Update the shell commands: `dts update`
+    ```
+    pipx upgrade duckietown-shell
+    ```
 
-- 💻 Update your laptop/desktop: `dts desktop update`
+- 💻 Update the shell commands: 
 
-- 🚙 Update your Duckiebot: `dts duckiebot update ROBOTNAME` (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
+    ```
+    dts update
+    ```
 
-    **Note**: if your virtual robot (named, e.g., `VBOT`) hangs indefinitely when you try to update it, you can try to restart it with:
+- 💻 Update your laptop/desktop: 
 
-        dts duckiebot virtual restart VBOT
+    ```
+    dts desktop update
+    ```
+
+- 🚙 Update your Duckiebot: 
+
+    ```
+    dts duckiebot update ROBOTNAME
+    ``` 
+    
+    (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
 
 (lx-code-editor)=
 ## Launching the Code Editor
@@ -173,14 +201,6 @@ dts code start_matrix
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
 
-```{figure} /_images/lx-devmanual/lx-bv/duckiematrix_overhead.png
-:alt: Welcome to the Duckiematrix after starting the BV LX
-:width: 80%
-:name: duckiebot-lx-start-matrix
-:align: center
-
-Example Duckiematrix splash screen after starting the Braitenberg Vehicles LX.
-```
 
 #### Other virtual Duckiebot useful commands
 

@@ -17,6 +17,15 @@
 
 This page describes how to run the "PID Control" learning experience.
 
+```{figure} ../_images/lx-devmanual/lx-control-pid/control-lx-duckiematrix-riding.png
+:alt: Riding a virtual Duckiebot in the PID control LX
+:width: 70%
+:name: duckiebot-lx-control-riding
+:align: center
+
+Welcome to the PID control LX! Are you able to autonomously perform basic driving maneuvres in a simple world? Press <kbd>R</kbd> if you get lost to get back to the road!
+```
+
 ```{admonition} Intended Learning Outcomes
 :class: tip
 After this learning experience, learners will:
@@ -91,23 +100,45 @@ You can now push your work to your own repository using the standard GitHub work
 (lx-system-update-control-pid)=
 ## Keeping your System Up To Date
 
-- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not, e.g., a `daffy` one). You can check your current profile with:
-
+- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not a `daffy` one). You can check your current profile with: 
+    
+    ```
     dts profile list
+    ```
 
-  To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
+    To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
 
-- 💻 Pull from the upstream remote to synch your fork with the upstream repo:
+- 💻 Pull from the upstream remote to synch your fork with the upstream repo: 
 
+    ```
     git pull upstream ente
+    ```
 
-- 💻 Make sure your Duckietown Shell is updated to the latest version: `pipx upgrade duckietown-shell`
+- 💻 Make sure your Duckietown Shell is updated to the latest version: 
 
-- 💻 Update the shell commands: `dts update`
+    ```
+    pipx upgrade duckietown-shell
+    ```
 
-- 💻 Update your laptop/desktop: `dts desktop update`
+- 💻 Update the shell commands: 
 
-- 🚙 Update your Duckiebot: `dts duckiebot update ROBOTNAME` (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
+    ```
+    dts update
+    ```
+
+- 💻 Update your laptop/desktop: 
+
+    ```
+    dts desktop update
+    ```
+
+- 🚙 Update your Duckiebot: 
+
+    ```
+    dts duckiebot update ROBOTNAME
+    ``` 
+    
+    (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
 
 (lx-code-editor-lx-control-pid)=
 ## Launching the Code Editor
@@ -199,15 +230,6 @@ the Duckiematrix see [](the-duckiematrix-manual).
 :align: center
 
 You start as a duckie. Click <kbd>Enter</kbd> to get started. Move with <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> and rotate the point of view by moving the mouse, as if you were playing a computer game. Approach the Duckiebot and ride it by pressing <kbd>E</kbd>. 
-```
-
-```{figure} ../_images/lx-devmanual/lx-control-pid/control-lx-duckiematrix-riding.png
-:alt: Riding a virtual Duckiebot in the PID control LX
-:width: 70%
-:name: duckiebot-lx-control-riding
-:align: center
-
-In this LX, the world is a long straigth road (all of it?). If you get very lost from the road and you want to come back, you can do so with the <kbd>R</kbd> key.
 ```
 
 (lx-code-build-control-pid)=

@@ -15,7 +15,18 @@
 - Running the kinematics and odometry learning experience.
 ```
 
-This page describes how to run the "Kinematics and Odometry" learning experience. For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
+This page describes how to run the "Kinematics and Odometry" learning experience. 
+
+```{figure} ../_images/lx-devmanual/lx-mod-kin/images/odometry/odometry-1.png
+:alt: graphical representation of odometry
+:width: 70%
+:name: duckiebot-lx-kin-odometry
+:align: center
+
+Welcome to the Kinematics and Odometry LX! 
+```
+
+For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
 
 ```{admonition} Intended Learning Outcomes
 :class: tip
@@ -41,7 +52,7 @@ If you are running Duckietown inside a devcontainer and not on a native Ubuntu s
 ```
 
 (lx-forking-mod-kin)=
-## Forking the repo
+## Forking the repository
 
 ### 1. Create a fork 
 
@@ -68,7 +79,7 @@ Clone the fork on your computer, replacing your GitHub username in the command b
     cd lx-kinematics-odometry
         
 
-### 3. Configure upstream repo 
+### 3. Configure upstream repository
 
 Configure the Duckietown version of this repository as the upstream repository to synchronize with your fork.
 
@@ -89,27 +100,45 @@ You can now push your work to your own repository using the standard GitHub work
 (lx-system-update-mod-kin)=
 ## Keeping your System Up To Date
 
-- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not, e.g., a `daffy` one). You can check your current profile with:
-
+- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not a `daffy` one). You can check your current profile with: 
+    
+    ```
     dts profile list
+    ```
 
-  To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
+    To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
 
-- 💻 Pull from the upstream remote to synch your fork with the upstream repo:
+- 💻 Pull from the upstream remote to synch your fork with the upstream repo: 
 
+    ```
     git pull upstream ente
+    ```
 
-- 💻 Make sure your Duckietown Shell is updated to the latest version: `pipx upgrade duckietown-shell`
+- 💻 Make sure your Duckietown Shell is updated to the latest version: 
 
-- 💻 Update the shell commands: `dts update`
+    ```
+    pipx upgrade duckietown-shell
+    ```
 
-- 💻 Update your laptop/desktop: `dts desktop update`
+- 💻 Update the shell commands: 
 
-- 🚙 Update your Duckiebot: `dts duckiebot update ROBOTNAME` (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
+    ```
+    dts update
+    ```
 
-    **Note**: if your virtual robot (named, e.g., `VBOT`) hangs indefinitely when you try to update it, you can try to restart it with:
+- 💻 Update your laptop/desktop: 
 
-        dts duckiebot virtual restart VBOT
+    ```
+    dts desktop update
+    ```
+
+- 🚙 Update your Duckiebot: 
+
+    ```
+    dts duckiebot update ROBOTNAME
+    ``` 
+    
+    (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
 
 (lx-code-editor-lx-mod-kin)=
 ## Launching the Code Editor
@@ -139,6 +168,15 @@ In many cases the last notebook will instruct you to write some code inside the
 learning experience directory. 
 
 Once you have done that you will need to **build** your code before **testing** it.
+
+```{figure} ../_images/lx-devmanual/lx-mod-kin/images/odometry/od-sim-tour.png
+:alt: the tools used in the odomtry LX include ROS, rviz and ducietown simulators
+:width: 70%
+:name: duckiebot-lx-kin-odometry-tools
+:align: center
+
+Using RVIZ, ROS and the Duckietown keyboard controller to test odometry reconstructions.
+```
 
 (lx-matrix-testing-mod-kin)=
 ### Testing with the Duckiematrix

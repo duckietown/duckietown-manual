@@ -14,7 +14,18 @@
 - Running the ROS basics learning experience.
 ```
 
-This page describes how to run the "ROS basics" learning experience. For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
+This page describes how to run the "ROS basics" learning experience. 
+
+```{figure} /_images/lx-devmanual/lx-ros-basics/joy_echo.png
+:alt: Duckietown joystick commands published to a ROS topic
+:width: 80%
+:name: duckiebot-lx-ros-joy-topic-echo
+:align: center
+
+In this learning experience learners will exploring ROS concepts like topics and nodes.
+```
+
+For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
 
 ```{admonition} Intended Learning Outcomes
 :class: tip
@@ -36,11 +47,10 @@ This exercise can be run on a [real Duckiebot](https://get.duckietown.com/produc
 If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
 ```
 
-
 (lx-forking-ros-basics)=
-## Forking the repo
+## Forking the repository
 
-### 1. Create a fork 
+### 1. Create a fork
 
 Navigate to [the ROS Basics repository](https://github.com/duckietown/lx-ros-basics).
 
@@ -65,7 +75,7 @@ Clone the fork on your computer, replacing your GitHub username in the command b
     cd lx-ros-basics
         
 
-### 3. Configure upstream repo 
+### 3. Configure upstream repository 
 
 Configure the Duckietown version of this repository as the upstream repository to synchronize with your fork.
 
@@ -86,27 +96,45 @@ You can now push your work to your own repository using the standard GitHub work
 (lx-system-update-ros-basics)=
 ## Keeping your System Up To Date
 
-- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not, e.g., a `daffy` one). You can check your current profile with:
-
+- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not a `daffy` one). You can check your current profile with: 
+    
+    ```
     dts profile list
+    ```
 
-  To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
+    To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
 
-- 💻 Pull from the upstream remote to synch your fork with the upstream repo:
+- 💻 Pull from the upstream remote to synch your fork with the upstream repo: 
 
+    ```
     git pull upstream ente
+    ```
 
-- 💻 Make sure your Duckietown Shell is updated to the latest version: `pipx upgrade duckietown-shell`
+- 💻 Make sure your Duckietown Shell is updated to the latest version: 
 
-- 💻 Update the shell commands: `dts update`
+    ```
+    pipx upgrade duckietown-shell
+    ```
 
-- 💻 Update your laptop/desktop: `dts desktop update`
+- 💻 Update the shell commands: 
 
-- 🚙 Update your Duckiebot: `dts duckiebot update ROBOTNAME` (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
+    ```
+    dts update
+    ```
 
-    **Note**: if your virtual robot (named, e.g., `VBOT`) hangs indefinitely when you try to update it, you can try to restart it with:
+- 💻 Update your laptop/desktop: 
 
-        dts duckiebot virtual restart VBOT
+    ```
+    dts desktop update
+    ```
+
+- 🚙 Update your Duckiebot: 
+
+    ```
+    dts duckiebot update ROBOTNAME
+    ``` 
+    
+    (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
 
 (lx-code-editor-lx-ros-basics)=
 ## Launching the Code Editor
@@ -178,15 +206,6 @@ dts code start_matrix
 
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
-
-```{figure} /_images/lx-devmanual/lx-ros-basics/joy_echo.png
-:alt: Duckietown joystick commands published to a ROS topic
-:width: 80%
-:name: duckiebot-lx-ros-joy-topic-echo
-:align: center
-
-In this learning experience learners will exploring ROS concepts like topics and nodes.
-```
 
 (lx-code-build-ros-basics)=
 ### Building the Code

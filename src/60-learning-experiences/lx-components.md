@@ -25,7 +25,7 @@ The following activity types can be implemented with the Duckietown Learning Exp
 
 * [Notebook](notebooks-intro)
 * [Workbench Tool](workbench-intro)
-* [Running on a Virtual Duckiebotd](simulator-intro)
+* [Running on a Virtual Duckiebot](simulator-intro)
 * [Running on a Real Duckiebot](agents-intro)
 
 ---
