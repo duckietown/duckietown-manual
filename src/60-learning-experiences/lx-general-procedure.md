@@ -1,3 +1,4 @@
+
 (duckiebot-lxs)=
 # General Procedure for Running Learning Experiences
 
@@ -56,8 +57,6 @@ Forking repositories allows the creation of a personal, local copy that is never
 
     git clone git@github.com:<your_github_username>/lx-<lx-name>
     cd lx-<lx-name>
-
-
 
 3. **Configure upstream repo**: configure the Duckietown version of this repository as the upstream repository to synchronize with your fork.
 

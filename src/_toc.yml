@@ -125,7 +125,7 @@ parts:
                     -   file: 60-learning-experiences/lx-setup-pid-control
                     -   file: 60-learning-experiences/lx-setup-computer-vision
                     #-   file: 60-learning-experiences/lx-setup-computer-vision-augmented-reality-AR
-                    -   file: 60-learning-experiences/lx-setup-object-detection
+                    -   file: 60-learning-experiences/lx-setup-ml-based-object-detection
                     #-   file: 60-learning-experiences/lx-setup-bayesian-estimation
                     #-   file: 60-learning-experiences/lx-setup-motion-planning
                     #-   file: 60-learning-experiences/lx-setup-sim-to-real
