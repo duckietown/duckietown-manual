@@ -18,7 +18,7 @@ This page describes the setup and general workflow for Duckietown learning exper
 
 
 (ente-supported-lxs)=
-## Currently supported ente LXs
+## Currently supported `ente` LXs
 
 ```{tableofcontents}
 ```

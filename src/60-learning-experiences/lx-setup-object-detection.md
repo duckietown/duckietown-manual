@@ -3,7 +3,7 @@
 
 ```{seo}
 :description: Step by step instructions on how to run the object detection learning experience (LX) in Duckietown.
-:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, object detection, machine learning, ai, artificial intelligence, deep learning, duckie detector, car obstacle detection
+:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, object detection, machine learning, AI, artificial intelligence, deep learning, duckie detector, car obstacle detection, YOLO, YOLO 5, ML, embodied AI, physical AI
 ```
 
 ```{needget}
@@ -28,12 +28,13 @@ Welcome to the Object Detection LX.
 ```{admonition} Intended Learning Outcomes
 :class: tip
 After this learning experience, you will:
-- learn about neural networks, and the tools needed to build one step by step
+- learn about neural networks, and the tools needed to build one
+- collect training data, and annotate it (automatically)
 - create, optimize and train your own deep net using Pytorch
-- understand how to and set up a Duckietown-themed dataset, run data collection, and preprocess images
 - train an object detector, with particular focus on duckies
 - fine tune the object detector, and test it in simulation and on a physical Duckiebot. 
 ```
+
 
 ```{warning}
 If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
@@ -44,7 +45,7 @@ If you are running Duckietown inside a devcontainer and not on a native Ubuntu s
 For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
 
 ```{note}
-This exercise can be run on a [real Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) or on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps). 
+This exercise can be run on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps), and on a [real Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) with off-board agent workflow. On-board agent workflow is work in progress. 
 ```
 
 (lx-forking-object-detection)=

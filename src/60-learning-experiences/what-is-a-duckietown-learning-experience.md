@@ -4,7 +4,7 @@
 ```
 
 (duckietown-lx)=
-# What is a Duckietown LX?
+# What is a Duckietown Learning Experience (LX)?
 
 ```{admonition} Definition
 A learning experience (LX) is a stand-alone block of activities that is self-contained and can plug and play into a
