@@ -8,13 +8,22 @@
 
 ```{needget}
 - Learning experience computer setup: [](duckiebot-lxs)
+- A Google account: we will use [Google Colab](https://colab.research.google.com/) and this will require uploading data to [Google Drive](https://drive.google.com/drive/)
+- A [Hugging Face](https://huggingface.co) account
+- Permission to use the SAM3 autolabeling model: [fill out the request form after having created a Hugging Face account](https://huggingface.co/facebook/sam3)
 - (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
 - (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 ---
 - Running the Object Detection learning experience.
 ```
 
-This page describes how to run the "Object Detection" learning experience.
+```{attention}
+This LX uses online ML tools that require a few extra accounts: for Google and Hugging Face. Links in the box above.
+
+The approval for using the SAM3 model takes a few miuntes, so it's best to do that before starting this LX.
+```
+
+This page describes how to run the "Object Detection" learning experience. This learning experience will take you through the process of collecting data, automatically annotating it, and using this to train a neural network to perform object detection using the robot's camera image. We will then use this trained model to ensure that we don't run over any duckie pedestrians in Duckietown. We will use one of the most popular object detection neural networks, called [YOLO (v11)](https://docs.ultralytics.com/models/yolo11/).  You will also have to integrate this trained model into feedback controller so that we don't run over duckies.
 
 ```{figure} ../_images/lx-devmanual/lx-object-detection/bbox.png
 :alt: duckietown ML object detection LX thumbnail image with annotated duckie
@@ -28,13 +37,11 @@ Welcome to the Object Detection LX.
 ```{admonition} Intended Learning Outcomes
 :class: tip
 After this learning experience, you will:
-- learn about neural networks, and the tools needed to build one
-- collect training data, and annotate it (automatically)
-- create, optimize and train your own deep net using Pytorch
-- train an object detector, with particular focus on duckies
-- fine tune the object detector, and test it in simulation and on a physical Duckiebot. 
+- learn about neural networks, and use PyTorch to build one
+- collect training data, create a dataset, and annotate it (automatically)
+- create, optimize and train your own Duckietown Detector
+- fine tune the detector, and test it in simulation and on a physical Duckiebot. 
 ```
-
 
 ```{warning}
 If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
@@ -128,7 +135,7 @@ You can now push your work to your own repository using the standard GitHub work
     dts desktop update
     ```
 
-- 🚙 Update your Duckiebot: 
+- 🚙 Update your Duckiebot (even if it is a virtual one): 
 
     ```
     dts duckiebot update ROBOTNAME
@@ -168,7 +175,7 @@ Once you have done that you will need to **build** your code before **testing** 
 (lx-matrix-testing-object-detection)=
 ### Testing with the Duckiematrix
 
-To test your code in the Duckiematrix you will need a virtual robot attached to an ongoing session. 
+To test your code in the Duckiematrix you will need a virtual robot attached to an ongoing session.
 
 (lx-create-vbot-object-detection)=
 #### 1. Creating and starting virtual Duckiebot
@@ -225,7 +232,7 @@ the Duckiematrix see [](the-duckiematrix-manual).
 :name: duckiebot-lx-obj-det-segmentation
 :align: center
 
-Segmenting duckies.
+Finding duckies.
 ```
 
 (lx-code-build-object-detection)=
@@ -242,30 +249,37 @@ where `ROBOT_NAME` can be either a physical or virtual robot.
 (lx-code-test-object-detection)=
 ### Testing on a Duckiebot or in the Duckiematrix
 
+
+```{attention}
+Before you can test, you will need to:
+
+ - Collect data
+ - Annotate that data (automatically)
+ - Train your object detection model
+ - Export your model
+```
+
 🚙 To test your code on your real Duckiebot you can do:
 
 ```
-dts code workbench -R [ROBOT_NAME]
+dts code workbench -R ROBOT_NAME [--local]
+```
+
+```{note}
+For the time being, you should include the `--local` flag if `ROBOT_NAME` is a **physical** Duckiebot. This
+will cause the code to be run on your laptop which is communicating with your Duckiebot. 
 ```
 
 💻 To test your code on a virtual robot in the Duckiematrix:
 
 ```git
-dts code workbench -m -R [VIRTUAL_ROBOT_NAME]
+dts code workbench -m -R VIRTUAL_ROBOT_NAME
 ```
 
 (note the `-m` flag which means that we are running in the `matrix`.)
 
-In another terminal, you can launch the `noVNC` viewer, which can be useful to interact with the virtual robot in different ways depending on the specific LX.
 
-```
-dts code vnc -R [ROBOT_NAME]
-```
-
-where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
-
-In the noVNC desktop, click on the icon marked "VLS - Visual Lane Servoing Exercise" and then you should follow the prompts
-in the terminal where you ran `dts code workbench`.
+To get started you can proceed to the [first notebook](./notebooks/01-CNN/cnn.ipynb).
 
 ```{figure} ../_images/lx-devmanual/lx-object-detection/train_batch1.jpg
 :alt: duckietown object detection learning experience training in batch from real data
@@ -288,10 +302,4 @@ Make sure your are executing the commands from inside a learning experience fold
 My virtual robot (named, e.g., `VBOT`) hangs indefinitely when trying to update it.
 ---
 Try to restart it with: `dts duckiebot virtual restart VBOT`
-```
-
-```{trouble}
-When I run `dts code vnc` nothing happens in the browser. 
----
-It can take some time for noVNC to start (10-45 seconds, depending on computer specifications), wait. 
 ```

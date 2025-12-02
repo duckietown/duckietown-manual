@@ -122,9 +122,18 @@ parts:
                     -   file: 60-learning-experiences/lx-setup-ros-basics
                     -   file: 60-learning-experiences/lx-setup-braitenberg-vehicles
                     -   file: 60-learning-experiences/lx-setup-modeling-kinematics
+                    # - sensor fusion LX (wheel encoder + april tags relative pose, outside of duckietown - see Amod ETH course exercise from 2018-ish)
                     -   file: 60-learning-experiences/lx-setup-pid-control
-                    -   file: 60-learning-experiences/lx-setup-computer-vision
+                    #-   file: 60-learning-experiences/lx-setup-pure-pursuit-control
+                    #-   file: 60-learning-experiences/lx-setup-lqr-control
+                    #-   file: 60-learning-experiences/lx-setup-geometric-control
+                    #-   file: 60-learning-experiences/lx-setup-camera-calibration
+                    #-   file: 60-learning-experiences/lx-setup-computer-vision-basics
+                    #-   file: 60-learning-experiences/lx-setup-color-invariance # anti-instagram-filter
+                    -   file: 60-learning-experiences/lx-setup-computer-vision #rename to visual servoing
                     #-   file: 60-learning-experiences/lx-setup-computer-vision-augmented-reality-AR
+                    #-   file: 60-learning-experiences/lx-setup-duckie-detector
+                    #-   file: 60-learning-experiences/lx-setup-finite-state-machines-fsm
                     -   file: 60-learning-experiences/lx-setup-ml-based-object-detection
                     #-   file: 60-learning-experiences/lx-setup-bayesian-estimation
                     #-   file: 60-learning-experiences/lx-setup-motion-planning
