@@ -159,7 +159,7 @@ To start the `Engine`, run the following command in the Dev Container:
 dts matrix engine run --sandbox --verbose
 ```
 
-```tip
+```{tip}
 If you are using the Duckiematrix in the context of an LX, [launch the engine with dts code instead](caveat-devcontainer-lx).
 ```
 
