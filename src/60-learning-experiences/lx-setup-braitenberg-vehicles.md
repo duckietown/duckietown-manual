@@ -133,7 +133,7 @@ You can now push your work to your own repository using the standard GitHub work
     
     (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
 
-(lx-code-editor)=
+(lx-code-editor-bv)=
 ## Launching the Code Editor
 
 ```{important}
@@ -255,7 +255,7 @@ where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you r
 ```{figure} /_images/lx-devmanual/lx-bv/duckiematrix_overhead.png
 :alt: Welcome to the Duckiematrix after starting the BV LX
 :width: 80%
-:name: duckiebot-lx-start-matrix
+:name: duckiebot-lx-start-matrix-bv
 :align: center
 
 Example Duckiematrix splash screen after starting the Braitenberg Vehicles LX.

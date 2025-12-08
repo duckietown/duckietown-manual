@@ -231,7 +231,7 @@ dts code workbench -R [ROBOT_NAME]
 
 💻 To test your code on a virtual robot in the Duckiematrix:
 
-```git
+```
 dts code workbench -m -R [VIRTUAL_ROBOT_NAME]
 ```
 

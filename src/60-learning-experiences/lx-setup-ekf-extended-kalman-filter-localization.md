@@ -1,5 +1,5 @@
-(lx-setup-object-detection)=
-# LX: Object Detection
+(lx-setup-ekf-localization)=
+# LX: Localization - Extended Kalman Filter (EKF)
 
 ```{seo}
 :description: Step by step instructions on how to run the object detection learning experience (LX) in Duckietown.
@@ -25,7 +25,7 @@ The approval for using the SAM3 model takes a few miuntes, so it's best to do th
 
 This page describes how to run the "Object Detection" learning experience. This learning experience will take you through the process of collecting data, automatically annotating it, and using this to train a neural network to perform object detection using the robot's camera image. We will then use this trained model to ensure that we don't run over any duckie pedestrians in Duckietown. We will use one of the most popular object detection neural networks, called [YOLO (v11)](https://docs.ultralytics.com/models/yolo11/).  You will also have to integrate this trained model into feedback controller so that we don't run over duckies.
 
-```{figure} ../_images/lx-devmanual/lx-object-detection/bbox.png
+```{figure} ../_images/lx-devmanual/lx-ekf-localization/bbox.png
 :alt: duckietown ML object detection LX thumbnail image with annotated duckie
 :width: 60%
 :name: duckiebot-lx-obj-det-bbox
@@ -55,32 +55,32 @@ For guided setup instructions, lecture content, and more related to this LX, see
 This exercise can be run on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps), and on a [real Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) with off-board agent workflow. On-board agent workflow is work in progress. 
 ```
 
-(lx-forking-object-detection)=
+(lx-forking-ekf-localization)=
 ## Forking the repository
 
 ### 1. Create a fork
 
-Navigate to [the LX-Object-Detection repository](https://github.com/duckietown/lx-object-detection).
+Navigate to [the LX-ekf-localization repository](https://github.com/duckietown/lx-ekf-localization).
 
 Find and press the "Fork" button on the top right:
 
 ```{figure} /_images/lx-devmanual/intro/duckietown-lx-forking.png
 :alt: how to fork a Duckietown LX repository
 :width: 90%
-:name: duckiebot-lx-forking-object-detection
+:name: duckiebot-lx-forking-ekf-localization
 :align: center
 
 Fork the LX to be able to make local changes while still being able to receive updates.
 ```
 
-This will create a new repository at: `<your_github_username>/lx-object-detection`.
+This will create a new repository at: `<your_github_username>/lx-ekf-localization`.
 
 ### 2. Clone the fork
 
 Clone the fork on your computer, replacing your GitHub username in the command below, and navigate to the new folder:
 
-    git clone git@github.com:<your_github_username>/lx-object-detection
-    cd lx-object-detection
+    git clone git@github.com:<your_github_username>/lx-ekf-localization
+    cd lx-ekf-localization
         
 ### 3. Configure the upstream repository
 
@@ -92,7 +92,7 @@ List the current remote repository for your fork,
 
 Specify a new remote upstream repository,
 
-    git remote add upstream https://github.com/duckietown/lx-object-detection
+    git remote add upstream https://github.com/duckietown/lx-ekf-localization
 
 Confirm that the new upstream repository was added to the list,
 
@@ -100,7 +100,7 @@ Confirm that the new upstream repository was added to the list,
 
 You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every exercise will prompt you to pull from the upstream repository, updating your exercises to the latest version (if available).
 
-(lx-system-update-object-detection)=
+(lx-system-update-ekf-localization)=
 ## Keeping your System Up To Date
 
 - 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not a `daffy` one). You can check your current profile with: 
@@ -143,7 +143,7 @@ You can now push your work to your own repository using the standard GitHub work
     
     (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
 
-(lx-code-editor-lx-object-detection)=
+(lx-code-editor-lx-ekf-localization)=
 ## Launching the Code Editor
 
 ```{important}
@@ -159,7 +159,7 @@ dts code editor
 Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar
 of your browser to access the code editor. The first thing you will see in the code editor are a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
 
-(lx-navigating-notebooks-object-detection)=
+(lx-navigating-notebooks-ekf-localization)=
 ## Walkthrough of Notebooks
 
 Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the
@@ -172,12 +172,12 @@ learning experience directory.
 
 Once you have done that you will need to **build** your code before **testing** it.
 
-(lx-matrix-testing-object-detection)=
+(lx-matrix-testing-ekf-localization)=
 ### Testing with the Duckiematrix
 
 To test your code in the Duckiematrix you will need a virtual robot attached to an ongoing session.
 
-(lx-create-vbot-object-detection)=
+(lx-create-vbot-ekf-localization)=
 #### 1. Creating and starting virtual Duckiebot
 
 You can create one with the command:
@@ -214,7 +214,7 @@ If in doubt, you can check the status of your virtual scuderia at any time with:
 dts duckiebot virtual list
 ```
 
-(lx-code-matrix-start-object-detection)=
+(lx-code-matrix-start-ekf-localization)=
 #### 2. Starting the Duckiematrix with the virtual Duckiebot
 
 Now that your virtual robot is ready, you can start the Duckiematrix. From this exercise directory do:
@@ -226,7 +226,7 @@ dts code start_matrix
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
 
-```{figure} ../_images/lx-devmanual/lx-object-detection/normal.png
+```{figure} ../_images/lx-devmanual/lx-ekf-localization/normal.png
 :alt: A step in the Duckietown object detection training process
 :width: 70%
 :name: duckiebot-lx-obj-det-segmentation
@@ -235,7 +235,7 @@ the Duckiematrix see [](the-duckiematrix-manual).
 Finding duckies.
 ```
 
-(lx-code-build-object-detection)=
+(lx-code-build-ekf-localization)=
 ### Building the Code
 
 From inside the learning experience root directory, you can build your code with:
@@ -246,7 +246,7 @@ dts code build -R ROBOT_NAME
 
 where `ROBOT_NAME` can be either a physical or virtual robot. 
 
-(lx-code-test-object-detection)=
+(lx-code-test-ekf-localization)=
 ### Testing on a Duckiebot or in the Duckiematrix
 
 
@@ -281,7 +281,7 @@ dts code workbench -m -R VIRTUAL_ROBOT_NAME
 
 To get started you can proceed to the [first notebook](./notebooks/01-CNN/cnn.ipynb).
 
-```{figure} ../_images/lx-devmanual/lx-object-detection/train_batch1.jpg
+```{figure} ../_images/lx-devmanual/lx-ekf-localization/train_batch1.jpg
 :alt: duckietown object detection learning experience training in batch from real data
 :width: 70%
 :name: duckiebot-lx-obj-det-training-in-batch
@@ -295,7 +295,7 @@ Object detector training.
 ```{trouble}
 When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/workspaces/dt-env-developer/lx'`
 ---
-Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-object-detection/`)
+Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-ekf-localization/`)
 ```
 
 ```{trouble}
