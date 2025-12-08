@@ -213,9 +213,9 @@ Marginalization is an important operation since it allows us to reduce the size 
 (dt-probability-basics-cond-independence)=
 ### Conditional Independence
 
-Two RVs, $X$ and $Y$ may be correlated, we may be able to encapsulate the dependence through a third random variable $Z$. Therefore, if we know $Z$
+If two RVs, $X$ and $Y$ are correlated, we may be able to encapsulate the dependence through a third random variable $Z$. Therefore, if we know $Z$, we may consider $X$ and $Y$ non correlated to each other. 
 
-```{figure} ../_images/further_reading/preliminaries/probability/conditional_independence.svg
+```{figure} ../_images/further_reading/preliminaries/probability/conditional_independence.png
 :alt: A graphical representation of the conditional independence of X and Y given Z
 :width: 40%
 :name: fig:conditional_independence
@@ -231,7 +231,7 @@ A graphical representation of the conditional independence of $X$ and $Y$ given 
 -->
 
 ```{note}
-Is there a discussion of graphical models anywhere? Doing a good job of sufficiently describing graphical models and the dependency relations that they express requires careful thought. Without it, we should refer readers to a graphical models text (e.g., Koller and Friedman, even if it is dense)
+Graphical models deserve an independent discussion. Doing a good job of sufficiently describing graphical models and the dependency relations that they express requires careful thought. Until the editors of this manual get it it, we refer curious readers to e.g.: Koller and Friedman.
 ```
 
 (dt-probability-basics-moments)=
