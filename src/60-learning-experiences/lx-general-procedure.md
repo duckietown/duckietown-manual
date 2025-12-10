@@ -17,6 +17,9 @@
 
 This page describes the setup and general workflow for Duckietown learning experiences. Specific instructions for each available LX are detailed in the following pages of this manual. The following LXs are currently supported:
 
+```{warning}
+If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+```
 
 (ente-supported-lxs)=
 ## Currently supported `ente` LXs

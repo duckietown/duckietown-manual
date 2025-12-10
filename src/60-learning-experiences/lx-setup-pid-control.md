@@ -15,7 +15,11 @@
 - Running the PID Control learning experience.
 ```
 
-This page describes how to run the "PID Control" learning experience.
+This page describes how to run the PID Control learning experience.
+
+```{warning}
+If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+```
 
 ```{figure} ../_images/lx-devmanual/lx-control-pid/control-lx-duckiematrix-riding.png
 :alt: Riding a virtual Duckiebot in the PID control LX
@@ -35,10 +39,6 @@ After this learning experience, learners will:
 - write a PID controller for regulating the (lateral) position of a Duckiebot, in Python
 - performing unit tests (i.e., sanity checks) on specific implementation functions
 - deploy and tune the designed PID controller on virtual and/or physical Duckiebots
-```
-
-```{warning}
-If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
 ```
 
 ## About these learning activities

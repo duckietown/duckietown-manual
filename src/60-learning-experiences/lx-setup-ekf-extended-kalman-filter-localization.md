@@ -3,48 +3,45 @@
 
 ```{seo}
 :description: Step by step instructions on how to run the object detection learning experience (LX) in Duckietown.
-:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, object detection, machine learning, AI, artificial intelligence, deep learning, duckie detector, car obstacle detection, YOLO, YOLO 5, ML, embodied AI, physical AI
+:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, localization, state estimation, kalman filter, extended kalman filter, particle filter, histogram filter, hands on learning
 ```
 
 ```{needget}
 - Learning experience computer setup: [](duckiebot-lxs)
-- A Google account: we will use [Google Colab](https://colab.research.google.com/) and this will require uploading data to [Google Drive](https://drive.google.com/drive/)
-- A [Hugging Face](https://huggingface.co) account
-- Permission to use the SAM3 autolabeling model: [fill out the request form after having created a Hugging Face account](https://huggingface.co/facebook/sam3)
 - (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
 - (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 ---
-- Running the Object Detection learning experience.
+- Running the Localization - Extended Kalman Filter learning experience.
 ```
 
-```{attention}
-This LX uses online ML tools that require a few extra accounts: for Google and Hugging Face. Links in the box above.
+This learning experience is about how we should use the data streaming through the sensors, together with the knowledge
+of our surroundings, to estimate our state. The so-called optimal approach to this is the Bayes filter, however, 
+this approach is computationally intractable in all but the simplest settings. We will explore several approximations
+to the Bayes filter. Namely, the Kalman filter, the particle filter, and the histogram filter. Each has its own
+assumptions and conditions under which it is most applicable. Finally, you will program an extended Kalman filter, 
+or EKF, to localize your Duckiebot using the data from the wheel encoders and the AprilTag fiducial markers that you
+observe at known locations.
 
-The approval for using the SAM3 model takes a few miuntes, so it's best to do that before starting this LX.
-```
-
-This page describes how to run the "Object Detection" learning experience. This learning experience will take you through the process of collecting data, automatically annotating it, and using this to train a neural network to perform object detection using the robot's camera image. We will then use this trained model to ensure that we don't run over any duckie pedestrians in Duckietown. We will use one of the most popular object detection neural networks, called [YOLO (v11)](https://docs.ultralytics.com/models/yolo11/).  You will also have to integrate this trained model into feedback controller so that we don't run over duckies.
-
-```{figure} ../_images/lx-devmanual/lx-ekf-localization/bbox.png
-:alt: duckietown ML object detection LX thumbnail image with annotated duckie
+```{figure} ../_images/lx-devmanual/lx-ekf-localization/Histogram.png
+:alt: 
 :width: 60%
-:name: duckiebot-lx-obj-det-bbox
+:name: duckiebot-lx-ekf-localization-histogram
 :align: center
 
-Welcome to the Object Detection LX.  
+Welcome to the EKF - Localization LX! 
 ```
 
 ```{admonition} Intended Learning Outcomes
 :class: tip
 After this learning experience, you will:
-- learn about neural networks, and use PyTorch to build one
-- collect training data, create a dataset, and annotate it (automatically)
-- create, optimize and train your own Duckietown Detector
-- fine tune the detector, and test it in simulation and on a physical Duckiebot. 
+- 
+- 
+- 
+- 
 ```
 
 ```{warning}
-If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
 ```
 
 ## About these learning activities

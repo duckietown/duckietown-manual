@@ -16,6 +16,9 @@
 
 This page describes how to run the "Computer Vision - Visual Servoing" learning experience.
 
+```{warning}
+If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/H7-2YkHiChw?si=J7pPzrXyKJX_VW4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -28,10 +31,6 @@ After this learning experience, you will:
 - Learn about homographies and their compositions, and be able to explain why they are relevant to the self-driving car problem
 - Learn about image filtering, implement and tune various opeartors to minimize image noise (box filter), blur (Gaussian Blurring), detect edges (image gradients and Sobel operators)
 - Leverage image filtering techniques learned above, along with camera calibrations to design a visual servoing controller, i.e., a controller that keeps the Duckiebot driving in the lane based exclusively on images from the camera.  
-```
-
-```{warning}
-If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
 ```
 
 ## About these learning activities

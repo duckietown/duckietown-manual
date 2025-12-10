@@ -44,7 +44,7 @@ After this learning experience, you will:
 ```
 
 ```{warning}
-If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
 ```
 
 ## About these learning activities

@@ -14,7 +14,11 @@
 - Running the ROS basics learning experience.
 ```
 
-This page describes how to run the "ROS basics" learning experience. 
+This page describes how to run the "ROS basics" learning experience.
+
+```{warning}
+If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+```
 
 ```{figure} /_images/lx-devmanual/lx-ros-basics/joy_echo.png
 :alt: Duckietown joystick commands published to a ROS topic
@@ -41,10 +45,6 @@ In this learning experience, learners will:
 
 ```{note}
 This exercise can be run on a [real Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) or on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps). 
-```
-
-```{warning}
-If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
 ```
 
 (lx-forking-ros-basics)=
