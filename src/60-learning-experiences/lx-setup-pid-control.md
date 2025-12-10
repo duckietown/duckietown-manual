@@ -232,6 +232,12 @@ the Duckiematrix see [](the-duckiematrix-manual).
 You start as a duckie. Click <kbd>Enter</kbd> to get started. Move with <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> and rotate the point of view by moving the mouse, as if you were playing a computer game. Approach the Duckiebot and ride it by pressing <kbd>E</kbd>. 
 ```
 
+To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
+
+```{note}
+For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
+```
+
 (lx-code-build-control-pid)=
 ### Building the Code
 

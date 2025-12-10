@@ -209,6 +209,12 @@ The Duckiebot fisheye camera lens distorts images, requiring a camera calibratio
 Duckiebot images with a calibrated camera.
 ```
 
+To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
+
+```{note}
+For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
+```
+
 (lx-code-build-computer-vision)=
 ### Building the Code
 

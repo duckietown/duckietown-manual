@@ -231,6 +231,12 @@ dts code build -R ROBOT_NAME
 
 where `ROBOT_NAME` can be either a physical or virtual robot. 
 
+To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
+
+```{note}
+For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
+```
+
 (lx-code-test-mod-kin)=
 ### Testing on a Duckiebot or in the Duckiematrix
 
