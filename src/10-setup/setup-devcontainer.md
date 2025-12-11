@@ -285,7 +285,7 @@ To be able to run `dts code editor`, you need to install `mkcert` on your host s
 `````
 
 (caveat-devcontainer-lx)=
-### Learning Experiences in the Duckiematrix
+### DT Workspaces - Duckiematrix for LXs
 
 To run the Duckiematrix for `LXs`, run the following command to start the `Engine`:
 

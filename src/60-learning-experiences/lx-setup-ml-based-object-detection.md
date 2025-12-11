@@ -279,8 +279,6 @@ dts code workbench -m -R VIRTUAL_ROBOT_NAME
 (note the `-m` flag which means that we are running in the `matrix`.)
 
 
-To get started you can proceed to the [first notebook](./notebooks/01-CNN/cnn.ipynb).
-
 ```{figure} ../_images/lx-devmanual/lx-object-detection/train_batch1.jpg
 :alt: duckietown object detection learning experience training in batch from real data
 :width: 70%

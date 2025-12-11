@@ -135,7 +135,7 @@ parts:
                     #-   file: 60-learning-experiences/lx-setup-duckie-detector
                     #-   file: 60-learning-experiences/lx-setup-finite-state-machines-fsm
                     -   file: 60-learning-experiences/lx-setup-ml-based-object-detection
-                    # -   file: 60-learning-experiences/lx-setup-ekf-extended-kalman-filter-localization
+                    -   file: 60-learning-experiences/lx-setup-ekf-extended-kalman-filter-localization
                     #-   file: 60-learning-experiences/lx-setup-bayesian-estimation
                     #-   file: 60-learning-experiences/lx-setup-motion-planning
                     #-   file: 60-learning-experiences/lx-setup-sim-to-real
