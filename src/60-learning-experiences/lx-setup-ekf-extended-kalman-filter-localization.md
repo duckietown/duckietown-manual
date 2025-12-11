@@ -14,13 +14,7 @@
 - Running the Localization - Extended Kalman Filter learning experience.
 ```
 
-This learning experience is about how we should use the data streaming through the sensors, together with the knowledge
-of our surroundings, to estimate our state. The so-called optimal approach to this is the Bayes filter, however, 
-this approach is computationally intractable in all but the simplest settings. We will explore several approximations
-to the Bayes filter. Namely, the Kalman filter, the particle filter, and the histogram filter. Each has its own
-assumptions and conditions under which it is most applicable. Finally, you will program an extended Kalman filter, 
-or EKF, to localize your Duckiebot using the data from the wheel encoders and the AprilTag fiducial markers that you
-observe at known locations.
+This learning experience is about how we should use the data streaming through the sensors, together with the knowledge of our surroundings, to estimate our state. The so-called optimal approach to this is the Bayes filter, however, this approach is computationally intractable in all but the simplest settings. We will explore several approximations to the Bayes filter. Namely, the Kalman filter, the particle filter, and the histogram filter. Each has its own assumptions and conditions under which it is most applicable. Finally, you will program an extended Kalman filter, or EKF, to localize your Duckiebot using the data from the wheel encoders and the AprilTag fiducial markers that you observe at known locations.
 
 ```{figure} ../_images/lx-devmanual/lx-ekf-localization/Histogram.png
 :alt: Duckietown histogram filter representation for Duckiebot pose estimation
