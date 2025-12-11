@@ -31,7 +31,7 @@ a detailed description of the supported drivers that you can use to send or rece
 
 ## The Virtual Robot `dts` API
 
-Like most things in Duckietown, the primary way to perform operations on virtual robots is through the Duckietown Shell (`dts)
+Like most things in Duckietown, the primary way to perform operations on virtual robots is through the Duckietown Shell (`dts`)
 
 The following is a list of operations you can perform:
 

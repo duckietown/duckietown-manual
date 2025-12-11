@@ -211,6 +211,12 @@ the Duckiematrix see [](the-duckiematrix-manual).
 Example Duckiematrix splash screen after starting the Braitenberg Vehicles LX.
 ```
 
+To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
+
+```{note}
+For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
+```
+
 (lx-stop-list-vbot)=
 #### Other virtual Duckiebot useful commands
 

@@ -186,6 +186,16 @@ open duckiematrix.app --args -e localhost --token "TOKEN"
 
 ````
 
+````{tab-item} WebGL (browser)
+
+To start the `Renderer` and connect it to the `Engine` running in the Dev Container, run:
+
+```shell
+dts matrix run --browser
+```
+
+````
+
 `````
 
 ## Caveats

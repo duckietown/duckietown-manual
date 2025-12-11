@@ -257,6 +257,12 @@ If you get very lost from the road and you want to come back, you can do so with
 You should reset your Duckiebot's position with <kbd>R</kbd> before each test since the initial state estimate coincides with the reset position.
 ```
 
+To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
+
+```{note}
+For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
+```
+
 (lx-code-build-ekf-localization)=
 ### Building the Code
 
