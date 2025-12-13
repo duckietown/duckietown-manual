@@ -63,11 +63,11 @@ For example:
 
 * `--type` is what kind of robot you are flashing. Types are `duckiebot` (default), `watchtower`, `traffic_light`.
 
-* `--configuration` is the model of your robot. This is associated with `--type` option. Options for `duckiebot` are, e.g., `DB21J`, `DBR4`, `DB21M`, `DB19`, or `DB18`.
+* `--configuration` is the model of your robot. This is associated with `--type` option. Supported options for `duckiebot` in `ente` are `DB21J`, `DD24`. Other legacy and experimental images exist, such as `DBR4`, `DB21M`, `DB19`, or `DB18`. 
 
 ```{attention}
 * If you have a Duckiebot with a **4GB** Jetson Nano - the model is **DB21J**
-* If you have a Duckiebot with a **2GB** Jetson Nano (you should not) - the model is **DB21M**
+* If you have a Duckiebot with a **2GB** Jetson Nano (you should not) - the model is **DB21M**. Note that DB21M are not supported in `ente`. Switch back to `daffy` if you have a DB21M or upgrade by [obtaining a Jetson Nano 4GB developer kit](https://get.duckietown.com/products/jetson-nano-developer-kit).  
 * If you are not using a Jetson Nano, the model is the model of your Duckiebot (e.g., DB19 or DBR4)
 * If you are not sure what Duckiebot you have, refer to [](duckiebot-configurations) or [reach out to support](how-to-get-help).
 ```
