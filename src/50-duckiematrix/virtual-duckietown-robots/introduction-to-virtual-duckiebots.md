@@ -6,7 +6,7 @@
 :keywords: Duckietown, Duckiematrix, virtual, robot
 ```
 ```{needget}
-- Successful Duckiematrix installation: [](duckiematrix-installation)
+- Successful Duckiematrix installation: [](duckiematrix-how-to-start)
 ---
 - Knowledge on virtual Duckietown robots.
 ```

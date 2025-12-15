@@ -13,16 +13,6 @@
 - Knowledge on how to start the Duckiematrix
 ```
 
-
-(duckiematrix-installation)=
-## How to install the Duckiematrix
-
-The Duckiematrix is installed with the [Duckietown Shell](setup-dts) with the command, where `--webgl` will install the WebGL (browser) version:
-
-```shell
-dts matrix install [--webgl]
-```
-
 (duckiematrix-how-to-start)=
 ## How to Run the Duckiematrix
 
@@ -50,7 +40,7 @@ In summary, the following command
 ```shell
 dts matrix run --standalone --embedded --map sandbox
 ```
-would start the Duckiematrix on your local machine and load the `sandbox` map that is predefined.
+would download and install the latest version of the Duckiematrix if it has not already been installed, start it on your local machine and load the `sandbox` map that is predefined.
 By default, the Duckiematrix runs in *tutorial* mode, where the key bindings are introduced. If you
 want to disable this behavior you can add the `--no-tutorial` flag. If something is going wrong and
 you do not see the renderer initializing, you can see what is going wrong by adding the `--verbose` flag. To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
