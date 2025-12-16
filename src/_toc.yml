@@ -141,6 +141,8 @@ parts:
                     #-   file: 60-learning-experiences/lx-setup-sim-to-real
 
             -   file: 25-duckiedrone/duckiedrone
+                sections:
+                -   file: 45-duckiedrone/demos/duckiedrone-takeoff-ros2
 
 
     -   caption: Part 2 - Developing with Duckietown
