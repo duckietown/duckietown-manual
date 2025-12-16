@@ -142,7 +142,7 @@ parts:
 
             -   file: 25-duckiedrone/duckiedrone
                 sections:
-                -   file: 45-duckiedrone/demos/duckiedrone-takeoff-ros2
+                -   file: 25-duckiedrone/demos/duckiedrone-takeoff-ros2
 
 
     -   caption: Part 2 - Developing with Duckietown
