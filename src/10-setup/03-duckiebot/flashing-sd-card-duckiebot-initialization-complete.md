@@ -42,6 +42,8 @@ Where:
 
 * `--hostname` is the name of the robot you are flashing the SD card for.
 
+(db-naming-constraints)=
+#### Duckiebot naming constraints
 ```{attention}
 The `HOSTNAME`, or robot name, is going to be used extensively in future interactions with the robot, and can only be changed by reflashing your SD card.
 
