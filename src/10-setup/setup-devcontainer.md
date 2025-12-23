@@ -16,10 +16,6 @@ This page describes how to run Duckietown code inside a [Development (Dev) Conta
 This is the only workflow for running Duckietown code on an Apple Silicon (M-series) Mac and on Windows.
 ```
 
-## Host System Container Runtime Installation
-
-In order to run Duckietown in a Dev Container, you need to install the following software on your host system, depending on your operating system:
-
 ## Host System Container Installation
 
 In order to run Duckietown in a Dev Container, you need to install the following software on your host system, depending on your operating system:
@@ -28,7 +24,7 @@ In order to run Duckietown in a Dev Container, you need to install the following
 
 ::::{tab-item} macOS
 
-On macOS we will be installing [Orbstack](https://orbstack.dev/), a lightweight container runtime that supports Apple Silicon (M-series) Macs.
+On macOS, we will be installing [Orbstack](https://orbstack.dev/), a lightweight container runtime that supports Apple Silicon (M-series) Macs.
 
 ```{attention}
 If you have Docker Desktop installed, [uninstall it](https://docs.docker.com/desktop/uninstall/) and reboot.
@@ -52,7 +48,7 @@ If your Mac refuses to open an application because it is not trusted, hold down 
 
 ::::{tab-item} Windows
 
-On Windows we will be installing WSL with Ubuntu and Docker Desktop.
+On Windows, we will be installing WSL with Ubuntu and Docker Desktop.
 
 ```{attention}
 The following instructions use Windows Terminal, which comes preinstalled with Windows 11 version 22H2 and later. If you do not have it installed, you can download it from the [Microsoft Store](https://aka.ms/terminal).
@@ -74,16 +70,16 @@ To install WSL and Ubuntu on Windows:
     wsl --install ubuntu
     ```
 
-4. Follow onscreen instructions to setup an account in Ubuntu on WSL.
+4. Follow on-screen instructions to set up an account in Ubuntu on WSL.
 
-Installing Docker Desktop
+Installing Docker Desktop:
 
-1. Install docker desktop from https://www.docker.com/ 
+1. Install Docker Desktop from https://www.docker.com/ 
 
-2. Start ubuntu by running `wsl` in the Windows Terminal
+2. Start Ubuntu by running `wsl` in the Windows Terminal.
 
 ```{important}
-From now on cloning and running the devcontainer should be done from the `wsl` terminal, except when otherwise specified.
+From now on, cloning and running the devcontainer should be done from the `wsl` terminal, except when otherwise specified.
 ```
 
 ::::
@@ -109,11 +105,11 @@ To install the Remote - Containers extension in VS Code:
 2. Click on the `Extensions` icon in the left sidebar (or press `Ctrl+Shift+X` on Windows or `Cmd+Shift+X` on macOS).
 3. In the search bar, type `Remote - Containers`.
 4. Click on the `Install` button next to the `Remote - Containers` extension by Microsoft.
-5. (**Windows only**) Follow the same instructions to install also the `WSL` extension (see next section).
+5. (**Windows only**) Follow the same instructions to also install the `WSL` extension.
 
 ## Cloning the `dt-env-developer` repository
 
-Clone the `dt-env-developer` repository, run:
+To clone the `dt-env-developer` repository, run:
 
 ```shell
 git clone git@github.com:duckietown/dt-env-developer.git
@@ -297,7 +293,7 @@ To be able to run `dts code editor`, you need to install `mkcert` on your host s
 
 ````{tab-item} Windows
 
-1. Download mkcert for windows from [this link](https://dl.filippo.io/mkcert/v1.4.4?for=windows/amd64), saving it to your Downloads folder.
+1. Download mkcert for Windows from [this link](https://dl.filippo.io/mkcert/v1.4.4?for=windows/amd64), saving it to your Downloads folder.
 
 2. Then, open the Windows Terminal and run:
 
@@ -305,8 +301,8 @@ To be able to run `dts code editor`, you need to install `mkcert` on your host s
     .\Downloads\mkcert-v1.4.4-windows-amd64.exe --install
     ```
 
-3. Select `Yes` in the prompt
-4. In the Ubuntu terminal, open the `~/.bashrc` file with a text editor, e.g., by running `nano ~/.bashrc` and append the following lines at the end of the file:
+3. Select `Yes` in the prompt.
+4. In the Ubuntu terminal, open the `~/.bashrc` file with a text editor, e.g., by running `nano ~/.bashrc`, and append the following lines at the end of the file:
 
     ```bash
     WINUSER=$(powershell.exe '$env:USERNAME' | tr -d '\r')
