@@ -659,10 +659,10 @@ Screw the screen onto the top side of the top plate using four `N2.5x12` screws 
 
 Substeps:
 
-1. Connect the blue camera cable to the pin labeled `SDA` on the screen as shown below.
-2. Connect the yellow camera cable to the pin labeled `SCL` on the screen as shown below.
-3. Connect the black camera cable to the pin labeled `GND` on the screen as shown below.
-4. Connect the red camera cable to the pin labeled `VCC` on the screen as shown below.
+1. Connect the blue screen cable to the pin labeled `SDA` on the screen as shown below.
+2. Connect the yellow screen cable to the pin labeled `SCL` on the screen as shown below.
+3. Connect the black screen cable to the pin labeled `GND` on the screen as shown below.
+4. Connect the red screen cable to the pin labeled `VCC` on the screen as shown below.
 
 ```{figure} ../../_images/assembly/db21j/db21-rev1-step_54.jpg
 ```

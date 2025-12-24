@@ -2,14 +2,17 @@
 :description: Understand the Docker image hierarchy and code repositories used in the Duckietown ecosystem, from base environments to high‑level demos.
 :keywords: Duckietown, Docker images, dt-core, dt-commons, dt-ros-commons, dt-duckiebot-interface, dt-car-interface, container hierarchy
 ```
+
 (code-hierarchy)=
 # Code Hierarchy
+
 ```{needget}
 * An understanding of the basics of [Docker](sec:developer_basics_docker)
 * An initialized [Duckiebot](duckiebot-setup-intro)
 ---
 * Knowledge of the software architecture on a Duckiebot
 ```
+
 To develop new functionality within Duckietown, it is essential to understand the existing code structure. This module introduces the top‑level layout and points to resources for deeper exploration.
 
 While Duckietown may appear as a simple toy car platform, it supports cars, boats, drones, and runs on real robots, in simulation, or in an evaluator / competition setup, as previously done with the AI Driving Olympics settings. This module focuses on the code that powers standard demos (e.g., Lane Following, Indefinite Navigation).
@@ -83,6 +86,7 @@ If you only want to drive your Duckiebot around, you need the `joy_mapper` node 
 ```{figure} ../../_images/developer/beginner/config_joystick.png
 :name: joystick
 :alt: Duckietown virtual joystick
+:width: 50%
 
 Driving a Duckiebot with a virtual joystick.
 ```
@@ -109,6 +113,7 @@ Running a demo requires driving around together with the high-level processing a
 
 ```{figure} ../../_images/developer/beginner/config_demo_bot.png
 :name: dt-demo
+:width: 50%
 
 Running a demo on a Duckiebot.
 ```
@@ -119,6 +124,7 @@ A demo can also be executed in simulation. In this case, instead of using the ha
 
 ```{figure} ../../_images/developer/beginner/config_demo_sim.png
 :name: demo-sim
+:width: 50%
 
 Running a demo in simulation.
 ```
@@ -130,6 +136,7 @@ A submission, e.g., for a MOOC exercises or the former AI Driving Olympics, is a
 
 ```{figure} ../../_images/developer/beginner/config_aido_sim.png
 :name: aido-sim
+:width: 50%
 
 Evaluating a submission in simulation.
 ```
@@ -147,6 +154,7 @@ In this way, even if you do not have a Duckiebot, you can develop your submissio
 
 ```{figure} ../../_images/developer/beginner/config_aido_bot_separated.png
 :name: dt-aido
+:width: 50%
 
 Evaluating a submission on a Duckiebot.
 ```
