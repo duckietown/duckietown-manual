@@ -137,7 +137,7 @@ The first time you load the Dev Container it may take some time as it is buildin
 
 ## Setting up the Duckietown Shell
 
-To set up the Duckietown Shell, proceed as if you were setting up an Ubuntu system: [](dt-account-set-token).
+To set up the Duckietown Shell inside and outside the Dev Container, follow [these instructions](dt-account-set-token) and [these instructions](setup-dts), respectively.
 
 ```{attention}
 If a popup asking you to input your credentials appears, you should do so and then click `Always Allow`. 
@@ -149,75 +149,35 @@ If a popup asking you to input your credentials appears, you should do so and th
 The procedure for running the Duckiematrix will be slightly different in this workflow. In short, you
 will run the `Engine` and `Renderer` inside and outside the Dev Container, respectively.
 
-To start the `Engine`, run the following command in the Dev Container:
+To start the `Engine`, run the following command inside the Dev Container:
 
 ```shell
 dts matrix engine run --sandbox --verbose
 ```
 
-```{tip}
+```{note}
 If you are using the Duckiematrix in the context of an LX, [launch the engine with dts code instead](caveat-devcontainer-lx).
 ```
 
-`````{tab-set}
-
-````{tab-item} macOS
-
-To install the `Renderer`:
-
-1. [Download the `Renderer` `.zip` file](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/releases/duckiematrix-0.6.3-macos.zip).
-
-2. Navigate to your `Downloads` folder.
-
-3. Double-click the `.zip` file.
-
-4. Move the application to your `Applications` folder.
-
-To start the `Renderer` and connect it to the `Engine` running in the Dev Container, run the following commands, where `TOKEN` is your Duckietown Token (do not forget the double quotes):
+To start the `Renderer` and connect it to the `Engine` running inside the Dev Container, run the following command outside the Dev Container:
 
 ```shell
-cd /Applications
-open duckiematrix.app --args -e localhost --token "TOKEN"
+dts matrix run
 ```
 
-````
-
-````{tab-item} Windows
-
-```{important}
-These commands should be run from the Windows Terminal, not from the `wsl` terminal.
+```{note}
+To run the Linux version of the Duckiematrix on Windows, add `--os-family linux` to the above command.
 ```
 
-To install the `Renderer`:
-
-1. [Download the `Renderer` `.zip` file](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/releases/duckiematrix-0.6.3-windows.zip).
-
-2. Navigate to your `Downloads` folder.
-
-3. Double-click the `.zip` file.
-
-4. Move the application to your `C:\Program Files` folder.
-
-To start the `Renderer` and connect it to the `Engine` running in the Dev Container, run the following commands, where `TOKEN` is your Duckietown Token (do not forget the double quotes):
+To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag to the above command or run the following command inside the Dev Container:
 
 ```shell
-cd C:\Program Files
-.\Duckiematrix.exe -e localhost --token "TOKEN"
+dts matrix run --standalone --sandbox --verbose --browser
 ```
 
-````
-
-````{tab-item} WebGL (browser)
-
-To start the `Renderer` and connect it to the `Engine` running in the Dev Container, run:
-
-```shell
-dts matrix run --browser
+```{note}
+For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
 ```
-
-````
-
-`````
 
 ## Caveats
 
