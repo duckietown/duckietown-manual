@@ -3,7 +3,7 @@
 :keywords: Duckietown, learning experience, LX, activity development, Duckiebot, robotics curriculum, development tutorial, backwards design
 ```
 
-(tips-building-lxs)
+(tips-building-lxs)=
 # Tips for Building LXs
 
 This page is intended to provide some design considerations when creating a learning experience.
