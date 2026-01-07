@@ -35,11 +35,15 @@ echo \
     sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-Then install Docker Engine and Docker Compose, by running:
+Then install Docker Engine and Docker Compose (version 28), by running:
 
 ```shell
 sudo apt update
-sudo apt install containerd.io docker-buildx-plugin docker-ce docker-ce-cli docker-compose docker-compose-plugin
+sudo apt install containerd.io docker-buildx-plugin docker-ce=5:28.* docker-ce-cli=5:28.* docker-compose-plugin
+```
+
+```{note}
+This installs Docker version 28, which is the latest version before 29. If you need a different version, you can list available versions with `apt-cache madison docker-ce`.
 ```
 
 ## Docker Setup
@@ -81,7 +85,7 @@ Run:
 ```shell
 docker --version
 ---
-Make sure the Docker version is v1.4.0+ 
+Make sure the Docker version is less than 29
 ```
 
 ```{testexpect}
