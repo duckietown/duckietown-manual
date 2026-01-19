@@ -46,7 +46,7 @@ We would recommend that you install Ubuntu as a dual boot when possible. Each ti
 ```
 
 ```{warning}
-The currently supported version of Ubuntu is 22.04.x or newer.
+The currently supported versions of Ubuntu are 22.04.x and 24.04.x.
 ```
 
 To install Ubuntu, follow this [Ubuntu Desktop Installation Tutorial](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).

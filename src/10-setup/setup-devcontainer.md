@@ -137,7 +137,9 @@ The first time you load the Dev Container it may take some time as it is buildin
 
 ## Setting up the Duckietown Shell
 
-To set up the Duckietown Shell inside and outside the Dev Container, follow [these instructions](dt-account-set-token) and [these instructions](setup-dts), respectively.
+To set up the Duckietown Shell inside the Dev Container, follow [these instructions](dt-account-set-token).
+
+To set up the Duckietown Shell outside the Dev Container, [install Python 3.10/3.11/3.12](https://www.python.org/downloads/) and follow [these instructions](setup-dts).
 
 ```{attention}
 If a popup asking you to input your credentials appears, you should do so and then click `Always Allow`. 
