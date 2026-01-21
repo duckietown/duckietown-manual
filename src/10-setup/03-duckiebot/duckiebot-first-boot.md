@@ -60,6 +60,9 @@ Output of 'dts fleet discover'
 ```{attention}
 During the first boot, the robot will automatically reboot several times. Wait for the "Status" column to read "Ready" and turn solid green.
 ```
+```{note}
+Unfortunately the 'dts fleet discover' is currently non functional in the Duckietown Workspaces (devcontainer) on Windows and Mac. You can test if the robot has booted by running `ping ![ROBOT_NAME].local` and try to connect to the dashboard at `http://![ROBOT_NAME].local`
+```
 
 ## Software and Hardware Updates
 
