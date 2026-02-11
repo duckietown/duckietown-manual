@@ -53,8 +53,19 @@ There is a known bug for which `dts fleet discover` will not find physical robot
 
 ::::{tab-item} Windows
 
+```{admonition} Duckietown Workspace: Windows 11 installation tutorial
+<div style="padding:56.25% 0 0 0;position:relative;">
+<iframe 
+  src="https://www.youtube.com/embed/0vqfccIVb5Q"
+  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+</div>
 
-
+This video is a third-party contribution kindly created by Irina Zheleznova, Senior Lecturer at [Academy of Civil Aviation, Almaty, Kazakhstan](https://caa.edu.kz/), and her students [Zhanibek Kenshilik](https://cutt.ly/zhanibek-kenshilik-linkedin) and [Andrey Shilovsky](https://cutt.ly/andrey-shilovsky-linkedin).
+```
 
 On Windows, we will be installing WSL with Ubuntu and Docker Desktop.
 
