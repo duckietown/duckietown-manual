@@ -4,7 +4,8 @@
 ```
 
 ```{warning}
-This feature is currently under development and is released in Beta mode. Most functionalities are currently working and have been extensively tested on macOS, but not on Windows. Please report all bugs in the Duckietown Slack community channel [#beta-devcontainer](https://duckietown.slack.com/archives/C09KJ1QC46R) or by email at [info@duckietown.com](mailto:info@duckietown.com). 
+Duckietown Workspaces are currently under development and released in Beta mode. Most functionalities are currently working and have been extensively tested on macOS and on Windows. 
+Please report all bugs in the Duckietown Slack community channel [#beta-devcontainer](https://duckietown.slack.com/archives/C09KJ1QC46R) or by email at [info@duckietown.com](mailto:info@duckietown.com). 
 ```
 
 (setup-devcontainer)=
@@ -44,9 +45,16 @@ To install Orbstack:
 If your Mac refuses to open an application because it is not trusted, hold down the `option` key and right-click it, then select `Open`. Your Mac will inform you that the application is not trusted but will allow you to open it.
 ```
 
+```{attention}
+There is a known bug for which `dts fleet discover` will not find physical robots on the same network. Nonetheless, all other functions (e.g., pinging, updating, controlling, etc.) are unaffected by this bug.  
+```
+
 ::::
 
 ::::{tab-item} Windows
+
+
+
 
 On Windows, we will be installing WSL with Ubuntu and Docker Desktop.
 
