@@ -82,7 +82,7 @@ Place the cover over the spere until "it clicks".
 
 Assembled omnidirectional wheel with supports.
 ```
-
+<!--
 ### Step 7: Position wheel over the Duckiebot's chassis
 
 ```{figure} ../../_images/assembly/db21jv3/db21jv3-omniwheel-assembly-step7-position-on-chassis-plate-1.webp
@@ -92,9 +92,8 @@ Assembled omnidirectional wheel with supports.
 
 Omnidirectional wheel assembly positioning on the Duckiebot's chassis.
 ```
-
-### Step 8: Connecting the wheel's standoffs with the chassis
-
+-->
+### Step 7: Connecting the wheel's standoffs with the chassis
 
 ```{figure} ../../_images/assembly/db21jv3/db21jv3-omniwheel-step8-connect-to-chassis-plate-1.webp
 :name: fig:db21jv3-ow-s8
