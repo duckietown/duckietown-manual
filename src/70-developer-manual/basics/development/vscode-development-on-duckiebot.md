@@ -94,7 +94,7 @@ Use terminals and extensions as usual, now running inside the container.
 
 - **Terminals:** Use the integrated terminal for commands that must run inside the container.
 - **ROS tools:** If the container has ROS installed and is connected to the robot’s ROS network, tools like `rostopic` work from the terminal.
-- **Persisting changes:** Changes inside a container are automatically synced to your laptop using [mutagen](https://mutagen.io/).
+- **Persisting changes:** Changes inside a container are automatically synced to your laptop.
 
 ## Troubleshooting
 
