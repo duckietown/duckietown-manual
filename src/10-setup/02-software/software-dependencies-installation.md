@@ -21,7 +21,7 @@ Open a terminal and run, in order:
 
 ```shell
 sudo apt update
-sudo apt install -y ca-certificates curl git git-lfs git-extras gnupg libfuse2 libnss3-tools pipx
+sudo apt install -y ca-certificates curl git git-lfs git-extras gnupg libasound2t64 libfuse2 libnss3-tools pipx
 pipx ensurepath
 ```
 
