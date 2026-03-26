@@ -200,6 +200,12 @@ dts matrix run --standalone --sandbox --verbose --browser
 For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
 ```
 
+```{attention}
+On Windows Dev Container setups, the Duckiematrix WebGL renderer may get stuck on the loading screen due to missing port forwarding. 
+
+Ensure ports `7503`, `7504`, and `7505` are forwarded in the VS Code **PORTS** tab before starting the renderer.
+```
+
 ## Caveats
 
 ### Accessing a Virtual Robot's Dashboard
