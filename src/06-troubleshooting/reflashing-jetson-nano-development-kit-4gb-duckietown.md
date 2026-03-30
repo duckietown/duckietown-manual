@@ -102,17 +102,20 @@ This step needs to be performed only once, even if you are re-flashing multiple 
 On your computer, run:
 
 ```shell
+sudo add-apt-repository -y universe
+sudo apt-get update
+sudo apt-get install -y qemu-user-static
 mkdir -p /tmp/duckietown/jn/overlay
 cd /tmp/duckietown/jn
 curl -LO "https://developer.nvidia.com/downloads/embedded/l4t/r32_release_v7.6/t210/jetson-210_linux_r32.7.6_aarch64.tbz2"
 curl -LO "https://developer.nvidia.com/downloads/embedded/l4t/r32_release_v7.6/t210/tegra_linux_sample-root-filesystem_r32.7.6_aarch64.tbz2"
 curl -Lo overlay_32.7.5_PCN211181.tbz2 "https://drive.google.com/uc?export=download&id=1Kmocz6tPmEaepPIvwKc3bT7MpJqpwkvv"
 tar -xpf jetson-210_linux_r32.7.6_aarch64.tbz2
-tar -xpf tegra_linux_sample-root-filesystem_r32.7.6_aarch64.tbz2 -C Linux_for_Tegra/rootfs
+sudo tar -xpf tegra_linux_sample-root-filesystem_r32.7.6_aarch64.tbz2 -C Linux_for_Tegra/rootfs
 tar -xpf overlay_32.7.5_PCN211181.tbz2 -C overlay
 cp overlay/Linux_for_Tegra/bootloader/t210ref/BCT/P3448_A00_lpddr4_204Mhz_P987.cfg Linux_for_Tegra/bootloader/t210ref/BCT
 cp -r overlay/Linux_for_Tegra/kernel/dtb/. Linux_for_Tegra/kernel/dtb
-./Linux_for_Tegra/apply_binaries.sh
+sudo ./Linux_for_Tegra/apply_binaries.sh
 tar -xpf overlay_32.7.5_PCN211181.tbz2 -C Linux_for_Tegra
 ```
 
