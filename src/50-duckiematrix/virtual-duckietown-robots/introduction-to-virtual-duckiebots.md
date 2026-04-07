@@ -149,6 +149,28 @@ Virtual Duckietown robot drivers allow for the communication between a Duckietow
 Data types exchanged with the Duckiematrix by the virtual Duckietown robot drivers.
 ```
 
+(intermediate-virtual-duckietown-robots-duckiedrone-mavlink)=
+### Duckiedrone MAVLink Proxy Integration
+
+The virtual Duckiedrone uses a hybrid integration architecture. Like ground-based virtual Duckiebots, it uses direct driver bindings for sensors such as the camera and Time-of-Flight (ToF). For flight control, it relies on a MAVLink proxy routed through DTPS (Duckietown Postal Service), while IMU data is made available via MAVROS.
+
+The following diagram illustrates how the components are connected:
+
+```{figure} ../../_images/duckiematrix/diagrams/mavlink_proxy_connections.drawio.png
+:name: fig:mavlink-proxy-connections
+:alt: Architecture of the MAVLink proxy connections between the Duckiematrix and a virtual Duckiedrone.
+
+Architecture of the MAVLink proxy connections between the Duckiematrix and a virtual Duckiedrone.
+```
+
+The key components of this integration are:
+
+* **RotorPy** — a physics simulator for multirotor vehicles running inside the Duckiematrix Engine. It simulates the drone's flight dynamics and produces sensor readings.
+* **PX4 SITL** — the PX4 flight controller running in Software-In-The-Loop mode on the virtual robot's Docker environment.
+* **MAVLink** — the communication protocol used between PX4 SITL and the rest of the system.
+* **DTPS MAVLink Proxy** — a proxy that routes MAVLink messages over DTPS topics, bridging the PX4 SITL running on the virtual robot with the RotorPy simulation running inside the Duckiematrix Engine.
+* **MAVROS** — a ROS2 bridge that translates MAVLink messages into ROS topics, including IMU data published from PX4 SITL.
+
 (intermediate-virtual-duckietown-robots-drivers-implementation-status)=
 ### Implementation status
 
