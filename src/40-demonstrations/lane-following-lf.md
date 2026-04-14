@@ -259,6 +259,67 @@ $$
 
 where $K_d$ and $K_{\phi}$ are tuned proportional gains for lateral and angular errors, respectively.
 
+(demo-lane-following-ros2)=
+## Lane Following with ROS2 (Virtual Robot)
+
+This section describes how to run the lane following demo using the ROS2 stack on a virtual Duckiebot.
+
+(demo-lane-following-ros2-setup)=
+### Setup
+
+1. Start a virtual Duckiebot by running:
+
+   ```shell
+   dts duckiebot virtual start DUCKIEBOT_NAME
+   ```
+
+2. Make sure the `duckietown/duckiebot` stack is running (it bridges ROS1 and ROS2 topics):
+
+   ```shell
+   dts stack up -H DUCKIEBOT_NAME
+   ```
+
+   ```{note}
+   If you previously had a ROS1 stack running, stop it first:
+
+   ```shell
+   dts stack down -H DUCKIEBOT_NAME
+   ```
+
+3. Attach your virtual Duckiebot to the Duckiematrix:
+
+   ```shell
+   dts matrix attach DUCKIEBOT_NAME map_0/vehicle_0
+   ```
+
+(demo-lane-following-ros2-run)=
+### Run
+
+From the `dt-core` repository directory (cloned as described in [](demo-lane-following-parameter-tuning)), run the ROS2 lane following stack:
+
+```shell
+dts devel run -H DUCKIEBOT_NAME -L lane-following
+```
+
+```{note}
+Do **not** use the `--link` flag when running the ROS2 demo.
+```
+
+```{note}
+If you have not changed any dependencies since the last build, `dts devel run` will sync and mount the latest code without rebuilding.
+```
+
+(demo-lane-following-ros2-stop)=
+### Stop
+
+To stop the ROS2 lane following stack, press <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal where `dts devel run` is running.
+
+To detach and stop the virtual robot:
+
+```shell
+dts duckiebot virtual stop DUCKIEBOT_NAME
+```
+
 (demo-lane-following-parameter-tuning)=
 ## Debugging and parameter tuning
 
