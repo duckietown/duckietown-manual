@@ -154,6 +154,10 @@ To run the Dev Container in VS Code:
 The first time you load the Dev Container it may take some time as it is building the environment.
 ```
 
+```{note}
+To create a new local integrated terminal (outside the Dev Container), open the VS Code Command Palette (`Shift+Cmd+P` on macOS or `Shift+Ctrl+P` on Windows), enter `Terminal: Create New Integrated Terminal (Local)` and press `Enter`.
+```
+
 ## Setting up the Duckietown Shell
 
 To set up the Duckietown Shell inside the Dev Container, follow [these instructions](dt-account-set-token).
