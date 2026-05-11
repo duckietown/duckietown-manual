@@ -215,5 +215,5 @@ Only the latest inputs are stored for the same Docker registry.
 ```{trouble}
 I would like to remove my stored Docker credentials. How could I achieve that?
 ---
-Simply use a text editor to remove the section `docker-credentials` in `~/.dt-shell/config.yaml` file.
+Run `rm ~/.duckietown/shell/profiles/ente/databases/secrets_docker.yaml`.
 ```
