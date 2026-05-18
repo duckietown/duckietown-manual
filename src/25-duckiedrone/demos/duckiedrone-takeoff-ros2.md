@@ -51,6 +51,10 @@ To set up the demo:
     dts matrix run --standalone -d --map sandbox_drone
     ```
 
+    ```{note}
+    {{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
+    ```
+
 5. Attach the Duckiedrone to the matrix engine:
 
     ```shell

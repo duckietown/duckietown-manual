@@ -30,3 +30,7 @@ When asking for help make sure to provide sufficient information for others to r
 ```{tip}
 Saying "it does not work" is rarely helpful, as it could imply too many things.
 ```
+
+```{attention}
+On Slack, please keep each issue in its own thread.
+```

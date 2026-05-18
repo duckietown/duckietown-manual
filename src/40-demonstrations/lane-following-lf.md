@@ -54,7 +54,13 @@ To quickly stop your Duckiebot, press <kbd>E</kbd> (`Emergency Stop`).
 To start lane following:
 
 1. Open a new terminal.
+
 2. Run `dts duckiebot keyboard_control DUCKIEBOT_NAME`.
+
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "keyboard_control") }}
+```
+
 3. With the `Keyboard Control` window in focus, press <kbd>F</kbd> (`Autopilot`).
 
 ```{note}
@@ -95,6 +101,11 @@ To stop the demo:
 To see what your Duckiebot sees and other visualizations related to the demo:
 
 1. Run `dts duckiebot image_viewer DUCKIEBOT_NAME`.
+
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "image_viewer") }}
+```
+
 2. Select a topic from the drop-down menu.
 
 ```{todo}
@@ -300,6 +311,11 @@ However, these values will not persist if you restart the demo until you change 
 To view the colormaps:
 
 1. Run `dts duckiebot image_viewer DUCKIEBOT_NAME`.
+
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "image_viewer") }}
+```
+
 2. Select the `NODE/line_detector_node/debug/maps/jpeg` topic, where `NODE` is `DUCKIEBOT_NAME/node/image_relayer`.
 
 If the white or yellow regions of the image are not being well segmented, try tuning the color thresholds using a new `dt-core/packages/line_detector/config/line_detector_node/DUCKIEBOT_NAME.yaml` file.
@@ -329,6 +345,11 @@ You should not need to worry about the `RED` colors for now but the `WHITE` and 
 To view the lane pose and segment markers:
 
 1. Run `dts duckiebot image_viewer DUCKIEBOT_NAME`.
+
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "image_viewer") }}
+```
+
 2. Select the `NODE/ground_projection_node/debug/ground_projection_image/jpeg` topic, where `NODE` is `DUCKIEBOT_NAME/node/image_relayer`.
 
 ```{note}

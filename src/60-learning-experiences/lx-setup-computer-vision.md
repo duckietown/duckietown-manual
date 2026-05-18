@@ -17,7 +17,7 @@
 This page describes how to run the "Computer Vision - Visual Servoing" learning experience.
 
 ```{warning}
-If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+{{ dt_workspace_matrix_lx_warning.format(dt_workspace_note_prefix) }}
 ```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/H7-2YkHiChw?si=J7pPzrXyKJX_VW4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -187,6 +187,10 @@ Now that your virtual robot is ready, you can start the Duckiematrix. From this 
 dts code start_matrix
 ```
 
+```{note}
+{{ dt_workspace_start_matrix_split_note.format(dt_workspace_note_prefix) }}
+```
+
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
 
@@ -266,7 +270,7 @@ Visual Servoing relies exclusively on images to control the Duckiebot.
 ## Troubleshooting
 
 ```{trouble}
-When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/workspaces/dt-env-developer/lx'`
+When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/path/to/lx'`
 ---
 Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-computer-vision/`)
 ```

@@ -36,6 +36,10 @@ To open the `Image Viewer`, run:
 dts duckiebot image_viewer DUCKIEBOT_NAME
 ```
 
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "image_viewer") }}
+```
+
 Note the keys in the table below.
 
 ```{list-table}

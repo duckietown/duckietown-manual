@@ -38,6 +38,27 @@ html:
 sphinx:
   extra_extensions: []
   config:
+    myst_substitutions:
+      dt_workspace_note_prefix: >-
+        If you are using a [Duckietown Workspace](setup-devcontainer),
+      dt_workspace_duckietown_viewer_note: >-
+        {} run this command from a local terminal outside the dev container. To
+        open the browser-based Viewer instead, use `dts duckiebot {}
+        DUCKIEBOT_NAME --browser`.
+      dt_workspace_matrix_lx_warning: >-
+        {} Duckietown Viewer apps and Duckiematrix renderer-only commands such
+        as `dts matrix run` must be run from a local terminal outside the dev
+        container. The `--standalone` flag starts both the Engine and Renderer
+        in the same environment.
+      dt_workspace_start_matrix_split_note: >-
+        {} run `dts code start_matrix --no-renderer` inside the dev container,
+        then launch the Duckiematrix renderer from a local terminal outside the
+        dev container with `dts matrix run`.
+      dt_workspace_matrix_standalone_note: >-
+        {} the `--standalone` flag starts both the Duckiematrix Engine and
+        Renderer in the same environment. For the split workspace workflow,
+        start the Engine separately and connect to it with `dts matrix run`
+        from a local terminal outside the dev container.
     intersphinx_mapping:
       jupyter-book-docs:
         - "https://jupyterbook.org/en/stable"

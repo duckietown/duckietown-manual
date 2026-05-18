@@ -18,7 +18,7 @@
 This page describes how to run the "Kinematics and Odometry" learning experience. 
 
 ```{warning}
-If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+{{ dt_workspace_matrix_lx_warning.format(dt_workspace_note_prefix) }}
 ```
 
 ```{figure} ../_images/lx-devmanual/lx-mod-kin/images/odometry/odometry-1.png
@@ -217,6 +217,10 @@ Now that your virtual robot is ready, you can start the Duckiematrix. From this 
 dts code start_matrix
 ```
 
+```{note}
+{{ dt_workspace_start_matrix_split_note.format(dt_workspace_note_prefix) }}
+```
+
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
 
@@ -296,7 +300,7 @@ You need to be in the root directory of the LX in order to run the `dts code` co
 ```
 
 ```{trouble}
-When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/workspaces/dt-env-developer/lx'`
+When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/path/to/lx'`
 ---
 Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-control/`)
 ```

@@ -18,7 +18,7 @@
 This page describes the setup and general workflow for Duckietown learning experiences. Specific instructions for each available LX are detailed in the following pages of this manual. The following LXs are currently supported:
 
 ```{warning}
-If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+{{ dt_workspace_matrix_lx_warning.format(dt_workspace_note_prefix) }}
 ```
 
 (ente-supported-lxs)=
@@ -30,10 +30,6 @@ If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu
 ```{note}
 - to create your own LXs, see: [](creating-new-lxs).
 - to share your LXs, reach out to [info@duckietown.com](mailto:info@duckietown.com) 
-```
-
-```{warning}
-If you are running Duckietown inside a devcontainer and not on a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
 ```
 
 (lx-forking)=
@@ -134,6 +130,10 @@ sudo apt install libnss3-tools
 dts setup mkcert
 ```
 
+```{note}
+{{ "{} install `mkcert` on the host system by following [the workspace setup instructions](setup-devcontainer) instead of running these commands inside the dev container.".format(dt_workspace_note_prefix) }}
+```
+
 (lx-code-editor)=
 ## Launching the Code Editor
 
@@ -197,6 +197,10 @@ Now that your virtual robot is ready, you can start the Duckiematrix (assuming i
 
 ```
 dts code start_matrix
+```
+
+```{note}
+{{ dt_workspace_start_matrix_split_note.format(dt_workspace_note_prefix) }}
 ```
 
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
@@ -284,7 +288,7 @@ You need to be in the root directory of the LX in order to run the `dts code` co
 ```
 
 ```{trouble}
-When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/workspaces/dt-env-developer/lx'`
+When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/path/to/lx'`
 ---
 Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-control/`)
 ```

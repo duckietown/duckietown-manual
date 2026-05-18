@@ -42,3 +42,7 @@ To `Link` a `Matrix` and `World` entity, run the following command, where `MATRI
 ```shell
 dts matrix run --standalone --embedded --map sandbox --link MATRIX WORLD
 ```
+
+```{note}
+{{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
+```

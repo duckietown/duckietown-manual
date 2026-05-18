@@ -33,6 +33,10 @@ To open the `Keyboard Controller`, run:
 dts duckiebot keyboard_control DUCKIEBOT_NAME
 ```
 
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "keyboard_control") }}
+```
+
 Note the keys in the table below.
 
 ```{list-table}

@@ -17,3 +17,7 @@ Duckietown has a large community of instructors, learners and professionals on S
 * [Join the Duckietown community on Slack](https://duckietown.com/join-slack).
 
 Joining the Duckietown community is a way to get support too. Learn [how to get help in Duckietown](how-to-get-help) in the FAQs and troubleshooting section of this book.
+
+```{attention}
+Please keep each issue in its own thread.
+```

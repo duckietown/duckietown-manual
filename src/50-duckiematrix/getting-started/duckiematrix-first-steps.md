@@ -40,6 +40,11 @@ In summary, the following command
 ```shell
 dts matrix run --standalone --embedded --map sandbox
 ```
+
+```{note}
+{{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
+```
+
 would download and install the latest version of the Duckiematrix if it has not already been installed, start it on your local machine and load the `sandbox` map that is predefined.
 By default, the Duckiematrix runs in *tutorial* mode, where the key bindings are introduced. If you
 want to disable this behavior you can add the `--no-tutorial` flag. If something is going wrong and
@@ -58,6 +63,10 @@ of the engine (as a hostname or IP address) using the `--engine` flag:
 
 ```shell
 dts matrix run --engine ENGINE_HOSTNAME
+```
+
+```{note}
+If you are using a [Duckietown Workspace](setup-devcontainer) and the `Engine` is running inside the dev container, run this renderer command from a local terminal outside the dev container.
 ```
 
 In this case you do not need to specify a `map` since that was already specified when the Duckiematrix engine
@@ -84,4 +93,8 @@ a local map see the page on [creating maps](dtmatrix-map-customization). This ma
 
 ```shell
 dts matrix run --standalone --map PATH_TO_MAP
+```
+
+```{note}
+{{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
 ```

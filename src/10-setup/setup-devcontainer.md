@@ -126,12 +126,12 @@ To install the Remote - Containers extension in VS Code:
 4. Click on the `Install` button next to the `Remote - Containers` extension by Microsoft.
 5. (**Windows only**) Follow the same instructions to also install the `WSL` extension.
 
-## Cloning the `dt-env-developer` repository
+## Cloning the `workspace` repository
 
-To clone the `dt-env-developer` repository, run:
+To clone the `workspace` repository, run:
 
 ```shell
-git clone git@github.com:duckietown/dt-env-developer.git
+git clone git@github.com:duckietown/workspace.git
 ```
 
 ```{attention}
@@ -144,7 +144,7 @@ Ignore the instructions in the `README` of this repository.
 
 To run the Dev Container in VS Code:
 
-1. Open VS Code and navigate to the `dt-env-developer` folder (`File` -> `Open Folder...` -> `/path/to/dt-env-developer`). You should see a popup appear in the bottom-right corner of your screen containing the message "Folder contains a Dev Container configuration file. Reopen folder to develop in a container ([learn more](https://aka.ms/vscode-remote/docker)).".
+1. Open VS Code and navigate to the `workspace` folder (`File` -> `Open Folder...` -> `/path/to/workspace`). You should see a popup appear in the bottom-right corner of your screen containing the message "Folder contains a Dev Container configuration file. Reopen folder to develop in a container ([learn more](https://aka.ms/vscode-remote/docker)).".
 
 2. Click the `Reopen in Container` button.
 
@@ -156,6 +156,10 @@ The first time you load the Dev Container it may take some time as it is buildin
 
 ```{note}
 To create a new local integrated terminal (outside the Dev Container), open the VS Code Command Palette (`Shift+Cmd+P` on macOS or `Shift+Ctrl+P` on Windows), enter `Terminal: Create New Integrated Terminal (Local)` and press `Enter`.
+```
+
+```{note}
+If you are using a Duckietown Workspace, Duckietown Viewer apps and Duckiematrix renderer-only commands such as `dts matrix run` must be run from a local integrated terminal outside the Dev Container. Commands such as `dts matrix run --standalone` start both the Engine and the Renderer in the same environment. Browser-based variants can be run inside or outside the Dev Container.
 ```
 
 ## Setting up the Duckietown Shell
@@ -206,60 +210,6 @@ For the WebGL (browser) version of the Duckiematrix, if the colors look desatura
 
 ## Caveats
 
-### Accessing a Virtual Robot's Dashboard
-
-To access a Virtual Robot's `Dashboard`, open the `noVNC` virtual desktop by navigating to [localhost:6080](http://localhost:6080). After connecting to the desktop, click on the little triangular icon in the bottom left corner, and then on `Web Browser`. Once the browser is up, proceed as if you were using a physical Duckiebot (i.e., start the virtual Duckiebot, then navigate to `robotname.local`.)
-
-```{figure} ../_images/setup/devcontainer/devcontainer-dashboard-1-1.png
-:alt: how to get to the Duckiebot dashboard through a devcontainer
-:width: 90%
-:name: duckiebot-dashboard-devcontainer-1
-:align: center
-
-Connecting to a virtual Duckiebot Dashboard inside a workspace requires a few extra steps.
-```
-
-```{figure} ../_images/setup/devcontainer/devcontainer-dashboard-2.png
-:alt: virtual duckiebot inside devcontainer dashboard
-:width: 90%
-:name: duckiebot-dashboard-devcontainer-2
-:align: center
-
-Accessing the Dashboard of a virtual Duckiebot inside a devcontainer. 
-```
-
-### Accessing the Duckietown Viewer Apps
-
-```{note}
-`Duckietown Viewer` applications (i.e., `Image Viewer`, `Keyboard Controller`, etc.) may not work as expected, due to limitations with GUI applications in Docker containers.
-```
-
-To open the `Image Viewer` in your browser, run the following command, where `ROBOT_NAME` is the name of your robot:
-
-```shell
-dts duckiebot image_viewer ROBOT_NAME --browser
-```
-
-To open the `Image Viewer` in the `noVNC` virtual desktop, run the following command after navigating to [localhost:6080](http://localhost:6080), where `ROBOT_NAME` is the name of your robot:
-
-```shell
-dts duckiebot image_viewer ROBOT_NAME
-```
-
-### Attaching a Duckietown robot to the Duckiematrix
-
-To attach a Duckietown robot to the Duckiematrix, run the following command, where `ROBOT_NAME` is the name of your robot and `ENGINE_LOCAL_NETWORK_ADDRESS` is the LAN IP address of the `Engine` (not `localhost`):
-
-```shell
-dts matrix attach ROBOT_NAME -e ENGINE_LOCAL_NETWORK_ADDRESS ENTITY_NAME
-```
-
-The `ENGINE_LOCAL_NETWORK_ADDRESS` will be shown in the terminal after starting the engine. The `ENTITY_NAME` default is `map_0/vehicle_0`. A working example could be therefore:
-
-```shell
-dts matrix attach ROBOTNAME -e 192.168.139.2 map_0/vehicle_0
-```
-
 ### Running `dts code editor`
 
 To be able to run `dts code editor`, you need to install `mkcert` on your host system:
@@ -299,14 +249,3 @@ To be able to run `dts code editor`, you need to install `mkcert` on your host s
 6. Finally, run `source ~/.bashrc` to update the current shell or open a new `wsl` terminal window.
 ````
 `````
-
-(caveat-devcontainer-lx)=
-### DT Workspaces - Duckiematrix for LXs
-
-To run the Duckiematrix for `LXs`, run the following command to start the `Engine`:
-
-```shell
-dts code start_matrix --no-renderer
-```
-
-and then [attach the `Renderer`](devcontainer-running-matrix-renderer) launching it from the host machine.
