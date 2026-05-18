@@ -257,7 +257,7 @@ dts matrix attach ROBOT_NAME -e ENGINE_LOCAL_NETWORK_ADDRESS ENTITY_NAME
 The `ENGINE_LOCAL_NETWORK_ADDRESS` will be shown in the terminal after starting the engine. The `ENTITY_NAME` default is `map_0/vehicle_0`. A working example could be therefore:
 
 ```shell
-dts matrix attach vargo -e 192.168.139.2 map_0/vehicle_0
+dts matrix attach ROBOTNAME -e 192.168.139.2 map_0/vehicle_0
 ```
 
 ### Running `dts code editor`

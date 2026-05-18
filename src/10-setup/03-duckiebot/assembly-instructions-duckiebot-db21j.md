@@ -153,7 +153,7 @@ Screw the IMU PCB onto the top side of the bottom plate using two `N2.5x12` scre
 ### Step 4
 
 ```{seealso}
-If your omnidirectional wheel does not look like this one and is made of plastic instead of metal, follow the instructions at: []() and then continue here from [Step 6](db21j-bottom-assembly-step-6).
+If your omnidirectional wheel does not look like this one and is made of plastic instead of metal, follow the instructions at: [](assembly-instructions-db21j-v3) and then continue here from [Step 6](db21j-bottom-assembly-step-6).
 ```
 
 Screw two `FF3x25` standoffs onto the top side of the omni wheel using two `M3x8` screws as shown below.
