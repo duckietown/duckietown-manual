@@ -24,7 +24,7 @@ parts:
                             -   file: 10-setup/02-software/docker-installation
                             -   file: 10-setup/02-software/github-installation
                             -   file: 10-setup/02-software/duckietown-shell-dts-installation
-                            -   file: 10-setup/setup-devcontainer.md
+                            -   file: 10-setup/02-software/setup-devcontainer.md
 
                     -   file: 50-duckiematrix/introduction-to-the-duckiematrix-virtual-environment
                         sections:
