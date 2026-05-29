@@ -4,32 +4,31 @@
 ```
 
 ```{warning}
-Duckietown Workspaces are currently under development and released in Beta mode. Most functionalities are currently working and have been extensively tested on macOS and on Windows. 
-Please report all bugs in the Duckietown Slack community channel [#beta-devcontainer](https://duckietown.slack.com/archives/C09KJ1QC46R) or by email at [info@duckietown.com](mailto:info@duckietown.com). 
+Report any bug in the Duckietown Slack community channel [#beta-devcontainer](https://duckietown.slack.com/archives/C09KJ1QC46R) or by email at [info@duckietown.com](mailto:info@duckietown.com). 
 ```
 
 (setup-devcontainer)=
-# Using Duckietown Workspaces (Beta)
+# Setting up and using Duckietown Workspaces
 
-This page describes how to run Duckietown code inside a [Development (Dev) Container](https://containers.dev/), providing a functional environment inside of [Visual Studio Code](https://code.visualstudio.com/).
+This page details how to set up a Duckietown environment inside a [Development (Dev) Container](https://containers.dev/) using [Visual Studio Code](https://code.visualstudio.com/).
 
 ```{note}
-This is the only workflow for running Duckietown code on an Apple Silicon (M-series) Mac and on Windows.
+Duckietown Workspaces are the only supported workflow for running Duckietown software on an Apple Silicon (M-series) Mac and on Windows.
 ```
 
 ## Host System Container Installation
 
-In order to run Duckietown in a Dev Container, you need to install the following software on your host system, depending on your operating system:
+Depending on your host machine operating system, instructions vary slightly.
 
 :::::{tab-set}
 
 ::::{tab-item} macOS
 
-On macOS, we will be installing [Orbstack](https://orbstack.dev/), a lightweight container runtime that supports Apple Silicon (M-series) Macs.
-
 ```{attention}
-If you have Docker Desktop installed, [uninstall it](https://docs.docker.com/desktop/uninstall/) and reboot.
+If you have Docker Desktop installed on your host machine, [uninstall it](https://docs.docker.com/desktop/uninstall/) and reboot before continuing.
 ```
+
+First, install [Orbstack](https://orbstack.dev/), a lightweight container runtime that supports Apple Silicon (M-series) Macs.
 
 To install Orbstack:
 
@@ -42,11 +41,7 @@ To install Orbstack:
 4. Move the application to your `Applications` folder.
 
 ```{tip}
-If your Mac refuses to open an application because it is not trusted, hold down the `option` key and right-click it, then select `Open`. Your Mac will inform you that the application is not trusted but will allow you to open it.
-```
-
-```{attention}
-There is a known bug for which `dts fleet discover` will not find physical robots on the same network. Nonetheless, all other functions (e.g., pinging, updating, controlling, etc.) are unaffected by this bug.  
+If your Mac refuses to open an application because it is not trusted, hold down the `option` key and right-click it, then select `Open`. Your Mac will inform you that the application is not trusted but will allow you to open it. Alternatively, [whitelist the app](https://support.apple.com/en-us/102445) from the "Privacy and Security" section of your Mac's System Settings.
 ```
 
 ::::
@@ -102,6 +97,7 @@ From now on, cloning and running the devcontainer should be done from the `wsl` 
 ```
 
 ::::
+
 :::::
 
 ## Installing Visual Studio Code
@@ -210,6 +206,10 @@ For the WebGL (browser) version of the Duckiematrix, if the colors look desatura
 
 ## Caveats
 
+```{attention}
+There is a known bug for which `dts fleet discover` ran inside the workspace will not find physical robots on the same network. Nonetheless, all other functions (e.g., pinging, updating, controlling, etc.) are unaffected by this bug.  
+```
+
 ### Running `dts code editor`
 
 To be able to run `dts code editor`, you need to install `mkcert` on your host system:
@@ -217,7 +217,6 @@ To be able to run `dts code editor`, you need to install `mkcert` on your host s
 `````{tab-set}
 
 ````{tab-item} macOS
-
 
 1. Run `brew install mkcert` or [download the `darwin` binary for your system's architecture](https://github.com/FiloSottile/mkcert/releases/tag/v1.4.4).
 
