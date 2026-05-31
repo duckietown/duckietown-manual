@@ -16,7 +16,7 @@ This section describes how to install and set up `dts` (`Duckietown Shell`), a C
 - A computer with `dts` installed and correctly set up.
 ```
 
-## `dts` Installation
+## Duckietown Shell (`dts`) Installation
 
 ````{attention}
 If you have already installed `dts` using `pip3`, run the following command and follow the on-screen instructions:

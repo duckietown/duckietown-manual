@@ -128,7 +128,6 @@ For more examples and ideas, visit:
 
 
 ```{seealso}
-If you are unfamiliar with Docker, we strongly recommend reading the following reference page to gain a working
-understanding of [this page](sec:developer_basics_docker)
+If you are unfamiliar with Docker and would like to learn a little more about it, a good starting point can be this [brief Duckietown guide to Docker](sec:developer_basics_docker).
 ```
 

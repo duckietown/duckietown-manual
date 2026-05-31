@@ -5,8 +5,7 @@
 (dt-setup)=
 # Initial Setup
 
-In this section we will describe all the things you need to do to get started in terms of accounts
-and prerequisites.
+Go through these instructions to set up your Duckietown working environment.
 
 
 ```{tableofcontents}

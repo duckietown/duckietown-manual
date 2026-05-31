@@ -11,19 +11,32 @@
 ```
 
 (setup-computer)=
-# Your Computer
+# Computer setup
 
-The first step in Duckietown is to [set up a computer appropriately](setup-install-ubuntu).
+The first step in Duckietown is to set up a computer to use as base station.
 
-Duckietown is a platform designed to introduce learners to the tools and workflows of professional robotics.
+## Hardware and network requirements
 
-A critical skill and fundamental tool of every roboticist is the open-source Linux operating system. In Duckietown, specifically, we utilize the Ubuntu distribution.
+You will need a computer and internet connection to use Duckietown. Find out the requirements here: [](setup-computer-requirements).
 
-## Why Ubuntu
+## Operating system
 
-For those who have never had the experience, Ubuntu might be perceived as a barrier to entry to learning AI robotics, especially given the widespread distribution of other operating systems (Windows, macOS) in educational institutions.
+Duckietown is designed to introduce learners to the tools and workflows of professional robotics. It is therefore built to work natively with Ubuntu, an open-source distribution of the Linux operating system. 
 
-We contend that using Ubuntu actually increases accessibility to the science and technology of robot autonomy, for many more reasons than we will list here, but mainly because:
+If this is your first experience with Duckietown, we _strongly recommend_ installing and using **Ubuntu**. 
+
+```{note}
+All instructions in this book, unless otherwise explicitly remarked, assume you are using a native Ubuntu installation. Follow the [](setup-install-ubuntu) to find out which Ubuntu version and how to install it on your machine. By native we mean "bare metal", i.e., a dual boot or direct installation, not using a virtual machine.
+```
+
+If you are a more experienced user, or absolutely unable or unwilling to install Ubuntu on your computer, we support using **Duckietown Workspaces on macOS and Windows**. Follow [](setup-devcontainer) for installation instructions. 
+
+(setup-why-ubuntu)=
+## Why Ubuntu?
+
+At first glance, Ubuntu might be perceived as a barrier to entry to learning AI robotics, especially given the widespread distribution of other operating systems (Windows, macOS) in educational institutions.
+
+We belive that using Ubuntu actually increases accessibility to the science and technology of robot autonomy, for many more reasons than we will list here, but mainly because:
 
 * it is **open source**, **free**, and **available worldwide**
 * it is resource-efficient, and runs comparatively well on inexpensive computers
@@ -42,35 +55,49 @@ Before installing Ubuntu:
 2. Decide if you will install Ubuntu as a dual boot, in which case, ensure you have enough free space to make a partition.
 
 ```{tip}
-We would recommend that you install Ubuntu as a dual boot when possible. Each time you turn on your computer, you will be able to choose which OS to run.
+We would recommend that you install Ubuntu as a dual boot when possible. Each time you turn on your computer, you will be able to choose which operating system (OS) to run.
 ```
 
 ```{warning}
 The currently supported versions of Ubuntu are 22.04.x and 24.04.x.
 ```
 
-To install Ubuntu, follow this [Ubuntu Desktop Installation Tutorial](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
+To install Ubuntu, follow this [Ubuntu Desktop installation tutorial](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
 
+(setup-win-and-macos)=
+## Windows and MacOS supported workflows
 
-## A Note on Other Operating Systems
+It is possible to make Duckietown work with other operating systems, such as Windows or macOS, but it will require extra work in addition to the instructions shown in this manual.
 
-It is possible that Duckietown can work with other operating systems, such as Windows or macOS, but it will require extra work in addition to the instructions shown in this manual.
-
-The Duckietown staff is unfortunately able to provide help only for the officially supported OS.
+The Duckietown staff is, unfortunately, only able to provide help for the officially supported workflows: (recommended) [native Ubuntu](setup-install-ubuntu), or [Duckietown Workspaces](setup-devcontainer) for Windows or macOS hosts.
 
 Q&As can be found in the [Duckietown archives](setup-account-stack-overflow) and/or in the [Duckietown community on Slack](setup-account-slack).
 
-If you would like to document your solution, we will be glad to evaluate your PRs.
+If you would like to document your solution, we will be glad to review your pull requests. 
 
-## A Note on Virtual Machines
+(setup-computer-vm-vs-native-ubuntu)=
+## A Note on virtual machines
 
-It is possible to run Ubuntu inside a virtual machine on both Windows and macOS hosts.
+It is possible to run Ubuntu inside a virtual machine (VM) on both Windows and macOS hosts, but given the many possible combinations of VMs, OSs, and architectures, Duckietown staff will not be able to provide support down this path. 
 
-Given the many possible combinations of virtual machines, OSs, and architectures, Duckietown staff will not be able to support you in case of need. Again, you can find hints and Q&As in the [Duckietown archives](setup-account-stack-overflow) and/or in the [Duckietown community on Slack](setup-account-slack).
+If you are running Ubuntu in a VM (Virtual Machine), **make sure that your computer and Duckiebot appear as physical entities on the same network**. This is achieved by selecting the "bridged network adapter" (e.g., VirtualBox uses NAT by default), which will allow you to be on the same subnetwork as your Duckiebot.
 
-```{todo}
-we should have specific instructions for apple M chips since it is not as simple as dual booting. Do we support Ubuntu arm64v8 VM? I feel we should.
-what about Asahi Linux?
+```{note}
+When running a VMware machine on a macOS host, it may be necessary to have the following network adapters:
+* `Share with my Mac` (for connecting to the Internet).
+* `Bridged Networking` (for connecting to your Duckiebot).
+```
+
+If using a M-series Mac (ARM architecture), some success has been achieved by emulating a x86 architecture using [UTM](https://mac.getutm.app/).
+
+
+```{admonition} Reminder
+:class: tip
+As a reminder: 
+
+- The only supported workflows are: (recommended) [native Ubuntu](setup-install-ubuntu), or [Duckietown Workspaces](setup-devcontainer) for Windows or macOS hosts.
+
+- You can Q&As in the [Duckietown archives](setup-account-stack-overflow) and/or in the [Duckietown community on Slack](setup-account-slack).
 ```
 
 (setup-computer-requirements)=
