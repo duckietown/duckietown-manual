@@ -1,19 +1,30 @@
 ```{seo}
-:description: Step by step instructions and troubleshooting tips for running a fully fledged Duckietown environment in a development container, enabling smooth operations on macOS (including M-chips) and Windows.
-:keywords: duckietown setup, Dev Container, Duckietown Workspaces, duckietown macOS, duckietown windows
+:description: Step-by-step instructions and troubleshooting tips for running a fully fledged Duckietown environment in a development container, enabling smooth operations on macOS (including M-chips) and Windows.
+:keywords: duckietown setup, duckietown dev Container, Duckietown Workspaces, duckietown macOS, duckietown windows
 ```
 
-```{warning}
-Report any bug in the Duckietown Slack community channel [#beta-devcontainer](https://duckietown.slack.com/archives/C09KJ1QC46R) or by email at [info@duckietown.com](mailto:info@duckietown.com). 
+```{needget}
+- A computer running macOS or Windows
+---
+- A Duckietown Workspace installation
 ```
+
+```{attention}
+If you have already [installed Ubuntu on your computer](setup-install-ubuntu), skip this page and proceed to [setting up your accounts](dt-account).
+```
+
 
 (setup-devcontainer)=
-# Setting up and using Duckietown Workspaces
+# Workspace installation (macOS and Windows)
 
 This page details how to set up a Duckietown environment inside a [Development (Dev) Container](https://containers.dev/) using [Visual Studio Code](https://code.visualstudio.com/).
 
 ```{note}
 Duckietown Workspaces are the only supported workflow for running Duckietown software on an Apple Silicon (M-series) Mac and on Windows.
+```
+
+```{warning}
+You can report bugs and constructive feedback in the Duckietown Slack community channel [#beta-devcontainer](https://duckietown.slack.com/archives/C09KJ1QC46R) or by email at [info@duckietown.com](mailto:info@duckietown.com). 
 ```
 
 ## Host System Container Installation
@@ -160,9 +171,11 @@ If you are using a Duckietown Workspace, Duckietown Viewer apps and Duckiematrix
 
 ## Setting up the Duckietown Shell
 
-To set up the Duckietown Shell inside the Dev Container, follow [these instructions](dt-account-set-token).
+The Duckietown Shell is pre-installed in the workspace. To initialize it with your user credentials, go through the [Duckietown Shell first boot setup](dt-account-set-token) inside the Dev Container.
 
-To set up the Duckietown Shell outside the Dev Container, [install Python 3.10/3.11/3.12](https://www.python.org/downloads/) and follow [these instructions](setup-dts).
+```{tip}
+Some Duckietown robot apps, such as the image viewer or keyboard controller, can be visualized natively on the host machine instead of inside a noVNC desktop, resulting in a better experience. To enable this, set up the Duckietown Shell on the host machine as well. Outside the Dev Container [install Python 3.10/3.11/3.12](https://www.python.org/downloads/) and then follow [the `dts` installation instructions](setup-dts).
+```
 
 ```{attention}
 If a popup asking you to input your credentials appears, you should do so and then click `Always Allow`. 
@@ -204,7 +217,7 @@ dts matrix run --standalone --sandbox --verbose --browser
 For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
 ```
 
-## Caveats
+## Known bugs and other caveats
 
 ```{attention}
 There is a known bug for which `dts fleet discover` ran inside the workspace will not find physical robots on the same network. Nonetheless, all other functions (e.g., pinging, updating, controlling, etc.) are unaffected by this bug.  
@@ -223,7 +236,6 @@ To be able to run `dts code editor`, you need to install `mkcert` on your host s
 2. Run `mkcert -install` (to install the local CA in your system).
 
 ````
-
 
 ````{tab-item} Windows
 

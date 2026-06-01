@@ -40,13 +40,15 @@ This manual guides users through the `ente` release of Duckietown. For documenta
 
 Read the [FAQ and Troubleshooting](how-to-get-help) section to find out how to get support in Duckietown.
 
+(how-to-contribute)=
 ## How to contribute
 
-Read the [](book-devmanual-intro) section. 
+We welcome contributions! 
+
+Read the [](book-devmanual-intro) section to learn how to contribute to the Duckietown code base and/or to this book.
 
 (book-dt-manual-toc)=
 ## Table of Contents
-
 
 ```{tableofcontents}
 ```

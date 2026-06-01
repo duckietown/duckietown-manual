@@ -14,10 +14,14 @@ This chapter describes how to install software needed to work with Duckietown.
 * A [Docker Hub account](setup-account-docker).
 * A [Duckietown account](setup-account-duckietown-hub).
 * An [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
-* An Internet connection.
+* An internet connection.
 * Approximately 30 minutes.
 ---
-A computer set up to use Duckietown and interact with Duckiebots.
+A computer set up to use all Duckietown features and interact with Duckietown robots.
+```
+
+```{attention}
+If you are operating within a Duckietown Workspace, you can generally **skip all installation instructions** in this section, but will still have to **do all the configuration steps**.
 ```
 
 <!--
