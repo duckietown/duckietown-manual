@@ -63,9 +63,9 @@ For example:
 * ❌ `Whatabot!`
 ```
 
-* `--type` is what kind of robot you are flashing. Types are `duckiebot` (default), `watchtower`, `traffic_light`.
+* `--type` is what kind of robot you are flashing. Types are `duckiebot` (default), `duckiedrone`, `watchtower`, and `traffic_light`.
 
-* `--configuration` is the model of your robot. This is associated with `--type` option. Supported options for `duckiebot` in `ente` are `DB21J`, `DD24`. Other legacy and experimental images exist, such as `DBR4`, `DB21M`, `DB19`, or `DB18`. 
+* `--configuration` is the model of your robot. This is associated with `--type` option. Supported options for `duckiebot` in `ente` is `DB21J`, for `duckiedrone` is `DD24`. Other legacy and experimental images exist, such as `DB26` (for Jetson Orin Nano Super), `DBR4` (Raspberry Pi 4), `DB21M` (Jetson Nano 2GB developer Kit), `DB19` (Raspberry Pi 3B+), or `DB18` (Raspberry Pi 3B). 
 
 ```{attention}
 * If you have a Duckiebot with a **4GB** Jetson Nano - the model is **DB21J**

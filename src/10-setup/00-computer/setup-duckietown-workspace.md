@@ -1,5 +1,5 @@
 ```{seo}
-:description: Step-by-step instructions and troubleshooting tips for running a fully fledged Duckietown environment in a development container, enabling smooth operations on macOS (including M-chips) and Windows.
+:description: Step by step instructions and troubleshooting tips for running a fully fledged Duckietown environment in a development container, enabling smooth operations on macOS (including M-chips) and Windows.
 :keywords: duckietown setup, duckietown dev Container, Duckietown Workspaces, duckietown macOS, duckietown windows
 ```
 
@@ -169,52 +169,109 @@ To create a new local integrated terminal (outside the Dev Container), open the 
 If you are using a Duckietown Workspace, Duckietown Viewer apps and Duckiematrix renderer-only commands such as `dts matrix run` must be run from a local integrated terminal outside the Dev Container. Commands such as `dts matrix run --standalone` start both the Engine and the Renderer in the same environment. Browser-based variants can be run inside or outside the Dev Container.
 ```
 
-## Setting up the Duckietown Shell
+## Setting up the Duckietown Shell on the host machine
 
-The Duckietown Shell is pre-installed in the workspace. To initialize it with your user credentials, go through the [Duckietown Shell first boot setup](dt-account-set-token) inside the Dev Container.
+The Duckietown Shell is pre-installed in the workspace, so there is no need to re-install it. It is necessary though to configure it with your user credentials, which can be done by following the [Duckietown Shell first boot setup](dt-account-set-token) instructions inside the workspace.
 
 ```{tip}
-Some Duckietown robot apps, such as the image viewer or keyboard controller, can be visualized natively on the host machine instead of inside a noVNC desktop, resulting in a better experience. To enable this, set up the Duckietown Shell on the host machine as well. Outside the Dev Container [install Python 3.10/3.11/3.12](https://www.python.org/downloads/) and then follow [the `dts` installation instructions](setup-dts).
+Some Duckietown robot apps, such as the image viewer or keyboard controller, can be visualized natively on the host machine instead of inside a noVNC desktop, resulting in a better experience. To enable this, set up the Duckietown Shell on the host machine as well. 
 ```
+
+(dts-install-host-machine)=
+### Installing the Duckietown Shell on the host machine
+
+:::::{tab-set}
+
+::::{tab-item} MacOS
+
+On your host machine, open a terminal and install [Brew](https://brew.sh/) if you have not done so already:
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+and proceed to install Python: 
+
+```shell
+brew install python@3.12
+```
+
+```{note}
+Compatible versions of Python are 3.10/3.11/3.12.
+```
+
+Confirm the installation was successful: 
+
+````{testexpect}
+Run:
+
+```shell
+/opt/homebrew/bin/python3.12 --version
+---
+Python 3.12.13
+````
+
+Before installing `dts`, remove any previously failed pipx attempts:
+
+    pipx uninstall duckietown-shell
+
+Then (re)install the Duckietown Shell using Python 3.12 explicitly:
+
+    pipx install --python /opt/homebrew/bin/python3.12 duckietown-shell
+
+And finally refresh the shell path with:
+
+    pipx ensurepath
+
+and 
+
+    exec zsh
+
+To confirm the installation was successful:
+
+````{testexpect}
+Run:
+
+```shell
+dts
+---
+```bash
+username@computername ~ % dts
+               ____  _   _  ____ _  _____ _____ _____ _____        ___   _     ____  _   _ _____ _     _
+              |  _ \| | | |/ ___| |/ /_ _| ____|_   _/ _ \ \      / / \ | |   / ___|| | | | ____| |   | |
+              | | | | | | | |   | ' / | ||  _|   | || | | \ \ /\ / /|  \| |   \___ \| |_| |  _| | |   | |
+              | |_| | |_| | |___| . \ | || |___  | || |_| |\ V  V / | |\  |    ___) |  _  | |___| |___| |___
+              |____/ \___/ \____|_|\_\___|_____| |_| \___/  \_/\_/  |_| \_|   |____/|_| |_|_____|_____|_____|
+              _______________________________________________________________________________________________
+              First Setup - Welcome!                                                                  v6.2.26
+
++-------------------------------------------------------------------------------------------------------------------------+
+2026-06-01 15:08:11 computername.local shell[32591] INFO Installing bash-completion script...
+2026-06-01 15:08:11 computername.local shell[32591] INFO Bash-completion script successfully installed
+
+You need to choose the distribution you want to work with.
+? Choose a distribution: 
+>> ente
+daffy  
+```
+````
+
+```{note}
+Host machine `dts` installations are not fully functional, but useful in specific circumstances. Continue using the Duckietown Shell inside your VS Code Workspace as default Duckietown Shell, and refer to the host machine `dts` only when instructed to do so. 
+```
+
+:::: 
+
+::::{tab-item} Windows
+
+To set up the Duckietown Shell on the host machine, [install Python 3.10/3.11/3.12](https://www.python.org/downloads/windows/) and then follow the [Duckietown Shell setup instructions](setup-dts).
+
+::::
+
+:::::
 
 ```{attention}
 If a popup asking you to input your credentials appears, you should do so and then click `Always Allow`. 
-```
-
-(devcontainer-running-matrix-renderer)=
-## Running the Duckiematrix
-
-The procedure for running the Duckiematrix will be slightly different in this workflow. In short, you
-will run the `Engine` and `Renderer` inside and outside the Dev Container, respectively.
-
-To start the `Engine`, run the following command inside the Dev Container:
-
-```shell
-dts matrix engine run --sandbox --verbose
-```
-
-```{note}
-If you are using the Duckiematrix in the context of an LX, [launch the engine with dts code instead](caveat-devcontainer-lx).
-```
-
-To start the `Renderer` and connect it to the `Engine` running inside the Dev Container, run the following command outside the Dev Container:
-
-```shell
-dts matrix run
-```
-
-```{note}
-To run the Linux version of the Duckiematrix on Windows, add `--os-family linux` to the above command.
-```
-
-To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag to the above command or run the following command inside the Dev Container:
-
-```shell
-dts matrix run --standalone --sandbox --verbose --browser
-```
-
-```{note}
-For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
 ```
 
 ## Known bugs and other caveats
