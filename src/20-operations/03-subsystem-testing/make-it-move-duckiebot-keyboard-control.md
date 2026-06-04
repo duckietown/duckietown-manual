@@ -4,39 +4,66 @@
 ```
 
 ```{needget}
-- A correctly assembled Duckiebot: [](db-testing-hw-components)
+- A correctly assembled, powered on, Duckiebot: [](db-testing-hw-components)
+- You can ping the Duckiebot with `ping ROBOTNAME.local`. If not: [](setup-duckiebot-network)
 ---
-- How to move a manually control a Duckiebot's movement through the "Keyboard Controller"
+- How to manually control a Duckiebot's movement through the "Keyboard Controller"
 ```
 
 (ops-db-subsys-make-it-move)=
 # Keyboard Control (Make it Move!)
-
-This chapter describes the `Keyboard Controller`.
-
-## Introduction
 
 An easy way to make your Duckiebot move is by using the `Keyboard Controller`.
 
 ```{figure} ../../_images/software_tools/keyboard_controller/keyboard_controller.png
 :name: keyboard_controller
 :align: center
-:width: 60%
-:alt: the duckietown keyboard controller is a software tool that enables manual control of Duckiebots
+:width: 70%
+:alt: the Duckietown keyboard controller is a tool that enables manual keyboard control of Duckiebots
 
 The Keyboard Controller enables manual control of the Duckiebot.
 ```
 
-To open the `Keyboard Controller`, run:
+:::::{tab-set}
+
+::::{tab-item} Ubuntu
+
+To open the `Keyboard Controller`, first make sure you can successfully ping the Duckiebot with `ping ROBOT_NAME.local`, then run:
 
 ```shell
-dts duckiebot keyboard_control DUCKIEBOT_NAME
+dts duckiebot keyboard_control ROBOT_NAME
 ```
 
+where `ROBOT_NAME` is the hostname of either a physical or virtual Duckiebot.  
+
+::::
+
+::::{tab-item} Duckietown Workspace
+
+There are two ways to open the Keyboard Controller: 
+
+1. If you have installed `dts` on the host machine: open a terminal on your host machine and run:
+
+    dts duckiebot keyboard_control ROBOT_NAME
+
+```{note}
+The first time this command is ran, a popup window will appear asking for permissions. Insert your password and "(Always) Allow" to continue. 
+```
+
+2. Alternatively, inside the Workspace terminal run:
+
+    dts duckiebot keyboard_control ROBOT_NAME --browser
+
+where `ROBOT_NAME` is the hostname of either a physical or virtual Duckiebot.  
+
+::::
+:::::
+
+<!--
 ```{note}
 {{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "keyboard_control") }}
 ```
-
+-->
 Note the keys in the table below.
 
 ```{list-table}
@@ -114,4 +141,10 @@ The exact name of the container will depend on your Duckiebot's version. If you 
 My Duckiebot drives backwards when I command it to drive forward.
 ---
 Swap the motor cable connections on the HUT.
+```
+
+```{trouble}
+My Duckiebot doesn't go really straight when I command it to. At least not for long.
+---
+Perform the wheel calibration procedure: [](db-wheels-calibration).
 ```
