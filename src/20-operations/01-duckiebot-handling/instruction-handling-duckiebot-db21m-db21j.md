@@ -2,7 +2,7 @@
 # Overview (`DB21`)
 
 ```{seo}
-:description: A compendium of common operations for interacting with a Duckiebot.
+:description: A summary of common operations for interacting with a Duckiebot.
 :keywords: Duckietown, Duckiebot, Duckiebot handling, ssh, moving a Duckiebot, Duckiebot image streaming, Duckiebot LED control, Duckiebot HUT update, Duckiebot battery update, Duckiebot remote control, Duckiebot software update
 ```
 
@@ -72,16 +72,18 @@ battery:
 
 ## How to update the HUT
 
+(Perform this action only once, after first assembling a Duckiebot)
+
 To update the HUT, follow [](reflash-microcontroller).
 
-## How to connect to your Duckiebot over the Internet
+## How to connect to your Duckiebot over the internet
 
 To connect to your Duckiebot over the Internet, follow [](protip-zerotier-remote-duckiebot-control).
 
 ## Troubleshooting
 
 ```{trouble}
-I have pressed the top button down as far as it will go for `5 s` but it does not turn my Duckiebot off.
+I have pressed the top button down as far as it will go for `6 s` but it does not turn my Duckiebot off.
 ---
 Run:
 
@@ -99,5 +101,5 @@ Update the HUT.
 ```{trouble}
 My Duckiebot is stuck in a boot cycle and the Duckiebattery has a very low charge.
 ---
-Unplug the cables connected to the `5VRASPI` and `5VEXT` ports on the HUT, and allow the Duckiebattery to charge for at least `5 h` before plugging them back in.
+Unplug the cables connected to the `5VRASPI` and `5VEXT` ports on the HUT, and allow the Duckiebattery to charge for at least `5 h` before plugging them back in. You can connect a (second, eventually) charger directly to the `5VRASPI` port to continue using your Duckiebot in the meantime. 
 ```

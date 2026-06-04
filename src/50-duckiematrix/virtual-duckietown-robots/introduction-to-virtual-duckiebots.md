@@ -153,20 +153,34 @@ dts duckiebot virtual destroy ROBOT_NAME
 ## Attaching Virtual Robots
 
 For a Duckietown robot to act and sense inside the Duckiematrix, it needs a proxy inside the Duckiematrix (a Duckiematrix entity) to *attach* to.
+
 A Duckietown robot outside the Duckiematrix is said to be *attached* to a Duckiematrix entity when all of its sensors and actuators are linked to their virtual counterparts inside the Duckiematrix.
 
-To attach the Duckietown robot `ROBOT_NAME` to the Duckiematrix entity `ENTITY_NAME` (e.g., `map_0/vehicle_0`), run the following command, where `ENGINE_HOSTNAME` is the optional hostname (or IP address) of the `Engine`:
+To attach the Duckietown robot `ROBOT_NAME` to the [Duckiematrix entity](introduction-duckiematrix-connect-db-to-remote-engine) `ENTITY_NAME` (e.g., `map_0/vehicle_0` by default), run the following command, where `ENGINE_HOSTNAME` is the optional hostname (or IP address) of the `Engine`:
 
 ```shell
 dts matrix attach [--engine ENGINE_HOSTNAME] ROBOT_NAME ENTITY_NAME
 ```
 
-```{note}
-This applies for both physical and virtual Duckietown robots.
+The `ENGINE_HOSTNAME` will be shown in the terminal after starting the engine. An example could be therefore:
+
+    dts matrix attach vargo -e 192.168.139.2 map_0/vehicle_0
+
+when after running the engine the terminal showed:
+
+```bash
+[...]
+YYYY-MM-DD hh:mm:ss orbstack duckiematrix[43] INFO The Engine can be reached at any of these IP addresses:
+
+         -  127.0.0.1           (local machine only)
+         -  0.250.250.65      
+         -  192.168.139.2       (local network only)
+         -  192.168.215.1       (local network only)
+[...]
 ```
 
-```{tip}
-Use the `--dreamwalk` option to enable the connection of physical Duckiebots to the Duckiematrix (i.e., commands will be sent to their physical actuators as well as their Duckiematrix counterparts).
+```{note}
+This applies for both physical and virtual Duckietown robots. Use the `--dreamwalk` option to enable the connection of physical Duckiebots to the Duckiematrix (i.e., commands will be sent to their physical actuators as well as their Duckiematrix counterparts).
 ```
 
 ```{attention}
