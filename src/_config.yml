@@ -36,8 +36,13 @@ html:
   extra_navbar: ""
 
 sphinx:
-  extra_extensions: []
+  extra_extensions:
+#    - sphinx_llms_txt (fails with Sphinx 4.5.0 - going the manual route)
+    - sphinx_sitemap
   config:
+    html_baseurl: "https://docs.duckietown.com/ente/duckietown-manual/"
+    html_extra_path:
+      - robots.txt
     myst_substitutions:
       dt_workspace_note_prefix: >-
         If you are using a [Duckietown Workspace](setup-devcontainer),
