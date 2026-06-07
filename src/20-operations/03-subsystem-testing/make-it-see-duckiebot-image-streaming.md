@@ -11,10 +11,10 @@ This section describes how to see access the Duckiebot's camera stream. Three me
 
 ```{needget}
 - A correctly assembled Duckiebot: [](db-testing-hw-components)
-- (for most methods) A functional DTS installation: [](setup-dts)
+- (for most methods) A functional `dts` installation: [](setup-dts)
+- You can ping the Duckiebot with `ping ROBOTNAME.local`. If not: [](setup-duckiebot-network)
 ---
-- Seeing images as the Duckiebot sees them
-- Knowledge on the Duckietown image viewer
+- Visualizing Duckiebot's camera image stream in different ways
 ```
 
 (ops-db-subsys-make-it-see-image-viewer)=

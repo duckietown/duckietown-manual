@@ -5,9 +5,10 @@
 
 ```{needget}
 - A correctly assembled, powered on, Duckiebot: [](db-testing-hw-components)
+- (for most methods) A functional `dts` installation: [](setup-dts)
 - You can ping the Duckiebot with `ping ROBOTNAME.local`. If not: [](setup-duckiebot-network)
 ---
-- How to manually control a Duckiebot's movement through the "Keyboard Controller"
+- Keyboard control of a Duckiebot
 ```
 
 (ops-db-subsys-make-it-move)=

@@ -67,6 +67,9 @@ parts:
                     -   file: 20-operations/04-calibrations/duckiebot-calibrations-intro # now calibrate
                         sections:
                           -   file: 20-operations/04-calibrations/duckiebot-camera-calibration
+                              sections: 
+                              -     file: 20-operations/04-calibrations/duckiebot-intrinsics-camera-calibration
+                              -     file: 20-operations/04-calibrations/duckiebot-extrinsics-camera-calibration
                           -   file: 20-operations/04-calibrations/duckiebot-motor-odometry-calibration
 
             -   file: 21-testing-debugging/02-components-testing/index # components testing - check if duckiebot is assembled correctly

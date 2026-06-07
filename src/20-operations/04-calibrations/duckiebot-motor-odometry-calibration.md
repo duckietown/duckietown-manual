@@ -2,7 +2,7 @@
 # Wheel Calibration
 
 ```{seo}
-:description: How to perform the kinematics calibration procedure for a Duckiebot.
+:description: How to perform the wheel calibration procedure for a Duckiebot.
 :keywords: Duckietown, Duckiebot, kinematics calibration, odometry, wheel calibration, odometry calibration, differential drive robot calibration
 ```
 
@@ -30,57 +30,14 @@ To perform the kinematics calibration procedure for your Duckiebot is by using t
 The Duckiebot keyboard controller is useful to easily open loop control a connected Duckiebot, as well as for adjusting the wheel calibration parameters.
 ```
 
-To open the `Keyboard Controller`, run:
+To open the `Keyboard Controller`, follow these instructions: [](ops-db-subsys-make-it-move).
 
-```shell
-dts duckiebot keyboard_control DUCKIEBOT_NAME
-```
 
-```{note}
-{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "keyboard_control") }}
-```
+## Wheel calibration procedure
 
-Note the keys in the table below.
+To perform the wheel calibration procedure:
 
-```{list-table}
-:header-rows: 1
-:name: table:keyboard-controller-commands
-
-* - Key
-  - Function
-* - <kbd>W</kbd>
-  - Drive forwards
-* - <kbd>S</kbd>
-  - Drive backwards
-* - <kbd>A</kbd>
-  - Turn left
-* - <kbd>D</kbd>
-  - Turn right
-* - <kbd>E</kbd>
-  - Toggle the `Emergency Stop` switch
-* - <kbd>F</kbd>
-  - Toggle the `Autopilot` switch
-* - <kbd>X</kbd>
-  - Increase the `Gain`
-* - <kbd>Z</kbd>
-  - Decrease the `Gain`
-* - <kbd>V</kbd>
-  - Increase the `Trim`
-* - <kbd>C</kbd>
-  - Decrease the `Trim`
-* - <kbd>Space</kbd>
-  - Save the `Gain` and `Trim`
-* - <kbd>R</kbd>
-  - Refresh the window
-* - <kbd>T</kbd>
-  - Open the `Debug Console`
-```
-
-## Procedure
-
-To perform the kinematics calibration procedure:
-
-1. Create a slightly greater than `2 m` long straight line on your floor using tape (or 4 straight tiles, each one is `60 cm` long)
+1. Create a slightly longer than `2 m` straight line on your floor using tape (or use 4 straight Duckietown tiles, each one is `60 cm` long)
 2. Place your Duckiebot at one end of the line
 3. Note your Duckiebot's position
 4. Face your Duckiebot towards the other end of the line
