@@ -8,29 +8,29 @@
 
 ```{needget}
 - A correctly assembled Duckiebot: [](db-testing-hw-components)
-- (for most methods) A functional DTS installation: [](setup-dts)
+- (for most methods) A functional `dts` installation: [](setup-dts)
+- You can ping the Duckiebot with `ping ROBOTNAME.local`. If not: [](setup-duckiebot-network)
 ---
-- Seeing images as the Duckiebot sees them
-- Knowledge on the Duckietown image viewer
+- Control the Duckiebot's LEDs intensity and color
 ```
 
-Duckiebots have four LEDs, positioned similarly to the head and tail lights on a car. This section describes how control the LEDs on your Duckiebot through the `LED Controller`.
+Duckiebots have four LEDs, positioned similarly to the head and tail lights on a car. This section describes how to control the LEDs on your Duckiebot through the `LED Controller`.
 
 ```{figure} ../../_images/software_tools/led_controller/leds_layout.png
 A Duckiebot with the LEDs shining white (left) and a diagram with arrows indicating the front and back LEDs (right).
 ```
 
-## Introduction to the use of LEDs on Duckiebots
+## Using LEDs on Duckiebots
 
 LEDs are more than just lights. As proper actuators on a Duckiebot, they can be used for many purposes, including but not limited to:
 
-* Indicating what mode or mission the Duckiebot is running.
-* Communicating state changes in the controller.
-* Signaling upcoming turns or other navigational plans.
-* Expressing character and personality.
+* Indicating what mode or mission the Duckiebot is running
+* Communicating state changes in the controller
+* Signaling upcoming turns or other navigational plans
+* Expressing character and personality
 * Lighting the driving environment.
 
-An easy way to control your Duckiebot's LEDs is by using the `LED Controller`.
+A manual way to control your Duckiebot's LEDs is by using the `LED Controller`.
 
 ```{figure} ../../_images/software_tools/led_controller/led_controller.png
 :name: led_controller
@@ -40,16 +40,45 @@ An easy way to control your Duckiebot's LEDs is by using the `LED Controller`.
 
 The `LED Controller` interface is a simple way for controlling color and intensity of the Duckiebot's LEDs.
 ```
+:::::{tab-set}
+::::{tab-item} Ubuntu
 
-To open the `LED Controller`, run:
+To open the `LED Controller`, first make sure you can successfully ping the Duckiebot with `ping ROBOT_NAME.local`, then run:
 
 ```shell
-dts duckiebot led_control DUCKIEBOT_NAME
+dts duckiebot led_control ROBOT_NAME
 ```
 
+where `ROBOT_NAME` is the hostname of either a physical or virtual Duckiebot.  
+
+::::
+
+::::{tab-item} Duckietown Workspace
+
+There are two ways to open the `LED Controller`: 
+
+1. If you have installed `dts` on the host machine: open a terminal on your host machine and run:
+
+    dts duckiebot led_control ROBOT_NAME
+
+```{note}
+The first time a robot app is ran, a popup window may appear asking for permissions. Insert your password and "(Always) Allow" to continue. 
+```
+
+2. Alternatively, inside the Workspace terminal run:
+
+    dts duckiebot led_control ROBOT_NAME --browser
+
+where `ROBOT_NAME` is the hostname of either a physical or virtual Duckiebot.  
+
+::::
+:::::
+
+<!--
 ```{note}
 {{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "led_control") }}
 ```
+-->
 
 To control your Duckiebot's LEDs, use the buttons and sliders to change their colors and intensities, respectively.
 

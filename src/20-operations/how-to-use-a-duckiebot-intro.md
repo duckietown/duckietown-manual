@@ -12,14 +12,9 @@
 (ops-db-how-to-use-a-duckiebot)=
 # Using Your Duckiebot
 
-This section has steps for basic usage of yourDuckiebot.
-This includes its basic functionalities, how keep it up to date,
-how to test each hardware component to validate the assembly as well as
-performing basic subsystem level testing (moving, seeing, shining) and sensor
-and actuator calibration for more advanced behaviors.
+This section introduces fundamental utilization procedures for a Duckiebot, including how keep its software up to date, how to test each hardware component to validate the assembly, how to perform subsystem level testing (moving, seeing, shining), and how to calibrate sensors and actuators.
 
-At the end of these steps you should have a fully functional calibrated Duckiebot
-that you can use for more advanced demos, learning experiences, or development.
+Following these steps will result in a fully calibrated Duckiebot, ready to be used for more advanced demos, learning experiences, or development.
 
 ```{tableofcontents}
 ```
