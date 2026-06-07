@@ -102,6 +102,10 @@ To perform the intrinsic camera calibration procedure for your Duckiebot, run:
 dts duckiebot calibrate_intrinsics DUCKIEBOT_NAME
 ```
 
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "calibrate_intrinsics") }}
+```
+
 ```{figure} ../../_images/calibrations/camera/intrinsics_calibrator_1.png
 :width: 70%
 :align: center
@@ -208,6 +212,10 @@ To open the `Extrinsics Calibrator`, run:
 dts duckiebot calibrate_extrinsics DUCKIEBOT_NAME
 ```
 
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "calibrate_extrinsics") }}
+```
+
 Note the keys in the table below.
 
 ```{list-table}
@@ -298,41 +306,3 @@ I do not see what my Duckiebot sees after refreshing the window and following []
 Contact support.
 ```
 -->
-
-(devcontainer-vbot-camera-calibration)=
-## (Beta) Running camera calibrations for a virtual Duckiebot in Duckietown Workspaces
-
-Once a virtual Duckiebot is running, it can be treated as a physical Duckiebot when it comes to running other Duckietown commands, e.g., the calibration ones detailed above. 
-
-To run the camera calibrations in [Duckietown Workspaces](setup-devcontainer) on virtual Duckiebots, follow the instructions below.
-
-
-`````{tab-set}
-
-````{tab-item} macOS
-
-Legend:
-
-📦: commands in workspace terminal 
-🚢: on host machine; 
-🌐: in the Duckiematrix
-
-1. 📦 `dts duckiebot virtual start robotname`
-2. 📦 `dts matrix engine run --sandbox --verbose`
-3. 📦 `dts matrix attach robotname -e [engine 192.xx address] map_0/vehicle_0` 
-4. 🚢 open browser and go to http://localhost:6080/
-5. 🚢 open terminal: `cd /Applications`
-6. 🚢 `open duckiematrix.app --args -e localhost --token "DT2_TOKEN"`
-7. 📦 `dts duckiebot calibrate_intrinsics robotname` 
-8. 🌐 Select window and press <kbd>ENTER</kbd> to activate keyboard commands. Use arrows to move to the Duckiebot, <kbd>E</kbd> to board, and then drive to the laboratory/garage. Press <kbd>E</kbd> to enter the garage. Once parked, Press <kbd>ESC</kbd> to gain back mouse control, and select "Instrinsics tool"
-9. 🚢 You should see what the robot sees in the image viewer in the browser. You are ready to perform the calibration by moving the calibration matrix in the Duckiematrix.
-
-
-````
-
-````{tab-item} Windows
-
-(Work in progess)
-
-````
-`````

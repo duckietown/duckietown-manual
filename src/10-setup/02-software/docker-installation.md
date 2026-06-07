@@ -14,7 +14,12 @@ Completed [](setup-sw-dependencies-installation).
 A computer with Docker installed and correctly set up.
 ```
 
+(setup-sw-docker-ubuntu-uninstall)=
 ## Remove previous installations
+
+:::::{tab-set}
+
+::::{tab-item} Ubuntu
 
 If you have prior installations of Docker, start by cleaning up. To remove older versions (open a terminal and) run:
 
@@ -22,7 +27,22 @@ If you have prior installations of Docker, start by cleaning up. To remove older
 sudo apt remove containerd docker docker-engine docker.io runc
 ```
 
+::::
+
+::::{tab-item} Duckietown Workspace
+
+Workspaces have Docker preinstalled. Skip all installation steps, but do the configuration ones. 
+
+::::
+
+:::::
+
+(setup-sw-docker-ubuntu-install)=
 ## Docker Engine and Docker Compose installation
+
+:::::{tab-set}
+
+::::{tab-item} Ubuntu
 
 To add the official GPG (GNU Privacy Guard) key and set up the repository, run:
 
@@ -46,11 +66,30 @@ sudo apt install containerd.io docker-buildx-plugin docker-ce=5:28.* docker-ce-c
 This installs Docker version 28, which is the latest version before 29. If you need a different version, you can list available versions with `apt-cache madison docker-ce`.
 ```
 
+::::
+
+::::{tab-item} Duckietown Workspace
+
+Docker is pre-installed and set up in Duckietown Workspaces, so there is no need to install and set it up again. 
+
+To verify the installation is working correctly, run the [Docker checkpoints](docker-checkpoint) in this page. 
+
+If the checkpoint is unsuccessful, follow the Ubuntu tab [Docker installation instructions](setup-sw-docker-ubuntu-uninstall).
+
+::::
+
+:::::
+
+(docker-setup)=
 ## Docker Setup
 
 ```{warning}
 **Do not skip this part**, it is a common source of troubles.
 ```
+
+:::::{tab-set}
+
+::::{tab-item} Ubuntu
 
 To prevent permission/access errors, add `docker` to your user group:
 
@@ -59,8 +98,19 @@ sudo adduser `whoami` docker
 sudo reboot # this will reboot your device
 ```
 
+::::
+
+::::{tab-item} Duckietown Workspace
+
+This step is unnecessary inside Workspaces.
+
+::::
+
+:::::
+
+
 (dt-account-dockerhub-make-access-token)=
-### Generate an access token
+### Logging in Docker Hub
 
 We will need to provide login credentials for Docker Hub to the Docker client:
 
@@ -74,7 +124,7 @@ We will need to provide login credentials for Docker Hub to the Docker client:
 
     Where `DOCKERHUB_USERNAME` is your Docker Hub username, created during [](setup-account-docker). You will then be prompted for your password, paste the access token we created earlier, and press <kbd>Enter</kbd>.
 
-
+(docker-checkpoint)=
 ## Checkpoint
 
 To make sure the installation was completed successfully:
@@ -124,11 +174,5 @@ Share images, automate workflows, and more with a free Docker ID:
 
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
-```
-
-
-```{seealso}
-If you are unfamiliar with Docker, we strongly recommend reading the following reference page to gain a working
-understanding of [this page](sec:developer_basics_docker)
 ```
 

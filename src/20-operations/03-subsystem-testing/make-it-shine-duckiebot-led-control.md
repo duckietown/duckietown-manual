@@ -47,6 +47,10 @@ To open the `LED Controller`, run:
 dts duckiebot led_control DUCKIEBOT_NAME
 ```
 
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "led_control") }}
+```
+
 To control your Duckiebot's LEDs, use the buttons and sliders to change their colors and intensities, respectively.
 
 Note the keys in the table below.

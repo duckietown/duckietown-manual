@@ -36,7 +36,7 @@ After this learning experience, you will:
 ```
 
 ```{warning}
-If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+{{ dt_workspace_matrix_lx_warning.format(dt_workspace_note_prefix) }}
 ```
 
 ## About these learning activities
@@ -216,7 +216,9 @@ Now that your virtual robot is ready, you can start the Duckiematrix. From this 
 dts code start_matrix [--no-renderer]
 ```
 
-Where the `--no-renderer` argument is used only if running this LX in a Duckietown Workspace.
+```{note}
+{{ "{} keep the `--no-renderer` flag and launch the Duckiematrix renderer from a local terminal outside the dev container with `dts matrix run`.".format(dt_workspace_note_prefix) }}
+```
 
 You will see the Unity-based Duckiematrix simulator start up. The startup screen will look like:
 
@@ -325,7 +327,7 @@ of your Duckiebot as it moves.
 ## Troubleshooting
 
 ```{trouble}
-When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/workspaces/dt-env-developer/lx'`
+When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/path/to/lx'`
 ---
 Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-ekf-localization/`)
 ```

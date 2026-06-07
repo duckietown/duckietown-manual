@@ -1,53 +1,80 @@
-(dtmatrix-virtual-duckiebots)=
-# Virtual Duckiebots
-
 ```{seo}
-:description: Virtual Duckietown robots.
-:keywords: Duckietown, Duckiematrix, virtual, robot
+:description: Learn about virtual Duckietown robots (Duckiebots, Duckiedrones, Traffic Lights, etc.); digital twins of their physical counterparts. Duckietown virtual robots can be used in the Duckiematrix virtual environment to rapidly prototype autonomous agents. 
+:keywords: Duckietown, Duckiematrix, virtual robot, digital twin
 ```
+
 ```{needget}
-- Successful Duckiematrix installation: [](duckiematrix-how-to-start)
+- Successful Duckiematrix installation: [](the-duckiematrix-first-steps)
 ---
-- Knowledge on virtual Duckietown robots.
+- Knowledge about virtual Duckietown robots and how to interact with them.
 ```
+
+(dtmatrix-virtual-duckiebots)=
+# Virtual Duckietown robots
+
+Virtual Duckietown robots (Duckiebot, Duckiedrone, Traffic Lights, Watchtowers) are "digital twins" of their physical counterparts, and are designed to operate within the Duckiematrix virtual environment.
+
+In other words, virtual Duckietown robots enable running the full software stack of robots on a local machine, allowing for the full simulation of any aspect of that Duckietown robot, and streamlining integration tests.
+
+Once a virtual Duckietown robot is running, it will behave in the same way as its physical equivalent, including how it responds to `dts` commands.
 
 (intermediate-virtual-duckietown-robots-introduction)=
-## Introduction
+## Getting started with virtual Duckietown robots
 
-Virtual Duckietown robots allow for a Duckietown robot's full software stack to be run on a local machine in its own
-Docker environment, allowing for the full simulation of any aspect of that Duckietown robot, enabling integration tests.
+The typical virtual robot workflow is:
 
-Once a virtual Duckietown robot is running, it will behave in accordance with its physical equivalent,
-including how it responds to `dts` commands.
+1. `Create` a virtual robot
+2. `List`: check the existance and status of all your virtual robots, in particular if previous creation was successful
+3. `Start`: turn a virtual robot on
+4. `Connect` to your virtual robot, similarly to ssh'ing into a physical robot
+5. `Attach`: link a virtual robot to a running Duckiematrix engine entity 
+6. `Stop`: turn a virtual robot off when done with your session
+7. `Destroy`: when needed, permanently delete a virtual robot 
 
+<!--
 The most common thing you will likely want to do is [create](intermediate-virtual-duckietown-robots-dts-commands-create)
-a virtual robot and then [start](intermediate-virtual-duckietown-robots-dts-commands-start) it. Once it is up and running (you
-see it when you run the command `dts fleet discover` just like any other Duckiebot), you probably will want to
-[attach](introduction-attaching-a-duckietown-robot-to-a-duckiematrix-entity-introduction) it to an entity in the Duckiematrix. Once this attachment is complete,
-all the data that is collected by the entity in the Duckiematrix will be fed to the virtual robot and, conversely, any
-control actions that you take with your virtual Duckiebot will be executed on the entity in the Duckiematrix. See
-[below](intermediate-virtual-duckietown-robots-drivers-introduction) for
+a virtual robot and then [start](intermediate-virtual-duckietown-robots-dts-commands-start) it. Once it is up and running (you see it when you run the command `dts fleet discover` just like any other Duckiebot), you probably will want to
+[attach](introduction-attaching-a-duckietown-robot-to-a-duckiematrix-entity-introduction) it to an entity in the Duckiematrix. Once this attachment is complete, all the data that is collected by the entity in the Duckiematrix will be fed to the virtual robot and, conversely, any control actions that you take with your virtual Duckiebot will be executed on the entity in the Duckiematrix. See [below](intermediate-virtual-duckietown-robots-drivers-introduction) for
 a detailed description of the supported drivers that you can use to send or receive data.
+-->
 
+(dtmatrix-virtual-duckiebots-api)=
 ## The Virtual Robot `dts` API
 
-Like most things in Duckietown, the primary way to perform operations on virtual robots is through the Duckietown Shell (`dts`)
-
-The following is a list of operations you can perform:
+Like most things in Duckietown, the primary way to perform operations on virtual robots is through the Duckietown Shell (`dts`). The following is a list of operations you can perform:
 
 (intermediate-virtual-duckietown-robots-dts-commands-create)=
 ### Create
 
-To create the virtual Duckietown robot `ROBOT_NAME`, run the following command, where `TYPE` and `CONFIGURATION` are its type and configuration, respectively:
+To create a virtual Duckietown robot of type `TYPE`, configuration `CONFIGURATION`, and hostname `ROBOT_NAME`:
 
 ```shell
 dts duckiebot virtual create --type TYPE --configuration CONFIGURATION ROBOT_NAME
 ```
 
-for example, 
+for example: 
 
 ```shell
-dts duckiebot virtual create --type duckiebot --configuration DB21J myduckiebot
+dts duckiebot virtual create --type duckiebot --configuration DB21J vargo
+```
+
+This command will take several minutes to complete, and is analogous to the `dts init_sd_card` of physical robots. Learn about supported `TYPE` and `CONFIGURATION` there: [](initialize-sd-card-video).
+
+(intermediate-virtual-duckietown-robots-dts-commands-list)=
+### List
+
+To list the existing virtual Duckietown robots and their statuses, run:
+
+```shell
+dts duckiebot virtual list
+```
+
+After creating a virtual Duckiebot called `vargo`, for example, it would show:
+
+```bash
+      |   Type    | Model |    Status   
+----- | --------- | ----- | ------------
+vargo | duckiebot | DB21J |     Down    
 ```
 
 (intermediate-virtual-duckietown-robots-dts-commands-start)=
@@ -59,22 +86,40 @@ To start the virtual Duckietown robot `ROBOT_NAME`, run:
 dts duckiebot virtual start ROBOT_NAME
 ```
 
+for example:
+
+```shell
+dts duckiebot virtual start vargo
+```
+
+will "boot up" your virtual Duckiebot, similary to powering up a physical robot. At this point, for example, the virtual robot's [Dashboard](duckiebot-dashboard-setup) will be available at `http://ROBOT_NAME.local`. Running the `list` command again will show:
+
+```bash
+      |   Type    | Model |    Status   
+----- | --------- | ----- | ------------
+vargo | duckiebot | DB21J |   Running   
+```
+
 (intermediate-virtual-duckietown-robots-dts-commands-connect)=
 ### Connect
 
-To connect to the virtual Duckietown robot `ROBOT_NAME`, run:
+To "ssh" into the virtual Duckietown robot `ROBOT_NAME`, run:
 
 ```shell
 dts duckiebot virtual connect ROBOT_NAME
 ```
 
-(intermediate-virtual-duckietown-robots-dts-commands-list)=
-### List
-
-To list the existing virtual Duckietown robots and their statuses, run:
+for example: 
 
 ```shell
-dts duckiebot virtual list
+dts duckiebot virtual connect vargo
+```
+
+will result in:
+
+```bash
+root@vargo:/# ls
+bin  boot  code  data  dev  entrypoint.sh  etc  home  lib  media  mnt  opt  proc  root  run  sbin  secrets  srv  sys  tmp  triggers  usr  var
 ```
 
 (intermediate-virtual-duckietown-robots-dts-commands-restart)=
@@ -104,25 +149,38 @@ To destroy the virtual Duckietown robot `ROBOT_NAME` and remove all of its Docke
 dts duckiebot virtual destroy ROBOT_NAME
 ```
 
-
 (introduction-attaching-a-duckietown-robot-to-a-duckiematrix-entity-introduction)=
 ## Attaching Virtual Robots
 
 For a Duckietown robot to act and sense inside the Duckiematrix, it needs a proxy inside the Duckiematrix (a Duckiematrix entity) to *attach* to.
+
 A Duckietown robot outside the Duckiematrix is said to be *attached* to a Duckiematrix entity when all of its sensors and actuators are linked to their virtual counterparts inside the Duckiematrix.
 
-To attach the Duckietown robot `ROBOT_NAME` to the Duckiematrix entity `ENTITY_NAME` (e.g., `map_0/vehicle_0`), run the following command, where `ENGINE_HOSTNAME` is the optional hostname (or IP address) of the `Engine`:
+To attach the Duckietown robot `ROBOT_NAME` to the [Duckiematrix entity](introduction-duckiematrix-connect-db-to-remote-engine) `ENTITY_NAME` (e.g., `map_0/vehicle_0` by default), run the following command, where `ENGINE_HOSTNAME` is the optional hostname (or IP address) of the `Engine`:
 
 ```shell
 dts matrix attach [--engine ENGINE_HOSTNAME] ROBOT_NAME ENTITY_NAME
 ```
 
-```{note}
-This applies for both physical and virtual Duckietown robots.
+The `ENGINE_HOSTNAME` will be shown in the terminal after starting the engine. An example could be therefore:
+
+    dts matrix attach vargo -e 192.168.139.2 map_0/vehicle_0
+
+when after running the engine the terminal showed:
+
+```bash
+[...]
+YYYY-MM-DD hh:mm:ss orbstack duckiematrix[43] INFO The Engine can be reached at any of these IP addresses:
+
+         -  127.0.0.1           (local machine only)
+         -  0.250.250.65      
+         -  192.168.139.2       (local network only)
+         -  192.168.215.1       (local network only)
+[...]
 ```
 
-```{tip}
-Use the `--dreamwalk` option to enable dreamwalking for physical Duckiebots (i.e., commands will be sent to their physical actuators as well as their Duckiematrix counterparts).
+```{note}
+This applies for both physical and virtual Duckietown robots. Use the `--dreamwalk` option to enable the connection of physical Duckiebots to the Duckiematrix (i.e., commands will be sent to their physical actuators as well as their Duckiematrix counterparts).
 ```
 
 ```{attention}

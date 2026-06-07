@@ -1,4 +1,4 @@
-(setup-sw-dependencies-installation)=
+(setup-sw-dependencies)=
 # Software Dependencies
 
 ```{seo}
@@ -15,7 +15,12 @@ This section describes how to install the dependencies necessary to use Duckieto
 A computer with the dependencies necessary to interact with Duckietown.
 ```
 
+(setup-sw-dependencies-installation)=
 ## Dependencies Installation
+
+:::::{tab-set}
+
+::::{tab-item} Ubuntu
 
 Open a terminal and run, in order:
 
@@ -33,6 +38,17 @@ sudo apt install open-vm-tools
 ```
 ````
 
+::::
+
+::::{tab-item} Duckietown Workspace
+
+All necessary dependencies are pre-installed, so there is no need to install more at this stage. Proceed to the [checkpoint](setup-sw-dependencies-checkpoint) to make sure things are working nominally.
+
+::::
+
+:::::
+
+(setup-sw-dependencies-checkpoint)=
 ## Checkpoint
 
 ```{warning}

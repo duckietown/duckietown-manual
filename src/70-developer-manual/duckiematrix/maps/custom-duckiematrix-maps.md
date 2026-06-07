@@ -38,5 +38,9 @@ dts matrix run --standalone --map MAP
 ```
 
 ```{note}
+{{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
+```
+
+```{note}
 For any changes in the layers to appear in the `Renderer`, this command will need to be re-run.
 ```

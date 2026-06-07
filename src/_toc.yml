@@ -10,21 +10,24 @@ parts:
         chapters:
             -   file: 10-setup/setup-introduction
                 sections:
-                    -   file: 10-setup/00-computer/installing-ubuntu-on-your-computer
+                    -   file: 10-setup/00-computer/computer-setup
+                        sections:
+                          -   file: 10-setup/00-computer/setup-ubuntu
+                          -   file: 10-setup/00-computer/setup-duckietown-workspace
                     -   file: 10-setup/01-accounts/accounts-introduction
                         sections:
                           -   file: 10-setup/01-accounts/github-account
                           -   file: 10-setup/01-accounts/docker-account
                           -   file: 10-setup/01-accounts/duckietown-hub-account
                           -   file: 10-setup/01-accounts/duckietown-slack-account
-                          -   file: 10-setup/01-accounts/duckietown-stack-overflow-account
+                          -   file: 10-setup/01-accounts/duckietown-archives-account
                     -   file: 10-setup/02-software/sw-introduction
                         sections:
                             -   file: 10-setup/02-software/software-dependencies-installation
                             -   file: 10-setup/02-software/docker-installation
                             -   file: 10-setup/02-software/github-installation
                             -   file: 10-setup/02-software/duckietown-shell-dts-installation
-                            -   file: 10-setup/setup-devcontainer.md
+#                            -   file: 10-setup/02-software/setup-duckietown-workspace
 
                     -   file: 50-duckiematrix/introduction-to-the-duckiematrix-virtual-environment
                         sections:

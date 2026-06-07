@@ -44,7 +44,7 @@ After this learning experience, you will:
 ```
 
 ```{warning}
-If using a [Duckietown Workspace](setup-devcontainer) instead of a native Ubuntu setup, some steps vary slightly. Read this before proceeding: [](caveat-devcontainer-lx)
+{{ dt_workspace_matrix_lx_warning.format(dt_workspace_note_prefix) }}
 ```
 
 ## About these learning activities
@@ -223,6 +223,10 @@ Now that your virtual robot is ready, you can start the Duckiematrix. From this 
 dts code start_matrix
 ```
 
+```{note}
+{{ dt_workspace_start_matrix_split_note.format(dt_workspace_note_prefix) }}
+```
+
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
 
@@ -297,7 +301,7 @@ Object detector training.
 ## Troubleshooting
 
 ```{trouble}
-When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/workspaces/dt-env-developer/lx'`
+When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/path/to/lx'`
 ---
 Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-object-detection/`)
 ```

@@ -45,6 +45,14 @@ The Duckiebattery can draw up to `2A` but feeding a higher amperage will not be 
 If your Duckiebot is turned on while charging, a battery charge indicator will appear on the top right of the screen. If your Duckiebot is turned off, the LEDs will turn on. In both cases, a small LED on the HUT near the charging port will turn green, indicating incoming power.
 ```
 
+```{tip}
+To charge your Duckiebot faster, unplug the fan and/or the UBS cable from the `5VEXT` port.
+```
+
+```{tip}
+If your Duckiebot is on, you can measure the net current in/out (or, or fast it is charging/discharging), through `dts duckiebot battery info ROBOTNAME`. 
+```
+
 (handling-how-to-turn-your-duckiebot-on)=
 ## How to turn your Duckiebot on
 
@@ -76,10 +84,19 @@ dts fleet discover
 Output of `dts fleet discover`.
 ```
 
+```{warning}
+🐛 Known bug: `dts fleet discover` does not currently work correctly from within [Workspaces](setup-devcontainer). 
+```
+
 (handling-how-to-turn-your-duckiebot-off)=
 ## How to turn your Duckiebot off
 
-There are several ways to perform a soft shutdown (i.e., the proper way) of a Duckiebot: through the Duckietown shell, the Duckiebot's Dashboard, and the top button on the Duckiebot itself. To perform a soft shutdown, the Duckiebattery's software must be up to date (version >2.0.2).
+To perform a soft (software) shutdown, as opposed to a hard shutdown by interrupting electrical power, the Duckiebattery's software must be up to date (version >2.0.2). There are several ways to perform a soft shutdown (i.e., the proper way) of a Duckiebot; through: 
+
+* the Duckietown shell, 
+* the Duckiebot's Dashboard, and 
+* the top button on the Duckiebot itself. 
+
 
 ````{warning}
 Run the following command and verify that `version` is greater than or equal to `2.0.2`:

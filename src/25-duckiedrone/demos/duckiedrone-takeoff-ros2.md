@@ -40,7 +40,17 @@ To set up the demo:
     dts matrix run --standalone --embedded --map sandbox_drone
     ```
 
-4. Attach your virtual Duckiedrone to the `map_0/vehicle_1` Duckiematrix entity by running the following command, where `ROBOT_NAME` is the name of your virtual Duckiedrone:
+4. Start the matrix with the `sandbox_drone` map:
+
+    ```shell
+    dts matrix run --standalone -d --map sandbox_drone
+    ```
+
+    ```{note}
+    {{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
+    ```
+
+5. Attach the Duckiedrone to the matrix engine:
 
     ```shell
     dts matrix attach ROBOT_NAME map_0/vehicle_1

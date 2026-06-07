@@ -1,5 +1,5 @@
 (ops-db-battery-update)=
-# Duckiebattery Software Update
+# Duckiebattery update
 
 ```{seo}
 :description: Learn how to update the software on your Duckiebattery, a smart battery for autonomous robotics applications.
@@ -23,7 +23,7 @@ To update the Duckiebattery:
 1. Run `pipx upgrade duckietown-shell`.
 2. Run `dts update`.
 3. Run `dts desktop update`.
-4. Run `dts fleet discover` and verify that your Duckiebot is `Ready`.
+4. Make sure your Duckiebot is on and in standby (e.g., run `dts fleet discover` and verify that your Duckiebot is `Ready`).
 5. Run `dts duckiebot update DUCKIEBOT_NAME`.
 6. Run `dts duckiebot battery info DUCKIEBOT_NAME` and verify that `percentage` is greater than `15`.
 7. Run `dts duckiebot battery upgrade DUCKIEBOT_NAME` and follow the instructions. If prompted to "double-click" the Duckiebattery's button, *quickly* press the Duckiebattery's button **twice**.

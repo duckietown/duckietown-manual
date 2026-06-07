@@ -17,7 +17,7 @@
 - Joining the Duckietown Stack Overflow archive of Q&As
 ```
 
-The first step is to create accounts with third-party resources used in conjunction with Duckietown.
+The Duckietown ecosystem leverages some free third-party resources, for which accounts are required.
 
 All these accounts are free, and when paid options exist, those are not necessary in the context of Duckietown.
 
