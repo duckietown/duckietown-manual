@@ -53,7 +53,7 @@ To set up the demo:
 5. Attach the Duckiedrone to the matrix engine:
 
     ```shell
-    dts matrix attach ROBOT_NAME map_0/vehicle_1
+    dts matrix attach ROBOT_NAME map_0/vehicle_0
     ```
 
 ```{attention}
