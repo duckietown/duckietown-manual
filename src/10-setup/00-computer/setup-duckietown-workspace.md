@@ -166,7 +166,7 @@ To create a new local integrated terminal (outside the Dev Container), open the 
 ```
 
 ```{note}
-If you are using a Duckietown Workspace, Duckietown Viewer apps and Duckiematrix renderer-only commands such as `dts matrix run` must be run from a local integrated terminal outside the Dev Container. Commands such as `dts matrix run --standalone` start both the Engine and the Renderer in the same environment. Browser-based variants can be run inside or outside the Dev Container.
+{{ "{} Duckietown Viewer apps and Duckiematrix renderer-only commands such as `dts matrix run` must be run from a local integrated terminal outside the Dev Container. Commands such as `dts matrix run --standalone` start both the Engine and the Renderer in the same environment. Browser-based variants can be run inside or outside the Dev Container.".format(dt_workspace_note_prefix) }}
 ```
 
 ## Setting up the Duckietown Shell on the host machine
