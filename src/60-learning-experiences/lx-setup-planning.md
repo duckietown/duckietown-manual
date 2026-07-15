@@ -156,7 +156,6 @@ If you have not done so already, set up your local SSL certificate needed to run
 If you are running Duckietown inside a [Duckietown Workspace](setup-devcontainer), make sure to [install the certificate for your host machine as well](setup-devcontainer-dts-code-editor). 
 ```
 
-
 Open the code editor with:
 
 ```
@@ -170,13 +169,11 @@ The first thing you will see in the code editor are a version of these instructi
 (lx-navigating-notebooks-planning)=
 ## Walkthrough of Notebooks
 
-Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the
-`notebooks` directory and open the first notebook.
+Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the `notebooks` directory and open the first notebook.
 
 Follow the instructions on the notebook and work through them in sequence.
 
-In many cases the last notebook will instruct you to write some code inside the
-learning experience directory. 
+In many cases the last notebook will instruct you to write some code inside the learning experience directory. 
 
 Once you have done that you will need to **build** your code before **testing** it.
 
@@ -272,7 +269,7 @@ dts code build -R ROBOT_NAME
 where `ROBOT_NAME` can be either a physical or virtual robot.
 
 (lx-code-test-planning)=
-### Testing on a Duckiebot or in the Duckiematrix
+### Deploying the code on a (physical or virtual) Duckietown robot
 
 🚙 To test your code on your real Duckiebot you can do:
 
@@ -286,9 +283,13 @@ dts code workbench -R ROBOT_NAME
 dts code workbench -m -R VIRTUAL_ROBOT_NAME
 ```
 
-(note the `-m` flag which means that we are running in the `matrix`.)
+```{note}
+The `-m` flag indicates we are targeting a virtual robot in the `matrix`.
+```
 
-In another terminal, you can launch the `noVNC` viewer for this exercise and open RViz. 
+### Open the noVNC GUI
+
+In another terminal, you can launch the `noVNC` viewer for this LX and open RViz. 
 
 ```
 dts code vnc -R ROBOT_NAME

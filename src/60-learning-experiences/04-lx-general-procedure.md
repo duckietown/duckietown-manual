@@ -1,4 +1,3 @@
-
 (duckiebot-lxs)=
 # General Procedure for Running Learning Experiences
 
@@ -12,7 +11,7 @@
 - (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
 - (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 ---
-- A computer ready to run any Duckietown learning experience.
+- A computer ready to run any Duckietown learning experience
 ```
 
 This page describes the setup and general workflow for Duckietown learning experiences. Specific instructions for each available LX are detailed in the following pages of this manual. The following LXs are currently supported:
@@ -35,7 +34,10 @@ This page describes the setup and general workflow for Duckietown learning exper
 (lx-forking)=
 ## Forking the LX Repositories
 
-Forking repositories allows the creation of a personal, local copy that is nevertheless synched with upstream Duckietown code.
+The recommended way to use [the repository for each LX](lx-overview) is to make a fork, and then clone that fork. Forking can be done through the GitHub web interface, and allows the creation of a personal, local copy that is nevertheless synched with upstream Duckietown code.
+
+However, you are also free to simply clone this repository and get started. 
+
 
 1. **Create a fork**: Navigate to the repository of interest, for example: [the Braitenberg vehicles repository](https://github.com/duckietown/lx-braitenberg). All LXs URLs have the same format: `https://github.com/duckietown/lx-<lx-name>`
 
@@ -144,22 +146,21 @@ All `dts code` commands should be executed inside the root directory of the lear
 Making sure you are inside the path of the specific learning experience you want to work on, open the code editor by running:
 
 ```
-dts code editor
+dts code editor [--bind 0.0.0.0]
 ```
 
-Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar
-of your browser to access the code editor. The first thing you will see in the code editor are a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
+Where the `--bind` flag can be used if using a Duckietown Workspace and the browser is not automatically opening this document.
+
+Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar of your browser to access the code editor. The first thing you will see in the code editor are a version of these instructions specific to the LX you are running. You can generally start following the LX-specific indications shown in your code editor and stop reading here.
 
 (lx-navigating-notebooks)=
 ## Walkthrough of Notebooks
 
-Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the
-`notebooks` directory and open the first notebook.
+Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the `notebooks` directory and open the first notebook.
 
 Follow the instructions on the notebook and work through them in sequence.
 
-In many cases the last notebook will instruct you to write some code inside the
-learning experience directory. 
+In many cases the last notebook will instruct you to write some code inside the learning experience directory. 
 
 Once you have done that you will need to **build** your code before **testing** it.
 
@@ -169,15 +170,15 @@ Once you have done that you will need to **build** your code before **testing** 
 To test your code in the Duckiematrix you will need a virtual robot attached to an ongoing session. 
 
 (lx-create-vbot)=
-#### Creating a virtual Duckiebot
+#### 1. Creating and starting virtual Duckiebot
 
-To test your code in the Duckiematrix you will need a virtual robot. You can create one with the command:
+If you have not done so already (e.g., for a different LX), you can create a virtual Duckiebot with the command:
 
 ```
 dts duckiebot virtual create --type duckiebot --configuration DB21J [VBOT]
 ```
 
-where `[VBOT]` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete). Make sure to remember your robot (host)name for later.
+where `[VBOT]` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete).
 
 Then you can start your virtual robot with the command:
 
@@ -185,26 +186,42 @@ Then you can start your virtual robot with the command:
 dts duckiebot virtual start [VBOT]
 ```
 
-You should see it with a status `Booting` and finally `Ready` if you look at `dts fleet discover`: 
+You should see it with a status `Booting` and finally `Ready` if you look at `dts fleet discover`:
 
 ```
-     | Hardware |   Type    | Model |  Status  | Hostname 
----  | -------- | --------- | ----- | -------- | ---------
+       | Hardware |   Type    | Model |  Status  |   Hostname 
+------ | -------- | --------- | ----- | -------- | ------------
 [VBOT] |  virtual | duckiebot | DB21J |  Ready   | [VBOT].local
 ```
 
-Now that your virtual robot is ready, you can start the Duckiematrix (assuming it is already installed). From this exercise directory do:
+
+(lx-code-matrix-start-planning)=
+#### 2. Starting the Duckiematrix with the virtual Duckiebot
+
+:::::{tab-set}
+
+::::{tab-item} Ubuntu
+
+Now that your virtual robot is ready, you can start the Duckiematrix. From  the LX directory:
 
 ```
 dts code start_matrix
 ```
 
+::::
+
+::::{tab-item} Duckietown Workspace
+
 ```{note}
 {{ dt_workspace_start_matrix_split_note.format(dt_workspace_note_prefix) }}
 ```
 
-You should see the Unity-based Duckiematrix simulator start up. For more details about using
-the Duckiematrix see [](the-duckiematrix-manual).
+::::
+
+:::::
+
+
+You should see the Unity-based Duckiematrix simulator start up. For more details about using the Duckiematrix see [](the-duckiematrix-manual).
 
 ```{figure} /_images/lx-devmanual/lx-bv/duckiematrix_overhead.png
 :alt: Welcome to the Duckiematrix after starting the BV LX
@@ -214,6 +231,13 @@ the Duckiematrix see [](the-duckiematrix-manual).
 
 Example Duckiematrix splash screen after starting the Braitenberg Vehicles LX.
 ```
+
+Remember that to activate the Duckiematrix window, click anywhere on it and press [ENTER]. You can then at any time press `ESC` to disengage the mouse. 
+
+From here you can move the duckie towards the Duckiebot with the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys, or you can move the camera angle to view the Duckiebot with the mouse. If you are close enough to your Duckiebot, you can jump on with the 'E' key. You can then drive the Duckiebot around with the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys. All available keyboard commands are summarized in the "Settings" tab at the bottom left of the Duckiematrix window. 
+
+If you get very lost from the road and you want to come back, you can do so with the <kbd>R</kbd> key. 
+
 
 To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
 
@@ -248,7 +272,7 @@ dts code build -R ROBOT_NAME
 where `ROBOT_NAME` can be either a physical or virtual robot. 
 
 (lx-code-test)=
-### Testing on a Duckiebot or in the Duckiematrix
+### Deploying the code on a (physical or virtual) Duckietown robot
 
 To test your code on your real Duckiebot you can do:
 
@@ -262,7 +286,12 @@ To test your code in the Duckiematrix:
 dts code workbench -m -R [VIRTUAL_ROBOT_NAME]
 ```
 
-(note the `-m` flag which means that we are running in the `matrix`)
+```{note}
+The `-m` flag indicates we are targeting a virtual robot in the `matrix`.
+```
+
+(lx-code-novnc)=
+### LX specific interaction GUI: `noVNC`
 
 In another terminal, you can launch the `noVNC` viewer, which can be useful to interact with the virtual robot in different ways depending on the specific LX.
 
