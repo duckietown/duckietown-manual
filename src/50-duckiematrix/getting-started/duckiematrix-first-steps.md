@@ -270,7 +270,7 @@ The default `intersections` map from a Duckiebot's point of view.
 
 
 ```{figure} ../../_images/duckiematrix/introduction/duckiematrix-map-loop.jpg
-:name: dm-map-intersections-bird-eye
+:name: dm-map-loop
 :alt: Bird eye overview of Duckiematrix "loop" map
 :width: 70%
 

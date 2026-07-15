@@ -124,6 +124,7 @@ We will need to provide login credentials for Docker Hub to the Docker client:
 
     Where `DOCKERHUB_USERNAME` is your Docker Hub username, created during [](setup-account-docker). You will then be prompted for your password, paste the access token we created earlier, and press <kbd>Enter</kbd>.
 
+
 (docker-checkpoint)=
 ## Checkpoint
 

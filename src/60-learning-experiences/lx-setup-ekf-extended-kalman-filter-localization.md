@@ -225,7 +225,7 @@ You will see the Unity-based Duckiematrix simulator start up. The startup screen
 ```{figure} ../_images/lx-devmanual/lx-ekf-localization/duckiematrix-start.png
 :alt: Duckiematrix splash screen for the EKF Localization learning experience. 
 :width: 70%
-:name: duckiebot-lx-ekf-localization-segmentation
+:name: duckiebot-lx-ekf-start
 :align: center
 
 In this LX you will be greeted by a slightly more complex Duckietown than in previous ones. 

@@ -1,5 +1,5 @@
 ```{seo}
-:description: Step by step instructions and troubleshooting tips for running a fully fledged Duckietown environment in a development container, enabling smooth operations on macOS (including M-chips) and Windows.
+:description: Step by step instructions and troubleshooting tips for running a fully fledged Duckietown environment in a development container, enabling smooth operations on macOS and Windows.
 :keywords: duckietown setup, duckietown dev Container, Duckietown Workspaces, duckietown macOS, duckietown windows
 ```
 

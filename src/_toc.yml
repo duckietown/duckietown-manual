@@ -118,11 +118,11 @@ parts:
                 # -   file: demonstrations/lane-following-with-intersections
                 # -   file: demonstrations/lane-following-with-duckiebots
 
-            -   file: 60-learning-experiences/db-lx-intro
+            -   file: 60-learning-experiences/01-db-lx-intro
                 sections:
-                -   file: 60-learning-experiences/what-is-a-duckietown-learning-experience
-                -   file: 60-learning-experiences/lx-components
-                -   file: 60-learning-experiences/lx-general-procedure
+                -   file: 60-learning-experiences/02-what-is-a-duckietown-learning-experience
+                -   file: 60-learning-experiences/03-lx-components
+                -   file: 60-learning-experiences/04-lx-general-procedure
                     sections:
                     # -   file: 60-learning-experiences/lx-setup-hello-world
                     -   file: 60-learning-experiences/lx-setup-ros-basics

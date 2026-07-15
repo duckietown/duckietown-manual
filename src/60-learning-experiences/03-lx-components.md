@@ -3,22 +3,36 @@
 :keywords: Duckietown, learning experience, LX features, robotics education, simulation, Duckiebot, Jupyter notebook, robot agent, evaluation
 ```
 
-(lx-features)=
-# LX Features and Activities
+(lx-overview)=
+# Overview of `ente` LXs
 
-Let us start by understanding each of the learning experience activities available and how they might be used.
+[Currently supported `ente` learning experiences for Duckiebots](ente-supported-lxs) share a common structure and features.
+
+Each LX is hosted in a set of repositories in the [Duckietown organization GitHub](https://github.com/duckietown). The names of these repositories follow the following structure, where `LXNAME` is the LX name: 
+
+- `lx-[LXNAME]`: this is the "front-end" of the LX, starting point of each LX for learners. These repos are public.
+- `lx-recipe-[LXNAME]`: this is the "technical backend" for each LX. These repos are public.
+- `lx-[LXNAME]-solution`: this is a copy of the `lx-[LXNAME]` repo, with solutions. These repos are private, and only made available to instructors.
 
 
-The `duckietown-lx` repository on GitHub contains the learning experiences developed by the Duckietown team - we will
-break down the [Object Detection](https://github.com/duckietown/duckietown-lx/tree/mooc2022/object-detection) LX as the main example here.
-
-```{todo}
-update once new ente LXs are released
+```{warning}
+Learning experiences in daffy were structured [in a monolitic repo](https://github.com/duckietown/duckietown-lx). For additional information, refer to the [daffy Duckiebot Operation Manual](https://docs.duckietown.com/daffy/opmanual-duckiebot/lx/supported/general_running_lx.html). Note that daffy LXs are not compatible with an ente environment, and viceversa.
 ```
 
+
+(lx-features)=
+## LX Features and Activities
+
+
+```{todo}
+Update this to ente LX
+```
+
+To explore the structre of an LX, we brake down the [Object Detection](https://github.com/duckietown/duckietown-lx/tree/mooc2022/object-detection) LX as the main example here.
+
+
 ```{note}
-Learning Experiences are run using the `dts code` workflow as described in
-the [](duckiebot-lxs) page. This command set gives students a streamlined environment and powerful tools to complete activities.
+Learning Experiences are run using the `dts code` workflow as described in: [](duckiebot-lxs). 
 ```
 
 The following activity types can be implemented with the Duckietown Learning Experience infrastructure:
@@ -98,8 +112,7 @@ Example solution structure
 ### Providing Guidance
 
 Students should be given instruction within the notebooks on how to progress through the LX activities in order.
-Every learning experience should also revolve around a main _Learning Goal_ (or set of learning goals), documented at the beginning of the
-`README` file.
+Every learning experience should also revolve around a main _Learning Goal_ (or set of learning goals), documented at the beginning of the `README` file.
 
 ```{admonition} Example Learning Goal
 The Object Detection learning experience will take you through the process of collecting data from the Duckietown simulator and formatting it to be used to train a neural network to perform object detection using the robot's camera image. We will use one of the most popular object detection neural networks, called YOLO (v5). Finally you will integrate this trained model into the autonomy stack to create a Duckiebot agent that stops whenever an object (duckie) is detected in the road.

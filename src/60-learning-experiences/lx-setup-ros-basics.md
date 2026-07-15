@@ -1,6 +1,3 @@
-(lx-setup-ros-basics)=
-# LX: ROS basics
-
 ```{seo}
 :description: Step by step instructions on how to run the ROS basics learning experience (LX) in Duckietown.
 :keywords: Duckietown, Duckiebot, LXs, Learning Experiences, ROS, Robot Operating System, Robotics Operating System
@@ -13,6 +10,9 @@
 ---
 - Running the ROS basics learning experience.
 ```
+
+(lx-setup-ros-basics)=
+# LX: ROS basics
 
 This page describes how to run the "ROS basics" learning experience.
 
