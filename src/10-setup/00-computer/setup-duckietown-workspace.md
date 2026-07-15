@@ -273,13 +273,7 @@ To set up the Duckietown Shell on the host machine, [install Python 3.10/3.11/3.
 ```{attention}
 If a popup asking you to input your credentials appears, you should do so and then click `Always Allow`. 
 ```
-
-## Known bugs and other caveats
-
-```{attention}
-There is a known bug for which `dts fleet discover` ran inside the workspace will not find physical robots on the same network. Nonetheless, all other functions (e.g., pinging, updating, controlling, etc.) are unaffected by this bug.  
-```
-
+(setup-devcontainer-dts-code-editor)=
 ### Running `dts code editor`
 
 To be able to run `dts code editor`, you need to install `mkcert` on your host system:
