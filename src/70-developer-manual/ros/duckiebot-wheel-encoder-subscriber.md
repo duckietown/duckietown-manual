@@ -16,8 +16,8 @@
 
 The Duckiebot publishes encoder ticks on the following topics:
 
-- `/ROBOT_NAME/left_wheel_encoder_node/tick`
-- `/ROBOT_NAME/right_wheel_encoder_node/tick`
+- `/ROBOT_NAME/left_wheel_encoder_driver_node/tick`
+- `/ROBOT_NAME/right_wheel_encoder_driver_node/tick`
 
 The message type is **duckietown_msgs/WheelEncoderStamped**, which contains:
 
@@ -62,8 +62,8 @@ class WheelEncoderReaderNode(DTROS):
            node_type=NodeType.PERCEPTION
        )
        self._vehicle_name = os.environ['VEHICLE_NAME']
-       self._left_encoder_topic = f"/{self._vehicle_name}/left_wheel_encoder_node/tick"
-       self._right_encoder_topic = f"/{self._vehicle_name}/right_wheel_encoder_node/tick"
+       self._left_encoder_topic = f"/{self._vehicle_name}/left_wheel_encoder_driver_node/tick"
+       self._right_encoder_topic = f"/{self._vehicle_name}/right_wheel_encoder_driver_node/tick"
        self._ticks_left = None
        self._ticks_right = None
        self.sub_left = rospy.Subscriber(
@@ -161,8 +161,8 @@ You just built and ran a ROS node that reads wheel encoder data from the Duckieb
 
 For the wheel encoders, the topics used by the Duckiebot to publish the encoder ticks are
 
-* `/ROBOT_NAME/left_wheel_encoder_node/tick`
-* `/ROBOT_NAME/right_wheel_encoder_node/tick`
+* `/ROBOT_NAME/left_wheel_encoder_driver_node/tick`
+* `/ROBOT_NAME/right_wheel_encoder_driver_node/tick`
 
 And the message type used over these topics is **duckietown_msgs/WheelEncoderStamped** and contains the following fields.
 
@@ -209,8 +209,8 @@ class WheelEncoderReaderNode(DTROS):
         super(WheelEncoderReaderNode, self).__init__(node_name=node_name, node_type=NodeType.PERCEPTION)
         # static parameters
         self._vehicle_name = os.environ['VEHICLE_NAME']
-        self._left_encoder_topic = f"/{self._vehicle_name}/left_wheel_encoder_node/tick"
-        self._right_encoder_topic = f"/{self._vehicle_name}/right_wheel_encoder_node/tick"
+        self._left_encoder_topic = f"/{self._vehicle_name}/left_wheel_encoder_driver_node/tick"
+        self._right_encoder_topic = f"/{self._vehicle_name}/right_wheel_encoder_driver_node/tick"
         # temporary data storage
         self._ticks_left = None
         self._ticks_right = None
