@@ -1,12 +1,12 @@
 (db-troubleshooting-jetson-reflashing-c100-okdo)=
-# Flashing Jetson Nano Development Kit 4GB - C100 OKDO model (beta)
+# Flashing Jetson Nano Development Kit 4GB - C100 OKDO model
 
 ```{seo}
 :description: How to set up a C100 OKDO Jetson Nano 4GB developer kit model to work with Duckietown.
 :keywords: Duckietown, Duckiebot, on-board computer, re-flash, c100, Jetson Nano
 ```
 
-This chapter describes how to re-flash the Jetson Nano 4GB Developer Kit commercialized by OKDO under the name C100.
+This chapter describes how to re-flash the Jetson Nano 4GB Developer Kit commercialized by OKDO under the name "C100".
 
 ```{needget}
 * Completed [](setup-sw-dependencies-installation) with Ubuntu running natively.
@@ -27,9 +27,9 @@ If uncertain, follow [](on-board-computer-troubleshooting) or reach out to the [
 
 ## Overview
 
-The instructions below have been tested with JP4.6.6 with the Duckiebot image `v1.4.6`. Following this guide, the root partition from the eMMC will now point to the SD card while all other partitions remain on the eMMC.
+The instructions below have been tested with JP4.6.6 with the Duckiebot image `v1.4.6` and `v2.0.8`. Following this guide, the root partition from the eMMC will now point to the SD card while all other partitions remain on the eMMC.
 
-The reason for this modification is that the C100 uses the production version of the NVIDIA Jetson Nano module, which uses eMMC instead of an SD card interface. We need to make some small changes to use pre-built SD card images.
+The reason for this modification is that the C100 uses the production version of the NVIDIA Jetson Nano module, which uses eMMC instead of an SD card interface. 
 
 ## Prerequisites
 
@@ -41,16 +41,14 @@ The reason for this modification is that the C100 uses the production version of
 
 ## Step A: Flash the C100 using Dockerized Jetson Flasher
 
-Instead of using NVIDIA SDK Manager, we'll use the Dockerized Jetson flasher for a more streamlined experience:
-
-1. **Clone the flasher repository:**
+### 1. **Clone the flasher repository:**
 
    ```bash
    git clone https://github.com/duckietown/dt-jetson-nano-flasher
    cd dt-jetson-nano-flasher
    ```
 
-2. **Download the Linux4Tegra BSP and image:**
+### 2. **Download the Linux4Tegra BSP and image:**
 
    ```bash
    mkdir -p ~/Nvidia && cd ~/Nvidia
@@ -58,27 +56,27 @@ Instead of using NVIDIA SDK Manager, we'll use the Dockerized Jetson flasher for
    wget https://developer.nvidia.com/downloads/embedded/l4t/r32_release_v7.6/t210/tegra_linux_sample-root-filesystem_r32.7.6_aarch64.tbz2
    ```
 
-3. **Build the Docker image:**
+### 3. **Build the Docker image:**
 
    ```bash
    cd dt-jetson-nano-flasher
    docker-compose build
    ```
 
-4. **Put the Jetson Nano into recovery mode:**
+### 4. **Put the Jetson Nano into recovery mode:**
    - Power off the Jetson Nano
    - Short the `FC REC` and `GND` pins with a jumper
-   - Power on the Jetson Nano
-   - Connect the micro USB cable from your host to the C100
+   - Power on the Jetson Nano (e.g., by using a HUT, as shown in [](fig:06-Power-the-Jetson))
+   - Connect the micro USB cable from your host to the C100. Make sure it is a data cable.
    - Verify the device is in recovery mode: `lsusb | grep NVIDIA` (should show "NVIDIA Corp. APX")
 
-5. **Run the flashing container:**
+### 5. **Run the flashing container:**
 
    ```bash
    docker-compose run --rm ubuntu
    ```
 
-6. **Inside the container, prepare and flash:**
+### 6. **Inside the container, prepare and flash:**
 
    ```bash
    # Extract the BSP
@@ -114,22 +112,54 @@ Perform the following steps on the Jetson Nano C100 (all commands are executed i
 
 First, we need to enable the SD card interface using the following commands:
 
-1. **Clone the device tree overlays repository:**
+#### 1. **Clone the device tree overlays repository:**
 
    ```bash
-   git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git
+   git clone https://github.com/duckietown/seeed-linux-dtoverlays.git
    ```
 
-2. **Configure and build the overlay:**
+#### 2. **Configure and build the overlay:**
 
+   ```bash
+   cd seeed-linux-dtoverlays
+   sed -i \
+   's#compatible = JETSON_COMPATIBLE;#compatible = "nvidia,p3449-0000-b00+p3448-0002-b00", "nvidia,jetson-nano", "nvidia,tegra210";#' \ 
+   overlays/jetsonnano/jetson-sdmmc-overlay.dts
+   make overlays/jetsonnano/jetson-sdmmc-overlay.dtbo
+   sudo cp overlays/jetsonnano/jetson-sdmmc-overlay.dtbo /boot/
+   ```
+
+<!--  
    ```bash
    cd seeed-linux-dtoverlays
    sed -i '17s#JETSON_COMPATIBLE#\"nvidia,p3449-0000-b00+p3448-0002-b00\"\,\"nvidia\,jetson-nano\"\, \"nvidia\,tegra210\"#' overlays/jetsonnano/jetson-sdmmc-overlay.dts
    make overlays/jetsonnano/jetson-sdmmc-overlay.dtbo
    sudo cp overlays/jetsonnano/jetson-sdmmc-overlay.dtbo /boot/
    ```
+-->
 
-3. **Configure the hardware module:**
+#### 3. **Implement high-speed SD card stability fix**
+
+   ```bash
+   # Reduce the maximum SD clock and disable unstable UHS modes
+   sed -i 's/max-clk-limit = <48000000>;/max-clk-limit = <25000000>;\
+   \t\tuhs-mask = <0x14>;/' \
+    overlays/jetsonnano/jetson-sdmmc-overlay.dts
+   ```
+   
+   ````{admonition} Why this stability fix
+   :class: dropdown
+
+   This passage is only necessary if, after completing the whole procedure without this passage, the logs of the first boot with Duckietown SD card are flooded with errors:
+
+   ```bash
+   mmc1: Data CRC error
+   mmcblk1: error -84 transferring data
+   mmcblk1: retrying using single block read
+   ```
+   ````
+
+#### 4. **Configure the hardware module:**
 
    ```bash
    cd /boot/
@@ -138,13 +168,13 @@ First, we need to enable the SD card interface using the following commands:
 
    This should display a list of hardware modules. Verify that `reComputer sdmmc` is present in the list.
 
-4. **Enable the SD card module:**
+#### 5. **Enable the SD card module:**
 
    ```bash
    sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "reComputer sdmmc"
    ```
 
-5. **Reboot the system:**
+#### 6. **Reboot the system:**
 
    ```bash
    sudo reboot
@@ -156,13 +186,26 @@ After rebooting, we need to modify the root path to point to the SD card:
 
 1. **Edit the extlinux configuration file:**
 
+<!--
    ```bash
    sudo nano /boot/extlinux/extlinux.conf
    ```
 
    Find all lines containing `root=/dev/mmcblk0p1` and change them to `root=/dev/mmcblk1p1`.
+-->
 
-   Save the file and exit the editor.
+   ```bash
+   sudo sed -i \
+  's#root=/dev/mmcblk0p1#root=/dev/mmcblk1p1#g' \
+  /boot/extlinux/extlinux.conf
+   ```
+
+   Verify both entries point to `root/dev/mmcblk1p1` with:
+
+   ```bash
+   grep 'root=/dev/mmcblk' \
+  /boot/extlinux/extlinux.conf
+   ```
 
 ## Step D: Use SD Card with Duckiebot Image
 
