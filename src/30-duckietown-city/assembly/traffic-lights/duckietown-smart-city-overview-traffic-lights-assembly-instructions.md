@@ -68,17 +68,9 @@ For Autolab users: Use the convention `hostname: watchtowerXX`, where `XX` are i
 For Autolab users, do not change the username and password.
 ```
 
-(dt-ops-tl-launch)=
-### Launch Traffic Lights
+### First Boot
 
-By setting the `robot_type` to `traffic_light`, blinking behavior will start automatically on boot.
-
-To restart the traffic light behavior manually, run the following inside the `duckiebot-interface` container:
-
-```shell
-roslaunch duckiebot_interface all_drivers.launch veh:=NAME robot_type:=traffic_light
-```
-
+Once the traffic light is assembled, turn it on. Then read [these instructions](duckiebot-boot) and update the traffic light once it has finished booting. The blinking behavior should then start automatically.
 
 <!--
 
