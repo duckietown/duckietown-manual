@@ -42,7 +42,7 @@ For Duckiebots to recognize traffic lights governing a specific intersection, ap
   * [](traffic-light-assembly-18).
 
 (dt-ops-tl-prep)=
-### SD-card Image Preparation
+### SD card image Preparation
 
 At the software level, traffic lights function similarly to Duckiebots. When initializing the SD-card, follow the instructions [here](setup-db-sd-card-flashing-intro), ensuring you use the `--type traffic_light` option.
 
@@ -51,7 +51,7 @@ Wi-Fi configuration for traffic lights is not set by default. To enable it, use 
 Example command for a Wi-Fi connected traffic light:
 
 ```shell
-dts init_sd_card --hostname watchtowerXX --country COUNTRY --type traffic_light --configuration TL21
+dts init_sd_card --hostname ROBOTNAME --country COUNTRY --type traffic_light --configuration TL21
 ```
 
 ```{note}
@@ -68,17 +68,16 @@ For Autolab users: Use the convention `hostname: watchtowerXX`, where `XX` are i
 For Autolab users, do not change the username and password.
 ```
 
-(dt-ops-tl-launch)=
-### Launch Traffic Lights
+(tl-first-boot)=
+### Traffic Light First Boot
 
-By setting the `robot_type` to `traffic_light`, blinking behavior will start automatically on boot.
+Once the traffic light is fully assembled, turn it on and follow the [first boot](duckiebot-boot) procedure, and once finished update the software with:
 
-To restart the traffic light behavior manually, run the following inside the `duckiebot-interface` container:
+    dts duckiebot update ROBOTNAME
 
-```shell
-roslaunch duckiebot_interface all_drivers.launch veh:=NAME robot_type:=traffic_light
-```
+If prompted, select `robot type = duckiebot` and `robot hardware = raspberry_pi`. Wait for the update to finish and reboot the device.
 
+The blinking behavior should then start automatically.
 
 <!--
 
