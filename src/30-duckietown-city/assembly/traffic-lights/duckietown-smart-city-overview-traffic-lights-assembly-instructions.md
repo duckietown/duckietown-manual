@@ -68,9 +68,16 @@ For Autolab users: Use the convention `hostname: watchtowerXX`, where `XX` are i
 For Autolab users, do not change the username and password.
 ```
 
-### First Boot
+(tl-first-boot)=
+### Traffic Light First Boot
 
-Once the traffic light is assembled, turn it on. Then read [these instructions](duckiebot-boot) and update the traffic light once it has finished booting. The blinking behavior should then start automatically.
+Once the traffic light is fully assembled, turn it on and follow the [first boot](duckiebot-boot) procedure, and once finished update the software with:
+
+    dts duckiebot update ROBOTNAME
+
+If prompted, select `robot type = duckiebot` and `robot hardware = raspberry_pi`. Wait for the update to finish and reboot the device.
+
+The blinking behavior should then start automatically.
 
 <!--
 
