@@ -14,7 +14,6 @@ Each LX is hosted in a set of repositories in the [Duckietown organization GitHu
 - `lx-recipe-[LXNAME]`: this is the "technical backend" for each LX. These repos are public.
 - `lx-[LXNAME]-solution`: this is a copy of the `lx-[LXNAME]` repo, with solutions. These repos are private, and only made available to instructors.
 
-
 ```{warning}
 Learning experiences in daffy were structured [in a monolitic repo](https://github.com/duckietown/duckietown-lx). For additional information, refer to the [daffy Duckiebot Operation Manual](https://docs.duckietown.com/daffy/opmanual-duckiebot/lx/supported/general_running_lx.html). Note that daffy LXs are not compatible with an ente environment, and viceversa.
 ```
@@ -23,13 +22,9 @@ Learning experiences in daffy were structured [in a monolitic repo](https://gith
 (lx-features)=
 ## LX Features and Activities
 
-
-```{todo}
-Update this to ente LX
-```
-
-To explore the structre of an LX, we brake down the [Object Detection](https://github.com/duckietown/duckietown-lx/tree/mooc2022/object-detection) LX as the main example here.
-
+<!--
+To explore the structure of an LX, we brake down, e.g., the [Extended Kalman Filter - Localization](https://github.com/duckietown/lx-ekf-localization) LX as the main example here.
+-->
 
 ```{note}
 Learning Experiences are run using the `dts code` workflow as described in: [](duckiebot-lxs). 
@@ -47,10 +42,11 @@ The following activity types can be implemented with the Duckietown Learning Exp
 (notebooks-intro)=
 ## Activity: Notebooks
 
-Learners are immediately presented with the goals and workflow instructions for a learning experience when they
-use `dts code editor` to spin up the preconfigured VSCode editor. Installing a local editor is not necessary, and
-everyone begins with a uniform environment to complete the learning experience. The `notebooks` directory will always
-contain the first activity.
+Duckietown learning experiences are consumed through Notebooks, without the need to install a local editor. This offers learners a uniform experience to engage with the content. A preconfigured VScode editor and notebooks are initialized through the command:
+
+    dts code editor
+
+The `notebooks` directory will always contain the first activity.
 
 ```{figure} ../_images/lx-devmanual/intro/obj-det-editor.png
 :name: editor-activity-intro-1
@@ -61,7 +57,7 @@ contain the first activity.
 Editor interface for launching notebooks in a learning experience
 ```
 
-A _notebook activity_ introduces key concepts within a Jupyter notebook that learners can work through to cement, visualize, and implement their understanding. Tab through the gallery of notebooks below for a few examples of notebook features.
+Notebooks provide a rich environment to implement learning activities, from simple text, to images and videos, interactive code cells, and much more. In Duckietown LXs, we mostly intend these notebooks as "class notes" rather than full standalone learning modules, and as preconfigured interactive coding evironment that ienable learners to focus on the intended learning outcomes of the LX rather than getting distracted by the many underlying details of robotics. 
 
 `````{tab-set}
 ````{tab-item} Image Filtering
@@ -98,7 +94,13 @@ Hello World LX - example activity
 ````
 `````
 
-Learners may also be directed to implement long-form solutions in the provided `solution` package. This code can be imported to notebooks for visualization and testing or used by an agent node on the Duckiebot.
+(notebooks-coding)=
+## Coding inside notebooks
+
+While short form coding learning activities can be well implemented in cells, directly inside the Jupyter notebook, inside a LX learners may also be directed to implement long-form code solutions in the provided `solution` package. 
+
+The code placed inside this folder can then be imported in the notebooks for visualization and testing, or automatically compiled and configured to be deployed as an **agent** on Duckietown robots (Duckiebot, Duckiedrones) - both physical and virtual. Code is built using the `dts code build` function:
+
 
 ```{figure} ../_images/lx-devmanual/intro/obj-det-solution.png
 :name: notebook-solution
@@ -109,6 +111,9 @@ Learners may also be directed to implement long-form solutions in the provided `
 Example solution structure
 ```
 
+Each learning experience typically collects more than one notebook. Starting from the first one, notebooks should be written/engineered to guide learners through the rest of the learning experience in proper order. 
+
+<!--
 ### Providing Guidance
 
 Students should be given instruction within the notebooks on how to progress through the LX activities in order.
@@ -117,7 +122,7 @@ Every learning experience should also revolve around a main _Learning Goal_ (or 
 ```{admonition} Example Learning Goal
 The Object Detection learning experience will take you through the process of collecting data from the Duckietown simulator and formatting it to be used to train a neural network to perform object detection using the robot's camera image. We will use one of the most popular object detection neural networks, called YOLO (v5). Finally you will integrate this trained model into the autonomy stack to create a Duckiebot agent that stops whenever an object (duckie) is detected in the road.
 ```
-
+-->
 ---
 
 (workbench-intro)=
