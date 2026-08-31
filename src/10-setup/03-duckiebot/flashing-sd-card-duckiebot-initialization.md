@@ -3,7 +3,7 @@
 
 ```{seo}
 :description: Instructions on how to flash an SD card to initialize a Duckiebot, Duckiedrone, Traffic Light or Watchtower.
-:keywords: Duckietown, Duckiebot, Duckiedrone, flashing, initialization, SD card, Traffic Light, Watchtower, dts init sd card, dts init_sd_card
+:keywords: Duckietown, Duckiebot, Duckiedrone, flashing, initialization, SD card, Traffic Light, Watchtower, dts sd card init, dts sd_card init
 ```
 
 ```{needget}

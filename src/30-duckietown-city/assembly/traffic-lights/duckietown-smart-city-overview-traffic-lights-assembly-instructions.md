@@ -51,7 +51,7 @@ Wi-Fi configuration for traffic lights is not set by default. To enable it, use 
 Example command for a Wi-Fi connected traffic light:
 
 ```shell
-dts init_sd_card --hostname watchtowerXX --country COUNTRY --type traffic_light --configuration TL21
+dts sd_card init --hostname watchtowerXX --country COUNTRY --type traffic_light --configuration TL21
 ```
 
 ```{note}
