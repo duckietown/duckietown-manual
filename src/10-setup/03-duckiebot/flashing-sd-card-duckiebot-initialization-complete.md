@@ -27,7 +27,7 @@ Use this procedure if you want full control over the configuration settings of y
 ```
 
 ```{note}
-The default username (not to be confused with the hostname/robotname) and password are `duckie` and `quackquack`, respectively. This is useful if you want to later `ssh` into your robot.
+The username (not to be confused with the hostname/robotname) is `duckie`. The account has no default password: provide `--password PASSWORD` when initializing the SD card, then use that password to later `ssh` into the robot.
 ```
 
 Start by plugging the SD card into your computer using a SD card reader or the USB to microSD card adapter provided in your Duckiebot kit. Make sure the SD card is detected before proceeding.
@@ -35,17 +35,19 @@ Start by plugging the SD card into your computer using a SD card reader or the U
 Then, open a terminal and use the command:
 
 ```shell
-dts sd_card init --hostname HOSTNAME --type TYPE --configuration CONFIGURATION --wifi WIFI[,WIFI2,...,WIFIN] [--country COUNTRY] [--version VERSION]
+dts sd_card init --hostname HOSTNAME --password PASSWORD --type TYPE --configuration CONFIGURATION --wifi WIFI[,WIFI2,...,WIFIN] [--country COUNTRY] [--version VERSION]
 ```
 
 Where:
 
 * `--hostname` is the name of the robot you are flashing the SD card for.
 
+* `--password` sets the password for the `duckie` account. The default initialization workflow includes the setup step, so this option is required. The password must contain at least eight characters and cannot contain colons or line breaks.
+
 (db-naming-constraints)=
 #### Duckiebot naming constraints
 ```{attention}
-The `HOSTNAME`, or robot name, is going to be used extensively in future interactions with the robot, and can only be changed by reflashing your SD card.
+The `HOSTNAME`, or robot name, is going to be used extensively in future interactions with the robot. You can change it later by [updating the initialized SD card](update-initialized-sd-card).
 
 Choose a hostname for your robot such that it:
 
@@ -74,7 +76,7 @@ For example:
 * If you are not sure what Duckiebot you have, refer to [](duckiebot-configurations) or [reach out to support](how-to-get-help).
 ```
 
-* `--wifi` is a comma-separated list of Wi-Fi networks, each passed in the format `wifiname:wifipassword`. E.g., (default) `duckietown:quackquack`. [Networks can be edited after the robot is initialized too](db-troubleshooting-network), without needing to reflash the SD card. Nonetheless, making sure your initial credentials are correct simplifies next steps.
+* `--wifi` is a comma-separated list of Wi-Fi networks, each passed in the format `wifiname:wifipassword`. E.g., (default) `duckietown:quackquack`. This Wi-Fi password is separate from the `duckie` account password. [Networks can be edited after the robot is initialized too](db-troubleshooting-network), without needing to reflash the SD card. Nonetheless, making sure your initial credentials are correct simplifies next steps.
 
 ````{attention}
 * If you plan on the robot connecting over different networks (e.g., at home and in class), list all your networks *without spaces after the commas*:

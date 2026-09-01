@@ -54,7 +54,17 @@ When creating a new image:
 
     Open the Balena Etcher application you just downloaded, and follow the 3 steps instructions (select the file, select the sd card, press start).
 
-5. Configure the network on the Duckiebot
+5. Set the `duckie` account password
+
+    Before inserting the SD card into the Duckiebot, run:
+
+    ```shell
+    dts sd_card update --type duckiebot --configuration DB21J --password PASSWORD
+    ```
+
+    DTS prompts you to select the SD card. `PASSWORD` must contain at least eight characters and cannot contain colons or line breaks.
+
+6. Configure the network on the Duckiebot
 
     This image is pre-configured so that the Duckiebot will connect to a network with SSID `duckietown` and password `quackquack`.
 
@@ -68,17 +78,17 @@ When creating a new image:
 
     * if you have access to the router and an ethernet cable, connect your Duckiebot through the ethernet cable to the router, connect your computer to the same network, and proceed to [SSH into the Duckiebot](handling-how-to-ssh-into-your-duckiebot) to [edit the Wi-Fi settings](setup-duckiebot-network).
 
-6. Plug in the SD card into your Duckiebot (if not already done).
+7. Plug in the SD card into your Duckiebot (if not already done).
 
-7. Perform the [Duckiebot first boot](duckiebot-boot) sequence (if not already done).
+8. Perform the [Duckiebot first boot](duckiebot-boot) sequence (if not already done).
 
 (db-init-fast-default-settings)=
 ## Default settings
 
 This image has the following default settings:
 
-- default username: `duckie`
-- default user password: `quackquack`
+- username: `duckie`
+- account password: no default; set it after flashing with `dts sd_card update --type duckiebot --configuration DB21J --password PASSWORD`
 - robot name (hostname): `entebot208`
 - type: `duckiebot`
 - configuration: `DB21J` (works only with Jetson Nano 4GB developer kit)

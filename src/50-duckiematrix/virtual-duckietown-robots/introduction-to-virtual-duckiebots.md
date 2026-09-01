@@ -46,17 +46,19 @@ Like most things in Duckietown, the primary way to perform operations on virtual
 (intermediate-virtual-duckietown-robots-dts-commands-create)=
 ### Create
 
-To create a virtual Duckietown robot of type `TYPE`, configuration `CONFIGURATION`, and hostname `ROBOT_NAME`:
+To create a virtual Duckietown robot of type `TYPE`, configuration `CONFIGURATION`, hostname `ROBOT_NAME`, and a password for its `duckie` account:
 
 ```shell
-dts duckiebot virtual create --type TYPE --configuration CONFIGURATION ROBOT_NAME
+dts duckiebot virtual create --type TYPE --configuration CONFIGURATION --password PASSWORD ROBOT_NAME
 ```
 
 for example: 
 
 ```shell
-dts duckiebot virtual create --type duckiebot --configuration DB21J vargo
+dts duckiebot virtual create --type duckiebot --configuration DB21J --password PASSWORD vargo
 ```
+
+`--password` is required. `PASSWORD` must contain at least eight characters and cannot contain colons or line breaks.
 
 This command will take several minutes to complete, and is analogous to the `dts sd_card init` of physical robots. Learn about supported `TYPE` and `CONFIGURATION` there: [](initialize-sd-card-video).
 

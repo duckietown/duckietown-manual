@@ -89,7 +89,7 @@ This is one of the most important steps and potential initial failure mode. If t
 
 ### Test if your Duckiebot is connected to the internet
 
-First, [make sure your robot and computer are on the same network](network-trouble-shooting-ping-robotname-local). Then, `ssh` into your robot with (the default password is `quackquack`):
+First, [make sure your robot and computer are on the same network](network-trouble-shooting-ping-robotname-local). Then, `ssh` into your robot and enter the password configured during SD-card initialization or a later SD-card update:
 
 ```shell
 ssh duckie@DUCKIEBOT_NAME.local

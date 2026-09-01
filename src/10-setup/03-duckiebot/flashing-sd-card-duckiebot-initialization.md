@@ -31,4 +31,4 @@ We provide two approaches to create a new SD card for a Duckietown robot:
 
 2. ["The Complete Way"](setup-db-sd-card-flashing-complete): requires a functional [Duckietown Shell installation](setup-dts), takes roughly twice the time of the faster approach, but allows for full customization. Recommended when operating more than one Duckiebot.
 
-After creating an SD card and performing the [first boot](duckiebot-boot), it is possible to affect certain modifications, such as changing the hostname or the Wi-Fi configuration, without the need to re-flash it by following the `dts sd_card update` command instructions: [](update-initialized-sd-card).
+After creating an SD card, you can change selected settings, such as the hostname, Wi-Fi configuration, or `duckie` account password, without reflashing it by following the `dts sd_card update` command instructions: [](update-initialized-sd-card).

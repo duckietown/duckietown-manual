@@ -27,7 +27,7 @@ dts duckiebot update ROBOT_NAME
 (handling-how-to-ssh-into-your-duckiebot)=
 ## How to SSH into your Duckiebot
 
-To `ssh` into your Duckiebot, using the `SSH` (`Secure Shell`) protocol, run the following command and enter the password (the default password is `quackquack`):
+To `ssh` into your Duckiebot, using the `SSH` (`Secure Shell`) protocol, run the following command and enter the password configured during SD-card initialization or a later SD-card update:
 
 ```shell
 ssh duckie@DUCKIEBOT_NAME.local

@@ -180,10 +180,10 @@ To test your code in the Duckiematrix you will need a virtual robot attached to 
 You can create one with the command:
 
 ```
-dts duckiebot virtual create --type duckiebot --configuration DB21J [VBOT]
+dts duckiebot virtual create --type duckiebot --configuration DB21J --password PASSWORD [VBOT]
 ```
 
-where `[VBOT]` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete). Make sure to remember your robot (host)name for later.
+where `PASSWORD` is the password for the `duckie` account and `[VBOT]` is the hostname. `PASSWORD` must contain at least eight characters and cannot contain colons or line breaks. `[VBOT]` can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete). Make sure to remember your robot (host)name for later.
 
 Then you can start your virtual robot with the command:
 

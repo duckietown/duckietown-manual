@@ -51,8 +51,10 @@ Wi-Fi configuration for traffic lights is not set by default. To enable it, use 
 Example command for a Wi-Fi connected traffic light:
 
 ```shell
-dts sd_card init --hostname watchtowerXX --country COUNTRY --type traffic_light --configuration TL21
+dts sd_card init --hostname watchtowerXX --password PASSWORD --wifi WIFI --country COUNTRY --type traffic_light --configuration TL21
 ```
+
+`--password` sets the password for the `duckie` account. The default initialization workflow includes the setup step, so this option is required. The password must contain at least eight characters and cannot contain colons or line breaks.
 
 ```{note}
 For Autolab users: Use the convention `hostname: watchtowerXX`, where `XX` are incremental numbers.
@@ -60,12 +62,12 @@ For Autolab users: Use the convention `hostname: watchtowerXX`, where `XX` are i
 - For standard traffic light setup, use:
     *   `hostname: trafficlightXX`
 
-- Default login credentials:
+- Login credentials:
     *   Username: `duckie`
-    *   Password: `quackquack`
+    *   Password: the value provided with `--password`
 
 ```{warning}
-For Autolab users, do not change the username and password.
+For Autolab users, follow the account-password requirements provided by your Autolab administrator.
 ```
 
 (dt-ops-tl-launch)=
