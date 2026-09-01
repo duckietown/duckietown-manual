@@ -1,6 +1,6 @@
 ```{seo}
 :description: This section details how to assemble and initialize a Duckiebot, in particular model DB21J4.
-:keywords: Duckietown, Duckiebot, assembly, sd card initialization, dts init sd card
+:keywords: Duckietown, Duckiebot, assembly, sd card initialization, dts sd card init
 ```
 
 ```{needget}

@@ -1,6 +1,6 @@
 ```{seo}
 :description: Instructions on how to flash an SD card to initialize a Duckiebot with the fast and easy approach, trading off time for customizability.
-:keywords: Duckietown, Duckiebot, flashing, initialization, SD card, Watchtower, dts init sd card, dts init_sd_card
+:keywords: Duckietown, Duckiebot, flashing, initialization, SD card, Watchtower, dts sd card init, dts sd_card init
 ```
 
 ```{needget}
