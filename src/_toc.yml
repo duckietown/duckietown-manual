@@ -146,7 +146,7 @@ parts:
                     #-   file: 60-learning-experiences/lx-setup-bayesian-estimation
                     #-   file: 60-learning-experiences/lx-setup-motion-planning
                     #-   file: 60-learning-experiences/lx-setup-sim-to-real
-                    ##-   file: 60-learning-experiences/lx-setup-planning
+                    -   file: 60-learning-experiences/lx-setup-planning
                     ##-   file: 60-learning-experiences/lx-setup-lane-following-integration
 
             -   file: 25-duckiedrone/duckiedrone

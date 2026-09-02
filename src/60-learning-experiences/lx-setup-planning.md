@@ -286,7 +286,7 @@ dts code workbench -m -R VIRTUAL_ROBOT_NAME
 ```{note}
 The `-m` flag indicates we are targeting a virtual robot in the `matrix`.
 ```
-
+<!-->
 ### Open the noVNC GUI
 
 In another terminal, you can launch the `noVNC` viewer for this LX and open RViz. 
@@ -296,7 +296,7 @@ dts code vnc -R ROBOT_NAME
 ```
 
 where `ROBOT_NAME` could be the real or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
-
+-->
 ## Troubleshooting
 
 ```{trouble}
