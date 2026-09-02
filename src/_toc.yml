@@ -43,6 +43,7 @@ parts:
                         sections:
                             -   file: 10-setup/03-duckiebot/flashing-sd-card-duckiebot-initialization-fast
                             -   file: 10-setup/03-duckiebot/flashing-sd-card-duckiebot-initialization-complete
+                            -   file: 10-setup/03-duckiebot/updating-duckietown-robot-sd-card
                     -   file: 10-setup/03-duckiebot/what-is-in-the-duckiebot-db21j4-box
                 # sections:
                 #    -   file: 10-setup/03-duckiebot/duckiebot-db21j-components-explained

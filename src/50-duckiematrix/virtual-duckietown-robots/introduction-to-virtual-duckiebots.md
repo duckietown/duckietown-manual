@@ -58,7 +58,7 @@ for example:
 dts duckiebot virtual create --type duckiebot --configuration DB21J vargo
 ```
 
-This command will take several minutes to complete, and is analogous to the `dts init_sd_card` of physical robots. Learn about supported `TYPE` and `CONFIGURATION` there: [](initialize-sd-card-video).
+This command will take several minutes to complete, and is analogous to the `dts sd_card init` of physical robots. Learn about supported `TYPE` and `CONFIGURATION` there: [](initialize-sd-card-video).
 
 (intermediate-virtual-duckietown-robots-dts-commands-list)=
 ### List

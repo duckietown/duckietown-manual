@@ -3,12 +3,12 @@
 
 ```{seo}
 :description: Instructions on how to flash an SD card to initialize a Duckiebot, Duckiedrone, Traffic Light or Watchtower.
-:keywords: Duckietown, Duckiebot, Duckiedrone, flashing, initialization, SD card, Traffic Light, Watchtower, dts init sd card, dts init_sd_card
+:keywords: Duckietown, Duckiebot, Duckiedrone, flashing, initialization, SD card, Traffic Light, Watchtower, dts sd_card init, dts sd_card update
 ```
 
 ```{needget}
-* [Functional DTS installation](setup-dts).
-* An SD card with at least `64 GB` of space.
+* [Functional DTS installation](setup-dts)
+* An SD card with at least `64 GB` of space
 * An SD card adapter appropriate for the computer you are using to flash the SD card
 * A broadband internet connection
 * 20 - 40 mins, depending on internet connection speed
@@ -21,7 +21,7 @@ Use this procedure if you want full control over the configuration settings of y
 
 
 (initialize-sd-card-video)=
-## Burning the SD card with `dts init_sd_card`
+## Burning the SD card with `dts sd_card init`
 
 ```{vimeo} 526698325
 ```
@@ -35,7 +35,7 @@ Start by plugging the SD card into your computer using a SD card reader or the U
 Then, open a terminal and use the command:
 
 ```shell
-dts init_sd_card --hostname HOSTNAME --type TYPE --configuration CONFIGURATION --wifi WIFI[,WIFI2,...,WIFIN] [--country COUNTRY] [--version VERSION]
+dts sd_card init --hostname HOSTNAME --type TYPE --configuration CONFIGURATION --wifi WIFI[,WIFI2,...,WIFIN] [--country COUNTRY] [--version VERSION]
 ```
 
 Where:
@@ -80,12 +80,12 @@ For example:
 * If you plan on the robot connecting over different networks (e.g., at home and in class), list all your networks *without spaces after the commas*:
 
 ```shell
-dts init_sd_card ... --wifi duckietown:quackquack,myhomenetwork:myhomepassword,myuninetwork:myunipassword
+dts sd_card init ... --wifi duckietown:quackquack,myhomenetwork:myhomepassword,myuninetwork:myunipassword
 ```
 * If your network `SSID` contains, e.g., spaces, use quotation marks:
 
 ```shell
-dts init_sd_card ... -wifi "my fancy network name:quackquack"
+dts sd_card init ... -wifi "my fancy network name:quackquack"
 ```
 
 * Networks in the list can support additional arguments:
@@ -99,13 +99,13 @@ dts init_sd_card ... -wifi "my fancy network name:quackquack"
 
 * `--version` is an optional numeric argument to download a specific version of the Duckietown image for the specific `CONFIGURATION` and `TYPE`. In default (recommended), it will download the latest available. Example `VERSION` parameters could be `2.0.1` or `1.4.2`.
 
-Additional options for `init_sd_card` exist. For a full list of the options, run:
+Additional options for `sd_card init` exist. For a full list of the options, run:
 
-    dts init_sd_card --help
+    dts sd_card init --help
 
 ## The flashing procedure
 
-After you run the `dts init_sd_card` command, follow the instructions that appear on screen.
+After you run the `dts sd_card init` command, follow the instructions that appear on screen.
 
 ### Legal things
 
@@ -135,7 +135,7 @@ A list of devices with capacity close to the number provided will be shown. Type
 ```{attention}
 You can choose to write the image to a file instead of a device, e.g., by typing in `/my/nonprotected/path/duckietown_image_9.9.9.img`. Once this file is created, it can be successfully flashed to a device using any third-party tool.
 ```
-### Finalizing the `init_sd_card` process
+### Finalizing the `sd_card init` process
 
 On successful end of the procedure, the drive will be automatically ejected, and you will be instructed to remove the SD card from the SD card reader and insert it, e.g., into the Duckiebot's SD card slot.
 
