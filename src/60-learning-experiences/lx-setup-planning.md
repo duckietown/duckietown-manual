@@ -33,7 +33,7 @@ After this learning experience, you will:
 - build and implement a collision checker in C-space
 - Review the Rapidly-exploring Random Tree (RRT) planning algorithm
 - Create a differential drive steering function as motion primitive for the RRT algorithm
-- Implement the RRT algoirthm and test it in the Duckiematrix 
+- Implement the RRT algorithm and test it in the Duckiematrix 
 ```
 
 ```{warning}
@@ -266,10 +266,8 @@ From inside the learning experience root directory, you can build your code with
 dts code build -R ROBOT_NAME
 ```
 
-where `ROBOT_NAME` can be either a physical or virtual robot.
-
 (lx-code-test-planning)=
-### Deploying the code on a (physical or virtual) Duckietown robot
+### Deploying the code on a virtual Duckietown robot
 
 🚙 To test your code on your real Duckiebot you can do:
 
