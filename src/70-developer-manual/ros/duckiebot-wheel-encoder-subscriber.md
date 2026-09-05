@@ -6,18 +6,15 @@
 (ros-sub-wheel-encoders)=
 # Subscribe to the Wheel Encoders
 
-```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
----
-* Learn how to receive wheel encoder data from your robot using a **ROS Subscriber**
-```
+{{ dt_ros_wheel_encoder_subscriber_needget }}
 
 ## Topic and message type of interest
 
 The Duckiebot publishes encoder ticks on the following topics:
 
-- `/ROBOT_NAME/left_wheel_encoder_driver_node/tick`
-- `/ROBOT_NAME/right_wheel_encoder_driver_node/tick`
+- `/DUCKIEBOT_NAME/left_wheel_encoder_driver_node/tick`
+
+- `/DUCKIEBOT_NAME/right_wheel_encoder_driver_node/tick`
 
 The message type is **duckietown_msgs/WheelEncoderStamped**, which contains:
 
@@ -31,8 +28,11 @@ uint8 type
 ```
 
 - `header`: standard ROS header
+
 - `data`: accumulated tick count
+
 - `resolution`: ticks per full revolution
+
 - `type`: encoder mode (`ENCODER_TYPE_ABSOLUTE` or `ENCODER_TYPE_INCREMENTAL`)
 
 For example, on the DB21 series robot, `resolution=135` and `type=1` (incremental), meaning there are 135 ticks per revolution.
@@ -106,7 +106,7 @@ if __name__ == '__main__':
 
 Make it executable:
 
-```bash
+```shell
 chmod +x ./packages/my_package/src/wheel_encoder_reader_node.py
 ```
 
@@ -114,7 +114,7 @@ chmod +x ./packages/my_package/src/wheel_encoder_reader_node.py
 
 Create `launchers/wheel-encoder-reader.sh`:
 
-```shell
+```bash
 #!/bin/bash
 
 source /environment.sh
@@ -126,7 +126,7 @@ dt-launchfile-join
 
 Rebuild the image:
 
-```bash
+```shell
 dts devel build -f
 ```
 
@@ -134,8 +134,8 @@ dts devel build -f
 
 Run the subscriber:
 
-```bash
-dts devel run -R ROBOT_NAME -L wheel-encoder-reader
+```shell
+dts devel run -R DUCKIEBOT_NAME -L wheel-encoder-reader
 ```
 
 The encoder `resolution` and `type` will log once. Subsequently, tick counts will appear continuously. Test by spinning the wheels manually or driving the robot.
@@ -146,16 +146,11 @@ To stop, press `Ctrl+C`.
 You just built and ran a ROS node that reads wheel encoder data from the Duckiebot.
 ```
 
-
 <!-- Previous version
 (ros-sub-wheel-encoders)=
 # Subscribe to wheel encoders
 
-```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
----
-* Learn how to receive wheel encoder data from your robot using a **ROS Subscriber**
-```
+{{ dt_ros_wheel_encoder_subscriber_needget }}
 
 ## Topic and message type of interest
 

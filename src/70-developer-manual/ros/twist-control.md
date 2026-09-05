@@ -1,35 +1,26 @@
-
-
 ```{seo}
 :description: Learn how to publish linear and angular velocity commands to the Duckiebot chassis using a ROS Publisher and the Twist2DStamped message.
 :keywords: Duckietown, ROS, Publisher, chassis control, Twist2DStamped, robotics, dts code
 ```
 
-
 (ros-pub-chassis-level-commands)=
 # Publish Chassis-level Commands
 
-
 ```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
+- A Duckietown robot turned ON and visible on `dts fleet discover`
 ---
-* Learn how to control the Duckiebot’s chassis linear and angular velocities using a **ROS Publisher**
+- Learn how to control the Duckiebot’s chassis linear and angular velocities using a **ROS Publisher**.
 ```
-
 
 ## Topic and message type of interest
 
-
 The Duckiebot subscribes to chassis commands on the topic:
 
-
 ```
-/ROBOT_NAME/car_cmd_switch_node/cmd
+/DUCKIEBOT_NAME/car_cmd_switch_node/cmd
 ```
-
 
 The message type is **duckietown_msgs/Twist2DStamped**, with fields:
-
 
 ```text
 std_msgs/Header header
@@ -37,23 +28,20 @@ float32 v
 float32 omega
 ```
 
-
 - `header`: standard ROS header
-- `v`: linear velocity in m/s (forward positive)
-- `omega`: angular velocity in rad/s (counter‑clockwise positive)
 
+- `v`: linear velocity in m/s (forward positive)
+
+- `omega`: angular velocity in rad/s (counter‑clockwise positive)
 
 ```{note}
 Effective `v` and `omega` commands require proper kinematic calibration.
 ```
 
-
 (ros-twist-control-node-create)=
 ## Create Publisher ROS Node
 
-
 Create `twist_control_node.py` in the `src/` directory:
-
 
 ```python
 #!/usr/bin/env python3
@@ -101,22 +89,17 @@ if __name__ == '__main__':
    rospy.spin()
 ```
 
-
 Make it executable:
 
-
-```bash
+```shell
 chmod +x ./packages/my_package/src/twist_control_node.py
 ```
 
-
 ## Define launcher
-
 
 Create `launchers/twist-control.sh`:
 
-
-```shell
+```bash
 #!/bin/bash
 
 
@@ -128,38 +111,29 @@ rosrun my_package twist_control_node.py
 dt-launchfile-join
 ```
 
-
 Rebuild the image:
 
-
-```bash
+```shell
 dts devel build -f
 ```
 
-
 ## Launch the node
-
 
 ```{danger}
 The robot’s wheels will start moving immediately. Ensure adequate clear space to avoid accidents.
 ```
 
-
 Run the node:
 
-
-```bash
-dts devel run -R ROBOT_NAME -L twist-control
+```shell
+dts devel run -R DUCKIEBOT_NAME -L twist-control
 ```
 
-
 Stop with `Ctrl+C`; `on_shutdown()` will halt movement.
-
 
 ```{admonition} Congratulations 🎉
 You just built and ran a ROS node that controls the Duckiebot chassis using Twist commands.
 ```
-
 
 <!--
 (ros-pub-chassis-level-commands)=

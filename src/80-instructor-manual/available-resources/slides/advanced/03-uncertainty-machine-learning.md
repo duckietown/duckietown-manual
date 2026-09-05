@@ -12,6 +12,3 @@ One hope is to build deep learning models that are also able to output *calibrat
 
 ```{slides} ../../../../_assets/instructor-manual/uncertainty.pdf
 ```
-
-
-

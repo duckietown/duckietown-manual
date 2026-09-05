@@ -1,25 +1,26 @@
-(lx-setup-mod-kin)=
-# LX: Kinematics and Odometry
-
 ```{seo}
 :description: Step by step instructions on how to run the kinematics and odometry learning experience (LX) in Duckietown.
 :keywords: Duckietown, Duckiebot, LXs, Learning Experiences, mathematical modelling, differential drive robot, modelling of a differential drive robot, differential drive, kinematic model, kinematics, kinematic model of a differential drive robot, wheel encoders, odometry, dead reckoning, estimator
 ```
 
+(lx-setup-mod-kin)=
+# LX: Kinematics and Odometry
+
 ```{needget}
 - Learning experience computer setup: [](duckiebot-lxs)
-- (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+
+- (recommended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+
 - (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
+
 - (optional) familiarity with ROS basics: [](lx-setup-ros-basics)
 ---
 - Running the kinematics and odometry learning experience.
 ```
 
-This page describes how to run the "Kinematics and Odometry" learning experience. 
+This page describes how to run the "Kinematics and Odometry" learning experience.
 
-```{warning}
 {{ dt_workspace_matrix_lx_warning.format(dt_workspace_note_prefix) }}
-```
 
 ```{figure} ../_images/lx-devmanual/lx-mod-kin/images/odometry/odometry-1.png
 :alt: graphical representation of odometry
@@ -35,21 +36,29 @@ For guided setup instructions, lecture content, and more related to this LX, see
 ```{admonition} Intended Learning Outcomes
 :class: tip
 In this learning experience, learners will:
-- appreciate the importance of representations in robotics, in particular what is a robot _state_
-- be able to formalize and explain the concept of _pose_ in SE(2) and SE(3)
-- practice defining and implementing poses in given reference frames
-- learn how to convert poses in a reference frame to another one
-- read data from wheel encoders of physical or virtual Duckiebots, and familiarize with the message type
-- code and implement a simple ROS node to extract wheel encoder data and manipulate it
-- design and implement a dead reckoning estimator to reconstruct the pose of a differential drive robot from wheel encoder measurements (odometry)
-- be able to articulate the strengths and shortcomings of this dead rekoning estimator
-- perform odometry calibration procedures for physical Duckiebots
-- use more advanced ROS tools (`rosservice`, `rosparameter`)    
+
+- Appreciate the importance of representations in robotics, in particular what is a robot _state_.
+
+- Be able to formalize and explain the concept of _pose_ in SE(2) and SE(3).
+
+- Practice defining and implementing poses in given reference frames.
+
+- Learn how to convert poses in a reference frame to another one.
+
+- Read data from wheel encoders of physical or virtual Duckiebots, and familiarize with the message type.
+
+- Code and implement a simple ROS node to extract wheel encoder data and manipulate it.
+
+- Design and implement a dead reckoning estimator to reconstruct the pose of a differential drive robot from wheel encoder measurements (odometry).
+
+- Be able to articulate the strengths and shortcomings of this dead rekoning estimator.
+
+- Perform odometry calibration procedures for physical Duckiebots.
+
+- Use more advanced ROS tools (`rosservice`, `rosparameter`).
 ```
 
-```{note}
-This exercise can be run on a [real Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) or on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps). 
-```
+{{ dt_lx_exercise_runtime_note }}
 
 (lx-forking-mod-kin)=
 ## Forking the repository
@@ -71,90 +80,95 @@ Fork the LX to be able to make local changes while still being able to receive u
 
 This will create a new repository at: `<your_github_username>/lx-kinematics-odometry`.
 
-### 2. Clone the fork 
+### 2. Clone the fork
 
 Clone the fork on your computer, replacing your GitHub username in the command below, and navigate to the new folder:
 
-    git clone git@github.com:<your_github_username>/lx-kinematics-odometry
-    cd lx-kinematics-odometry
-        
+```shell
+git clone git@github.com:<your_github_username>/lx-kinematics-odometry
+cd lx-kinematics-odometry
+```
 
 ### 3. Configure upstream repository
 
 Configure the Duckietown version of this repository as the upstream repository to synchronize with your fork.
 
-List the current remote repository for your fork,
+List the current remote repository for your fork:
 
-    git remote -v
+```shell
+git remote -v
+```
 
-Specify a new remote upstream repository,
+Specify a new remote upstream repository:
 
-    git remote add upstream https://github.com/duckietown/lx-kinematics-odometry
+```shell
+git remote add upstream https://github.com/duckietown/lx-kinematics-odometry
+```
 
-Confirm that the new upstream repository was added to the list,
+Confirm that the new upstream repository was added to the list:
 
-    git remote -v
+```shell
+git remote -v
+```
 
 You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every exercise will prompt you to pull from the upstream repository, updating your exercises to the latest version (if available).
 
 (lx-system-update-mod-kin)=
 ## Keeping your System Up To Date
 
-- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not a `daffy` one). You can check your current profile with: 
-    
-    ```
+- 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not a `daffy` one). You can check your current profile with:
+
+    ```shell
     dts profile list
     ```
 
     To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
 
-- 💻 Pull from the upstream remote to synch your fork with the upstream repo: 
+- 💻 Pull from the upstream remote to synchronize your fork with the upstream repository:
 
-    ```
+    ```shell
     git pull upstream ente
     ```
 
-- 💻 Make sure your Duckietown Shell is updated to the latest version: 
+- 💻 Make sure your Duckietown Shell is updated to the latest version:
 
-    ```
+    ```shell
     pipx upgrade duckietown-shell
     ```
 
-- 💻 Update the shell commands: 
+- 💻 Update the shell commands:
 
-    ```
+    ```shell
     dts update
     ```
 
-- 💻 Update your laptop/desktop: 
+- 💻 Update your laptop/desktop:
 
-    ```
+    ```shell
     dts desktop update
     ```
 
-- 🚙 Update your Duckiebot: 
+- 🚙 Update your Duckiebot:
 
+    ```shell
+    dts duckiebot update DUCKIEBOT_NAME
     ```
-    dts duckiebot update ROBOTNAME
-    ``` 
-    
-    (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
+
+    (where `DUCKIEBOT_NAME` is the name of your physical or virtual Duckiebot.)
 
 (lx-code-editor-lx-mod-kin)=
 ## Launching the Code Editor
 
-```{important}
-All `dts code` commands should be executed inside the root directory of the learning experience.
-```
+{{ dt_lx_dts_code_root_important }}
 
 Making sure you are inside the path of the specific learning experience you want to work on, open the code editor by running:
 
-```
+```shell
 dts code editor
 ```
 
 Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar
-of your browser to access the code editor. The first thing you will see in the code editor are a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
+of your browser to access the code editor. The first thing you will see in the code editor is a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
 
 (lx-navigating-notebooks-mod-kin)=
 ## Walkthrough of Notebooks
@@ -165,7 +179,7 @@ Inside the code editor, use the navigator sidebar on the left-hand side to navig
 Follow the instructions on the notebook and work through them in sequence.
 
 In many cases the last notebook will instruct you to write some code inside the
-learning experience directory. 
+learning experience directory.
 
 Once you have done that you will need to **build** your code before **testing** it.
 
@@ -181,31 +195,31 @@ Using RVIZ, ROS and the Duckietown keyboard controller to test odometry reconstr
 (lx-matrix-testing-mod-kin)=
 ### Testing with the Duckiematrix
 
-To test your code in the Duckiematrix you will need a virtual robot attached to an ongoing session. 
+To test your code in the Duckiematrix, attach either a physical or virtual robot to a Duckiematrix Entity. The steps below use a virtual robot; for instructions on attaching a physical robot, see [](introduction-duckiematrix-connect-db-to-remote-engine).
 
 (lx-create-vbot-mod-kin)=
 #### 1. Creating and starting virtual Duckiebot
 
-To test your code in the Duckiematrix you will need a virtual robot. You can create one with the command:
+To follow the virtual-robot workflow, create one with the command:
 
-```
-dts duckiebot virtual create --type duckiebot --configuration DB21J [VBOT]
+```shell
+dts duckiebot virtual create --type duckiebot --configuration DB21J ROBOT_NAME
 ```
 
-where `[VBOT]` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete). Make sure to remember your robot (host)name for later.
+where `ROBOT_NAME` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete). Make sure to remember your robot (host)name for later.
 
 Then you can start your virtual robot with the command:
 
-```
-dts duckiebot virtual start [VBOT]
+```shell
+dts duckiebot virtual start ROBOT_NAME
 ```
 
-You should see it with a status `Booting` and finally `Ready` if you look at `dts fleet discover`: 
+You should see it with a status `Booting` and finally `Ready` if you look at `dts fleet discover`:
 
-```
+```text
      | Hardware |   Type    | Model |  Status  | Hostname 
 ---  | -------- | --------- | ----- | -------- | ---------
-[VBOT] |  virtual | duckiebot | DB21J |  Ready   | [VBOT].local
+ROBOT_NAME |  virtual | duckiebot | DB21J |  Ready   | ROBOT_NAME.local
 ```
 
 (lx-code-matrix-start-mod-kin)=
@@ -213,13 +227,11 @@ You should see it with a status `Booting` and finally `Ready` if you look at `dt
 
 Now that your virtual robot is ready, you can start the Duckiematrix. From this exercise directory do:
 
-```
+```shell
 dts code start_matrix
 ```
 
-```{note}
 {{ dt_workspace_start_matrix_split_note.format(dt_workspace_note_prefix) }}
-```
 
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
@@ -229,43 +241,40 @@ the Duckiematrix see [](the-duckiematrix-manual).
 
 From inside the learning experience root directory, you can build your code with:
 
-```
+```shell
 dts code build -R ROBOT_NAME
 ```
 
-where `ROBOT_NAME` can be either a physical or virtual robot. 
+where `ROBOT_NAME` can be either a physical or virtual robot.
 
 To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
 
-```{note}
-For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
-```
+{{ dt_duckiematrix_webgl_browser_note }}
 
 (lx-code-test-mod-kin)=
 ### Testing on a Duckiebot or in the Duckiematrix
 
-🚙 To test your code on your real Duckiebot you can do:
+🚙 To test your code on your physical Duckiebot you can do:
 
-```
-dts code workbench -R [ROBOT_NAME]
+```shell
+dts code workbench -R DUCKIEBOT_NAME
 ```
 
 💻 To test your code in the Duckiematrix:
 
-```
-dts code workbench -m -R [VIRTUAL_ROBOT_NAME]
+```shell
+dts code workbench -m -R ROBOT_NAME
 ```
 
 (note the `-m` flag which means that we are running in the `matrix`)
 
-In another terminal, you can launch the `noVNC` viewer, which can be useful to interact with the virtual robot in different ways depending on the specific LX.
+In another terminal, you can launch the `noVNC` viewer, which can be useful to interact with the virtual robot in different ways depending on the specific LX:
 
+```shell
+dts code vnc -R ROBOT_NAME
 ```
-dts code vnc -R [ROBOT_NAME]
-```
 
-where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
-
+where `ROBOT_NAME` could be the physical or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
 
 ```{figure} ../_images/lx-devmanual/lx-mod-kin/images/odometry/odometry-real-2.png
 :alt: precise reconstruction of physical Duckiebot odometry 
@@ -287,26 +296,10 @@ Example of less good odometry from a dead rekoning estimator using wheel encoder
 
 ## Troubleshooting
 
-If you run into any issues while building the image, you can search the troubleshooting symptoms below or
-reference the [](how-to-get-help) section of this manual.
+If you run into any issues while building the image, you can search the troubleshooting symptoms below or reference the [](how-to-get-help) section of this manual.
 
-```{trouble}
+{{ dt_lx_code_project_metadata_trouble }}
 
-`dts :  The path '...' does not appear to be a Duckietown project.
-     :  The metadata file '.dtproject' is missing.`
+{{ dt_lx_code_editor_no_project_trouble }}
 
----
-You need to be in the root directory of the LX in order to run the `dts code` commands.
-```
-
-```{trouble}
-When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/path/to/lx'`
----
-Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-control/`)
-```
-
-```{trouble}
-My virtual robot (named, e.g., `VBOT`) hangs indefinitely when trying to update it.
----
-Try to restart it with: `dts duckiebot virtual restart VBOT`
-```
+{{ dt_lx_virtual_robot_update_trouble }}

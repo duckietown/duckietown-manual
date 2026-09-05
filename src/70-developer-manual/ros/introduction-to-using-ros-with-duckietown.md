@@ -3,18 +3,19 @@
 :keywords: Duckietown, ROS, DTProject, Duckiebot, ROS nodes, publisher, subscriber, Docker, robotics development
 ```
 
-
-
 (dtproject-ros)=
 #  ROS
 
 ```{needget}
-* A computer set up with the [Duckietown software requirements](setup-computer)
-* An initialized [Duckiebot](duckiebot-setup-intro)
-* [Completed tutorial on DTProject](dtproject)
+- A computer set up with the [Duckietown software requirements](setup-computer)
+
+- An initialized [Duckiebot](duckiebot-setup-intro)
+
+- [Completed tutorial on DTProject](dtproject)
 ---
-* A working knowledge of ROS development in Duckietown
-* A custom ROS node with a publisher and a subscriber running on your Duckiebot
+- A working knowledge of ROS development in Duckietown
+
+- A custom ROS node with a publisher and a subscriber running on your Duckiebot
 ```
 
 ## Table of contents

@@ -1,14 +1,16 @@
-(lx-setup-computer-vision)=
-# LX: Computer Vision
-
 ```{seo}
 :description: Step by step instructions on how to run the computer vision - visual servoing learning experience (LX) in Duckietown.
 :keywords: Duckietown, Duckiebot, LXs, Learning Experiences, computer vision, visual servoing, differential drive robot, pinhole camera model, homographies, camera calibration, extrinsics camera calibration, intrinsics camera calibration
 ```
 
+(lx-setup-computer-vision)=
+# LX: Computer Vision
+
 ```{needget}
 - Learning experience computer setup: [](duckiebot-lxs)
-- (reccomended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+
+- (recommended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+
 - (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 ---
 - Running the Computer Vision learning experience.
@@ -16,30 +18,31 @@
 
 This page describes how to run the "Computer Vision - Visual Servoing" learning experience.
 
-```{warning}
 {{ dt_workspace_matrix_lx_warning.format(dt_workspace_note_prefix) }}
-```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/H7-2YkHiChw?si=J7pPzrXyKJX_VW4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ```{admonition} Intended Learning Outcomes
 :class: tip
 After this learning experience, you will:
-- Understand the mathematical relationship between objects in the 3D world and their 2D representation on the camera image plane, and learn about homogeneous coordinates
-- Formalize the Pinhole Camera Model, and identify the instrincs camera calibration matrix as well as the extrinsics one
-- Learn to perform the instrinsics and extrinsics camera calibration procedures on both virtual and physical Duckiebots
-- Learn about homographies and their compositions, and be able to explain why they are relevant to the self-driving car problem
-- Learn about image filtering, implement and tune various opeartors to minimize image noise (box filter), blur (Gaussian Blurring), detect edges (image gradients and Sobel operators)
-- Leverage image filtering techniques learned above, along with camera calibrations to design a visual servoing controller, i.e., a controller that keeps the Duckiebot driving in the lane based exclusively on images from the camera.  
+- Understand the mathematical relationship between objects in the 3D world and their 2D representation on the camera image plane, and learn about homogeneous coordinates.
+
+- Formalize the Pinhole Camera Model, and identify the intrinsics camera calibration matrix as well as the extrinsics one.
+
+- Learn to perform the intrinsics and extrinsics camera calibration procedures on both virtual and physical Duckiebots.
+
+- Learn about homographies and their compositions, and be able to explain why they are relevant to the self-driving car problem.
+
+- Learn about image filtering, implement and tune various operators to minimize image noise (box filter), blur (Gaussian blurring), and detect edges (image gradients and Sobel operators).
+
+- Leverage image filtering techniques learned above, along with camera calibrations to design a visual servoing controller, i.e., a controller that keeps the Duckiebot driving in the lane based exclusively on images from the camera.
 ```
 
 ## About these learning activities
 
 For guided setup instructions, lecture content, and more related to this LX, see [our Self-Driving Cars with Duckietown MOOC on EdX](https://duckietown.com/mooc).
 
-```{note}
-This exercise can be run on a [real Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) or on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps). 
-```
+{{ dt_lx_exercise_runtime_note }}
 
 (lx-forking-computer-vision)=
 ## Forking the repository
@@ -65,24 +68,32 @@ This will create a new repository at: `<your_github_username>/lx-computer-vision
 
 Clone the fork on your computer, replacing your GitHub username in the command below, and navigate to the new folder:
 
-    git clone git@github.com:<your_github_username>/lx-computer-vision
-    cd lx-computer-vision
-        
+```shell
+git clone git@github.com:<your_github_username>/lx-computer-vision
+cd lx-computer-vision
+```
+
 ### 3. Configure the upstream repository
 
 Configure the Duckietown version of this repository as the upstream repository to synchronize with your fork.
 
-List the current remote repository for your fork,
+List the current remote repository for your fork:
 
-    git remote -v
+```shell
+git remote -v
+```
 
-Specify a new remote upstream repository,
+Specify a new remote upstream repository:
 
-    git remote add upstream https://github.com/duckietown/lx-computer-vision
+```shell
+git remote add upstream https://github.com/duckietown/lx-computer-vision
+```
 
-Confirm that the new upstream repository was added to the list,
+Confirm that the new upstream repository was added to the list:
 
-    git remote -v
+```shell
+git remote -v
+```
 
 You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every exercise will prompt you to pull from the upstream repository, updating your exercises to the latest version (if available).
 
@@ -91,13 +102,17 @@ You can now push your work to your own repository using the standard GitHub work
 
 - 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not, e.g., a `daffy` one). You can check your current profile with:
 
+    ```shell
     dts profile list
+    ```
 
   To switch to an ente profile, follow the [Duckietown Manual DTS installation instructions](setup-dts).
 
-- 💻 Pull from the upstream remote to synch your fork with the upstream repo:
+- 💻 Pull from the upstream remote to synchronize your fork with the upstream repository:
 
+    ```shell
     git pull upstream ente
+    ```
 
 - 💻 Make sure your Duckietown Shell is updated to the latest version: `pipx upgrade duckietown-shell`
 
@@ -105,23 +120,21 @@ You can now push your work to your own repository using the standard GitHub work
 
 - 💻 Update your laptop/desktop: `dts desktop update`
 
-- 🚙 Update your Duckiebot: `dts duckiebot update ROBOTNAME` (where `ROBOTNAME` is the name of your Duckiebot - real or virtual.)
+- 🚙 Update your Duckiebot: `dts duckiebot update DUCKIEBOT_NAME` (where `DUCKIEBOT_NAME` is the name of your physical or virtual Duckiebot.)
 
 (lx-code-editor-lx-computer-vision)=
 ## Launching the Code Editor
 
-```{important}
-All `dts code` commands should be executed inside the root directory of the learning experience.
-```
+{{ dt_lx_dts_code_root_important }}
 
 Making sure you are inside the path of the specific learning experience you want to work on, open the code editor by running:
 
-```
+```shell
 dts code editor
 ```
 
 Wait for a URL to appear on the terminal, then click on it or copy-paste it in the address bar
-of your browser to access the code editor. The first thing you will see in the code editor are a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
+of your browser to access the code editor. The first thing you will see in the code editor is a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
 
 (lx-navigating-notebooks-computer-vision)=
 ## Walkthrough of Notebooks
@@ -132,49 +145,49 @@ Inside the code editor, use the navigator sidebar on the left-hand side to navig
 Follow the instructions on the notebook and work through them in sequence.
 
 In many cases the last notebook will instruct you to write some code inside the
-learning experience directory. 
+learning experience directory.
 
 Once you have done that you will need to **build** your code before **testing** it.
 
 (lx-matrix-testing-computer-vision)=
 ### Testing with the Duckiematrix
 
-To test your code in the Duckiematrix you will need a virtual robot attached to an ongoing session. 
+To test your code in the Duckiematrix, attach either a physical or virtual robot to a Duckiematrix Entity. The steps below use a virtual robot; for instructions on attaching a physical robot, see [](introduction-duckiematrix-connect-db-to-remote-engine).
 
 (lx-create-vbot-computer-vision)=
 #### 1. Creating and starting virtual Duckiebot
 
 You can create one with the command:
 
-```
-dts duckiebot virtual create --type duckiebot --configuration DB21J [VBOT]
+```shell
+dts duckiebot virtual create --type duckiebot --configuration DB21J ROBOT_NAME
 ```
 
-where `[VBOT]` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete). Make sure to remember your robot (host)name for later.
+where `ROBOT_NAME` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete). Make sure to remember your robot (host)name for later.
 
 Then you can start your virtual robot with the command:
 
-```
-dts duckiebot virtual start [VBOT]
+```shell
+dts duckiebot virtual start ROBOT_NAME
 ```
 
 You should see it with a status `Booting` and finally `Ready` if you look at `dts fleet discover`:
 
-```
+```text
      | Hardware |   Type    | Model |  Status  | Hostname 
 ---  | -------- | --------- | ----- | -------- | ---------
-[VBOT] |  virtual | duckiebot | DB21J |  Ready   | [VBOT].local
+ROBOT_NAME |  virtual | duckiebot | DB21J |  Ready   | ROBOT_NAME.local
 ```
 
 Once you are done for the day, do not forget to stop your virtual robot:
 
-```
-dts duckiebot virtual stop [VBOT]
+```shell
+dts duckiebot virtual stop ROBOT_NAME
 ```
 
 If in doubt, you can check the status of your virtual scuderia at any time with:
 
-```
+```shell
 dts duckiebot virtual list
 ```
 
@@ -183,13 +196,11 @@ dts duckiebot virtual list
 
 Now that your virtual robot is ready, you can start the Duckiematrix. From this exercise directory do:
 
-```
+```shell
 dts code start_matrix
 ```
 
-```{note}
 {{ dt_workspace_start_matrix_split_note.format(dt_workspace_note_prefix) }}
-```
 
 You should see the Unity-based Duckiematrix simulator start up. For more details about using
 the Duckiematrix see [](the-duckiematrix-manual).
@@ -214,45 +225,43 @@ Duckiebot images with a calibrated camera.
 
 To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
 
-```{note}
-For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
-```
+{{ dt_duckiematrix_webgl_browser_note }}
 
 (lx-code-build-computer-vision)=
 ### Building the Code
 
 From inside the learning experience root directory, you can build your code with:
 
-```
+```shell
 dts code build -R ROBOT_NAME
 ```
 
-where `ROBOT_NAME` can be either a physical or virtual robot. 
+where `ROBOT_NAME` can be either a physical or virtual robot.
 
 (lx-code-test-computer-vision)=
 ### Testing on a Duckiebot or in the Duckiematrix
 
-🚙 To test your code on your real Duckiebot you can do:
+🚙 To test your code on your physical Duckiebot you can do:
 
-```
-dts code workbench -R [ROBOT_NAME]
+```shell
+dts code workbench -R DUCKIEBOT_NAME
 ```
 
 💻 To test your code on a virtual robot in the Duckiematrix:
 
-```
-dts code workbench -m -R [VIRTUAL_ROBOT_NAME]
+```shell
+dts code workbench -m -R ROBOT_NAME
 ```
 
 (note the `-m` flag which means that we are running in the `matrix`.)
 
-In another terminal, you can launch the `noVNC` viewer, which can be useful to interact with the virtual robot in different ways depending on the specific LX.
+In another terminal, you can launch the `noVNC` viewer, which can be useful to interact with the virtual robot in different ways depending on the specific LX:
 
-```
-dts code vnc -R [ROBOT_NAME]
+```shell
+dts code vnc -R ROBOT_NAME
 ```
 
-where `[ROBOT_NAME]` could be the real or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
+where `ROBOT_NAME` could be the physical or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
 
 In the noVNC desktop, click on the icon marked "VLS - Visual Lane Servoing Exercise" and then you should follow the prompts
 in the terminal where you ran `dts code workbench`.
@@ -266,23 +275,14 @@ in the terminal where you ran `dts code workbench`.
 Visual Servoing relies exclusively on images to control the Duckiebot. 
 ```
 
-
 ## Troubleshooting
 
 ```{trouble}
 When running `dts code editor` I get an error: `dts :  No valid DTProject found at '/path/to/lx'`
 ---
-Make sure your are executing the commands from inside a learning experience folder (e.g., `*/lx-computer-vision/`)
+Make sure you are executing the commands from inside a learning experience folder (e.g., `*/lx-computer-vision/`)
 ```
 
-```{trouble}
-My virtual robot (named, e.g., `VBOT`) hangs indefinitely when trying to update it.
----
-Try to restart it with: `dts duckiebot virtual restart VBOT`
-```
+{{ dt_lx_virtual_robot_update_trouble }}
 
-```{trouble}
-When I run `dts code vnc` nothing happens in the browser. 
----
-It can take some time for noVNC to start (10-45 seconds, depending on computer specifications), wait. 
-```
+{{ dt_lx_vnc_startup_trouble }}

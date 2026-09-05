@@ -3,13 +3,7 @@
 :keywords: Duckiebot, calibration, camera calibration, extrinsics camera calibration
 ```
 
-```{needget}
-- A working Duckiebot: [](ops-db-subsys-testing-intro)
-- A functional `dts` installation: [](setup-dts)
-- A camera calibration pattern, e.g., as provided in a Duckiebox.
----
-- A Duckiebot with the extrinsics camera calibration performed.
-```
+{{ dt_camera_calibration_needget }}
 
 (operation-camera-extrinsic-calibration)=
 # Extrinsic camera calibration procedure
@@ -31,15 +25,9 @@ The easiest way to perform the extrinsic camera calibration procedure for your D
 The `Extrinsics Calibrator`.
 ```
 
-To open the `Extrinsics Calibrator`, run:
+{{ dt_duckiebot_ping_attention }}
 
-```shell
-dts duckiebot calibrate_extrinsics DUCKIEBOT_NAME
-```
-
-```{note}
-{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "calibrate_extrinsics") }}
-```
+{{ dt_duckietown_viewer_launch_tabs.format("Extrinsics Calibrator", "calibrate_extrinsics") }}
 
 Note the keys in the table below.
 
@@ -70,9 +58,13 @@ Note the keys in the table below.
 To perform the extrinsic calibration procedure:
 
 1. (optional) Click the `Check error` switch to enforce a pose error bound for your Duckiebot's camera based on its known intrinsic parameters (a trapezoid in the image under `Camera View` should appear).
+
 2. Position your Duckiebot on the calibration board such that it faces the checkerboard pattern, your Duckiebot's axle is parallel to and directly above the **large** `y`-axis of the calibration board, and the axis that is perpendicular to and midway between your Duckiebot's axle is directly above the **large** `x`-axis of the calibration board (if the `Check error` switch is set to `on`, the trapezoid in the image under `Camera View` should turn from black to blue).
+
 3. Click the `Calibrate` button.
+
 4. Wait for the spinner to disappear.
+
 5. (optional) Click the `Project` switch to see a top-down view of what your Duckiebot sees under `Projection`.
 
 ```{figure} ../../_images/calibrations/camera/extrinsics-calibration-setup.jpg
@@ -80,7 +72,6 @@ To perform the extrinsic calibration procedure:
 :align: center
 :alt: Duckiebot extrinsics camera calibration setup
 :name: extrinsic_setup
-
 
 Extrinsic calibration setup: align the Duckiebot with the marks on the calibration pattern, on a white backdrop.
 ```
@@ -122,11 +113,6 @@ The `Camera Extrinsic` panel on the `Robot` page of the `Dashboard`.
 Within the `Camera Extrinsic` panel, under `Local`, you should see a tick next to `Completed`, the calibration date next to `Calibration date` and `/data/config/calibrations/camera_extrinsic/DUCKIEBOT_NAME.yaml` next to `Files`.
 ```
 
-
 ## Troubleshooting
 
-```{trouble}
-When I open a calibrator window, I do not see images at the center but a gray loading screen instead. I know the camera otherwise works on my Duckiebot.
----
-Press the refresh icon on the top right of the calibrator window to restart the image stream.
-```
+{{ dt_calibrator_image_loading_trouble }}

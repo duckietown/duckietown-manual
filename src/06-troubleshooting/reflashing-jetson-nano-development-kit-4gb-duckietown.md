@@ -1,23 +1,29 @@
-(db-troubleshooting-jetson-reflashing)=
-# Reflashing Jetson Nano Development Kit 4GB - Duckiebox model
-
 ```{seo}
 :description: How to re-flash the on-board computer.
 :keywords: Duckietown, Duckiebot, on-board computer, re-flash
 ```
 
+(db-troubleshooting-jetson-reflashing)=
+# Reflashing Jetson Nano Development Kit 4GB - Duckiebox model
+
 This chapter describes how to re-flash the Jetson Nano 4GB Developer Kit that comes inside the Duckiebox.
 
 ```{needget}
-* Completed [](setup-sw-dependencies-installation) with Ubuntu running natively.
-* An NVIDIA Jetson Nano Developer Kit (`4 GB`) with eMMC memory.
-* A power source for the Jetson Nano.
-* A Micro USB cable with data connections that can connect to your computer or a Micro USB to USB type A adapter.
-* A method for shorting pins (e.g., jumper, F-F Dupont cable, stripped wire, paper clip, screwdriver, etc.).
-* (optional) An HDMI cable and screen.
-* (optional) A serial cable that can connect to your computer (to see detailed UART logs).
+- Completed [](setup-sw-dependencies-installation) with Ubuntu running natively.
+
+- An NVIDIA Jetson Nano Developer Kit (`4 GB`) with eMMC memory.
+
+- A power source for the Jetson Nano.
+
+- A Micro USB cable with data connections that can connect to your computer or a Micro USB to USB type A adapter.
+
+- A method for shorting pins (e.g., jumper, F-F Dupont cable, stripped wire, paper clip, screwdriver, etc.).
+
+- (optional) An HDMI cable and screen.
+
+- (optional) A serial cable that can connect to your computer (to see detailed UART logs).
 ---
-* A re-flashed NVIDIA Jetson Nano Developer Kit (`4 GB`) with eMMC memory.
+- A re-flashed NVIDIA Jetson Nano Developer Kit (`4 GB`) with eMMC memory.
 ```
 
 ```{attention}
@@ -54,10 +60,12 @@ Without installing this patch, the on-board memory is not recognized correctly a
 
 Flashing a Jetson Nano is different to [flashing an SD card](setup-db-sd-card-flashing-intro) or an Ubuntu ISO on a thumbdrive:
 
-* Ubuntu is the OS running on your computer (base station).
-* Jetson Nanos are tiny but mighty computers and require an OS to function.
+- Ubuntu is the OS running on your computer (base station).
+
+- Jetson Nanos are tiny but mighty computers and require an OS to function.
 In the same way as your computer has a BIOS (that you may have accessed in the above step to, for example, change the boot order), without installing a "basic" OS on the Jetson Nano, it will not know where to boot from (and much more).
-* Flashing an SD card provides a more "sophisticated" OS for the Jetson Nano, that will be used as an alternative to the "basic" one installed through this procedure.
+
+- Flashing an SD card provides a more "sophisticated" OS for the Jetson Nano, that will be used as an alternative to the "basic" one installed through this procedure.
 Nonetheless, it is necessary to install a "basic" OS on the Jetson Nano to let it know to read from the SD card when booting.
 ```
 
@@ -66,12 +74,14 @@ Nonetheless, it is necessary to install a "basic" OS on the Jetson Nano to let i
 
 The terminology regarding Jetson Nanos may be confusing, so let us clarify a few terms:
 
-* The Jetson Nano *module* (often referred to as the Jetson Nano) is the small board underneath the heat sink.
+- The Jetson Nano *module* (often referred to as the Jetson Nano) is the small board underneath the heat sink.
 These modules are all manufactured by NVIDIA (i.e., they are "original").
-* The Jetson Nano *developer board* is the carrier board onto which the Jetson Nano *module* attaches.
+
+- The Jetson Nano *developer board* is the carrier board onto which the Jetson Nano *module* attaches.
 This is the PCB with all of the peripheral plugs (e.g., camera ports, USB ports, HDMI port, GPIO pins, etc.).
 These boards are no longer manufactured by NVIDIA but a number of third-party carrier boards exist on the market.
-* The combination of a Jetson Nano *module* and Jetson Nano *developer board* is a Jetson Nano *Developer Kit*.
+
+- The combination of a Jetson Nano *module* and Jetson Nano *developer board* is a Jetson Nano *Developer Kit*.
 In Duckietown, we sometimes call Jetson Nano Developer Kits with *original* developer boards "Green Jetsons" because of the color of their packaging (these are no longer on the market).
 We also sometimes call the Jetson Nano Developer Kits with *third party* developer boards "Blue Jetsons".
 In theory, these kits should come in blue colored packaging.
@@ -136,7 +146,7 @@ The fan in the figures below is unnecessary for this procedure and can be ignore
 A Jetson Nano Developer Kit (`4 GB`) with a third party carrier board.
 ```
 
-#### Identifing the FC REC pin
+#### Identifying the FC REC pin
 
 To (over)write the Jetson Nano's (carrier board...) on-board memory, which in the case of this document is assumed to be a `16 GB` eMMC hard drive, we need to turn the Jetson Nano on while in `forced recovery` mode.
 To do so, we need to first identify the `FC REC` pin placed underneath the Jetson Nano module, near the SD card slot, as shown in {numref}`fig:02-JN-ForcedRecoveryPins`.
@@ -216,6 +226,7 @@ This passage is not necessary, and can be skipped.
 To gain a better understanding of what will happen in the next steps, you can perform either or both of the following two steps:
 
 1. Connect the Jetson Nano to a screen through an HDMI cable (not shown in the figure below).
+
 2. Connect the Jetson Nano to your computer through a serial connector ([example][serial-cable-link]), making sure to "flip" the transmission (TXD) and receiving (RXD) channels between the connector and the Jetson Nano (i.e., connect: GND ↔︎GND, TXD ↔︎RXD, RXD ↔︎TXD). These pins are on the same array as the `FC REC` pin and are labeled `UART TXD` and `UART RXD`, respectively.
 
 ```{figure} ../_images/troubleshooting/on-board_computer/07-optional-uart-connection.jpg
@@ -266,7 +277,7 @@ From your computer, run:
 ```shell
 lsusb
 ---
-```shell
+```text
 ...
 Bus 001 Device 012: ID 0955:7f21 NVIDIA Corp. APX
 ...
@@ -288,7 +299,7 @@ sudo ./flash.sh -x 0x21 jetson-nano-emmc sda1
 ````{note}
 The resulting output should look like the following:
 
-```shell
+```text
 ...
 [ 207.0591 ] Flashing completed
 
@@ -365,7 +376,7 @@ Try again, while following the instructions more carefully.
 ````{admonition} Successful flash logs
 :class: dropdown
 
-```
+```text
 tani@tani-ubuntu:~/jn/Linux_for_Tegra$ sudo ./flash.sh -x 0x21 jetson-nano-emmc sda1
 ###############################################################################
 # L4T BSP Information:

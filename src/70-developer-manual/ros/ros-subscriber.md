@@ -1,16 +1,15 @@
-(ros-sub-node)=
-# ROS Subscriber
-
 ```{seo}
 :description: Defining ROS subscribers in Duckietown.
 :keywords: Duckietown, ROS, subscribers
 ```
 
+(ros-sub-node)=
+# ROS Subscriber
 
 ```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
+- A Duckietown robot turned ON and visible on `dts fleet discover`
 ---
-* Learn how to create a new **ROS Node** receiving messages using a **ROS Subscriber**
+- Learn how to create a new **ROS Node** receiving messages using a **ROS Subscriber**.
 ```
 
 The most common communication pattern in Robotics is known as
@@ -20,7 +19,6 @@ In this section, we will learn to create a **ROS Subscriber**.
 
 The general concept is simple: a subscriber has the job of listening for messages about a specific _topic_
 that are published by other ROS nodes (using **ROS Publishers**) over a ROS network.
-
 
 (ros-sub-node-create)=
 ## Create Subscriber ROS Node
@@ -59,23 +57,21 @@ if __name__ == '__main__':
     rospy.spin()
 ```
 
-```{note}
-Using the super class `DTROS` provided by the Python module `duckietown.dtros` is not mandatory but it
-is highly suggested as it provides a lot of useful features that plain ROS does not. More on these later.
-```
+{{ dt_dtros_superclass_note }}
 
 We now need to the tell our file system that we want our file `my_subscriber_node.py` be treated
 as an executable file. We do so by running the following command from the root of our DTProject:
 
-    chmod +x ./packages/my_package/src/my_subscriber_node.py
-
+```shell
+chmod +x ./packages/my_package/src/my_subscriber_node.py
+```
 
 (ros-sub-define-launcher)=
 ## Define launcher
 
 We now create a new launcher file `./launchers/my-subscriber.sh` with the following content inside,
 
-```shell
+```bash
 #!/bin/bash
 
 source /environment.sh
@@ -90,27 +86,32 @@ rosrun my_package my_subscriber_node.py
 dt-launchfile-join
 ```
 
-
 ## Launch the Subscriber node
 
-This part assumes that you have a Duckiebot [up and running](duckiebot-setup-intro) with a known hostname, e.g., `ROBOT_NAME`.
-Let us make sure that our robot is ready by executing the command,
+This part assumes that you have a Duckiebot [up and running](duckiebot-setup-intro) with a known hostname, e.g., `DUCKIEBOT_NAME`.
+Let us make sure that our robot is ready by executing the command:
 
-    ping ROBOT_NAME.local
+```shell
+ping DUCKIEBOT_NAME.local
+```
 
 If you can ping the robot, you are good to go.
 
-Let us now re-compile our project using the command
+Let us now re-compile our project using the command:
 
-    dts devel build -H ROBOT_NAME -f
+```shell
+dts devel build -H DUCKIEBOT_NAME -f
+```
 
 and run it using the newly defined launcher (we use the flag `-L/--launcher` to achieve this):
 
-    dts devel run -H ROBOT_NAME -L my-subscriber
-
-This will show the following messages before hanging,
-
+```shell
+dts devel run -H DUCKIEBOT_NAME -L my-subscriber
 ```
+
+This will show the following messages before hanging:
+
+```text
 ...
 ==> Launching app...
 [INFO] [1693000997.289437]: [/my_subscriber_node] Initializing...
@@ -123,9 +124,11 @@ This will show the following messages before hanging,
 
 This is because the ROS Subscriber is now waiting for messages to come in. Let us open a new terminal at the
 root of the project and launch an instance of the publisher we built previously. We can do so by running the
-following command,
+following command:
 
-    dts devel run -H ROBOT_NAME -L my-publisher -n publisher
+```shell
+dts devel run -H DUCKIEBOT_NAME -L my-publisher -n publisher
+```
 
 ```{note}
 We need to add the option `-n publisher` to tell `dts` to allow multiple instances of the same project to
@@ -133,9 +136,9 @@ run simultaneously.
 ```
 
 You should notice that messages will start to appear on the subscriber side. The expected output is the
-following,
+following:
 
-```
+```text
 ...
 ==> Launching app...
 [INFO] [1693000997.289437]: [/my_subscriber_node] Initializing...
@@ -143,11 +146,10 @@ following,
 [INFO] [1693000997.297660]: [/my_subscriber_node] Found 0 user configuration files in '/data/config/nodes/generic'
 [INFO] [1693000997.298273]: [/my_subscriber_node] Found 0 user configuration files in '/data/config/nodes/my_subscriber_node'
 [INFO] [1693000997.303460]: [/my_subscriber_node] Health status changed [STARTING] -> [STARTED]
-[INFO] [1693001092.577549]: I heard 'Hello from ROBOT_NAME!'
-[INFO] [1693001093.557725]: I heard 'Hello from ROBOT_NAME!'
+[INFO] [1693001092.577549]: I heard 'Hello from DUCKIEBOT_NAME!'
+[INFO] [1693001093.557725]: I heard 'Hello from DUCKIEBOT_NAME!'
 ...
 ```
-
 
 ```{admonition} Congratulations 🎉
 You just built and run your first Duckietown-compliant and Duckiebot-compatible ROS subscriber.

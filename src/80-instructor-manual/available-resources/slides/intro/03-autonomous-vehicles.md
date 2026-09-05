@@ -17,7 +17,6 @@ The "Levels of Autonomy" define a taxonomy introduced by the US governmental bod
 :alt: Levels of Autonomy
 ```
 
-
 ## Visions for Autonomous Vehicles
 
 In connection with the levels introduced previously, different stakeholders view the pathway to achieving full self-driving cars differently. In this video, we present some of those viewpoints and consider their pros and cons.
@@ -32,5 +31,3 @@ In these slides, we give an overview of some of the core challenges that develop
 
 ```{slides} ../../../../_assets/instructor-manual/challenges.pdf
 ```
-
-

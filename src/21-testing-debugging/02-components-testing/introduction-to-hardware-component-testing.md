@@ -1,10 +1,10 @@
-(db-testing-hw-components)=
-# Testing the Hardware Components
-
 ```{seo}
 :description: How to test hardware components on a Duckiebot using the Duckietown Dashboard
 :keywords: Duckietown, Duckiebot, Dashboard, test, hardware components
 ```
+
+(db-testing-hw-components)=
+# Testing the Hardware Components
 
 ```{needget}
 - A booted Duckiebot: [](duckiebot-boot)

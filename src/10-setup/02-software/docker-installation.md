@@ -1,10 +1,10 @@
-(setup-sw-docker)=
-# Docker
-
 ```{seo}
 :description: How to install and set up Docker on your computer. This is a necessary step to use Duckietown software.
 :keywords: Duckietown, Duckiebot, Docker, computer setup
 ```
+
+(setup-sw-docker)=
+# Docker
 
 This section describes how to install and set up Docker on your computer.
 
@@ -108,7 +108,6 @@ This step is unnecessary inside Workspaces.
 
 :::::
 
-
 (dt-account-dockerhub-make-access-token)=
 ### Logging in Docker Hub
 
@@ -123,7 +122,6 @@ We will need to provide login credentials for Docker Hub to the Docker client:
     ```
 
     Where `DOCKERHUB_USERNAME` is your Docker Hub username, created during [](setup-account-docker). You will then be prompted for your password, paste the access token we created earlier, and press <kbd>Enter</kbd>.
-
 
 (docker-checkpoint)=
 ## Checkpoint
@@ -176,4 +174,3 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
-

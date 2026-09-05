@@ -1,17 +1,21 @@
-(sd-card-update)=
-# Updating an existing SD card
-
 ```{seo}
 :description: Instructions on how to update an SD card previously flashed to initialize a Duckiebot, Duckiedrone, Traffic Light or Watchtower.
 :keywords: Duckietown, Duckiebot, Duckiedrone, flashing, update, SD card, Traffic Light, Watchtower, dts sd_card update
 ```
 
+(sd-card-update)=
+# Updating an existing SD card
+
 ```{needget}
-* [Functional DTS installation](setup-dts)
-* A previously flashed Duckietown SD card
-* An SD card adapter appropriate for the computer you are using to flash the SD card
-* A broadband internet connection
-* 20 - 40 mins, depending on internet connection speed
+- [Functional DTS installation](setup-dts)
+
+- A previously flashed Duckietown SD card
+
+- An SD card adapter appropriate for the computer you are using to flash the SD card
+
+- A broadband internet connection
+
+- 20 - 40 mins, depending on internet connection speed
 ---
 An updated SD card for your Duckietown robot.
 ```
@@ -24,6 +28,8 @@ To update an initialized SD card, run the following command, where `TYPE` and `C
 ```shell
 dts sd_card update --type TYPE --configuration CONFIGURATION [--hostname HOSTNAME] [--wifi WIFI] [--country COUNTRY]
 ```
+
+{{ dt_workspace_sd_card_delegation_note }}
 
 At least one of `--hostname`, `--wifi`, or `--country` is required; only the supplied settings are changed. Some disk images store Wi-Fi and country settings together, in which case you must provide both `--wifi` and `--country` in the same command.
 
@@ -38,4 +44,3 @@ To see all available options, run:
 ```shell
 dts sd_card update --help
 ```
-

@@ -1,11 +1,10 @@
-
-(slides-and-recordings-architectures)=
-# Architectures in Robotics
-
 ```{seo}
 :description: Duckietown introduction to robot architectures - logical, physical, control, stateful.
 :keywords: state, sensorimotor control, Braitenberg Vehicles, BVs, logical architecture, architecture, physical architecture, computational architecture, feedback
 ```
+
+(slides-and-recordings-architectures)=
+# Architectures in Robotics
 
 One of the first and most fundamental choices in the design of the software for a robotic system is the choice of how to structure the architecture. In this series of videos, we present some options.
 
@@ -16,7 +15,6 @@ In some sense, a sensorimotor architecture is the simplest possible robot archit
 ```{vimeo} 546397378
 :alt: Sensorimotor Architecture
 ```
-
 
 ## Stateful Architectures
 
@@ -30,7 +28,6 @@ The following slides cover sensorimotor and stateful architectures.
 
 ```{slides} ../../../../_assets/instructor-manual/autonomy-architectures.pdf
 ```
-
 
 ## Logical and Physical Architectures
 

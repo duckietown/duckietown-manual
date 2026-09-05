@@ -10,7 +10,6 @@ Every time there is a large project, with many contributors and the need for cod
 
 Duckietown uses **Git** as VCS and [GitHub](https://github.com) as a service provider for it. The Duckietown organization page on GitHub is [github.com/duckietown](http://github.com/duckietown).
 
-
 ## Monolithicity versus Modularity
 
 Whether a software project should be monolithic or modular is
@@ -23,24 +22,24 @@ and only later transitioned to a full modular approach.
 
 Duckietown distinguishes between **modules** and **nodes**:
 
-* A **module** is a high-level package (for example, _autonomous-driving_).
+- A **module** is a high-level package (for example, _autonomous-driving_).
 
-* A **node** is the smallest software entity, usually responsible for one task (for example, _traffic-sign-detection_). Nodes always reside inside modules.
+- A **node** is the smallest software entity, usually responsible for one task (for example, _traffic-sign-detection_). Nodes always reside inside modules.
 
 Each module has its own repository under the Duckietown GitHub organization. Personal or course-specific modules can live in separate GitHub accounts while remaining fully compatible with the ecosystem.
 
 ```{tip}
 Be brave, Duckietown has hundreds of repositories.
 ```
+
 (dev-basics-git-terminology)=
-## Git
+## Git Terminology
 
 The most frequently used Git concepts are summarised below.
 
 ### **Repository**
 
 A repository (or _repo_) holds the complete file set for a project plus the entire revision history, i.e., the history of every change done on each file.
-
 
 ### **Branch**
 
@@ -59,7 +58,7 @@ the `master` or `main` branch.
 
 Branches are used in different scenarios, allowing different developers to work simultaneously on their own task without having their work affect or be affected by the others.
 
-For example, after a project is released with version `1.0.0`, one team might be tasked to develop a new feature for the version `1.1.0` milestone, while another team is asked to fix a user-reported bug which be patched in a version `1.0.1`.
+For example, after a project is released with version `1.0.0`, one team might be tasked to develop a new feature for the version `1.1.0` milestone, while another team is asked to fix a user-reported bug that will be patched in version `1.0.1`.
 
 Branch operations, like switching between branches or checking which is the active branch, are performed through the command `git branch`.
 
@@ -69,23 +68,24 @@ A commit is an atomic set of changes recorded in the repository history and is i
 
 When you create/delete/edit one or more files in a repository,
 and you are confident enough about those changes, you can commit (or, "save" them to the online version system) them to the branch using the workflow:
-* `git add <file(s)>`, e.g., `git add .` to indicate all changes
-* `git commit -m "Replace me with some informative message regarding the commit."`.
+
+- `git add <file(s)>`, e.g., `git add .` to indicate all changes
+
+- `git commit -m "Replace me with some informative message regarding the commit."`.
 
 ```{note}
-A commit is not a snapshot (or a copy) of the entire repository
-at a given point in time. Each commit contains only the incremental
-difference from the previous commit, called *delta* in Git.
+A commit represents a snapshot of the tracked files at a given point in time.
+Git stores these snapshots efficiently by reusing unchanged content from earlier commits.
+The difference between two commits is commonly called a _delta_.
 ```
 
 A chain of commits in which all the ancestors are included makes a
 branch. Since every commit is linked to its parent, a branch is
-simply a *pointer* to a commit (the full chain of commits can always
+simply a _pointer_ to a commit (the full chain of commits can always
 be reconstructed from the commit).
 In other words, you can think of branches as human friendly labels
 for commits. Every time you create a new commit, the pointer of the
 current branch advances to the newly created commit.
-
 
 ### **Tag**
 
@@ -96,7 +96,6 @@ a different commit.
 Tags are commonly used for labeling commits that constitute
 milestones in the project development timeline, for example a release.
 
-
 ### **Fork**
 
 A fork is basically a copy of someone else's repository.
@@ -104,10 +103,9 @@ Usually, you cannot create branches or change code in other
 people's repositories, that is why you create your own copy of it.
 This is called `forking` and allows you to experiment without affecting the original.
 
-
 ### **Remote**
 
-A git *remote* is a copy of your repository hosted by a Git service
+A git _remote_ is a copy of your repository hosted by a Git service
 provider, e.g. [GitHub](https://github.com). Remotes allow you to
 share (`push`) your commits and branches so that other developers can `fetch`
 them. Remotes are the same as local repositories, but they are reachable
@@ -116,7 +114,6 @@ over the internet.
 You can use the commands `git fetch` and `git push` to bring your
 local copy of the repository in sync with a remote, by downloading
 commits or uploading new commits respectively.
-
 
 ### **Merging branches**
 
@@ -146,7 +143,6 @@ PRs are a better practice than direct merging, as it provides an extra-layer of 
 To fork a repo you have to go to the repository's webpage and click
 on the fork button in the upper right corner.
 
-
 ### **Clone a repository**
 
 Cloning a repository is the act of creating a local copy of a remote
@@ -156,29 +152,32 @@ still do not have a local copy of it.
 To clone a repository, either copy the HTTPS or SSH URL given on
 the repository's webpage, then:
 
-    git clone [REPOSITORY-URL]
+```shell
+git clone [REPOSITORY-URL]
+```
 
 This will create a directory in the current working path with
 the same name of the repository and the entire history of commits
 will be downloaded onto your computer.
 
-
 ### **Create a new branch**
 
 The command for creating a new branch is a little bit
-counter-intuitive, but you will get use to it:
+counter-intuitive, but you will get used to it:
 
-    git checkout -b [NEW-BRANCH-NAME]
+```shell
+git checkout -b [NEW-BRANCH-NAME]
+```
 
 This creates a new branch pointing at the same commit your
-currently active branch is pointing at. In other words, you will
+currently active branch points to. In other words, you will
 end up with two branches pointing at the same commit. Note that
 after you issue this command, the newly created branch becomes
 your active branch.
 
 ### **Inspecting working tree status**
 
-In Git, the term *working tree* indicates all the changes
+In Git, the term _working tree_ indicates all the changes
 that are not committed yet. You can think of it as your workspace.
 When you create a new commit, the hash for the current working tree
 is computed and assigned to the new commit together with the changes
@@ -191,21 +190,25 @@ You cannot create commits from a clean working tree.
 Use the command `git status` to inspect the status of your working
 tree.
 
-
 ### **Create a new commit**
 
 A commit is created through a two-step process. First, mark all the
 changes that will be part of the new commit:
 
-    git add <file(s)>
+```shell
+git add <file(s)>
+```
 
 ```{tip}
 The command `git status` will always show you which changes are
 marked to be used for a new commit and which changes are not.
 ```
+
 Second, create the actual commit:
 
-    git commit -m "Replace me with a really informative message."
+```shell
+git commit -m "Replace me with a really informative message."
+```
 
 to create a new commit. Replace `[COMMIT-MESSAGE]` with your
 notes about what changes this commit includes.
@@ -216,37 +219,43 @@ Do not underestimate the value of informative commit messages. When looking back
 
 ### **Push changes**
 
-Use the following command to *push* your local changes to the remote
-repository so that the two repositories can get in sync.
+Use the following command to _push_ your local changes to the remote
+repository so that the two repositories can get in sync:
 
-    git push origin [BRANCH-NAME]
-
+```shell
+git push origin [BRANCH-NAME]
+```
 
 ### **Fetch changes**
 
 If you suspect that new changes might be available on the remote
-repository that are not synced to your local repo, you can use the command
+repository that are not synced to your local repo, you can use the command:
 
-    git fetch origin [BRANCH-NAME]
+```shell
+git fetch origin [BRANCH-NAME]
+```
 
 to download the new commits available on the remote (if any).
 These new changes will be appended to the branch called
 `origin/[BRANCH-NAME]` in your local repository.
 
-If you want to apply them to your current branch, use the command
+If you want to apply them to your current branch, use the command:
 
-    git merge origin/[BRANCH-NAME]
+```shell
+git merge origin/[BRANCH-NAME]
+```
 
-Use the command `git pull origin/[BRANCH-NAME]` to perform *fetch*
-and then *merge*.
-
+Use the command `git pull origin [BRANCH-NAME]` to perform _fetch_
+and then _merge_.
 
 ### **Delete a branch locally and remotely**
 
 Unlike the vast majority of git commands, the delete one does not
 work on the current branch. You can delete other branches with:
 
-    git branch -d [BRANCH-NAME]
+```shell
+git branch -d [BRANCH-NAME]
+```
 
 If you want to delete your current branch, you will need to checkout
 another branch first. This prevents ending up with a repository
@@ -255,7 +264,9 @@ with no branches.
 To propagate the deletion of a branch to the remote repository,
 run the command:
 
-    git push origin --delete [BRANCH-NAME]
+```shell
+git push origin --delete [BRANCH-NAME]
+```
 
 ### **Open a GitHub Issue**
 
@@ -268,45 +279,44 @@ you can (and should!) visit the [Duckietown developer manual issues page](https:
 Even better, you could fork this repo, fix the issue, and make a PR. We have a different manual with [tips and tricks on how to contribute to the Duckietown documentation system](https://docs.duckietown.com/daffy/devmanual-docs/intro.html).
 
 GitHub Issues are a crucial part of the lifecycle of a software product, as
-they provide a feedback loop that goes directly from the end-user to the  developers. You do not have to be a developer or an expert in software
+they provide a feedback loop that goes directly from the end user to the developers. You do not have to be a developer or an expert in software
 engineering to open an Issue, and issue cannot "break the build", so you can dare and open issues even when you are not super confident.
-
 
 ## Hands-On resources
 
 (dev-basics-git-resources)=
-### Git
+### Git Resources
 
 It is strongly recommended that all Git beginners follow this well done tutorial:
 
-* [Learn Git Branching](https://learngitbranching.js.org/).
+- [Learn Git Branching](https://learngitbranching.js.org/).
 
 Further reading material can be found at the following links:
 
-* [Git Handbook](https://guides.github.com/introduction/git-handbook/)
-* [Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
-* [GitHub hello world](https://guides.github.com/activities/hello-world/)
+- [Git Handbook](https://guides.github.com/introduction/git-handbook/)
+
+- [Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+
+- [GitHub hello world](https://guides.github.com/activities/hello-world/)
 
 (dev-basics-git-github-setup)=
 ### GitHub essentials
 
-To get the ball rolling, create a (free) account at https://github.com and configure your SSH keys for password-less access:
+To get the ball rolling, create a free [GitHub account](https://github.com) and configure your SSH keys for password-less access:
 
 1. [Generate a new SSH key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-2. [Add SSH key to your GitHub account](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
 
+2. [Add SSH key to your GitHub account](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
 
 ## Ask the community
 
-If you have any questions about how to use of Git in Duckietown,
+If you have any questions about how to use Git in Duckietown,
 [join the Duckietown Slack community](https://duckietown.com/join-slack) and ask away.
 
 <!--
 ### Keep your password stored locally
 
-```{warning}
-Follow this step only if you are working on your **personal** computer.
-```
+{{ dt_git_personal_computer_warning }}
 
 If you are setting up GitHub on your personal computer, and you use two-factor authentication, it might be time-consuming to provide credentials at every use. Instead, you can store your password on your computer with:
 
@@ -315,7 +325,7 @@ If you are setting up GitHub on your personal computer, and you use two-factor a
 (prelim-sw-ssh)=
 ## Connect with SSH
 
-To seamlessly access GitHub through terminal without having to enter the password each time, you can generate a SSH key pair and add it to the SSH agent. 
+To seamlessly access GitHub through terminal without having to enter the password each time, you can generate a SSH key pair and add it to the SSH agent.
 
 Follow the [SSH instructions on GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), or continue reading below.
 
@@ -336,9 +346,12 @@ Before you generate a new SSH key, you should check your local machine for exist
     ```
 
 3. Check the directory listing to see if you already have a public SSH key. By default, the filenames of supported public keys for GitHub are one of the following.
-    * `id_rsa.pub`
-    * `id_ecdsa.pub`
-    * `id_ed25519.pub`
+
+    - `id_rsa.pub`
+
+    - `id_ecdsa.pub`
+
+    - `id_ed25519.pub`
 
     ```{tip}
     If you receive an error that `~/.ssh` does not exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
@@ -355,22 +368,29 @@ Before you generate a new SSH key, you should check your local machine for exist
 1. Open Terminal.
 
 2. Enter `ls -al ~/.ssh` to see if existing SSH keys are present.
+
     ```
     $ ls -al ~/.ssh
     # Lists the files in your .ssh directory, if they exist
     ```
 
 3. Check the directory listing to see if you already have a public SSH key. By default, the filenames of supported public keys for GitHub are one of the following.
-    * `id_rsa.pub`
-    * `id_ecdsa.pub`
-    * `id_ed25519.pub`
+
+    - `id_rsa.pub`
+
+    - `id_ecdsa.pub`
+
+    - `id_ed25519.pub`
+
     ```{tip}
     If you receive an error that `~/.ssh` does not exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
     ```
 
 4. Either generate a new SSH key or upload an existing key.
-    * If you do not have a supported public and private key pair, or do not wish to use any that are available, generate a new SSH key.
-    * If you see an existing public and private key pair listed (for example, `id_rsa.pub` and `id_rsa`) that you would like to use to connect to GitHub, you can add the key to the ssh-agent.
+
+    - If you do not have a supported public and private key pair, or do not wish to use any that are available, generate a new SSH key.
+
+    - If you see an existing public and private key pair listed (for example, `id_rsa.pub` and `id_rsa`) that you would like to use to connect to GitHub, you can add the key to the ssh-agent.
 ````
 
 ````{tab-item} Windows
@@ -379,22 +399,29 @@ Before you generate a new SSH key, you should check your local machine for exist
 1. Open Git Bash.
 
 2. Enter `ls -al ~/.ssh` to see if existing SSH keys are present.
+
     ```
     $ ls -al ~/.ssh
     # Lists the files in your .ssh directory, if they exist
     ```
 
 3. Check the directory listing to see if you already have a public SSH key. By default, the filenames of supported public keys for GitHub are one of the following.
-    * `id_rsa.pub`
-    * `id_ecdsa.pub`
-    * `id_ed25519.pub`
+
+    - `id_rsa.pub`
+
+    - `id_ecdsa.pub`
+
+    - `id_ed25519.pub`
+
     ```{tip}
     If you receive an error that `~/.ssh` does not exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next step.
     ```
 
 4. Either generate a new SSH key or upload an existing key.
-    * If you do not have a supported public and private key pair, or do not wish to use any that are available, generate a new SSH key.
-    * If you see an existing public and private key pair listed (for example, `id_rsa.pub` and `id_rsa`) that you would like to use to connect to GitHub, you can add the key to the ssh-agent.
+
+    - If you do not have a supported public and private key pair, or do not wish to use any that are available, generate a new SSH key.
+
+    - If you see an existing public and private key pair listed (for example, `id_rsa.pub` and `id_rsa`) that you would like to use to connect to GitHub, you can add the key to the ssh-agent.
 ````
 `````
 
@@ -409,26 +436,33 @@ You can generate a new SSH key on your local machine. After you generate the key
 
 1. Open Terminal.
 
-2. Paste the text below, replacing the email used in the example with your GitHub email address.
+2. Paste the text below, replacing the email used in the example with your GitHub email address:
+
     ```
     ssh-keygen -t ed25519 -C "your_email@example.com"
     ```
+
     ````{note}
     If you are using a legacy system that does not support the Ed25519 algorithm, use:
     ```
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ```
     ````
+
     This creates a new SSH key, using the provided email as a label.
+
     ```
     > Generating public/private ALGORITHM key pair.
     ```
+
     When you are prompted to "Enter a file in which to save the key", you can press `Enter` to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key, in which case we recommend creating a custom-named SSH key. To do so, type the default file location and replace `id_ALGORITHM` with your custom key name.
+
     ```
     > Enter a file in which to save the key (/home/YOU/.ssh/id_ALGORITHM):[Press enter]
     ```
 
-3. At the prompt, type a secure passphrase.
+3. At the prompt, type a secure passphrase:
+
     ```
     > Enter passphrase (empty for no passphrase): [Type a passphrase]
     > Enter same passphrase again: [Type passphrase again]
@@ -913,12 +947,4 @@ From [GitHub](https://docs.github.com/en/authentication/connecting-to-github-wit
 ````
 `````
 
-```{seealso}
-If you have never heard of Git or GitHub before, you can do some background reading here:
-
-* See: [GitHub Hello World](https://guides.github.com/activities/hello-world/)
-
-* See: [GitHub Documentation](https://guides.github.com/introduction/Llow/)
-
-You can then go through the [Duckietown introduction to version control with Git](sec:developer_basics_git).
-```
+{{ dt_git_getting_started_seealso }}

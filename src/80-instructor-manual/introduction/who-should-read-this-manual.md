@@ -10,8 +10,9 @@ This information is intended to be a resource for people who are looking to **bu
 
 In other words, this is designed for:
 
-* **teachers**, instructors or professors;
-* **teaching assistants** (TAs) may also find the content here useful.
+- **teachers**, instructors or professors;
+
+- **teaching assistants** (TAs) may also find the content here useful.
 
 We recommend the materials specifically for **university or college** classes, either at the **graduate** or **undergraduate** level.
 
@@ -23,4 +24,5 @@ You also need not be developing a class on *robot autonomy* necessarily. The pla
 :scale: 40%
 :align: center
 :name: Duckietown instructors
+:alt: Duckietown instructors and students standing behind a Duckietown road layout.
 ```

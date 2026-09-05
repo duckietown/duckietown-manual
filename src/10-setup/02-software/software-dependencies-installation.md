@@ -1,15 +1,16 @@
-(setup-sw-dependencies)=
-# Software Dependencies
-
 ```{seo}
 :description: Learn how to install the software dependencies necessary to work with Duckietown.
 :keywords: Duckietown, Duckiebot, dependencies, computer setup
 ```
 
+(setup-sw-dependencies)=
+# Software Dependencies
+
 This section describes how to install the dependencies necessary to use Duckietown, in particular Duckiebots.
 
 ```{needget}
 - Completed [Computer OS setup](setup-computer)
+
 - Completed [Accounts setup](dt-account)
 ---
 A computer with the dependencies necessary to interact with Duckietown.
@@ -67,6 +68,8 @@ The version number for `pipx`.
 ```{note}
 If a test fails:
 1. Try following the instructions again.
+
 2. Check for a troubleshooting section at the bottom of the page.
+
 3. Join the [Duckietown community on Slack](https://duckietown.com/join-slack), where you can request an invitation to the [Duckietown Stack Overflow team](https://stackoverflowteams.com/c/duckietown), and search for previous solutions.
 ```

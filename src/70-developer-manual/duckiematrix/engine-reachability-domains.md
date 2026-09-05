@@ -1,10 +1,10 @@
-(dtmatrix-domains)=
-# Engine Reachability Domains
-
 ```{seo}
 :description: The Duckiematrix Engine reachability domains.
 :keywords: Duckietown, Duckiematrix, Engine, reachability domains.
 ```
+
+(dtmatrix-domains)=
+# Engine Reachability Domains
 
 This chapter describes the Duckiematrix `Engine` reachability domains.
 
@@ -25,9 +25,11 @@ Depending on where the `Renderers` are (logically) located within the `Network` 
 
 We can distinguish between three different `Engine` reachability domains:
 
-* Local machine only.
-* Local network only.
-* Global network (Internet).
+- Local machine only.
+
+- Local network only.
+
+- Global network (Internet).
 
 To run a local `Engine` using the embedded `sandbox` `Map`, run:
 

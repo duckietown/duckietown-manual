@@ -8,16 +8,17 @@
 
 [Currently supported `ente` learning experiences for Duckiebots](ente-supported-lxs) share a common structure and features.
 
-Each LX is hosted in a set of repositories in the [Duckietown organization GitHub](https://github.com/duckietown). The names of these repositories follow the following structure, where `LXNAME` is the LX name: 
+Each LX is hosted in a set of repositories in the [Duckietown organization GitHub](https://github.com/duckietown). The names of these repositories follow the following structure, where `LXNAME` is the LX name:
 
 - `lx-[LXNAME]`: this is the "front-end" of the LX, starting point of each LX for learners. These repos are public.
+
 - `lx-recipe-[LXNAME]`: this is the "technical backend" for each LX. These repos are public.
+
 - `lx-[LXNAME]-solution`: this is a copy of the `lx-[LXNAME]` repo, with solutions. These repos are private, and only made available to instructors.
 
 ```{warning}
-Learning experiences in daffy were structured [in a monolitic repo](https://github.com/duckietown/duckietown-lx). For additional information, refer to the [daffy Duckiebot Operation Manual](https://docs.duckietown.com/daffy/opmanual-duckiebot/lx/supported/general_running_lx.html). Note that daffy LXs are not compatible with an ente environment, and viceversa.
+Learning Experiences in `daffy` were structured [in a monolithic repository](https://github.com/duckietown/duckietown-lx). For additional information, refer to the [daffy Duckiebot Operation Manual](https://docs.duckietown.com/daffy/opmanual-duckiebot/lx/supported/general_running_lx.html). Note that `daffy` LXs are not compatible with an `ente` environment, and vice versa.
 ```
-
 
 (lx-features)=
 ## LX Features and Activities
@@ -32,19 +33,24 @@ Learning Experiences are run using the `dts code` workflow as described in: [](d
 
 The following activity types can be implemented with the Duckietown Learning Experience infrastructure:
 
-* [Notebook](notebooks-intro)
-* [Workbench Tool](workbench-intro)
-* [Running on a Virtual Duckiebot](simulator-intro)
-* [Running on a Real Duckiebot](agents-intro)
+- [Notebook](notebooks-intro)
+
+- [Workbench Tool](workbench-intro)
+
+- [Running on a Virtual Duckiebot](simulator-intro)
+
+- [Running on a Physical Duckiebot](agents-intro)
 
 ---
 
 (notebooks-intro)=
 ## Activity: Notebooks
 
-Duckietown learning experiences are consumed through Notebooks, without the need to install a local editor. This offers learners a uniform experience to engage with the content. A preconfigured VScode editor and notebooks are initialized through the command:
+Duckietown learning experiences are consumed through Notebooks, without the need to install a local editor. This offers learners a uniform experience to engage with the content. A preconfigured VS Code editor and notebooks are initialized through the command:
 
-    dts code editor
+```shell
+dts code editor
+```
 
 The `notebooks` directory will always contain the first activity.
 
@@ -57,7 +63,7 @@ The `notebooks` directory will always contain the first activity.
 Editor interface for launching notebooks in a learning experience
 ```
 
-Notebooks provide a rich environment to implement learning activities, from simple text, to images and videos, interactive code cells, and much more. In Duckietown LXs, we mostly intend these notebooks as "class notes" rather than full standalone learning modules, and as preconfigured interactive coding evironment that ienable learners to focus on the intended learning outcomes of the LX rather than getting distracted by the many underlying details of robotics. 
+Notebooks provide a rich environment for implementing learning activities, from simple text to images, videos, interactive code cells, and more. In Duckietown LXs, we mostly intend these notebooks as "class notes" rather than full standalone learning modules and as a preconfigured interactive coding environment that enables learners to focus on the intended learning outcomes of the LX rather than getting distracted by the many underlying details of robotics.
 
 `````{tab-set}
 ````{tab-item} Image Filtering
@@ -97,10 +103,9 @@ Hello World LX - example activity
 (notebooks-coding)=
 ## Coding inside notebooks
 
-While short form coding learning activities can be well implemented in cells, directly inside the Jupyter notebook, inside a LX learners may also be directed to implement long-form code solutions in the provided `solution` package. 
+While short form coding learning activities can be well implemented in cells, directly inside the Jupyter notebook, inside a LX learners may also be directed to implement long-form code solutions in the provided `solution` package.
 
 The code placed inside this folder can then be imported in the notebooks for visualization and testing, or automatically compiled and configured to be deployed as an **agent** on Duckietown robots (Duckiebot, Duckiedrones) - both physical and virtual. Code is built using the `dts code build` function:
-
 
 ```{figure} ../_images/lx-devmanual/intro/obj-det-solution.png
 :name: notebook-solution
@@ -111,7 +116,7 @@ The code placed inside this folder can then be imported in the notebooks for vis
 Example solution structure
 ```
 
-Each learning experience typically collects more than one notebook. Starting from the first one, notebooks should be written/engineered to guide learners through the rest of the learning experience in proper order. 
+Each learning experience typically collects more than one notebook. Starting from the first one, notebooks should be written/engineered to guide learners through the rest of the learning experience in proper order.
 
 <!--
 ### Providing Guidance
@@ -178,12 +183,12 @@ Workbench simulation for Duckiebot agent
 (agents-intro)=
 ## Running Code on Duckiebot
 
-Once their solution works in simulation, learners may wish to run their solution on a real-world Duckiebot in a
+Once their solution works in simulation, learners may wish to run their solution on a physical Duckiebot in a
 Duckietown environment like the one shown below.
 
 ```{figure} ../_images/lx-devmanual/intro/duckiebot-env.jpg
 :name: duckiebot-env
-:alt: Real Duckiebot in a Duckietown environment
+:alt: Physical Duckiebot in a Duckietown environment
 :align: center
 :width: 90%
 

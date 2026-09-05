@@ -1,10 +1,10 @@
-(slides-and-recordings-estimation-sift)=
-# Place Recognition
-
 ```{seo}
 :description: Scale invariant features help process images
 :keywords: Duckietown, sift, scale invariant, feature tracking, computer vision, CV
 ```
+
+(slides-and-recordings-estimation-sift)=
+# Place Recognition
 
 ## Introduction to Scale Invariant Feature Tracking
 
@@ -15,7 +15,6 @@
 ```{slides} ../../../../_assets/instructor-manual/SIFT_Detector.pdf
 ```
 -->
-
 
 ```{slides} ../../../../_assets/instructor-manual/not-used/cv-sift-descriptor.pdf
 ```

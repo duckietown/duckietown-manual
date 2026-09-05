@@ -1,10 +1,10 @@
-(dtmatrix-architecture)=
-# Architecture
-
 ```{seo}
 :description: The Duckiematrix's architecture.
 :keywords: Duckietown, Duckiematrix, architecture
 ```
+
+(dtmatrix-architecture)=
+# Architecture
 
 This chapter describes the Duckiematrix's architecture.
 
@@ -19,8 +19,9 @@ This chapter describes the Duckiematrix's architecture.
 
 An instance of the Duckiematrix requires:
 
-* An `Engine`.
-* A `Renderer`.
+- An `Engine`.
+
+- A `Renderer`.
 
 (dtmatrix-introduction-architecture-the-engine)=
 ## The Engine

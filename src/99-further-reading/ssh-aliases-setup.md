@@ -7,10 +7,11 @@
 # Secure shell (SSH)
 
 ```{needget}
-* Time: 5 minutes.
-* Basic knowledge of [SSH](https://en.wikipedia.org/wiki/Secure_Shell)
+- Time: 5 minutes.
+
+- Basic knowledge of [SSH](https://en.wikipedia.org/wiki/Secure_Shell)
 ---
-* Useful shortcuts for using SSH in Duckietown.
+- Useful shortcuts for using SSH in Duckietown.
 ```
 
 SSH, or Secure Shell, is a protocol to remote control computers. Since computers are the minds of robots, we can use SSH to remotely control Duckietown robots. In this section we provide shortcuts useful in the context of Duckietown daily operations.
@@ -20,13 +21,17 @@ Note: in the future you will have to debug problems, and these problems might be
 (ssh-aliases)=
 ## SSH aliases
 
-Instead of using
+Instead of using:
 
-    ssh duckie@![ROBOT].local
+```shell
+ssh duckie@<ROBOT_NAME>.local
+```
 
 You can set up SSH so that you can use:
 
-    ssh ![ROBOT]
+```shell
+ssh <ROBOT_NAME>
+```
 
 During your sd_card init process described later in the book, the command will automatically setup `~/.ssh/config`.
 If you are having trouble using it, you can follow the instructions below.
@@ -34,13 +39,17 @@ If you are having trouble using it, you can follow the instructions below.
 To manually create an SSH alias, create a host section in
 `~/.ssh/config` on your laptop with the following contents:
 
-    Host ![ROBOT]
-        User duckie
-        Hostname ![ROBOT].local
+```text
+Host <ROBOT_NAME>
+    User duckie
+    Hostname <ROBOT_NAME>.local
+```
 
-Note that this does **not** let you do
+Note that this does **not** let you do:
 
-    ping ![ROBOT]
+```shell
+ping <ROBOT_NAME>
+```
 
 You have not created another hostname, just an alias for SSH.
 

@@ -10,4 +10,3 @@ This section lists slides and recordings typically used to introduce Duckietown 
 
 ```{tableofcontents}
 ```
-

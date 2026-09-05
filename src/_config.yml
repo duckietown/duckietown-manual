@@ -46,24 +46,261 @@ sphinx:
     myst_substitutions:
       dt_workspace_note_prefix: >-
         If you are using a [Duckietown Workspace](setup-devcontainer),
-      dt_workspace_duckietown_viewer_note: >-
-        {} run this command from a local terminal outside the Workspace. To
-        open the browser-based Viewer instead, use `dts duckiebot {}
-        DUCKIEBOT_NAME --browser`.
-      dt_workspace_matrix_lx_warning: >-
-        {} Duckietown Viewer apps and Duckiematrix renderer-only commands such
-        as `dts matrix run` must be run from a local terminal outside the Workspace.
-        The `--standalone` flag starts both the Engine and Renderer
-        in the same environment.
-      dt_workspace_start_matrix_split_note: >-
-        {} run `dts code start_matrix --no-renderer` inside the Workspace,
-        then launch the Duckiematrix renderer from a local terminal outside the
-        Workspace with `dts matrix run`.
-      dt_workspace_matrix_standalone_note: >-
-        {} the `--standalone` flag starts both the Duckiematrix Engine and
-        Renderer in the same environment. For the split workspace workflow,
-        start the Engine separately and connect to it with `dts matrix run`
-        from a local terminal outside the Workspace.
+      dt_lx_dts_code_root_important: |-
+        ```{important}
+        All `dts code` commands should be run from the root directory of the learning experience.
+        ```
+      dt_duckiematrix_webgl_browser_note: |-
+        ```{note}
+        For the WebGL (browser) version of the Duckiematrix, if the colors look desaturated, try a different browser.
+        ```
+      dt_lx_exercise_runtime_note: |-
+        ```{note}
+        This exercise can be run on a [physical Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) or on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps).
+        ```
+      dt_lx_exercise_offboard_runtime_note: |-
+        ```{note}
+        This exercise can be run on a virtual Duckiebot in [the Duckiematrix](the-duckiematrix-first-steps) or on a [physical Duckiebot](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311) using the off-board agent workflow. The on-board agent workflow is a work in progress.
+        ```
+      dt_lx_matrix_target_note: |-
+        ```{note}
+        The `-m` flag indicates we are targeting a virtual robot in the `matrix`.
+        ```
+      dt_lx_reset_duckiebot_position_note: |-
+        ```{note}
+        You should reset your Duckiebot's position with <kbd>R</kbd> before each test because the initial state estimate coincides with the reset position.
+        ```
+      dt_duckiebot_ping_attention: |-
+        ````{attention}
+        Before proceeding, make sure that you can ping your Duckiebot using the following command, where `DUCKIEBOT_NAME` is the name of your Duckiebot:
+
+        ```shell
+        ping DUCKIEBOT_NAME.local
+        ```
+        ````
+      dt_lx_virtual_robot_update_trouble: |-
+        ```{trouble}
+        My virtual robot (e.g., `VBOT`) hangs indefinitely when I try to update it.
+        ---
+        Try to restart it with: `dts duckiebot virtual restart VBOT`
+        ```
+      dt_lx_code_editor_no_project_trouble: |-
+        ```{trouble}
+        When I run `dts code editor`, I get the error `dts :  No valid DTProject found at '/path/to/lx'`.
+        ---
+        Make sure you are executing the commands from inside a learning experience folder (e.g., `*/lx-control/`)
+        ```
+      dt_lx_code_project_metadata_trouble: |-
+        ```{trouble}
+        `dts :  The path '...' does not appear to be a Duckietown project.
+             :  The metadata file '.dtproject' is missing.`
+        ---
+        You need to be in the root directory of the LX in order to run the `dts code` commands.
+        ```
+      dt_lx_ekf_code_editor_no_project_trouble: |-
+        ```{trouble}
+        When I run `dts code editor`, I get the error `dts :  No valid DTProject found at '/path/to/lx'`.
+        ---
+        Make sure you are executing the commands from inside a learning experience folder (e.g., `*/lx-ekf-localization/`)
+        ```
+      dt_lx_vnc_startup_trouble: |-
+        ```{trouble}
+        When I run `dts code vnc` nothing happens in the browser.
+        ---
+        It can take 10-45 seconds for noVNC to start, depending on your computer's specifications. Please wait.
+        ```
+      dt_camera_calibration_needget: |-
+        ```{needget}
+        - A working Duckiebot: [](ops-db-subsys-testing-intro)
+
+        - A functional `dts` installation: [](setup-dts)
+
+        - A camera calibration pattern, such as one provided in a Duckiebox.
+        ---
+        - A Duckiebot whose extrinsics camera calibration has been completed.
+        ```
+      dt_ros_camera_subscriber_needget: |-
+        ```{needget}
+        - A Duckietown robot that is turned on and visible in the output of `dts fleet discover`
+        ---
+        - Learn how to receive camera images from your robot using a **ROS Subscriber**
+        ```
+      dt_ros_wheel_encoder_subscriber_needget: |-
+        ```{needget}
+        - A Duckietown robot that is turned on and visible in the output of `dts fleet discover`
+        ---
+        - Learn how to receive wheel encoder data from your robot using a **ROS Subscriber**
+        ```
+      dt_lx_ekf_prerequisites_needget: |-
+        ```{needget}
+        - Learning experience computer setup: [](duckiebot-lxs)
+
+        - (recommended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+
+        - (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
+        ---
+        - Running the Localization - Extended Kalman Filter learning experience.
+        ```
+      dt_sd_card_not_written_trouble: |-
+        ```{trouble}
+        - The SD card does not appear to have been written.
+
+        - The flashing process seemed too fast, and there is no data on my SD card.
+        ---
+        - Check if your SD card adapter has a write protection switch.
+
+        - Make sure you selected the correct drive name during the flashing procedure.
+        ```
+      dt_sd_card_adapter_write_protection_trouble: |-
+        ```{trouble}
+        I am using a microSD-to-SD card adapter with write protection disabled, but the SD card does not appear to have been initialized after the procedure.
+        ---
+        Try again, making sure that you enter the correct drive name during the procedure.
+        ```
+      dt_sd_card_bad_archive_trouble: |-
+        ```{trouble}
+        The procedure fails due to a "Bad archive" error.
+        ---
+        Try again using the `--no-cache` option.
+        ```
+      dt_sd_card_token_setup_trouble: |-
+        ```{trouble}
+        The verification process fails with the error `Please set up a token using "dts tok set"`.
+        ---
+        Make sure that you have completed the Duckietown token setup procedure [](dt-account).
+        ```
+      dt_duckiebot_hut_reflash_trouble: |-
+        ```{trouble}
+        The `Keyboard Controller` window is active, but my Duckiebot still does not move. After following [](sw-tools-dtps), I can see messages being sent to my Duckiebot on the `DUCKIEBOT_NAME/actuator/wheels/base/pwm` `DTPS` topic. The `Components` page of the `Dashboard` (opened by running `dts duckiebot dashboard DUCKIEBOT_NAME --page robot/components`) shows a red alert for the HUT.
+        ---
+        If you have a HUT v3.1, follow [](reflash-microcontroller).
+        ```
+      dt_duckiebot_hut_multiplexer_trouble: |-
+        ```{trouble}
+        I have re-flashed the HUT, but my Duckiebot still does not move or moves in a jerky manner. Additionally, the ToF sensor and front bumper are not detected on the `Components` page of the `Dashboard` (opened by running `dts duckiebot dashboard DUCKIEBOT_NAME --page robot/components`). I may also be having issues with the screen.
+        ---
+        Disconnect the ToF sensor from the front bumper, then use the long I2C cable that originally connected the front bumper to the HUT to connect the ToF sensor directly to the same HUT port. Finally, reboot your Duckiebot. This procedure bypasses a known multiplexer issue on some front bumpers that can cause other issues with the HUT.
+        ```
+      dt_calibrator_image_loading_trouble: |-
+        ```{trouble}
+        When I open a calibrator window, I see a gray loading screen instead of images in the center. I know that the camera otherwise works on my Duckiebot.
+        ---
+        Press the refresh icon on the top right of the calibrator window to restart the image stream.
+        ```
+      dt_workspace_sd_card_delegation_note: |-
+        ```{note}
+        If you are using a [Duckietown Workspace](setup-devcontainer) and `dts` is installed on the host machine, you can run this command inside or outside the Duckietown Workspace. When the command is run inside the Duckietown Workspace, it is automatically delegated to the host machine so that it can access the SD card.
+        ```
+      dt_git_personal_computer_warning: |-
+        ```{warning}
+        Follow this step only if you are working on your **personal** computer.
+        ```
+      dt_git_getting_started_seealso: |-
+        ```{seealso}
+        If you have never heard of Git or GitHub before, you can do some background reading here:
+
+        - [GitHub Hello World](https://guides.github.com/activities/hello-world/)
+
+        - [GitHub Documentation](https://guides.github.com/introduction/flow/)
+
+        You can then go through the [Duckietown introduction to version control with Git](sec:developer_basics_git).
+        ```
+      dt_dtros_publisher_topic_type_note: |-
+        ```{note}
+        Only declare a topic type in a `rospy.Publisher` call.
+        ```
+      dt_dtros_superclass_note: |-
+        ```{note}
+        Using the `DTROS` superclass provided by the `duckietown.dtros` Python module is not mandatory, but it
+        is strongly recommended because it provides useful features that plain ROS lacks. More details follow below.
+        ```
+      dt_python_library_test_coverage_tip: |-
+        ```{tip}
+        Make sure that the tests are actually run by looking at the coverage results.
+        ```
+      dt_python_library_notebooks_lfs_warning: |-
+        ```{warning}
+        If you do not think you can be diligent about this, track the notebooks with Git LFS.
+        ```
+      dt_duckietown_viewer_launch_tabs: |-
+        :::::{{tab-set}}
+        ::::{{tab-item}} Ubuntu
+        To open the `{0}`, run the following command, where the `--browser` flag opens the WebGL (browser) version:
+
+        ```shell
+        dts duckiebot {1} DUCKIEBOT_NAME [--browser]
+        ```
+        ::::
+        ::::{{tab-item}} Duckietown Workspace
+        To open the `{0}`, if `dts` is installed on the host machine, run the following command from a terminal inside the Duckietown Workspace or on the host machine:
+
+        ```shell
+        dts duckiebot {1} DUCKIEBOT_NAME
+        ```
+
+        ```{{note}}
+        This command will be delegated to the host machine if it is run inside the Duckietown Workspace.
+        ```
+
+        ```{{note}}
+        The first time a Duckietown Viewer app is run, a pop-up window may appear and request permission. Enter your password and select "(Always) Allow" to continue.
+        ```
+
+        Alternatively, to open the WebGL (browser) version of the `{0}`, open a terminal inside the Duckietown Workspace or on the host machine (if `dts` is installed on the host machine) and run:
+
+        ```shell
+        dts duckiebot {1} DUCKIEBOT_NAME --browser
+        ```
+        ::::
+        :::::
+      dt_workspace_duckietown_viewer_note: |-
+        ```{{note}}
+        {} you can run this command inside or outside the Duckietown Workspace if `dts` is installed on the host machine.
+        When the command is run inside the Duckietown
+        Workspace, it is automatically delegated to the host machine. To open the
+        WebGL (browser) version of the Duckietown Viewer instead, use
+        `dts duckiebot {} DUCKIEBOT_NAME --browser`.
+        ```
+      dt_workspace_matrix_lx_warning: |-
+        ```{{warning}}
+        {} the WebGL (browser) versions of the Duckietown Viewer and
+        Duckiematrix can be run inside or outside the Duckietown Workspace. If
+        `dts` is installed on the host machine, commands that launch native
+        Duckietown Viewer apps or the Duckiematrix Renderer, such as `dts matrix
+        run`, can also be run in either location. When one of these commands is
+        run inside the Duckietown Workspace, it is automatically delegated to the
+        host machine, where it launches the native UI. The `--standalone` flag
+        starts the Duckiematrix Engine in the environment where the command is run.
+        ```
+      dt_workspace_matrix_lx_note: |-
+        ```{{note}}
+        {} the WebGL (browser) versions of the Duckietown Viewer and
+        Duckiematrix can be run inside or outside the Duckietown Workspace. If
+        `dts` is installed on the host machine, commands that launch native
+        Duckietown Viewer apps or the Duckiematrix Renderer, such as `dts matrix
+        run`, can also be run in either location. When one of these commands is
+        run inside the Duckietown Workspace, it is automatically delegated to the
+        host machine, where it launches the native UI. The `--standalone` flag
+        starts the Duckiematrix Engine in the environment where the command is run.
+        ```
+      dt_workspace_start_matrix_split_note: |-
+        ```{{note}}
+        {} run `dts code start_matrix --no-renderer` inside the Duckietown
+        Workspace. If `dts` is installed on the host machine, then run `dts matrix
+        run` inside or outside the Duckietown Workspace. When the command is run inside the
+        Duckietown Workspace, the command is automatically delegated to the host
+        machine, where it launches the native Renderer.
+        ```
+      dt_workspace_matrix_standalone_note: |-
+        ```{{note}}
+        {} `dts matrix run --standalone` starts the Duckiematrix Engine in the
+        environment where the command is run. If `dts` is installed on the host
+        machine, this command can be run from inside the Duckietown Workspace and
+        is automatically delegated to the host machine, where it launches the
+        native Renderer. For the split Duckietown Workspace workflow, start the
+        Engine separately and run `dts matrix run` inside or outside the
+        Duckietown Workspace.
+        ```
     intersphinx_mapping:
       jupyter-book-docs:
         - "https://jupyterbook.org/en/stable"

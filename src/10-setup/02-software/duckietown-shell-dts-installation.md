@@ -1,16 +1,18 @@
-(setup-dts)=
-# Duckietown Shell (`dts`)
-
 ```{seo}
 :description: How to install and set up the Duckietown Shell, the terminal based and most powerful UI in Duckietown.
 :keywords: Duckietown, Duckiebot, dts, Duckietown Shell, UI, terminal interface
 ```
 
+(setup-dts)=
+# Duckietown Shell (`dts`)
+
 This section describes how to install and set up `dts` (`Duckietown Shell`), a CLI (Command-Line Interface) program that is used for Duckietown-related operations.
 
 ```{needget}
 - [Docker is installed and set up](setup-sw-docker)
+
 - [GitHub is installed and set up](setup-sw-github)
+
 - [Duckietown account](setup-account-duckietown-hub)
 ---
 - A computer with `dts` installed and correctly set up.
@@ -47,11 +49,12 @@ The Duckietown Shell is pre-installed in Workspaces. Run the checkpoint to verif
 
 :::::
 
-
 ````{warning}
 If you are installing `dts` on an arm machine you will also need to install the `gcc` and `python3-dev` dependencies:
 
-    sudo apt install -y gcc python3-dev
+```shell
+sudo apt install -y gcc python3-dev
+```
 
 This includes Apple Silicon macs with Ubuntu arm64 virtual machines.
 ````
@@ -76,6 +79,7 @@ The path to `dts`.
 To appropriately configure the Duckietown Shell:
 
 1. [Login into `dts` as a Duckietown User](dt-account-set-token)
+
 2. [Provide `dts` with your DockerHub credentials](dt-account-dockerhub-config-docker-set)
 
 (dt-account-set-token)=
@@ -84,11 +88,17 @@ To appropriately configure the Duckietown Shell:
 To log into `dts` with your user configurations:
 
 1. Open a terminal and run `dts`
+
 2. Select `ente` using <kbd>UpArrow</kbd> and <kbd>DownArrow</kbd>.
+
 3. Press <kbd>Enter</kbd>.
+
 4. Obtain and copy your [Duckietown token](duckietown-token)
+
 5. Paste your `dt2` token into the terminal.
+
 6. Press <kbd>Enter</kbd>.
+
 7. Run `dts update`.
 
 ````{note}
@@ -102,7 +112,7 @@ dts :  Correctly identified as uid = UID
 (dt-account-switch)=
 ### Switching user in the Duckietown Shell
 
-You can switch users logged into `dts` by with:
+To switch the user logged in to `dts`, run:
 
 ```shell
 dts tok set
@@ -123,9 +133,9 @@ To get a list of the available `dts` profiles, run:
 dts profile list
 ```
 
-to see the available profiles. E.g., 
+The output lists the available profiles. For example:
 
-```bash
+```text
    | Profile | Distribution | Staging
 -- | ------- | ------------ | -------
 >> |    ente |         ente |      No
@@ -134,10 +144,15 @@ to see the available profiles. E.g.,
 To create a new `dts` profile:
 
 1. Run `dts profile new`.
+
 2. Select the name of the profile to create using <kbd>UpArrow</kbd> and <kbd>DownArrow</kbd>.
+
 3. Press <kbd>Enter</kbd>.
+
 4. Obtain and copy your [Duckietown token](duckietown-token)
+
 5. Paste your `dt2` token into the terminal.
+
 6. Press <kbd>Enter</kbd>.
 
 To switch to a different `dts` profile, run the following command, where `PROFILE` is the name of the profile:
@@ -149,19 +164,22 @@ dts profile switch PROFILE
 (dt-account-dockerhub-config-docker-set)=
 ### Configure Docker in the Duckietown Shell
 
-To automate most of the back-end operations involving Docker, 
+To automate most back-end operations involving Docker, run:
 
-```bash
+```shell
 dts config docker credentials set --username DOCKERHUB_USERNAME --password DOCKERHUB_ACCESS_TOKEN
 ```
 
-* recall your `DOCKERHUB_USERNAME` from [](dt-account-dockerhub) and 
-* create a PAT following [DockerHub instructions on access tokens](https://docs.docker.com/security/access-tokens/)
+Before running it:
 
+- Recall your `DOCKERHUB_USERNAME` from [](dt-account-dockerhub).
+
+- Create a PAT following the [Docker Hub instructions on access tokens](https://docs.docker.com/security/access-tokens/).
 
 ```{attention}
-* These credentials are **only stored locally**;
-* **Never use your account password** instead of an personal access tokens (PAT);
+- These credentials are **only stored locally**;
+
+- **Never use your account password** instead of a personal access token (PAT).
 ```
 
 ```{admonition} For developers
@@ -191,13 +209,14 @@ If you have trouble with any of these commands, see the FAQs section below. If y
 ```
 
 ````{testexpect}
-If your Docker login was successful, you should be able to run
-```bash
+If your Docker login was successful, you should be able to run:
+
+```shell
 dts config docker credentials info
 ---
 You should see an output similar to the following,
 
-```bash
+```text
 Docker credentials:
 . registry:   docker.io
 . username:   DOCKERHUB_USERNAME
@@ -244,6 +263,7 @@ Only the latest inputs are stored for the same Docker registry.
 I would like to remove my stored Docker credentials. How could I achieve that?
 ---
 Run: 
-```bash
+
+```shell
 rm ~/.duckietown/shell/profiles/ente/databases/secrets_docker.yaml
 ````

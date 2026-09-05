@@ -39,12 +39,12 @@ If you are running Ubuntu in a VM (Virtual Machine), **make sure that your compu
 
 ```{note}
 When running a VMware machine on a macOS host, it may be necessary to have the following network adapters:
-* `Share with my Mac` (for connecting to the Internet).
-* `Bridged Networking` (for connecting to your Duckiebot).
+- `Share with my Mac` (for connecting to the Internet).
+
+- `Bridged Networking` (for connecting to your Duckiebot).
 ```
 
 If using a M-series Mac (ARM architecture), some success has been achieved by emulating a x86 architecture using [UTM](https://mac.getutm.app/).
-
 
 ```{admonition} Reminder
 :class: tip
@@ -62,15 +62,22 @@ Depending on your use case (learner, instructor, developer), you will require a 
 
 ### Required (learner):
 
-* 60 GB of hard drive
-* Quad-core 1.8GHz
-* 4GB RAM
-* GPU compatible with OpenGL 2.1+
+- 60 GB of hard drive
+
+- Quad-core 1.8GHz
+
+- 4GB RAM
+
+- GPU compatible with OpenGL 2.1+
 
 ### Recommended (instructor, developer):
 
-* 150 GB of hard drive
-* Quad-core at 2.1Ghz,
-* 8GB RAM,
-* GPU compatible with OpenGL 2.1+
-* [A computer model certified to work with Ubuntu](https://ubuntu.com/certified?q=&category=Laptop&category=Desktop&limit=20)
+- 150 GB of hard drive
+
+- Quad-core at 2.1Ghz,
+
+- 8GB RAM,
+
+- GPU compatible with OpenGL 2.1+
+
+- [A computer model certified to work with Ubuntu](https://ubuntu.com/certified?q=&category=Laptop&category=Desktop&limit=20)

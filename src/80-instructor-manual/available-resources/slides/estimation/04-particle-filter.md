@@ -1,10 +1,10 @@
-(slides-and-recordings-estimation-particle)=
-# Particle Filter
-
 ```{seo}
 :description: Particle Filter in Duckietown.
 :keywords: Particle Filter, Duckietown, estimation, probability, continuous time, stochastic, recursive, prior, posterior, apriori
 ```
+
+(slides-and-recordings-estimation-particle)=
+# Particle Filter
 
 The particle filter exists in many variants, but the fundamental idea is to approximate the Bayes Filter solution by evaluating it on a discrete set of weighted samples.
 

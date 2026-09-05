@@ -1,4 +1,3 @@
-
 ```{seo}
 :description: Learn how to publish wheel commands to Duckiebot motors using a ROS Publisher and the WheelsCmdStamped message.
 :keywords: Duckietown, ROS, Publisher, wheel control, WheelsCmdStamped, robotics, dts code
@@ -8,9 +7,9 @@
 # Publish to the Wheels
 
 ```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
+- A Duckietown robot turned ON and visible on `dts fleet discover`
 ---
-* Learn how to control the Duckiebot’s wheels using a **ROS Publisher**
+- Learn how to control the Duckiebot's wheels using a **ROS Publisher**.
 ```
 
 ## Topic and message type of interest
@@ -18,7 +17,7 @@
 The Duckiebot subscribes to wheel commands on the topic:
 
 ```
-/ROBOT_NAME/wheels_driver_node/wheels_cmd
+/DUCKIEBOT_NAME/wheels_driver_node/wheels_cmd
 ```
 
 The message type is **duckietown_msgs/WheelsCmdStamped**, with fields:
@@ -30,7 +29,9 @@ float32 vel_right
 ```
 
 - `header`: standard ROS header
+
 - `vel_left`: duty cycle for left wheel (−1.0 backward to 1.0 forward)
+
 - `vel_right`: duty cycle for right wheel (−1.0 backward to 1.0 forward)
 
 ```{note}
@@ -88,7 +89,7 @@ if __name__ == '__main__':
 
 Make it executable:
 
-```bash
+```shell
 chmod +x ./packages/my_package/src/wheel_control_node.py
 ```
 
@@ -96,7 +97,7 @@ chmod +x ./packages/my_package/src/wheel_control_node.py
 
 Create `launchers/wheel-control.sh`:
 
-```shell
+```bash
 #!/bin/bash
 
 source /environment.sh
@@ -108,7 +109,7 @@ dt-launchfile-join
 
 Rebuild the image:
 
-```bash
+```shell
 dts devel build -f
 ```
 
@@ -120,8 +121,8 @@ The wheels will start spinning immediately. Ensure the robot has enough clear sp
 
 Run the node:
 
-```bash
-dts devel run -R ROBOT_NAME -L wheel-control
+```shell
+dts devel run -R DUCKIEBOT_NAME -L wheel-control
 ```
 
 Stop with `Ctrl+C`; `on_shutdown()` will halt the wheels.
@@ -129,7 +130,6 @@ Stop with `Ctrl+C`; `on_shutdown()` will halt the wheels.
 ```{admonition} Congratulations 🎉
 You just built and ran a ROS node that controls the Duckiebot’s wheels.
 ```
-
 
 <!--
 (ros-pub-wheels)=

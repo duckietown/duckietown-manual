@@ -1,10 +1,10 @@
-(sw-tools-ui-dashboard)=
-# Duckiebot Dashboard
-
 ```{seo}
 :description: The Dashboard is a browser-based UI for Duckiebots, enabling convenient hardware and software debugging.
 :keywords: Duckietown, Duckiebot, Dashboard, browser-based UI, UI, debugging
 ```
+
+(sw-tools-ui-dashboard)=
+# Duckiebot Dashboard
 
 This chapter describes the Duckietown Duckiebot Dashboard (also known as just "the Dashboard"), i.e., a browser-based interface for Duckiebots (and Duckiedrones).
 
@@ -14,11 +14,10 @@ This chapter describes the Duckietown Duckiebot Dashboard (also known as just "t
 - Understanding of the Duckiebot Dashboard resources.
 ```
 
-
 ## Introduction to the Duckietown Dashboard
 
 ```{vimeo} 527022343
-:alt: introduction to the duckietown dashboard for duckiebot browser-based diagnostics
+:alt: introduction to the Duckietown Dashboard for Duckiebot browser-based diagnostics
 ```
 
 To open the Dashboard, run the following command, where `PAGE` is an optional page (e.g., `robot/mission_control`):

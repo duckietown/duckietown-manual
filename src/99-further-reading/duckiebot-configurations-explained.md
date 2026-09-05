@@ -7,9 +7,9 @@
 # Duckiebot Models
 
 ```{needget}
-* Nothing
+- Nothing
 ---
-* Knowledge of Duckiebot configuration naming conventions and their respective functionalities.
+- Knowledge of Duckiebot configuration naming conventions and their respective functionalities.
 ```
 
 We define the different Duckiebot configurations, from the first `DB17` used during the MIT course 2.166 in 2017 to the latest available.
@@ -31,8 +31,11 @@ Duckiebots `DB18` onwards can be obtained from the [Duckietown project store](ht
 Legend:
 
 - "JN": NVIDIA Jetson Nano
+
 - "RPI": Raspberry Pi
+
 - "ToF": Time of flight
+
 - "IMU": Inertial Measurement Unit (Accelerometer, Gyroscope)
 
 (duckiebot-config-db21)=
@@ -43,9 +46,12 @@ The Duckiebot `DB21` debuted with the "[Self-Driving Cars with Duckietown](https
 Later revisions, referred to under the broader label `DB21` and then `DB21J`, improve the `DB21M` by:
 
 - expanding the onboard memory from 32 GB to 64 GB;
+
 - tweaking the chassis design (v1.0 -> v2.0) for reduced complexity and increased stiffness;
-- introducing a newer version of the `HUT` (v3.15); which is backwards compatible and removes the need for an additional resistor on the top button;
-- downgrades the IMU version from `MPU-9250` to `MPU-6050` due to global chip shortages (2021-2022 chip crisis).
+
+- introducing a newer version of the `HUT` (v3.15), which is backwards compatible and removes the need for an additional resistor on the top button;
+
+- downgrading the IMU version from `MPU-9250` to `MPU-6050` due to global chip shortages (2021-2022 chip crisis).
 
 To assemble a `DB21J` Duckiebot, follow the [](assembly-instructions-db21j).
 
@@ -63,6 +69,7 @@ The `DB21M` debuts in 2021 with the [first edition](https://cutt.ly/n81LRus) of 
 ```{figure} ../_images/preliminaries_hardware/chap_2_1_images/db21m.jpg
 :width: 400px
 :name: fig:db21m
+:alt: Blue DB21M Duckiebot with illuminated headlights and a rubber duck on top.
 
 The Duckiebot version `DB21M`.
 ```
@@ -90,9 +97,11 @@ The `DB19` is the latest version of the Duckiebot. You have a `DB19` Duckiebot f
 ```{figure} ../_images/further_reading/duckiebot-configurations/dc-motor-db19.png
 :width: 400px
 :name: fig:dc-motor-db19
+:alt: Pair of blue geared DC motors used by the DB19 Duckiebot.
 
 The motors for the version `DB19`.
 ```
+
 <!--
 <div figure-id="fig:dc-motor-db19" figure-caption="The motors for the version `DB19`.">
    <img src="dc-motor-db19.png" style='width: 20em'/>
@@ -104,6 +113,7 @@ Apart from the new motors and another HUT (v. 2.1), the `DB19` is identical with
 ```{figure} ../_images/further_reading/duckiebot-configurations/db19-complete-cad.png
 :width: 400px
 :name: fig:db19-complete-cad
+:alt: CAD rendering of a complete DB19 Duckiebot with a rubber duck mounted on top.
 
 The complete Duckiebot `DB19`.
 ```
@@ -119,6 +129,7 @@ The complete Duckiebot `DB19`.
 ```{note}
 `DB19` Duckiebots have been extremely successful, and are still operating worldwide, but are no longer manufactured.
 ```
+
 <!--
 You can obtain a `DB19` Duckiebot from the [Duckietown project shop](https://get.duckietown.com/products/duckiebot-db19).
 -->
@@ -142,6 +153,7 @@ You can recognize a `DB18` from previous versions for having only one board in a
 ```{figure} ../_images/further_reading/duckiebot-configurations/howto_assemble_finish_milestone.jpg
 :width: 400px
 :name: fig:db18-battery1
+:alt: Assembled DB18 Duckiebot with its battery mounted on the rear deck.
 
 A `DB18` Duckiebot assembly.
 ```
@@ -149,6 +161,7 @@ A `DB18` Duckiebot assembly.
 ```{figure} ../_images/further_reading/duckiebot-configurations/howto_assemble_finish_milestone-2.jpg
 :width: 400px
 :name: fig:db18-battery2
+:alt: Assembled DB18 Duckiebot with an alternate battery configuration.
 
 Another `DB18` Duckiebot assembly, with different battery.
 ```
@@ -162,7 +175,6 @@ Another `DB18` Duckiebot assembly, with different battery.
    <img src="howto_assemble_finish_milestone-2.jpg" style='width: 20em'/>
 </div>
 
-
 To assemble a `DB18` Duckiebot, follow [these](assembling-duckiebot-db18) instructions.
 -->
 
@@ -175,6 +187,7 @@ To assemble a `DB18` Duckiebot, follow [these](assembling-duckiebot-db18) instru
 <!--
 You can obtain a `DB18` Duckiebot from the [Duckietown project shop](https://get.duckietown.com/products/duckiebot-db18).
 -->
+
 <!--
 (duckiebot-config-db18-robotarium)=
 ### The `DB18-Robotarium` configuration
@@ -227,19 +240,21 @@ The elements of $\mathbb{O}$ are labels identifying optional hardware that aids 
 <!--
 Note: During the Fall 2017 course, three Duckietown Engineering Co. branches (Zurich, Montreal, Chicago) are using these configuration naming conventions. Moreover, all institutions release hardware to their Engineers in training in two phases.
 
-
 For information on acquiring the parts for these older configurations please see [`DB17-wjd`](https://docs.duckietown.org/DT17/opmanual_duckiebot/out/acquiring_parts_c0.html) or [`DB17-wjdlc`](https://docs.duckietown.org/DT17/opmanual_duckiebot/out/acquiring_parts_c1.html).
 -->
 
 It may be convenient at times to refer to hybrid configurations including any of the `DB17-jwcd` in conjunction with a _subset_ of the `DB17-l` components. In order to disambiguate, we define partial upgrades as:
 
 - `DB17-l1`: _adds_ a PWM hat to `DB17`, in addition to a short USB angled power cable and a M-M power wire;
+
 - `DB17-l2`: _adds_ a bumpers set to `DB17`, in addition to the mechanical bits to assemble it;
+
 - `DB17-l3`: _adds_ a LED hat and 5 RGB LEDs to `DB17-l1l2`, in addition to the F-F wires to connect the LEDs to the LED board.
 
 <!--
 Note: introducing the PWM hat in `DB17-l1` induces a _replacement_ of the [spliced cable](assembling-duckiebot-db17-cable-splitting) powering solution for the DC motor hat. Details can be found in [](assembling-duckiebot-db17).
 -->
+
 - **Functions**: `DB17-l` is the necessary configuration to enable communication between Duckiebots, hence fleet behaviors (e.g., negotiating the crossing of an intersection). Subset configurations are sometimes used in a standalone way for: (`DB17-l1`) avoid using a sliced power cable to power the DC motor hat in `DB17`, and (`DB17-l2`) for purely aesthetic reasons.
 
 ```{tip}

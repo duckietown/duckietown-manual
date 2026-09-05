@@ -1,10 +1,10 @@
-(dtmatrix-modes)=
-# Modes
-
 ```{seo}
 :description: The Duckiematrix's modes.
 :keywords: Duckietown, Duckiematrix, modes
 ```
+
+(dtmatrix-modes)=
+# Modes
 
 This chapter describes the Duckiematrix's modes.
 
@@ -19,8 +19,9 @@ Knowledge on the Duckiematrix's modes.
 
 An instance of the Duckiematrix can run in two modes:
 
-* `Realtime` mode.
-* `Simulation` (`Gym`) mode.
+- `Realtime` mode.
+
+- `Simulation` (`Gym`) mode.
 
 (mode-realtime)=
 ## Realtime mode
@@ -32,10 +33,10 @@ However, if the `Matrix` side does not manage to keep up with the `Agents`, some
 
 Similarly, sensors in the `Renderers` will (try to) produce data at the sensor's frequency, regardless of how much data the `Agents` can process. In fact, neither side will care whether there is an entity listening on the other side.
 
-While this is the mode that most closely resembles the real behavior of a robot and `Agent`, it evolves with dynamics that are **non-deterministic**, meaning that experiments run in
+While this is the mode that most closely resembles the physical behavior of a robot and `Agent`, it evolves with dynamics that are **non-deterministic**, meaning that experiments run in
 `Realtime` mode are not reproducible.
 
-The job of the `Engine`, in this case, is to run the physics engine on the commands from the `World` side whenever they are available and bridge data from the `Matrix` side over to the `World` side.
+The job of the `Engine`, in this case, is to process commands from the `World` side whenever they are available, simulate the resulting physics, and bridge data from the `Matrix` side over to the `World` side.
 
 ```{figure} ../../_images/duckiematrix/intermediate/mode-realtime-1.jpg
 :name: fig:mode-realtime-1
@@ -52,7 +53,7 @@ A sequence diagram of a simple `Network` running in `Realtime` mode.
 Starting from the `Matrix` side, robots will produce their observations (sensor readings).
 The `Engine` will then collect and send these observations as a whole to the `World` side.
 The `Renderers` will then be paused until the `World` side has produced all of its commands.
-The `Engine` will then collect these commands and run the physics engine, which will act on these commands.
+The `Engine` will then collect these commands and simulate the resulting physics.
 An updated state of the scene is sent to the `Renderers`, which will start producing another batch of observations.
 
 The strenuous job performed by the `Engine` in this case guarantees that all of the `Renderers` start a batch of rendering/sensing only once all the robots in the scene have received a command from the `World` side.

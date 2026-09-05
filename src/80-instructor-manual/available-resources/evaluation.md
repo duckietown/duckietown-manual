@@ -2,6 +2,7 @@
 :description: Duckietown evaluation infrastructure was developed during the AI driving olympics and provides research-grade feedback to agent submissions for specific tasks.
 :keywords: Duckietown, challenge, evaluation, robot agent, ai driving olympics
 ```
+
 (evaluation)=
 # Evaluation
 
@@ -13,7 +14,7 @@ Instead, we recommend some combination of [exercises](learning-experiences) and 
 
 The automated evaluation of the learning experiences with the challenges server is currently
 not support in the `ente` release. We have a replacement in development that should work in
-conjunction with the [duckiematrix](the-duckiematrix-first-steps).
+conjunction with the [Duckiematrix](the-duckiematrix-first-steps).
 
 (evaluating-projects)=
 ## Evaluating Projects
@@ -43,11 +44,12 @@ However, it is also important to express that these metrics are meant to be a gu
 
 Some metrics that we have used in the past include:
 
-* Quantity and quality of feedback given to fellow students on reports and presentations (see [](evaluating-projects));
-* Filing issues, fixing bugs, answering questions on Stack Overflow, making pull requests or other quantifiable contributions to the code infrastructure;
-* Quality and quantity of involvement on the course communication board (Slack, etc.).
-* It can be interesting to allow students to nominate others in the class that they feel have been particularly helpful. If following this approach, make sure to require a detailed justification otherwise students may tend to only nominate their friends. Any sort of academic dishonesty (e.g., providing biased peer review because of a conflict of interests) should be penalized.
+- Quantity and quality of feedback given to fellow students on reports and presentations (see [](evaluating-projects));
+
+- Filing issues, fixing bugs, answering questions on Stack Overflow, making pull requests or other quantifiable contributions to the code infrastructure;
+
+- Quality and quantity of involvement on the course communication board (Slack, etc.).
+
+- It can be interesting to allow students to nominate others in the class that they feel have been particularly helpful. If following this approach, make sure to require a detailed justification otherwise students may tend to only nominate their friends. Any sort of academic dishonesty (e.g., providing biased peer review because of a conflict of interests) should be penalized.
 
 Finally, there can be some part of the participation grade that is entirely subjective and up to the discretion of the professor and/or teaching assistants.
-
-

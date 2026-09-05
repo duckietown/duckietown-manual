@@ -53,7 +53,6 @@ Image launchers:
 
 :::
 
-
 ## Launchers inside the container
 
 Launchers inside the container appear as shell commands named as `dt-launcher-<LAUNCHER_NAME>`.

@@ -7,13 +7,13 @@
 # Assembly - Traffic Light
 
 ```{needget}
-*   Traffic light components ([Duckietown project shop](https://get.duckietown.com/products/smart-traffic-light))
+- Traffic light components ([Duckietown project shop](https://get.duckietown.com/products/smart-traffic-light))
 
-*   An appropriately [configured SD-card](setup-db-sd-card-flashing-intro).
+- An appropriately [configured SD-card](setup-db-sd-card-flashing-intro).
 
-*   Tools: (strong) wood glue or hot glue gun, tape, double-sided tape.
+- Tools: (strong) wood glue or hot glue gun, tape, double-sided tape.
 ---
-*   An assembled traffic light in configuration `DT21-TL` (latest) or previous legacy versions.
+- An assembled traffic light in configuration `DT21-TL` (latest) or previous legacy versions.
 ```
 
 This section describes the physical assembly and installation of traffic lights.
@@ -24,6 +24,7 @@ Traffic lights are crucial elements of modern cities, and in Duckietown, they pl
 
 They can serve as:
 1. Centralized coordinators of traffic at 3- or 4-way intersections in Duckietown.
+
 2. Components of a Duckietown Autolab watchtower network.
 
 ```{attention}
@@ -31,15 +32,18 @@ For Duckiebots to recognize traffic lights governing a specific intersection, ap
 ```
 
 - **Hardware Design**: Traffic lights are "Duckiebots without wheels," housed in a distinct chassis.
+
 - **Structure**: They consist of two supports connected by an overhanging tube, with one support containing the computational stack and an overseeing camera.
+
 - **Placement**: Traffic lights are positioned diagonally at intersections.
 
 ## Hardware Assembly
 
 - For **latest** configuration traffic lights, refer to the instructions:
-  * [](traffic-light-assembly-21)
+  - [](traffic-light-assembly-21)
+
 - For legacy builds (prior to `TL21`), follow these instructions:
-  * [](traffic-light-assembly-18).
+  - [](traffic-light-assembly-18).
 
 (dt-ops-tl-prep)=
 ### SD-card Image Preparation
@@ -57,12 +61,14 @@ dts sd_card init --hostname watchtowerXX --country COUNTRY --type traffic_light 
 ```{note}
 For Autolab users: Use the convention `hostname: watchtowerXX`, where `XX` are incremental numbers.
 ```
+
 - For standard traffic light setup, use:
-    *   `hostname: trafficlightXX`
+    - `hostname: trafficlightXX`
 
 - Default login credentials:
-    *   Username: `duckie`
-    *   Password: `quackquack`
+    - Username: `duckie`
+
+    - Password: `quackquack`
 
 ```{warning}
 For Autolab users, do not change the username and password.
@@ -78,7 +84,6 @@ To restart the traffic light behavior manually, run the following inside the `du
 ```shell
 roslaunch duckiebot_interface all_drivers.launch veh:=NAME robot_type:=traffic_light
 ```
-
 
 <!--
 

@@ -3,13 +3,7 @@
 :keywords: Duckiebot, calibration, camera calibration, camera calibration pattern
 ```
 
-```{needget}
-- A working Duckiebot: [](ops-db-subsys-testing-intro)
-- A functional `dts` installation: [](setup-dts)
-- A camera calibration pattern, e.g., as provided in a Duckiebox.
----
-- A Duckiebot with the extrinsics camera calibration performed.
-```
+{{ dt_camera_calibration_needget }}
 
 (db-camera-calibration)=
 # Camera Calibration
@@ -51,8 +45,9 @@ If you do not already have a Duckietown calibration board:
 4. Fix it to a rigid planar surface that you can move around
 
 ```{note}
-* The squares must have side lengths equal to **0.031 m** (**3.1 cm**). Measure this, as having the wrong size may lead to your Duckiebot crashing.
-* In case your squares are not the correct size, make sure that your printer settings are set to **A3** format, with "no automatic scaling" and size set to `100%`.
+- The squares must have side lengths equal to **0.031 m** (**3.1 cm**). Measure this, as having the wrong size may lead to your Duckiebot crashing.
+
+- In case your squares are not the correct size, make sure that your printer settings are set to **A3** format, with "no automatic scaling" and size set to `100%`.
 ```
 
 ```{warning}

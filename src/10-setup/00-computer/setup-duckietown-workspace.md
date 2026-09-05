@@ -13,7 +13,6 @@
 If you have already [installed Ubuntu on your computer](setup-install-ubuntu), skip this page and proceed to [setting up your accounts](dt-account).
 ```
 
-
 (setup-devcontainer)=
 # Workspace installation (macOS and Windows)
 
@@ -81,17 +80,17 @@ The following instructions use Windows Terminal, which comes preinstalled with W
 
 To install WSL and Ubuntu on Windows:
 
-1. Install WSL by opening up the Windows Terminal and running
+1. Install WSL by opening up the Windows Terminal and running:
 
-    ```
+    ```shell
     wsl --install
     ```
 
 2. Reboot your computer after the installation is complete.
 
-3. Install Ubuntu by running
+3. Install Ubuntu by running:
 
-    ```
+    ```shell
     wsl --install ubuntu
     ```
 
@@ -99,7 +98,7 @@ To install WSL and Ubuntu on Windows:
 
 Installing Docker Desktop:
 
-1. Install Docker Desktop from https://www.docker.com/ 
+1. Install Docker Desktop from https://www.docker.com/.
 
 2. Start Ubuntu by running `wsl` in the Windows Terminal.
 
@@ -128,9 +127,13 @@ To install Visual Studio Code:
 To install the Remote - Containers extension in VS Code:
 
 1. Open VS Code.
+
 2. Click on the `Extensions` icon in the left sidebar (or press `Ctrl+Shift+X` on Windows or `Cmd+Shift+X` on macOS).
+
 3. In the search bar, type `Remote - Containers`.
+
 4. Click on the `Install` button next to the `Remote - Containers` extension by Microsoft.
+
 5. (**Windows only**) Follow the same instructions to also install the `WSL` extension.
 
 ## Cloning the `workspace` repository
@@ -165,9 +168,7 @@ The first time you load the Dev Container it may take some time as it is buildin
 To create a new local integrated terminal (outside the Dev Container), open the VS Code Command Palette (`Shift+Cmd+P` on macOS or `Shift+Ctrl+P` on Windows), enter `Terminal: Create New Integrated Terminal (Local)` and press `Enter`.
 ```
 
-```{note}
-{{ "{} Duckietown Viewer apps and Duckiematrix renderer-only commands such as `dts matrix run` must be run from a local integrated terminal outside the Dev Container. Commands such as `dts matrix run --standalone` start both the Engine and the Renderer in the same environment. Browser-based variants can be run inside or outside the Dev Container.".format(dt_workspace_note_prefix) }}
-```
+{{ dt_workspace_matrix_lx_note.format(dt_workspace_note_prefix) }}
 
 ## Setting up the Duckietown Shell on the host machine
 
@@ -190,7 +191,7 @@ On your host machine, open a terminal and install [Brew](https://brew.sh/) if yo
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-and proceed to install Python: 
+and proceed to install Python:
 
 ```shell
 brew install python@3.12
@@ -200,7 +201,7 @@ brew install python@3.12
 Compatible versions of Python are 3.10/3.11/3.12.
 ```
 
-Confirm the installation was successful: 
+Confirm the installation was successful:
 
 ````{testexpect}
 Run:
@@ -213,19 +214,27 @@ Python 3.12.13
 
 Before installing `dts`, remove any previously failed pipx attempts:
 
-    pipx uninstall duckietown-shell
+```shell
+pipx uninstall duckietown-shell
+```
 
 Then (re)install the Duckietown Shell using Python 3.12 explicitly:
 
-    pipx install --python /opt/homebrew/bin/python3.12 duckietown-shell
+```shell
+pipx install --python /opt/homebrew/bin/python3.12 duckietown-shell
+```
 
-And finally refresh the shell path with:
+Refresh the shell path:
 
-    pipx ensurepath
+```shell
+pipx ensurepath
+```
 
-and 
+Then restart your shell:
 
-    exec zsh
+```shell
+exec zsh
+```
 
 To confirm the installation was successful:
 
@@ -235,7 +244,7 @@ Run:
 ```shell
 dts
 ---
-```bash
+```text
 username@computername ~ % dts
                ____  _   _  ____ _  _____ _____ _____ _____        ___   _     ____  _   _ _____ _     _
               |  _ \| | | |/ ___| |/ /_ _| ____|_   _/ _ \ \      / / \ | |   / ___|| | | | ____| |   | |
@@ -257,10 +266,10 @@ daffy
 ````
 
 ```{note}
-Host machine `dts` installations are not fully functional, but useful in specific circumstances. Continue using the Duckietown Shell inside your VS Code Workspace as default Duckietown Shell, and refer to the host machine `dts` only when instructed to do so. 
+Host machine `dts` installations are not fully functional, but useful in specific circumstances. Continue using the Duckietown Shell inside your Duckietown Workspace in VS Code as your default Duckietown Shell, and refer to the host machine `dts` only when instructed to do so.
 ```
 
-:::: 
+::::
 
 ::::{tab-item} Windows
 
@@ -273,6 +282,7 @@ To set up the Duckietown Shell on the host machine, [install Python 3.10/3.11/3.
 ```{attention}
 If a popup asking you to input your credentials appears, you should do so and then click `Always Allow`. 
 ```
+
 (setup-devcontainer-dts-code-editor)=
 ### Running `dts code editor`
 
@@ -294,11 +304,12 @@ To be able to run `dts code editor`, you need to install `mkcert` on your host s
 
 2. Then, open the Windows Terminal and run:
 
-    ```
+    ```shell
     .\Downloads\mkcert-v1.4.4-windows-amd64.exe --install
     ```
 
 3. Select `Yes` in the prompt.
+
 4. In the Ubuntu terminal, open the `~/.bashrc` file with a text editor, e.g., by running `nano ~/.bashrc`, and append the following lines at the end of the file:
 
     ```bash

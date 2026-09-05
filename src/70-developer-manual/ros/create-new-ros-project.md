@@ -7,17 +7,16 @@
 # New ROS DTProject
 
 ```{needget}
-* [Working environment setup](setup-computer)
-* [Accounts setup](dt-account)
----
-* Learn how to create a new ROS-compatible DTProject from a template
-```
+- [Working environment setup](setup-computer)
 
+- [Accounts setup](dt-account)
+---
+- Learn how to create a new ROS-compatible DTProject from a template.
+```
 
 ## Create a project from a template
 
 A new repository is created from the template-ros boilerplate. Navigate to the template repository on GitHub: [duckietown/template-ros](https://github.com/duckietown/template-ros/). Select **Use this template**, then choose **Create a new repository** from the dropdown menu.
-
 
 ```{figure} ../../_images/developer/beginner/github_use_template.jpg
 :name: ros-github-use-template-1
@@ -27,7 +26,6 @@ A new repository is created from the template-ros boilerplate. Navigate to the t
 
 Use template repository on GitHub.
 ```
-
 
 This will take you to a page that looks like the following:
 
@@ -48,8 +46,10 @@ Replace `my-ros-project` with the preferred repository name. If a different name
 
 This will create a new repository starting from the content of the template `template-ros`. Clone the newly created repository:
 
-    git clone https://github.com/YOUR_NAME/my-ros-project
-    cd my-ros-project
+```shell
+git clone https://github.com/YOUR_NAME/my-ros-project
+cd my-ros-project
+```
 
 ```{note}
 Replace `YOUR_NAME` in the link above with your GitHub username.
@@ -74,20 +74,20 @@ Replace each placeholder as follows:
 
 - `MAINTAINER`: full name and email address of the maintainer
 
-
 Save the changes to proceed with compiling this project into a Docker image.
-
 
 ## Build the project
 
 As shown in [](dtproject-build-project), navigate to the project root and run:
 
-    dts devel build -f
+```shell
+dts devel build -f
+```
 
 Again, building a project produces a Docker image. This image is the
 _compiled_ version of the source project. Upon success, the final image name is displayed, for example:
 
-```sh
+```text
 Final image name: duckietown/my-ros-project:v2-amd64
 ```
 
@@ -96,17 +96,18 @@ Final image name: duckietown/my-ros-project:v2-amd64
 
 As shown in [](dtproject-run-project), run the project with:
 
-    dts devel run
+```shell
+dts devel run
+```
 
 This will show the following message:
 
-```
+```text
 ...
 ==> Launching app...
 This is an empty launch script. Update it to launch your application.
 <== App terminated!
 ```
-
 
 ```{admonition} Congratulations 🎉
 You just built and ran your first ROS-based Duckietown-compliant Docker image.

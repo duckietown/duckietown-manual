@@ -1,11 +1,10 @@
-(slides-and-recordings-tools-git)=
-# Git
-
 ```{seo}
 :description: Duckietown introduction to Git, a tool for building collaborative software projects.
 :keywords: Git, Github, Duckietown, collaborative software development, push, pull, branch, fork, version control
 ```
 
+(slides-and-recordings-tools-git)=
+# Git
 
 ## Version Control with Git
 
@@ -21,4 +20,3 @@ Git is a tool for building collaborative software projects. Here we present some
 
 ```{slides} ../../../../_assets/instructor-manual/mooc-version-control.pdf
 ```
-

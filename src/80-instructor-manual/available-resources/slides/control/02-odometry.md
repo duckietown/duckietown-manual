@@ -15,4 +15,3 @@ In other words, odometry describes one of the simplest approaches for a mobile r
 ```
 
 For the accompanying exercise, please see [Modeling and Control](mooc-exercises).
-

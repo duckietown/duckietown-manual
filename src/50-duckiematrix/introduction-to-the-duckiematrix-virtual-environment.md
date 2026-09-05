@@ -25,16 +25,17 @@ Despite simulation never exactly matching reality, from a functionality standpoi
 
 Before proceeding, it is worth knowing that, at a high level, the Duckiematrix is composed of two main components:
 
-1. The **engine** which performs simulates the movement (kinematics and dynamics) of the entities in the simulated world. You can imagine this as "the world". 
-2. The **renderer** which produces the visualization of the world and is used to simulate the sensors (in particular the camera). 
+1. The **Engine** simulates the movement (kinematics and dynamics) of Duckiematrix Entities in the simulated world. You can imagine this as "the world".
+
+2. The **Renderer** which produces the visualization of the world and is used to simulate the sensors (in particular the camera).
 
 Although not all steps are always necessary, and some can be conflated in unified commands, the typical Duckiematrix workflow is: 
 
-1. **Create the world**: start the **engine** by providing information on the map and entities (e.g., duckiebots, duckiedrones, traffic lights, etc.) that inhabit it;
+1. **Create the world**: start the **Engine** by providing information on the map and Duckiematrix Entities (e.g., duckiebots, duckiedrones, traffic lights, etc.) that inhabit it;
 
-2. **Observe the world**: start a **renderer** and connect it to the **engine** to "see" the world. Note that (a) there can be multiple (or no) renderers for the same world; (b) the renderer and engine can but do not need to be running on the same computer. 
+2. **Observe the world**: start a **Renderer** and connect it to the **Engine** to "see" the world. Note that (a) there can be multiple (or no) Renderers for the same world; (b) the Renderer and Engine can but do not need to be running on the same computer.
 
-3. **Attach robots to the world entities**: the entities that inhabit the world at creation are just simulacri, or forms of robots. To give them substance (i.e., an actual agent), *attach* a (or more) robot(s) to an (or more) entity(ies). Note that robots attached to the Duckiematrix can be [virtual](dtmatrix-virtual-duckiebots), or [physical](assembly-instructions-db21j). 
+3. **Attach robots to Duckiematrix Entities**: the Duckiematrix Entities that inhabit the world at creation are just simulacri, or forms of robots. To give them substance (i.e., an actual agent), *attach* one or more robots to one or more Duckiematrix Entities. Note that robots attached to the Duckiematrix can be [virtual](dtmatrix-virtual-duckiebots), or [physical](assembly-instructions-db21j).
 
 ```{seealso}
 Additional details can be found [in the developer section of this manual](advanced-duckiematrix-development).

@@ -36,11 +36,12 @@ To this end, we like to tell students during the first class, that "Duckietown i
 
 We advocate for a setup where each student gets their own personal robot to build and love. This starts with being able to name their robot - something that immediately establishes a connection between the student and their robot. We encourage students to customize their duckies and bots (being mindful of the potential technical repercussions).
 
-
 ```{figure} ../../_images/instructor-manual/duckiebot-construction.jpeg
 :name: duckiebot-construction
-```
+:alt: Students assembling Duckiebots during a classroom session.
 
+Students assembling Duckiebots during a classroom session.
+```
 
 (code-lives-on)=
 ## Student code can live on
@@ -48,7 +49,6 @@ We advocate for a setup where each student gets their own personal robot to buil
 We strongly encourage you and your students to contribute back to the larger project. This could be through fixing bugs and making pull-requests, or by creating new and creative content or projects that we would be happy to showcase.
 
 Many students tend to be extremely motivated by the possibility that, if they do an excellent job, their project or work could live on beyond just the specific course that they are taking. Students crave to be part of something bigger than the scope of a class.
-
 
 (spirit-duckies)=
 ## The Duckies!
@@ -61,12 +61,18 @@ Robots are typically thought of as dangerous, strong, fast, aggressive and unpre
 
 ```{figure} ../../_images/instructor-manual/duckies.jpeg
 :name: duckies
+:alt: Two students inspecting a Duckiebot and rubber ducks behind a transparent barrier.
+
+Two students inspecting a Duckiebot and rubber ducks behind a transparent barrier.
 ```
 
 We strongly recommend that everybody gets a Duckiebot (with duckies included) when they start the class, as part of a "box ceremony" where each student receives their robot.
 
 ```{figure} ../../_images/instructor-manual/box-ceremony.jpeg
 :name: box-ceremony
+:alt: A student receiving a Duckietown box between two instructors during a box ceremony.
+
+A student receiving a Duckietown box between two instructors during a box ceremony.
 ```
 
 (spirit-duckietown)=
@@ -78,22 +84,30 @@ The fusion of art and technology is a powerful tool for unleashing creativity. I
 
 ```{figure} ../../_images/instructor-manual/duckietown.jpeg
 :name: duckietown-instructor-manual
-```
+:alt: Duckiebots navigating a Duckietown road layout during a public demonstration.
 
+Duckiebots navigating a Duckietown road layout during a public demonstration.
+```
 
 (public-demonstration)=
 ## Public Demonstration
 
 Whenever possible, we try to end the course with a **public** demonstration. This has many potential benefits:
 1. it acts as a strong motivation for students to produce something that they are proud of to show the world.
+
 2. it teaches students how to communicate about their work to a more general audience (this is one possible [intended learning outcome](consideration-ilo-communication)).
+
 3. the pressure of the demo is an essential aspect of robotics - it is possible to make something work *once* and produce a video, but doing a public demonstration requires ensuring that it works _reliably every time_.
+
 4. it teaches students how to operate under stressful conditions, a skill that is very useful in the real world.
+
 5. it teaches students that evaluation comes from other individuals in the real world, and not from grades derived from tests.
 
 ```{figure} ../../_images/instructor-manual/public-demo.jpeg
 :name: public-demo
+:alt: Audience members watching a Duckietown public demonstration.
 
+Audience members watching a Duckietown public demonstration.
 ```
 
 (hero-quest)=
@@ -107,6 +121,9 @@ Sometimes we go as far as creating a story for them, inspired by the [Hero's Jou
 
 ```{figure} ../../_images/instructor-manual/hero-journey.png
 :name: hero-journey
+:alt: Diagram of the Duckietown learning journey from a call to adventure through trials, transformation, and return.
+
+Diagram of the Duckietown learning journey from a call to adventure through trials, transformation, and return.
 ```
 
 and here is how we introduce it in the massive open online course ["Self-Driving Cars with Duckietown"](https://duckietown.com/mooc/):

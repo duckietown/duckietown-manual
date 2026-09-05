@@ -1,10 +1,10 @@
-(db-wheels-calibration)=
-# Wheel Calibration
-
 ```{seo}
-:description: How to perform the wheel calibration procedure for a Duckiebot.
+:description: How to perform the kinematics calibration procedure for a Duckiebot.
 :keywords: Duckietown, Duckiebot, kinematics calibration, odometry, wheel calibration, odometry calibration, differential drive robot calibration
 ```
+
+(db-wheels-calibration)=
+# Wheel Calibration
 
 This chapter describes how to perform the kinematics calibration procedure for your Duckiebot.
 
@@ -26,26 +26,77 @@ To perform the kinematics calibration procedure for your Duckiebot is by using t
 :alt: Duckietown keyboard controller for Duckiebots
 :name: keyboard_controller_2
 
-
 The Duckiebot keyboard controller is useful to easily open loop control a connected Duckiebot, as well as for adjusting the wheel calibration parameters.
 ```
 
-To open the `Keyboard Controller`, follow these instructions: [](ops-db-subsys-make-it-move).
+To open the `Keyboard Controller`, run:
 
+```shell
+dts duckiebot keyboard_control DUCKIEBOT_NAME
+```
 
-## Wheel calibration procedure
+```{note}
+{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "keyboard_control") }}
+```
 
-To perform the wheel calibration procedure:
+Note the keys in the table below.
 
-1. Create a slightly longer than `2 m` straight line on your floor using tape (or use 4 straight Duckietown tiles, each one is `60 cm` long)
+```{list-table}
+:header-rows: 1
+:name: table:keyboard-controller-commands
+
+* - Key
+  - Function
+* - <kbd>W</kbd>
+  - Drive forwards
+* - <kbd>S</kbd>
+  - Drive backwards
+* - <kbd>A</kbd>
+  - Turn left
+* - <kbd>D</kbd>
+  - Turn right
+* - <kbd>E</kbd>
+  - Toggle the `Emergency Stop` switch
+* - <kbd>F</kbd>
+  - Toggle the `Autopilot` switch
+* - <kbd>X</kbd>
+  - Increase the `Gain`
+* - <kbd>Z</kbd>
+  - Decrease the `Gain`
+* - <kbd>V</kbd>
+  - Increase the `Trim`
+* - <kbd>C</kbd>
+  - Decrease the `Trim`
+* - <kbd>Space</kbd>
+  - Save the `Gain` and `Trim`
+* - <kbd>R</kbd>
+  - Refresh the window
+* - <kbd>T</kbd>
+  - Open the `Debug Console`
+```
+
+## Procedure
+
+To perform the kinematics calibration procedure:
+
+1. Create a slightly greater than `2 m` long straight line on your floor using tape (or 4 straight tiles, each one is `60 cm` long)
+
 2. Place your Duckiebot at one end of the line
+
 3. Note your Duckiebot's position
+
 4. Face your Duckiebot towards the other end of the line
+
 5. Drive your Duckiebot forward for about `2 m`
+
 6. Note your Duckiebot's position
+
 7. Measure the distance between the center of the tape and the center of your Duckiebot's axle using a ruler, making sure that the ruler is perpendicular to the tape
+
 8. Decrease (increase) the `Trim` and repeat steps **2**-**8** if your Duckiebot drifted to the left (right) side of the tape by more than `10 cm`.
+
 9. Set the `Gain`.
+
 10. Click the `Save` button.
 
 ```{figure} ../../_images/calibrations/kinematics/wheel_calibration_line.png
@@ -93,6 +144,7 @@ The `Kinematics` panel on the `Robot` page of the `Dashboard`.
 ```{note}
 Within the `Kinematics` panel, under `Local`, you should see a tick next to `Completed`, the calibration date next to `Calibration date` and `/data/config/calibrations/kinematics/DUCKIEBOT_NAME.yaml` next to `Files`.
 ```
+
 <!--
 ## Troubleshooting
 

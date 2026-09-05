@@ -3,32 +3,30 @@
 :keywords: terminal, Duckietown, dts shell, robotics, terminal commands, Duckiebot, development tools, BASH
 ```
 
-
 (sec:terminal-basics)=
 # The Linux Terminal
 
 ```{needget}
-* [Laptop setup](setup-computer)
-* [Duckietown account](dt-account)
+- [Laptop setup](setup-computer)
+
+- [Duckietown account](dt-account)
 ---
-* Know how to use a terminal
+- Know how to use a terminal.
 ```
 
-
 Working over the terminal is a skill that every roboticist-to-be needs to acquire. It enables working on other computers remotely without the need for a graphical user interface (GUI), and after some practice, it actually increases working efficiency. Moreover, although not recommended at the very beginning, terminal-based workflows can be highly customized for additional efficiency as well as duckie-cool factor.
-
 
 (sec:using-terminal)=
 ## Using a terminal
 
 It makes sense to learn how to use the terminal very well, as it will save you a lot of time along the way.
-If you are completely new to working with a terminal, often also called "console" or "command line", an official beginners
+If you are completely new to working with a terminal, often also called "console" or "command line", an official beginner's
 tutorial can be found [on the Ubuntu website](https://tutorials.ubuntu.com/tutorial/command-line-for-beginners#0).
 
-The terminal requires using a conding language called [BASH](https://en.wikipedia.org/wiki/Bash_(Unix_shell)), or "Bourne Again SHell". BASH is completely free and works on all major operating systems (e.g., Linux, macOS, Windows). If you are looking for an extensive list of commands that can be used from the terminal, [this command line cheatsheet](https://ss64.com/bash/) is a good resource.
+Using a terminal requires learning a command language called [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)). Bash is short for "Bourne Again Shell" and works on all major operating systems (e.g., Linux, macOS, Windows). If you are looking for an extensive list of commands that can be used from the terminal, [this command line cheatsheet](https://ss64.com/bash/) is a good resource.
 
 ```{todo}
-1. write section on how to pimp up the terminal; 2. write section on IDEs and provide a preset configuration for Pycharme CE and VisualStudio; 3. Provide some best practices for development; 4. Arguably move this away from the developer manual. It is too basic.
+1. write section on how to pimp up the terminal; 2. write section on IDEs and provide a preset configuration for PyCharm CE and Visual Studio; 3. Provide some best practices for development; 4. Arguably move this away from the developer manual. It is too basic.
 ```
 
 (sec:using-dt-shell)=

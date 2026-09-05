@@ -1,6 +1,6 @@
 ```{seo}
 :description: Visual Perception in Duckietown
-:keywords: image classificaiton, image segmentation, object detection, mAP, PR curves, instance segmentation
+:keywords: image classification, image segmentation, object detection, mAP, PR curves, instance segmentation
 ```
 
 (slides-and-recordings-intro-visual-perception)=
@@ -13,5 +13,3 @@ We also define intersection-over-union (IoU) and mean average precision (mAP), w
 ```{vimeo} 549675016
 :alt: Introduction to Advanced Visual Perception
 ```
-
-

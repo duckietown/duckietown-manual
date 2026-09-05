@@ -17,5 +17,4 @@ Differential drive is a simple configuration, yet not trivial. In this section w
 ```{slides} ../../../../_assets/instructor-manual/differential-drive.pdf
 ```
 
-
 For the accompanying exercise, please see [Modeling and Control](mooc-exercises).

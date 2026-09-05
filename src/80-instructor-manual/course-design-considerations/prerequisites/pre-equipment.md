@@ -1,6 +1,6 @@
 ```{seo}
 :description: Typical infrastructural prerequisites for teaching a Duckietown class (equipment, space, networks, etc.).
-:keywords: duckietown, prerequisites, space, equipment, infrastruture, network
+:keywords: duckietown, prerequisites, space, equipment, infrastructure, network
 ```
 
 (prerequisites-space-infra-equip)=
@@ -19,11 +19,11 @@ To enable this experience, you will require some items.
 
 Space is an important consideration. You will need a space that is:
 
-* indoors;
+- indoors;
 
-* large enough to accommodate an [assembled Duckietown](duckietowns-intro), built in compliance with Duckietown appearance specifications, and the working positions for students operating it;
+- large enough to accommodate an [assembled Duckietown](duckietowns-intro), built in compliance with Duckietown appearance specifications, and the working positions for students operating it;
 
-* reserved for the duration of the class as reconstructing the Duckietown for every lab session will become tedious.
+- reserved for the duration of the class as reconstructing the Duckietown for every lab session will become tedious.
 
 If there is insufficient space for all students in the class to work at the same time, an effective option is to set up a time-sharing system where students have designated preferential time slots.
 
@@ -37,7 +37,9 @@ When building Duckietown inside a room, you want to consider the following facto
 - Nice to have:
 
   - **active lighting control**: installing tunable (in color and intensity) LED lights on the room ceiling will allow us to do great things like simulating night/day cycles, enabling many projects;
+
   - facilities to securely store and safely charge multiple robots at once;
+
   - coffee and tea machines!
 
 ```{tip}
@@ -52,16 +54,18 @@ Additional equipment is required for things to function properly.
 (prerequisites-computers)=
 ### Computers
 
-To interact with the robots, students will need a computer with a Ubuntu installation. We **strongly** recommend that this is a native installation (as opposed to a virtual machine), as virtual machines can cause weird and hard-to-debug problems when interacting with low-level components like network interfaces.
+To interact with the robots, students will need a computer with an Ubuntu installation. We **strongly** recommend that this is a native installation (as opposed to a virtual machine), as virtual machines can cause weird and hard-to-debug problems when interacting with low-level components like network interfaces.
 
 The recommended version of Ubuntu (as of January 2024) is Ubuntu 22.04. If the student does not already have this installed, then they can choose a dual-boot setup.
 
 - [Mac dual boot instruction](https://help.ubuntu.com/community/MacDualBoot)
+
 - [Windows dual boot instructions](https://help.ubuntu.com/community/WindowsDualBoot)
 
 ```{attention}
 Every student should have a computer with a native Ubuntu installation:
 - **Minimum specifications**: Quad-core at 1.8Ghz, 4GB RAM, 60GB hard drive, GPU compatible with OpenGL 2.1+
+
 - **Recommended specifications**: Quad-core at 2.1Ghz, 8GB RAM, 120GB hard drive, GPU compatible with OpenGL 2.1+
 ```
 
@@ -82,9 +86,11 @@ We like to say in our classes that "**90% of problems in robotics come from netw
 
 You will need a reliable internet connection for students to:
 
-* Download things (such as Docker images) onto their computer;
-* Download things (such as Docker images) onto their robot;
-* To communicate with their robot.
+- Download things (such as Docker images) onto their computer;
+
+- Download things (such as Docker images) onto their robot;
+
+- To communicate with their robot.
 
 The faster the better when it comes to the bandwidth of the connection.
 
@@ -96,7 +102,7 @@ Other than the speed, there are a few other technical requirements for your netw
 
 2. We make extensive use of the name-discovery tool called [Avahi](https://www.avahi.org/). This is needed so that we do not need to know the IP of the robot to be able to communicate with it. Instead, we can assign a unique name to each robot and then refer to it by name. For example:
 
-    ```
+    ```shell
     ping robot_name.local
     ```
 

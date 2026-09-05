@@ -1,10 +1,10 @@
-(dtmatrix-map-customization)=
-# Customizing Maps
-
 ```{seo}
 :description: How to create and use a custom Duckiematrix Map.
 :keywords: Duckietown, Duckiematrix, custom, Map
 ```
+
+(dtmatrix-map-customization)=
+# Customizing Maps
 
 This section describes how to create and use a custom Duckiematrix `Map`.
 
@@ -20,8 +20,11 @@ Knowledge on how to create and use a custom Duckiematrix `Map`.
 To create a custom `Map`:
 
 1. Download the `loop` `Map` zip file [here](https://duckietown-public-storage.s3.amazonaws.com/assets/duckiematrix/maps/loop.zip).
+
 2. Unzip the `loop` `Map` zip file.
+
 3. Move the `loop` `Map` to a convenient location, noting its path.
+
 4. Edit the name and layers of the `loop` `Map`.
 
 ```{note}
@@ -37,9 +40,7 @@ To run a local `Engine` and `Renderer` using a custom `Map`, run the following c
 dts matrix run --standalone --map MAP
 ```
 
-```{note}
 {{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
-```
 
 ```{note}
 For any changes in the layers to appear in the `Renderer`, this command will need to be re-run.

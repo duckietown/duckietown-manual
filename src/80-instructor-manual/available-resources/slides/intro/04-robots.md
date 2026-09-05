@@ -1,12 +1,10 @@
-
-(slides-and-recordings-robots)=
-# Robots
-
 ```{seo}
 :description: Duckietown introduction to robot hardware and software components.
 :keywords: robot, hardware, software, power, sensor, sensors, actuator, actuators, memory, computation, chassis
 ```
 
+(slides-and-recordings-robots)=
+# Robots
 
 ## Making Robots
 

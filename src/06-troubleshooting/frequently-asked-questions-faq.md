@@ -1,10 +1,10 @@
-(db-troubleshooting-faqs)=
-# Frequently Asked Questions (FAQs)
-
 ```{seo}
 :description: FAQ (Frequently Asked Questions) related to a Duckiebot.
 :keywords: Duckietown, Duckiebot, FAQ, Frequently Asked Questions
 ```
+
+(db-troubleshooting-faqs)=
+# Frequently Asked Questions (FAQs)
 
 This chapter describes frequently asked questions (FAQs) related to your Duckiebot.
 
@@ -22,9 +22,10 @@ Each symptom and resolution are also available on the pages they relate to throu
 ```{attention}
 If you do not find a solution to your problem in this chapter:
 
-1. Search the [Duckietown Stack Overflow](https://stackoverflowteams.com/c/duckietown/questions).
-To receive an invitation, [join the Slack community](https://duckietown.com/join-slack) and follow [these instructions](https://duckietown.slack.com/archives/CHHQJ0E0H/p1670874390660429).
+1. Search the [Duckietown Stack Overflow](https://stackoverflowteams.com/c/duckietown/questions). To receive an invitation, [join the Slack community](https://duckietown.com/join-slack) and follow [these instructions](https://duckietown.slack.com/archives/CHHQJ0E0H/p1670874390660429).
+
 2. Search the Slack community `#help` channels.
+
 3. Post your own question following the [Duckietown technical support guidelines](https://duckietown.com/contact/#technical-support).
 ```
 
@@ -84,9 +85,13 @@ I see a permissions error when trying to access the `Dashboard` (i.e., `Director
 cannot be written`).
 ---
 1. Remove the SD card from the on-board computer (press it in once to release the spring and then remove it).
+
 2. Put the SD card into your computer using the SD card adapter provided in the Duckiebox.
+
 3. Navigate to the root directory of the SD card.
+
 4. Run `chmod -R 777 ./data/config/permissions`.
+
 5. Eject the drive, place the SD card back into the on-board computer and then turn your Duckiebot on.
 ```
 
@@ -108,17 +113,9 @@ Unplug all cables connected to the HUT except minus the charging cable.
 Allow the battery to charge for at least `5 h` before plugging these cables back in.
 ```
 
-```{trouble}
-The `Keyboard Controller` window is active but my Duckiebot still does not move. However, I can see messages being sent to my Duckiebot when looking at the `DUCKIEBOT_NAME/actuator/wheels/base/pwm` `DTPS` topic, after following [](sw-tools-dtps), and the `Components` page of the `Dashboard` (opened by running `dts duckiebot dashboard DUCKIEBOT_NAME --page robot/components`) shows a red alert for the HUT.
----
-If you have a HUT v3.1, follow [](reflash-microcontroller).
-```
+{{ dt_duckiebot_hut_reflash_trouble }}
 
-```{trouble}
-I have re-flashed the HUT but my Duckiebot still does not move or moves in a jerky manner. Additionally, the ToF sensor and front bumper are not detected on the `Components` page of the `Dashboard` (opened by running `dts duckiebot dashboard DUCKIEBOT_NAME --page robot/components`). I may also be having issues with the screen.
----
-Disconnect the ToF sensor from the front bumper and use the long I2C cable, that originally connected the front bumper to the HUT, to connect the ToF sensor directly to that same HUT port. Finally, reboot your Duckiebot. This procedure bypasses a known multiplexer issue on some front bumpers that can cause other issues with the HUT.
-```
+{{ dt_duckiebot_hut_multiplexer_trouble }}
 
 ```{trouble}
 I am still having a software issue that the Duckietown team has pushed a new fix for according to Stack Overflow.
@@ -131,10 +128,12 @@ You will never need to re-flash the SD card for your Duckiebot to receive update
 ```{trouble}
 Many of the hardware components on the `Components` page of the Dashboard are not found on my Duckiebot and their connector buses are all I2C (see the bottom line of each component card).
 ---
-* Make sure that both rows of GPIO pins on the Jetson Nano are connected accordingly to the connection slots on the HUT.
-* A broken component along the I2C bus could lead to this problem.
+- Make sure that both rows of GPIO pins on the Jetson Nano are connected accordingly to the connection slots on the HUT.
+
+- A broken component along the I2C bus could lead to this problem.
 You could turn your Duckiebot off, unplug one element from the HUT at a time and then reboot your Duckiebot, repeat this procedure for other components.
 If most missing components appear connected after one test, it is likely the unplugged component that has a hardware failure. Record a video of these tests being run and contact support.
-* If all individual component unplugging tests were performed and the components along the I2C chain are still missing, there may be a I2C issue with the Jetson Nano.
+
+- If all individual component unplugging tests were performed and the components along the I2C chain are still missing, there may be a I2C issue with the Jetson Nano.
 From your Duckiebot, run `sudo i2cdetect -r -y 1` to see a table of I2C addresses identified and note the output. Record a video of these tests being run and contact support.
 ```

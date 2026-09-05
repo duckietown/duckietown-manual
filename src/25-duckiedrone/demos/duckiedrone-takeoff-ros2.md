@@ -1,9 +1,9 @@
-# Virtual Duckiedrone Takeoff Demo
-
 ```{seo}
 :description: The Takeoff demo (demonstration) for a virtual Duckiedrone.
 :keywords: Duckietown, virtual, Duckiedrone, Takeoff, demo, demonstration, ROS2, mavros, PX4
 ```
+
+# Virtual Duckiedrone Takeoff Demo
 
 This chapter describes the `Takeoff` demo (demonstration) for virtual Duckiedrones.
 
@@ -22,16 +22,16 @@ A virtual Duckiedrone successfully arming and taking off autonomously.
 
 To set up the demo:
 
-1. Create a virtual Duckiedrone by running the following command, where `ROBOT_NAME` is the name of your virtual Duckiedrone:
+1. Create a virtual Duckiedrone by running the following command, where `DUCKIEDRONE_NAME` is the name of your virtual Duckiedrone:
 
     ```shell
-    dts duckiebot virtual create -t duckiedrone -c DD24 ROBOT_NAME
+    dts duckiebot virtual create -t duckiedrone -c DD24 DUCKIEDRONE_NAME
     ```
 
-2. Once created, start your virtual Duckiedrone by running the following command, where `ROBOT_NAME` is the name of your virtual Duckiedrone:
+2. Once created, start your virtual Duckiedrone by running the following command, where `DUCKIEDRONE_NAME` is the name of your virtual Duckiedrone:
 
     ```shell
-    dts duckiebot virtual start ROBOT_NAME
+    dts duckiebot virtual start DUCKIEDRONE_NAME
     ```
 
 3. Run the Duckiematrix using the `sandbox_drone` map by running:
@@ -46,14 +46,12 @@ To set up the demo:
     dts matrix run --standalone -d --map sandbox_drone
     ```
 
-    ```{note}
     {{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
-    ```
 
-5. Attach the Duckiedrone to the matrix engine:
+5. Attach the Duckiedrone to a Duckiematrix Entity:
 
     ```shell
-    dts matrix attach ROBOT_NAME map_0/vehicle_0
+    dts matrix attach DUCKIEDRONE_NAME map_0/vehicle_0
     ```
 
 ```{attention}
@@ -62,24 +60,24 @@ Wait for all containers to be running before proceeding to the next step.
 
 ## Start
 
-To run the demo on your virtual Duckiedrone, run the following command, where `ROBOT_NAME` is the name of your virtual Duckiedrone:
+To run the demo on your virtual Duckiedrone, run the following command, where `DUCKIEDRONE_NAME` is the name of your virtual Duckiedrone:
 
 ```shell
-docker exec -it dts-virtual-ROBOT_NAME docker exec -it ros2-mavros bash
+docker exec -it dts-virtual-DUCKIEDRONE_NAME docker exec -it ros2-mavros bash
 ```
 
 Inside the bash prompt:
 
 1. Set your virtual Duckiedrone to takeoff mode by running:
 
-    ```bash
+    ```shell
     ros2 service call /mavros/set_mode mavros_msgs/srv/SetMode "{base_mode: 0, custom_mode: 'AUTO.TAKEOFF'}"
     ```
 
     ````{note}
     Expected output:
 
-    ```bash
+    ```text
     response:
     mavros_msgs.srv.SetMode_Response(mode_sent=True)
     ```
@@ -87,14 +85,14 @@ Inside the bash prompt:
 
 2. Arm your virtual Duckiedrone to initiate takeoff by running:
 
-    ```bash
+    ```shell
     ros2 service call /mavros/cmd/arming mavros_msgs/srv/CommandBool "{value: true}"
     ```
 
     ````{note}
     Expected output:
 
-    ```bash
+    ```text
     requester: making request: mavros_msgs.srv.CommandBool_Request(value=True)
     response:
     mavros_msgs.srv.CommandBool_Response(success=True, result=0)
@@ -109,7 +107,7 @@ To stop the demo:
 
 1. Land your virtual Duckiedrone by setting it to `AUTO.LAND` mode by running:
 
-    ```bash
+    ```shell
     ros2 service call /mavros/set_mode mavros_msgs/srv/SetMode "{base_mode: 0, custom_mode: 'AUTO.LAND'}"
     ```
 
@@ -139,7 +137,7 @@ If the performance of your virtual Duckiedrone is inconsistent or the takeoff do
 
 Check that MAVROS is properly connected to the flight controller by running:
 
-```bash
+```shell
 ros2 topic echo /mavros/state
 ```
 
@@ -149,7 +147,7 @@ You should see output indicating that the flight controller is connected and tha
 
 Verify that sensor data is being published by running:
 
-```bash
+```shell
 ros2 topic list
 ```
 
@@ -166,7 +164,7 @@ Verify that the flight controller is in a safe state and that all pre-arm checks
 ```{trouble}
 MAVROS cannot connect to the flight controller.
 ---
-Restart your virtual Duckiedrone using `dts duckiebot virtual restart ROBOT_NAME`, where `ROBOT_NAME` is the name of your virtual Duckiedrone.
+Restart your virtual Duckiedrone using `dts duckiebot virtual restart DUCKIEDRONE_NAME`, where `DUCKIEDRONE_NAME` is the name of your virtual Duckiedrone.
 ```
 
 ```{trouble}
@@ -178,5 +176,5 @@ Verify that the takeoff mode was set correctly before arming. Some flight contro
 ```{trouble}
 I see service call return errors.
 ---
-Ensure that all containers in the `ros2` stack are running. Use `docker ps` or Portainer (accessible through your virtual Duckiedrone's `Dashboard` or at `ROBOT_NAME.local:9000`, where `ROBOT_NAME` is the name of your virtual Duckiedrone) to verify container statuses.
+Ensure that all containers in the `ros2` stack are running. Use `docker ps` or Portainer (accessible through your virtual Duckiedrone's `Dashboard` or at `DUCKIEDRONE_NAME.local:9000`, where `DUCKIEDRONE_NAME` is the name of your virtual Duckiedrone) to verify container statuses.
 ```

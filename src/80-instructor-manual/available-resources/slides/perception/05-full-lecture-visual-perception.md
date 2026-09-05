@@ -1,10 +1,10 @@
-(slides-and-recordings-visual-perception-full)=
-# Full Lectures on Visual Perception
-
 ```{seo}
 :description: Visual Perception in Duckietown
 :keywords: Duckietown, object detection, visual perception, machine learning, ML, deep learning, embedded AI, AI, artificial intelligence
 ```
+
+(slides-and-recordings-visual-perception-full)=
+# Full Lectures on Visual Perception
 
 ## Introduction to Machine Learning
 
@@ -13,9 +13,7 @@ These slides provide a basic introduction to machine learning, deep learning, ne
 ```{slides} ../../../../_assets/instructor-manual/machine-learning-in-robotics.pdf
 ```
 
-
 ## Visual Perception
-
 
 These slides combine the sections: [](slides-and-recordings-intro-visual-perception), [](slides-and-recordings-intro-neural-networks), [](slides-and-recordings-cnn), and [](slides-and-recordings-object-detection), into one full-length lecture.
 
@@ -26,6 +24,3 @@ These are a slightly older version with mostly similar material but slightly dif
 
 ```{slides} ../../../../_assets/instructor-manual/visual-perception-2.pdf
 ```
-
-
-

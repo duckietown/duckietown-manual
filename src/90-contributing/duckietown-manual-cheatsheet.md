@@ -9,12 +9,10 @@ kernelspec:
   language: python
   name: python3
 ---
-
 ```{seo}
 :description: This is a cheatsheet summarizing the environments for contributing to the Duckietown documentation.
 :keywords: myst, cheatsheet, duckietown, documentation
 ```
-
 
 ```{note}
 This is a shortlisted version of the [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html).
@@ -79,6 +77,7 @@ You can specify the text of the target:
 ```md
 [MyST syntax lecture](myst_cheatsheet)
 ```
+
 <!--
 You can also specify a target in another book using the syntax:
 
@@ -88,6 +87,7 @@ You can also specify a target in another book using the syntax:
 
 Example here is link to the Duckiebot Operation Manual page about DB21J assembly [](book-opmanual-duckiebot:assembling-duckiebot-db21j).
 -->
+
 ## Quote
 
 ``````{list-table}
@@ -243,20 +243,24 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
   - Result
 * - ```md
     1. First item
+
     2. Second item
         1. First sub-item
     ```
   - 1. First item
+
     2. Second item
         1. First sub-item
 * - ```md
     1. First item
+
     2. Second item
-        * First sub-item
+        - First sub-item
     ```
   - 1. First item
+
     2. Second item
-        * First subitem
+        - First subitem
 ``````
 
 ### Unordered list
@@ -268,20 +272,24 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 * - Example
   - Result
 * - ```md
-    * First item
-    * Second item
-      * First subitem
+    - First item
+
+    - Second item
+      - First subitem
     ```
-  - * First item
-    * Second item
-      * First subitem
+  - - First item
+
+    - Second item
+      - First subitem
 * - ```md
-    * First item
+    - First item
       1. First subitem
+
       2. Second subitem
     ```
-  - * First item
+  - - First item
       1. First subitem
+
       2. Second subitem
 ``````
 
@@ -383,9 +391,12 @@ must also include a table title. See example above.
 ## Tabs
 
 Tabs can be used in several ways:
-1) At the page level to enclose instruction versions related to different releases (for example, to separate the DB19 and DB21 assembly instructions).
-2) Within pages to divide duplicate content with tab based.
-3) Nested within other components such as a list.
+
+1. At the page level to enclose instruction versions related to different releases (for example, to separate the DB19 and DB21 assembly instructions).
+
+2. Within pages to divide duplicate content with tab based.
+
+3. Nested within other components such as a list.
 
 ```{note}
 Related content that does not include some duplication should be shown in a table rather than a tab to prevent hidden text.
@@ -558,6 +569,7 @@ The complete list of icons available can be found [here](https://fontawesome.com
 * - ````md
     ```{figure} ./path/to/figure.jpg
     :name: label
+    :alt: Brief description of the figure.
 
     caption
     ```
@@ -566,6 +578,7 @@ The complete list of icons available can be found [here](https://fontawesome.com
     ```{figure} ../_images/duckietown.jpeg
     :width: 50px
     :name: figure-example-2
+    :alt: Duckiebot in a Duckietown road environment.
 
     Here is my figure caption!
     ```
@@ -573,12 +586,14 @@ The complete list of icons available can be found [here](https://fontawesome.com
   - ```{figure} ../_images/duckietown.jpeg
     :width: 50px
     :name: figure-example-2
+    :alt: Duckiebot in a Duckietown road environment.
 
     Here is my figure caption!
     ```
 * - ````md
     ```{image} ./path/to/figure.jpg
     :name: label
+    :alt: Brief description of the image.
     ```
     ````
   - ````md
@@ -586,20 +601,22 @@ The complete list of icons available can be found [here](https://fontawesome.com
     :scale: 20%
     :align: center
     :name: image-example
+    :alt: Duckiebot in a Duckietown road environment.
     ```
     ````
   - ```{image} ../_images/duckietown.jpeg
     :scale: 20%
     :align: center
     :name: image-example
+    :alt: Duckiebot in a Duckietown road environment.
     ```
 * - ````md
     ![alt-text](path/to/image)
     ````
   - ````md
-    ![](https://tinyurl.com/39ewhkab)
+    ![Example image](https://tinyurl.com/39ewhkab)
     ````
-  - ![](https://tinyurl.com/39ewhkab)
+  - ![Example image](https://tinyurl.com/39ewhkab)
 
 ``````
 
@@ -617,25 +634,42 @@ Use the `:class: framed` parameter to add a border around the image.
 * - ````md
     ```{figure} ./path/to/figure.jpg
     :class: framed
+    :name: figure-example-framed
+    :alt: Brief description of the figure.
+
+    A framed figure.
     ```
     ````
   - ````md
     ```{figure} ../_images/duckietown.jpeg
     :width: 50px
     :class: framed
+    :name: figure-example-framed
+    :alt: Duckiebot in a Duckietown road environment.
+
+    A framed figure.
     ```
     ````
   - ```{figure} ../_images/duckietown.jpeg
     :width: 50px
     :class: framed
+    :name: figure-example-framed
+    :alt: Duckiebot in a Duckietown road environment.
+
+    A framed figure.
     ```
 
 ``````
 
-:::{note}
-* Content/caption is not permitted for *image*s, but only available for *figure*s.
-* Settings are not available with `![alt-text](path/to/image)` format
-  :::
+```{note}
+- Content/caption is not permitted for *image*s, but only available for *figure*s.
+
+- Settings are not available with `![alt-text](path/to/image)` format
+
+- Every non-decorative image and figure needs a concise `:alt:` description. Caption standalone diagrams, maps, screenshots, overview or reference figures, and completed assemblies. Routine procedural-step images can omit a caption when adjacent instructions already identify the image.
+
+- Every `{figure}` needs a unique `:name:` label so that it can be referenced.
+```
 
 <!-- See {doc}`../content/figures` and {doc}`../file-types/markdown` for more information. -->
 
@@ -701,10 +735,11 @@ Use the `:class: framed` parameter to add a border around the image.
 
 Videos can be referenced using the following methods:
 
-1) `vimeo` - When possible, video content should be added to the Vimeo account and formatted with the custom Duckietown `vimeo` directive.
-2) `videoembed` - For other video content accessible via a web link, use the `videoembed` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_iframe.ASP) are available mimicking the `:alt:` parameter syntax below.
-3) `video` - For videos stored locally to the book project (this is not recommended), use the `video` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_video.asp) are available mimicking the `:alt:` parameter syntax below.
+1. `vimeo` - When possible, video content should be added to the Vimeo account and formatted with the custom Duckietown `vimeo` directive.
 
+2. `videoembed` - For other video content accessible via a web link, use the `videoembed` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_iframe.ASP) are available mimicking the `:alt:` parameter syntax below.
+
+3. `video` - For videos stored locally to the book project (this is not recommended), use the `video` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_video.asp) are available mimicking the `:alt:` parameter syntax below.
 
 ### Referencing Vimeo videos
 
@@ -1076,7 +1111,6 @@ To glue a math equation try:
 :label: glue-eq-example
 ```
 
-
 ## Footnotes
 
 ``````{margin}
@@ -1106,7 +1140,6 @@ Footnotes are displayed at the very bottom of the page.
 ``````
 
 [^myref]: This **is** the footnote definition.
-
 
 (language-format-troubleshooting)=
 ## Troubleshooting
@@ -1146,17 +1179,19 @@ Requirements/outputs cards can be created using the `{needget}` directive.
   - Example
 * - ````md
     ```{needget}
-    * Requirement 1
-    * Requirement 2
+    - Requirement 1
+
+    - Requirement 2
     ---
-    * Output 1
+    - Output 1
     ```
     ````
   - ```{needget}
-    * Duckie
-    * Robot
+    - Duckie
+
+    - Robot
     ---
-    * Duckiebot
+    - Duckiebot
     ```
 ``````
 
@@ -1178,7 +1213,7 @@ You can use the Test / What to Expect card (`testexpect`) to define checkpoints 
     ```
     ````
   - ```{testexpect}
-    ```bash
+    ```shell
     pip3 --version
     ---
     This command should output a version number for the `pip3` package.
@@ -1213,6 +1248,8 @@ ToDos are rendered only on the staging documentation, they are hidden in product
 You can use the **seo** directive to set SEO metadata for the page. For example, you can set a page
 description and a set of keywords as shown in the example below.
 
+Place the directive immediately after any YAML front matter, before page labels, headings, and other content.
+
 ``````{list-table}
 :header-rows: 1
 :widths: 30
@@ -1225,7 +1262,6 @@ description and a set of keywords as shown in the example below.
     ```
     ````
 ``````
-
 
 ## Citations
 
@@ -1260,7 +1296,6 @@ And, at the bottom of the page, include the list of references:
 ```{bibliography}
 :filter: docname in docnames
 ```
-
 
 ## PDF Slides
 

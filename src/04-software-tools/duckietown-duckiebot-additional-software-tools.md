@@ -1,10 +1,10 @@
-{gui-tools-ros}
-# GUI Tools and ROS
-
 ```{seo}
 :description: Additional software tools.
 :keywords: Duckietown, Duckiebot, additional software tools
 ```
+
+{gui-tools-ros}
+# GUI Tools and ROS
 
 This chapter describes additional software tools.
 
@@ -109,6 +109,9 @@ If you are using [](novnc), you can also click the `RQT Image View` desktop icon
 ```
 
 ```{figure} ../_images/software_tools/additional_software_tools/rqt_image_view.png
+:name: fig:duckietown-duckiebot-additional-software-tools-rqt-image-view
+:alt: rqt_image_view window with the Duckiebot camera image topic selected in the dropdown menu.
+
 The `rqt_image_view` window with the `/DUCKIEBOT_NAME/camera_node/image/compressed` topic dropdown menu option shown.
 ```
 

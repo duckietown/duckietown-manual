@@ -5,11 +5,15 @@
 
 ```{needget}
 - A correctly assembled Duckiebot: [](db-testing-hw-components)
+
 - An up to date (v. >2.0.2) Duckiebattery: [](ops-db-battery-update)
 ---
-- Understanding on how to power on a Duckiebot
-- Understanding on how to power off a Duckiebot (soft and hard shutdowns)
-- Understanding on how to charge a Duckiebot
+- Understand how to power on a Duckiebot.
+
+- Understand how to power off a Duckiebot (soft and hard shutdowns).
+
+- Understand how to charge a Duckiebot.
+
 - Tips and tricks for efficient Duckiebot power management
 ```
 
@@ -31,6 +35,7 @@ Robots, as well as humans, need energy to operate. Duckiebots take their energy 
 To charge the Duckiebot:
 
 1. Plug one end of the charging cable into the `OUT` `CHARGER` port on the HUT.
+
 2. Plug the other end of the charging cable into a `5V` `2A` power source.
 
 ```{note}
@@ -50,7 +55,7 @@ To charge your Duckiebot faster, unplug the fan and/or the UBS cable from the `5
 ```
 
 ```{tip}
-If your Duckiebot is on, you can measure the net current in/out (or, or fast it is charging/discharging), through `dts duckiebot battery info ROBOTNAME`. 
+If your Duckiebot is on, you can measure the net current in/out (or, or fast it is charging/discharging), through `dts duckiebot battery info DUCKIEBOT_NAME`.
 ```
 
 (handling-how-to-turn-your-duckiebot-on)=
@@ -67,8 +72,11 @@ To turn your Duckiebot on, press the button on the Duckiebattery **once**.
 What to expect:
 
 1. The front and back LEDs will turn blue, the LEDs on the on-board computer and HUT will turn on, and the fan will turn on.
+
 2. The Wi-Fi dongle will start blinking.
+
 3. The front and back LEDs will turn white and red, respectively.
+
 4. The top button and screen will turn on, as shown in [](handling-tutorial-video).
 
 To verify that your Duckiebot has completed the booting process, run the following command and wait for `Status` to change from `Booting` to `Ready`:
@@ -78,25 +86,27 @@ dts fleet discover
 ```
 
 ```{figure} ../../_images/setup/handling/fleet_discover.png
+:name: fig:db21-power-management-fleet-discover
 :alt: output of dts fleet discover-3
 :width: 85%
 
 Output of `dts fleet discover`.
 ```
 
-```{warning}
-🐛 Known bug: `dts fleet discover` does not currently work correctly from within [Workspaces](setup-devcontainer). 
+```{note}
+This command cannot provide hardware, type and model information for physical Duckiebots if run inside a [Duckietown Workspace](setup-devcontainer).
 ```
 
 (handling-how-to-turn-your-duckiebot-off)=
 ## How to turn your Duckiebot off
 
-To perform a soft (software) shutdown, as opposed to a hard shutdown by interrupting electrical power, the Duckiebattery's software must be up to date (version >2.0.2). There are several ways to perform a soft shutdown (i.e., the proper way) of a Duckiebot; through: 
+To perform a soft (software) shutdown, as opposed to a hard shutdown by interrupting electrical power, the Duckiebattery's software must be up to date (version >2.0.2). There are several ways to perform a soft shutdown (i.e., the proper way) of a Duckiebot; through:
 
-* the Duckietown shell, 
-* the Duckiebot's Dashboard, and 
-* the top button on the Duckiebot itself. 
+- The Duckietown Shell.
 
+- The Duckiebot's Dashboard.
+
+- The top button on the Duckiebot itself.
 
 ````{warning}
 Run the following command and verify that `version` is greater than or equal to `2.0.2`:
@@ -111,29 +121,29 @@ Otherwise, follow [](duckiebattery-update) before proceeding, or perform a [hard
 (duckiebot-soft-shutdown)=
 ### Soft shutdown
 
+- **Top button shutdown**: to turn your Duckiebot off using the **top** button (**preferred**), press the **top** button (not the button on the Duckiebattery) for `5 s` and then release it. You should see the button blinking and the screen showing "Shutdown". It will take a few seconds for the procedure to complete.
 
-* **Top button shutdown**: to turn your Duckiebot off using the **top** button (**preferred**), press the **top** button (not the button on the Duckiebattery) for `5 s` and then release it.
+```{attention}
+If the screen switched to the next page and the top button did not blink, try again and fully press the **top** button for a little longer than 5 seconds.
+```
 
-    You should see the button blinking and the screen showing "Shutdown". It will take a few seconds for the procedure to complete.
-
-    ```{attention}
-    If the screen switched to the next page and the top button did not blink, try again and fully press the **top** button for a little longer than 5 seconds.
-    ```
-
-* **DTS shutdown**: to turn your Duckiebot off using `dts`, run:
+- **DTS shutdown**: to turn your Duckiebot off using `dts`, run:
 
     ```shell
     dts duckiebot shutdown DUCKIEBOT_NAME
     ```
 
-* **Dashboard shutdown**: to turn your Duckiebot off through the `Dashboard`:
+- **Dashboard shutdown**: to turn your Duckiebot off through the `Dashboard`:
 
     1. Run `dts duckiebot dashboard DUCKIEBOT_NAME`.
+
     2. Click the `Power` button.
+
     3. Select the `Shutdown` option.
+
     4. Click the `Yes` button.
 
-* **SSH shutdown**: to turn your Duckiebot off using `ssh`, run:
+- **SSH shutdown**: to turn your Duckiebot off using `ssh`, run:
 
     ```shell
     ssh duckie@DUCKIEBOT_NAME.local sudo poweroff

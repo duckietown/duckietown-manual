@@ -15,10 +15,10 @@
 The "[Duckietown Archives](https://stackoverflowteams.com/c/duckietown)" are a private Stack Overflow space with a collection of technical Q&As.
 
 - Access is free, but restricted
+
 - Questions posted in the Duckietown Archives are the most likely to be answered
 
 You can self-invite by first joining the Duckietown Community on Slack, and then follow these instructions to [obtain an invitation to the Duckietown Stack Overflow Archives](https://duckietown.slack.com/archives/CHHQJ0E0H/p1670874390660429).
-
 
 ## Access Troubleshooting
 

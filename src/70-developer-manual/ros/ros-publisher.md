@@ -3,33 +3,27 @@
 :keywords: Duckietown, ROS, Publisher, DTProject, Duckiebot, ROS node, launchers, docker, robotics
 ```
 
-
 (ros-pub-node)=
 # ROS Publisher
 
-
 ```{needget}
-* A Duckietown robot powered on and discoverable via `dts fleet discover`
+- A Duckietown robot powered on and discoverable via `dts fleet discover`
 ---
-* Learn to create a ROS Publisher node using the ROS publish–subscribe pattern
+- Learn to create a ROS Publisher node using the ROS publish–subscribe pattern.
 ```
-
 
 (ros-pub-node-create)=
 ## Create Publisher ROS Node
 
-
 The [publish–subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) is fundamental in robotics. ROS implements this pattern via **ROS Publishers** and **ROS Subscribers**. A publisher sends messages into the ROS network for subscribers to receive.
-
 
 In [](ros-catkin-package-create), a new Catkin package was created. Now, add a ROS node containing a publisher:
 
-
 1. From the DTProject root, create the source directory:
-  ```bash
+
+  ```shell
   mkdir -p ./packages/my_package/src
   ```
-
 
 2. Create `my_publisher_node.py` in `packages/my_package/src/` with the following content:
   ```python
@@ -64,24 +58,20 @@ In [](ros-catkin-package-create), a new Catkin package was created. Now, add a R
      rospy.spin()
   ```
 
-
 3. Make the script executable:
-  ```bash
+
+  ```shell
   chmod +x ./packages/my_package/src/my_publisher_node.py
   ```
-
 
 ```{note}
 Using the `DTROS` superclass from `duckietown.dtros` is recommended for enhanced features beyond standard ROS.
 ```
 
-
 (ros-pub-node-launcher)=
 ## Define Launcher
 
-
 To run the node inside the Docker container, create a launcher script:
-
 
 1. Create `launchers/my-publisher.sh` with:
   ```bash
@@ -92,47 +82,43 @@ To run the node inside the Docker container, create a launcher script:
   dt-launchfile-join
   ```
 
-
 2. Make it executable:
-  ```bash
+
+  ```shell
   chmod +x ./launchers/my-publisher.sh
   ```
-
 
 (ros-pub-node-launch)=
 ## Launch the Publisher Node
 
-
 1. Ensure the Duckiebot is reachable:
-  ```bash
-  ping ROBOT_NAME.local
-  ```
 
+  ```shell
+  ping DUCKIEBOT_NAME.local
+  ```
 
 2. Rebuild the project on the robot:
-  ```bash
-  dts devel build -H ROBOT_NAME -f
-  ```
 
+  ```shell
+  dts devel build -H DUCKIEBOT_NAME -f
+  ```
 
 3. Run using the new launcher:
-  ```bash
-  dts devel run -H ROBOT_NAME -L my-publisher
+
+  ```shell
+  dts devel run -H DUCKIEBOT_NAME -L my-publisher
   ```
 
-
 The output will include logs such as:
-```
-[INFO] Publishing message: 'Hello from ROBOT_NAME!'
+
+```text
+[INFO] Publishing message: 'Hello from DUCKIEBOT_NAME!'
 ...
 ```
-
 
 ```{admonition} Congratulations 🎉
 A ROS Publisher node has been built and executed successfully on Duckiebot.
 ```
-
-
 
 <!--
 (ros-pub-node)=
@@ -206,10 +192,7 @@ if __name__ == '__main__':
     rospy.spin()
 ```
 
-```{note}
-Using the super class `DTROS` provided by the Python module `duckietown.dtros` is not mandatory but it
-is highly suggested as it provides a lot of useful features that plain ROS does not. More on these later.
-```
+{{ dt_dtros_superclass_note }}
 
 We now need to the tell our file system that we want our file `my_publisher_node.py` be treated
 as an executable file. We do so by running the following command from the root of our DTProject:

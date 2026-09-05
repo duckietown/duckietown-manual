@@ -16,7 +16,7 @@ The Duckietown community officially supports _Ubuntu_ as the Linux distribution.
 
 ## Ubuntu
 
-There are Ubuntu release every few years. For example, Ubuntu 22.04 LTS (Long-Term Support), released in 2022, will be supported until April 2032.
+Ubuntu releases are published every six months, while long-term support (LTS) releases are published every two years. Ubuntu 22.04 LTS, released in 2022, receives standard support until April 2027 and extended security maintenance until April 2032.
 
 ## Installation
 
@@ -24,23 +24,29 @@ We recommend installing Ubuntu directly on your laptop or as a dual-boot operati
 
 ### Dual Boot Ubuntu Installation
 
-* First you need to download a `.iso` image file which contains the version of Ubuntu you want.
-    Here is [22.04 LTS](http://releases.ubuntu.com/22.04/) make sure to download the desktop image, and one of the [architecture that matches your computer](https://help.ubuntu.com/community/SupportedArchitectures#:~:text=Ubuntu%20is%20currently%20officially%20compatible,x86%2C%20PowerPC%2C%20and%20SPARC64.).
-* Next, you need a free USB drive with at least 2GB of space. The drive will be completely written over.
-* You need some software to write the .iso to the USB. If on Windows you can use [Rufus](https://rufus.ie/), if on macOS [Balena Etcher](https://etcher.balena.io/)
-* Create the bootable USB drive, disconnect the USB then reconnect to your computer.
-* Restart your computer:
-  * If your computer boots into the existing operating system, you will need to change the boot order in your BIOS.
-  * Restart your computer again and press the key that accesses the BIOS during startup. This key varies by model (e.g., F1 or F2 for Lenovo laptops). Consult your laptop’s manual or search online for guidance
-  * Change the boot order to prioritize the USB drive.
+- Download the [Ubuntu 22.04 LTS desktop image](http://releases.ubuntu.com/22.04/) for an [architecture that matches your computer](https://help.ubuntu.com/community/SupportedArchitectures#:~:text=Ubuntu%20is%20currently%20officially%20compatible,x86%2C%20PowerPC%2C%20and%20SPARC64.).
 
-* Your computer should now boot into the Ubuntu installation. Follow the instructions for dual boot setup.
+- You need a free USB drive with at least 8 GB of space. The drive will be completely overwritten.
+
+- Use software to write the `.iso` to the USB drive. On Windows, you can use [Rufus](https://rufus.ie/); on macOS, use [Balena Etcher](https://etcher.balena.io/).
+
+- Create the bootable USB drive, disconnect it, then reconnect it to your computer.
+
+- Restart your computer:
+  - If your computer boots into the existing operating system, you will need to change the boot order in your BIOS.
+
+  - Restart your computer again and press the key that accesses the BIOS during startup. This key varies by model (e.g., F1 or F2 for Lenovo laptops). Consult your laptop’s manual or search online for guidance.
+
+  - Change the boot order to prioritize the USB drive.
+
+- Your computer should now boot into the Ubuntu installation. Follow the instructions for dual boot setup.
 
 ### Virtual Machine
 
-* Download the desired Ubuntu `.iso` image file.
+- Download the desired Ubuntu `.iso` image file.
     The [22.04 LTS](http://releases.ubuntu.com/22.04/) desktop image is recommended.
-* Download and install your preferred Virtual Machine platform, such as VirtualBox or VMware. [UTM](https://mac.getutm.app/) is a good choice if you have an M1-M4 mac.
+
+- Download and install your preferred virtual machine platform, such as VirtualBox or VMware. [UTM](https://mac.getutm.app/) is a good choice for Macs with an M1-M4 chip.
 
 ```{note}
 When using a Virtual Machine, specific networking settings may need to be adjusted. ***The virtual machine must appear as a device on your local network***. For example, in VirtualBox, you will need to set up a **Bridged Network**, though this configuration might differ for other hypervisors.
@@ -54,15 +60,15 @@ The Virtual Machine path is possible, but definitely less straightforward than t
 
 Some super basic pointers:
 
-* Open a terminal with <keyb>Ctrl</keyb> + <keyb>Alt</keyb> + <keyb>T</keyb>
-* The `/` directory is the root directory, containing all other directories.
-* The `~` symbol refers to your home directory, located in `/home/[username]`.
+- Open a terminal with `Ctrl` + `Alt` + `T`
 
+- The `/` directory is the root directory, containing all other directories.
+
+- The `~` symbol refers to your home directory, located in `/home/[username]`.
 
 ## Hands-On
 
 We recommend installing a Linux distribution on your computer and familiarizing yourself with its basic operations before proceeding to the next sections.
-
 
 ## Ask the community
 

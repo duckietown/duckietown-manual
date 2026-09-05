@@ -20,7 +20,9 @@ Traffic signs can serve specific functions that are encoded in some Duckietown l
 ```{note}
 Traffic signs:
 - Identify the type of intersection (3- or 4-way).
+
 - Indicate the Duckiebot's position at the intersection.
+
 - Communicate the coordination mechanism for the specific intersection (centralized or decentralized).
 ```
 
@@ -31,7 +33,9 @@ Traffic signs can also be used for purposes not encoded in Duckietown's out-of-t
 ```{note}
 Traffic signs can be used for:
 - Naming roads (e.g., to honor the department head).
+
 - Indicating pedestrian traffic areas.
+
 - Marking parking lots.
 ```
 
@@ -42,6 +46,7 @@ Traffic signage in Duckietown combines traditional traffic signs and `AprilTag` 
 ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/traffic-sign-example.png
 :name: fig:traffic-sign-example
 :width: 50%
+:alt: Duckietown traffic sign combining a conventional traffic symbol and an AprilTag marker.
 
 A traffic sign in Duckietown (do not print this one out!)
 ```
@@ -56,9 +61,13 @@ For instructions on printing and assembling traffic signs, refer to [](dt-ops-ci
 
 For traffic signage to be compliant:
 - The center of traffic signs must be 13 cm above the floor layer.
+
 - AprilTags must measure 6.5 cm squared.
+
 - There should be a white border of approximately 0.8 cm around the AprilTags.
+
 - Signs must stand perpendicular to the ground and form a $90^\circ$ angle with the road.
+
 - Signs must be flat, with no deformation or wrinkles (use thick paper for best results).
 
 ## Types
@@ -71,18 +80,21 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
 * - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/stop.png
     :name: subfig:stop
     :width: 80%
+    :alt: Duckietown stop traffic sign with an AprilTag marker.
 
     stop
     ```
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/yield.png
     :name: subfig:yield
     :width: 80%
+    :alt: Duckietown yield traffic sign with an AprilTag marker.
 
     yield
     ```
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/no-right.png
     :name: subfig:no-right
     :width: 80%
+    :alt: Duckietown no-right-turn traffic sign with an AprilTag marker.
 
     no-right-turn
     ```
@@ -90,6 +102,7 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
 * - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/no-left.png
     :name: subfig:no-left
     :width: 80%
+    :alt: Duckietown no-left-turn traffic sign with an AprilTag marker.
 
     no-left-turn
     ```
@@ -97,6 +110,7 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/no-enter.png
     :name: subfig:no-enter
     :width: 80%
+    :alt: Duckietown do-not-enter traffic sign with an AprilTag marker.
 
     do-not-enter
     ```
@@ -104,18 +118,21 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/one-way-right.png
     :name: subfig:one-way-right
     :width: 80%
+    :alt: Duckietown one-way-right traffic sign with an AprilTag marker.
 
     one-way-right
     ```
 * - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/one-way-left.png
     :name: subfig:one-way-left
     :width: 80%
+    :alt: Duckietown one-way-left traffic sign with an AprilTag marker.
 
     one-way-left
     ```
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/4-way.png
     :name: subfig:4-way-intersect
     :width: 80%
+    :alt: Duckietown four-way-intersection traffic sign with an AprilTag marker.
 
     4-way-intersect
     ```
@@ -123,18 +140,21 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/3-way-right.png
     :name: subfig:3-way-right
     :width: 80%
+    :alt: Duckietown right T-intersection traffic sign with an AprilTag marker.
 
     right-T-intersect
     ```
 * - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/3-way-left.png
     :name: subfig:3-way-left
     :width: 80%
+    :alt: Duckietown left T-intersection traffic sign with an AprilTag marker.
 
     left-T-intersect
     ```
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/t-intersection.png
     :name: subfig:t-intersection
     :width: 80%
+    :alt: Duckietown T-intersection traffic sign with an AprilTag marker.
 
     t-intersection
     ```
@@ -142,18 +162,21 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/crossing.png
     :name: subfig:crossing
     :width: 80%
+    :alt: Duckietown pedestrian-crossing traffic sign with an AprilTag marker.
 
     pedestrian
     ```
 * - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/traffic-light.png
     :name: subfig:traffic-light
     :width: 80%
+    :alt: Duckietown traffic-light-ahead sign with an AprilTag marker.
 
     t-light-ahead
     ```
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/duckie-crossing.png
     :name: subfig:duckie-crossing
     :width: 80%
+    :alt: Duckietown duck-crossing traffic sign with an AprilTag marker.
 
     duck-crossing
     ```
@@ -161,6 +184,7 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/signs/parking.png
     :name: subfig:parking
     :width: 80%
+    :alt: Duckietown parking traffic sign with an AprilTag marker.
 
     parking
     ```
@@ -174,7 +198,9 @@ The allowable traffic signs in Duckietown are listed in {numref}`tab:traffic-sig
 Traffic signs should be placed on empty tiles or at the border of a map. It is crucial to ensure the base of the sign stand does not overlap with any road markings.
 
 At intersections, two signs should be clearly visible from each stop line:
+
 1. The intersection type (e.g., traffic light or stop sign).
+
 2. The intersection topology (e.g., 3-way with orientation, or 4-way).
 
 Sign placements for different scenarios are illustrated in {numref}`tab:sign-placement`.
@@ -184,24 +210,28 @@ Sign placements for different scenarios are illustrated in {numref}`tab:sign-pla
 
 * - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/4-way-signs.svg
     :name: subfig:4-way-signs
+    :alt: Traffic sign placement for a four-way Duckietown intersection.
 
     4-way intersection
     ```
 
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/3-way-signs.svg
     :name: subfig:3-way-signs
+    :alt: Traffic sign placement for a three-way Duckietown intersection.
 
     3-way intersection
     ```
 
 * - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/2-way-signs-straight.svg
     :name: subfig:2-way-signs-straight
+    :alt: Traffic sign placement on a straight Duckietown road.
 
     Straight road
     ```
 
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/2-way-signs-turn.svg
     :name: subfig:2-way-signs-turn
+    :alt: Traffic sign placement on a curved Duckietown road.
 
     Curved road
     ```

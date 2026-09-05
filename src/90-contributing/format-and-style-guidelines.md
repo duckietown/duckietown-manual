@@ -1,33 +1,31 @@
 ```{seo}
-:description: The Duckietown documentation is written with technical writing style. Learn more about this writing style here.
+:description: Guidelines for writing Duckietown technical documentation.
 :keywords: duckietown, documentation, style, technical writing
 ```
 
 (documentation-style-guide)=
 # Style guide
 
-This chapter describes the style guide for our documentation. We will cover the conventions
-for writing the technical documentation.
-
+This chapter defines the conventions for writing Duckietown technical documentation.
 
 ## Organization
 
-The documentation is divided into **books**, **parts** (labeled `part:`), **chapters** (labeled `chapter:`),
-and **sections** (labeled `sec:`).
+The documentation is divided into **books**, **parts** (labeled `part:`), **chapters** (labeled `chapter:`), and **sections** (labeled `sec:`).
 
-The structure of each book is stored inside the `src/_toc.yml` file.
+The structure of each book is defined in `src/_toc.yml`.
 
 ## General guidelines for technical writing
 
-The following holds for all technical writing.
+The following guidelines apply to all technical writing.
 
-- The documentation is written in correct English.
+- Write the documentation in correct English.
 
-- The words "should" and "must" are not interchangeable, they have precise meanings;[^rfc2119]
+- Use "should" and "must" deliberately; each has a distinct meaning.[^rfc2119]
 
-[^rfc2119]: These meanings are explained [in this document](https://www.ietf.org/rfc/rfc2119.txt).
+[^rfc2119]: The meanings of these terms are defined in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
 
-- "Please" is unnecessary in technical documentation;
+- Omit "please"; it is unnecessary in technical documentation:
+
   ```{admonition} Wrong
   :class: danger
 
@@ -40,7 +38,8 @@ The following holds for all technical writing.
   "Remove the SD card."
   ```
 
-- Do not use colloquialisms or abbreviations;
+- Avoid colloquialisms and unexplained abbreviations:
+
   ```{admonition} Wrong
   :class: danger
 
@@ -53,49 +52,46 @@ The following holds for all technical writing.
   "The password is `ubuntu`."
   ```
 
+- Capitalize `Python` when referring to the programming language:
 
-- Python is capitalized when used as a name;
   ```{admonition} Wrong
   :class: danger
 
-  "If you are using python..."
+  "If you are using python, follow these instructions."
   ```
 
   ```{admonition} Better
   :class: success
 
-  "If you are using Python..."
+  "If you are using Python, follow these instructions."
   ```
 
+- Do not use contractions:
 
-
-- Do not use contracted forms;
   ```{admonition} Wrong
   :class: danger
 
-  it's
+  "It's ready."
   ```
 
   ```{admonition} Better
   :class: success
 
-  it is
+  "It is ready."
   ```
 
+- Avoid emojis.
 
-- Do not use emojis;
+- Avoid **ALL CAPS** for emphasis; retain established acronyms, commands, and identifiers.
 
-- Do not use **ALL CAPS**;
+- Use **bold text** sparingly.
 
-- Make infrequent use of **bold statements**;
-
-- Do not use exclamation points;
-
-
+- Avoid exclamation points.
 
 ## Style guide for the Duckietown documentation
 
-- The English version of the documentation is written in American English;
+- Use American English in English-language documentation:
+
   ```{admonition} Incorrect
   :class: danger
 
@@ -108,7 +104,8 @@ The following holds for all technical writing.
   behavior
   ```
 
-- All the filenames and commands must be enclosed in code blocks using Markdown backticks;
+- Format filenames and commands as inline code using Markdown backticks:
+
   ```{admonition} Incorrect
   :class: danger
 
@@ -121,78 +118,80 @@ The following holds for all technical writing.
   "Edit the `~/.ssh/config` file using `nano`."
   ```
 
-- <kbd>Ctrl</kbd>-<kbd>C</kbd>, `ssh`, etc. are not verbs;
+- Do not use keyboard shortcuts or command names as verbs:
+
   ```{admonition} Incorrect
   :class: danger
 
-  "<kbd>Ctrl</kbd>-<kbd>C</kbd> from the command line."
+  "<kbd>Ctrl</kbd>-<kbd>C</kbd> the command."
   ```
 
   ```{admonition} Correct
   :class: success
 
-  "Use <kbd>Ctrl</kbd>-<kbd>C</kbd> from the command line."
+  "Press <kbd>Ctrl</kbd>-<kbd>C</kbd> in the terminal."
   ```
 
 - Subtle humor and puns about duckies are encouraged.
 
-Do make use of the necessary complexity to convey your message, but do not hide behind overly complex language to disguise flaws. Remember Einstein’s quote:
+Use only the complexity needed to convey your message, and do not use overly complex language to disguise flaws. A useful test is whether you can explain the topic clearly to a non-specialist.
 
-> You don’t really understand something unless you can explain it to your grandmother.
+```{admonition} Prefer concise wording
+:class: tip
 
-```{admonition} Examples
+Use simpler wording when it does not change the meaning:
 
-provide → give
+- `provide` -> `give`
 
-query → question
+- `in order to` -> `to`
 
-in order to → to
-
-utilize → use
+- `utilize` -> `use`
 ```
 
-## Frequently misspelled words
+(frequently-misspelled-words)=
+## Naming and spelling
 
-- "Duckiebot" is always capitalized.
+- Capitalize product names in prose, headings, link labels, captions, alternative text, and SEO descriptions: "Duckietown", "Duckiebot", "Duckiedrone", "Duckiebox", "Duckiebattery", and "Duckiematrix".
 
-- Use "Raspberry Pi", not "PI", "raspi", etc.
+- Use "Duckietown Shell", "Duckietown Viewer", "Duckietown Workspace", "Duckietown Dashboard", and "Dev Container" when referring to named tools and environments. Use lowercase forms in commands, package and repository names, URLs, filenames, anchors, configuration values, and SEO keywords.
 
-- These are other words frequently misspelled:
+- Capitalize "Engine", "Renderer", and "Entity" when referring to Duckiematrix components and simulated objects. Use lowercase forms in command subcommands and flags.
 
-  5 GHz
-  WiFi
-
+- Use "Raspberry Pi", not "PI" or "raspi".
 
 ## Other conventions
 
-When the user must edit a file, just say: "edit `/this/file`".
+- Place the `seo` directive immediately after any YAML front matter, before page labels, headings, and other content.
 
-Writing down the command line for editing, like the following:
+- Every non-decorative `{figure}` and `{image}` directive must include a concise `:alt:` description. Add a figure caption to standalone diagrams, maps, screenshots, overview and reference figures, and completed assemblies. Omit captions for routine procedural-step images when adjacent instructions already identify the image.
 
-    vi /this/file
+- Every `{figure}` directive must include a unique `:name:` label so that it can be referenced.
 
-is too much detail. Only specify the editor to use if the task at hand requires
-functionalities that are only available on a specific editor.
+When instructing a user to edit a file, write `edit /this/file`.
 
+Do not include an editing command such as the following unless the task requires a feature available only in a particular editor:
+
+```shell
+vi /this/file
+```
 
 ## Troubleshooting sections
 
-Write the documentation as if every step succeeds.
+Write the main procedure assuming that every step succeeds.
 
-Then, at the end, make a "Troubleshooting" section.
+Add a "Troubleshooting" section at the end.
 
-Organize the troubleshooting section as a list of symptom/resolution.
+Organize the section as a list of symptom-and-resolution pairs.
 
 The following is an example of a troubleshooting section.
 
-
 ### Troubleshooting
 
-Use the [`{trouble}` directive](language-format-troubleshooting) to declare troubleshooting
-steps. For example,
+Use the [`{trouble}` directive](language-format-troubleshooting) to define troubleshooting
+entries. For example:
 
 ```{trouble}
-This strange thing happens.
+The camera image is blank.
 ---
-Maybe the camera is not inserted correctly. Remove and reconnect.
+Check that the camera cable is fully inserted. Disconnect and reconnect it if necessary.
 ```

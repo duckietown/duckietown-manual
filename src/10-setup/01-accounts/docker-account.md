@@ -23,6 +23,6 @@ Most procedures in Duckietown use `docker` operations behind the hood. That is w
 
 If you do not have one already, create your free DockerHub account now:
 
-* [Signup for a DockerHub account](https://hub.docker.com/signup).
+- [Signup for a DockerHub account](https://hub.docker.com/signup).
 
 Take note of your DockerHub account username and email used, and move on to the next section.

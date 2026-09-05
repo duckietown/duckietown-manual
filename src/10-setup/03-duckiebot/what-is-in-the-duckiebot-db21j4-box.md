@@ -100,7 +100,6 @@ We are always striving to improve, so minor details - e.g. the number and type o
 |      1 | Instructions card                                                    |
 |      2 | Duckietown Stickers                                                  |
 
-
 <!--
 In the following section [](prelim-dd24-box-component-description) we provide a brief description of each component.
 -->

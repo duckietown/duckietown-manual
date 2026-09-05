@@ -5,6 +5,7 @@
 
 ```{needget}
 - A computer (laptop or desktop) satisfying [minimum requirements](setup-computer-requirements)
+
 - A broadband, unmetered, internet connection
 ---
 - A computer with a native Ubuntu installation
@@ -19,13 +20,17 @@ The currently supported versions of Ubuntu are 22.04.x and 24.04.x.
 
 At first glance, Ubuntu might be perceived as a barrier to entry to learning AI robotics, especially given the widespread distribution of other operating systems (Windows, macOS) in educational institutions.
 
-We belive that using Ubuntu actually increases accessibility to the science and technology of robot autonomy, for many more reasons than we will list here, but mainly because:
+We believe that using Ubuntu actually increases accessibility to the science and technology of robot autonomy, for many more reasons than we will list here, but mainly because:
 
-* it is **open source**, **free**, and **available worldwide**
-* it is resource-efficient, and runs comparatively well on inexpensive computers
-* it is transparent - there is a file for everything
-* it has a preexisting large community
-* Ubuntu in particular has a UI that is very similar to standard Windows or macOS desktops
+- it is **open source**, **free**, and **available worldwide**
+
+- it is resource-efficient, and runs comparatively well on inexpensive computers
+
+- it is transparent - there is a file for everything
+
+- it has a preexisting large community
+
+- Ubuntu in particular has a UI that is very similar to standard Windows or macOS desktops
 
 If you are concerned about using Ubuntu, it is good. You are here to learn, and progress starts at the edge of our comfort zone.
 
@@ -35,6 +40,7 @@ If you are concerned about using Ubuntu, it is good. You are here to learn, and 
 Before installing Ubuntu:
 
 1. Check if your computer will work well with it at [](setup-computer-requirements)
+
 2. Decide if you will install Ubuntu as a dual boot, in which case, ensure you have enough free space to make a partition.
 
 ```{tip}

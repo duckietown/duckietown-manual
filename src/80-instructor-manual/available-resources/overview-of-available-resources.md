@@ -12,6 +12,7 @@ Duckietown is a *platform*, i.e., a set of tools designed to simplify teaching a
 :scale: 30%
 :align: center
 :name: class-in-a-box resources overview
+:alt: Diagram grouping Duckietown resources into software, hardware, and pedagogy.
 ```
 
 Software, hardware and pedagogical resources are integrated with each other to provide _joyful_ learning experiences.

@@ -1,10 +1,10 @@
-(sw-tools-dtps)=
-# Duckietown Postal Service (`DTPS`)
-
 ```{seo}
 :description: DTPS (Duckietown Postal Service).
 :keywords: Duckietown, Duckiebot, DTPS, Duckietown Postal Service
 ```
+
+(sw-tools-dtps)=
+# Duckietown Postal Service (`DTPS`)
 
 This chapter describes `DTPS` (`Duckietown Postal Service`).
 
@@ -21,6 +21,9 @@ Knowledge on `DTPS`.
 ## HTML interface
 
 ```{figure} ../_images/software_tools/dtps/dtps_html_interface.png
+:name: fig:duckietown-postal-service-dtps-dtps-html-interface
+:alt: DTPS web interface for a Duckiebot named duckiebot.
+
 The `DTPS` HTML interface for a Duckiebot named "duckiebot".
 ```
 

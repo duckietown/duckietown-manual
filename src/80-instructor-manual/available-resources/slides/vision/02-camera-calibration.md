@@ -2,6 +2,7 @@
 :description: Camera calibration in Duckietown.
 :keywords: camera calibration, image sensor, extrinsic camera calibration, intrinsic camera calibration, duckietown, duckiebot
 ```
+
 (slides-and-recordings-camera-calibration)=
 # Camera Calibration
 
@@ -14,4 +15,3 @@ We describe methods for estimating these two classes of parameters.
 ```{vimeo} 549643385
 :alt: Camera Calibration
 ```
-

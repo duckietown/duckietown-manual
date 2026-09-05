@@ -17,11 +17,9 @@ We make extensive use of [Docker](sec:developer_basics_docker) in our infrastruc
 :alt: Duckietown power user managing Duckiebots with Ubuntu
 ```
 
-
 ```{seealso}
 For more details, you may want to refer to the [code hierarchy](code-hierarchy) page.
 ```
-
 
 (code-dt-core)=
 ## `dt-core`
@@ -66,7 +64,7 @@ It is very unlikely that you would need to understand the code in this repositor
 (code-duckietown-shell-commands)=
 ## `duckietown-shell-commands`
 
-The [`duckietown-shell-commands`][duckietown-shell-commands] repository contains the implementations of the commands that are run by the Duckietown shell (with `dts` in the command line).
+The [`duckietown-shell-commands`][duckietown-shell-commands] repository contains the implementations of the commands that are run by the Duckietown Shell (with `dts` in the command line).
 
 For the specific implementations of how these commands are executed, you can refer to the subfolders in the repository. You also probably should not need to understand the details of how these commands work, but if you get an error you do not understand, it might be a good place to start debugging (in addition to also reporting the bug).
 

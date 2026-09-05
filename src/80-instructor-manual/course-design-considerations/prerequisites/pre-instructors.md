@@ -21,6 +21,7 @@ In a fully-fledged Duckietown class, with student projects and one robot per chi
 ```{tip}
 While teaching assistants can be hired, hence motivated through money, we have found that there are other valuable forms of motivation, e.g.:
 - **Ph. D. students** can be excellent TAs, and leverage students groups in the class to implement their research on physical hardware;
+
 - **Postdoctoral researchers** will be happy to gain teaching experience and can support the teaching efforts by taking ownership of one or more modules (weeks) according to their expertise. Moreover, they can be valuable mentors to the students during projects (if applicable in your course).
 ```
 
@@ -54,7 +55,6 @@ There are many resources out there to learn Python for free, e.g.,
 (prerequisites-git)=
 ## Version Control with Git
 
-
 The [workflow that we propose for completing the learning experience](duckiebot-lxs) includes forking and cloning
 the existing learning experience repositories, as well as adding an upstream remote.
 
@@ -78,7 +78,9 @@ While we have made significant progress in recent years to reduce the requiremen
 To streamline operations that would require complex terminal commands, we created the [Duckietown Shell](https://github.com/duckietown/duckietown-shell). Yet, being familiar with the fundamentals of terminal usage (`ls`, `cat`, `cd`, etc.) is needed and other notions like the Secure shell (`ssh`) may be useful for debugging.
 
 - To install the Duckietown Shell, follow the [DTS installation instructions](setup-dts);
+
 - For an introduction to `ssh`, see the [Duckietown quick guide to `ssh`](secure-shell);
+
 - for a general introduction to Linux, we recommend (while not being affiliated to) among other resources, the free [Linux Journey](https://linuxjourney.com/).
 
 (prerequisites-docker)=
@@ -98,7 +100,7 @@ Docker is a tool for containerization. In short, we package up code together wit
 
 In this way, we can guarantee (if we do things right) that the code will run properly and reproducibly regardless of the specific computing environment.
 
-We can also rigorously specify interfaces between containers, which enables portability in a very seamless way. This is how we can have one "agent" that can be run in many different ways, such as in the simulator, on the real robot, or in a cloud evaluation.
+We can also rigorously specify interfaces between containers, which enables portability in a very seamless way. This is how we can have one "agent" that can be run in many different ways, such as in the simulator, on the physical robot, or in a cloud evaluation.
 
 You should not need to know the details about how this works as we have made every effort to abstract Docker away, but some [familiarity with the basics](sec:developer_basics_docker) may reduce your anxiety about what is happening.
 

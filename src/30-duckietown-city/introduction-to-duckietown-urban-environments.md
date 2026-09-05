@@ -6,7 +6,6 @@
 (book-duckietown-opmanual-intro)=
 # Overview
 
-
 This section describes the Duckietown appearance specifications and assembly instructions.
 
 Specifications are a set of rules for which a functional system has been verified.
@@ -18,7 +17,6 @@ Any Duckietown not adhering to the rules described here cannot be considered a D
 Small perturbations to the appearance specifications might affect negatively the performance of Duckiebots, although most algorithms are robust to variations.
 
 Below are examples of Duckietowns of different sizes and complexities, compatible with the appearance specifications.
-
 
 <!--
 ```{needget}

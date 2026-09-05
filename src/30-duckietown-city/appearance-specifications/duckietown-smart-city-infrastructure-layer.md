@@ -8,7 +8,9 @@
 
 The infrastructure layer is composed of:
 - [Traffic Lights](specs-layer-traffic-lights)
+
 - [Traffic signs](specs-layer-traffic-signs)
+
 - (optional) Watchtowers
 <!--
 ([legacy instructions](https://docs-old.duckietown.org/daffy/opmanual_autolab/out/watchtower_hardware.html), [work in progress new instructions](https://docs.duckietown.com/ente/opmanual-autolab/intro.html))

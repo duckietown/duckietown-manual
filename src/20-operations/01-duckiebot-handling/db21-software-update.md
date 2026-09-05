@@ -1,10 +1,10 @@
-(ops-db-update)=
-# Software Update
-
 ```{seo}
 :description: Learn how to keep your Duckiebot software up to date.
 :keywords: Duckiebot update, Duckiebot software update, dts duckiebot update, switching between daffy and ente Duckiebot
 ```
+
+(ops-db-update)=
+# Software Update
 
 ```{needget}
 - A working Duckiebot
@@ -12,14 +12,12 @@
 - A working and up to date Duckiebot
 ```
 
-
-
 ## How to update the software on a Duckiebot
 
 To update your Duckiebot, run:
 
 ```shell
-dts duckiebot update ROBOT_NAME
+dts duckiebot update DUCKIEBOT_NAME
 ```
 
 ```{attention}

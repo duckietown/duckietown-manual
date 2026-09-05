@@ -1,10 +1,10 @@
-(dtmatrix-links)=
-# Links
-
 ```{seo}
 :description: Duckiematrix Links.
 :keywords: Duckietown, Duckiematrix, Links
 ```
+
+(dtmatrix-links)=
+# Links
 
 This chapter describes Duckiematrix Links.
 
@@ -43,6 +43,4 @@ To `Link` a `Matrix` and `World` entity, run the following command, where `MATRI
 dts matrix run --standalone --embedded --map sandbox --link MATRIX WORLD
 ```
 
-```{note}
 {{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
-```

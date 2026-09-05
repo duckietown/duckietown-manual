@@ -121,13 +121,11 @@ $$
 p(X=x \; \text{GIVEN} \; Y=y) \triangleq p(x|y).
 $$
 
-
 <div class="check" markdown="1">
 Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is $p(x|\text{EVEN})$?
 
 If you think this is very easy that's good, but don't get over-confident.
 </div>
-
 
 The joint and conditional distributions are related by the following (which could be considered a definition of the joint distribution):
 
@@ -165,10 +163,9 @@ $$
 
 Exactly why this formula is so important might (at some point) be covered in more detail in later sections, but we will give an initial intuition here.
 
-Consider that the variable $X$ represents something that we are trying to estimate but cannot observe directly, and that the variable $Y$ represents a physical measurement that relates to $X$. We want to estimate the distribution over $X$ given the measurement $Y$, $p(x|y)$, which is called the *posterior* distribution. Bayes' rule lets us to do this.
+Consider that the variable $X$ represents something that we are trying to estimate but cannot observe directly, and that the variable $Y$ represents a physical measurement that relates to $X$. We want to estimate the distribution over $X$ given the measurement $Y$, $p(x|y)$, which is called the *posterior* distribution. Bayes' rule lets us do this.
 
 For every possible state, you take the probability that this measurement could have been generated, $p(y|x)$, which is called the *measurement likelihood*, you multiply it by the probability of that state being the true state, $p(x)$, which is called the *prior*, and you normalize over the probability of obtaining that measurement from any state, $p(y)$, which is called the *evidence*.
-
 
 <div class="check" markdown="1">
 From Wikipedia:
@@ -182,7 +179,7 @@ This answer should surprise you. It highlights the power of the *prior*.
 (dt-probability-basics-marginal-distributions)=
 ### Marginal Distribution
 
-If we already have a joint distribution $p(x,y)$ and we wish to recover the single variable distribution $p(x)$, we must *marginalize* over the variable $Y$. The involves summing (for discrete RVs) or integrating (for continuous RVs) over all values of the variable we wish to marginalize:
+If we already have a joint distribution $p(x,y)$ and we wish to recover the single variable distribution $p(x)$, we must *marginalize* over the variable $Y$. This involves summing (for discrete RVs) or integrating (for continuous RVs) over all values of the variable we wish to marginalize:
 
 $$
 \begin{align}
@@ -213,7 +210,7 @@ Marginalization is an important operation since it allows us to reduce the size 
 (dt-probability-basics-cond-independence)=
 ### Conditional Independence
 
-If two RVs, $X$ and $Y$ are correlated, we may be able to encapsulate the dependence through a third random variable $Z$. Therefore, if we know $Z$, we may consider $X$ and $Y$ non correlated to each other. 
+If two RVs, $X$ and $Y$ are correlated, we may be able to encapsulate the dependence through a third random variable $Z$. Therefore, if we know $Z$, we may consider $X$ and $Y$ uncorrelated.
 
 ```{figure} ../_images/further_reading/preliminaries/probability/conditional_independence.png
 :alt: A graphical representation of the conditional independence of X and Y given Z
@@ -231,13 +228,13 @@ A graphical representation of the conditional independence of $X$ and $Y$ given 
 -->
 
 ```{note}
-Graphical models deserve an independent discussion. Doing a good job of sufficiently describing graphical models and the dependency relations that they express requires careful thought. Until the editors of this manual get it it, we refer curious readers to e.g.: Koller and Friedman.
+Graphical models deserve an independent discussion. Doing a good job of sufficiently describing graphical models and the dependency relations that they express requires careful thought. Until the editors of this manual get to it, we refer curious readers to, for example, Koller and Friedman.
 ```
 
 (dt-probability-basics-moments)=
 ### Moments
 
-The $n$th moment of an RV, $X$, is given by $E[X^n]$ where $E[]$ is the expection operator with:
+The $n$th moment of an RV, $X$, is given by $E[X^n]$, where $E[]$ is the expectation operator, with:
 
 $$
 E[f(X)] = \sum_{\aset{X}} x \, f(x)
@@ -268,10 +265,9 @@ $$
 (dt-probability-basics-entropy)=
 ### Entropy
 
-
 ```{admonition} Definition: Entropy
 :class: attention
-The *entropy* of an RV is a scalar measure of the uncertainty about the value the RV.
+The *entropy* of an RV is a scalar measure of the uncertainty about the value of the RV.
 ```
 
 <!--
@@ -317,7 +313,6 @@ Notice that our highest entropy (uncertainty) about the outcome of the coin flip
 
 In mobile robotics we use the Gaussian, or normal, distribution a lot.
 
-
 The 1-D Gaussian distribution pdf is given by:
 
 $$
@@ -359,7 +354,6 @@ The Banana distribution is the official distribution in robotics!
 :class: tip
 The [Banana distribution is Gaussian](http://www.roboticsproceedings.org/rss08/p34.pdf)!
 ```
-
 
 (dt-probability-refs)=
 ### References

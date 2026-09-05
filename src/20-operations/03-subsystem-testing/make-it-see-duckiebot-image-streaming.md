@@ -1,18 +1,19 @@
-(ops-db-subsys-make-it-see)=
-# Image Streaming (Make it See!)
-
-
 ```{seo}
 :description: How to access the Duckiebot camera stream (or, see what it sees).
 :keywords: Duckietown, Duckiebot, camera stream, perception, image sensing, duckietown image viewer
 ```
 
+(ops-db-subsys-make-it-see)=
+# Image Streaming (Make it See!)
+
 This section describes how to see access the Duckiebot's camera stream. Three methods are shown, one to access the images as the Duckiebot sees them, and two to access images as humans see them.
 
 ```{needget}
 - A correctly assembled Duckiebot: [](db-testing-hw-components)
+
 - (for most methods) A functional `dts` installation: [](setup-dts)
-- You can ping the Duckiebot with `ping ROBOTNAME.local`. If not: [](setup-duckiebot-network)
+
+- You can ping the Duckiebot with `ping DUCKIEBOT_NAME.local`. If not: [](setup-duckiebot-network)
 ---
 - Visualizing Duckiebot's camera image stream in different ways
 ```
@@ -31,46 +32,9 @@ One of the easiest ways to see your Duckiebot's camera stream is by using the `I
 The Duckietown "Image Viewer" helps visualize the Duckiebot's camera stream.
 ```
 
-:::::{tab-set}
+{{ dt_duckiebot_ping_attention }}
 
-::::{tab-item} Ubuntu
-
-To open the `Image Viewer`, first make sure you can successfully ping the Duckiebot with `ping ROBOT_NAME.local`, then run:
-
-```shell
-dts duckiebot image_viewer ROBOT_NAME
-```
-
-where `ROBOT_NAME` is the hostname of either a physical or virtual Duckiebot.  
-
-::::
-
-::::{tab-item} Duckietown Workspace
-
-There are two ways to open the `Image Viewer`: 
-
-1. If you have installed `dts` on the host machine: open a terminal on your host machine and run:
-
-    dts duckiebot image_viewer ROBOT_NAME
-
-```{note}
-The first time a robot app is ran, a popup window may appear asking for permissions. Insert your password and "(Always) Allow" to continue. 
-```
-
-2. Alternatively, inside the Workspace terminal run:
-
-    dts duckiebot image_viewer ROBOT_NAME --browser
-
-where `ROBOT_NAME` is the hostname of either a physical or virtual Duckiebot.  
-
-::::
-:::::
-
-<!--
-```{note}
-{{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "image_viewer") }}
-```
--->
+{{ dt_duckietown_viewer_launch_tabs.format("Image Viewer", "image_viewer") }}
 
 Note the keys in the table below.
 
@@ -101,7 +65,7 @@ After setting up the robot dashboard [](duckiebot-dashboard-setup), the image st
 :name: dashboard_mission_control_camera_feed
 :align: center
 :width: 60%
-:alt: the Duckietown dashboard mission control page showing the duckiebot's camera stream
+:alt: the Duckietown Dashboard mission control page showing the Duckiebot's camera stream
 
 The Dashboard Robot > Mission Control page shows basic sensor and actuator data streams.
 ```
@@ -113,13 +77,12 @@ If you see a black image in the camera block, or background noise, make sure tha
 ```
 
 ```{attention}
-There is a known bug for which the image stream will flicker when using Mozilla Firefox. Change browser, e.g., to Chrome bypass this.
+There is a known bug that causes the image stream to flicker in Mozilla Firefox. Switch to a different browser, such as Chrome, to bypass it.
 ```
 
 ```{note}
-Virtual Duckiebots will not show any image unless they are attached to a Duckiematrix engine.
+Virtual Duckiebots will not show any image unless they are attached to a Duckiematrix Engine.
 ```
-
 
 (view-image-using-rqt-image-view)=
 ## Viewing the Image Stream on Your Laptop through `rqt image view`
@@ -128,7 +91,9 @@ The camera image is streaming from your Duckiebot by default on startup.
 
 To see it, open a terminal and run:
 
-    dts gui ROBOT_NAME
+```shell
+dts gui DUCKIEBOT_NAME
+```
 
 This will start a container with access to the ROS topics, messages and parameters of the Duckiebot, including the image stream from the camera.
 
@@ -140,7 +105,9 @@ You will learn more about this tool in the [Operation - Tools](ops-tools) sectio
 
 To view the camera stream, run:
 
-    rqt_image_view
+```shell
+rqt_image_view
+```
 
 The command will open a window where you can view the image.
 
@@ -150,7 +117,7 @@ You will have to select the `camera_node/image/compressed` topic from the drop-d
 :name: rqt_dropdown_sub
 :align: center
 :width: 60%
-:alt: rqt image view window with dropdown menu in duckietown
+:alt: rqt image view window with dropdown menu in Duckietown
 
 The rqt image view window with dropdown menu - select the `camera_node/image/compressed` topic.
 ```
@@ -162,7 +129,7 @@ On the top right of the `rqt_image_view` window, there is a button to save the c
 
 Create a folder on you laptop for where you would like to have the image saved to, say `~/duckiebot_images/`. Then, launch the `gui` with the following command:
 
-```
+```shell
 dts gui --mount ~/duckiebot_images/:/duckiebot_images [DUCKIEBOT_NAME]
 ```
 
@@ -171,6 +138,7 @@ Then, run `rqt_image_view` again, and use the top-right "**Save as image**" butt
 ```{image} ../../_images/software_tools/image_viewer/rqt_image_view_save_btn.png
 :align: center
 :name: rqt_save_btn
+:alt: rqt_image_view window with the Save as image button in the top-right corner.
 ```
 
 <br/>
@@ -201,11 +169,15 @@ And the saved image from your robot's view should appear in the folder you creat
 
 While in the `gui tools` terminal, run:
 
-    rostopic list
+```shell
+rostopic list
+```
 
 If using the baseline ROS image from Duckietown, you will see list of ROS topics. Without getting in the details of ROS at this stage (check the [learning experiences](duckiebot-lxs) for additional information), you will find a topic named `TOPIC_NAME` with `camera_node/image/compressed` in it. Run:
 
-    rostopic echo TOPIC_NAME
+```shell
+rostopic echo TOPIC_NAME
+```
 
 to see the data (messages) being transmitted over that channel (topic). Press <kbd>CTRL-C</kbd> to stop the stream and go back to the terminal.
 
@@ -241,7 +213,6 @@ I see an extremely noisy image.
 ---
 Make sure that the protective cap for your Duckiebot's camera lens has been removed.
 ```
-
 
 ```{trouble}
 The images are out of focus.

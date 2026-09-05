@@ -7,10 +7,11 @@
 # Get Started with Diagnostics
 
 ```{needget}
-* `dts` installed on your base station and reachable Duckiebot hostname
-* Access to <https://dashboard.duckietown.org/diagnostics>
+- `dts` installed on your base station and reachable Duckiebot hostname
+
+- Access to <https://dashboard.duckietown.org/diagnostics>
 ---
-* Run a 60-second diagnostics capture, verify upload, and locate the log online
+- Run a 60-second diagnostics capture, verify upload, and locate the log online.
 ```
 
 ```{warning}
@@ -19,15 +20,15 @@ This feature is currently unavailable.
 
 ## 1 – Run a single-test experiment
 
-Execute a $60s$ capture on robot **\[ROBOT]**:
+Execute a $60s$ capture on robot `ROBOT`:
 
-```bash
-dts diagnostics run -H [ROBOT] -G my_experiment -d 60
+```shell
+dts diagnostics run -H ROBOT -G my_experiment -d 60
 ```
 
 Leave the session running until it terminates. A successful run ends with:
 
-````
+````text
 ...
 INFO:system-monitor:Pushing data to the cloud
 INFO:system-monitor:Pushing to the server [trial 1/3]...
@@ -46,6 +47,7 @@ Open <https://dashboard.duckietown.com/diagnostics>.
 Logs are indexed by **Group**, **Subgroup**, and hostname.
 
 ```{figure} ../../_images/developer/advanced/diagnostics/diagnostics_web_dropdown.png
+:name: fig:get-started-with-duckietown-diagnostic-tool-diagnostics-web-dropdown
 :width: 100%
 :alt: Selecting diagnostics test on the Duckietown Dashboard
 
@@ -59,16 +61,14 @@ When comparing configurations, run several **tests** inside one **experiment** u
 
 Example from [](devel_sw_diagnostics_example):
 
-```bash
+```shell
 # baseline at 20 Hz
-dts diagnostics run -H [ROBOT] -G camera_frequency -S 20hz -d 60
+dts diagnostics run -H ROBOT -G camera_frequency -S 20hz -d 60
 # pushed to 30 Hz
-dts diagnostics run -H [ROBOT] -G camera_frequency -S 30hz -d 60
+dts diagnostics run -H ROBOT -G camera_frequency -S 30hz -d 60
 ```
 
 On the Diagnostics page, select both `20hz` and `30hz` subgroups under *Group = camera_frequency* and compare the plots across the **System**, **Resources**, and other tabs.
-
-
 
 <!--
 (sec:devel_sw_diagnostics_get_started)=
@@ -79,7 +79,6 @@ In this section, we will see how to perform a diagnostics experiment.
 NOTE: At the end of each diagnostics test, the resulting log is automatically
 transferred to a remote server. If the diagnostics tool fails to transfer the
 log to the server, the tests data will be lost and the test need to be run again.
-
 
 ## Run a (single test) diagnostics experiment
 
@@ -118,7 +117,6 @@ INFO:system-monitor:The server says: [200] OK
 which indicates that the diagnostics log was successfully transferred to
 the remote diagnostics server.
 
-
 (devel_sw_diagnostics_dashboard_logs_tag)=
 ## Visualize the results
 
@@ -133,7 +131,6 @@ Use the dropdowns `Group` and `Subgroup` to find your experiment and test.
 Remember, when the subgroup is not explicitly specified with the argument
 `-S/--subgroup`, `default` is used.
 
-
 ```{figure} ../../_images/developer/advanced/diagnostics/diagnostics_web_dropdown.png
 :width: 100%
 :alt: selecting diagnostics test on dashboard.duckietown.org
@@ -142,7 +139,6 @@ Selecting diagnostics test on dashboard.duckietown.org
 ```
 
 Use the tabs `System`, `Resources`, etc. to see the content of the diagnostics log.
-
 
 ## One experiment, many tests
 

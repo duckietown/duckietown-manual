@@ -1,19 +1,23 @@
-(duckiebot-demo-lf)=
-# Lane Following
-
 ```{seo}
 :description: The Lane Following demo (demonstration) for a Duckiebot.
 :keywords: Duckietown, Duckiebot, Lane Following, demo, demonstration
 ```
 
+(duckiebot-demo-lf)=
+# Lane Following
+
 This chapter describes the `Lane Following (LF)` demo (demonstration) for Duckiebots.
 
 ```{needget}
 - A calibrated Duckiebot: [](ops-db-calibrations)
-* Completed [](db-camera-calibration).
-* Completed [](db-wheels-calibration).
-* A Duckietown, as defined in [](duckietowns-intro).
-* Good lighting (ideally white diffused light).
+
+- Completed [](db-camera-calibration).
+
+- Completed [](db-wheels-calibration).
+
+- A Duckietown, as defined in [](duckietowns-intro).
+
+- Good lighting (ideally white diffused light).
   This demo relies on images from the camera and color detections.
   Therefore, avoid colored lights, reflections or other conditions that may confuse or blind the on-board image sensor.
 ---
@@ -32,6 +36,7 @@ A Duckiebot driving autonomously in a Duckietown without obstacles, intersection
 To set up the demo:
 
 1. Place your Duckiebot in a lane such that it will drive on the right-hand side of the road, making sure that it sees the lane lines.
+
 2. Stop any running containers on your Duckiebot that use its camera or control its motors.
 
 (demo-lane-following-drive)=
@@ -57,9 +62,7 @@ To start lane following:
 
 2. Run `dts duckiebot keyboard_control DUCKIEBOT_NAME`.
 
-```{note}
 {{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "keyboard_control") }}
-```
 
 3. With the `Keyboard Control` window in focus, press <kbd>F</kbd> (`Autopilot`).
 
@@ -81,6 +84,7 @@ If this demo does not work as expected, follow [](demo-lane-following-parameter-
 To stop lane following:
 
 1. Click the `Keyboard Control` window if it is not in focus.
+
 2. Press <kbd>F</kbd> (`Autopilot`).
 
 ```{note}
@@ -90,6 +94,7 @@ Your Duckiebot's LEDs should turn green and it should stop following the lane it
 To stop the demo:
 
 1. Select the terminal from which the demo was run.
+
 2. Press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 (demo-lane-following-visualization)=
@@ -102,9 +107,7 @@ To see what your Duckiebot sees and other visualizations related to the demo:
 
 1. Run `dts duckiebot image_viewer DUCKIEBOT_NAME`.
 
-```{note}
 {{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "image_viewer") }}
-```
 
 2. Select a topic from the drop-down menu.
 
@@ -118,15 +121,20 @@ update
 The `Lane Following` demo consists of the following processing steps:
 
 1. **Image capture** (an image is captured from your Duckiebot's camera).
+
 2. **Line detection** (colored line segments in the captured image are detected).
+
 3. **Ground projection** (based on the camera's known intrinsic and extrinsic parameters, the detected line segments are projected onto the ground plane).
+
 4. **Lane estimation** (the ground projected line segments and motion of your Duckiebot, which can be estimated with the help of its wheel encoders, are used to produce an estimate of your Duckiebot's lane pose).
+
 5. **Control** (based on the lane pose estimate, a PID controller sends control signals to adjust your Duckiebot's heading).
+
 6. **Actuation** (the control signals are applied to your Duckiebot's motors).
 
 ```{figure} ../_images/demonstrations/lane_following/processing_flow.png
 :name: fig:lane-detection-process
-:alt: duckiebot image pipeline for autonomous lane following
+:alt: Duckiebot image pipeline for autonomous lane following
 :align: center
 :width: 60%
 
@@ -173,8 +181,9 @@ How to view the edges
 
 The detected edges are analyzed to extract line segments using the [Hough line transform](https://en.wikipedia.org/wiki/Hough_transform). This method identifies lines in the image by voting in the parameter space:
 
-* Each edge point $(x, y)$ contributes a vote for all possible lines passing through it, represented in polar coordinates as $\rho = x\cos(\theta) + y\sin(\theta), $, where $\rho$ is the distance from the origin to the line and $\theta$ is the angle of the line normal.
-* A threshold on the accumulator ensures that only lines with sufficient votes are retained.
+- Each edge point $(x, y)$ contributes a vote for all possible lines passing through it, represented in polar coordinates as $\rho = x\cos(\theta) + y\sin(\theta), $, where $\rho$ is the distance from the origin to the line and $\theta$ is the angle of the line normal.
+
+- A threshold on the accumulator ensures that only lines with sufficient votes are retained.
 
 While these are the main components involved, there are additional post processing steps that can be done, as well as the tuning of some hyperparameters to optimize performance.
 
@@ -196,7 +205,7 @@ The transformation is represented as $P_w = H P_c$, where $P_w = (x, y, 1)$ and 
 
 Line segments are first rectified using the intrinsic parameters to correct for distortions, ensuring accurate mappings.
 
-#### Ouput
+#### Output
 
 Projected line segments are represented in the ground plane, providing a useful representation for downstream tasks such as lane localization and control.
 Additionally, debug images showing rectified and projected views are published for verification.
@@ -235,8 +244,9 @@ The predicted state probabilities are updated by shifting the histogram values a
 Detected line segments are projected onto the ground plane and matched to the expected lane geometry.
 For each segment:
 
-* The filter computes votes for possible $(d, \phi)$ values based on the segment’s position and orientation.
-* These votes are added to the corresponding bins in the histogram.
+- The filter computes votes for possible $(d, \phi)$ values based on the segment’s position and orientation.
+
+- These votes are added to the corresponding bins in the histogram.
 
 This process updates the belief distribution, increasing confidence in states consistent with the observations.
 The filter’s best estimate of the lane pose corresponds to the histogram cell with the highest value (maximum likelihood).
@@ -257,9 +267,11 @@ $$
 
 where:
 
-* $K_p$ is the proportional gain, addressing the current error.
-* $K_i$ is the integral gain, correcting cumulative past errors.
-* $K_d$ is the derivative gain, anticipating future errors based on the rate of change.
+- $K_p$ is the proportional gain, addressing the current error.
+
+- $K_i$ is the integral gain, correcting cumulative past errors.
+
+- $K_d$ is the derivative gain, anticipating future errors based on the rate of change.
 
 For lane following, the control inputs are the reference state $(d_{ref}, \phi_{ref})$ and the control outputs are a constant linear velocity $v$ and a variable angular velocity $\omega$ to correct for deviations.
 Using a linearized kinematic model and a constant forward velocity $v$, the control law simplifies to:
@@ -312,9 +324,7 @@ To view the colormaps:
 
 1. Run `dts duckiebot image_viewer DUCKIEBOT_NAME`.
 
-```{note}
 {{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "image_viewer") }}
-```
 
 2. Select the `NODE/line_detector_node/debug/maps/jpeg` topic, where `NODE` is `DUCKIEBOT_NAME/node/image_relayer`.
 
@@ -346,9 +356,7 @@ To view the lane pose and segment markers:
 
 1. Run `dts duckiebot image_viewer DUCKIEBOT_NAME`.
 
-```{note}
 {{ dt_workspace_duckietown_viewer_note.format(dt_workspace_note_prefix, "image_viewer") }}
-```
 
 2. Select the `NODE/ground_projection_node/debug/ground_projection_image/jpeg` topic, where `NODE` is `DUCKIEBOT_NAME/node/image_relayer`.
 
@@ -362,9 +370,11 @@ If an error was incurred during the [camera calibration procedure](db-camera-cal
 
 Tuning the PID gains is one of the most important aspects for the stability and performance of your Duckiebot, as:
 
-* The proportional gain ($K_p$) affects the magnitude of corrections. Too high a value leads to oscillations, while too low a value results in sluggish response.
-* The integral gain ($K_i$) addresses steady-state errors but can introduce instability if over tuned.
-* The derivative gain ($K_d$) smooths out the response by reducing overshoot but can amplify noise.
+- The proportional gain ($K_p$) affects the magnitude of corrections. Too high a value leads to oscillations, while too low a value results in sluggish response.
+
+- The integral gain ($K_i$) addresses steady-state errors but can introduce instability if over tuned.
+
+- The derivative gain ($K_d$) smooths out the response by reducing overshoot but can amplify noise.
 
 (demo-lane-following-troubleshooting)=
 ## Troubleshooting

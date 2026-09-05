@@ -23,23 +23,33 @@ on the code structure in Duckietown). Within it are packages that are part of th
 
 The core components of lane following include:
 
-* [Color correction with the "anti-Instagram" package](https://github.com/duckietown/dt-core/tree/ente/packages/anti_instagram)
-* [Line detection](https://github.com/duckietown/dt-core/tree/ente/packages/line_detector)
-* [Projection of line segments to the ground plane](https://github.com/duckietown/dt-core/tree/ente/packages/ground_projection)
-* [Fusion of the line segments with a histogram filter](https://github.com/duckietown/dt-core/tree/ente/packages/lane_filter)
-* [Feedback control to drive down the lane](https://github.com/duckietown/dt-core/tree/ente/packages/lane_control)
-* [A simple finite-state machine](https://github.com/duckietown/dt-core/tree/ente/packages/fsm)
+- [Color correction with the "anti-Instagram" package](https://github.com/duckietown/dt-core/tree/ente/packages/anti_instagram)
+
+- [Line detection](https://github.com/duckietown/dt-core/tree/ente/packages/line_detector)
+
+- [Projection of line segments to the ground plane](https://github.com/duckietown/dt-core/tree/ente/packages/ground_projection)
+
+- [Fusion of the line segments with a histogram filter](https://github.com/duckietown/dt-core/tree/ente/packages/lane_filter)
+
+- [Feedback control to drive down the lane](https://github.com/duckietown/dt-core/tree/ente/packages/lane_control)
+
+- [A simple finite-state machine](https://github.com/duckietown/dt-core/tree/ente/packages/fsm)
 
 These implementations are meant to be for reference, and there certainly are other ways of implementing each of these blocks. A possible way to structure a project could be to replace or improve on one of these core components and then see the effect on the overall performance of the lane following behavior.
 
 Additional components that contribute to the indefinite navigation (where a Duckiebot drives indefinitely in a city with intersections and traffic lights) include:
 
-* [Detection of fiducial markers called "Apriltags"](https://github.com/duckietown/dt-core/tree/ente/packages/apriltag)
-* [Detection of flashing LEDs for intersection coordination](https://github.com/duckietown/dt-core/tree/ente/packages/led_detection)
-* [Detection of the red stop line](https://github.com/duckietown/dt-core/tree/ente/packages/stop_line_filter)
-* [Traversing intersections](https://github.com/duckietown/dt-core/tree/ente/packages/unicorn_intersection)
-* [Coordination at intersections](https://github.com/duckietown/dt-core/tree/ente/packages/explicit_coordinator)
-* [A more complex configuration of the finite state machine](https://github.com/duckietown/dt-core/blob/ente/packages/fsm/config/fsm_node/indefinite_navigation.yaml)
+- [Detection of fiducial markers called "Apriltags"](https://github.com/duckietown/dt-core/tree/ente/packages/apriltag)
+
+- [Detection of flashing LEDs for intersection coordination](https://github.com/duckietown/dt-core/tree/ente/packages/led_detection)
+
+- [Detection of the red stop line](https://github.com/duckietown/dt-core/tree/ente/packages/stop_line_filter)
+
+- [Traversing intersections](https://github.com/duckietown/dt-core/tree/ente/packages/unicorn_intersection)
+
+- [Coordination at intersections](https://github.com/duckietown/dt-core/tree/ente/packages/explicit_coordinator)
+
+- [A more complex configuration of the finite state machine](https://github.com/duckietown/dt-core/blob/ente/packages/fsm/config/fsm_node/indefinite_navigation.yaml)
 
 These represent a possible implementation of this indefinite navigation behavior but, as above, there could be improvements.
 
@@ -51,8 +61,9 @@ One idea could be to structure the entire suite of projects as having the object
 
 Finally, other packages exist in the repository that worked at some point but probably have not been tested in a while, such as:
 
-* [Vehicle detection](https://github.com/duckietown/dt-core/tree/ente/packages/vehicle_detection)
-* [Dead Reckoning](https://github.com/duckietown/dt-core/tree/ente/packages/deadreckoning)
+- [Vehicle detection](https://github.com/duckietown/dt-core/tree/ente/packages/vehicle_detection)
+
+- [Dead Reckoning](https://github.com/duckietown/dt-core/tree/ente/packages/deadreckoning)
 
 These may serve as starting points or inspiration, but the students will in all likelihood have to do significant testing or develop their replacement.
 
@@ -67,6 +78,7 @@ We briefly describe each behavior as source of potential inspiration for additio
 :name: other autonomous behaviors
 :scale: 40%
 :align: center
+:alt: Diagram showing a hierarchy of autonomous Duckiebot behaviors by complexity.
 
 Autonomous behaviors can build on each other in terms of complexity.
 ```

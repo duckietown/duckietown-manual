@@ -7,15 +7,16 @@
 # Code Hierarchy
 
 ```{needget}
-* An understanding of the basics of [Docker](sec:developer_basics_docker)
-* An initialized [Duckiebot](duckiebot-setup-intro)
+- An understanding of the basics of [Docker](sec:developer_basics_docker)
+
+- An initialized [Duckiebot](duckiebot-setup-intro)
 ---
-* Knowledge of the software architecture on a Duckiebot
+- Knowledge of the software architecture on a Duckiebot
 ```
 
 To develop new functionality within Duckietown, it is essential to understand the existing code structure. This module introduces the top‑level layout and points to resources for deeper exploration.
 
-While Duckietown may appear as a simple toy car platform, it supports cars, boats, drones, and runs on real robots, in simulation, or in an evaluator / competition setup, as previously done with the AI Driving Olympics settings. This module focuses on the code that powers standard demos (e.g., Lane Following, Indefinite Navigation).
+While Duckietown may appear as a simple toy car platform, it supports cars, boats, drones, and runs on physical robots, in simulation, or in an evaluator / competition setup, as previously done with the AI Driving Olympics settings. This module focuses on the code that powers standard demos (e.g., Lane Following, Indefinite Navigation).
 
 (docker-images)=
 ## Main images and repositories
@@ -33,7 +34,7 @@ All three of the containers actually inherit the same container. Recall that 'in
 
 The image on which everything is based is `ubuntu`. This is the official Ubuntu image, with no additions. While the `daffy` distribution of Duckietown uses Ubuntu 18.04, `ente` uses Ubuntu 22.04 (Jammy Jellyfish). This parent image needs to be properly configured, and features added, to use Duckietown software.
 
-The `duckietown/dt-base-environment` adds many useful core libraries and configurations. E.g., development tools such as `vim`, `git`, `nano` and libraries for handling `i2c` devices, processing images, and efficiently doing linear algebra. It moreover adds compilers, linkers, and libraries necessary for the compiling/building of software from source. Furthermore, we add `pip` and a bunch of handy `python3` libraries, such as `numpy`, `scipy`, `matplotlib`, and `smbus` (used to communicate with motors, LEDs, etc.). Finally, `duckietown/dt-base-environment` also provides the core ROS libraries, including `rospy`: ROS's Python bindings. The version of `ROS` used is [ROS Noetic Ninjemys](http://wiki.ros.org/noetic).
+The `duckietown/dt-base-environment` adds many useful core libraries and configurations. For example, it includes development tools such as `vim`, `git`, and `nano`, as well as libraries for handling `i2c` devices, processing images, and efficiently performing linear algebra. It also adds compilers, linkers, and libraries necessary for compiling software from source. Furthermore, we add `pip` and a number of handy `python3` libraries, such as `numpy`, `scipy`, `matplotlib`, and `smbus` (used to communicate with motors, LEDs, etc.). Finally, `duckietown/dt-base-environment` also provides the core ROS libraries, including `rospy`: ROS's Python bindings. The version of `ROS` used is [ROS Noetic Ninjemys](http://wiki.ros.org/noetic).
 
 Then, `duckietown/dt-commons` builds on top of `duckietown/dt-base-environment`. We provide a number of Duckietown libraries here that deal with the handling of files, infrastructure communication, and other development tools. This image also configures the environment so that the hostname resolution is correctly performed and ensures that the environment variables pertaining to the type of the robot, its hardware, and configuration are all properly set. It also makes sure that all Python libraries are discoverable and that ROS is set up correctly.
 
@@ -49,7 +50,7 @@ We finally can focus on `dt-duckiebot-interface`, `dt-car-interface`, and `dt-co
 
 The `dt-car-interface` image provides additional basic functionality not on hardware level. It includes what is needed to drive a Duckiebot, in particular the parts that handle the commands sent by a (virtual) joystick (the `joy_mapper` package) and the forward and inverse kinematics that convert the desired robot movement to wheel commands (`dagu_car` package). It might not be immediately clear at first why these are not part of `dt-duckiebot-interface` or `dt-core`. In some use cases, e.g., for the demos or controlling a when robot via keyboard or joystick, it is beneficial to have these two packages. For others cases, e.g., when deploying a completely different pipeline (think end-to-end reinforcement learning), one would prefer to interact directly with the drivers.
 
-The `dt-core` image provides all the high-level robot behavior observed when running a demo. The image processing pipeline, decision-making modules, lane and intersection contollers, and many others reside there.
+The `dt-core` image provides all the high-level robot behavior observed when running a demo. The image processing pipeline, decision-making modules, lane and intersection controllers, and many others reside there.
 
 If you are curious to see all the ROS packages available in each of these images, you can check out the corresponding GitHub repositories:
 
@@ -114,6 +115,7 @@ Running a demo requires driving around together with the high-level processing a
 ```{figure} ../../_images/developer/beginner/config_demo_bot.png
 :name: dt-demo
 :width: 50%
+:alt: Diagram of container images used to run a Duckietown demo on a physical Duckiebot.
 
 Running a demo on a Duckiebot.
 ```
@@ -125,10 +127,10 @@ A demo can also be executed in simulation. In this case, instead of using the ha
 ```{figure} ../../_images/developer/beginner/config_demo_sim.png
 :name: demo-sim
 :width: 50%
+:alt: Diagram of container images used to run a Duckietown demo in simulation.
 
 Running a demo in simulation.
 ```
-
 
 ### Evaluating submissions to challenges in simulation
 
@@ -137,10 +139,10 @@ A submission, e.g., for a MOOC exercises or the former AI Driving Olympics, is a
 ```{figure} ../../_images/developer/beginner/config_aido_sim.png
 :name: aido-sim
 :width: 50%
+:alt: Diagram of the container image configuration for evaluating a challenge submission in simulation.
 
 Evaluating a submission in simulation.
 ```
-
 
 ### Evaluating submissions on a Duckiebot
 
@@ -149,12 +151,13 @@ The same submission image, with not a single change, can be also tested on a phy
 <!--
 This is the way that AI-DO submissions are evaluated in Autolabs.
 
-In this way, even if you do not have a Duckiebot, you can develop your submission in simulation, then submit it to be evaluated in simulations on the challenges server, and if it performs well, you can request remote evaluation on a real Duckiebot in a Duckietown Autolab!
+In this way, even if you do not have a Duckiebot, you can develop your submission in simulation, then submit it to be evaluated in simulations on the challenges server, and if it performs well, you can request remote evaluation on a physical Duckiebot in a Duckietown Autolab!
 -->
 
 ```{figure} ../../_images/developer/beginner/config_aido_bot_separated.png
 :name: dt-aido
 :width: 50%
+:alt: Diagram of the distributed container image configuration for evaluating a challenge submission on a physical Duckiebot.
 
 Evaluating a submission on a Duckiebot.
 ```

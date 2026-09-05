@@ -7,9 +7,9 @@
 # Writing Code Documentation
 
 ```{needget}
-* A working knowledge of ROS and the Duckietown development stack
+- A working knowledge of ROS and the Duckietown development stack
 ---
-* Ability to create clear inline documentation and build a Sphinx web page from it
+- Ability to create clear inline documentation and build a Sphinx web page from it
 ```
 
 ## Why is (inline) documentation important?
@@ -34,18 +34,20 @@ The short and cheeky answer to this question is "everything, and in the right pl
 
 For example:
 
-* **ROS nodes**
-  * Provide an overview of purpose and algorithm.
-  * List configuration parameters, default values, publishers, subscribers, and services.
-  * Document every method: arguments, types, return values.
+- **ROS nodes**:
+  - Provide an overview of purpose and algorithm.
 
-* **Libraries (`include/` or `src/`)**
-  * Each module and package needs a short description.
-  * All public classes, functions, and methods require docstrings.
+  - List configuration parameters, default values, publishers, subscribers, and services.
 
-* **Repository and package level**
-  * Add an RST file under `docs/packages/` named `<package>.rst` that pulls together node‑ and library‑level docs via Sphinx directives.
+  - Document every method: arguments, types, return values.
 
+- **Libraries (`include/` or `src/`)**:
+  - Each module and package needs a short description.
+
+  - All public classes, functions, and methods require docstrings.
+
+- **Repository and package level**:
+  - Add an RST file under `docs/packages/` named `<package>.rst` that pulls together node‑ and library‑level docs via Sphinx directives.
 
 ### Example: ROS node docstring
 
@@ -129,8 +131,11 @@ class CameraNode(DTROS):
 Start with a high-level description of the function of the node, where it fits in the bigger picture of the package and repository, and what it receives as input(s) and produces as output(s). Feel generous with the description here; remember the latin saying: "_Melius abundare est quam deficere_." ("It is better to have too much than too little").
 
 Following the general introduction section, include:
+
 - a section with the arguments needed for initializing the node (the arguments of the `__init__` method), which will almost always be exactly the same as shown.
+
 - a configuration section with the parameters for the node, their type, a short description, and their default value.
+
 - additional section describing the subscribers, publishers and services, in this order.
 
 If the node has no subscribers, as e.g., the camera node, skip this section.
@@ -176,7 +181,7 @@ The documentation describes the library and its elements prior to calling the [S
 
 ### Example: ROS package
 
-Similarly, every ROS package needs a documentation file. This should go in the `docs/packages` directory of the project's repository and should be named `package_name.rst`. It should describe the package and then should invoke the Sphinx commands for building the documentation for the individual nodes and libraries. E.g.:
+Similarly, every ROS package needs a documentation file. This should go in the `docs/packages` directory of the project's repository and should be named `package_name.rst`. It should describe the package and then should invoke the Sphinx commands for building the documentation for the individual nodes and libraries. For example:
 
 ```md
 ROS Package: ground\_projection
@@ -207,7 +212,9 @@ Sphinx uses commands called _directives_. The basic style of the documentation c
 ### Basic styles
 
 - Use `*text*` to italicize the text.
+
 - Use `**text**` to make it in boldface.
+
 - Values, names of variables, errors, messages, etc. should be in grave accent quotes:
 
     ```md
@@ -271,7 +278,9 @@ Sphinx uses commands called _directives_. The basic style of the documentation c
 ```{seealso}
 Additional examples:
 - [reStructuredText basics](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
+
 - [Quick references](https://docutils.sourceforge.io/docs/user/rst/quickref.html)
+
 - [Detailed specifications](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html).
 ```
 

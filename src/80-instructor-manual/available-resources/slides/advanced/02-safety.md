@@ -6,10 +6,8 @@
 (slides-and-recordings-safety)=
 # Safety
 
-
 Safety is a crucial consideration for the integration of self-driving cars at scale.
 Ideally, we would be able to provide some kind of formal guarantee about the performance so that legislators and other stakeholders can *trust* the technology and move to regulate it.
-
 
 ## Part 1 - Introduction to Safety
 

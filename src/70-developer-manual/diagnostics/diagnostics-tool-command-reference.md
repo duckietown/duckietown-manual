@@ -10,11 +10,11 @@ Use the diagnostics tool to log resource usage on a Duckietown device and push t
 
 ## Syntax
 
-```bash
+```shell
 dts diagnostics run \
-  -H/--machine  [ROBOT]      \   # where the tool itself runs
-  -G/--group    [EXPERIMENT] \   # experiment name
-  -d/--duration [SECONDS]    \   # capture length
+  [-H ROBOT]                 \   # where the tool itself runs
+  -G EXPERIMENT              \   # experiment name
+  -d SECONDS                 \   # capture length
   [OPTIONS]
 ```
 
@@ -71,8 +71,6 @@ dts diagnostics run \
   - False
   - Run in debug mode
 :::
-
-
 
 <!--
 (sec:devel_sw_diagnostics_reference)=

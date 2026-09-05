@@ -7,11 +7,13 @@
 # Introduction to the Diagnostics Tool
 
 ```{needget}
-* Ability to launch and modify ROS nodes on a Duckiebot
-* Basic familiarity with Raspberry Pi or Jetson Nano resource constraints
+- Ability to launch and modify ROS nodes on a Duckiebot
+
+- Basic familiarity with Raspberry Pi or Jetson Nano resource constraints
 ---
-* Decide whether to run a steady-state or transient-state diagnostic session
-* Interpret the resulting resource-usage traces
+- Decide whether to run a steady-state or transient-state diagnostic session
+
+- Interpret the resulting resource-usage traces
 ```
 
 The *Duckietown Diagnostics* utility periodically records CPU, memory, temperature, I/O, and network metrics while an experiment is running. By replaying these snapshots, you can verify that new code respects the onboard computer tight resource budget and does not introduce hidden side effects.
@@ -27,8 +29,10 @@ Assume a **single-camera Duckiebot** whose driver publishes frames at **20 Hz**.
 
 Execute the tool **each time you modify code** and need to gauge its footprint on system resources.
 
-*Expected consequences*
+*Expected consequences*:
+
 - Higher frame rate → more CPU time, RAM, and bus bandwidth
+
 - Possible *secondary* effects: increased SoC temperature, extra network traffic if frames are forwarded downstream
 
 Diagnostics offers a repeatable method for measuring and analyzing these effects.
@@ -45,17 +49,16 @@ The tool supports two common scenarios:
 | **Transient-state analysis** | Observe short bursts triggered by an event | Start anytime; record for *t* > *T* to include at least one event cycle |
 
 ### Example – tuning camera FPS
-* **Steady state**: run diagnostics overnight and inspect RAM usage to reveal leaks at 30 Hz.
-* **Transient state**: capture several seconds around a frame-grab burst to confirm CPU spikes remain acceptable.
+
+- **Steady state**: run diagnostics overnight and inspect RAM usage to reveal leaks at 30 Hz.
+
+- **Transient state**: capture several seconds around a frame-grab burst to confirm CPU spikes remain acceptable.
 
 By selecting the appropriate window, actionable insight can be obtained without overwhelming the storage with unnecessary data.
-
-
 
 <!--
 (sec:sw_diagnostics_intro)=
 # Introduction
-
 
 (devel_sw_diagnostics_example)=
 ## Running example
@@ -64,7 +67,6 @@ Throughout this section we will refer to the toy example of a robot
 with a single camera (just like our Duckiebots) in which camera drivers
 produce image frames at a frequency of `20Hz` and we are interested in
 pushing the camera to its limit, i.e., `30Hz`.
-
 
 ## When do I need it?
 
@@ -85,12 +87,12 @@ are transferred over the network.
 The diagnostics tool provides a standard way of analyzing the response of
 a system to a change.
 
-
 ## When do I run it?
 
 The diagnostics tool is commonly used for two use cases:
 
 - analysis of _steady states_ (long-term effects) of a system;
+
 - analysis of _transient states_ (short-term effects) of a system;
 
 The _steady state_ analysis consists of measuring the activity of a system

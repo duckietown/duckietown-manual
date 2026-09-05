@@ -20,7 +20,9 @@ A first important consideration is the class size, we advocate for **limiting en
 There are several reasons for this:
 
 1. Smaller classes are more amenable to community-building and the cultivation of [the type of atmosphere](considerations-spirit) that we are trying to create.
+
 2. It can be difficult to support the technical challenges that some students may have. Particularly, if you are not assuming a lot of [prerequisite technical knowledge](prerequisites-students), it may require a lot of time to get students up to speed with the basics.
+
 3. In many cases, the difficulty of the course ramps upwards, and it is important that no student is left behind. Having a smaller class facilitates this objective.
 
 (considerations-backgrounds)=

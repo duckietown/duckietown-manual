@@ -8,17 +8,16 @@
 
 This page is intended to provide some design considerations when creating a learning experience.
 
-
 ## Intended Learning Outcomes (ILOs)
 
 Learning outcomes after completing a learning experience should generally be actionable skills to demonstrate new knowledge.
 
-These skills are exercised in a final activity in each LX that can be run on a virtual or real physical Duckiebot.
+These skills are exercised in a final activity in each LX that can be run on a virtual or physical Duckiebot.
 
 ## Learning Goals
 
 LX developers should answer the following questions in the LX description contained in each README.
-Anyone working through an LX should use this information to direct their efforts as they choose and work through LX:
+Anyone working through an LX should use this information to direct their efforts as they choose and work through an LX:
 
 ```{list-table}
 :header-rows: 1
@@ -32,7 +31,6 @@ Anyone working through an LX should use this information to direct their efforts
 * - What is the prerequisite knowledge and where can learners find it?
   - This LX depends on students having completed the Duckietown ROS LX for the fundamentals of using ROS messages.
 ```
-
 
 (lx-notebooks)=
 ## Notebook Activities
@@ -86,11 +84,10 @@ Here are some suggestions on how to leverage the LX infrastructure to build comp
 
 Code for agents and other packages should instead be placed in the `packages/solutions` directory for learners to edit the respective Python files, then imported into the notebooks and unit tests.
 
-
 ### On solutions:
 All but the last notebooks should generally be thought of as guided tutorials (or, _learning activities_), introducing the background and tools required to implement a complex autonomous behavior for the Duckiebots. The final notebook can be thought of as a _learning assessment_ instead, where users are expected to bring together and build upon the learning activities to produce their own solution. Learning assessments should not have solutions publicly available.
 
-Learners should be editing package files during the activities to implement their work, as directed by the notebook instructions. Solutions to the activities should be provided after the students gave an honest attempt at solving them on their own.
+Learners should be editing package files during the activities to implement their work, as directed by the notebook instructions. Solutions to the activities should be provided after the students have made an honest attempt at solving them on their own.
 
 The solution to the assessment instead should be hidden in the separate solutions repository, to enable evaluation.
 
@@ -110,8 +107,9 @@ The first step after creating a new development project should always be to run 
 
 What do you want your students to take away from this learning experience? Try to write it down as a skill, starting with an active verb, e.g.:
 
-* Learners will be able to implement a PID controller once provided with the reference and output signals from a plant;
-* Learners will explain the effects of changing <some parameter> of <some algorithm> to their peers using the correct terminology;
+- Learners will be able to implement a PID controller once provided with the reference and output signals from a plant;
+
+- Learners will explain the effects of changing <some parameter> of <some algorithm> to their peers using the correct terminology;
 
 Defining the intended learning outcomes will inform the content and visualization that you add to the notebook. It helps clearly determine the scope of the learning experience, by formalizing its end.
 
@@ -121,9 +119,11 @@ We recommend to limit the number of ILOs for each learning experience to 3-5. Wh
 
 Having formalized the end point of your soon-to-be LX, i.e., the ILOs, it is good practice to similarly define what are the prerequisites for engaging in this LX. Prerequisites can be:
 
-* purely theoretical: e.g., learners should know linear algebra and ODEs before engaging in a LX designed to derive the dynamic model of a robot;
-* tools related: e.g., learners should have a computer set up in a certain way, with at least tot amount of free hardware space;
-* skill related: e.g., learners should have completed another LX (with skill-focused ILOs), and be familiar with how to run update a Duckiebot.
+- purely theoretical: e.g., learners should know linear algebra and ODEs before engaging in a LX designed to derive the dynamic model of a robot;
+
+- tools related: e.g., learners should have a computer set up in a certain way, with at least tot amount of free hardware space;
+
+- skill related: e.g., learners should have completed another LX (with skill-focused ILOs), and be familiar with how to run update a Duckiebot.
 
 Moreover, if possible determine the required Duckietown and external libraries that you envision using during the LX, and add them to a setup cell at the beginning of the notebook. This will avoid import errors and let you focus on fleshing out the learning activities.
 
@@ -137,7 +137,9 @@ As noted above, students should be editing package files to implement their work
 the separate solutions repository to enable evaluation. This means that there are three places you can choose to have learners write solution code.
 
 1. Directly in the notebook cells. This should be used for content examples and practice.
+
 2. In a solution Python script in the `lx/packages/solution` directory that is imported into the notebook for visualization.  All functions should be predefined with clear **TODOs** marked for learners to complete as directed by the notebook.
+
 3. In a solution Python script in the `lx/packages/solution` directory that is then imported into the Duckiebot agent code located in the `recipe` for simulation and workbench activities (more on this in the following sections).
 
 As a general rule, notebooks **do not** have access to the packages in the `recipe/solutions` directory where the base code is placed for Duckiebot agents.  This is to prevent learners from editing agent code to a confusing or unusable state.
@@ -151,7 +153,11 @@ Strengthen learner test-driven development (TDD) habits by using the Testing int
 This will confirm that their solution performs as expected before any attempts to run it in simulation or on Duckiebots. Note that the beaker symbol to open the Testing interface may not appear in the sidebar until after one of the Python files in the `packages` directory has been opened.
 
 ```{figure} ../../_images/lx-devmanual/consume/test-interface.png
+:name: fig:developing-lxs-test-interface
 :align: center
+:alt: Visual Studio Code Testing view showing a passing hello-world Learning Experience test.
+
+Visual Studio Code Testing view for a Learning Experience.
 ```
 
 ### Clean up and Publish

@@ -1,10 +1,10 @@
-(student-projects)=
-# Projects
-
 ```{seo}
 :description: Hands-on projects are effective learning activities for students in a Duckietown class. Learn more about past projects and get some ideas for yours here.
 :keywords: Duckietown, projects, student projects
 ```
+
+(student-projects)=
+# Projects
 
 Student projects can be an excellent way to cultivate good class cohesion and promote hands-on learning.
 
@@ -12,6 +12,7 @@ Student projects can be an excellent way to cultivate good class cohesion and pr
 :name: example-projects
 :scale: 40%
 :align: center
+:alt: Collage of examples of Duckietown student projects.
 
 Projects are a great way to learn by doing. Check out some examples of [past projects](https://vimeo.com/showcase/9972073).
 ```
@@ -34,17 +35,16 @@ In either case, it may be a good idea to present some concrete project suggestio
 
 Then, an assignment can be made that optimally allocates students to the topics that interest them the most.
 
-
 (student-report-templates)=
 ## Project Report Templates
 
 If you decide to make the project groups submit progress reports, you may find the following templates a useful starting point for your students to structure their reports:
 
-* [**Preliminary Design Report Template**](https://docs.google.com/document/d/1NiD76fUTW_4_fLucbwKaqtc7EPSdqRIy-td0xJS413M/edit?usp=sharing): Usually due about one-third of the way through the allotted period. The principal objective is for the team to converge on the topic that they will work on, how to define its success, and have some idea about its feasibility.
+- [**Preliminary Design Report Template**](https://docs.google.com/document/d/1NiD76fUTW_4_fLucbwKaqtc7EPSdqRIy-td0xJS413M/edit?usp=sharing): Usually due about one-third of the way through the allotted period. The principal objective is for the team to converge on the topic that they will work on, how to define its success, and have some idea about its feasibility.
 
-* [**Critical Design Report Template**](https://docs.google.com/document/d/1plhFsR8ZEF0o7uNsB63xAplFSfzomaPcO4c15oQstfc/edit?usp=sharing): Usually due about two-thirds of the way through the allotted period. The students should have converged on their project and the scope should be clear. In this document, they outline the implementation strategy and final demo/evaluation plan.
+- [**Critical Design Report Template**](https://docs.google.com/document/d/1plhFsR8ZEF0o7uNsB63xAplFSfzomaPcO4c15oQstfc/edit?usp=sharing): Usually due about two-thirds of the way through the allotted period. The students should have converged on their project and the scope should be clear. In this document, they outline the implementation strategy and final demo/evaluation plan.
 
-* [**Final Report Template**](https://docs.google.com/document/d/1fhxsS3rqLjssmwj-P0E_qVtKRZmyK2iF7iulQ2M826I/edit?usp=sharing): Due at the end of the allotted time. Should detail what was achieved and document the steps to reproduce it.
+- [**Final Report Template**](https://docs.google.com/document/d/1fhxsS3rqLjssmwj-P0E_qVtKRZmyK2iF7iulQ2M826I/edit?usp=sharing): Due at the end of the allotted time. Should detail what was achieved and document the steps to reproduce it.
 
 (project-development-workflow)=
 ## Development Workflow for Projects

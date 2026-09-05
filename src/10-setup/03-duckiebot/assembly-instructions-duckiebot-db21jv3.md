@@ -1,15 +1,15 @@
-(assembly-instructions-db21j-v3)=
-# Assembly Variant (`DB21Jv3`)
-
 ```{seo}
 :description: Assembly procedure for a Duckiebot DB21Jv3.
 :keywords: Duckietown, Duckiebot, DB21Jv3, Duckiebot (DB21Jv3) assembly instructions, how to build a DB21Jv3 Duckiebot, how to assemble a DB21Jv3 Duckiebot
 ```
 
+(assembly-instructions-db21j-v3)=
+# Assembly Variant (`DB21Jv3`)
+
 This section describes the differences in assembly procedure between a Duckiebot `DB21J` and `DB21Jv3`.
 
 ```{needget}
-* The components for a Duckiebot `DB21-J4v3` (default Duckiebot on the [Duckietown online store](https://get.duckietown.com) since November 2025).
+- The components for a Duckiebot `DB21-J4v3` (default Duckiebot on the [Duckietown online store](https://get.duckietown.com) since November 2025).
 ---
 An assembled Duckiebot DB21J(v3).
 ```
@@ -102,7 +102,6 @@ Omnidirectional wheel assembly positioning on the Duckiebot's chassis.
 
 Omnidirectional wheel assembly connected to the Duckiebot's chassis.
 ```
-
 
 ```{seealso}
 You can now continue the assembly from the main instructions, from [](db21j-bottom-assembly-step-6).

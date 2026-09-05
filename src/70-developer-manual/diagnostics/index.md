@@ -1,17 +1,17 @@
-(part:sw_diagnostics)=
-# Diagnostics
-
 ```{seo}
-:description: Description of diagnostics tools for duckietown.
+:description: Description of diagnostics tools for Duckietown.
 :keywords: Duckietown, Diagnostics
 ```
 
+(part:sw_diagnostics)=
+# Diagnostics
 
 ```{needget}
-* Basic experience running code on the Duckiebot
-* Understanding of the [DTROS node structure](sec:advanced-dtros)
+- Basic experience running code on the Duckiebot
+
+- Understanding of the [DTROS node structure](sec:advanced-dtros)
 ---
-* Ability to record and inspect system‑level statistics with the Duckietown Diagnostics tool
+- Ability to record and inspect system‑level statistics with the Duckietown Diagnostics tool
 ```
 Duckietown is designed to execute **complex—often state‑of‑the‑art—algorithms on modest hardware**, such as a Raspberry Pi or an NVIDIA Jetson Nano.
 Because computational resources are limited, developers must monitor usage carefully and optimize where possible.
@@ -36,7 +36,6 @@ The easiest way to think about it is that of an observer taking snapshots
 of the status of our system at regular temporal intervals.
 
 -->
-
 
 ```{tableofcontents}
 ```

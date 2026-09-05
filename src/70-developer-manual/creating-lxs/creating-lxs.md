@@ -1,14 +1,15 @@
-(creating-new-lxs)=
-# Creating New Learning Experiences
-
 ```{seo}
 :description: Creating LXs (Learning Experiences) for a Duckiebot.
 :keywords: Duckietown, Duckiebot, LXs, Learning Experiences
 ```
 
+(creating-new-lxs)=
+# Creating New Learning Experiences
+
 This page describes the general procedure for creating a learning experience (LX). LXs comprise two main parts:
 
 1. The **LX recipe**, which is typically created by the instructor and hidden from the students
+
 2. The **LX repository itself**, which houses the notebooks and whatever code structure should be visible to the student
 
 An additional third repository is recommended, which has the same structure as the LX repository but contains
@@ -21,7 +22,6 @@ placeholders effectively producing a boilerplate code that can populate the lear
 This procedure guarantees that the resulting boilerplate is (by construction) enough for the learner to
 achieve a valid solution.
 ```
-
 
 A recommended way to get started is to create repos from the template repos for both the [recipe](https://github.com/duckietown/template-lx-recipe)
 and the [LX](https://github.com/duckietown/template-lx)
@@ -51,30 +51,33 @@ running of the exercise.
 
 Reasonable choices could be:
 
- - [`dt-commons`](https://github.com/duckietown/dt-commons): likely a good choice
+- [`dt-commons`](https://github.com/duckietown/dt-commons): likely a good choice
 if the LX is pure python and does not require ROS.
- - [`dt-ros-commons`](https://github.com/duckietown/dt-ros-commons): likely
+
+- [`dt-ros-commons`](https://github.com/duckietown/dt-ros-commons): likely
 a good choice if you would like to use ROS in a standalone fashion (i.e.,
 your exercise includes all the nodes that are needed)
- - [`dt-core`](https://github.com/duckietown/dt-core): a good choice if you
+
+- [`dt-core`](https://github.com/duckietown/dt-core): a good choice if you
 would like to use one or more of the nodes defined in the packages
 in the `dt-core` repository.
 
 Coming soon:
- - ROS2 base image
- - Machine learning base image
 
+- ROS2 base image
+
+- Machine learning base image
 
 ### Title, Description, and Maintainer
 
 Additionally, in the three Dockerfiles, that is  `Dockerfile`, `Dockerfile.vnc` and `Dockerfile.vscode`
 you will need to update:
 
- - The `EXERCISE_NAME`: Replace `<LX_NAME_HERE>` with a title for your LX (**Note**: this should not contain spaces)
- - The `DESCRIPTION`: Replace `<DESCRIPTION_HERE>` with a brief description of your LX
- - The `MAINTAINER`: Replace `<YOUR_FULL_NAME>` and `<YOUR_EMAIL_ADDRESS>` with appropriate values
+- The `EXERCISE_NAME`: Replace `<LX_NAME_HERE>` with a title for your LX (**Note**: this should not contain spaces)
 
+- The `DESCRIPTION`: Replace `<DESCRIPTION_HERE>` with a brief description of your LX
 
+- The `MAINTAINER`: Replace `<YOUR_FULL_NAME>` and `<YOUR_EMAIL_ADDRESS>` with appropriate values
 
 ### Duckiematrix Configuration
 
@@ -85,15 +88,14 @@ You can define the exact configuration of the Duckiematrix environment in the
 `assets/duckiematrix` directory in the recipe repository. For more details see
 [](advanced-duckiematrix-development).
 
-
-
 ### noVNC Customization
 
 It is also possible to customize the noVNC desktop. These configurations files are found the `assets/vnc`
 folder of the recipe repository. Within these configurations you can:
 
- - Create new desktop icons and define what happens when they are clicked
- - Define the default RVIZ configuration that is loaded if RVIZ is opened
+- Create new desktop icons and define what happens when they are clicked
+
+- Define the default RVIZ configuration that is loaded if RVIZ is opened
 
 For inspiration you could take look at [the existing LXs](db-lx-intro).
 
@@ -111,7 +113,6 @@ in the recipe repository. For example, this could be the file that calls the fun
 written by the student as part of the LX which is in turn run by the launcher. You could also define ROS packages
 that will be used but are not important for the student to understand (such as debugging or visualization tools).
 
-
 ## The LX Repository
 
 The LX repository that you create is the one that the students will fork to complete the learning experience.
@@ -121,7 +122,7 @@ The LX repository that you create is the one that the students will fork to comp
 A file that you **must** edit in order for your LX to work is the `.dtproject` file in the LX repo. In this file
 (if you started from the template), you will see:
 
-```bash
+```text
 
 # name of the exercise
 NAME=<LX_NAME_HERE>
@@ -139,12 +140,14 @@ RECIPE_LOCATION=<RECIPE_LOCATION_HERE>
 
 You should:
 
- - Change the `<LX_NAME_HERE>` to the name of your LX
- - Change the `<RECIPE_REPOSITORY_HERE`> to the name of the recipe repository that you have created
- - Change the `<RECIPE_BRANCH_HERE`> to the name of the branch that you want to use in your recipe repository
- - Change the `<RECIPE_LOCATION_HERE`> to the path within the recipe repo where the recipe is store. If you used the
-template then this can simply be left blank
+- Change the `<LX_NAME_HERE>` to the name of your LX
 
+- Change the `<RECIPE_REPOSITORY_HERE`> to the name of the recipe repository that you have created
+
+- Change the `<RECIPE_BRANCH_HERE`> to the name of the branch that you want to use in your recipe repository
+
+- Change the `<RECIPE_LOCATION_HERE`> to the path within the recipe repo where the recipe is store. If you used the
+template then this can simply be left blank
 
 ### Notebooks
 
@@ -161,7 +164,6 @@ The code for the LX will go into the `packages` directory in the LX repo. It can
 code so that the students just have to fill in specific parts. It is also recommended that the LX always "work" in the sense
 that if the student runs the launcher through `dts code workbench` nothing breaks. The solution might not be properly
 implemented, but there are no compilation errors.
-
 
 ```{attention}
 When working in the development workspace, you can append the `--recipe` flag to any `dts code` commands

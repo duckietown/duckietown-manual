@@ -1,10 +1,10 @@
-(creating-new-demos)=
-# Creating New Demos
-
 ```{seo}
 :description: The procedure for creating new demos
 :keywords: Duckietown, Duckiebot, Demos
 ```
+
+(creating-new-demos)=
+# Creating New Demos
 
 This section describes the general procedure for creating a new demo.
 Demos are thought of as fully function behaviors that can be run on the robot.
