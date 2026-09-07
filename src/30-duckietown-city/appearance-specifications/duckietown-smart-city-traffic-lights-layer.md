@@ -1,3 +1,7 @@
+```{seo}
+:description: Learn about Duckietown traffic lights as static robots with sensing, computing, and communication capabilities. Includes placement and assembly guidelines.
+:keywords: Duckietown, traffic lights, robotics, Duckiebots, infrastructure, static robots, Raspberry Pi, urban robots, modular cities, assembly guide
+```
 
 (specs-layer-traffic-lights)=
 # Infrastructure - Traffic Lights
@@ -5,9 +9,12 @@
 Duckietown traffic lights are more than just blinking lights: they are static robots. Often referred to as "Duckiebots without wheels," they share many capabilities with the `DB18` Duckiebot models, minus the ability to move.
 
 Traffic lights are urban robots equipped to:
-- **Sense**: Detect the arrival of a Duckiebot using a camera.
-- **Compute**: Perform onboard processing with a Raspberry Pi.
-- **Communicate**: Signal other agents through LEDs and connect via Wi-Fi.
+
+- __Sense__: Detect the arrival of a Duckiebot using a camera.
+
+- __Compute__: Perform onboard processing with a Raspberry Pi.
+
+- __Communicate__: Signal other agents through LEDs and connect via Wi-Fi.
 
 ```{tip}
 (For advanced Duckietowners only) Traffic lights are specialized cases of Duckietown Watchtowers, i.e., Watchtowers with LEDs. Watchtowers form the foundation of Duckietown Autolabs.
@@ -19,6 +26,7 @@ Traffic lights are urban robots equipped to:
 The assembly instructions for traffic lights are available here:
 
 - [Traffic light assembly instructions](traffic-light-assembly-21)
+
 - [Legacy traffic light assembly instructions](traffic-light-assembly-18)
 
 (specs-layer-traffic-lights-placement)=
@@ -37,11 +45,7 @@ Traffic light pillars must be positioned so that the embedded traffic signs adhe
 ```{figure} ../../_images/duckietown-city/appearance_specifications/traffic-lights/TrafficLight-DT18-TL.png
 :name: subfig:traffic-light-dt18
 :width: 90%
+:alt: Duckietown-compliant traffic light mounted above an intersection tile.
 
 A Duckietown-compliant traffic light.
-```
-
-```{seo}
-:description: Learn about Duckietown traffic lights as static robots with sensing, computing, and communication capabilities. Includes placement and assembly guidelines.
-:keywords: Duckietown, traffic lights, robotics, Duckiebots, infrastructure, static robots, Raspberry Pi, urban robots, modular cities, assembly guide
 ```

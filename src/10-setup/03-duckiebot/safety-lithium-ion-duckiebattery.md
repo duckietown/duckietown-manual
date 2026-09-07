@@ -1,16 +1,17 @@
-(setup-duckiebot-battery-safety-basics)=
-# On Lithium-Ion Batteries
-
 ```{seo}
 :description: Batteries are potentially dangerous and should be handled with care. Learn about Duckiebot batteries and how to handle them.
 :keywords: Duckietown, Duckiebot, batteries, duckiebattery, duckie-power-bank, handling batteries, Duckiebot autonomy, duckiebattery state diagram
 ```
 
+(setup-duckiebot-battery-safety-basics)=
+# On Lithium-Ion Batteries
+
 ```{needget}
-* Nothing
+- Nothing
 ---
-* Preliminary knowledge of circuits and power source properties useful in Duckietown
+- Preliminary knowledge of circuits and power source properties useful in Duckietown
 ```
+
 <!--
 (db-opmanual-preliminaries-electronics)=
 ## Handling circuits and batteries
@@ -37,14 +38,10 @@ Using this battery will allow your Duckiebot to monitor the state of charge and 
 Caption
 ```
 
-[comment]: <> (<div figure-id="fig:DB-C-DBatt_real" figure-caption="The Duckiebattery.">)
-
-[comment]: <> (     <img src="DB-C-DBatt_real2.jpg" style='width: 15em' />)
-
-[comment]: <> (</div>)
+<div figure-id="fig:DB-C-DBatt_real" figure-caption="The Duckiebattery.">
+  <img src="DB-C-DBatt_real2.jpg" alt="The Duckiebattery is a 5V 2A power bank with two USB-A outputs designed for robotics applications." style='width: 15em' />
+</div>
 -->
-
-
 
 ```{figure} ../../_images/troubleshooting/duckiebattery/DB-C-DBatt_real2.jpg
 :width: 30%
@@ -59,14 +56,19 @@ The Duckiebattery is a 5V 2A power bank with two USB-A outputs designed for robo
 ### Technical specification
 
 - Capacity: 10Ah at 3.7V
+
 - Charging: Micro USB 5V at up to 2A
+
 - Output 2 x USB type A 5V at up to 4A (combined), max 2.5A on a single port
+
 - Charge time: 0-100% takes about 5h and 0-90% about 4h with a 2A power supply
+
 - Weight: 189g (fully charged)
 
 ```{caution}
 Lithium-ion batteries like the Duckiebattery are potentially dangerous and must be handled with care.
 ```
+
 Here are some things to do and not to do.
 
 ```{warning}
@@ -80,10 +82,12 @@ Keep reading the following safety precautions: do not skip this section.
 :class: seealso
 
 - Dispose of the battery pack immediately if it has been subject to moisture and/or the case is eminently damaged.
-- In case of fire use a CO2 extinguisher.
-- Store preferably in a cool, dry, and ventilated area subject to moderate temperature change.
-- Storage at high temperatures (>50 C) should be avoided.
 
+- In case of fire use a CO2 extinguisher.
+
+- Store preferably in a cool, dry, and ventilated area subject to moderate temperature change.
+
+- Storage at high temperatures (>50 C) should be avoided.
 ```
 
 (db-opmanual-dtbattery-v2-donts)=
@@ -93,10 +97,15 @@ Keep reading the following safety precautions: do not skip this section.
 :class: warning
 
 - Do not connect a charge voltage greater than 5V.
+
 - Do not connect an external voltage source to the USB output ports.
+
 - The battery must not be opened, destroyed, or incinerated, since it may leak or rupture, releasing in the environment its hermetically sealed chemicals.
+
 - Do not short circuit terminals.
+
 - Do not crush or puncture the battery, or immerse it in liquid.
+
 - Do not place the battery near heating equipment, nor expose it to direct sunlight for long periods.
 ```
 
@@ -111,13 +120,13 @@ The battery has five LEDs on the top, used for indicating the state of charge.
 :alt: LEDs indicate the state of charge of the Duckiebattery.
 
 LEDs indicate the state of charge of the Duckiebattery.
+
 ```
+
 <!--
-[comment]: <> (<div figure-id="fig:DB-C-DBatt_1" figure-caption="LEDs indicate the state of charge of the Duckiebattery.">)
-
-[comment]: <> (     <img src="DB-C-DBatt_1.png" style='width: 25em' />)
-
-[comment]: <> (</div>)
+<div figure-id="fig:DB-C-DBatt_1" figure-caption="LEDs indicate the state of charge of the Duckiebattery.">
+  <img src="DB-C-DBatt_1.png" alt="LEDs indicating the state of charge of the Duckiebattery." style='width: 25em' />
+</div>
 -->
 
 ```{note}
@@ -134,12 +143,11 @@ Wake up the battery by pressing the side button once.
 ```
 
 <!--
-[comment]: <> (<div figure-id="fig:DB-C-DBatt_2" figure-caption="Wake up the battery by pressing the button once.">)
-
-[comment]: <> (     <img src="DB-C-DBatt_2.png" style='width: 30em' />)
-
-[comment]: <> (</div>)
+<div figure-id="fig:DB-C-DBatt_2" figure-caption="Wake up the battery by pressing the button once.">
+  <img src="DB-C-DBatt_2.png" alt="Pressing the Duckiebattery side button once to wake it up." style='width: 30em' />
+</div>
 -->
+
 (db-opmanual-dtbattery-v2-charging)=
 ### Charge the battery
 
@@ -157,13 +165,10 @@ Charging the Duckiebattery.
 When the battery's state of charge is particularly depleted (e.g., as soon as you receive the battery), the LEDs might be unresponsive for up to 30 minutes while receiving charge.
 
 <!--
-[comment]: <> (<div figure-id="" figure-caption="Charging the Duckiebattery.">)
-
-[comment]: <> (     <img src="DB-C-DBatt_3.png" style='width: 20em' />)
-
-[comment]: <> (</div>)
+<div figure-caption="Charging the Duckiebattery.">
+  <img src="DB-C-DBatt_3.png" alt="Duckiebattery charging indicator." style='width: 20em' />
+</div>
 -->
-
 
 (duckiebattery-state-diagram)=
 ### Duckiebattery states and state transitions
@@ -205,11 +210,7 @@ Duckiebattery outputs behave differently.
 ```
 
 <!--
-[comment]: <> (<div figure-id="" figure-caption="">)
-
-[comment]: <> (     <img src="" style='width: 25em' />)
-
-[comment]: <> (</div>)
+Legacy image placeholder for Duckiebattery outputs; no source image was specified.
 -->
 
 - USB OUT-1: Connect this output to a non-sensitive power load, i.e., motor or LEDs. This output will experience short power drops when plugging and unplugging the charger cable.
@@ -221,9 +222,8 @@ Duckiebattery outputs behave differently.
 
 The Duckiebattery provides live diagnostics. Learn how to query them in the [](how-to-handle-a-duckiebot-db21).
 
-
 (db-opmanual-dtbattery-v2-troubleshooting)=
-### Troubleshooting
+### Troubleshooting the Duckiebattery
 
 The most common fault is not related to the battery pack itself but the connection between the pack and the charger and/or the load.
 
@@ -240,7 +240,7 @@ My battery does not charge.
 ---
 There can be several reasons why a charge is not being accepted. Below are the most common issues:
 
-- The input voltage is too low or too high. Make sure you apply 5V via the micro USB connector
+- The input voltage is too low or too high. Make sure you apply 5V via the micro USB connector.
 
 - The battery is in battery protection mode and does not look like it is charging, but it is. Come back in >30 minutes and press the button once to enter `idle` mode.
 
@@ -261,6 +261,7 @@ There can be several reasons why the USB output is not working. Below are the mo
 - An external voltage was applied to the USB (output) port(s). This is a big no-no (refer to DO's and DONT's above). Disconnect all loads and enter `idle` mode.
 ```
 <!--
+
 (db-opmanual-dtbattery-v1)=
 ## The Duckie-power-bank
 
@@ -273,13 +274,13 @@ The Duckie-power-bank (or Duckiebattery version 1) is the standard power source 
 The Duckie Power Bank is the first version of the Duckiebattery, used in `DB18` and `DB19` Duckiebots.
 ```
 -->
+
 <!--
-[comment]: <> (<div figure-id="" figure-caption="">)
-
-[comment]: <> (     <img src="duckiebattery-front.png" style='width: 37em' />)
-
-[comment]: <> (</div>)
+<div figure-caption="Legacy Duckie Power Bank image.">
+  <img src="duckiebattery-front.png" alt="Front view of the first-generation Duckie Power Bank." style='width: 37em' />
+</div>
 -->
+
 <!--
 (db-opmanual-dtbattery-v1-overview)=
 ### Overview
@@ -293,16 +294,15 @@ The Duckiebattery is equipped with 2 USB type A outputs (ports A and B) and 1 Mi
 The Duckie Power Bank ports.
 ```
 -->
+
 <!--
-[comment]: <> (<div figure-id="" figure-caption="">)
-
-[comment]: <> (     <img src="" style='width: 37em' />)
-
-[comment]: <> (</div>)
+Legacy Duckie Power Bank ports image placeholder; no source image was specified.
 -->
+
 <!--
 It also has 4 LEDs representing the state of charge. Push the button on the side of the battery pack to turn on the LEDs. The LEDs indicate the residual charge according to:
 -->
+
 <!--
 <div markdown="1">
  <col2 id='duckiebattery-charge' figure-id="tab:duckiebattery-charge" figure-caption="Duckiebattery LED charge indicators">
@@ -313,23 +313,23 @@ It also has 4 LEDs representing the state of charge. Push the button on the side
  </col2>
 </div>
 -->
+
 <!--
 ```{list-table} Duckiebattery LED charge indicators
 :header-rows: 1
 :name: tab:duckiebattery-charge
 
-* - LED
+- - LED
   - State of Charge
-* - D1
+- - D1
   - 3-25%
-* - D2
+- - D2
   - 25-50%
-* - D3
+- - D3
   - 50-75%
-* - D4
+- - D4
   - 75-100%
 ```
-
 
 If D1 is flashing (0.5Hz) while not being charged, the battery pack is at a critical low charge (less than 3%).
 
@@ -349,12 +349,11 @@ When the battery pack is connected to the charger, the output voltage of ports A
 The Duckie Power Bank output voltage drops when plugging in and removing the charger.
 ```
 -->
+
 <!--
-[comment]: <> (<div figure-id="fig:duckiebattery-voltage-profile" figure-caption="The Duckie Power Bank ports">)
-
-[comment]: <> (     <img src="duckiebattery-voltage-profile.png" style='width: 37em' />)
-
-[comment]: <> (</div>)
+<div figure-id="fig:duckiebattery-voltage-profile" figure-caption="The Duckie Power Bank ports.">
+  <img src="duckiebattery-voltage-profile.png" alt="Voltage profile of the Duckie Power Bank during charger connection and removal." style='width: 37em' />
+</div>
 -->
 
 <!--
@@ -387,30 +386,29 @@ The battery capacity is 7.4Ah at 5V with an efficiency as follows:
 | 2 A | 85% |    3h 9m |
 | 2.5 A | 79% |    2h 21m |
 -->
+
 <!--
 ```{list-table} Duckie Power Bank discharge statistics
 :header-rows: 1
 :name: tab:duckie-power-bank-discharge
 
-* - Load
+- - Load
   - Efficiency
   - Autonomy
-* - 1 A
+- - 1 A
   - 91%
   - 6h 44m
-* - 1.5 A
+- - 1.5 A
   - 88%
   - 4h 33m
-* - 2 A
+- - 2 A
   - 85%
   - 3h 09m
-* - 2.5 A
+- - 2.5 A
   - 79%
   - 2h 21m
 ```
-
 -->
-
 
 (duckiebattery-troubleshooting)=
 ## Troubleshooting
@@ -430,9 +428,11 @@ The Duckiebattery does not look like it is charging.
 ---
 There could be several reasons why the Duckiebattery would not look like it is charging:
 
-* The input voltage may be too low/high (make sure to apply `5 V` via the Micro USB connector).
-* The Duckiebattery is in `protection` mode (plug it in a 5V 2A wall charger, wait for around `30 mins` and then press the side button **once** and notice if a faint red LED turns on).
-* The Duckiebattery is in a fault state, which could be caused by a cell and/or its internal PCB being overheated (unplug the charging cable from the charger, wait for around `1 h` and then plug the charging cable back into the charger).
+- The input voltage may be too low/high (make sure to apply `5 V` via the Micro USB connector).
+
+- The Duckiebattery is in `protection` mode (plug it in a 5V 2A wall charger, wait for around `30 mins` and then press the side button __once__ and notice if a faint red LED turns on).
+
+- The Duckiebattery is in a fault state, which could be caused by a cell and/or its internal PCB being overheated (unplug the charging cable from the charger, wait for around `1 h` and then plug the charging cable back into the charger).
 ```
 
 ```{trouble}
@@ -440,8 +440,11 @@ One or both of the USB output ports are not working.
 ---
 There could be several reasons why a USB output port would not be working:
 
-* The Duckiebattery is not in `idle` mode (press its button **once**).
-* The Duckiebattery is in `protection` mode (disconnect all loads, plug the charging cable into a charger, wait for around `30 min` and then press its button **once**).
-* The USB output port is in `overcurrent`/`overtemperature` mode (disconnect all loads, press the Duckiebattery's button **once** and then wait for around `30 min`).
-* An external voltage was applied to the USB output port (disconnect all loads and then press the Duckiebattery's button **once**).
+- The Duckiebattery is not in `idle` mode (press its button __once__).
+
+- The Duckiebattery is in `protection` mode (disconnect all loads, plug the charging cable into a charger, wait for around `30 min` and then press its button __once__).
+
+- The USB output port is in `overcurrent`/`overtemperature` mode (disconnect all loads, press the Duckiebattery's button __once__ and then wait for around `30 min`).
+
+- An external voltage was applied to the USB output port (disconnect all loads and then press the Duckiebattery's button __once__).
 ```

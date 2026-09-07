@@ -1,10 +1,10 @@
-(slides-and-recordings-intro-full)=
-# Full Introductory Lectures
-
 ```{seo}
 :description: Duckietown introduction to autonomous vehicles (full lecture).
 :keywords: AV, AVs, AGV, AGVs, autonomy, autonomous, autonomous vehicles, self-driving cars, self driving cars, trolley problem
 ```
+
+(slides-and-recordings-intro-full)=
+# Full Introductory Lectures
 
 ## Introduction to Autonomous Vehicles
 
@@ -15,15 +15,12 @@ We have found that it can be a good idea to devote some time to these larger que
 ```{slides} ../../../../_assets/instructor-manual/AV-intro.pdf
 ```
 
-
 ## Software Engineering
 
 In this lecture, we combine the previous sections on networking, testing, and signal processing into one software engineering-themed lecture.
 
 ```{slides} ../../../../_assets/instructor-manual/Software-Engineering.pdf
 ```
-
-
 
 ## Why Duckietown?
 

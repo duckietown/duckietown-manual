@@ -15,4 +15,3 @@ It is arguably the most successful controller of all times, definitely the most 
 ```
 
 For the accompanying exercise, please see [Modeling and Control](mooc-exercises).
-

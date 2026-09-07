@@ -7,12 +7,15 @@
 # Creating a New `DTProject`
 
 ```{needget}
-* [Working environment setup](setup-computer)
-* [Accounts setup](dt-account)
-* Basic knowledge of Python
+- [Working environment setup](setup-computer)
+
+- [Accounts setup](dt-account)
+
+- Basic knowledge of Python
 ---
-* Learn how to use DTProjects, the most important building block in Duckietown
-* Learn how to create a new DTProject from a template
+- Learn how to use DTProjects, the most important building block in Duckietown.
+
+- Learn how to create a new DTProject from a template.
 ```
 
 Duckietown-compliant Docker images are built from Duckietown Projects, abbreviated as `DTProjects`. Read the [introduction to DTprojects](dtproject) if not already done.
@@ -26,7 +29,7 @@ repository.
 
 Visit the template repository page:
 [duckietown/template-basic](https://github.com/duckietown/template-basic/).
-Select the button labeled **Use this template**, then choose **Create a new repository** from the dropdown menu.
+Select the button labeled __Use this template__, then choose __Create a new repository__ from the dropdown menu.
 
 ```{figure} ../../_images/developer/beginner/github_use_template.jpg
 :name: fig-dtproject-template-button
@@ -48,13 +51,13 @@ This will redirect to a new page:
 Creating a repository from template.
 ```
 
-Choose a name for the repository, for instance `my-project`, and press the **Create repository from template** button.
+Choose a name for the repository, for instance `my-project`, and press the __Create repository from template__ button.
 
 It is possible to replace `my-project` with any preferred name. If so, make sure to update all following references accordingly.
 
 This creates a new repository containing a copy of all content from `template-basic`. Next, clone it locally using a terminal:
 
-```bash
+```shell
 git clone https://github.com/YOUR_NAME/my-project
 cd my-project
 ```
@@ -89,7 +92,7 @@ Save and close the file. It is now possible to build the image, although the con
 
 In a terminal, navigate to the root directory of the cloned repository and execute:
 
-```bash
+```shell
 dts devel build -f
 ```
 
@@ -103,7 +106,7 @@ Final image name: docker.io/duckietown/my-project:v2-amd64
 
 ```{figure} ../../_images/developer/beginner/basic/dts_devel_build.png
 :name: fig-dtproject-dts-build
-:alt: Output of building a container with Duckietown shell.
+:alt: Output of building a container with Duckietown Shell.
 :align: center
 :width: 90%
 
@@ -115,7 +118,7 @@ Building a container through the Duckietown development command.
 
 To launch the container:
 
-```bash
+```shell
 dts devel run
 ```
 

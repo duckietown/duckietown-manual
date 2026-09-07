@@ -8,7 +8,6 @@
 
 Duckietown may be used to teach in different ways.
 
-
 (considerations-structure-frontal)=
 ## Classical (Frontal) Teaching
 
@@ -24,7 +23,6 @@ An alternative method of structuring your course is to implement a [flipped clas
 The Jupyter notebooks that accompany the [learning experiences](learning-experiences) can be a great option for this type of approach.
 
 A third natural option that we have used extensively is a hybrid of the two (classical and flipped). Particularly if your class sessions are long (longer than 45 minutes), research shows that students have a very difficult time focusing for this amount of time. So a good option can be to alternate between classical lecturing styles and then work together on the notebooks in small groups.
-
 
 (considerations-structure-projects)=
 ## Project-based classes

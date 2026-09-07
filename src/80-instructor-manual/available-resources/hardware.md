@@ -2,6 +2,7 @@
 :description: Duckietown robots include self-driving cars (Duckiebots), autonomous quadcopters (Duckiedrones) and a modular smart-city environment (Duckietown).
 :keywords: Duckietown, Duckiebot, Duckiedrone, hardware, robot
 ```
+
 (hardware)=
 # Duckietown Hardware
 
@@ -22,6 +23,7 @@ The Duckiebot is a small differentiable drive robot that is simple yet powerful.
 :name: duckiebot
 :scale: 60%
 :align: center
+:alt: Blue DB21M Duckiebot with a mounted rubber duck and front camera.
 
 The Duckiebot is a small-scale robot that we have developed for autonomy education and research.
 ```
@@ -39,6 +41,7 @@ To guarantee the reliable performance of the Duckiebot, we have also designed a 
 :name: duckietown
 :scale: 40%
 :align: center
+:alt: Duckiebots operating on a Duckietown road layout.
 
 Duckiebots operate in Duckietowns, which can have arbitrary topologies as long as the appearance specifications are respected.
 ```
@@ -64,7 +67,6 @@ For full details on the platform, visit the [Duckiedrone Operation Manual](ducki
 
 The Duckiedrone is a Raspberry-Pi based autonomous quadcopter.
 ```
-
 
 <!--
 Add this back once Duckiedrone stuff intetgrated into this book

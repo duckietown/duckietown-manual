@@ -15,5 +15,3 @@ In a more narrow definition, it is the logical component in the mind of the robo
 ```
 
 For the accompanying exercise, please see [Modeling and Control](mooc-exercises).
-
-

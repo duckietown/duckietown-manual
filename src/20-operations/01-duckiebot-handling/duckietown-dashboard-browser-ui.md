@@ -1,10 +1,10 @@
-(sw-tools-ui-dashboard)=
-# Duckiebot Dashboard
-
 ```{seo}
 :description: The Dashboard is a browser-based UI for Duckiebots, enabling convenient hardware and software debugging.
 :keywords: Duckietown, Duckiebot, Dashboard, browser-based UI, UI, debugging
 ```
+
+(sw-tools-ui-dashboard)=
+# Duckiebot Dashboard
 
 This chapter describes the Duckietown Duckiebot Dashboard (also known as just "the Dashboard"), i.e., a browser-based interface for Duckiebots (and Duckiedrones).
 
@@ -14,11 +14,10 @@ This chapter describes the Duckietown Duckiebot Dashboard (also known as just "t
 - Understanding of the Duckiebot Dashboard resources.
 ```
 
-
 ## Introduction to the Duckietown Dashboard
 
 ```{vimeo} 527022343
-:alt: introduction to the duckietown dashboard for duckiebot browser-based diagnostics
+:alt: introduction to the Duckietown Dashboard for Duckiebot browser-based diagnostics
 ```
 
 To open the Dashboard, run the following command, where `PAGE` is an optional page (e.g., `robot/mission_control`):
@@ -36,21 +35,21 @@ Once logged in, you will see a navigation panel on the left side with links to:
 :header-rows: 1
 :name: table:dashboard-pages
 
-* - Page
+- - Page
   - Description
-* - File Manager
+- - File Manager
   - A tool for managing the files on your Duckiebot
-* - Portainer
+- - Portainer
   - A tool for managing the containers on your Duckiebot
-* - Robot
+- - Robot
   - Provides information about the status of your Duckiebot
-* - Users
+- - Users
   - Allows multiple accounts to use a single Duckiebot
-* - Profile
+- - Profile
   - Provides information about your Duckietown account
-* - Package Store
+- - Package Store
   - Provides available packages for your Duckiebot
-* - Settings
+- - Settings
   - Allows the configuration of the `Dashboard` to be changed manually
 ```
 
@@ -70,7 +69,7 @@ In this tab, you can see your Duckiebot's name, type, configuration, firmware (i
 :width: 80%
 :alt: The Info tab on the Robot page of the Duckietown Duckiebot Dashboard
 
-The **Info** tab on the **Robot** page of the Dashboard.
+The __Info__ tab on the __Robot__ page of the Dashboard.
 ```
 
 (dashboard-pages-robot-mission-control)=
@@ -84,7 +83,7 @@ In this tab, you can see what your Duckiebot sees, its lateral and angular speed
 :width: 80%
 :alt: The Mission Control tab on the Robot page of the Dashboard. of the Duckietown Duckiebot Dashboard
 
-The **Mission Control** tab on the **Robot** page of the Dashboard.
+The __Mission Control__ tab on the __Robot__ page of the Dashboard.
 ```
 
 (dashboard-pages-robot-health)=
@@ -98,7 +97,7 @@ In this tab, you can see a plot of your Duckiebot's temperature, CPU usage, etc.
 :width: 80%
 :alt: The Health tab on the Robot page of the Dashboard.
 
-The **Health** tab on the **Robot** page of the Dashboard.
+The __Health__ tab on the __Robot__ page of the Dashboard.
 ```
 
 (dashboard-pages-robot-architecture)=
@@ -112,7 +111,7 @@ In this tab, you can see a graphical representation of your Duckiebot's ROS netw
 :width: 80%
 :alt: The Architecture tab on the Robot page of the Dashboard.
 
-The **Architecture** tab on the **Robot** page of the Dashboard.
+The __Architecture__ tab on the __Robot__ page of the Dashboard.
 ```
 
 (dashboard-pages-portainer)=
@@ -126,5 +125,5 @@ On this page, you can manage your Duckiebot's Docker containers.
 :width: 80%
 :alt: The Portainer page of the Dashboard.
 
-The **Portainer** page of the Dashboard.
+The __Portainer__ page of the Dashboard.
 ```

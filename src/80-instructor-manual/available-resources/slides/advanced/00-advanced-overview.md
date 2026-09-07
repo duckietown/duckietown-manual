@@ -3,8 +3,6 @@
 :keywords: multi-vehicle coordintation, mobility-on-demand, formal methods, safety, duckietown, motion blur, estimation from images
 ```
 
-
-
 (slides-and-recordings-advanced)=
 # Advanced Topics
 
@@ -14,4 +12,3 @@ These resources would likely be too advanced to include in an undergraduate cour
 
 ```{tableofcontents}
 ```
-

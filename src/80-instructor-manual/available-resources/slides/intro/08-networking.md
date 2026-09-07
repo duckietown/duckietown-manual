@@ -1,11 +1,10 @@
-
-(slides-and-recordings-networking)=
-# Networking
-
 ```{seo}
 :description: Networking is one of the most challenging aspect of robotics, and source of many headaches. This is a Duckietown introduction to networks for robotics.
 :keywords: networks, networking, TCP, UDP, router, modem, IP address
 ```
+
+(slides-and-recordings-networking)=
+# Networking
 
 ## Basics of Networking for Robotics
 
@@ -13,4 +12,3 @@ Networking can be one of the most challenging aspects of working with robots. Ha
 
 ```{slides} ../../../../_assets/instructor-manual/networking.pdf
 ```
-

@@ -1,7 +1,8 @@
 ```{seo}
-:description: Duckietown uses an OpenAI Gym simulator written in pure Python to be as slim as possible, and support ML traning applications. A new Unity-based environment, the Duckiematrix, is in beta.
+:description: Duckietown uses an OpenAI Gym simulator written in pure Python to be as slim as possible and support ML training applications. A new Unity-based environment, the Duckiematrix, is in beta.
 :keywords: Duckietown, simulation, simulator, OpenAI Gym, evaluations
 ```
+
 (simulation)=
 # Duckietown Simulator
 
@@ -16,6 +17,7 @@ We have developed a [simulation environment in OpenGL](duckietown-gym-simulation
 :name: gym-duckietown1
 :scale: 50%
 :align: center
+:alt: Screenshot of the legacy OpenGL-based Gym-Duckietown simulator.
 
 A screenshot of our simple OpenGL based simulation environment
 ```
@@ -27,12 +29,12 @@ To use this simulator it is preferable to refer to the [daffy version of the doc
 
 For full details on how to use the simulator, refer to [](duckietown-gym-simulation).
 
-
 ```{figure} ../../_images/instructor-manual/finalmain.gif
 :name: gym-duckietown2
+:alt: Animated view of the legacy Gym-Duckietown simulator.
 
+An animated view of the legacy Gym-Duckietown simulator.
 ```
-
 
 (matrix-duckietown)=
 ## The Duckiematrix
@@ -47,4 +49,3 @@ Moving forward, all exercises will be compatible with the [Duckiematrix](the-duc
 
 The "Duckiematrix" simulation environment
 ```
-

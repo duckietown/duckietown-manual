@@ -6,29 +6,35 @@
 (ros-sub-camera)=
 # Subscribe to the Camera
 
-```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
----
-* Learn how to receive camera images from your robot using a **ROS Subscriber**
+```{include} ../../_includes/ros/camera-subscriber-needget.md
 ```
 
-## Topic and message type of interest
+## Legacy topic and message type of interest
 
 ROS enables processes to exchange _messages_ over named _topics_. To communicate, two ROS nodes must agree on:
-- A **topic name** (e.g., camera images)
-- A **message type** (e.g., JPEG frames)
+
+- A __topic name__ (e.g., camera images).
+
+- A __message type__ (e.g., JPEG frames).
 
 For the Duckiebot camera sensor:
-- **Topic**: `/ROBOT_NAME/camera_node/image/compressed`
-- **Message type**: `sensor_msgs/CompressedImage`
+
+- __Topic__: `/DUCKIEBOT_NAME/camera_node/image/compressed`
+
+- __Message type__: `sensor_msgs/CompressedImage`, with the following structure:
+
   ```text
   std_msgs/Header header
   string format
   uint8[] data
   ```
+
   where:
+
   - `header`: standard ROS header
+
   - `format`: image format (e.g., `png`, `jpeg`)
+
   - `data`: byte array containing the encoded image
 
 (ros-camera-feed-node-create)=
@@ -36,7 +42,7 @@ For the Duckiebot camera sensor:
 
 Assuming a Catkin package exists at `packages/my_package/`, create a new file in its `src/` directory:
 
-```bash
+```shell
 mkdir -p ./packages/my_package/src
 ```
 
@@ -78,7 +84,7 @@ if __name__ == '__main__':
 
 Make the script executable:
 
-```bash
+```shell
 chmod +x ./packages/my_package/src/camera_reader_node.py
 ```
 
@@ -98,7 +104,7 @@ dt-launchfile-join
 
 Rebuild the image:
 
-```bash
+```shell
 dts devel build -f
 ```
 
@@ -106,8 +112,8 @@ dts devel build -f
 
 Run the subscriber locally with display access:
 
-```bash
-dts devel run -R ROBOT_NAME -L camera-reader -X
+```shell
+dts devel run -R DUCKIEBOT_NAME -L camera-reader -X
 ```
 
 A window will open showing the camera feed:
@@ -133,23 +139,18 @@ workflow becomes mandatory here. In fact, this particular node needs access to a
 the window showing the camera feed, hence the need to run it locally as the Duckiebot is not connected to
 a monitor.
 You can put this to the test by attempting to build and run this node
-on the Duckiebot (using the `-H ROBOT_NAME`) flag, you will be presented the error `cannot open display`.
-
+on the Duckiebot (using the `-H DUCKIEBOT_NAME`) flag, you will be presented the error `cannot open display`.
 ```
 
 ```{admonition} Congratulations 🎉
 You just built and ran your first ROS node that displays the Duckiebot camera feed on your screen.
 ```
 
-
 <!--
 (ros-sub-camera)=
 # Subscribe to camera
 
-```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
----
-* Learn how to receive camera images from your robot using a **ROS Subscriber**
+```{include} ../../_includes/ros/camera-subscriber-needget.md
 ```
 
 ## Topic and message type of interest
@@ -166,20 +167,22 @@ is `/ROBOT_NAME/camera_node/image/compressed`, while the message type used over 
 [sensor_msgs/CompressedImage](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/CompressedImage.html),
 and contains the following fields.
 
-```
+```text
 std_msgs/Header header
 string format
 uint8[] data
 ```
 
-where,
+where:
+
 - `header`: is the [standard ROS header](https://wiki.ros.org/msg#Header) object;
+
 - `format`: specifies the format of the data, for example, `png` or `jpeg`;
+
 - `data`: is an array of bytes containing the actual image in the format specified;
 
-
 (ros-camera-feed-node-create)=
-## Create Subscriber ROS Node
+## Legacy create subscriber ROS node
 
 In [](ros-catkin-package-create), we learned how to make a new Catkin package. We will assume that a
 catkin package already exists, i.e., `packages/my_package/`. You can reuse the one we created earlier.
@@ -230,11 +233,11 @@ if __name__ == '__main__':
 
 Again, we make our node executable,
 
-    chmod +x ./packages/my_package/src/camera_reader_node.py
+```shell
+chmod +x ./packages/my_package/src/camera_reader_node.py
+```
 
-
-
-## Define launcher
+## Legacy define launcher
 
 Similarly to what we did in the section [](ros-sub-define-launcher), we create a new launcher file
 `./launchers/camera-reader.sh` with the content,
@@ -256,15 +259,17 @@ dt-launchfile-join
 
 Let us now re-compile our project using the command
 
-    dts devel build -f
+```shell
+dts devel build -f
+```
 
-
-
-## Launch the node
+## Legacy launch the node
 
 We are now ready to run our camera reader node,
 
-    dts devel run -R ROBOT_NAME -L camera-reader -X
+```shell
+dts devel run -R ROBOT_NAME -L camera-reader -X
+```
 
 This will open a new window like the following,
 
@@ -277,11 +282,9 @@ Camera feed window.
 
 If you want to stop the node, just use `Ctrl+C` in the terminal.
 
-
 ```{note}
 We used the flag `-X` to instruct `dts` to allow this project to create new windows on this computer's screen.
 ```
-
 
 ```{attention}
 The trick we learned in [](dtproject-ros-faster-development-trick-run-locally) to speed up our development
@@ -292,12 +295,10 @@ You can put this to the test by attempting to build and run this node
 on the Duckiebot (using the `-H ROBOT_NAME`) flag, you will be presented the error `cannot open display`.
 ```
 
-
 ```{todo}
 Add section back in the Basic part of this book where we explain what the `-X` flag does in `dts devel run`.
 Once done, update NOTE above to recall where we learned this.
 ```
-
 
 ```{admonition} Congratulations 🎉
 You just built and run your first ROS node connected to the existing ROS network exposed by the Duckiebot.

@@ -2,23 +2,28 @@
 :description: Duckietown learning experiences are all-inclusive interactive "weeks of class".
 :keywords: learning experience, LX, duckietown, Jupyter Notebook, activities, exercises, notes, simulation, hardware, robots, theory, practice, Python
 ```
+
 (learning-experiences)=
 # Activities and Exercises: Learning Experiences (LXs)
 
 ```{note}
 Duckietown learning experiences (LXs) are ready-to-go "weeks" of class. They include videos, notes, interactive activities,
-and exercises, and are integrated with the Duckietown technical infrastructure (Duckiematrix + real Duckiebot hardware).
+and exercises, and are integrated with the Duckietown technical infrastructure (Duckiematrix + physical Duckiebot hardware).
 ```
 
 We define:
-* "activities" as learning tasks to which solutions are provided. Activities are designed to be "tutorials" for specific topics.
-* "exercises" as learning tasks to which solutions are not provided.
-* Duckietown "learning activities" (LX): as standalone classes on specific topics, typically containing activities, exercises, videos, slides, quizzes and pointers to further reading. LXs can be thought of as a week of (university-level) classes.
+
+- "Activities" are learning tasks for which solutions are provided. They are designed as tutorials for specific topics.
+
+- "Exercises" are learning tasks for which solutions are not provided.
+
+- Duckietown learning experiences (LXs) are standalone classes on specific topics, typically containing activities, exercises, videos, slides, quizzes, and pointers to further reading. They can be thought of as a week of university-level classes.
 
 Both activities and exercises are structured to include [Jupyter Notebooks](https://jupyter.org/) that introduce a concept followed by coding blocks. For the most part, the result is a piece of code that can be easily:
 
- - Run in a simulation environment;
- - Run on robot hardware;
+- Run in a simulation environment;
+
+- Run on robot hardware;
 
 The pedagogical goal in general is to explore some narrowly scoped component of the autonomy stack with everything else being "hidden" (or provided) so that the student may experience the impact of that component on the others. Whenever possible, the result of the exercise should be an "end-to-end" experience that makes the robot do something (e.g., move).
 
@@ -42,25 +47,23 @@ Activities and exercises can be accessed independently of the MOOC at:
 ```{list-table}
 :header-rows: 1
 :name: mooc-exercises-table
-* - EXERCISE NAME
+- - EXERCISE NAME
   - DESCRIPTION
-* - [Braitenberg](https://github.com/duckietown/duckietown-lx/tree/mooc2022/braitenberg)
+- - [Braitenberg](https://github.com/duckietown/duckietown-lx/tree/mooc2022/braitenberg)
   - A very simple reactive control approach that is inspired by the repulsive and attractive forces
-* - [Modeling and Control](https://github.com/duckietown/duckietown-lx/tree/mooc2022/modcon)
+- - [Modeling and Control](https://github.com/duckietown/duckietown-lx/tree/mooc2022/modcon)
   - We build a kinematic model of the Duckiebot and build a simple PID controller using the feedback from the encoders
-* - [Object Detection](https://github.com/duckietown/duckietown-lx/tree/mooc2022/object-detection)
+- - [Object Detection](https://github.com/duckietown/duckietown-lx/tree/mooc2022/object-detection)
   - We train a deep neural network to detect objects and connect it to the control of the Duckiebot
-* - [Visual Lane Servoing](https://github.com/duckietown/duckietown-lx/tree/mooc2022/visual-lane-servoing)
+- - [Visual Lane Servoing](https://github.com/duckietown/duckietown-lx/tree/mooc2022/visual-lane-servoing)
   - We use basic concepts of computer vision to build a reactive control that operates directly on the camera images
-* - [State Estimation](https://github.com/duckietown/duckietown-lx/tree/mooc2022/state-estimation)
+- - [State Estimation](https://github.com/duckietown/duckietown-lx/tree/mooc2022/state-estimation)
   - A somewhat more advanced exercise that takes the detections of the road markings and uses them to calculate an estimate of the robot's state
-* - [Collision Checker](https://github.com/duckietown/duckietown-lx/tree/mooc2022/collision-checker)
+- - [Collision Checker](https://github.com/duckietown/duckietown-lx/tree/mooc2022/collision-checker)
   - We build an algorithm to detect if the robot will collide with its environment by understanding its state and geometry
-* - [Planning](https://github.com/duckietown/duckietown-lx/tree/mooc2022/planning)
+- - [Planning](https://github.com/duckietown/duckietown-lx/tree/mooc2022/planning)
   - We explore algorithms that the Duckiebot can use to successfully navigate in a cluttered environment
 ```
-
-
 
 <!--(other-exercises)=
 ## Other Exercises

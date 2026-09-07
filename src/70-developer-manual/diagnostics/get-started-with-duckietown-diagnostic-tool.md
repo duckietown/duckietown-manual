@@ -7,10 +7,11 @@
 # Get Started with Diagnostics
 
 ```{needget}
-* `dts` installed on your base station and reachable Duckiebot hostname
-* Access to <https://dashboard.duckietown.org/diagnostics>
+- `dts` installed on your base station and reachable Duckiebot hostname
+
+- Access to <https://dashboard.duckietown.org/diagnostics>
 ---
-* Run a 60-second diagnostics capture, verify upload, and locate the log online
+- Run a 60-second diagnostics capture, verify upload, and locate the log online.
 ```
 
 ```{warning}
@@ -19,15 +20,15 @@ This feature is currently unavailable.
 
 ## 1 – Run a single-test experiment
 
-Execute a $60s$ capture on robot **\[ROBOT]**:
+Execute a $60s$ capture on robot `ROBOT`:
 
-```bash
-dts diagnostics run -H [ROBOT] -G my_experiment -d 60
+```shell
+dts diagnostics run -H ROBOT -G my_experiment -d 60
 ```
 
 Leave the session running until it terminates. A successful run ends with:
 
-````
+````text
 ...
 INFO:system-monitor:Pushing data to the cloud
 INFO:system-monitor:Pushing to the server [trial 1/3]...
@@ -43,32 +44,31 @@ If the upload fails, the data are discarded and the test must be repeated.
 
 Open <https://dashboard.duckietown.com/diagnostics>.
 
-Logs are indexed by **Group**, **Subgroup**, and hostname.
+Logs are indexed by __Group__, __Subgroup__, and hostname.
 
 ```{figure} ../../_images/developer/advanced/diagnostics/diagnostics_web_dropdown.png
+:name: fig:get-started-with-duckietown-diagnostic-tool-diagnostics-web-dropdown
 :width: 100%
 :alt: Selecting diagnostics test on the Duckietown Dashboard
 
 Selecting diagnostics test on dashboard.duckietown.com
 ```
 
-*Tip — if no `-S/--subgroup` was supplied, the entry appears under `default`.*
+_Tip — if no `-S/--subgroup` was supplied, the entry appears under `default`._
 
 ## One experiment, many tests
-When comparing configurations, run several **tests** inside one **experiment** using the `-S/--subgroup` flag.
+When comparing configurations, run several __tests__ inside one __experiment__ using the `-S/--subgroup` flag.
 
 Example from [](devel_sw_diagnostics_example):
 
-```bash
+```shell
 # baseline at 20 Hz
-dts diagnostics run -H [ROBOT] -G camera_frequency -S 20hz -d 60
+dts diagnostics run -H ROBOT -G camera_frequency -S 20hz -d 60
 # pushed to 30 Hz
-dts diagnostics run -H [ROBOT] -G camera_frequency -S 30hz -d 60
+dts diagnostics run -H ROBOT -G camera_frequency -S 30hz -d 60
 ```
 
-On the Diagnostics page, select both `20hz` and `30hz` subgroups under *Group = camera_frequency* and compare the plots across the **System**, **Resources**, and other tabs.
-
-
+On the Diagnostics page, select both `20hz` and `30hz` subgroups under _Group = camera_frequency_ and compare the plots across the __System__, __Resources__, and other tabs.
 
 <!--
 (sec:devel_sw_diagnostics_get_started)=
@@ -79,7 +79,6 @@ In this section, we will see how to perform a diagnostics experiment.
 NOTE: At the end of each diagnostics test, the resulting log is automatically
 transferred to a remote server. If the diagnostics tool fails to transfer the
 log to the server, the tests data will be lost and the test need to be run again.
-
 
 ## Run a (single test) diagnostics experiment
 
@@ -93,7 +92,7 @@ dts diagnostics run -H [ROBOT] -G my_experiment -d 60
 Let the diagnostics tool run until it finishes. A successful experiment
 concludes with a log similar to the following:
 
-```
+```text
 . . .
 [system-monitor 00h:00m:55s] [healthy] [8/8 jobs] [13 queued] [0 failed] ...
 [system-monitor 00h:00m:58s] [healthy] [8/8 jobs] [13 queued] [0 failed] ...
@@ -111,16 +110,15 @@ INFO:system-monitor:Done!
 
 The most important thing to look for is the line
 
-```
+```text
 INFO:system-monitor:The server says: [200] OK
 ```
 
 which indicates that the diagnostics log was successfully transferred to
 the remote diagnostics server.
 
-
 (devel_sw_diagnostics_dashboard_logs_tag)=
-## Visualize the results
+## Legacy result visualization
 
 The diagnostics server collects diagnostics logs and organizes them according
 to the given group, subgroup and hostname of the target machine of each test.
@@ -133,7 +131,6 @@ Use the dropdowns `Group` and `Subgroup` to find your experiment and test.
 Remember, when the subgroup is not explicitly specified with the argument
 `-S/--subgroup`, `default` is used.
 
-
 ```{figure} ../../_images/developer/advanced/diagnostics/diagnostics_web_dropdown.png
 :width: 100%
 :alt: selecting diagnostics test on dashboard.duckietown.org
@@ -143,8 +140,7 @@ Selecting diagnostics test on dashboard.duckietown.org
 
 Use the tabs `System`, `Resources`, etc. to see the content of the diagnostics log.
 
-
-## One experiment, many tests
+## Legacy multi-test experiment
 
 In many cases, your experiment is that of comparing two or more
 configurations or implementations of part of your system.
@@ -158,7 +154,7 @@ Let us recall the example of [](devel_sw_diagnostics_example).
 We want to measure the effects of changing the drivers frequency on the system,
 so we run (and monitor) the system twice, a first time with the frequency tuned
 at `20Hz`, and a second time with the frequency at `30Hz`.
-We call the overall **experiment** `camera_frequency` and the two **tests**,
+We call the overall __experiment__ `camera_frequency` and the two __tests__,
 `20hz` and `30hz` respectively.
 We can use the following commands to run the two tests described above, one
 before and the other after applying the change to the camera drivers code.

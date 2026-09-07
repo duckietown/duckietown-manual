@@ -3,7 +3,6 @@
 :keywords: duckietown, documentation, overview, markdown, html, sphinx
 ```
 
-
 (duckumentation-intro)=
 # Overview
 
