@@ -12,5 +12,3 @@ Two classes of CNN-based approaches have emerged for tackling this problem: one-
 ```{vimeo} 549674863
 :alt: Object Detection
 ```
-
-

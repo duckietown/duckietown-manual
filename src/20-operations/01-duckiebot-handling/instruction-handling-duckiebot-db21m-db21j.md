@@ -1,10 +1,10 @@
-(how-to-handle-a-duckiebot-db21)=
-# Overview (`DB21`)
-
 ```{seo}
 :description: A summary of common operations for interacting with a Duckiebot.
 :keywords: Duckietown, Duckiebot, Duckiebot handling, ssh, moving a Duckiebot, Duckiebot image streaming, Duckiebot LED control, Duckiebot HUT update, Duckiebot battery update, Duckiebot remote control, Duckiebot software update
 ```
+
+(how-to-handle-a-duckiebot-db21)=
+# Overview (`DB21`)
 
 This chapter describes how to handle your Duckiebot.
 
@@ -14,14 +14,13 @@ This chapter describes how to handle your Duckiebot.
 - A "cheatsheet" for common Duckiebot operations
 ```
 
-
 (handling-how-to-update-db-software)=
 ## How to update the software on a Duckiebot
 
 To update the software on your Duckiebot, run:
 
 ```shell
-dts duckiebot update ROBOT_NAME
+dts duckiebot update DUCKIEBOT_NAME
 ```
 
 (handling-how-to-ssh-into-your-duckiebot)=
@@ -53,7 +52,9 @@ To update the Duckiebattery, follow [](duckiebattery-update).
 
 Once your Duckiebattery is up to date and your Duckiebot is connected, run:
 
-    dts duckiebot battery info ROBOT_NAME
+```shell
+dts duckiebot battery info DUCKIEBOT_NAME
+```
 
 ```shell
 battery:

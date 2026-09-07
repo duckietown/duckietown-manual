@@ -19,7 +19,7 @@ For a more in-depth treatment of the subject we refer the interested reader to a
 (dt-probability-basics-random-variables)=
 ## Random Variables
 
-The key underlying concept in probabilistic theory is that of an *event*, which is the output of a random trial. Examples of an event include the result of a coin flip turning up HEADS or the result of rolling a die turning up the number "4".
+The key underlying concept in probabilistic theory is that of an _event_, which is the output of a random trial. Examples of an event include the result of a coin flip turning up HEADS or the result of rolling a die turning up the number "4".
 
 ```{admonition} Definition: Random Variable
 :class: attention
@@ -33,7 +33,7 @@ $$
   \newcommand{\tails}{\textsf{TAILS}}
 $$
 
-For example, we could model the event of flipping a fair coin with the random variable $X$. We write the probability that $X$ takes $\heads$ as $p(X=\heads)$. The set of all possible values for the variable $X$ is its *domain*, $\aset{X}$.
+For example, we could model the event of flipping a fair coin with the random variable $X$. We write the probability that $X$ takes $\heads$ as $p(X=\heads)$. The set of all possible values for the variable $X$ is its _domain_, $\aset{X}$.
 
 In this case,
 
@@ -41,13 +41,13 @@ $$
     \aset{X}=\{\heads,\tails\}.
 $$
 
-Since $X$ can only take one of two values, it is a *binary* random variable. In the case of a die roll,
+Since $X$ can only take one of two values, it is a _binary_ random variable. In the case of a die roll,
 
 $$
     \aset{X}=\{1,2,3,4,5,6\},
 $$
 
-and we refer to this as a *discrete* random variable. If the output is real value or a subset of the real numbers, e.g., $\aset{X} = \mathbb{R}$, then we refer to $X$ as a *continuous* random variable.
+and we refer to this as a _discrete_ random variable. If the output is real value or a subset of the real numbers, e.g., $\aset{X} = \mathbb{R}$, then we refer to $X$ as a _continuous_ random variable.
 
 Consider once again the coin tossing event. If the coin is fair, we have
 
@@ -55,7 +55,7 @@ $$
     p(X=\heads)=p(X=\tails)=0.5.
 $$
 
-Here, the function $p(x)$ is called the *probability mass function* or PMF. The PMF is shown in [](fig:binary_pmf).
+Here, the function $p(x)$ is called the _probability mass function_ or PMF. The PMF is shown in [](fig:binary_pmf).
 
 ```{figure} ../_images/further_reading/preliminaries/probability/binary_pmf.svg
 :alt: The pmf for a fair coin toss
@@ -68,7 +68,7 @@ The Probability Mass Function (PMF) for a fair coin toss
 
 <!--
 <div figure-id="fig:binary_pmf" figure-caption="The pmf for a fair coin toss">
-  <img src="binary_pmf.svg" style='width: 30em'/>
+  <img src="binary_pmf.svg" alt="Probability mass function for a fair coin toss." style='width: 30em'/>
 </div>
 -->
 
@@ -78,11 +78,11 @@ Here are some very important properties of $p(x)$:
 
 - $\sum_{x\in\aset{X}}=1$
 
-In the case of a continuous random variable, we will call this function $f(x)$ and call it a *probability density function*, or PDF.
+In the case of a continuous random variable, we will call this function $f(x)$ and call it a _probability density function_, or PDF.
 
-In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zero since $\aset{X}$ is infinite. To deal with this, we also define another important function, the *cumulative density function*, which is given by $F(x) \triangleq p(X\leq x)$, and now we can define $f(x) \triangleq \frac{d}{dx}F(x)$.
+In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zero since $\aset{X}$ is infinite. To deal with this, we also define another important function, the _cumulative density function_, which is given by $F(x) \triangleq p(X\leq x)$, and now we can define $f(x) \triangleq \frac{d}{dx}F(x)$.
 
-A PDF and corresponding CDF are shown in [](fig:pdf_cdf). This happens to be a Gaussian distribution, defined more precisely in [](#gaussian).
+A PDF and corresponding CDF are shown in [](fig:pdf_cdf). This happens to be a Gaussian distribution, defined more precisely in [the Gaussian distribution](dt-probability-gaussian-distribution).
 
 ```{figure} ../_images/further_reading/preliminaries/probability/pdf_cdf.svg
 :alt: The continuous PDF and cdf
@@ -95,7 +95,7 @@ The continuous probability and cumulative density functions (PDF and CDF, respec
 
 <!--
 <div figure-id="fig:pdf_cdf" figure-caption="The continuous pdf and cdf">
-  <img src="pdf_cdf.svg" style='width: 30em'/>
+  <img src="pdf_cdf.svg" alt="Continuous probability density and cumulative distribution functions." style='width: 30em'/>
 </div>
 -->
 
@@ -108,26 +108,24 @@ $$
 p(X=x \; \text{AND} \; Y=y) = p(x,y)
 $$
 
-The function $p(x,y)$ is called *joint distribution*.
+The function $p(x,y)$ is called _joint distribution_.
 
 (dt-probability-basics-conditional-probabilities)=
 ### Conditional Probabilities
 
-Again, considering that we have to RVs, $X​$ and $Y​$, imagine these two events are linked in some way. For example, $X​$ is the numerical output of a die roll and $Y​$ is the binary even-odd output of the same die roll. Clearly these two events are linked since they are both uniquely determined by the same underlying event (the rolling of the die). In this case, we say that the RVs are *dependent* on one another.
+Again, considering that we have to RVs, $X​$ and $Y​$, imagine these two events are linked in some way. For example, $X​$ is the numerical output of a die roll and $Y​$ is the binary even-odd output of the same die roll. Clearly these two events are linked since they are both uniquely determined by the same underlying event (the rolling of the die). In this case, we say that the RVs are _dependent_ on one another.
 
-In the event that we know one of events, this gives us some information about the other. We denote this using the following *conditional distribution*
+In the event that we know one of events, this gives us some information about the other. We denote this using the following _conditional distribution_
 
 $$
 p(X=x \; \text{GIVEN} \; Y=y) \triangleq p(x|y).
 $$
-
 
 <div class="check" markdown="1">
 Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is $p(x|\text{EVEN})$?
 
 If you think this is very easy that's good, but don't get over-confident.
 </div>
-
 
 The joint and conditional distributions are related by the following (which could be considered a definition of the joint distribution):
 
@@ -145,7 +143,7 @@ $$
 
 In other words, the conditional and joint distributions are inextricably linked: you can't really talk about one without the other.
 
-If two variables are *independent*, then the following relation holds: $p(x,y)=p(x)p(y)$.
+If two variables are _independent_, then the following relation holds: $p(x,y)=p(x)p(y)$.
 
 (dt-probability-basics-bayes-rule)=
 ### Bayes' Rule
@@ -165,10 +163,9 @@ $$
 
 Exactly why this formula is so important might (at some point) be covered in more detail in later sections, but we will give an initial intuition here.
 
-Consider that the variable $X$ represents something that we are trying to estimate but cannot observe directly, and that the variable $Y$ represents a physical measurement that relates to $X$. We want to estimate the distribution over $X$ given the measurement $Y$, $p(x|y)$, which is called the *posterior* distribution. Bayes' rule lets us to do this.
+Consider that the variable $X$ represents something that we are trying to estimate but cannot observe directly, and that the variable $Y$ represents a physical measurement that relates to $X$. We want to estimate the distribution over $X$ given the measurement $Y$, $p(x|y)$, which is called the _posterior_ distribution. Bayes' rule lets us do this.
 
-For every possible state, you take the probability that this measurement could have been generated, $p(y|x)$, which is called the *measurement likelihood*, you multiply it by the probability of that state being the true state, $p(x)$, which is called the *prior*, and you normalize over the probability of obtaining that measurement from any state, $p(y)$, which is called the *evidence*.
-
+For every possible state, you take the probability that this measurement could have been generated, $p(y|x)$, which is called the _measurement likelihood_, you multiply it by the probability of that state being the true state, $p(x)$, which is called the _prior_, and you normalize over the probability of obtaining that measurement from any state, $p(y)$, which is called the _evidence_.
 
 <div class="check" markdown="1">
 From Wikipedia:
@@ -176,13 +173,13 @@ Suppose a drug test has a 99% true positive rate and a 99% true negative rate, a
 
 Answer: $\approx$ 33.2%.
 
-This answer should surprise you. It highlights the power of the *prior*.
+This answer should surprise you. It highlights the power of the _prior_.
 </div>
 
 (dt-probability-basics-marginal-distributions)=
 ### Marginal Distribution
 
-If we already have a joint distribution $p(x,y)$ and we wish to recover the single variable distribution $p(x)$, we must *marginalize* over the variable $Y$. The involves summing (for discrete RVs) or integrating (for continuous RVs) over all values of the variable we wish to marginalize:
+If we already have a joint distribution $p(x,y)$ and we wish to recover the single variable distribution $p(x)$, we must _marginalize_ over the variable $Y$. This involves summing (for discrete RVs) or integrating (for continuous RVs) over all values of the variable we wish to marginalize:
 
 $$
 \begin{align}
@@ -204,7 +201,7 @@ A 2D joint data and 2 marginal 1D histogram plots
 
 <!--
 <div figure-id="fig:marginals" figure-caption="A 2D joint data and 2 marginal 1D histogram plots">
-  <img src="marginals.svg" style='width: 30em'/>
+  <img src="marginals.svg" alt="Two-dimensional joint data with two marginal one-dimensional histograms." style='width: 30em'/>
 </div>
 -->
 
@@ -213,7 +210,7 @@ Marginalization is an important operation since it allows us to reduce the size 
 (dt-probability-basics-cond-independence)=
 ### Conditional Independence
 
-If two RVs, $X$ and $Y$ are correlated, we may be able to encapsulate the dependence through a third random variable $Z$. Therefore, if we know $Z$, we may consider $X$ and $Y$ non correlated to each other. 
+If two RVs, $X$ and $Y$ are correlated, we may be able to encapsulate the dependence through a third random variable $Z$. Therefore, if we know $Z$, we may consider $X$ and $Y$ uncorrelated.
 
 ```{figure} ../_images/further_reading/preliminaries/probability/conditional_independence.png
 :alt: A graphical representation of the conditional independence of X and Y given Z
@@ -226,18 +223,18 @@ A graphical representation of the conditional independence of $X$ and $Y$ given 
 
 <!--
 <div figure-id="fig:conditional_independence" figure-caption="A graphical representation of the conditional independence of $X$ and $Y$ given $Z$">
-  <img src="conditional_independence.pdf" style='width:10em; height:auto' />
+  <img src="conditional_independence.pdf" alt="Graphical representation of conditional independence of X and Y given Z." style='width:10em; height:auto' />
 </div>
 -->
 
 ```{note}
-Graphical models deserve an independent discussion. Doing a good job of sufficiently describing graphical models and the dependency relations that they express requires careful thought. Until the editors of this manual get it it, we refer curious readers to e.g.: Koller and Friedman.
+Graphical models deserve an independent discussion. Doing a good job of sufficiently describing graphical models and the dependency relations that they express requires careful thought. Until the editors of this manual get to it, we refer curious readers to, for example, Koller and Friedman.
 ```
 
 (dt-probability-basics-moments)=
 ### Moments
 
-The $n$th moment of an RV, $X$, is given by $E[X^n]$ where $E[]$ is the expection operator with:
+The $n$th moment of an RV, $X$, is given by $E[X^n]$, where $E[]$ is the expectation operator, with:
 
 $$
 E[f(X)] = \sum_{\aset{X}} x \, f(x)
@@ -251,11 +248,11 @@ $$
 
 in the continuous case.
 
-The 1st moment is the *mean*, $\mu_X=E[X]$.
+The 1st moment is the _mean_, $\mu_X=E[X]$.
 
 The $n$-th central moment of an RV, $X$ is given by $E[(X-\mu_X)^n]$.
 
-The second central moment is called the *covariance*, $\sigma^2_X=E[(X-\mu_X)^2]$.
+The second central moment is called the _covariance_, $\sigma^2_X=E[(X-\mu_X)^2]$.
 
 <!--
 Another equation:
@@ -268,19 +265,18 @@ $$
 (dt-probability-basics-entropy)=
 ### Entropy
 
-
 ```{admonition} Definition: Entropy
 :class: attention
-The *entropy* of an RV is a scalar measure of the uncertainty about the value the RV.
+The _entropy_ of an RV is a scalar measure of the uncertainty about the value of the RV.
 ```
 
 <!--
 \begin{definition}\label{def:entropy}
-The *entropy* of an RV is a scalar measure of the uncertainty about the value the RV.
+The _entropy_ of an RV is a scalar measure of the uncertainty about the value the RV.
 \end{definition}
 -->
 
-A common measure of entropy is the *Shannon entropy*, whose value is given by
+A common measure of entropy is the _Shannon entropy_, whose value is given by
 
 $$
 H(X)=-E[\log_2 p(x)]
@@ -304,9 +300,10 @@ $$
 
 The Shannon entropy of a binary RV $X$.
 ```
+
 <!--
 <div figure-id="fig:entropy_binary" figure-caption="The Shannon entropy of a binary RV $X$">
-  <img src="entropy.svg" style='width: 30em;'/>
+  <img src="entropy.svg" alt="Shannon entropy curve for a binary random variable." style='width: 30em;'/>
 </div>
 -->
 
@@ -317,7 +314,6 @@ Notice that our highest entropy (uncertainty) about the outcome of the coin flip
 
 In mobile robotics we use the Gaussian, or normal, distribution a lot.
 
-
 The 1-D Gaussian distribution pdf is given by:
 
 $$
@@ -325,7 +321,7 @@ $$
 \label{eq:gaussian1D}
 $$
 
-where $\mu$ is called the *mean* of the distribution, and $\sigma$ is called the *standard deviation*. A plot of the 1D Gaussian was previously shown in [](fig:pdf_cdf).
+where $\mu$ is called the _mean_ of the distribution, and $\sigma$ is called the _standard deviation_. A plot of the 1D Gaussian was previously shown in [](fig:pdf_cdf).
 
 We will rarely deal with the univariate case and much more often deal with the multi-variate Gaussian:
 
@@ -335,15 +331,15 @@ $$
 $$
 
 The value from the exponent: $(\state-\mathbf{\mu})^T\mathbf{\Sigma}^{-1}(\state - \mathbf{\mu})$ is sometimes written
-$||\state - \mathbf{\mu}||_\mathbf{\Sigma}$ and is referred to as the *Mahalanobis distance* or *energy norm*.
+$||\state - \mathbf{\mu}||_\mathbf{\Sigma}$ and is referred to as the _Mahalanobis distance_ or _energy norm_.
 
 Mathematically, the Gaussian distribution has some nice properties as we will see. But is this the only reason to use this as a distribution. In other words, is the assumption of Gaussianicity a good one?
 
 There are two very good reasons to think that the Gaussian distribution is the "right" one to use in a given situation.
 
-1. The *central limit theorem* says that, in the limit, if we sum an increasing number of independent random variables, the distribution approaches Gaussian
+1. The _central limit theorem_ says that, in the limit, if we sum an increasing number of independent random variables, the distribution approaches Gaussian.
 
-2. It can be proven [editor's note: add reference] that the Gaussian distribution has the maximum entropy subject to a given value for the first and second moments. In other words, for a given mean and variance, it makes the *least* assumptions about the other moments.
+2. It can be proven [editor's note: add reference] that the Gaussian distribution has the maximum entropy subject to a given value for the first and second moments. In other words, for a given mean and variance, it makes the _least_ assumptions about the other moments.
 
 Suggested exercise: derive the formula for Gaussian entropy.
 
@@ -359,7 +355,6 @@ The Banana distribution is the official distribution in robotics!
 :class: tip
 The [Banana distribution is Gaussian](http://www.roboticsproceedings.org/rss08/p34.pdf)!
 ```
-
 
 (dt-probability-refs)=
 ### References

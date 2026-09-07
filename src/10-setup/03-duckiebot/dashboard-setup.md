@@ -1,13 +1,14 @@
-(duckiebot-dashboard-setup)=
-# Dashboard Setup
-
 ```{seo}
-:description: Tep by step instructions on how to set up your Duckiebot Dashboard in Duckietown.
+:description: Step-by-step instructions for setting up your Duckiebot Dashboard in Duckietown.
 :keywords: Duckietown, Duckiebot, Dashboard, Compose, browser based UI
 ```
 
+(duckiebot-dashboard-setup)=
+# Dashboard Setup
+
 ```{needget}
 - A Duckietown account: [](setup-account-duckietown-hub)
+
 - A connected Duckiebot: [](setup-duckiebot-network)
 ---
 - A working Duckiebot Dashboard for hardware and software diagnostics
@@ -34,7 +35,7 @@ and all the packages you need already running on your Duckiebot after the first 
 
 The Dashboard comes pre-installed on your Duckiebot, and gets activated on first boot. A one-time procedure is necessary to set it up before it being ready for use.
 
-Once configured, you can connect to the Dashboard through _any_ browser by going to `http://ROBOT_NAME.local/`.
+Once configured, you can connect to the Dashboard through _any_ browser by going to `http://DUCKIEBOT_NAME.local/`.
 
 (init-dashboard-video)=
 ### Video Tutorial
@@ -44,6 +45,7 @@ Once configured, you can connect to the Dashboard through _any_ browser by going
 ```{vimeo} 526989336
 :alt: How to set up a Duckietown Duckiebot Dashboard
 ```
+
 Dashboard setup tutorial.
 ````
 
@@ -60,13 +62,17 @@ Dashboard setup tutorial.
 (init-dashboard-steps)=
 ### Step-by-Step Instructions
 
-You can find your duckietown Dashboard at:
+You can find your Duckietown Dashboard at:
 
-    http://ROBOT_NAME.local/
+```text
+http://DUCKIEBOT_NAME.local/
+```
 
 If the above address does not work, remove the `.local` part and just use
 
-    http://ROBOT_NAME/
+```text
+http://DUCKIEBOT_NAME/
+```
 
 ```{note}
 If `.local` does not work, that means your router's default domain name is set to something else. It will be helpful if you figure out what that is. And keep in mind that any instruction later that includes `.local` should be just ignored.
@@ -75,10 +81,12 @@ If `.local` does not work, that means your router's default domain name is set t
 You will be greeted by the Dashboard shown here. Read the steps below before continuing through the setup page.
 
 ```{figure} ../../_images/setup/dashboard/compose_first_setup_step3.png
-:alt: duckietown dashboard first configuration splash screen
+:alt: Duckietown Dashboard first configuration splash screen
 :width: 75%
 :name:  compose_first_setup
 :align: center
+
+Duckietown Dashboard welcome screen for initial configuration.
 ```
 
 #### Steps 1 and 2: Login and administrator account
@@ -92,10 +100,10 @@ a new administrator account will be automatically created.
 
 #### Step 3: Configure your Dashboard
 
-Complete the `Configure \compose\` fields and click on **Next** to continue.
+Complete the `Configure \compose\` fields and click on __Next__ to continue.
 
 ```{note}
-You can always update your choices through the **Settings** page after you finish the setup process.
+You can always update your choices through the __Settings__ page after you finish the setup process.
 ```
 
 ```{tip}
@@ -104,17 +112,19 @@ If you are seeing an error due to permissions, take a look at the [Booting FAQs]
 
 #### Step 4: Complete the setup
 
-The **Step 4: Complete** tab should now be open, as shown below.
+The __Step 4: Complete__ tab should now be open, as shown below.
 
 ```{figure} ../../_images/setup/dashboard/compose_first_setup_step4.png
 :name: compose_first_setup_step4
-:alt: duckietown dashboard completing first configuration
+:alt: Duckietown Dashboard completing first configuration
 :width: 75%
 :name:  compose_first_setup_completion
 :align: center
+
+Duckietown Dashboard setup completion screen.
 ```
 
-Press **Finish** to continue.
+Press __Finish__ to continue.
 
 ### Dashboard First Login
 
@@ -122,9 +132,11 @@ You should now see the login page:
 
 ```{figure} ../../_images/setup/dashboard/dashboard_login_page.png
 :name: dashboard_login_page
-:alt: duckietown dashboard login page
+:alt: Duckietown Dashboard login page
 :width: 75%
 :align: center
+
+Duckietown Dashboard login page.
 ```
 
 ```{note}
@@ -134,22 +146,26 @@ administrator. If you have multiple tokens, make sure to keep note of which one 
 
 If you have not retrieved your personal Duckietown Token as described in [](duckietown-token) yet, it is now time to do so.
 
-Once you have your token click on **Sign in with Duckietown**.
+Once you have your token click on __Sign in with Duckietown__.
 
 ```{figure} ../../_images/setup/dashboard/dashboard_login_with_duckietown_modal.png
 :name: dashboard_login_with_duckietown_modal
-:alt: duckietown dashboard sign in with duckietown widget
+:alt: Duckietown Dashboard sign in with Duckietown widget
 :width: 75%
 :align: center
+
+Duckietown Dashboard sign-in dialog.
 ```
 
 If your token is active, you will be redirected to your profile page:
 
 ```{figure} ../../_images/setup/dashboard/dashboard_profile_page_full.png
 :name: dashboard_profile_page
-:alt: duckietown dashboard profile page
+:alt: Duckietown Dashboard profile page
 :width: 75%
 :align: center
+
+Duckietown Dashboard user profile page.
 ```
 
 The left side bar shows many more pages, some immediately available, others under development. Some pages are accessible by all users (e.g., Robot), others only by administrators (e.g., Settings, Package Store).

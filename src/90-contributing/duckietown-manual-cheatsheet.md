@@ -15,7 +15,6 @@ kernelspec:
 :keywords: myst, cheatsheet, duckietown, documentation
 ```
 
-
 ```{note}
 This is a shortlisted version of the [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html).
 ```
@@ -29,10 +28,10 @@ This is a shortlisted version of the [MyST syntax cheat sheet](https://jupyterbo
 :header-rows: 1
 :widths: 20 15 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     # Heading level 1
     ## Heading level 2
     ### Heading level 3
@@ -52,10 +51,10 @@ This is a shortlisted version of the [MyST syntax cheat sheet](https://jupyterbo
 :header-rows: 1
 :widths: 20 15 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     (target_header)=
     ```
   - ```md
@@ -68,7 +67,9 @@ This is a shortlisted version of the [MyST syntax cheat sheet](https://jupyterbo
 (ref-target-headers)=
 ### Referencing target headers
 
-<!-- Targets can be referenced with the [ref inline role](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref) which uses the section title by default: -->
+<!--
+Targets can be referenced with the [ref inline role](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref) which uses the section title by default:
+-->
 
 ```md
 [](myst_cheatsheet)
@@ -79,6 +80,7 @@ You can specify the text of the target:
 ```md
 [MyST syntax lecture](myst_cheatsheet)
 ```
+
 <!--
 You can also specify a target in another book using the syntax:
 
@@ -88,16 +90,17 @@ You can also specify a target in another book using the syntax:
 
 Example here is link to the Duckiebot Operation Manual page about DB21J assembly [](book-opmanual-duckiebot:assembling-duckiebot-db21j).
 -->
+
 ## Quote
 
 ``````{list-table}
 :header-rows: 1
 :widths: 20 20 10
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     > text
     ```
   - ```md
@@ -112,10 +115,10 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 :header-rows: 1
 :widths: 20 15 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     ---
     ```
   - ```md
@@ -134,10 +137,10 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 :header-rows: 1
 :widths: 20 15 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     % text
     ```
   - ```md
@@ -154,10 +157,10 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 :header-rows: 1
 :widths: 20 15 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     +++
     ```
   - ```md
@@ -176,10 +179,10 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 :header-rows: 1
 :widths: 20 15 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```html
+- - ```html
     <tagName> text </tagName>
     ```
   - ```html
@@ -194,31 +197,31 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 :header-rows: 1
 :widths: 20 20 10
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     [text](target)
     ```
   - ```md
     [Jupyter Book](https://jupyterbook.org)
     ```
   - [Jupyter Book](https://jupyterbook.org)
-* - ```md
+- - ```md
     [text](relative_path)
     ```
   - ```md
     [Another page](../welcome-to-the-duckietown-manual)
     ```
   - [Another page](../welcome-to-the-duckietown-manual)
-* - ```md
+- - ```md
     <target>
     ```
   - ```md
     <https://jupyterbook.org>
     ```
   - <https://jupyterbook.org>
-* - ```md
+- - ```md
     [text][key]
     ```
   - ```md
@@ -239,24 +242,28 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 :header-rows: 1
 :widths: 20 20
 
-* - Example
+- - Example
   - Result
-* - ```md
+- - ```md
     1. First item
+
     2. Second item
         1. First sub-item
     ```
   - 1. First item
+
     2. Second item
         1. First sub-item
-* - ```md
+- - ```md
     1. First item
+
     2. Second item
-        * First sub-item
+        - First sub-item
     ```
   - 1. First item
+
     2. Second item
-        * First subitem
+        - First subitem
 ``````
 
 ### Unordered list
@@ -265,23 +272,27 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 :header-rows: 1
 :widths: 20 20
 
-* - Example
+- - Example
   - Result
-* - ```md
-    * First item
-    * Second item
-      * First subitem
+- - ```md
+    - First item
+
+    - Second item
+      - First subitem
     ```
-  - * First item
-    * Second item
-      * First subitem
-* - ```md
-    * First item
+  - - First item
+
+    - Second item
+      - First subitem
+- - ```md
+    - First item
       1. First subitem
+
       2. Second subitem
     ```
-  - * First item
+  - - First item
       1. First subitem
+
       2. Second subitem
 ``````
 
@@ -291,10 +302,10 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 :header-rows: 1
 :widths: 20 20 20
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     | a    | b    |
     | :--- | ---: |
     | c    | d    |
@@ -309,7 +320,7 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
     | :------------ | -------------: |
     |        0      |        5       |
     |     13720     |      2744      |
-* - ````md
+- - ````md
     ```{list-table} Table title
     :header-rows: 1
     :name: label-to-reference
@@ -339,11 +350,11 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
     :header-rows: 1
     :name: example-table
 
-    * - Training
+    - - Training
       - Validation
-    * - 0
+    - - 0
       - 5
-    * - 13720
+    - - 13720
       - 2744
     ```
 ``````
@@ -353,7 +364,7 @@ Example here is link to the Duckiebot Operation Manual page about DB21J assembly
 ```{note}
 In order to reference a table, you must add a label to it.
 To add a label to your table simply include a `:name:` parameter followed by the label of your table.
-In order to add a *numbered reference*, you
+In order to add a _numbered reference_, you
 must also include a table title. See example above.
 ```
 
@@ -361,17 +372,17 @@ must also include a table title. See example above.
 :header-rows: 1
 :widths: 10 20 20
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     {numref}`label`
     ```
   - ```md
     {numref}`example-table` is an example.
     ```
   - {numref}`example-table` is an example.
-* - ```md
+- - ```md
     [text](label)
     ```
   - ```md
@@ -383,9 +394,12 @@ must also include a table title. See example above.
 ## Tabs
 
 Tabs can be used in several ways:
-1) At the page level to enclose instruction versions related to different releases (for example, to separate the DB19 and DB21 assembly instructions).
-2) Within pages to divide duplicate content with tab based.
-3) Nested within other components such as a list.
+
+1. At the page level to enclose instruction versions related to different releases (for example, to separate the DB19 and DB21 assembly instructions).
+
+2. Within pages to divide duplicate content with tab based.
+
+3. Nested within other components such as a list.
 
 ```{note}
 Related content that does not include some duplication should be shown in a table rather than a tab to prevent hidden text.
@@ -395,9 +409,9 @@ Related content that does not include some duplication should be shown in a tabl
 :header-rows: 1
 :widths: 20 20
 
-* - Example
+- - Example
   - Result
-* - `````md
+- - `````md
     ````{tab-set}
 
     ```{tab-item} DB19
@@ -428,9 +442,9 @@ Related content that does not include some duplication should be shown in a tabl
 :header-rows: 1
 :widths: 1 20
 
-* - Syntax
+- - Syntax
   - Result
-* - ````md
+- - ````md
     ```{note}
     Use note directives for basic highlighting.
     ```
@@ -438,7 +452,7 @@ Related content that does not include some duplication should be shown in a tabl
   - ```{note}
     Use note directives for basic highlighting.
     ```
-* - ````md
+- - ````md
     ```{warning}
     Use warnings for situations that might
     cause harm, but can be fixed.
@@ -447,7 +461,7 @@ Related content that does not include some duplication should be shown in a tabl
   - ```{warning}
     Use warnings for situations that might cause harm, but can be fixed.
     ```
-* - ````md
+- - ````md
     ```{tip}
     A tip is a useful suggestion for the reader.
     ```
@@ -455,7 +469,7 @@ Related content that does not include some duplication should be shown in a tabl
   - ```{tip}
     A tip is a useful suggestion for the reader.
     ```
-* - ````md
+- - ````md
     ```{attention}
     This directive should be used to
     highlight particularly tricky steps.
@@ -464,7 +478,7 @@ Related content that does not include some duplication should be shown in a tabl
   - ```{attention}
     This directive should be used to highlight particularly tricky steps.
     ```
-* - ````md
+- - ````md
     ```{danger}
     Used for situations that might
     cause irreparable harm (to people or robots).
@@ -473,7 +487,7 @@ Related content that does not include some duplication should be shown in a tabl
   - ```{danger}
     Used for situations that might cause irreparable harm (to people or robots).
     ```
-* - ````md
+- - ````md
     ```{seealso}
     Used for external links (to
     third-party websites or other documents).
@@ -491,7 +505,7 @@ You could make an admonition with custom title and class with the example below.
 :header-rows: 1
 :widths: 10 20 20
 
-* - ````md
+- - ````md
     ```{admonition} Title
     text
     ```
@@ -503,7 +517,7 @@ You could make an admonition with custom title and class with the example below.
   - ```{admonition} General admonition
     content
     ```
-* - ````md
+- - ````md
     ```{admonition} Title
     :class: warning
     text
@@ -524,16 +538,16 @@ You could make an admonition with custom title and class with the example below.
 ## Icons
 
 Icons are provided by the [font-awesome](https://fontawesome.com/) project.
-The complete list of icons available can be found [here](https://fontawesome.com/v5/search?o=r&m=free).
+The complete list of icons is available in the [Font Awesome icon gallery](https://fontawesome.com/v5/search?o=r&m=free).
 
 ``````{list-table}
 :header-rows: 1
 :widths: 10 20 20
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ````md
+- - ````md
     ```{icon} <icon-id>
     ```
     ````
@@ -552,12 +566,13 @@ The complete list of icons available can be found [here](https://fontawesome.com
 :header-rows: 1
 :widths: 10 20 20
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ````md
+- - ````md
     ```{figure} ./path/to/figure.jpg
     :name: label
+    :alt: Brief description of the figure.
 
     caption
     ```
@@ -566,6 +581,7 @@ The complete list of icons available can be found [here](https://fontawesome.com
     ```{figure} ../_images/duckietown.jpeg
     :width: 50px
     :name: figure-example-2
+    :alt: Duckiebot in a Duckietown road environment.
 
     Here is my figure caption!
     ```
@@ -573,12 +589,14 @@ The complete list of icons available can be found [here](https://fontawesome.com
   - ```{figure} ../_images/duckietown.jpeg
     :width: 50px
     :name: figure-example-2
+    :alt: Duckiebot in a Duckietown road environment.
 
     Here is my figure caption!
     ```
-* - ````md
+- - ````md
     ```{image} ./path/to/figure.jpg
     :name: label
+    :alt: Brief description of the image.
     ```
     ````
   - ````md
@@ -586,20 +604,22 @@ The complete list of icons available can be found [here](https://fontawesome.com
     :scale: 20%
     :align: center
     :name: image-example
+    :alt: Duckiebot in a Duckietown road environment.
     ```
     ````
   - ```{image} ../_images/duckietown.jpeg
     :scale: 20%
     :align: center
     :name: image-example
+    :alt: Duckiebot in a Duckietown road environment.
     ```
-* - ````md
+- - ````md
     ![alt-text](path/to/image)
     ````
   - ````md
-    ![](https://tinyurl.com/39ewhkab)
+    ![Example image](https://tinyurl.com/39ewhkab)
     ````
-  - ![](https://tinyurl.com/39ewhkab)
+  - ![Example image](https://tinyurl.com/39ewhkab)
 
 ``````
 
@@ -611,31 +631,48 @@ Use the `:class: framed` parameter to add a border around the image.
 :header-rows: 1
 :widths: 10 20 20
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ````md
+- - ````md
     ```{figure} ./path/to/figure.jpg
     :class: framed
+    :name: figure-example-framed
+    :alt: Brief description of the figure.
+
+    A framed figure.
     ```
     ````
   - ````md
     ```{figure} ../_images/duckietown.jpeg
     :width: 50px
     :class: framed
+    :name: figure-example-framed
+    :alt: Duckiebot in a Duckietown road environment.
+
+    A framed figure.
     ```
     ````
   - ```{figure} ../_images/duckietown.jpeg
     :width: 50px
     :class: framed
+    :name: figure-example-framed
+    :alt: Duckiebot in a Duckietown road environment.
+
+    A framed figure.
     ```
 
 ``````
 
-:::{note}
-* Content/caption is not permitted for *image*s, but only available for *figure*s.
-* Settings are not available with `![alt-text](path/to/image)` format
-  :::
+```{note}
+- Content/caption is not permitted for *image*s, but only available for *figure*s.
+
+- Settings are not available with `![alt-text](path/to/image)` format
+
+- Every non-decorative image and figure needs a concise `:alt:` description. Caption standalone diagrams, maps, screenshots, overview or reference figures, and completed assemblies. Routine procedural-step images can omit a caption when adjacent instructions already identify the image.
+
+- Every `{figure}` needs a unique `:name:` label so that it can be referenced.
+```
 
 <!-- See {doc}`../content/figures` and {doc}`../file-types/markdown` for more information. -->
 
@@ -645,10 +682,10 @@ Use the `:class: framed` parameter to add a border around the image.
 :header-rows: 1
 :widths: 10 20 20
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     {numref}`label`
     ```
   - ```md
@@ -657,7 +694,7 @@ Use the `:class: framed` parameter to add a border around the image.
     ```
   - {numref}`figure-example-2` is a
     figure example.
-* - ```md
+- - ```md
     {numref}`text %s <label>`
     ```
   - ```md
@@ -666,7 +703,7 @@ Use the `:class: framed` parameter to add a border around the image.
     ```
   - {numref}`Figure %s <figure-example-2>`
     is an example.
-* - ```md
+- - ```md
     [text]<label>
     ```
   - ```md
@@ -683,10 +720,10 @@ Use the `:class: framed` parameter to add a border around the image.
 :header-rows: 1
 :widths: 15 20 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     [text](label)
     ```
   - ```md
@@ -701,10 +738,11 @@ Use the `:class: framed` parameter to add a border around the image.
 
 Videos can be referenced using the following methods:
 
-1) `vimeo` - When possible, video content should be added to the Vimeo account and formatted with the custom Duckietown `vimeo` directive.
-2) `videoembed` - For other video content accessible via a web link, use the `videoembed` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_iframe.ASP) are available mimicking the `:alt:` parameter syntax below.
-3) `video` - For videos stored locally to the book project (this is not recommended), use the `video` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_video.asp) are available mimicking the `:alt:` parameter syntax below.
+1. `vimeo` - When possible, video content should be added to the Vimeo account and formatted with the custom Duckietown `vimeo` directive.
 
+2. `videoembed` - For other video content accessible via a web link, use the `videoembed` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_iframe.ASP) are available mimicking the `:alt:` parameter syntax below.
+
+3. `video` - For videos stored locally to the book project (this is not recommended), use the `video` directive. All [`iframe` attributes](https://www.w3schools.com/tags/tag_video.asp) are available mimicking the `:alt:` parameter syntax below.
 
 ### Referencing Vimeo videos
 
@@ -712,10 +750,10 @@ Videos can be referenced using the following methods:
 :header-rows: 1
 :widths: 15 20 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ````md
+- - ````md
     ```{vimeo} video-id
     :alt: alt text
     ```
@@ -736,10 +774,10 @@ Videos can be referenced using the following methods:
 :header-rows: 1
 :widths: 15 20 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ````md
+- - ````md
     ```{video} embed_link
     :alt: alt text
     ```
@@ -762,10 +800,10 @@ Supported file types: `.mp4`, `.ogm`, `.ogv`, `.ogg`, `.webm`.
 :header-rows: 1
 :widths: 15 20 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ````md
+- - ````md
     ```{video} file_path
     :alt: alt
     ```
@@ -784,17 +822,17 @@ Supported file types: `.mp4`, `.ogm`, `.ogv`, `.ogg`, `.webm`.
 :header-rows: 1
 :widths: 10 20 20
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - Inline
+- - Inline
   - ```md
     This is an example of an
     inline equation $z=\sqrt{x^2+y^2}$.
     ```
   - This is an example of an
     inline equation $z=\sqrt{x^2+y^2}$.
-* - Math blocks
+- - Math blocks
   - ```md
     This is an example of a
     math block
@@ -809,7 +847,7 @@ Supported file types: `.mp4`, `.ogm`, `.ogv`, `.ogg`, `.webm`.
     $$
     z=\sqrt{x^2+y^2}
     $$
-* - Math blocks with labels
+- - Math blocks with labels
   - ```md
     This is an example of a
     math block with a label
@@ -832,10 +870,10 @@ Supported file types: `.mp4`, `.ogm`, `.ogv`, `.ogg`, `.webm`.
 :header-rows: 1
 :widths: 15 20 15
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     [](label)
     ```
   - ```md
@@ -848,19 +886,19 @@ Supported file types: `.mp4`, `.ogm`, `.ogv`, `.ogg`, `.webm`.
 
 ### In-line code
 
-**Example**:
+__Example__:
 
 ```md
 Wrap in-line code blocks in backticks: `boolean example = true;`.
 ```
 
-**Result**:
+__Result__:
 
 Wrap in-line code blocks in backticks: `boolean example = true;`.
 
 ### Code and syntax highlighting
 
-**Example**:
+__Example__:
 
 ````md
 ```python
@@ -877,7 +915,7 @@ No syntax highlighting.
 ```
 ````
 
-**Result**:
+__Result__:
 
 ```python
 note = "Python syntax highlighting"
@@ -909,7 +947,7 @@ kernelspec:
 ```
 ````
 
-**Example**:
+__Example__:
 
 ````md
 ```{code-cell} ipython3
@@ -918,7 +956,7 @@ print(note)
 ```
 ````
 
-**Result**:
+__Result__:
 
 ```{code-cell} ipython3
 note = "Python syntax highlighting"
@@ -932,7 +970,7 @@ See the [tags section on Jupyter Books documentation](https://jupyterbook.org/en
 
 ### Gluing variables
 
-**Example**:
+__Example__:
 
 ``````md
 ```{code-cell} ipython3
@@ -944,7 +982,7 @@ glue("glued_text", my_variable)
 Here is an example of how to glue text: {glue:}`glued_text`
 ``````
 
-**Result**:
+__Result__:
 
 ```{code-cell} ipython3
 from myst_nb import glue
@@ -958,7 +996,7 @@ Here is an example of how to glue text: {glue:}`glued_text`
 
 ### Gluing numbers
 
-**Example**:
+__Example__:
 
 ``````md
 ```{code-cell} ipython3
@@ -976,7 +1014,7 @@ glue("ns_mean", ns.mean(), display=False)
 Here is an example of how to glue numbers: {glue:}`ss_mean` and {glue:}`ns_mean`.
 ``````
 
-**Result**:
+__Result__:
 
 ```{code-cell} ipython3
 from myst_nb import glue
@@ -996,7 +1034,7 @@ Here is an example of how to glue numbers: {glue:}`ss_mean` and {glue:}`ns_mean`
 
 ### Gluing visualizations
 
-**Example**:
+__Example__:
 
 ``````md
 ```{code-cell} ipython3
@@ -1018,7 +1056,7 @@ This is an example of pasting a glued output as a block:
 ```
 ``````
 
-**Result**:
+__Result__:
 
 ```{code-cell} ipython3
 from myst_nb import glue
@@ -1043,7 +1081,7 @@ This is an example of pasting a glued output as a block:
 
 ### Gluing math
 
-**Example**:
+__Example__:
 
 ``````md
 ```{code-cell} ipython3
@@ -1060,7 +1098,7 @@ To glue a math equation try
 ```
 ``````
 
-**Result**:
+__Result__:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -1076,7 +1114,6 @@ To glue a math equation try:
 :label: glue-eq-example
 ```
 
-
 ## Footnotes
 
 ``````{margin}
@@ -1089,10 +1126,10 @@ Footnotes are displayed at the very bottom of the page.
 :header-rows: 1
 :widths: 20 20 10
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     [^ref]
 
     [^ref]: Footnote text
@@ -1105,9 +1142,6 @@ Footnotes are displayed at the very bottom of the page.
   - This is a footnote reference.[^myref]
 ``````
 
-[^myref]: This **is** the footnote definition.
-
-
 (language-format-troubleshooting)=
 ## Troubleshooting
 
@@ -1117,9 +1151,9 @@ Troubleshooting cards can be created using the `{trouble}` directive.
 :header-rows: 1
 :widths: 6 20
 
-* - Syntax
+- - Syntax
   - Example
-* - ````md
+- - ````md
     ```{trouble}
     symptom here
     ---
@@ -1142,21 +1176,23 @@ Requirements/outputs cards can be created using the `{needget}` directive.
 :header-rows: 1
 :widths: 6 20
 
-* - Syntax
+- - Syntax
   - Example
-* - ````md
+- - ````md
     ```{needget}
-    * Requirement 1
-    * Requirement 2
+    - Requirement 1
+
+    - Requirement 2
     ---
-    * Output 1
+    - Output 1
     ```
     ````
   - ```{needget}
-    * Duckie
-    * Robot
+    - Duckie
+
+    - Robot
     ---
-    * Duckiebot
+    - Duckiebot
     ```
 ``````
 
@@ -1168,9 +1204,9 @@ You can use the Test / What to Expect card (`testexpect`) to define checkpoints 
 :header-rows: 1
 :widths: 10 20
 
-* - Syntax
+- - Syntax
   - Result
-* - ````md
+- - ````md
     ```{testexpect}
     Test
     ---
@@ -1178,7 +1214,7 @@ You can use the Test / What to Expect card (`testexpect`) to define checkpoints 
     ```
     ````
   - ```{testexpect}
-    ```bash
+    ```shell
     pip3 --version
     ---
     This command should output a version number for the `pip3` package.
@@ -1188,16 +1224,16 @@ You can use the Test / What to Expect card (`testexpect`) to define checkpoints 
 (language-format-todo)=
 ## ToDos
 
-You can drop **ToDos** throughout the documentation using the `{todo}` directive.
+You can drop __ToDos__ throughout the documentation using the `{todo}` directive.
 ToDos are rendered only on the staging documentation, they are hidden in production.
 
 ``````{list-table}
 :header-rows: 1
 :widths: 6 20
 
-* - Syntax
+- - Syntax
   - Example
-* - ````md
+- - ````md
     ```{todo}
     todo message here
     ```
@@ -1210,22 +1246,23 @@ ToDos are rendered only on the staging documentation, they are hidden in product
 (language-format-seo)=
 ## SEO (Search Engine Optimization)
 
-You can use the **seo** directive to set SEO metadata for the page. For example, you can set a page
+You can use the __seo__ directive to set SEO metadata for the page. For example, you can set a page
 description and a set of keywords as shown in the example below.
+
+Place the directive immediately after any YAML front matter, before page labels, headings, and other content.
 
 ``````{list-table}
 :header-rows: 1
 :widths: 30
 
-* - Syntax
-* - ````md
+- - Syntax
+- - ````md
     ```{seo}
     :description: A description for the page
     :keywords: word1,word2,word3
     ```
     ````
 ``````
-
 
 ## Citations
 
@@ -1237,10 +1274,10 @@ Make sure you have a reference bibtex file. And it is included in the `_config.y
 :header-rows: 1
 :widths: 20 20 20
 
-* - Syntax
+- - Syntax
   - Example
   - Result
-* - ```md
+- - ```md
     {cite}`mybibtexcitation`
     ```
   - ```md
@@ -1260,7 +1297,6 @@ And, at the bottom of the page, include the list of references:
 ```{bibliography}
 :filter: docname in docnames
 ```
-
 
 ## PDF Slides
 

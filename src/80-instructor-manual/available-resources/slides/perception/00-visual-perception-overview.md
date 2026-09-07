@@ -12,7 +12,5 @@ This includes a definition of visual perception tasks, an introduction to neural
 
 A prerequisite for understanding this material could be the basics of [](slides-and-recordings-vision-overview). Much of this material is supported by the [learning experience](learning-experiences) related to "Object Detection".
 
-
 ```{tableofcontents}
 ```
-

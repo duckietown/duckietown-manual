@@ -7,13 +7,14 @@
 # The `DTROS` class
 
 ```{needget}
-* Familiarity with basic ROS concepts and `rospy`
-* Completion of the Docker and ROS beginner modules in this book
+- Familiarity with basic ROS concepts and `rospy`
+
+- Completion of the Docker and ROS beginner modules in this book
 ---
-* Ability to create a well‑structured, documented Duckietown ROS node that inherits from `DTROS`
+- Ability to create a well‑structured, documented Duckietown ROS node that inherits from `DTROS`
 ```
 
-This chapter explains **how to write and organize the code of a ROS node** in Duckietown.
+This chapter explains __how to write and organize the code of a ROS node__ in Duckietown.
 
 Correct structure is mandatory: it improves readability, performance, and integration with the rest of the stack.
 
@@ -23,10 +24,13 @@ Inline documentation goes hand‑in‑hand with code structure; detailed guidanc
 
 ## 1 · General file layout
 
-* Each ROS node lives in the package’s `src/` directory.
-* File name convention: if the node is called `some_name`, the file **must** be `some_name_node.py`.
-* The file must be executable (`chmod +x`).
-* Implement the logic inside a **single class** named `SomeNameNode`, which **inherits from `DTROS`**.
+- Each ROS node lives in the package’s `src/` directory.
+
+- File name convention: if the node is called `some_name`, the file __must__ be `some_name_node.py`.
+
+- The file must be executable (`chmod +x`).
+
+- Implement the logic inside a __single class__ named `SomeNameNode`, which __inherits from `DTROS`__.
 
 Skeleton example of `some_name_node.py` structure:
 
@@ -65,7 +69,7 @@ Observe that all nodes in Duckietown should inherit from the super class `DTROS`
 This is a hard requirement.
 ```
 
-**Why inherit from `DTROS`?**
+__Why inherit from `DTROS`?__
 
 The base‑class adds runtime utilities (parameter hot‑reload, timing, debug topics, etc.) and enforces best‑practice defaults making writing and debugging code easier. Common bad practices that should be avoided are:
 
@@ -128,13 +132,12 @@ class SomeNameNode(DTROS):
 
 A typical ROS node is initialized with `rospy.init_node(...)`. DTROS does that acting as super-constructor, given the node name.
 
-`DTROS` wraps `rospy.init_node()` and supports **node categorization** for graph visualization. This is useful to visualize the ROS
+`DTROS` wraps `rospy.init_node()` and supports __node categorization__ for graph visualization. This is useful to visualize the ROS
 network as a graph, where nodes represent ROS nodes and edges represent ROS topics.
 
 In such a graph, it might be convenient to group all the nodes working on the `PERCEPTION` problem together, e.g., to clear the clutter and make the graph easier to read.
 
 The parameter `node_type` in the super constructor allows for this. Use the values from the `NodeType` enumeration. Possible node types are the following:
-
 
 ```python
 NodeType.{GENERIC, DRIVER, PERCEPTION, CONTROL, PLANNING, LOCALIZATION,
@@ -144,12 +147,13 @@ NodeType.{GENERIC, DRIVER, PERCEPTION, CONTROL, PLANNING, LOCALIZATION,
 
 ### 2.2 Parameters
 
-* Always use private names (`~param_name`), i.e., names relative to the namespace of the node.
-* All parameters should be in the scope of the instance, not the method,
-so they should always be declared inside the constructor and start with `self.  `.
-* **Do not set default values in code**, but keep them in a YAML configuration file. This avoids potential ambiguities.
-* * Declare with `DTParam`; avoid `rospy.get_param()` polling.
+- Always use private names (`~param_name`), i.e., names relative to the namespace of the node.
 
+- All parameters should be in the scope of the instance, not the method. They should always be declared inside the constructor and start with `self.`.
+
+- __Do not set default values in code__, but keep them in a YAML configuration file. This avoids potential ambiguities.
+
+- - Declare with `DTParam`; avoid `rospy.get_param()` polling.
 
 In classic ROS, you get the value of a parameter with `rospy.get_param(...)`.
 One of the issues of the ROS implementation of parameters is that a node cannot request
@@ -164,10 +168,9 @@ set. Use `self.my_param = DTParam("~my_param")` to create a `DTParam` object and
 
 ### 2.3 Attribute order
 
-Define internal non-ROS attributes **before** creating subscribers, so callbacks never access undefined members.
+Define internal non-ROS attributes __before__ creating subscribers, so callbacks never access undefined members.
 
 Here is an example that might fail:
-
 
 ```python
 class CoolNode(DTROS):
@@ -180,9 +183,7 @@ class CoolNode(DTROS):
       self.important_variable *= 1.0
 ```
 
-
 And something that is better:
-
 
 ```python
 class CoolNode(DTROS):
@@ -195,7 +196,6 @@ class CoolNode(DTROS):
       self.important_variable *= 1.0
 ```
 
-
 ### 2.4 Publishers / Subscribers
 
 Finally, initialize all the Subscribers and Publishers as shown above.
@@ -205,18 +205,20 @@ By doing so, new parameters are added. All the parameters added by `dtros` have 
 Use the values from the `TopicType` enumeration. Possible types list is identical to the
 node types list above.
 
-```{note}
-Only declare a topic type in a `rospy.Publisher` call.
+```{include} ../../_includes/ros/publisher-topic-type-note.md
 ```
 
 ---
 
 ## 3 · Naming conventions
 
-* **snake_case** for variables, functions, methods.
-* **CamelCase** only for class names.
-* Prefixes: `sub_…`, `pub_…`, `cb_…` for subscribers, publishers, callbacks.
-* Initalizing publishers and subscribers should always be in the scope of the instance, hence starting with `self.`.
+- Use __snake_case__ for variables, functions, and methods.
+
+- Use __CamelCase__ only for class names.
+
+- Use the prefixes `sub_…`, `pub_…`, and `cb_…` for subscribers, publishers, and callbacks.
+
+- Initializing publishers and subscribers should always occur in the scope of the instance and therefore start with `self.`.
 
 ---
 
@@ -240,12 +242,9 @@ if self.pub_debug_img.anybody_listening():
    self.pub_debug_img.publish(debug_image_msg)
 ```
 
-
 Note also that all debug topics should be in the `debug` namespace of the node, e.g., `~debug/debug_topic_name`.
 
-
 Similarly, a Subscriber created within a DTROS node exports the utility function `anybody_publishing()` that checks whether there are nodes that are currently publishing messages.
-
 
 ---
 
@@ -265,6 +264,7 @@ with self.time_phase("Step 1"):
 with self.time_phase("Step 2"):
     run_step_2()
 ```
+
 Then, subscribers to `~debug/phase_times` will see, for each separate section, information about the execution frequency, average computational time,
 and also the exact lines of code and the file in which this section appears.
 
@@ -278,12 +278,10 @@ be called `default.yaml`.
 Assuming that our node is called `some_node`, the configuration files for the node
 should be in the `config/some_node/` directory.
 
-
 Every parameter used in the implementation of the node should have a default value
 in the configuration file.
 Furthermore, there should be no default values in the code.
 The only place where they should be defined is the configuration file.
-
 
 ---
 
@@ -315,12 +313,11 @@ The launch file content of most nodes will be similar to this minimal atomic lau
 
 ---
 
-By following these guidelines—and leveraging the capabilities baked into **`DTROS`**, your nodes will be easier to read, debug, and integrate across the Duckietown ecosystem.
-
+By following these guidelines—and leveraging the capabilities baked into __`DTROS`__, your nodes will be easier to read, debug, and integrate across the Duckietown ecosystem.
 
 <!--
 (sec:advanced-dtros)=
-# The **DTROS** class
+# The __DTROS__ class
 
 This section deals with how you should write the code in a ROS node.
 In particular, how to structure it. Writing the code of a node goes hand-in-hand with documenting it,
@@ -486,7 +483,7 @@ DEBUG
 All parameters should have names relative to the namespace of the node,
 i.e. they should start with `~`.
 Also, all parameters should be in the scope of the instance, not the method,
-so they should always be declared inside the constructor and start with `self.  `.
+so they should always be declared inside the constructor and start with `self.`.
 
 ```{attention}
 The parameters should never have default values set in the code.
@@ -503,7 +500,7 @@ problem employ a polling strategy (which consists of querying the parameter serv
 changes in value at regular intervals). This is highly inefficient and does not scale.
 The `dtros` library provides a solution to this.
 Alternatively to using `rospy.get_param(...)` which simply returns you the current value of
-a paramter, you can create a `DTParam` object that automatically updates when a new value is
+a parameter, you can create a `DTParam` object that automatically updates when a new value is
 set.
 Use `self.my_param = DTParam("~my_param")` to create a `DTParam` object and
 `self.my_param.value` to read its value.
@@ -546,8 +543,7 @@ By doing so, new parameters are added. All the parameters added by `dtros` have 
 Use the values from the `TopicType` enumeration. Possible types list is identical to the
 node types list above.
 
-```{note}
-Only declare a topic type in a `rospy.Publisher` call.
+```{include} ../../_includes/ros/publisher-topic-type-note.md
 ```
 
 ## Naming of variables and functions
@@ -556,7 +552,7 @@ All functions, methods, and variables in Duckietown code should be named using `
 
 The names of all subscribers should start with `sub_` as in the example above. Similarly, names of publishers should start with `pub_` and names of callback functions should start with `cb_`.
 
-Initalizing publishers and subscribers should again always be in the scope of the instance, hence starting with `self.`.
+Initializing publishers and subscribers should again occur in the scope of the instance and therefore start with `self.`.
 
 ## Switching nodes on and off
 

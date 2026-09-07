@@ -6,9 +6,7 @@
 (devmanual-intro)=
 # Basics
 
-In this section some of the basic infrastructure and tools that we use for development
-in Duckietown.
-
+This section introduces the basic infrastructure and tools used for development in Duckietown.
 
 ```{tableofcontents}
 ```

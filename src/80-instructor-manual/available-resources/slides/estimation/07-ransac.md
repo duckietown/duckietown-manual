@@ -1,10 +1,10 @@
-(slides-and-recordings-estimation-ransac)=
-# Robust Estimation
-
 ```{seo}
 :description: Duckietown introduction to RANSAC and robust fitting.
 :keywords: ransac, robust fitting, interpolation, filtering, duckietown
 ```
+
+(slides-and-recordings-estimation-ransac)=
+# Robust Estimation
 
 ## Robust Fitting
 

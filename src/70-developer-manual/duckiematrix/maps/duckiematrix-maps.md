@@ -1,10 +1,10 @@
-(dtmatrix-maps)=
-# Maps
-
 ```{seo}
 :description: Duckiematrix Maps.
 :keywords: Duckietown, Duckiematrix, Maps
 ```
+
+(dtmatrix-maps)=
+# Maps
 
 This chapter describes Duckiematrix `Maps`.
 
@@ -25,6 +25,7 @@ A `Map` is defined using a set of YAML files known as `Layers`.
 A `Key` has two functions:
 
 1. It serves as a unique identifier for an object.
+
 2. It encodes the hierarchical structure of a `Layer`.
 
 (intermediate-maps-frames-layer)=

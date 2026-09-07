@@ -17,11 +17,9 @@ We make extensive use of [Docker](sec:developer_basics_docker) in our infrastruc
 :alt: Duckietown power user managing Duckiebots with Ubuntu
 ```
 
-
 ```{seealso}
 For more details, you may want to refer to the [code hierarchy](code-hierarchy) page.
 ```
-
 
 (code-dt-core)=
 ## `dt-core`
@@ -34,7 +32,7 @@ Some of the [learning-experiences](learning-experiences) leverage code from this
 (code-dt-ros-commons)=
 ## `dt-ros-commons`
 
-The [`dt-ros-commons`][dt-ros-commons] repository is *upstream* of [`dt-core`][dt-core], in the sense that the Dockerfile that builds the `dt-core` image builds from the image that is created by [`dt-ros-commons`][dt-ros-commmons].
+The [`dt-ros-commons`][dt-ros-commons] repository is _upstream_ of [`dt-core`][dt-core], in the sense that the Dockerfile that builds the `dt-core` image builds from the image that is created by [`dt-ros-commons`][dt-ros-commmons].
 
 This repository contains [ROS](dtproject-ros)-related configurations and details.
 
@@ -45,14 +43,14 @@ It is relatively unlikely that you should need to look into or understand in det
 (code-dt-commons)=
 ## `dt-commons`
 
-The [dt-commons][dt-commons] repository sits *upstream* of [dt-ros-commons][dt-ros-commons] and contains Duckietown-specific configurations and libraries.
+The [dt-commons][dt-commons] repository sits _upstream_ of [dt-ros-commons][dt-ros-commons] and contains Duckietown-specific configurations and libraries.
 
 It is very unlikely that you will need to look at the code in this repository.
 
 (code-dt-machine-learning-base-environment)=
 ## `dt-machine-learning-base-environment`
 
-The [dt-machine-learning-base-environment][dt-machine-learning-base-environment] is *downstream* of [dt-ros-commons][dt-ros-commons] but includes extra libraries and utilities for using the GPU and machine learning on the Jetson nano. For example, this is used in the [object detection learning experience](learning-experiences).
+The [dt-machine-learning-base-environment][dt-machine-learning-base-environment] is _downstream_ of [dt-ros-commons][dt-ros-commons] but includes extra libraries and utilities for using the GPU and machine learning on the Jetson nano. For example, this is used in the [object detection learning experience](learning-experiences).
 
 (code-duckietown-shell)=
 ## `duckietown-shell`
@@ -66,7 +64,7 @@ It is very unlikely that you would need to understand the code in this repositor
 (code-duckietown-shell-commands)=
 ## `duckietown-shell-commands`
 
-The [`duckietown-shell-commands`][duckietown-shell-commands] repository contains the implementations of the commands that are run by the Duckietown shell (with `dts` in the command line).
+The [`duckietown-shell-commands`][duckietown-shell-commands] repository contains the implementations of the commands that are run by the Duckietown Shell (with `dts` in the command line).
 
 For the specific implementations of how these commands are executed, you can refer to the subfolders in the repository. You also probably should not need to understand the details of how these commands work, but if you get an error you do not understand, it might be a good place to start debugging (in addition to also reporting the bug).
 
@@ -101,4 +99,3 @@ Each learning experience also has its own solution repository that is kept priva
 [duckietown-shell]: https://github.com/duckietown/duckietown-shell
 [duckietown-shell-commands]: https://github.com/duckietown/duckietown-shell-commands
 [gym-duckietown-repo]: https://github.com/duckietown/gym-duckietown
-[duckietown-lx-solutions]: https://github.com/duckietown/duckietown-lx-solutions

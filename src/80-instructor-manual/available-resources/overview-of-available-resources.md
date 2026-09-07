@@ -6,12 +6,13 @@
 (instructor-manual-resources-overview)=
 # Resources
 
-Duckietown is a *platform*, i.e., a set of tools designed to simplify teaching and learning robot autonomy.
+Duckietown is a _platform_, i.e., a set of tools designed to simplify teaching and learning robot autonomy.
 
 ```{image} ../../_images/instructor-manual/prof-resources-overview.png
 :scale: 30%
 :align: center
 :name: class-in-a-box resources overview
+:alt: Diagram grouping Duckietown resources into software, hardware, and pedagogy.
 ```
 
 Software, hardware and pedagogical resources are integrated with each other to provide _joyful_ learning experiences.

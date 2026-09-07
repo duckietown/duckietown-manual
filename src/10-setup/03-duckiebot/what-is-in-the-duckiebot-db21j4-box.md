@@ -22,7 +22,7 @@ First things first: here is how a Duckiedrone box looks like:
 :align: center
 :alt: Duckiebot box
 
-The *yellow* Duckiebot box.
+The _yellow_ Duckiebot box.
 ```
 
 And is here an incomplete representation of the components in the box. Continue scrolling for the complete list.
@@ -67,7 +67,7 @@ We are always striving to improve, so minor details - e.g. the number and type o
 |      1 | Duckietown Hut v 3.15                                                |
 |      1 | 64GB Class 10 U3 micro SD card                                       |
 |      1 | Duckiebattery                                                        |
-|      1 | Wi-Fi dongle                                                          |
+|      1 | Wi-Fi dongle                                                         |
 |      1 | Screen                                                               |
 |      1 | Shutdown button                                                      |
 |      1 | DC fan                                                               |
@@ -87,19 +87,18 @@ We are always striving to improve, so minor details - e.g. the number and type o
 |     30 | Metal nut M3                                                         |
 |     16 | Nylon nut M2.5                                                       |
 |      4 | Nylon nut M2                                                         |
-|      1 | Jetson to Battery cable                                               |
-|      1 | Battery to HUT(Ext5V) power cable                                     |
-|      1 | HUT to Battery charging cable                                         |
+|      1 | Jetson to Battery cable                                              |
+|      1 | Battery to HUT(Ext5V) power cable                                    |
+|      1 | HUT to Battery charging cable                                        |
 |      1 | HUT to BB cable                                                      |
-|      2 | Motor to HUT cables                                                   |
+|      2 | Motor to HUT cables                                                  |
 |      1 | FB to ToF cable                                                      |
 |      3 | HUT to FB, IMU cable                                                 |
-|      1 | Screen to HUT cable                                                   |
-|      1 | Button to HUT cable                                                   |
+|      1 | Screen to HUT cable                                                  |
+|      1 | Button to HUT cable                                                  |
 |      2 | Duckies                                                              |
 |      1 | Instructions card                                                    |
 |      2 | Duckietown Stickers                                                  |
-
 
 <!--
 In the following section [](prelim-dd24-box-component-description) we provide a brief description of each component.

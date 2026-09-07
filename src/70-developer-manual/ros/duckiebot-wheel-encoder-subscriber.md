@@ -6,20 +6,18 @@
 (ros-sub-wheel-encoders)=
 # Subscribe to the Wheel Encoders
 
-```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
----
-* Learn how to receive wheel encoder data from your robot using a **ROS Subscriber**
+```{include} ../../_includes/ros/wheel-encoder-subscriber-needget.md
 ```
 
 ## Topic and message type of interest
 
 The Duckiebot publishes encoder ticks on the following topics:
 
-- `/ROBOT_NAME/left_wheel_encoder_driver_node/tick`
-- `/ROBOT_NAME/right_wheel_encoder_driver_node/tick`
+- `/DUCKIEBOT_NAME/left_wheel_encoder_driver_node/tick`
 
-The message type is **duckietown_msgs/WheelEncoderStamped**, which contains:
+- `/DUCKIEBOT_NAME/right_wheel_encoder_driver_node/tick`
+
+The message type is __duckietown_msgs/WheelEncoderStamped__, which contains:
 
 ```text
 uint8 ENCODER_TYPE_ABSOLUTE=0
@@ -31,8 +29,11 @@ uint8 type
 ```
 
 - `header`: standard ROS header
+
 - `data`: accumulated tick count
+
 - `resolution`: ticks per full revolution
+
 - `type`: encoder mode (`ENCODER_TYPE_ABSOLUTE` or `ENCODER_TYPE_INCREMENTAL`)
 
 For example, on the DB21 series robot, `resolution=135` and `type=1` (incremental), meaning there are 135 ticks per revolution.
@@ -106,7 +107,7 @@ if __name__ == '__main__':
 
 Make it executable:
 
-```bash
+```shell
 chmod +x ./packages/my_package/src/wheel_encoder_reader_node.py
 ```
 
@@ -114,7 +115,7 @@ chmod +x ./packages/my_package/src/wheel_encoder_reader_node.py
 
 Create `launchers/wheel-encoder-reader.sh`:
 
-```shell
+```bash
 #!/bin/bash
 
 source /environment.sh
@@ -126,7 +127,7 @@ dt-launchfile-join
 
 Rebuild the image:
 
-```bash
+```shell
 dts devel build -f
 ```
 
@@ -134,8 +135,8 @@ dts devel build -f
 
 Run the subscriber:
 
-```bash
-dts devel run -R ROBOT_NAME -L wheel-encoder-reader
+```shell
+dts devel run -R DUCKIEBOT_NAME -L wheel-encoder-reader
 ```
 
 The encoder `resolution` and `type` will log once. Subsequently, tick counts will appear continuously. Test by spinning the wheels manually or driving the robot.
@@ -146,27 +147,23 @@ To stop, press `Ctrl+C`.
 You just built and ran a ROS node that reads wheel encoder data from the Duckiebot.
 ```
 
-
-<!-- Previous version
+<!--
 (ros-sub-wheel-encoders)=
 # Subscribe to wheel encoders
 
-```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
----
-* Learn how to receive wheel encoder data from your robot using a **ROS Subscriber**
+```{include} ../../_includes/ros/wheel-encoder-subscriber-needget.md
 ```
 
-## Topic and message type of interest
+## Legacy topic and message type of interest
 
 For the wheel encoders, the topics used by the Duckiebot to publish the encoder ticks are
 
-* `/ROBOT_NAME/left_wheel_encoder_driver_node/tick`
-* `/ROBOT_NAME/right_wheel_encoder_driver_node/tick`
+- `/ROBOT_NAME/left_wheel_encoder_driver_node/tick`
+- `/ROBOT_NAME/right_wheel_encoder_driver_node/tick`
 
-And the message type used over these topics is **duckietown_msgs/WheelEncoderStamped** and contains the following fields.
+And the message type used over these topics is __duckietown_msgs/WheelEncoderStamped__ and contains the following fields.
 
-```
+```text
 uint8 ENCODER_TYPE_ABSOLUTE=0
 uint8 ENCODER_TYPE_INCREMENTAL=1
 std_msgs/Header header
@@ -176,19 +173,20 @@ uint8 type
 ```
 
 where,
+
 - `header`: is the [standard ROS header](https://wiki.ros.org/msg#Header) object;
 - `data`: is the current accumulated number of ticks on that motor;
 - `resolution`: is how many ticks will be recorded when the motor spins for a full revolution (360 degrees);
 - `type`: indicates the type of the encoder, `absolute` or `incremental`, and it takes the values from the constants `ENCODER_TYPE_ABSOLUTE` and `ENCODER_TYPE_INCREMENTAL` defined in the message itself. For a detailed explanation of the difference between the two types of encoders, we direct the reader to [this page](https://en.wikipedia.org/wiki/Rotary_encoder#Basic_types);
 
-For example, on the *DB21* series robot, the resolution is `135` and the type is `1` (`ENCODER_TYPE_INCREMENTAL`). This means that each motor records `135` ticks per full revolution, and that `data=0` at whatever the initial position of the wheel was when the robot was turned ON.
+For example, on the _DB21_ series robot, the resolution is `135` and the type is `1` (`ENCODER_TYPE_INCREMENTAL`). This means that each motor records `135` ticks per full revolution, and that `data=0` at whatever the initial position of the wheel was when the robot was turned ON.
 
 ```{note}
 If the wheels are spun by hand, the ticks only increase. The robot can only sense direction (hence decrease the counter) when the wheels are spun by the motors.
 ```
 
 (ros-wheel-encoder-reader-node-create)=
-## Create Subscriber ROS Node
+## Legacy create subscriber ROS node
 
 We now use our favorite text editor to create the file
 `wheel_encoder_reader_node.py` inside the `src/` directory of our catkin package and add the following content,
@@ -200,7 +198,6 @@ import os
 import rospy
 from duckietown.dtros import DTROS, NodeType
 from duckietown_msgs.msg import WheelEncoderStamped
-
 
 class WheelEncoderReaderNode(DTROS):
 
@@ -254,11 +251,11 @@ if __name__ == '__main__':
 
 Again, we make our node executable,
 
-    chmod +x ./packages/my_package/src/wheel_encoder_reader_node.py
+```shell
+chmod +x ./packages/my_package/src/wheel_encoder_reader_node.py
+```
 
-
-
-## Define launcher
+## Legacy define launcher
 
 Similarly to what we did in the section [](ros-sub-define-launcher), we create a new launcher file
 `./launchers/wheel-encoder-reader.sh` with the content,
@@ -280,22 +277,24 @@ dt-launchfile-join
 
 Let us now re-compile our project using the command
 
-    dts devel build -f
+```shell
+dts devel build -f
+```
 
-
-
-## Launch the node
+## Legacy launch the node
 
 We are now ready to run our reader node,
 
-    dts devel run -R ROBOT_NAME -L wheel-encoder-reader
+```shell
+dts devel run -R ROBOT_NAME -L wheel-encoder-reader
+```
 
 The `resolution` and `type` values will be printed at the top of the logs once.
 
 Then in the console, the received left and right encoder data will be printed. Try:
 
-* spinning the left/right wheel, in both directions
-* driving the robot back and forth with the [virtual joystick](rc-control)
+- Spin the left and right wheels in both directions.
+- Drive the robot back and forth with the [virtual joystick](rc-control).
 
 Observe how the values change in both cases.
 

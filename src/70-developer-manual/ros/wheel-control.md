@@ -1,4 +1,3 @@
-
 ```{seo}
 :description: Learn how to publish wheel commands to Duckiebot motors using a ROS Publisher and the WheelsCmdStamped message.
 :keywords: Duckietown, ROS, Publisher, wheel control, WheelsCmdStamped, robotics, dts code
@@ -8,20 +7,20 @@
 # Publish to the Wheels
 
 ```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
+- A Duckietown robot turned ON and visible on `dts fleet discover`
 ---
-* Learn how to control the Duckiebot’s wheels using a **ROS Publisher**
+- Learn how to control the Duckiebot's wheels using a __ROS Publisher__.
 ```
 
-## Topic and message type of interest
+## Legacy topic and message type of interest
 
 The Duckiebot subscribes to wheel commands on the topic:
 
-```
-/ROBOT_NAME/wheels_driver_node/wheels_cmd
+```text
+/DUCKIEBOT_NAME/wheels_driver_node/wheels_cmd
 ```
 
-The message type is **duckietown_msgs/WheelsCmdStamped**, with fields:
+The message type is __duckietown_msgs/WheelsCmdStamped__, with fields:
 
 ```text
 std_msgs/Header header
@@ -30,7 +29,9 @@ float32 vel_right
 ```
 
 - `header`: standard ROS header
+
 - `vel_left`: duty cycle for left wheel (−1.0 backward to 1.0 forward)
+
 - `vel_right`: duty cycle for right wheel (−1.0 backward to 1.0 forward)
 
 ```{note}
@@ -88,7 +89,7 @@ if __name__ == '__main__':
 
 Make it executable:
 
-```bash
+```shell
 chmod +x ./packages/my_package/src/wheel_control_node.py
 ```
 
@@ -96,7 +97,7 @@ chmod +x ./packages/my_package/src/wheel_control_node.py
 
 Create `launchers/wheel-control.sh`:
 
-```shell
+```bash
 #!/bin/bash
 
 source /environment.sh
@@ -108,7 +109,7 @@ dt-launchfile-join
 
 Rebuild the image:
 
-```bash
+```shell
 dts devel build -f
 ```
 
@@ -120,8 +121,8 @@ The wheels will start spinning immediately. Ensure the robot has enough clear sp
 
 Run the node:
 
-```bash
-dts devel run -R ROBOT_NAME -L wheel-control
+```shell
+dts devel run -R DUCKIEBOT_NAME -L wheel-control
 ```
 
 Stop with `Ctrl+C`; `on_shutdown()` will halt the wheels.
@@ -130,37 +131,36 @@ Stop with `Ctrl+C`; `on_shutdown()` will halt the wheels.
 You just built and ran a ROS node that controls the Duckiebot’s wheels.
 ```
 
-
 <!--
 (ros-pub-wheels)=
 # Publish to wheels
 
 ```{needget}
-* A Duckietown robot turned ON and visible on `dts fleet discover`
+- A Duckietown robot that is powered on and visible in the output of `dts fleet discover`.
 ---
-* Learn how to control the Duckiebot's wheels using a **ROS Publisher**
+- Learn how to control the Duckiebot's wheels using a __ROS Publisher__.
 ```
 
 ## Topic and message type of interest
 
 The topic used by the Duckiebot to receive wheel commands
 is `/ROBOT_NAME/wheels_driver_node/wheels_cmd`, while the message type used over this topic is
-**duckietown_msgs/WheelsCmdStamped** which contains the following fields.
+__duckietown_msgs/WheelsCmdStamped__ which contains the following fields.
 
-```
+```text
 std_msgs/Header header
 float32 vel_left
 float32 vel_right
 ```
 
 where,
+
 - `header`: is the [standard ROS header](https://wiki.ros.org/msg#Header) object;
 - `vel_left`: is the angular velocity in `rad/s` of the left wheel;
 - `vel_right`: is the angular velocity in `rad/s` of the right wheel;
 
-
 (ros-wheel-control-node-create)=
-## Create Publisher ROS Node
+## Legacy create publisher ROS node
 
 We now use our favorite text editor to create the file
 `wheel_control_node.py` inside the `src/` directory of our catkin package and add the following content,
@@ -177,7 +177,6 @@ from duckietown_msgs.msg import WheelsCmdStamped
 # angular velocities for each wheel (quarter rotation a second)
 W_LEFT = 1/4 * (2 * math.pi)
 W_RIGHT = 1/4 * (2 * math.pi)
-
 
 class WheelControlNode(DTROS):
 
@@ -219,10 +218,11 @@ if __name__ == '__main__':
 
 Again, we make our node executable,
 
-    chmod +x ./packages/my_package/src/wheel_control_node.py
+```shell
+chmod +x ./packages/my_package/src/wheel_control_node.py
+```
 
-
-## Define launcher
+## Legacy define launcher
 
 We create a new launcher file `./launchers/wheel-control.sh` with the content,
 
@@ -243,11 +243,11 @@ dt-launchfile-join
 
 Let us now re-compile our project using the command
 
-    dts devel build -f
+```shell
+dts devel build -f
+```
 
-
-## Launch the node
-
+## Legacy launch the node
 
 ```{danger}
 The robot's wheels will start spinning as soon as the node is launched. Please, make sure that
@@ -257,7 +257,9 @@ your robot has enough space to drive around without the risk of harming somebody
 
 We run the node,
 
-    dts devel run -R ROBOT_NAME -L wheel-control
+```shell
+dts devel run -R ROBOT_NAME -L wheel-control
+```
 
 And observe the wheels rotate as instructed.
 If you want to stop it, just use `Ctrl+C`, and the wheels should stop spinning as per the behavior

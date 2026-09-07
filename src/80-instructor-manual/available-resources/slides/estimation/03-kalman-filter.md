@@ -1,10 +1,10 @@
-(slides-and-recordings-estimation-kalman)=
-# Kalman Filter
-
 ```{seo}
 :description: Duckietown implementation of the famous Kalman Filter.
 :keywords: Kalman Filter, Duckietown, estimation, probability, continuous time, stochastic, recursive, prior, posterior, apriori
 ```
+
+(slides-and-recordings-estimation-kalman)=
+# Kalman Filter
 
 The Kalman filter approximates the Bayes filter by assuming that the process and measurement models are linear and corrupted by additive Gaussian noise. Under these assumptions, the Kalman filter is optimal in the sense of minimizing the covariance of the estimation error.
 
@@ -17,4 +17,3 @@ Note that there is also an activity that explains this approach in more detail i
 ```{vimeo} 889271993
 :alt: Kalman Filter
 ```
-

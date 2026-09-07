@@ -1,10 +1,10 @@
-(slides-and-recordings-motion-planning)=
-# Motion Planning
-
 ```{seo}
 :description: Motion planning in Duckietown
 :keywords: motion planning, optimal control
 ```
+
+(slides-and-recordings-motion-planning)=
+# Motion Planning
 
 We formulate the problem of motion planning and introduce several important definitions and concepts that will be used to analyze solutions to the motion planning problem.
 
@@ -31,6 +31,3 @@ We further introduce the concepts of workspaces and configuration spaces and sho
 ```{vimeo} 587465042
 :alt: Motion Planning pt. 3
 ```
-
-
-

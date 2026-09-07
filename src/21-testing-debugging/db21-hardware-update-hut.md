@@ -1,16 +1,17 @@
-(reflash-microcontroller)=
-# Re-flashing the "HUT"
-
 ```{seo}
 :description: How to reflash the Duckietown Duckiebot HUT microcontroller.
 :keywords: Duckiebot, microcontroller, flashing, reflashing, HUT, Duckiehut, Duckietown HUT
 ```
 
+(reflash-microcontroller)=
+# Re-flashing the "HUT"
+
 ```{needget}
-* A Duckiebot of [configuration](duckiebot-configurations) `DB18` or above.
-* A stable network connection to your Duckiebot.
+- A Duckiebot of [configuration](duckiebot-configurations) `DB18` or above.
+
+- A stable network connection to your Duckiebot.
 ---
-* A flashed microcontroller (not SD card) on the HUT board, with the latest code version.
+- A flashed microcontroller (not SD card) on the HUT board, with the latest code version.
 ```
 
 The Duckiebot HUT manages, through an onboard microcontroller, the functionality of wheels and LEDs on the Duckiebot. HUTs are all pre-flashed and tested during manufacturing.
@@ -34,12 +35,11 @@ but the Duckiebot does not move.
 This procedure will not be useful to fix problems such as one motor working and not the other, or LEDs showing unexpected colors when the motors work.
 
 <!--
-
 (reflash-microcontroller-how-dts)=
 ## How to flash the microcontroller - Method 1: with `dts`
 On your computer
 
-```
+```shell
 dts duckiebot hut_upgrade ROBOT_NAME
 ```
 
@@ -47,7 +47,7 @@ There are instructions on-screen to guide you through the process.
 
 During the process, you will be asked twice to compare the command output against some expected outputs. For example,
 
-```
+```text
 avrdude: verifying ...
 avrdude: 2832 bytes of flash verified
 
@@ -77,7 +77,6 @@ Once confirmed, you could type 'Y' and press the "Enter" key to continue.
 
 (reflash-microcontroller-how)=
 ## How to flash the microcontroller - Method 2: step-by-step via SSH
-
 -->
 
 (reflash-microcontroller-how)=
@@ -85,14 +84,17 @@ Once confirmed, you could type 'Y' and press the "Enter" key to continue.
 
 Start by making sure your Duckiebot and computer are on the same network by:
 
-    ping ROBOT_NAME.local
+```shell
+ping DUCKIEBOT_NAME.local
+```
 
 ### SSH into your Duckiebot
 
 SSH into your Duckiebot by running:
 
-    ssh duckie@!ROBOT_NAME.local
-
+```shell
+ssh duckie@!DUCKIEBOT_NAME.local
+```
 
 ```{note}
 All of the following instructions are run on Duckiebot through the SSH terminal
@@ -102,16 +104,22 @@ All of the following instructions are run on Duckiebot through the SSH terminal
 
 Download and install the necessary software with:
 
-    sudo apt-get update
-    sudo apt-get install bison autoconf flex gcc-avr binutils-avr gdb-avr avr-libc avrdude build-essential
+```shell
+sudo apt-get update
+sudo apt-get install bison autoconf flex gcc-avr binutils-avr gdb-avr avr-libc avrdude build-essential
+```
 
 Then clone the firmware for the microcontroller:
 
-    git clone https://github.com/duckietown/fw-device-hut.git
+```shell
+git clone https://github.com/duckietown/fw-device-hut.git
+```
 
 Navigate inside the repository you cloned:
 
-    cd fw-device-hut
+```shell
+cd fw-device-hut
+```
 
 <!--
 ```{warning}
@@ -121,28 +129,32 @@ Read the next passages carefully. Do not just copy and paste every line of code!
 
 And copy the `avrdude.conf` file in the `/etc` folder of the robot:
 
-```bash
+```shell
 sudo cp _avrdudeconfig_jetson_nano/avrdude.conf /etc/avrdude.conf
 ```
 
 <!--
-**If** you are running a Duckiebot with an NVIDIA Jetson Nano board run:
+__If__ you are running a Duckiebot with an NVIDIA Jetson Nano board run:
 (above)
 
-**else**, if you have a Raspberry Pi based Duckiebot, use:
+__else__, if you have a Raspberry Pi based Duckiebot, use:
 
-    sudo cp _avrdudeconfig_raspberry_pi/avrdude.conf /etc/avrdude.conf
+```shell
+sudo cp _avrdudeconfig_raspberry_pi/avrdude.conf /etc/avrdude.conf
+```
 -->
 
 ### Test the `avrdude` and set the low-level configuration
 
 Run:
 
-    make fuses
+```shell
+make fuses
+```
 
 A successful outcome looks like:
 
-```bash
+```text
     avrdude: verifying …
     avrdude: 1 bytes of efuse verified
 
@@ -152,26 +164,31 @@ A successful outcome looks like:
     avrdude done.  Thank you.
 ```
 
-```{trouble}
+````{trouble}
 I see the message `make: warning: Clock skew detected. Your build may be incomplete.` or the process is not stopping.
 ---
  stop the process pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> and run:
 
-    find -exec touch \{\} \;
+```shell
+find -exec touch \{\} \;
+```
 
 And then retry running the `make fuses` command.
-```
+````
 
 ### Flashing the HUT
 
 Remove all temporary files by running:
 
-    make clean
+```shell
+make clean
+```
 
 Then, compile the firmware and upload it to the microcontroller with:
 
-    make
-
+```shell
+make
+```
 
 #### Checkpoint
 
@@ -181,7 +198,7 @@ To make sure the installation was completed successfully:
 The resulting output should be:
 ---
 
-```none
+```text
     .....
 
     sudo avrdude -p attiny861 -c linuxgpio -P  -q -U flash:w:main.hex
@@ -216,18 +233,20 @@ The resulting output should be:
 
     avrdude done.  Thank you.
     ```
-
 ````
 
 ### Cleaning up
 
 Remove the cloned repository to free up space:
 
-    cd .. && rm -rf fw-device-hut
-
+```shell
+cd .. && rm -rf fw-device-hut
+```
 
 and finally reboot the Duckiebot:
 
-    sudo reboot
+```shell
+sudo reboot
+```
 
 After the reboot your Duckiebot should move normally, and LEDs respond nominally. The Dashboard / components page will show a green status for the HUT, too.
