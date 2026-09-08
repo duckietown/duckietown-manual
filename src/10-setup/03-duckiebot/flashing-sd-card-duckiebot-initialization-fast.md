@@ -65,7 +65,15 @@ When creating a new image:
 
     Open the Balena Etcher application you just downloaded, and follow the 3 steps instructions (select the file, select the sd card, press start).
 
-5. Configure the network on the Duckiebot:
+5. If Balena Etcher ejected the card, reinsert it, then set a password for the `duckie` account:
+
+    ```shell
+    dts sd_card update --type duckiebot --configuration DB21J --password
+    ```
+
+    DTS prompts you to enter and confirm the password. It must contain at least eight characters and cannot contain colons or line breaks. The characters you enter are not displayed. The password is applied when the Duckiebot next boots.
+
+6. Configure the network on the Duckiebot:
 
     This image is pre-configured so that the Duckiebot will connect to a network with SSID `duckietown` and password `quackquack`.
 
@@ -79,9 +87,9 @@ When creating a new image:
 
     - If you have access to the router and an Ethernet cable, connect your Duckiebot to the router through the Ethernet cable. Connect your computer to the same network, then [SSH into the Duckiebot](handling-how-to-ssh-into-your-duckiebot) to [edit the Wi-Fi settings](setup-duckiebot-network).
 
-6. Plug in the SD card into your Duckiebot (if not already done).
+7. Plug in the SD card into your Duckiebot (if not already done).
 
-7. Perform the [Duckiebot first boot](duckiebot-boot) sequence (if not already done).
+8. Perform the [Duckiebot first boot](duckiebot-boot) sequence (if not already done).
 
 (db-init-fast-default-settings)=
 ## Default settings
@@ -90,7 +98,7 @@ This image has the following default settings:
 
 - Default username: `duckie`.
 
-- Default user password: `quackquack`.
+- No default user password; set one using the `dts sd_card update --password` command above.
 
 - Robot name (hostname): `entebot208`.
 

@@ -66,13 +66,13 @@ For Autolab users: Use the convention `hostname: watchtowerXX`, where `XX` are i
 - For standard traffic light setup, use:
   - `hostname: trafficlightXX`
 
-- Default login credentials:
+- Login account:
   - Username: `duckie`
 
-  - Password: `quackquack`
+  - Password: the value entered when DTS prompts during initialization
 
 ```{warning}
-For Autolab users, do not change the username and password.
+For Autolab users, retain the `duckie` username and record the password for each device.
 ```
 
 (dt-ops-tl-launch)=

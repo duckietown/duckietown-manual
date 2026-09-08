@@ -64,6 +64,8 @@ for example:
 dts duckiebot virtual create --type duckiebot --configuration DB21J vargo
 ```
 
+DTS securely prompts you to enter and confirm the password for the virtual robot's `duckie` account. It must contain at least eight characters and cannot contain colons or line breaks. The characters you enter are not displayed.
+
 This command will take several minutes to complete, and is analogous to the `dts sd_card init` of physical robots. Learn about supported `TYPE` and `CONFIGURATION` there: [](initialize-sd-card-video).
 
 (intermediate-virtual-duckietown-robots-dts-commands-list)=

@@ -22,7 +22,7 @@ A virtual Duckiedrone successfully arming and taking off autonomously.
 
 To set up the demo:
 
-1. Create a virtual Duckiedrone by running the following command, where `DUCKIEDRONE_NAME` is the name of your virtual Duckiedrone:
+1. Create a virtual Duckiedrone by running the following command, where `DUCKIEDRONE_NAME` is the name of your virtual Duckiedrone. DTS prompts you to enter and confirm the password for the virtual Duckiedrone's `duckie` account; the characters you enter are not displayed:
 
     ```shell
     dts duckiebot virtual create -t duckiedrone -c DD24 DUCKIEDRONE_NAME

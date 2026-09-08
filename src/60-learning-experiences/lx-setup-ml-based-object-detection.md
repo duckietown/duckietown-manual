@@ -199,7 +199,7 @@ You can create one with the command:
 dts duckiebot virtual create --type duckiebot --configuration DB21J ROBOT_NAME
 ```
 
-where `ROBOT_NAME` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete). Make sure to remember your robot (host)name for later.
+When you run the command, DTS prompts you to enter and confirm the password for the virtual robot's `duckie` account; the characters you enter are not displayed. `ROBOT_NAME` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete). Make sure to remember your robot (host)name for later.
 
 Then you can start your virtual robot with the command:
 
