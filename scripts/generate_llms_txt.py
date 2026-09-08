@@ -29,17 +29,19 @@ def should_skip(path: Path) -> bool:
 def extract_page(path: Path):
     soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="ignore"), "html.parser")
 
-    title = soup.find("h1")
+    main = soup.find("main") or soup.find("article") or soup.body
+    if not main:
+        return None
+
+    title = main.find("h1") or soup.find("h1")
     if title:
+        for headerlink in title.select(".headerlink"):
+            headerlink.decompose()
         title_text = clean_text(title.get_text(" "))
     elif soup.title:
         title_text = clean_text(soup.title.get_text(" "))
     else:
         title_text = path.stem
-
-    main = soup.find("main") or soup.find("article") or soup.body
-    if not main:
-        return None
 
     # Remove noisy elements
     for tag in main(["script", "style", "nav", "footer"]):

@@ -164,17 +164,17 @@ A successful outcome looks like:
     avrdude done.  Thank you.
 ```
 
-````{trouble}
+```{trouble}
 I see the message `make: warning: Clock skew detected. Your build may be incomplete.` or the process is not stopping.
 ---
- stop the process pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> and run:
+Stop the process pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> and run:
 
-```shell
+~~~shell
 find -exec touch \{\} \;
-```
+~~~
 
 And then retry running the `make fuses` command.
-````
+```
 
 ### Flashing the HUT
 

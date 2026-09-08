@@ -27,6 +27,7 @@ Consider naming the main avenue in your Duckietown after someone significant in 
 - __Border__: No additional borders.
 
 - __Width__:
+
   - 4.5 in for ID 500-511.
 
   - __6.1 in +1.1 in "ST"__ or __5.5 in +1.7 in "AVE"__.

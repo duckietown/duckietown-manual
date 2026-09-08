@@ -5,7 +5,18 @@ title: The Duckietown Manual
 author: Duckietown, Inc.
 logo: logo-dtmatrix.png
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
-exclude_patterns: ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints", "_includes/**"]
+exclude_patterns:
+  - "_build"
+  - "Thumbs.db"
+  - ".DS_Store"
+  - "**.ipynb_checkpoints"
+  - "_includes/**"
+  - "10-setup/03-duckiebot/duckiebot-db21j-components-explained.md"
+  - "40-demonstrations/lane-following-with-duckiebots.md"
+  - "40-demonstrations/lane-following-with-intersections.md"
+  - "40-demonstrations/lane-following-with-obstacles.md"
+  - "60-learning-experiences/lx-setup-lane-following-integration.md"
+  - "80-instructor-manual/available-resources/slides/vision/not-now-*.md"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -37,8 +48,10 @@ html:
 
 sphinx:
   extra_extensions:
-#    - sphinx_llms_txt (fails with Sphinx 4.5.0 - going the manual route)
     - sphinx_sitemap
+  local_extensions:
+    manual_binder_accessibility: _extensions
+    manual_llms_txt: _extensions
   config:
     html_baseurl: "https://docs.duckietown.com/ente/duckietown-manual/"
     html_extra_path:

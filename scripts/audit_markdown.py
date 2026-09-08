@@ -14,11 +14,19 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE_ROOT = ROOT / "src"
 MARKDOWNLINT_COMMAND = ("npx", "--yes", "markdownlint-cli2@0.23.2")
 LITERAL_DIRECTIVES = {"code-block", "code-cell", "eval-rst", "literalinclude", "raw"}
+RENDERED_FENCE_DELIMITERS = {
+    "needget": ("`", 3),
+    "testexpect": (":", 3),
+    "trouble": ("`", 3),
+}
 HTML_COMMENT_OPEN = "<!--"
 HTML_COMMENT_END_PATTERN = re.compile(r"--!?>")
 FENCE_PATTERN = re.compile(r"^\s*(?:(?:[-+*]|\d+[.)])\s+)*(?:-\s+)?(`{3,}|~{3,}|:{3,})(.*)$")
+INDENTED_CODE_PATTERN = re.compile(r"^(?:[ \t]*\t| {4,})[ \t]*\S")
+INDENTED_INLINE_CODE_PATTERN = re.compile(r"^\s+`[^`\n]+`\s*$")
 LIST_ITEM_PATTERN = re.compile(r"^(\s*)([-+*]|\d+[.)])\s+(\S(?:.*\S)?)\s*$")
 INCLUDE_PATTERN = re.compile(r"^\{include\}\s+(?P<target>\S+)")
+LIST_QUALIFIER_PATTERN = re.compile(r"^(?:\([^)]*\)\s*)+")
 SENTENCE_START_PATTERN = re.compile(
     r"^(?:A|An|The|This|That|These|Those|Each|Every|All|Any|Some|No|If|When|While|Once|Before|After|Then|First|Next|Finally|You|Your|It|They|We|Use|Open|Run|Enter|Click|Select|Add|Create|Install|Make|Set|Copy|Start|Stop|Ensure|Verify|Check|Choose|Connect|Download|Navigate|Place|Move|Remove|Press|Restart|Reboot|Type|Follow|Go|Find|Locate|Attach|Turn|Build|Clone|Edit|Save|Pull|Push|Test|Read|Write|Enable|Disable|Configure|Launch|Wait|Repeat|Update|Switch|Generate|Paste|Print|Face|Drive|Measure|Collect|Annotate|Train|Export|Indicate|Communicate|Signal|Express|Light|For|With|Without|From|To|In|On|At|By|As|Note|Important|Warning)\b"
 )
@@ -54,11 +62,24 @@ class SourceLine:
     text: str
 
 
+@dataclass
+class RenderedDirectiveFence:
+    opening: Fence
+    opening_line: SourceLine
+    content_lengths: dict[str, int]
+
+
 @dataclass(frozen=True)
 class ListItem:
     indentation: int
     marker: str
     content: str
+
+
+@dataclass(frozen=True)
+class ChildBlock:
+    kind: str
+    has_preceding_blank: bool
 
 
 @dataclass(frozen=True)
@@ -128,6 +149,66 @@ def closes_fence(fence: Fence, stack: list[Fence]) -> bool:
         and fence.length >= opening_fence.length
         and not fence.suffix.strip()
     )
+
+
+def audit_rendered_fence_delimiters(file_path: Path, scope: str, lines: list[SourceLine]) -> list[Finding]:
+    findings: list[Finding] = []
+    fences: list[Fence] = []
+    rendered_directive: RenderedDirectiveFence | None = None
+    for line in lines:
+        fence = parse_fence(line.text)
+        if not fence:
+            continue
+
+        if rendered_directive:
+            if (
+                fence.character == rendered_directive.opening.character
+                and fence.length >= rendered_directive.opening.length
+                and not fence.suffix.strip()
+            ):
+                minimum = max(
+                    3,
+                    rendered_directive.content_lengths.get(rendered_directive.opening.character, 0) + 1,
+                )
+                marker_name = {"`": "backticks", "~": "tildes", ":": "colons"}[rendered_directive.opening.character]
+                if rendered_directive.opening.length > minimum:
+                    findings.append(
+                        Finding(
+                            file_path,
+                            scope,
+                            rendered_directive.opening_line.source_line,
+                            "FENCE_EXCESSIVE_DELIMITERS",
+                            f"opening: {rendered_directive.opening.length} {marker_name}; {minimum} are sufficient",
+                        )
+                    )
+                if fence.length > minimum:
+                    findings.append(
+                        Finding(
+                            file_path,
+                            scope,
+                            line.source_line,
+                            "FENCE_EXCESSIVE_DELIMITERS",
+                            f"closing: {fence.length} {marker_name}; {minimum} are sufficient",
+                        )
+                    )
+                rendered_directive = None
+            else:
+                rendered_directive.content_lengths[fence.character] = max(
+                    rendered_directive.content_lengths.get(fence.character, 0),
+                    fence.length,
+                )
+            continue
+
+        if closes_fence(fence, fences):
+            fences.pop()
+        elif (
+            not any(open_fence.is_literal for open_fence in fences)
+            and fence.directive_name in RENDERED_FENCE_DELIMITERS
+        ):
+            rendered_directive = RenderedDirectiveFence(fence, line, {})
+        else:
+            fences.append(fence)
+    return findings
 
 
 def find_comment_end(line: str, start: int = 0) -> tuple[int, int] | None:
@@ -348,7 +429,8 @@ def plain_text(text: str) -> str:
 
 
 def starts_with_lowercase(text: str) -> bool:
-    match = re.match(r"^[\"'([{]*([A-Za-z])", plain_text(text))
+    content = LIST_QUALIFIER_PATTERN.sub("", plain_text(text))
+    match = re.match(r"^[\"'([{]*([A-Za-z])", content)
     return bool(match and match.group(1).islower())
 
 
@@ -396,26 +478,60 @@ def first_paragraph(lines: list[SourceLine], index: int, list_item: ListItem) ->
     return " ".join(parts)
 
 
-def child_block(lines: list[SourceLine], index: int, list_item: ListItem) -> str | None:
+def child_block(
+    lines: list[SourceLine], index: int, list_item: ListItem
+) -> ChildBlock | None:
+    has_preceding_blank = False
     for cursor in range(index + 1, len(lines)):
         line = lines[cursor]
         if not line.text.strip():
+            has_preceding_blank = True
             continue
         indentation = len(line.text) - len(line.text.lstrip(" \t"))
         fence = parse_fence(line.text)
         if fence:
             if indentation > list_item.indentation:
-                return "directive" if fence.is_directive else "code"
+                return ChildBlock(
+                    "directive" if fence.is_directive else "code",
+                    has_preceding_blank,
+                )
             return None
         nested_list = parse_list_item(line.text)
         if nested_list:
-            return "list" if nested_list.indentation > list_item.indentation else None
+            if nested_list.indentation > list_item.indentation:
+                return ChildBlock("list", has_preceding_blank)
+            return None
         return None
     return None
 
 
+def rendered_fence_conflict(fence: Fence, open_fences: list[Fence]) -> str | None:
+    if not fence.is_literal:
+        return None
+
+    for open_fence in reversed(open_fences):
+        delimiter = RENDERED_FENCE_DELIMITERS.get(open_fence.directive_name)
+        if delimiter and (fence.character, fence.length) == delimiter:
+            return open_fence.directive_name
+    return None
+
+
+def rendered_card_directive(open_fences: list[Fence]) -> str | None:
+    for open_fence in reversed(open_fences):
+        if open_fence.directive_name in RENDERED_FENCE_DELIMITERS:
+            return open_fence.directive_name
+    return None
+
+
+def is_indented_code_example(text: str) -> bool:
+    return bool(
+        INDENTED_CODE_PATTERN.match(text)
+        or INDENTED_INLINE_CODE_PATTERN.fullmatch(text)
+    )
+
+
 def audit_list_scope(file_path: Path, scope: str, lines: list[SourceLine], review_unpunctuated: bool) -> list[Finding]:
-    findings: list[Finding] = []
+    findings = audit_rendered_fence_delimiters(file_path, scope, lines)
     fences: list[Fence] = []
     for index, line in enumerate(lines):
         fence = parse_fence(line.text)
@@ -449,6 +565,17 @@ def audit_list_scope(file_path: Path, scope: str, lines: list[SourceLine], revie
                     and not parse_fence(previous_line.text)
                 ):
                     findings.append(Finding(file_path, scope, line.source_line, "FENCE_MISSING_PRECEDING_BLANK", previous_line.text.strip()))
+                parent_directive = rendered_fence_conflict(fence, fences)
+                if parent_directive:
+                    findings.append(
+                        Finding(
+                            file_path,
+                            scope,
+                            line.source_line,
+                            "RENDERED_FENCE_DELIMITER_CONFLICT",
+                            f"{parent_directive}: {line.text.strip()}",
+                        )
+                    )
                 fences.append(fence)
             continue
 
@@ -457,23 +584,55 @@ def audit_list_scope(file_path: Path, scope: str, lines: list[SourceLine], revie
         if any(open_fence.directive_name == "list-table" for open_fence in fences):
             continue
 
+        parent_directive = rendered_card_directive(fences)
+        if parent_directive and is_indented_code_example(line.text):
+            findings.append(
+                Finding(
+                    file_path,
+                    scope,
+                    line.source_line,
+                    "RENDERED_INDENTED_CODE",
+                    f"{parent_directive}: {line.text.strip()}",
+                )
+            )
+
         list_item = parse_list_item(line.text)
         if not list_item:
             continue
         paragraph = first_paragraph(lines, index, list_item)
         child = child_block(lines, index, list_item)
         in_needget = any(open_fence.directive_name == "needget" for open_fence in fences)
-        structured = in_needget or is_structured_list_content(list_item.content)
+        content_is_structured = is_structured_list_content(list_item.content)
+        structured = in_needget or content_is_structured
 
         if list_item.marker.endswith(")"):
             findings.append(Finding(file_path, scope, line.source_line, "ORDERED_LIST_PARENTHESES", line.text.strip()))
         if list_item.marker in {"*", "+"} and not structured:
             findings.append(Finding(file_path, scope, line.source_line, "NON_DASH_LIST_MARKER", line.text.strip()))
-        if not structured and starts_with_lowercase(paragraph):
+        if not content_is_structured and starts_with_lowercase(paragraph):
             findings.append(Finding(file_path, scope, line.source_line, "LIST_LOWERCASE_START", paragraph))
-        if child and not has_terminal_colon(paragraph):
-            findings.append(Finding(file_path, scope, line.source_line, "LIST_MISSING_INTRODUCTORY_COLON", f"{paragraph} -> {child}"))
-        elif not child and not structured and not has_terminal_punctuation(paragraph):
+        if child:
+            if not has_terminal_colon(paragraph):
+                findings.append(
+                    Finding(
+                        file_path,
+                        scope,
+                        line.source_line,
+                        "LIST_MISSING_INTRODUCTORY_COLON",
+                        f"{paragraph} -> {child.kind}",
+                    )
+                )
+            if child.kind == "list" and not child.has_preceding_blank:
+                findings.append(
+                    Finding(
+                        file_path,
+                        scope,
+                        line.source_line,
+                        "LIST_MISSING_NESTED_LIST_BLANK",
+                        paragraph,
+                    )
+                )
+        elif not structured and not has_terminal_punctuation(paragraph):
             if review_unpunctuated or looks_like_sentence(paragraph):
                 category = "LIST_UNPUNCTUATED_REVIEW" if review_unpunctuated else "LIST_POSSIBLE_MISSING_TERMINAL_STOP"
                 findings.append(Finding(file_path, scope, line.source_line, category, paragraph))

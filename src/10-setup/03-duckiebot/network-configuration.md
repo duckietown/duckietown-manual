@@ -11,7 +11,7 @@
 
 - A network router with internet connection
 
-- (optional) an ethernet cable
+- (optional) An ethernet cable
 ---
 - Learn how to change network configuration on the Duckiebot.
 

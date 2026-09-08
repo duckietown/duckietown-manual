@@ -146,43 +146,55 @@ If you have control over the network access point, make sure that both your comp
 ```{trouble}
 Running `ssh duckie@DUCKIEBOT_NAME.local` results in the following output:
 
-    `ssh: Could not resolve hostname DUCKIEBOT_NAME.local: Name or service not known`
+~~~text
+ssh: Could not resolve hostname DUCKIEBOT_NAME.local: Name or service not known
+~~~
 ---
 After connecting your Duckiebot to a monitor and keyboard, run:
 
-    `sudo systemctl restart avahi-daemon`
+~~~shell
+sudo systemctl restart avahi-daemon
+~~~
 
 Run:
 
-    `sudo reboot`
+~~~shell
+sudo reboot
+~~~
 ```
 
 ```{trouble}
 Running `ssh duckie@DUCKIEBOT_NAME.local` still results in the following output:
 
-    `ssh: Could not resolve hostname DUCKIEBOT_NAME.local: Name or service not known`
+~~~text
+ssh: Could not resolve hostname DUCKIEBOT_NAME.local: Name or service not known
+~~~
 ---
 After connecting your Duckiebot to a monitor and keyboard, run:
 
-    `sudo service avahi-daemon status`
+~~~shell
+sudo service avahi-daemon status
+~~~
 
 The resulting output should look similar to the following:
 
-`
-    ● avahi-daemon.service - Avahi mDNS/DNS-SD Stack
-       Loaded: loaded (/lib/systemd/system/avahi-daemon.service; enabled; vendor preset: enabled)
-       Active: active (running) since Fri 2025-06-20 04:17:36 CDT; 2h 20min ago
-     Main PID: 3814 (avahi-daemon)
-       Status: "avahi-daemon 0.7 starting up."
-        Tasks: 2 (limit: 4183)
-       CGroup: /system.slice/avahi-daemon.service
-            ├─3814 avahi-daemon: running [DUCKIEBOT_NAME_IN_AVAHI.local]
-            └─4000 avahi-daemon: chroot helper
-`
+~~~text
+● avahi-daemon.service - Avahi mDNS/DNS-SD Stack
+Loaded: loaded (/lib/systemd/system/avahi-daemon.service; enabled; vendor preset: enabled)
+Active: active (running) since Fri 2025-06-20 04:17:36 CDT; 2h 20min ago
+Main PID: 3814 (avahi-daemon)
+Status: "avahi-daemon 0.7 starting up."
+Tasks: 2 (limit: 4183)
+CGroup: /system.slice/avahi-daemon.service
+├─3814 avahi-daemon: running [DUCKIEBOT_NAME_IN_AVAHI.local]
+└─4000 avahi-daemon: chroot helper
+~~~
 
 If `DUCKIEBOT_NAME_IN_AVAHI` matches `DUCKIEBOT_NAME-XX`, where `XX` is a number, edit the `/etc/avahi/avahi-daemon.conf` file by changing `use-ipv6=yes` to `use-ipv6=no` and `#publish-aaaa-on-ipv4=yes` to `publish-aaaa-on-ipv4=no`.
 
 Run:
 
-   `sudo service avahi-daemon restart`
+~~~shell
+sudo service avahi-daemon restart
+~~~
 ```

@@ -30,6 +30,7 @@ If there is insufficient space for all students in the class to work at the same
 When building Duckietown inside a room, consider the following factors:
 
 - Must-haves:
+
   - __Passive lighting control__: The goal is to create an environment with uniform, diffused, white lighting, as Duckiebots rely on vision for much of their operation. Varying lighting conditions (colored lights, shadows, time-varying illumination, and so on) create disturbances that can frustrate students. Thick curtains near windows help block variability from sunlight, and normal ceiling lights may be augmented with properly placed light sources. Avoid reflections that may confuse the Duckiebots.
 
   - Provide a broadband, appropriately configured [Internet connection](prerequisites-network).
