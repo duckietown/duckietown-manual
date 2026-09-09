@@ -100,9 +100,13 @@ I have connected the ToF sensor directly to the same HUT port that the front bum
 ---
 Make sure that the `duckiebot-interface` container is running by checking the `Portainer` page of the `Dashboard` (opened by running `dts duckiebot dashboard DUCKIEBOT_NAME --page portainer`) or by running:
 
-    `docker -H DUCKIEBOT_NAME.local ps`
+~~~shell
+docker -H DUCKIEBOT_NAME.local ps
+~~~
 
 The exact name of the container will depend on your Duckiebot's version. If you do not see the `duckiebot-interface` container, update your Duckiebot by running:
 
-    `dts duckiebot update DUCKIEBOT_NAME`
+~~~shell
+dts duckiebot update DUCKIEBOT_NAME
+~~~
 ```

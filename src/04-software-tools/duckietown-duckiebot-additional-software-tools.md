@@ -131,7 +131,9 @@ My ROS commands are not working and I cannot use <kbd>Tab</kbd> to autocomplete 
 ---
 Run:
 
-    `source /code/catkin_ws/devel/setup.bash`
+~~~shell
+source /code/catkin_ws/devel/setup.bash
+~~~
 ```
 
 ```{trouble}
@@ -139,5 +141,7 @@ I cannot connect to my Duckiebot's ROS Master.
 ---
 Run the following command and make sure that the `ROS`, `car-interface` and `duckiebot-interface` containers are running:
 
-    `dts duckiebot dashboard DUCKIEBOT_NAME --page portainer`
+~~~shell
+dts duckiebot dashboard DUCKIEBOT_NAME --page portainer
+~~~
 ```

@@ -53,6 +53,7 @@ When creating a new image:
 1. Read and understand the [](initialization-tos) before proceeding. For any questions or doubts, [reach out](mailto:info@duckietown.com).
 
 2. Download the Duckietown compressed image:
+
     - [Download non-customizable `DB21J` Duckiebot `ente` image from AWS](https://duckietown.com/download-duckiebot-ente-sdcard-image-aws).
 
     - [Download non-customizable `DB21J` Duckiebot `ente` image from Google Drive](https://duckietown.com/download-duckiebot-ente-sdcard-image-googledrive).

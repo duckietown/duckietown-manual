@@ -1147,6 +1147,38 @@ Footnotes are displayed at the very bottom of the page.
 
 Troubleshooting cards can be created using the `{trouble}` directive.
 
+### Code blocks in cards
+
+Use `~~~` for a fenced code block inside a backtick-delimited rendered card, such as `{trouble}` or `{needget}`. Keep triple backticks for standalone code blocks and the outer card; otherwise, the inner fence closes the card.
+
+``````{list-table}
+:header-rows: 1
+:widths: 20 20
+
+- - Syntax
+  - Result
+- - ````md
+    ```{trouble}
+    I cannot determine my DTS version.
+    ---
+    Run:
+
+    ~~~shell
+    dts version
+    ~~~
+    ```
+    ````
+  - ```{trouble}
+    I cannot determine my DTS version.
+    ---
+    Run:
+
+    ~~~shell
+    dts version
+    ~~~
+    ```
+``````
+
 ``````{list-table}
 :header-rows: 1
 :widths: 6 20

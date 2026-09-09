@@ -259,11 +259,12 @@ Just run the command again with the correct credentials.
 Only the latest inputs are stored for the same Docker registry.
 ```
 
-````{trouble}
+```{trouble}
 I would like to remove my stored Docker credentials. How could I achieve that?
 ---
 Run: 
 
-```shell
+~~~shell
 rm ~/.duckietown/shell/profiles/ente/databases/secrets_docker.yaml
-````
+~~~
+```

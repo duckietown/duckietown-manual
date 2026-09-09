@@ -35,6 +35,7 @@ The short and cheeky answer to this question is "everything, and in the right pl
 For example:
 
 - __ROS nodes__:
+
   - Provide an overview of purpose and algorithm.
 
   - List configuration parameters, default values, publishers, subscribers, and services.
@@ -42,11 +43,13 @@ For example:
   - Document every method: arguments, types, return values.
 
 - __Libraries (`include/` or `src/`)__:
+
   - Each module and package needs a short description.
 
   - All public classes, functions, and methods require docstrings.
 
 - __Repository and package level__:
+
   - Add an RST file under `docs/packages/` named `<package>.rst` that pulls together node‑ and library‑level docs via Sphinx directives.
 
 ### Example: ROS node docstring

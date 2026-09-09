@@ -88,9 +88,10 @@ I have pressed the top button down as far as it will go for `6 s` but it does no
 ---
 Run:
 
-    `dts duckiebot update DUCKIEBOT_NAME`
-
-    `dts duckiebot reboot DUCKIEBOT_NAME`
+~~~shell
+dts duckiebot update DUCKIEBOT_NAME
+dts duckiebot reboot DUCKIEBOT_NAME
+~~~
 ```
 
 ```{trouble}

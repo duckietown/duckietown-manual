@@ -1079,7 +1079,7 @@ Every Duckiebox comes with enough screws of every type, plus spares for certain 
 You may have inadvertently used the incorrect type of screw at certain points during the assembly.
 ```
 
-````{trouble}
+```{trouble}
 I cannot screw the omni wheel in correctly, as the screws do not fit all the way into the standoffs.
 ---
 Occasionally the standoffs are not fully threaded due to manufacturing inefficiencies.
@@ -1088,7 +1088,7 @@ Alternatively, try to use shorter screws (provided in the Duckiebox).
 Otherwise, try to use two spare nuts to mitigate tolerances, as shown below.
 
 ![Spare nuts being used to mitigate tolerances between the omni wheel and stand-offs.](../../_images/assembly/db21j/db21-omni-dirtysolution.jpg)
-````
+```
 
 ```{trouble}
 A component broke while I was trying to assemble my Duckiebot.
@@ -1097,7 +1097,7 @@ Certain components will not influence the functionality of your Duckiebot if bro
 However, if a broken component is influencing the functionality of your Duckiebot and you cannot fix it yourself, take a picture of the damage and email hardware@duckietown.com.
 ```
 
-````{trouble}
+```{trouble}
 The wheels wiggle and/or fall off the motors.
 ---
 This may be due to manufacturing tolerances.
@@ -1106,15 +1106,15 @@ Alternatively, screws are provided to fix the wheels to the motor axles, as show
 Make sure not to tighten the screws too hard, as this may add resistance to the spinning of the wheels (you can find the sweet spot by turning the wheel by hand and feeling the resistive torque).
 
 ![Screws fixing the wheels to the motor axles.](../../_images/assembly/db21j/db21-wheel-screws.jpg)
-````
+```
 
-````{trouble}
+```{trouble}
 I do not understand my Duckiebot's data and electrical connections.
 ---
 A simplified block diagram of the data and electrical connections for your Duckiebot is shown below.
 
 ![A simplified block diagram of the data and electrical connections for a Duckiebot DB21J.](../../_images/assembly/db21j/db21-rev1-schematics-block-diagram.png)
-````
+```
 
 ```{trouble}
 I have followed these instructions to the letter but there is something off that I cannot quite put my finger on.

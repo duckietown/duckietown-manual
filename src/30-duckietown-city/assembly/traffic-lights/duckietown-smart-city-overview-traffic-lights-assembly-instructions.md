@@ -41,9 +41,11 @@ For Duckiebots to recognize traffic lights governing a specific intersection, ap
 ## Hardware Assembly
 
 - For __latest__ configuration traffic lights, refer to the instructions:
+
   - [](traffic-light-assembly-21)
 
 - For legacy builds (prior to `TL21`), follow these instructions:
+
   - [](traffic-light-assembly-18).
 
 (dt-ops-tl-prep)=
@@ -64,9 +66,11 @@ For Autolab users: Use the convention `hostname: watchtowerXX`, where `XX` are i
 ```
 
 - For standard traffic light setup, use:
+
   - `hostname: trafficlightXX`
 
 - Login account:
+
   - Username: `duckie`
 
   - Password: the value entered when DTS prompts during initialization

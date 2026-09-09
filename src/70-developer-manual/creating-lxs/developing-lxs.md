@@ -66,11 +66,11 @@ The following table contains a list of the files and directories that you may ne
   - ``` lx/notebooks/01_first_notebook.ipynb ```
   - Notebook files contain the knowledge portion of an LX, walking students through activities, visualizations, and
   development.
-* - Learner Solution Code
+- - Learner Solution Code
   - `lx/packages/solution_module.py`
   - Python files for learner implementations should remain in the `packages` directory, with learners filling in TODOs
   as instructed by the notebooks.
-* - Notebook Dependencies
+- - Notebook Dependencies
   - `recipe/dependencies-apt.txt`, `recipe/dependencies-py3.txt`
   - Required libraries are built into the VSCode editor environment by including them in the `recipe` dependency files.
 ```

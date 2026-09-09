@@ -398,12 +398,12 @@ For this demo, there should not be any intersections in your Duckietown layout.
 Your Duckiebot will interpret intersections as "broken" lanes, perceiving less salient features, potentially compromising the state estimate.
 ```
 
-````{trouble}
+```{trouble}
 My Duckiebot drives over the white line while driving on inner curves.
 ---
 This may be due to wrongly constructed lanes or your Duckiebot being poorly calibrated.
 Make sure that your Duckietown's lanes are constructed correctly, try recalibrating your Duckiebot and/or modify its PID controller gains while running the demo.
-````
+```
 
 ```{note}
 Parts of this page were written by Adam Burhan and Azalée Robitaille at the Université de Montréal.

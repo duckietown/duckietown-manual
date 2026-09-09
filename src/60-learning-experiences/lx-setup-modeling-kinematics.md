@@ -13,7 +13,7 @@
 
 - (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
 
-- (optional) familiarity with ROS basics: [](lx-setup-ros-basics)
+- (optional) Familiarity with ROS basics: {ref}`LX: ROS basics <lx-setup-ros-basics>`
 ---
 - Running the kinematics and odometry learning experience.
 ```

@@ -203,7 +203,7 @@ You should see it with a status `Booting` and finally `Ready` if you look at `dt
 ROBOT_NAME |  virtual | duckiebot | DB21J |  Ready   | ROBOT_NAME.local
 ```
 
-(lx-code-matrix-start-planning)=
+(lx-code-matrix-start)=
 #### 2. Starting the Duckiematrix with the virtual Duckiebot
 
 `````{tab-set}

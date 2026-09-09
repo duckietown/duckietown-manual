@@ -362,7 +362,9 @@ Before you generate a new SSH key, you should check your local machine for exist
     ```
 
 4. Either generate a new SSH key or upload an existing key:
+
     - If you do not have a supported public and private key pair, or do not wish to use any that are available, generate a new SSH key.
+
     - If you see an existing public and private key pair listed (for example, `id_rsa.pub` and `id_rsa`) that you would like to use to connect to GitHub, you can add the key to the ssh-agent.
 ````
 

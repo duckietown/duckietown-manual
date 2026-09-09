@@ -33,6 +33,7 @@ We recommend installing Ubuntu directly on your laptop or as a dual-boot operati
 - Create the bootable USB drive, disconnect it, then reconnect it to your computer.
 
 - Restart your computer:
+
   - If your computer boots into the existing operating system, you will need to change the boot order in your BIOS.
 
   - Restart your computer again and press the key that accesses the BIOS during startup. This key varies by model (e.g., F1 or F2 for Lenovo laptops). Consult your laptop’s manual or search online for guidance.

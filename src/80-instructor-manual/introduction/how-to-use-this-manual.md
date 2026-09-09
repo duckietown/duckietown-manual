@@ -35,6 +35,7 @@ Duckietown shines when you get physical robots involved. We strongly contend tha
 To proceed:
 
 - Get and build a Duckiebot (or Duckiedrone) and a small Duckietown:
+
   - [Get a Duckiebot](https://get.duckietown.com/)
 
   - [Build instructions](https://duckietown.com/guides/)
