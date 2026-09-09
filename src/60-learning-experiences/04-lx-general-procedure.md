@@ -187,7 +187,7 @@ If you have not done so already (e.g., for a different LX), you can create a vir
 dts duckiebot virtual create --type duckiebot --configuration DB21J ROBOT_NAME
 ```
 
-where `ROBOT_NAME` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete).
+When you run the command, DTS prompts you to enter and confirm the password for the virtual robot's `duckie` account; the characters you enter are not displayed. `ROBOT_NAME` is the hostname. It can be anything you like, subject to the [same naming constraints of physical Duckiebots](setup-db-sd-card-flashing-complete).
 
 Then you can start your virtual robot with the command:
 

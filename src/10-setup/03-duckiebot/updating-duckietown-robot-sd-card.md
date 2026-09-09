@@ -26,13 +26,15 @@ An updated SD card for your Duckietown robot.
 To update an initialized SD card, run the following command, where `TYPE` and `CONFIGURATION` are the values used to initialize the SD card, `HOSTNAME` is the new robot name, `WIFI` is the new comma-separated list of Wi-Fi networks, and `COUNTRY` is the new two-letter Wi-Fi country code:
 
 ```shell
-dts sd_card update --type TYPE --configuration CONFIGURATION [--hostname HOSTNAME] [--wifi WIFI] [--country COUNTRY]
+dts sd_card update --type TYPE --configuration CONFIGURATION [--hostname HOSTNAME] [--wifi WIFI] [--country COUNTRY] [--password]
 ```
 
 ```{include} ../../_includes/workspace/sd-card-delegation-note.md
 ```
 
-At least one of `--hostname`, `--wifi`, or `--country` is required; only the supplied settings are changed. Some disk images store Wi-Fi and country settings together, in which case you must provide both `--wifi` and `--country` in the same command.
+At least one of `--hostname`, `--wifi`, `--country`, or `--password` is required; only the supplied settings are changed. Some disk images store Wi-Fi and country settings together, in which case you must provide both `--wifi` and `--country` in the same command.
+
+`--password` prompts you to enter and confirm a new password for the `duckie` account. It must contain at least eight characters and cannot contain colons or line breaks. The characters you enter are not displayed. The password is applied the next time the robot boots. If DTS reports that the selected disk image does not support password updates, use a current supported image version.
 
 ```{attention}
 Updating the `WIFI` configuration will replace existing data. 

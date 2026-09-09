@@ -31,7 +31,7 @@ Use this procedure if you want full control over the configuration settings of y
 ```
 
 ```{note}
-The default username (not to be confused with the hostname/robot name) and password are `duckie` and `quackquack`, respectively. This is useful if you want to later `ssh` into your robot.
+The default username (not to be confused with the hostname/robot name) is `duckie`. During initialization, DTS prompts you to enter and confirm the password for this account; there is no default account password.
 ```
 
 Start by plugging the SD card into your computer using a SD card reader or the USB to microSD card adapter provided in your Duckiebot kit. Make sure the SD card is detected before proceeding.
@@ -48,6 +48,8 @@ dts sd_card init --hostname HOSTNAME --type TYPE --configuration CONFIGURATION -
 Where:
 
 - `--hostname` is the name of the robot you are flashing the SD card for.
+
+- When the setup step runs, DTS securely prompts you to enter and confirm the password for the `duckie` account. It must contain at least eight characters and cannot contain colons or line breaks. The characters you enter are not displayed. If DTS reports that the selected disk image does not support setting a password, use a current supported image version.
 
 (db-naming-constraints)=
 ### Duckiebot naming constraints
@@ -92,7 +94,7 @@ For example:
 - If you are not sure what Duckiebot you have, refer to [](duckiebot-configurations) or [reach out to support](how-to-get-help).
 ```
 
-- `--wifi` is a comma-separated list of Wi-Fi networks, each passed in the format `wifiname:wifipassword`. For example, the default is `duckietown:quackquack`. [Networks can be edited after the robot is initialized too](db-troubleshooting-network), without needing to reflash the SD card. Nonetheless, making sure your initial credentials are correct simplifies next steps.
+- `--wifi` is a comma-separated list of Wi-Fi networks, each passed in the format `wifiname:wifipassword`. For example, the default is `duckietown:quackquack`; this is a Wi-Fi credential, not the password for the `duckie` account. [Networks can be edited after the robot is initialized too](db-troubleshooting-network), without needing to reflash the SD card. Nonetheless, making sure your initial credentials are correct simplifies next steps.
 
 ````{attention}
 - If you plan on the robot connecting over different networks (e.g., at home and in class), list all your networks _without spaces after the commas_:
@@ -101,10 +103,9 @@ For example:
 dts sd_card init ... --wifi duckietown:quackquack,myhomenetwork:myhomepassword,myuninetwork:myunipassword
 ```
 
-- If your network `SSID` contains, e.g., spaces, use quotation marks:
 
 ```shell
-dts sd_card init ... -wifi "my fancy network name:quackquack"
+dts sd_card init ... --wifi "my fancy network name:quackquack"
 ```
 
 - Networks in the list can support additional arguments:
