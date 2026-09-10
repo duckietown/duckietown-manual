@@ -1,6 +1,6 @@
 ```{seo}
-:description: Learn about RRT (randomly exploring random trees) planning and follow step by step instructions to design and deploy a planner in this Duckietown learning experience (LX).
-:keywords: Duckietown, Duckiebot, virtual Duckiebot, digital twin, physical Duckiebot, autonomous vehicles, LXs, Learning Experiences, planning, robotics project, hands on learning, RRT, rapidly exploring random trees
+:description: Learn about RRT (randomly exploring random trees) planning and follow step-by-step instructions to design and deploy a planner in this Duckietown learning experience (LX).
+:keywords: Duckietown, Duckiebot, virtual Duckiebot, digital twin, physical Duckiebot, autonomous vehicles, LXs, Learning Experiences, planning, robotics project, hands-on learning, RRT, rapidly exploring random trees
 ```
 
 ```{needget}
@@ -16,7 +16,7 @@
 (lx-setup-planning-rrt)=
 # LX: Planning - RRT
 
-In this learning experience, you will build a robot planner designed to have a Duckiebot drive safely in a cluttered environment. We will represent the environment by a set of obstacles (in our simplified case they will be circular and rectangular). The first task will be to figure out how to tell if a robot configuration (pose) collides with an obstacle. From there you can build a planner based on the randomly exploring random trees (RRT) algorithm to find a path from a start configuration to a goal configuration without colliding with anything.
+In this learning experience, you will build a robot planner designed to have a Duckiebot drive safely in a cluttered environment. We will represent the environment by a set of obstacles (in our simplified case they will be circular and rectangular). The first task will be to figure out how to tell if a robot configuration (pose) collides with an obstacle. From there, you can build a planner based on the Rapidly-exploring Random Tree (RRT) algorithm to find a path from a start configuration to a goal configuration without colliding with anything.
 
 ```{figure} ../_images/lx-devmanual/lx-planning/planning-lx-dtmatrix-splashscreen-topview.jpg
 :alt: Duckietown planning LX Duckiematrix top view
@@ -37,7 +37,7 @@ After this learning experience, you will:
 
 - Review the Rapidly-exploring Random Tree (RRT) planning algorithm.
 
-- Create a differential drive steering function as motion primitive for the RRT algorithm.
+- Create a differential drive steering function as a motion primitive for the RRT algorithm.
 
 - Implement the RRT algorithm and test it in the Duckiematrix.
 ```
