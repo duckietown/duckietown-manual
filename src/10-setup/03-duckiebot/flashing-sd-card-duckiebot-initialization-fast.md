@@ -54,9 +54,19 @@ When creating a new image:
 
 2. Download the Duckietown compressed image:
 
-    - [Download non-customizable `DB21J` Duckiebot `ente` image from AWS](https://duckietown.com/download-duckiebot-ente-sdcard-image-aws).
+    ```{button-link} https://duckietown.com/download-duckiebot-ente-sdcard-image-aws
+    :color: primary
+    :shadow:
 
-    - [Download non-customizable `DB21J` Duckiebot `ente` image from Google Drive](https://duckietown.com/download-duckiebot-ente-sdcard-image-googledrive).
+    Download non-customizable `DB21J` Duckiebot `ente` image from AWS
+    ```
+
+    ```{button-link} https://duckietown.com/download-duckiebot-ente-sdcard-image-googledrive
+    :color: info
+    :shadow:
+
+    Download non-customizable `DB21J` Duckiebot `ente` image from Google Drive
+    ```
 
     The image is downloaded as a compressed `.zip` file. Programs like Balena Etcher allow flashing this format directly to the SD card. If you are using a different program, unzip the downloaded file to obtain a `.img` file to flash to the SD card.
 
@@ -101,7 +111,7 @@ This image has the following default settings:
 
 - No default user password; set one using the `dts sd_card update --password` command above.
 
-- Robot name (hostname): `entebot208`.
+- Robot name (hostname): `entebot209`.
 
 - Robot type: `duckiebot`.
 
