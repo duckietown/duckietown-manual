@@ -1,10 +1,10 @@
-(book-db-opmanual)=
-# Overview
-
 ```{seo}
 :description: Welcome to the Duckiebot Operation Manual - the starting point for setting up your Duckietown experience.
 :keywords: duckietown, duckiebot, operation manual, robotics class, getting started, autonomous driving, db21, db21-j4, AV, autonomous vehicle, self-driving car, self-driving, robot autonomy, AI robotics, simulation, hardware, jupyter notebook, nvidia jetson nano 4gb, jetson nano, assembly, calibration, operation, development, robot handling, engineering education
 ```
+
+(book-db-opmanual)=
+# Overview
 
 Welcome to the Duckiebot operation manual!
 
@@ -20,13 +20,11 @@ If you are a Duckietown veteran, treat this book as a reference manual on how to
 
 If you have suggestions on how to improve this documentation, read the [Duckietown Book Writer Manual](https://docs.duckietown.com/daffy/devmanual-docs/intro.html) to learn how to make contributions.
 
-
 (book-db-opmanual-toc)=
 ## From a box of parts to a ready to go Duckiebot
 
-
 ```{figure} /_images/intro/db-status-diagram.jpg
-:alt: duckiebot assembly, setup, configuration and status definition diagram
+:alt: Duckiebot assembly, setup, configuration and status definition diagram
 :width: 60%
 :name: duckiebot-status-flow
 :align: center

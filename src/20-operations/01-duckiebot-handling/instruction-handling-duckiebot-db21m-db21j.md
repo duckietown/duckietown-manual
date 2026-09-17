@@ -1,10 +1,10 @@
-(how-to-handle-a-duckiebot-db21)=
-# Overview (`DB21`)
-
 ```{seo}
 :description: A summary of common operations for interacting with a Duckiebot.
 :keywords: Duckietown, Duckiebot, Duckiebot handling, ssh, moving a Duckiebot, Duckiebot image streaming, Duckiebot LED control, Duckiebot HUT update, Duckiebot battery update, Duckiebot remote control, Duckiebot software update
 ```
+
+(how-to-handle-a-duckiebot-db21)=
+# Overview (`DB21`)
 
 This chapter describes how to handle your Duckiebot.
 
@@ -14,20 +14,19 @@ This chapter describes how to handle your Duckiebot.
 - A "cheatsheet" for common Duckiebot operations
 ```
 
-
 (handling-how-to-update-db-software)=
 ## How to update the software on a Duckiebot
 
 To update the software on your Duckiebot, run:
 
 ```shell
-dts duckiebot update ROBOT_NAME
+dts duckiebot update DUCKIEBOT_NAME
 ```
 
 (handling-how-to-ssh-into-your-duckiebot)=
 ## How to SSH into your Duckiebot
 
-To `ssh` into your Duckiebot, using the `SSH` (`Secure Shell`) protocol, run the following command and enter the password (the default password is `quackquack`):
+To `ssh` into your Duckiebot, using the `SSH` (`Secure Shell`) protocol, run the following command and enter the password you set when initializing the SD card:
 
 ```shell
 ssh duckie@DUCKIEBOT_NAME.local
@@ -53,7 +52,9 @@ To update the Duckiebattery, follow [](duckiebattery-update).
 
 Once your Duckiebattery is up to date and your Duckiebot is connected, run:
 
-    dts duckiebot battery info ROBOT_NAME
+```shell
+dts duckiebot battery info DUCKIEBOT_NAME
+```
 
 ```shell
 battery:
@@ -87,9 +88,10 @@ I have pressed the top button down as far as it will go for `6 s` but it does no
 ---
 Run:
 
-    `dts duckiebot update DUCKIEBOT_NAME`
-
-    `dts duckiebot reboot DUCKIEBOT_NAME`
+~~~shell
+dts duckiebot update DUCKIEBOT_NAME
+dts duckiebot reboot DUCKIEBOT_NAME
+~~~
 ```
 
 ```{trouble}

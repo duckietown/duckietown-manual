@@ -8,10 +8,13 @@
 
 ```{needget}
 - A flashed Duckiebot SD card: [](setup-db-sd-card-flashing-intro)
+
 - A Duckiebot of the same model chosen during the SD card flashing procedure
+
 - A charged battery (>50%)
 ---
 - An online (successfully initialized) Duckiebot
+
 - (if network is correctly configured) A Duckiebot connected to the network
 ```
 
@@ -19,7 +22,6 @@
 
 Insert the initialized SD card into your Duckiebot's Jetson Nano until your feel a "click". Then, push the button on the
 battery to power up the Duckiebot.
-
 
 ```{vimeo} 527364179
 :alt: Duckiebot first boot
@@ -32,7 +34,6 @@ The external power supply might not be able to provide sufficient current if the
 computer to reboot. Should that happen during the first boot, you will likely have to burn the SD card again.
 ```
 
-
 (monitor-first-boot)=
 ## Monitoring the First Boot
 
@@ -40,7 +41,7 @@ Make sure your desktop or laptop computer is connected to the same Wi-Fi network
 
 Then open a terminal and run:
 
-```
+```shell
 dts fleet discover
 ```
 
@@ -48,11 +49,12 @@ The command above will show a list of all the Duckiebots reachable on your local
 
 Leave this tool open, it will refresh automatically every second, so there is no need to manually restart it.
 
-Within a few minutes of powering up the robot with the SD card in, your Duckiebot will appear in the list with status **Booting**.  If it does not appear within 5 minutes, check out the Troubleshooting guide at the end of this page.
+Within a few minutes of powering up the robot with the SD card in, your Duckiebot will appear in the list with status __Booting__.  If it does not appear within 5 minutes, check out the Troubleshooting guide at the end of this page.
 
 ```{figure} ../../_images/setup/handling/fleet_discover.png
 :name: fig:fleet-discover
 :width: 85%
+:alt: Terminal output from `dts fleet discover` listing nearby Duckiebots and their boot status.
 
 Output of 'dts fleet discover'
 ```
@@ -60,8 +62,9 @@ Output of 'dts fleet discover'
 ```{attention}
 During the first boot, the robot will automatically reboot several times. Wait for the "Status" column to read "Ready" and turn solid green.
 ```
+
 ```{note}
-Unfortunately the 'dts fleet discover' is currently non functional in the Duckietown Workspaces (devcontainer) on Windows and Mac. You can test if the robot has booted by running `ping ![ROBOT_NAME].local` and try to connect to the dashboard at `http://![ROBOT_NAME].local`
+Unfortunately the 'dts fleet discover' is currently non functional in the Duckietown Workspaces (devcontainer) on Windows and Mac. You can test if the robot has booted by running `ping <DUCKIEBOT_NAME>.local` and try to connect to the dashboard at `http://<DUCKIEBOT_NAME>.local`
 ```
 
 ## Software and Hardware Updates
@@ -70,9 +73,11 @@ Once the status of your Duckiebot is `Ready`, you are ready to update your Ducki
 
 ### Duckiebot Software Update
 
-It is good practice to keep your Duckiebot's software stack up to date with the latest code by following: [](ops-db-update).
+To keep your Duckiebot's software stack up to date with the latest code, follow [](ops-db-update) and run:
 
-    dts duckiebot update ROBOT_NAME
+```shell
+dts duckiebot update DUCKIEBOT_NAME
+```
 
 (confirm-first-boot)=
 ## Confirming the First Boot
@@ -108,13 +113,17 @@ the Duckiebot might become unreachable and you will have to reflash the SD card.
 
 To turn off your Duckiebot, use the command,
 
-    dts duckiebot shutdown HOSTNAME
+```shell
+dts duckiebot shutdown HOSTNAME
+```
 
 The shutdown procedure can take up to `20` seconds.
 
 To reboot your Duckiebot, use the command,
 
-    dts duckiebot reboot HOSTNAME
+```shell
+dts duckiebot reboot HOSTNAME
+```
 
 You will learn more about how to handle your Duckiebot in [](how-to-handle-a-duckiebot-db21).
 -->
@@ -139,8 +148,7 @@ If facing challenges with moving your Duckiebot or controlling the LEDs, it is p
 ```{trouble}
 I pressed the power button on top but nothing happened.
 ---
-Power on your Duckiebot using the button on the side of the Duckiebattery.  The top button is only for powering off.
- You can also learn more about how to handle your Duckiebot in [](how-to-handle-a-duckiebot-db21).
+Power on your Duckiebot using the button on the side of the Duckiebattery. The top button is only for powering off. You can also learn more about how to handle your Duckiebot in [](how-to-handle-a-duckiebot-db21).
 ```
 
 ```{trouble}
@@ -170,8 +178,7 @@ If you are not using a Jetson Nano, the model is the model of your Duckiebot (e.
 ```
 
 ```{trouble}
-The Duckiebot screen does no turn on even though it shows up in `dts fleet discover` and the dashboard is accessible.
- The time of flight (ToF) sensor and front bumper are not detected on the Dashboard Components page.
+The Duckiebot screen does no turn on even though it shows up in `dts fleet discover` and the dashboard is accessible. The time of flight (ToF) sensor and front bumper are not detected on the Dashboard Components page.
 ---
 Disconnect the ToF sensor from the front bumper and use the long cable that originally connected the front bumper to
 the HUT to connect the ToF sensor directly to that same HUT port. Then reboot. This bypasses a known multiplexer
@@ -181,7 +188,7 @@ issue affecting some front bumpers.
 ```{trouble}
 My Duckiebot appears to be booted and the screen is on, but I cannot see it using `dts fleet discover`.
 ---
-Your Duckiebot must be connected to the same network as the computer you are using to run the `dts` commands.  Check
+Your Duckiebot must be connected to the same network as the computer you are using to run the `dts` commands. Check
 the [networking section](setup-duckiebot-network) of the book to see if your network is set up correctly.
 ```
 

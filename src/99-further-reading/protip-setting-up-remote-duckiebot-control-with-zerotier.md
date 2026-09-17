@@ -1,16 +1,17 @@
-(protip-zerotier-remote-duckiebot-control)=
-# Remote Duckiebot control with ZeroTier
-
 ```{seo}
 :description: How to connect to a Duckiebot over the Internet using ZeroTier.
 :keywords: Duckietown, Duckiebot, connect, ZeroTier
 ```
 
+(protip-zerotier-remote-duckiebot-control)=
+# Remote Duckiebot control with ZeroTier
+
 This chapter describes how to connect to your Duckiebot over the Internet using ZeroTier.
 
 ```{needget}
-* Completed [](how-to-handle-a-duckiebot-db21).
-* A [ZeroTier account](https://my.zerotier.com/).
+- Completed [](how-to-handle-a-duckiebot-db21).
+
+- A [ZeroTier account](https://my.zerotier.com/).
 ---
 Knowledge on how to connect to your Duckiebot over the Internet using ZeroTier.
 ```
@@ -32,7 +33,9 @@ curl -s https://install.zerotier.com | sudo bash
 To create a ZeroTier network:
 
 1. Navigate to [ZeroTier Central](https://my.zerotier.com/).
+
 2. Log in if you are not already logged in.
+
 3. Click the `Create a Network` button (note the `network ID`).
 
 ## Creating connection requests
@@ -48,11 +51,17 @@ sudo zerotier-cli join NETWORK_ID
 To approve connection requests:
 
 1. Navigate to [ZeroTier Central](https://my.zerotier.com/).
+
 2. Log in if you are not already logged in.
+
 3. Select the addresses of your computer and Duckiebot.
+
 4. Click the `Authorize` button.
 
 ```{figure} ../_images/further_reading/zerotier/zerotier_authorize_device.png
+:name: fig:protip-setting-up-remote-duckiebot-control-with-zerotier-zerotier-authorize-device
+:alt: ZeroTier Central device list with a selected device and the Authorize button highlighted.
+
 ZeroTier device authorization.
 ```
 

@@ -3,19 +3,22 @@
 :keywords: Duckietown, DTProject, Python, Docker, development, robot software, robotics, dts, docker build
 ```
 
-
 (dtproject-add-your-code)=
 # Adding your Code
 
 Now that we know how to build Docker images for Duckietown, let us build one with a simple Python program inside.
 
-Open a terminal and go to the directory `my-project` created in the previous page. In Duckietown, Python code must belong to a Python package. Python packages are placed inside the directory `packages/` found at the root of `my-project`. Go ahead and create a directory called `my_package` inside `packages/`.
+Open a terminal and go to the directory `my-project` created in the previous page. In Duckietown, Python code must belong to a Python package. Python packages are placed inside the directory `packages/` found at the root of `my-project`. Go ahead and create a directory called `my_package` inside `packages/`:
 
-    mkdir -p ./packages/my_package
+```shell
+mkdir -p ./packages/my_package
+```
 
 A Python package is defined by the presence of a special initialization file named `__init__.py`. Create it as follows:
 
-    touch ./packages/my_package/__init__.py
+```shell
+touch ./packages/my_package/__init__.py
+```
 
 With the package directory in place, add a Python script to it. Using a text editor or integrated development environment (IDE), create the file `./packages/my_package/my_script.py` with the following content:
 
@@ -36,7 +39,6 @@ with:
 dt-exec python3 -m "my_package.my_script"
 ```
 
-
 ```{note}
 Always prepend `dt-exec` to the command in `./launchers/default.sh`.
 
@@ -47,15 +49,19 @@ For information on defining additional launcher scripts, refer to [](dtproject-l
 
 Now rebuild the Docker image with:
 
-    dts devel build -f
+```shell
+dts devel build -f
+```
 
 and run it:
 
-    dts devel run
+```shell
+dts devel run
+```
 
 The expected output will be:
 
-```
+```text
 ...
 ==> Launching app...
 

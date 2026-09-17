@@ -13,6 +13,7 @@ as shown in the image below.
 ```{figure} ../_images/how-to-contribute/contributing/simple/step1.png
 :name: fig:simple_way_1
 :class: framed
+:alt: GitHub documentation menu with the Suggest edit command selected.
 
 Click on "suggest edit" button from the GitHub dropdown menu.
 ```
@@ -28,6 +29,7 @@ Let us try this out and perform an edit:
 ```{figure} ../_images/how-to-contribute/contributing/simple/step2.png
 :name: fig:simple_way_2
 :class: framed
+:alt: GitHub web editor showing a documentation file being edited.
 
 Perform the edits you had in mind.
 ```
@@ -36,10 +38,10 @@ Once done, check the temporary outcome by clicking on `Preview changes`.
 Note that not all functionalities are visible by the preview.
 For significant changes to the documentation, refer to [](local-editor-workflow).
 
-
 ```{figure} ../_images/how-to-contribute/contributing/simple/step3.png
 :name: fig:simple_way_3
 :class: framed
+:alt: GitHub preview pane showing documentation changes.
 
 A preview of the changes.
 ```
@@ -53,6 +55,7 @@ before confirming by clicking on the "Propose changes" button ({numref}`fig:simp
 ```{figure} ../_images/how-to-contribute/contributing/simple/step4.png
 :name: fig:simple_way_4
 :class: framed
+:alt: GitHub commit form for describing changes and creating a branch.
 
 Describe and commit.
 ```
@@ -60,12 +63,12 @@ Describe and commit.
 This will take you to the Pull Request creation page ({numref}`fig:simple_way_5`).
 Add any further details you want to share with the reviewers in the Pull Request description text area.
 
-
 Complete by clicking on the `Create pull request` button ({numref}`fig:simple_way_5`).
 
 ```{figure} ../_images/how-to-contribute/contributing/simple/step5.png
 :name: fig:simple_way_5
 :class: framed
+:alt: GitHub pull request form with the Create pull request button.
 
 Create a pull request.
 ```

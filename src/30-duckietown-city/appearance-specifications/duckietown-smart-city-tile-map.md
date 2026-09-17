@@ -11,19 +11,25 @@ The `tilemap` layer defines the road network, specifying the nodes and edges of 
 Duckietown roads are constructed by applying colored lane markings (white, yellow, and red) to a black background. These markings provide critical navigational information to Duckiebots.
 
 Duckietown cities are built by combining modular building blocks, referred to as _tiles_, assembled on foam "puzzle" tiles. Each tile has rigorously defined geometry and color patterns and represents one of the following road elements:
-- **Straight**: Standard road section.
-- **Curve**: Left or right turn.
-- **3-way intersection**: Junction connecting three paths.
-- **4-way intersection**: Junction connecting four paths.
-- **Empty tile**: Non-road areas.
+
+- __Straight__: Standard road section.
+
+- __Curve__: Left or right turn.
+
+- __3-way intersection__: Junction connecting three paths.
+
+- __4-way intersection__: Junction connecting four paths.
+
+- __Empty tile__: Non-road areas.
 
 The tiles are arranged in specific configurations to create compliant Duckietowns. Road elements are visualized in {numref}`fig:tiles`.
 
-
 ```{note}
 Road markings convey important information to the Duckiebots:
-* delimiting the lanes (white and yellow markings), and
-* identifying stop signs (red markings).
+
+- They delimit lanes with white and yellow markings.
+
+- They identify stop signs with red markings.
 ```
 
 ```{note}
@@ -35,7 +41,7 @@ Each tile is square and measures `61 cm x 61 cm` (`2 ft x 2 ft`) from the outer 
 ````{list-table} The principal tile types in Duckietown
 :name: fig:tiles
 
-* - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_tile_straight-texture.png
+- - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_tile_straight-texture.png
     :name: subfig:straight
     :width: 300px
     :align: center
@@ -46,38 +52,44 @@ Each tile is square and measures `61 cm x 61 cm` (`2 ft x 2 ft`) from the outer 
 
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_tile_curve_left-texture.png
     :name: subfig:DT17_tile_curve_left
+    :alt: Duckietown left-curved road tile.
 
     The left curve tile
     ```
 
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_tile_curve_right-texture.png
     :name: subfig:DT17_tile_curve_right
+    :alt: Duckietown right-curved road tile.
 
     The right curve tile
     ```
 
-* - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_tile_three_way_center-texture.png
+- - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_tile_three_way_center-texture.png
     :name: subfig:DT17_tile_three_way_center
+    :alt: Duckietown three-way intersection tile.
 
     The 3-way intersection tile
     ```
 
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_tile_four_way_center-texture.png
     :name: subfig:DT17_tile_four_way_center
+    :alt: Duckietown four-way intersection tile.
 
     The 4-way intersection tile
     ```
 
   - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_tile_empty-texture.png
     :name: subfig:DT17_tile_empty
+    :alt: Empty Duckietown tile shown with a green surface for illustration.
 
     The empty tile
     ```
 ````
 
 ```{note}
-* Empty tiles are not actually green, but have a black backround as all other tiles. We represent them as green here (recalling grass) to clearly distinguish them from road tiles.
-* The empty tiles can be of covered with, e.g., felt of any color. We discourage using the same colors as the road
+- Empty tiles are not actually green, but have a black background like all other tiles. We represent them as green here (recalling grass) to clearly distinguish them from road tiles.
+
+- The empty tiles can be covered with, e.g., felt of any color. We discourage using the same colors as the road
 markings (red, white and yellow) or any material with reflective surface to minimize disturbances to the Duckiebots.
 ```
 
@@ -86,7 +98,7 @@ For tiles to become road elements, we need to apply road markings. Road markings
 (specs-tapes)=
 ## Tapes
 
-There are 3 colors of tapes used in Duckietown: **white**, **yellow**, and **red**. All tapes used should have a matte surface.
+There are 3 colors of tapes used in Duckietown: __white__, __yellow__, and __red__. All tapes used should have a matte surface.
 
 ### The `white` tape
 
@@ -99,19 +111,20 @@ A Duckiebot on a road never collides with Duckiebots or other Duckietown element
 
 Here are some facts about the white tapes:
 
-* White tapes must be solid (not dashed);
+- White tapes must be solid (not dashed);
 
-* The width of the white tape is roughly **4.8 cm** (1.88 inches);
+- The width of the white tape is roughly __4.8 cm__ (1.88 inches);
 
-* The white tape is always placed on the right hand side of a lane. We assume that the Duckiebots drive on the right hand side of the road.
+- The white tape is always placed on the right hand side of a lane. We assume that the Duckiebots drive on the right hand side of the road.
 
-* For curved roads, the white lane marker is formed by five pieces of white tape, while the inner corner is formed by three pieces, placed according to the specifications in the image below, where the edge pieces are matched to adjacent straight or curved tiles ({numref}`fig:curved`).
+- For curved roads, the white lane marker is formed by five pieces of white tape, while the inner corner is formed by three pieces, placed according to the specifications in the image below, where the edge pieces are matched to adjacent straight or curved tiles ({numref}`fig:curved`).
 
 ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/curved_appearance_spec.png
 ---
 width: 80%
 align: center
 name: fig:curved
+alt: Diagram showing the white-tape layout and dimensions of a curved Duckietown road tile.
 ---
 The specification for a curved road tile
 ```
@@ -120,31 +133,33 @@ The specification for a curved road tile
 
 Here are some facts about the yellow tapes:
 
-* Yellow tape must be dashed (not solid);
+- Yellow tape must be dashed (not solid);
 
-* Each piece should be **5 cm** long and placed with a **2.5 cm** gap between each piece;
+- Each piece should be __5 cm__ long and placed with a __2.5 cm__ gap between each piece;
 
-* The width of the yellow tape is roughly 2.4cm (0.94 inches);
+- The width of the yellow tape is roughly 2.4cm (0.94 inches);
 
-* The yellow tape is always placed on the left hand side of a lane, i.e., in the center of the road. We assume that the Duckiebots drive on the right hand side of the road.
+- The yellow tape is always placed on the left hand side of a lane, i.e., in the center of the road. We assume that the Duckiebots drive on the right hand side of the road.
 
 Yellow tapes on curves: see curved road image ({numref}`fig:curved`) in white tape section. Pieces at tile edges should be in center of lane, piece at the middle of the curve should be approximately 21 cm from middle of inner center white piece of tape, with approximated circular arc in between.
 
-
 ### The `red` tape
 
-Red tapes MAY **only** appear on **intersection** tiles.
+Red tapes MAY __only__ appear on __intersection__ tiles.
 
 The width of the red tape must be the same as the white roll (roughly 4.8cm or 1.88 inches) and should cross the entire lane perpendicular to the road.
 
-The placement of red tape should always be **under** yellow and white tape, as shown, e.g., in {numref}`fig:DT17_usage_four_way` or {numref}`fig:DT17_usage_three_way`.
+The placement of red tape should always be __under__ yellow and white tape, as shown, e.g., in {numref}`fig:DT17_usage_four_way` or {numref}`fig:DT17_usage_three_way`.
 
-A Duckiebot navigates Duckietown by a sequence of:
+A Duckiebot navigates Duckietown through the following sequence:
 
-* Navigating one or more straight tiles until a red tape appears,
-* Waiting for the coordination signal,
-* Executing an intersection traversal,
-* Re-localizing in a straight tile.
+- It navigates one or more straight tiles until a red tape appears.
+
+- It waits for the coordination signal.
+
+- It executes an intersection traversal.
+
+- It re-localizes in a straight tile.
 
 ```{admonition} Proposition
 :class: note
@@ -152,20 +167,20 @@ A Duckiebot navigates Duckietown by a sequence of:
 If the Duckiebot stops before or ON the red strip, no collisions are possible.
 ```
 
-
 ## Topological Constraints During Map Construction
 
 Here are some topological rule constraints that must be met:
 
 1. An intersection can NOT be adjacent to a curved road tile or another intersection tile.
 
-2. Any two adjacent non-empty tiles must have a feasible path from one to the other **of length two**: if they are adjacent, they must be connected.
+2. Any two adjacent non-empty tiles must have a feasible path from one to the other __of length two__: if they are adjacent, they must be connected.
 
-Here are some examples of **conforming** topologies:
+Here are some examples of __conforming__ topologies:
 
 ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_map_loop3-texture.png
 :name: fig:DT17_map_loop3
 :width: 12cm
+:alt: 3-by-3 Duckietown city loop built from road tiles.
 
 A 3-by-3 city loop
 ```
@@ -173,6 +188,7 @@ A 3-by-3 city loop
 ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_usage_four_way-texture.png
 :name: fig:DT17_usage_four_way
 :width: 12cm
+:alt: Duckietown four-way intersection tile layout.
 
 Four way intersection usage
 ```
@@ -180,29 +196,33 @@ Four way intersection usage
 ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/DT17_usage_three_way-texture.png
 :name: fig:DT17_usage_three_way
 :width: 12cm
+:alt: Duckietown three-way intersection tile layout.
 
 Three way intersection usage
 ```
 
-Some examples of **non-conforming** topologies are shown in [the figure below](fig:violates).
+Some examples of __non-conforming__ topologies are shown in [the figure below](fig:violates).
 
 ````{list-table}
 :name: fig:violates
 
-* - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/violates1.svg
+- - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/violates1.svg
     :name: subfig:violates1
+    :alt: Non-conforming Duckietown topology with adjacent curved tiles that are not connected.
 
     Topology violates rule 2 since the bottom two curved tiles are adjacent but not connected
     ```
 
-* - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/violates2.svg
+- - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/violates2.svg
     :name: subfig:violates2
+    :alt: Non-conforming Duckietown topology with curved tiles adjacent to intersection tiles.
 
     Topology violates rule 1 since curved tiles are adjacent to intersection tiles
     ```
 
-* - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/violates3.svg
+- - ```{figure} ../../_images/duckietown-city/appearance_specifications/tiles/violates3.svg
     :name: subfig:violates3
+    :alt: Non-conforming Duckietown topology with adjacent leftmost tiles that are not connected.
 
     Topology violates rule 2 since left-most tiles are adjacent but not connected
     ```

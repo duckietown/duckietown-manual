@@ -8,7 +8,6 @@
 
 In this section, we consider the case where we are planning or coordinating more than one autonomous vehicle at a time, perhaps even in an entire fleet.
 
-
 ## Multi-vehicle coordination
 
 In this lecture, we formalize the multi-robot planning problem. We introduce some basic concepts in optimization and present some potential solutions for planning and coordinating with multiple vehicles.
@@ -20,11 +19,8 @@ In this lecture, we formalize the multi-robot planning problem. We introduce som
 ```{slides} ../../../../_assets/instructor-manual/coordination.pdf
 ```
 
-
 ## Fleet-level Planning
 
 In this lecture, we consider the optimization of an entire fleet of autonomous vehicles.
 
 ```{slides} ../../../../_assets/instructor-manual/fleet.pdf
-
-

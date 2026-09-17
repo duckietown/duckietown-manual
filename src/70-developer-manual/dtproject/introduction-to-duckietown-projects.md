@@ -7,13 +7,14 @@
 # Overview of the  `DTProject`
 
 ```{needget}
-* [Working environment setup](setup-computer)
-* [Accounts setup](dt-account)
-* Basic knowledge of Python
----
-* Learn how to use DTProjects, the most important building block in Duckietown
-```
+- [Working environment setup](setup-computer)
 
+- [Accounts setup](dt-account)
+
+- Basic knowledge of Python
+---
+- Learn how to use DTProjects, the most important building block in Duckietown.
+```
 
 (dtproject-intro)=
 ## Introduction
@@ -22,8 +23,9 @@ In Duckietown, all code runs inside Docker containers.
 
 To run software in Duckietown you will need:
 
-* a Duckietown-compliant Docker image, and
-* "payload" software inside it.
+- A Duckietown-compliant Docker image.
+
+- Payload software inside the image.
 
 Duckietown-compliant Docker images are built out of Duckietown Projects, in short, `DTProjects`.
 
@@ -33,7 +35,7 @@ A set of DTProjects can, for example, implement high-level robot behaviors, such
 
 Breaking down a complex problem into smaller ones that are tackled independently is common in software development and not only. The ancient Romans formalized this in the context of military strategy with the well-known "divide and conquer" (in latin: _divide et impera_).
 
-By implementing complex behaviors as the union of smaller and simpler DTProjects, we improve the **usability**, **mantainability**, and **modularity** of the software.
+By implementing complex behaviors as the union of smaller and simpler DTProjects, we improve the __usability__, __mantainability__, and __modularity__ of the software.
 
 (dtproject-docker-image)=
 ## Each DTProject Produces a Docker Image
@@ -56,42 +58,52 @@ DTProjects standardize locations for source code, configuration files, dependenc
 (dtproject-meta-files)=
 ### DTProject meta-files
 
-* `.dtproject`: indicates that this directory contains a Duckietown Project;
-* `.gitignore`: lists files and directories ignored by `git`;
-* `.dockerignore`: lists files and directories ignored by `docker`;
-* `.bumpversion.cfg`: configuration for [`bumpversion`](https://pypi.org/project/bumpversion/), used to perform semantic versioning on the project;
+- `.dtproject`: indicates that this directory contains a Duckietown Project;
+
+- `.gitignore`: lists files and directories ignored by `git`;
+
+- `.dockerignore`: lists files and directories ignored by `docker`;
+
+- `.bumpversion.cfg`: configuration for [`bumpversion`](https://pypi.org/project/bumpversion/), used to perform semantic versioning on the project;
 
 (dtproject-docker-files)=
 ### Docker
 
-* `Dockerfile`: Dockerfile building the project's Docker image;
-* `configurations.yaml`: collection of Docker container configurations that can be used on this project;
+- `Dockerfile`: Dockerfile building the project's Docker image;
+
+- `configurations.yaml`: collection of Docker container configurations that can be used on this project;
 
 (dtproject-source-code)=
 ### Source code
 
-* `packages/`: this directory can contain both Python and Catkin packages;
-* `launchers/`: code that can be used as entry scripts inside the project's Docker container;
+- `packages/`: this directory can contain both Python and Catkin packages;
+
+- `launchers/`: code that can be used as entry scripts inside the project's Docker container;
 
 (dtproject-dependencies)=
 ### Dependencies
 
-* `dependencies-apt.txt`: List of dependency packages that can be installed via `apt`;
-* `dependencies-py3.dt.txt`: List of Duckietown-owned dependency packages that can be installed via `pip`;
-* `dependencies-py3.txt`: List of third-party dependency packages that can be installed via `pip`;
+- `dependencies-apt.txt`: List of dependency packages that can be installed via `apt`;
+
+- `dependencies-py3.dt.txt`: List of Duckietown-owned dependency packages that can be installed via `pip`;
+
+- `dependencies-py3.txt`: List of third-party dependency packages that can be installed via `pip`;
 
 (dtproject-assets-docs)=
 ### Assets and Documentation
 
-* `assets/`: store static assets in this directory. For example, configuration files that are needed in the image;
-* `docs/`: contains a book project used to create documentation (like this book you are reading now);
-* `html/`: hosts the `html` version of the compiled documentation in `docs/`;
+- `assets/`: store static assets in this directory. For example, configuration files that are needed in the image;
+
+- `docs/`: contains a book project used to create documentation (like this book you are reading now);
+
+- `html/`: hosts the `html` version of the compiled documentation in `docs/`;
 
 (dtproject-other-files)=
 ### Other
 
-* `LICENSE.pdf`: The Duckietown Software Terms of Use; Note that you must agree to its terms to use DTprojects.
-* `README.md`: Brief description of the DTProject;
+- `LICENSE.pdf`: The Duckietown Software Terms of Use; Note that you must agree to its terms to use DTprojects.
+
+- `README.md`: Brief description of the DTProject;
 
 (dtproject-templates)=
 ## Project Templates

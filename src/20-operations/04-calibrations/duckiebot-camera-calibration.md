@@ -3,12 +3,7 @@
 :keywords: Duckiebot, calibration, camera calibration, camera calibration pattern
 ```
 
-```{needget}
-- A working Duckiebot: [](ops-db-subsys-testing-intro)
-- A functional `dts` installation: [](setup-dts)
-- A camera calibration pattern, e.g., as provided in a Duckiebox.
----
-- A Duckiebot with the extrinsics camera calibration performed.
+```{include} ../../_includes/calibration/calibration-needget.md
 ```
 
 (db-camera-calibration)=
@@ -42,17 +37,18 @@ Duckietown camera calibration pattern.
 
 If you do not already have a Duckietown calibration board:
 
-1. Download the [Duckietown calibration pattern](https://github.com/duckietown/lib-dt-computer-vision/blob/ente/assets/extrinsics/camera_calibration_pattern_A3_rev0424.pdf)
+1. Download the [Duckietown calibration pattern](https://github.com/duckietown/lib-dt-computer-vision/blob/ente/assets/extrinsics/camera_calibration_pattern_A3_rev0424.pdf).
 
-2. Print it in **A3** format
+2. Print it in __A3__ format.
 
-3. Make sure the printing settings have not deformed the pattern, by measuring the features as indicated on the pattern itself
+3. Make sure the printing settings have not deformed the pattern by measuring the features as indicated on the pattern itself.
 
-4. Fix it to a rigid planar surface that you can move around
+4. Fix it to a rigid planar surface that you can move around.
 
 ```{note}
-* The squares must have side lengths equal to **0.031 m** (**3.1 cm**). Measure this, as having the wrong size may lead to your Duckiebot crashing.
-* In case your squares are not the correct size, make sure that your printer settings are set to **A3** format, with "no automatic scaling" and size set to `100%`.
+- The squares must have side lengths equal to __0.031 m__ (__3.1 cm__). Measure this, as having the wrong size may lead to your Duckiebot crashing.
+
+- In case your squares are not the correct size, make sure that your printer settings are set to __A3__ format, with "no automatic scaling" and size set to `100%`.
 ```
 
 ```{warning}

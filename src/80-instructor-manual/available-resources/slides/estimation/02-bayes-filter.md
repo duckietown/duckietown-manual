@@ -1,10 +1,10 @@
-(slides-and-recordings-estimation-bayes)=
-# Bayes Filter
-
 ```{seo}
 :description: Bayes Filter derivation in Duckietown.
 :keywords: Bayes Filter, Duckietown, estimation, probability, continuous time, stochastic, recursive, prior, posterior, apriori
 ```
+
+(slides-and-recordings-estimation-bayes)=
+# Bayes Filter
 
 The Bayes Filter, built with Bayes' theorem, represents the optimal estimate of the posterior distribution of the state.
 
@@ -18,6 +18,3 @@ Notwithstanding, this filter forms the basis for introducing several other filte
 
 ```{slides} ../../../../_assets/instructor-manual/bayes-filter.pdf
 ```
-
-
-

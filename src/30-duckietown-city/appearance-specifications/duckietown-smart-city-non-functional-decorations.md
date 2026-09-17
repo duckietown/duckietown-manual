@@ -3,7 +3,6 @@
 :keywords: Duckietown, decorations, non-functional layer, robotics, Duckiebots, colored felts, modular cities, robotics education, creative design, appearance specifications
 ```
 
-
 (dt-ops-non-functional-layer)=
 # Decorations
 
@@ -13,15 +12,18 @@ The citizens of Duckietown appreciate vibrant, visually appealing cities and enc
 
 ## Ideas for Decorative Enhancements
 
-- **Colored Felts**: Simulate grass, water, or other natural elements to add realism to the environment.
-- **Custom Contraptions**: Any imaginative addition that beautifies the city and pleases its citizens is welcome.
+- __Colored Felts__: Simulate grass, water, or other natural elements to add realism to the environment.
+
+- __Custom Contraptions__: Any imaginative addition that beautifies the city and pleases its citizens is welcome.
 
 ```{caution}
 1. Ensure that decorations do not interfere with the tilemap and signals layers.
+
 2. Avoid using colors that Duckiebots interpret, such as red, yellow, and white.
+
 3. Use non-reflective materials to prevent algorithm debugging issues caused by glare.
 ```
 
 ## Background Considerations
 
-Even though Duckiebot drivers are trained to focus on the road, the **background** (e.g., walls or furniture in the room where Duckietown is assembled) also plays a role in the overall experience. A thoughtfully designed environment enhances both aesthetics and functionality.
+Even though Duckiebot drivers are trained to focus on the road, the __background__ (e.g., walls or furniture in the room where Duckietown is assembled) also plays a role in the overall experience. A thoughtfully designed environment enhances both aesthetics and functionality.

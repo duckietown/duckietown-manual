@@ -14,5 +14,3 @@ Instead, we will learn [image filters](slides-and-recordings-image-filtering) an
 ```{vimeo} 549675144
 :alt: Deep Convolutional Neural Networks
 ```
-
-

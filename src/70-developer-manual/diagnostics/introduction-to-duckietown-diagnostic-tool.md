@@ -7,29 +7,33 @@
 # Introduction to the Diagnostics Tool
 
 ```{needget}
-* Ability to launch and modify ROS nodes on a Duckiebot
-* Basic familiarity with Raspberry Pi or Jetson Nano resource constraints
+- Ability to launch and modify ROS nodes on a Duckiebot
+
+- Basic familiarity with Raspberry Pi or Jetson Nano resource constraints
 ---
-* Decide whether to run a steady-state or transient-state diagnostic session
-* Interpret the resulting resource-usage traces
+- Decide whether to run a steady-state or transient-state diagnostic session
+
+- Interpret the resulting resource-usage traces
 ```
 
-The *Duckietown Diagnostics* utility periodically records CPU, memory, temperature, I/O, and network metrics while an experiment is running. By replaying these snapshots, you can verify that new code respects the onboard computer tight resource budget and does not introduce hidden side effects.
+The _Duckietown Diagnostics_ utility periodically records CPU, memory, temperature, I/O, and network metrics while an experiment is running. By replaying these snapshots, you can verify that new code respects the onboard computer tight resource budget and does not introduce hidden side effects.
 
 (devel_sw_diagnostics_example)=
-## Running example
+## Legacy running example
 
-Assume a **single-camera Duckiebot** whose driver publishes frames at **20 Hz**. We plan to raise the rate to **30 Hz** and must quantify how this change impacts resource usage.
+Assume a __single-camera Duckiebot__ whose driver publishes frames at __20 Hz__. We plan to raise the rate to __30 Hz__ and must quantify how this change impacts resource usage.
 
 ---
 
 ## Why should diagnostics be run?
 
-Execute the tool **each time you modify code** and need to gauge its footprint on system resources.
+Execute the tool __each time you modify code__ and need to gauge its footprint on system resources.
 
-*Expected consequences*
-- Higher frame rate → more CPU time, RAM, and bus bandwidth
-- Possible *secondary* effects: increased SoC temperature, extra network traffic if frames are forwarded downstream
+_Expected consequences_:
+
+- A higher frame rate uses more CPU time, RAM, and bus bandwidth.
+
+- Possible _secondary_ effects include increased SoC temperature and extra network traffic if frames are forwarded downstream.
 
 Diagnostics offers a repeatable method for measuring and analyzing these effects.
 
@@ -39,23 +43,22 @@ Diagnostics offers a repeatable method for measuring and analyzing these effects
 
 The tool supports two common scenarios:
 
-| Scenario | Purpose | When to launch / how long to run |
-|----------|---------|----------------------------------|
-| **Steady-state analysis** | Detect slow drifts such as memory leaks | Start *after* the system settles; record for an extended interval |
-| **Transient-state analysis** | Observe short bursts triggered by an event | Start anytime; record for *t* > *T* to include at least one event cycle |
+| Scenario                     | Purpose                                    | When to launch / how long to run                                        |
+| ---------------------------- | ------------------------------------------ | ----------------------------------------------------------------------- |
+| __Steady-state analysis__    | Detect slow drifts such as memory leaks    | Start _after_ the system settles; record for an extended interval       |
+| __Transient-state analysis__ | Observe short bursts triggered by an event | Start anytime; record for _t_ > _T_ to include at least one event cycle |
 
 ### Example – tuning camera FPS
-* **Steady state**: run diagnostics overnight and inspect RAM usage to reveal leaks at 30 Hz.
-* **Transient state**: capture several seconds around a frame-grab burst to confirm CPU spikes remain acceptable.
+
+- __Steady state__: run diagnostics overnight and inspect RAM usage to reveal leaks at 30 Hz.
+
+- __Transient state__: capture several seconds around a frame-grab burst to confirm CPU spikes remain acceptable.
 
 By selecting the appropriate window, actionable insight can be obtained without overwhelming the storage with unnecessary data.
-
-
 
 <!--
 (sec:sw_diagnostics_intro)=
 # Introduction
-
 
 (devel_sw_diagnostics_example)=
 ## Running example
@@ -64,7 +67,6 @@ Throughout this section we will refer to the toy example of a robot
 with a single camera (just like our Duckiebots) in which camera drivers
 produce image frames at a frequency of `20Hz` and we are interested in
 pushing the camera to its limit, i.e., `30Hz`.
-
 
 ## When do I need it?
 
@@ -85,13 +87,13 @@ are transferred over the network.
 The diagnostics tool provides a standard way of analyzing the response of
 a system to a change.
 
-
 ## When do I run it?
 
 The diagnostics tool is commonly used for two use cases:
 
-- analysis of _steady states_ (long-term effects) of a system;
-- analysis of _transient states_ (short-term effects) of a system;
+- Analysis of _steady states_ (long-term effects) of a system.
+
+- Analysis of _transient states_ (short-term effects) of a system.
 
 The _steady state_ analysis consists of measuring the activity of a system
 in the long run and in the absence of anomaly or changes. For example,

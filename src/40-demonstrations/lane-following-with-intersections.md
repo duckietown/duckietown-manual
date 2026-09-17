@@ -1,10 +1,10 @@
-(duckiebot-demo-lfi)=
-# Lane Following with Intersections (`LFI`)
-
 ```{seo}
 :description: The Lane Following with Intersections demonstration for your Duckiebot.
 :keywords: Duckietown, Duckiebot, Lane Following with Intersections, demonstration
 ```
+
+(duckiebot-demo-lfi)=
+# Lane Following with Intersections (`LFI`)
 
 This chapter describes the `Lane Following with Intersections (`LFI`)` demonstration for your Duckiebot.
 

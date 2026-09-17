@@ -23,23 +23,33 @@ on the code structure in Duckietown). Within it are packages that are part of th
 
 The core components of lane following include:
 
-* [Color correction with the "anti-Instagram" package](https://github.com/duckietown/dt-core/tree/ente/packages/anti_instagram)
-* [Line detection](https://github.com/duckietown/dt-core/tree/ente/packages/line_detector)
-* [Projection of line segments to the ground plane](https://github.com/duckietown/dt-core/tree/ente/packages/ground_projection)
-* [Fusion of the line segments with a histogram filter](https://github.com/duckietown/dt-core/tree/ente/packages/lane_filter)
-* [Feedback control to drive down the lane](https://github.com/duckietown/dt-core/tree/ente/packages/lane_control)
-* [A simple finite-state machine](https://github.com/duckietown/dt-core/tree/ente/packages/fsm)
+- [Color correction with the "anti-Instagram" package](https://github.com/duckietown/dt-core/tree/ente/packages/anti_instagram)
+
+- [Line detection](https://github.com/duckietown/dt-core/tree/ente/packages/line_detector)
+
+- [Projection of line segments to the ground plane](https://github.com/duckietown/dt-core/tree/ente/packages/ground_projection)
+
+- [Fusion of the line segments with a histogram filter](https://github.com/duckietown/dt-core/tree/ente/packages/lane_filter)
+
+- [Feedback control to drive down the lane](https://github.com/duckietown/dt-core/tree/ente/packages/lane_control)
+
+- [A simple finite-state machine](https://github.com/duckietown/dt-core/tree/ente/packages/fsm)
 
 These implementations are meant to be for reference, and there certainly are other ways of implementing each of these blocks. A possible way to structure a project could be to replace or improve on one of these core components and then see the effect on the overall performance of the lane following behavior.
 
 Additional components that contribute to the indefinite navigation (where a Duckiebot drives indefinitely in a city with intersections and traffic lights) include:
 
-* [Detection of fiducial markers called "Apriltags"](https://github.com/duckietown/dt-core/tree/ente/packages/apriltag)
-* [Detection of flashing LEDs for intersection coordination](https://github.com/duckietown/dt-core/tree/ente/packages/led_detection)
-* [Detection of the red stop line](https://github.com/duckietown/dt-core/tree/ente/packages/stop_line_filter)
-* [Traversing intersections](https://github.com/duckietown/dt-core/tree/ente/packages/unicorn_intersection)
-* [Coordination at intersections](https://github.com/duckietown/dt-core/tree/ente/packages/explicit_coordinator)
-* [A more complex configuration of the finite state machine](https://github.com/duckietown/dt-core/blob/ente/packages/fsm/config/fsm_node/indefinite_navigation.yaml)
+- [Detection of fiducial markers called "Apriltags"](https://github.com/duckietown/dt-core/tree/ente/packages/apriltag)
+
+- [Detection of flashing LEDs for intersection coordination](https://github.com/duckietown/dt-core/tree/ente/packages/led_detection)
+
+- [Detection of the red stop line](https://github.com/duckietown/dt-core/tree/ente/packages/stop_line_filter)
+
+- [Traversing intersections](https://github.com/duckietown/dt-core/tree/ente/packages/unicorn_intersection)
+
+- [Coordination at intersections](https://github.com/duckietown/dt-core/tree/ente/packages/explicit_coordinator)
+
+- [A more complex configuration of the finite state machine](https://github.com/duckietown/dt-core/blob/ente/packages/fsm/config/fsm_node/indefinite_navigation.yaml)
 
 These represent a possible implementation of this indefinite navigation behavior but, as above, there could be improvements.
 
@@ -51,8 +61,9 @@ One idea could be to structure the entire suite of projects as having the object
 
 Finally, other packages exist in the repository that worked at some point but probably have not been tested in a while, such as:
 
-* [Vehicle detection](https://github.com/duckietown/dt-core/tree/ente/packages/vehicle_detection)
-* [Dead Reckoning](https://github.com/duckietown/dt-core/tree/ente/packages/deadreckoning)
+- [Vehicle detection](https://github.com/duckietown/dt-core/tree/ente/packages/vehicle_detection)
+
+- [Dead Reckoning](https://github.com/duckietown/dt-core/tree/ente/packages/deadreckoning)
 
 These may serve as starting points or inspiration, but the students will in all likelihood have to do significant testing or develop their replacement.
 
@@ -67,6 +78,7 @@ We briefly describe each behavior as source of potential inspiration for additio
 :name: other autonomous behaviors
 :scale: 40%
 :align: center
+:alt: Diagram showing a hierarchy of autonomous Duckiebot behaviors by complexity.
 
 Autonomous behaviors can build on each other in terms of complexity.
 ```
@@ -74,37 +86,37 @@ Autonomous behaviors can build on each other in terms of complexity.
 ```{list-table}
 :header-rows: 1
 :name: mooc-exercises-table
-* - BEHAVIOR NAME
+- - BEHAVIOR NAME
   - DESCRIPTION
   - CITY CONFIGURATION
-* - Lane Following (`LF`)
+- - Lane Following (`LF`)
   - A single Duckiebot drives indefinitely in a Duckietown without intersections.
   - City loop (without intersections).
-* - `LF` with intersections and no traffic lights (`LF-I_noTL`)
+- - `LF` with intersections and no traffic lights (`LF-I_noTL`)
   - A single Duckiebot drives indefinitely in a Duckietown with intersections. No intersection is equipped with traffic lights. The additional challenge here is introducing a finite state machine, having Duckiebots stop at intersections, read traffic signs, and navigate intersections before switching back to lane following mode.
   - City with intersections but no traffic lights.
-* - `LF` with vehicles on opposite lanes (`LF-V_O`)
+- - `LF` with vehicles on opposite lanes (`LF-V_O`)
   - Same as `LF`, but with two Duckiebots on the map starting in opposite lanes. The additional challenge with respect to `LF` is to be robust to sensory perturbations caused by the lights of the vehicle on the opposite lane. Moreover, Duckiebots must at all times stay in their lane (strictly) to ensure success.
   - City loop (without intersections).
-* - `LF` with intersections (`LF-I`)
+- - `LF` with intersections (`LF-I`)
   - A single Duckiebot drives indefinitely in a Duckietown with intersections, which may or may not be equipped with traffic lights. The additional challenge here is centralized coordination (LED detection and interpretation).
   - City with intersections (with or without traffic lights).
-* - `LF` with pedestrians (`LF-P`)
+- - `LF` with pedestrians (`LF-P`)
   - A single Duckiebot navigates a city without intersections, detecting and avoiding (when possible) "pedestrians" (i.e., duckies). The challenge here is detecting objects, and planning around them.
   - City loop (without intersections), but with duckies in the road.
-* - `LF` with other vehicles (`LF-V`)
+- - `LF` with other vehicles (`LF-V`)
   - Multiple Duckiebots drive indefinitely in a city without intersections. Duckiebots are allowed to be in the same lane. The challenge here is traffic management, i.e., detecting other Duckiebots and maintaining a safe distance from them.
   - City loop (without intersections, without duckies).
-* - `LF` with intersections and pedestrians (`LF-IP`)
+- - `LF` with intersections and pedestrians (`LF-IP`)
   - This challenge is similar to `LF-I`, with the additional complication of potentially having pedestrian inside intersection tiles.
   - City with intersections (with or without traffic lights), and duckies on the road.
-* - `LF` with pedestrians and other vehicles (`LF-PV`)
+- - `LF` with pedestrians and other vehicles (`LF-PV`)
   - The union of `LF-P` and `LF-V`. Duckiebots must be able to detect and avoid both static and moving obstacles (duckies and Duckiebots, respectively).
   - City loop (without intersections), with duckies on the road.
-* - `LF` with intersections and other vehicles (`LF-IV`)
+- - `LF` with intersections and other vehicles (`LF-IV`)
   - Multiple Duckiebots navigate indefinitely in a city with intersection, equipped or not with traffic lights. The additional challenge here is dealing with decentralized coordination - i.e., introducing a protocol for having Duckiebots negatiate safe crossing of intersections.
   - City with intersections (with or without traffic lights), and other vehicles on the same or opposite lanes.
-* - `LF` with intersections, pedestrians, and other vehicles (`LF-IPV`)
+- - `LF` with intersections, pedestrians, and other vehicles (`LF-IPV`)
   - This is the ultimate challenge, where any number of Duckiebots can navigate indefinitely in any city configuration, with pedestrians.
   - All configurations allowed (with intersections, duckies on the road, and multiple vehicles in any lane).
 ```

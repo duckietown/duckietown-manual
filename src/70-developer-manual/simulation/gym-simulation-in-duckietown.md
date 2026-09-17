@@ -7,18 +7,20 @@
 # OpenGL-based Gym Environment (legacy)
 
 ```{needget}
-* Implementing Basic Robot Behaviors
+- Implementing Basic Robot Behaviors
 ---
-* Experience with running and testing on the Duckietown simulator
+- Experience with running and testing on the Duckietown simulator
 ```
 
 ```{figure} ../../_images/developer/advanced/simulator/simplesim_free.png
 :name: fig:simplesim_free
+:alt: Screenshot of the legacy OpenGL-based Gym-Duckietown simulator.
 
+The legacy Gym-Duckietown simulator.
 ```
 
 ```{warning}
-This package is obsolete, it has been superseeded by the Duckiematrix Gym environment, [available here](https://github.com/duckietown/gym-duckiematrix).
+This package is obsolete; it has been superseded by the Duckiematrix Gym environment, [available here](https://github.com/duckietown/gym-duckiematrix).
 ```
 
 ## Introduction to the Gym-Duckietown Simulator
@@ -29,11 +31,13 @@ inside an instance of a Duckietown: a loop of roads with turns,
 intersections, obstacles, Duckie pedestrians, and other Duckiebots.
 
 Gym-Duckietown is fast, open, and very customizable. What started as a lane-following simulator has evolved into a fully functioning autonomous driving simulator that you can use to train and test your Machine Learning, Reinforcement Learning, Imitation Learning, or even classical robotics algorithms. Gym-Duckietown offers a wide range of tasks, from simple lane-following to full city navigation with dynamic obstacles. Gym-Duckietown also ships with features, wrappers, and tools that
-can help you bring your algorithms to the real robot, including [domain-randomization](https://blog.openai.com/spam-detection-in-the-physical-world/), accurate camera distortion, and differential-drive physics (and most importantly, realistic waddling).
+can help you bring your algorithms to the physical robot, including [domain-randomization](https://blog.openai.com/spam-detection-in-the-physical-world/), accurate camera distortion, and differential-drive physics (and most importantly, realistic waddling).
 
 ```{figure} ../../_images/developer/advanced/simulator/finalmain.gif
 :name: fig:finalmain-sim
+:alt: Animated view of the legacy Gym-Duckietown simulator.
 
+An animated view of the legacy Gym-Duckietown simulator.
 ```
 
 The development Gym Duckietown simulator has ended with the previous version of the codebase (`daffy`), therefore it

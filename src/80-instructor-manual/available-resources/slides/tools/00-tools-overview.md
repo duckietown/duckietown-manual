@@ -3,7 +3,6 @@
 :keywords: ROS, Robot Operating System, Docker, Git, Github,Duckietown
 ```
 
-
 (slides-and-recordings-tools-overview)=
 # Tools
 

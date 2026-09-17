@@ -8,8 +8,8 @@
 
 ISO/IEC 9126 is an international standard for product quality in software engineering. It was officially replaced by ISO/IEC 25010 in 2011, which introduced a few minor changes to the original standard.
 
-
 ```{figure} ../../../_images/developer/basics/development/iso_9126.png
+:name: fig:iso-iec9126-iso-9126
 :width: 28em
 :align: center
 :alt: ISO/IEC 9126
@@ -17,20 +17,21 @@ ISO/IEC 9126 is an international standard for product quality in software engine
 ISO/IEC 9126 Standard (source: Wikipedia)
 ```
 
-Software development, like any human activity, is subject to inherent biases. The goal of the ISO/IEC 9126 standard is to identify and address these biases by establishing clear guidelines for what constitutes a **high-quality** software product.
+Software development, like any human activity, is subject to inherent biases. The goal of the ISO/IEC 9126 standard is to identify and address these biases by establishing clear guidelines for what constitutes a __high-quality__ software product.
 
 This section will not dive deeply into the standard, but we believe that ISO/IEC 9126 (and its successor, ISO/IEC 25010) should be a fundamental reference for any developer committed to best practices.
 
 Throughout this manual, we will highlight relevant qualities from the standard to explain key decisions made during the development of the Duckietown Development Workflow.
 
-## Hands on
+## Hands-On
 
 We recommend familiarizing yourself with the ISO/IEC standards by consulting the following resources:
 
 - [Wikipedia - ISO/IEC 9126](https://en.wikipedia.org/wiki/ISO/IEC_9126)
-- [Official ISO/IEC 9126 (by ISO.org)](https://www.iso.org/standard/22749.html)
-- [Official ISO/IEC 25010 (by ISO.org)](https://www.iso.org/standard/35733.html)
 
+- [Official ISO/IEC 9126 (by ISO.org)](https://www.iso.org/standard/22749.html)
+
+- [Official ISO/IEC 25010 (by ISO.org)](https://www.iso.org/standard/35733.html)
 
 ## Ask the community
 

@@ -1,10 +1,10 @@
-(setup-sw-docker)=
-# Docker
-
 ```{seo}
 :description: How to install and set up Docker on your computer. This is a necessary step to use Duckietown software.
 :keywords: Duckietown, Duckiebot, Docker, computer setup
 ```
+
+(setup-sw-docker)=
+# Docker
 
 This section describes how to install and set up Docker on your computer.
 
@@ -31,7 +31,7 @@ sudo apt remove containerd docker docker-engine docker.io runc
 
 ::::{tab-item} Duckietown Workspace
 
-Workspaces have Docker preinstalled. Skip all installation steps, but do the configuration ones. 
+Workspaces have Docker preinstalled. Skip all installation steps, but do the configuration ones.
 
 ::::
 
@@ -70,9 +70,9 @@ This installs Docker version 28, which is the latest version before 29. If you n
 
 ::::{tab-item} Duckietown Workspace
 
-Docker is pre-installed and set up in Duckietown Workspaces, so there is no need to install and set it up again. 
+Docker is pre-installed and set up in Duckietown Workspaces, so there is no need to install and set it up again.
 
-To verify the installation is working correctly, run the [Docker checkpoints](docker-checkpoint) in this page. 
+To verify the installation is working correctly, run the [Docker checkpoints](docker-checkpoint) in this page.
 
 If the checkpoint is unsuccessful, follow the Ubuntu tab [Docker installation instructions](setup-sw-docker-ubuntu-uninstall).
 
@@ -84,7 +84,7 @@ If the checkpoint is unsuccessful, follow the Ubuntu tab [Docker installation in
 ## Docker Setup
 
 ```{warning}
-**Do not skip this part**, it is a common source of troubles.
+__Do not skip this part__, it is a common source of troubles.
 ```
 
 :::::{tab-set}
@@ -108,7 +108,6 @@ This step is unnecessary inside Workspaces.
 
 :::::
 
-
 (dt-account-dockerhub-make-access-token)=
 ### Logging in Docker Hub
 
@@ -123,7 +122,6 @@ We will need to provide login credentials for Docker Hub to the Docker client:
     ```
 
     Where `DOCKERHUB_USERNAME` is your Docker Hub username, created during [](setup-account-docker). You will then be prompted for your password, paste the access token we created earlier, and press <kbd>Enter</kbd>.
-
 
 (docker-checkpoint)=
 ## Checkpoint
@@ -176,4 +174,3 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
-

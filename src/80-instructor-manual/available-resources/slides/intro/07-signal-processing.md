@@ -1,11 +1,10 @@
-
-(slides-and-recordings-signals)=
-# Signal Processing
-
 ```{seo}
 :description: Duckietown introduction to signal processing.
 :keywords: latency, throughput, bandwidth, frequency, event-driven, periodic sampling, sampling, discrete time, continuous time
 ```
+
+(slides-and-recordings-signals)=
+# Signal Processing
 
 ## Modern Signal Processing
 
@@ -13,4 +12,3 @@ We discuss some basic concepts related to signal processing, such as latency, th
 
 ```{slides} ../../../../_assets/instructor-manual/modern_signal_processing.pdf
 ```
-

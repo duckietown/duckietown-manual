@@ -9,11 +9,11 @@
 In this section you will learn how to create a Python library following the Duckietown template.
 
 (generate-repo)=
-## Step 1: Get the Duckietown library template
+## Legacy Step 1: Get the Duckietown library template
 
 A boilerplate is provided by the [library template repository](https://github.com/duckietown/template-library).
 
-Click **Use this template** → **Create a new repository**.
+Click __Use this template__ → __Create a new repository__.
 
 ```{figure} ../../_images/developer/beginner/github_use_template.jpg
 :width: 70%
@@ -35,7 +35,7 @@ Creating a repository from template.
 
 Clone the new repository (which is `my-library` in this example, but any name will do):
 
-```bash
+```shell
 git clone https://github.com/YOUR_USERNAME/my-library
 cd my-library
 ```
@@ -43,15 +43,23 @@ cd my-library
 (template-features)=
 ## Features of the library template
 
-* Unit‑tests with [Nose](https://nose.readthedocs.io/en/latest/)
-* Docker‑based local build/test
-* [CircleCI](https://circleci.com/gh/duckietown) integration
-* [CodeCov](https://codecov.io/gh/duckietown) coverage reports
-* Integration with [Sphinx](https://www.sphinx-doc.org/en/master/) to build code docs. (So far, only built locally.)
-* [Jupyter](https://jupyter.org/) notebooks, which are run also in CircleCI as tests.
-* Version bump using [Bumpversion](https://github.com/peritus/bumpversion).
-* Code formatting using [Black](https://github.com/psf/black).
-* Command-line program for using the library.
+- Unit‑tests with [Nose](https://nose.readthedocs.io/en/latest/)
+
+- Docker‑based local build/test
+
+- [CircleCI](https://circleci.com/gh/duckietown) integration
+
+- [CodeCov](https://codecov.io/gh/duckietown) coverage reports
+
+- Integration with [Sphinx](https://www.sphinx-doc.org/en/master/) to build code docs. (So far, only built locally.)
+
+- [Jupyter](https://jupyter.org/) notebooks, which are run also in CircleCI as tests.
+
+- Version bump using [Bumpversion](https://github.com/peritus/bumpversion).
+
+- Code formatting using [Black](https://github.com/psf/black).
+
+- Command-line program for using the library.
 
 ## Anatomy of the library template
 
@@ -59,108 +67,85 @@ This repository describes a library called "`duckietown_pondcleaner`" and there 
 
 ### Meta-files
 
+- `.gitignore`: Files ignore by Git.
 
-* `.gitignore`: Files ignore by Git.
+- `.dtproject`: Enables the project to be built and used by `dts devel` tools
 
+- `.bumpversion.cfg`: Configuration for bumpversion
 
-* `.dtproject`: Enables the project to be built and used by `dts devel` tools
-
-
-* `.bumpversion.cfg`: Configuration for bumpversion
-
-
-* `Makefile`: Build tools configuration with Make
-
+- `Makefile`: Build tools configuration with Make
 
 ### Python packaging
 
-
-* `requirements.txt`: Contains the *pinned* versions of your requirement that
+- `requirements.txt`: Contains the _pinned_ versions of your requirement that
  are used to run tests.
 
-* `MANIFEST.in`: Deselects the tests to be included in the egg.
+- `MANIFEST.in`: Deselects the tests to be included in the egg.
 
-
-* `setup.py`: Contains meta information, definition of the scripts, and
+- `setup.py`: Contains meta information, definition of the scripts, and
  the dependencies information.
-
 
 ### Python code
 
+- `src/` - This is the path that you should set as "sources root" in your tool
 
-* `src/` - This is the path that you should set as "sources root" in your tool
+- `src/duckietown_pondcleaner`: Contains the code.
 
+- `src/duckietown_pondcleaner/__init__.py`: Contains the `__version__` library.
 
-* `src/duckietown_pondcleaner`: Contains the code.
-
-
-* `src/duckietown_pondcleaner/__init__.py`: Contains the `__version__` library.
-
-
-* `src/duckietown_pondcleaner_tests`: Contains the tests - not included in the egg.
-
+- `src/duckietown_pondcleaner_tests`: Contains the tests - not included in the egg.
 
 ### Docker testing
 
-
 These are files to build and run a testing container.
 
+- `.dockerignore`: Describes what files go in the docker container.
 
-* `.dockerignore`: Describes what files go in the docker container.
-
-
-* `Dockerfile`: The build configuration for the software image
-
+- `Dockerfile`: The build configuration for the software image
 
 ### Sphinx
 
+- `src/conf.py`: Sphinx settings
 
-* `src/conf.py`: Sphinx settings
+- `src/index.rst`: Sphinx main file
 
-
-* `src/index.rst`: Sphinx main file
-
-
-* `src/duckietown_pondcleaner/index.rst`: Documentation for the package
-
-
-
+- `src/duckietown_pondcleaner/index.rst`: Documentation for the package
 
 ### Coverage
 
-
-* `.coveragerc`: Options for code coverage.
-
-
-
+- `.coveragerc`: Options for code coverage.
 
 ### Notebooks
 
+- `notebooks`: Notebooks that are run also as a test.
 
-* `notebooks`: Notebooks that are run also as a test.
+- `notebooks-extra`: Other notebooks (not run as tests).
 
-
-* `notebooks-extra`: Other notebooks (not run as test)
-
-
-* `notebooks/*.ipynb`: The notebooks themselves.
+- `notebooks/*.ipynb`: The notebooks themselves.
 
 ## Step 2: Creating your Library
 
-1. Clone your repository
-2. Place Python packages in `src/`
-3. List Python dependencies in `dependencies.txt`
-4. Update `setup.py` metadata
+1. Clone your repository.
+
+2. Place Python packages in `src/`.
+
+3. List Python dependencies in `dependencies.txt`.
+
+4. Update `setup.py` metadata.
+
 5. Clean leftover references:
-   ```bash
+
+    ```shell
    grep -r . pondcleaner
    ```
-6. Update branch names in `README.md`
+
+6. Update branch names in `README.md`.
 
 ### Admin setup
 
-1. Enable CircleCI, ensure build passes
-2. Enable CodeCov, set `CODECOV_TOKEN` in CircleCI environment
+1. Enable CircleCI and ensure the build passes.
+
+2. Enable CodeCov and set `CODECOV_TOKEN` in the CircleCI environment.
 
 (template-utils)=
 ## Step 3: Using the library template utilities
@@ -169,7 +154,9 @@ These are files to build and run a testing container.
 
 Test the code using Docker by:
 
-    make test-docker
+```shell
+make test-docker
+```
 
 This runs the test using a Docker container built from scratch
 with the pinned dependencies in `requirements.txt`.
@@ -178,8 +165,9 @@ This is equivalent to what is run on CircleCI.
 
 To run the tests locally, use:
 
-    make test
-
+```shell
+make test
+```
 
 ```{note}
 To run the tests you will need to have installed the libraries listed in the file `requirements.txt` on your computer.
@@ -190,19 +178,21 @@ To use a Python virtual environment you will need to `pip install virtualenv` th
 duckietown/bin/activate`. In order to install the requirements to run the test do `pip install -r requirements.txt`.
 ```
 
-
 ### Development
 
 In the same virtual environment as above run:
 
-    python setup.py develop
+```shell
+python setup.py develop
+```
 
 This will install the library in an editable way (rather than copying the sources somewhere else).
 
 To skip installing dependencies, use `--no-deps`:
 
-
-    python setup.py develop --no-deps
+```shell
+python setup.py develop --no-deps
+```
 
 For example, this is done in the Dockerfile so that we know we are only using the dependencies in `requirements.txt` with the exact pinned version.
 
@@ -211,47 +201,45 @@ For example, this is done in the Dockerfile so that we know we are only using th
 To define new tests, add files with the name `test_*py` in the
 package `duckietown_podcleaner_tests`. The name is important.
 
-
-```{tip}
-Make sure that the tests are actually run by looking at the coverage results.
+```{include} ../../_includes/python/library-test-coverage-tip.md
 ```
-
 
 ### Using the notebooks
 
 Always clean the notebooks before committing them:
 
-    make -C notebooks cleanup
+```shell
+make -C notebooks cleanup
+```
 
-```{warning}
-If you do not think you can be diligent about this, then add the notebooks using Git LFS.
+```{include} ../../_includes/python/library-notebooks-lfs-warning.md
 ```
 
 (release-library)=
 ## Step 4: Releasing a new library version
 
-
 ### Updating the version
 
 The first step is to change the version and tag the repository.
 
-**DO NOT** change the version manually; use the CLI tool `bumpversion` instead.
+__DO NOT__ change the version manually; use the CLI tool `bumpversion` instead.
 
 The tool can be called by:
 
-
-    make bump    # bump the version, tag the tree
+```shell
+make bump    # bump the version, tag the tree
+```
 
 If you need to include the version in a new file, list it inside the file `.bumpversion.cfg` using the
 syntax `[bumpversion:file: &lt;FILE_PATH &gt;]`.
 
-
 ### Releasing the package
-
 
 The next step is to upload the package to PyPy, by using [twine](https://pypi.org/project/twine/):
 
-    make upload  # upload to PyPI
+```shell
+make upload  # upload to PyPI
+```
 
 ```{note}
 This step, requires admin permissions on PyPy.
@@ -288,7 +276,7 @@ This will take you to a page that looks like the following:
 Creating a repository from template.
 ```
 
-Pick a name for your repository (say `my-library`) and press the button *Create repository from template*.
+Pick a name for your repository (say `my-library`) and press the button _Create repository from template_.
 
 ```{note}
 You can replace `my-library` with the name of the repository that you prefer.
@@ -296,95 +284,93 @@ You can replace `my-library` with the name of the repository that you prefer.
 
 This will create a new repository and copy everything from the repository `template-library` to your new repository. You can now open a terminal and clone your newly created repository.
 
-    git clone https://github.com/YOUR_USERNAME/my-library
-    cd my-library
+```shell
+git clone https://github.com/YOUR_USERNAME/my-library
+cd my-library
+```
 
 ```{attention}
 Replace `YOUR_USERNAME` in the link above with your GitHub username.
 ```
 
 (template-features)=
-## Features of the library template
+## Legacy features of the library template
 
 We have the following features in our new library:
 
-* Unit-tests using [Nose](https://nose.readthedocs.io/en/latest/).
-* Building/testing in Docker environment locally.
-* Integration with [CircleCI](https://circleci.com/gh/duckietown) for automated testing.
-* Integration with [CodeCov](https://codecov.io/gh/duckietown) for displaying coverage result.
-* Integration with [Sphinx](https://www.sphinx-doc.org/en/master/) to build code docs. (So far, only built locally.)
-* [Jupyter](https://jupyter.org/) notebooks, which are run also in CircleCI as tests.
-* Version bump using [Bumpversion](https://github.com/peritus/bumpversion).
-* Code formatting using [Black](https://github.com/psf/black).
-* Command-line program for using the library.
+- Unit-tests using [Nose](https://nose.readthedocs.io/en/latest/).
+- Building/testing in Docker environment locally.
+- Integration with [CircleCI](https://circleci.com/gh/duckietown) for automated testing.
+- Integration with [CodeCov](https://codecov.io/gh/duckietown) for displaying coverage result.
+- Integration with [Sphinx](https://www.sphinx-doc.org/en/master/) to build code docs. (So far, only built locally.)
+- [Jupyter](https://jupyter.org/) notebooks, which are run also in CircleCI as tests.
+- Version bump using [Bumpversion](https://github.com/peritus/bumpversion).
+- Code formatting using [Black](https://github.com/psf/black).
+- Command-line program for using the library.
 
-
-## Anatomy of the library template
+## Legacy anatomy of the library template
 
 This repository describes a library called "`duckietown_pondcleaner`" and there is one command-line tool called `dt-pc-demo.`
 
-### Meta-files
+### Legacy meta-files
 
-* `.gitignore`: Files ignore by Git.
+- `.gitignore`: Files ignore by Git.
 
-* `.dtproject`: Enables the project to be built and used by `dts devel` tools
+- `.dtproject`: Enables the project to be built and used by `dts devel` tools
 
-* `.bumpversion.cfg`: Configuration for bumpversion
+- `.bumpversion.cfg`: Configuration for bumpversion
 
-* `Makefile`: Build tools configuration with Make
+- `Makefile`: Build tools configuration with Make
 
-### Python packaging
+### Legacy Python packaging
 
-* `requirements.txt`: Contains the *pinned* versions of your requirement that
+- `requirements.txt`: Contains the _pinned_ versions of your requirement that
   are used to run tests.
 
-* `MANIFEST.in`: Deselects the tests to be included in the egg.
+- `MANIFEST.in`: Deselects the tests to be included in the egg.
 
-* `setup.py`: Contains meta information, definition of the scripts, and
+- `setup.py`: Contains meta information, definition of the scripts, and
   the dependencies information.
 
-### Python code
+### Legacy Python code
 
-* `src/` - This is the path that you should set as "sources root" in your tool
+- `src/` - This is the path that you should set as "sources root" in your tool
 
-* `src/duckietown_pondcleaner`: Contains the code.
+- `src/duckietown_pondcleaner`: Contains the code.
 
-* `src/duckietown_pondcleaner/__init__.py`: Contains the `__version__` library.
+- `src/duckietown_pondcleaner/__init__.py`: Contains the `__version__` library.
 
-* `src/duckietown_pondcleaner_tests`: Contains the tests - not included in the egg.
+- `src/duckietown_pondcleaner_tests`: Contains the tests - not included in the egg.
 
-### Docker testing
+### Legacy Docker testing
 
 These are files to build and run a testing container.
 
-* `.dockerignore`: Describes what files go in the docker container.
+- `.dockerignore`: Describes what files go in the docker container.
 
-* `Dockerfile`: The build configuration for the software image
+- `Dockerfile`: The build configuration for the software image
 
-### Sphinx
+### Legacy Sphinx
 
-* `src/conf.py`: Sphinx settings
+- `src/conf.py`: Sphinx settings
 
-* `src/index.rst`: Sphinx main file
+- `src/index.rst`: Sphinx main file
 
-* `src/duckietown_pondcleaner/index.rst`: Documentation for the package
+- `src/duckietown_pondcleaner/index.rst`: Documentation for the package
 
+### Legacy coverage
 
-### Coverage
+- `.coveragerc`: Options for code coverage.
 
-* `.coveragerc`: Options for code coverage.
+### Legacy notebooks
 
+- `notebooks`: Notebooks that are run also as a test.
 
-### Notebooks
+- `notebooks-extra`: Other notebooks (not run as test)
 
-* `notebooks`: Notebooks that are run also as a test.
+- `notebooks/*.ipynb`: The notebooks themselves.
 
-* `notebooks-extra`: Other notebooks (not run as test)
-
-* `notebooks/*.ipynb`: The notebooks themselves.
-
-
-## Step 2: Creating your Library
+## Legacy Step 2: Creating your library
 
 Using the repo you have already created:
 
@@ -395,7 +381,9 @@ Using the repo you have already created:
 
 Make sure that there are no other remains:
 
-    grep -r . pondcleaner
+```shell
+grep -r . pondcleaner
+```
 
 Update the branch names in `README.md`.
 
@@ -407,15 +395,16 @@ The following are necessary steps for admins to do:
 
 2. Activate on CodeCov. Get the `CODECOV_TOKEN`. Put this token in CircleCI environment.
 
-
 (template-utils)=
-## Step 3: Using the library template utilities
+## Legacy Step 3: Using the library template utilities
 
-### Test the code
+### Legacy test the code
 
 Test the code using Docker by:
 
-    make test-docker
+```shell
+make test-docker
+```
 
 This runs the test using a Docker container built from scratch
 with the pinned dependencies in `requirements.txt`.
@@ -423,7 +412,9 @@ This is equivalent to what is run on CircleCI.
 
 To run the tests natively on your pc, use:
 
-    make test
+```shell
+make test
+```
 
 ```{note}
 
@@ -435,63 +426,70 @@ To use a Python virtual environment you will need to `pip install virtualenv` th
 duckietown/bin/activate`. In order to install the requirements to run the test do `pip install -r requirements.txt`.
 ```
 
-### Development
+### Legacy development
 
 In the same virtual environment as above run:
 
-    python setup.py develop
+```shell
+python setup.py develop
+```
 
 This will install the library in an editable way (rather than copying the sources somewhere else).
 
 If you do not want to install the deps, do:
 
-    python setup.py develop  --no-deps
+```shell
+python setup.py develop --no-deps
+```
 
 For example, this is done in the Dockerfile so that
 we know we are only using the dependencies in `requirements.txt` with the
 exact pinned version.
 
-
-### Adding tests
+### Legacy adding tests
 
 To add another tests, add files with the name `test_*py` in the
 package `duckietown_podcleaner_tests`. The name is important.
 
-```{tip}
-Make sure that the tests are actually run by looking at the coverage results.
+```{include} ../../_includes/python/library-test-coverage-tip.md
 ```
 
-### Using the notebooks
+### Legacy using the notebooks
 
 Always clean the notebooks before committing them:
 
-    make -C notebooks cleanup
+```shell
+make -C notebooks cleanup
+```
 
-```{warning}
-If you do not think you can be diligent about this, then add the notebooks using Git LFS.
+```{include} ../../_includes/python/library-notebooks-lfs-warning.md
 ```
 
 (release-library)=
-## Step 4: Releasing a new version of your library
+## Legacy Step 4: Releasing a new version of your library
 
-### Updating the version
+### Legacy updating the version
 
 The first step is to change the version and tag the repo.
-**DO NOT** change the version manually; use the CLI tool `bumpversion` instead.
+__DO NOT__ change the version manually; use the CLI tool `bumpversion` instead.
 
 The tool can be called by:
 
-    make bump    # bump the version, tag the tree
+```shell
+make bump # bump the version, tag the tree
+```
 
 If you need to include the version in a new file, list it inside the file `.bumpversion.cfg` using the
 syntax `[bumpversion:file: &lt;FILE_PATH &gt;]`.
 
-### Releasing the package
+### Legacy releasing the package
 
 The next step is to upload the package to PyPy.
 We use [twine](https://pypi.org/project/twine/). Invoke it using:
 
-    make upload  # upload to PyPI
+```shell
+make upload # upload to PyPI
+```
 
 For this step, you need to have admin permissions on PyPy.
 -->

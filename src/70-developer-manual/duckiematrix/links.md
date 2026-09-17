@@ -1,10 +1,10 @@
-(dtmatrix-links)=
-# Links
-
 ```{seo}
 :description: Duckiematrix Links.
 :keywords: Duckietown, Duckiematrix, Links
 ```
+
+(dtmatrix-links)=
+# Links
 
 This chapter describes Duckiematrix Links.
 
@@ -20,7 +20,7 @@ This chapter describes Duckiematrix Links.
 In previous chapters, we saw how to run an instance of the Duckiematrix.
 However, you may have noticed that the robots were not doing much more than sitting and waiting.
 This is because we did not tell the `Engine` where to get robot commands from.
-We can tell the `Engine` to setup a communication channel with one of those robots and return to us *the other end of the line*, using `Links`, or more properly `World` `Links`.
+We can tell the `Engine` to setup a communication channel with one of those robots and return to us _the other end of the line_, using `Links`, or more properly `World` `Links`.
 
 (intermediate-links-what-is-a-link)=
 ## What is a Link?
@@ -43,6 +43,4 @@ To `Link` a `Matrix` and `World` entity, run the following command, where `MATRI
 dts matrix run --standalone --embedded --map sandbox --link MATRIX WORLD
 ```
 
-```{note}
 {{ dt_workspace_matrix_standalone_note.format(dt_workspace_note_prefix) }}
-```

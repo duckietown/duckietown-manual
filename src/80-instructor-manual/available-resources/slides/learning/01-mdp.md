@@ -1,7 +1,8 @@
 ```{seo}
-:description: Duckietown introduction to Markov decision processees (MDPs) used to develop reinforcement learning (RL) problem.
+:description: Duckietown introduction to Markov decision processes (MDPs) used to develop reinforcement learning (RL) problems.
 :keywords: markov decision process, MDP, reinforcement learning, RL, machine learning, ML, AI, embedded AI, POMDP, policy, duckietown
 ```
+
 (slides-and-recordings-mdp)=
 # Markov Decision Processes
 

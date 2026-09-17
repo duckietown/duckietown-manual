@@ -8,12 +8,17 @@
 
 ```{needget}
 - An internet connection
+
 - An internet capable device
 ---
 - A GitHub account
+
 - A Docker account
+
 - A Duckietown account
+
 - Joining the Duckietown Slack community
+
 - Joining the Duckietown Stack Overflow archive of Q&As
 ```
 

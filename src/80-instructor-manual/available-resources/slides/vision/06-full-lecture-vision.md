@@ -1,10 +1,10 @@
-(slides-and-recordings-vision-long)=
-# Full Lectures on Computer Vision
-
 ```{seo}
 :description: Full-length lectures introducing computer vision in Duckietown.
 :keywords: projective geometry, image filtering, camera calibration, homography estimation, Canny edge detector, edge, image gradient
 ```
+
+(slides-and-recordings-vision-long)=
+# Full Lectures on Computer Vision
 
 ## Projective Geometry
 
@@ -12,7 +12,6 @@ This lectures introduces [](slides-and-recordings-projective-geometry), [](slide
 
 ```{slides} ../../../../_assets/instructor-manual/projective-geometry.pdf
 ```
-
 
 ## Image Processing
 

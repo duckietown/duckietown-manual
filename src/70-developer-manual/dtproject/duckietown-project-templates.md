@@ -18,20 +18,20 @@ back-end systems (e.g., REST APIs), etc.
 :header-rows: 1
 :name: project-templates-code
 
-* - Name
+- - Name
   - Features
   - Link
-* - **basic**
+- - __basic__
   - - Ubuntu 20.04 base image
     - Support for Python packages in `packages/`
   - [duckietown/template-basic](https://github.com/duckietown/template-basic)
-* - **ros**
-  - - Same as **basic**
+- - __ros__
+  - - Same as __basic__
     - Support for ROS
     - Support for catkin packages in `packages/`
   - [duckietown/template-ros](https://github.com/duckietown/template-ros)
-* - **core**
-  - - Same as **ros**
+- - __core__
+  - - Same as __ros__
     - Duckietown autonomous driving modules baked in
   - [duckietown/template-core](https://github.com/duckietown/template-core)
 ```
@@ -46,10 +46,10 @@ the one you are looking at right now.
 :header-rows: 1
 :name: table-project-templates-docs
 
-* - Name
+- - Name
   - Features
   - Link
-* - **book**
+- - __book__
   - - Based on [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)
     - Compiles into HTML and PDF
     - Easy cross-reference with Duckietown books library
@@ -66,11 +66,11 @@ A project based on this template is the robot dashboard.
 :header-rows: 1
 :name: project-templates-lx
 
-* - Name
+- - Name
   - Link
-* - **lx**
+- - __lx__
   - [duckietown/template-lx](https://github.com/duckietown/template-lx)
-* - **lx-recipe**
+- - __lx-recipe__
   - [duckietown/template-lx-recipe](https://github.com/duckietown/template-lx-recipe)
 ```
 
@@ -84,8 +84,8 @@ A project based on this template is the robot dashboard.
 :header-rows: 1
 :name: project-templates-dashboards
 
-* - Name
+- - Name
   - Link
-* - **compose**
+- - __compose__
   - [duckietown/template-compose](https://github.com/duckietown/template-compose)
 ```

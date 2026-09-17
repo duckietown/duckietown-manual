@@ -24,7 +24,4 @@ The slides introduce groups as well as choices for world and robot representatio
 ```{slides} ../../../../_assets/instructor-manual/representations.pdf
 ```
 
-
-
-
 For the accompanying exercise, please see [Modeling and Control](mooc-exercises).

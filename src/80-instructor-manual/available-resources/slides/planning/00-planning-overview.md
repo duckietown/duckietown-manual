@@ -6,7 +6,6 @@
 (slides-and-recordings-planning-overview)=
 # Planning
 
-
 This section lists slides and recordings used to present topics related to robot planning.
 
 Typically, this problem is formulated as operating at a higher level of abstraction than the problem of [robot control](slides-and-recordings-control-overview). Nevertheless, a formal framework for viewing this problem is through the lens of optimal control.

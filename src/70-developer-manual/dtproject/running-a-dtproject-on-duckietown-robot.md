@@ -8,9 +8,11 @@
 
 This section demonstrates how to build and execute a Duckietown DTProject image on the [Duckiebot](https://get.duckietown.com/products/duckiebot-db21), instead of the local machine.
 
-The following assumes a Duckiebot with host name  `ROBOT_NAME` is up and running. First, verify network connectivity to the robot (replace `ROBOT_NAME` with the actual hostname):
+The following assumes a Duckiebot with host name  `DUCKIEBOT_NAME` is up and running. First, verify network connectivity to the robot (replace `DUCKIEBOT_NAME` with the actual hostname):
 
-    ping ROBOT_NAME.local
+```shell
+ping DUCKIEBOT_NAME.local
+```
 
 If the robot responds, proceed to modify `my_script.py` created previously in [](dtproject-add-your-code) to:
 
@@ -24,19 +26,23 @@ print(message)
 
 Next, build the Docker image directly on the Duckiebot with:
 
-    dts devel build -f -H ROBOT_NAME
+```shell
+dts devel build -f -H DUCKIEBOT_NAME
+```
 
-The additional parameter `-H ROBOT_NAME` informs `dts` on which host to build the image. After the image is built, run it on the robot with:
+The additional parameter `-H DUCKIEBOT_NAME` informs `dts` on which host to build the image. After the image is built, run it on the robot with:
 
-    dts devel run -H ROBOT_NAME
+```shell
+dts devel run -H DUCKIEBOT_NAME
+```
 
 Expected successful output:
 
-```
+```text
 ...
 ==> Launching app...
 
-Hello from ROBOT_NAME!
+Hello from DUCKIEBOT_NAME!
 
 <== App terminated!
 ```
@@ -44,14 +50,16 @@ Hello from ROBOT_NAME!
 :::{note}
 Some WARNING and INFO messages from `dts` and from the container entrypoint are normal, for example:
 
-From `dts`
-* `WARNING:dts:Forced!`
-* `INFO:dts:Running an image for arm64v8 on aarch64.`
+From `dts`:
+
+- `WARNING:dts:Forced!`
+
+- `INFO:dts:Running an image for arm64v8 on aarch64.`
 
 Among entrypoint logs of the container:
-* `INFO: The environment variable VEHICLE_NAME is not set. Using 'myduckiebot'.`
-:::
 
+- `INFO: The environment variable VEHICLE_NAME is not set. Using 'myduckiebot'.`
+:::
 
 ```{admonition} Congratulations 🎉
 You just successfully built and run a Duckietown-compliant and Duckiebot-compatible Docker image. Let this be the first of many!

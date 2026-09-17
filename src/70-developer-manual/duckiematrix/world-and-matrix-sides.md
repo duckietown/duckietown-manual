@@ -1,10 +1,10 @@
-(dtmatrix-sides)=
-# The World and Matrix Sides
-
 ```{seo}
 :description: The Duckiematrix's sides.
 :keywords: Duckietown, Duckiematrix, sides
 ```
+
+(dtmatrix-sides)=
+# The World and Matrix Sides
 
 This chapter describes the Duckiematrix's sides.
 
@@ -19,8 +19,9 @@ This chapter describes the Duckiematrix's sides.
 
 An instance of the Duckiematrix has two sides:
 
-* The `Matrix` side.
-* The `World` side.
+- The `Matrix` side.
+
+- The `World` side.
 
 (introduction-sides-the-matrix-side)=
 ## The Matrix side
@@ -39,7 +40,7 @@ Any `World` entity (e.g., user, algorithm, robot, etc.) that interacts with the 
 
 ```{note}
 We are not making a distinction between physical and virtual robots here.
-Robots, intended as computing entities, whether  physical or virtual, always reside on the `World` side. Their sensors and actuators though, reside on the `Matrix` side.
+Robots, intended as computing entities, whether physical or virtual, always reside on the `World` side. Their sensors and actuators though, reside on the `Matrix` side.
 ```
 
 (introduction-sides-the-engine-has-no-side)=

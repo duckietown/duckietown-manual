@@ -1,16 +1,17 @@
-(dtmatrix-dtps-interfaces)=
-# DTPS interfaces
-
 ```{seo}
 :description: How to view DTPS (Duckietown Postal Service) topics coming from the Duckiematrix.
 :keywords: Duckietown, Duckiematrix, DTPS, Duckietown Postal Service, topics
 ```
 
+(dtmatrix-dtps-interfaces)=
+# DTPS interfaces
+
 This chapter describes how to view `DTPS` (`Duckietown Postal Service`) topics coming from the Duckiematrix.
 
 ```{needget}
-* Completed [](the-duckiematrix-first-steps).
-* Completed [](sw-tools-dtps).
+- Completed [](the-duckiematrix-first-steps).
+
+- Completed [](sw-tools-dtps).
 ---
 Knowledge on how to view `DTPS` topics coming from the Duckiematrix.
 ```

@@ -1,10 +1,10 @@
-{gui-tools-ros}
-# GUI Tools and ROS
-
 ```{seo}
 :description: Additional software tools.
 :keywords: Duckietown, Duckiebot, additional software tools
 ```
+
+{gui-tools-ros}
+# GUI Tools and ROS
 
 This chapter describes additional software tools.
 
@@ -109,6 +109,9 @@ If you are using [](novnc), you can also click the `RQT Image View` desktop icon
 ```
 
 ```{figure} ../_images/software_tools/additional_software_tools/rqt_image_view.png
+:name: fig:duckietown-duckiebot-additional-software-tools-rqt-image-view
+:alt: rqt_image_view window with the Duckiebot camera image topic selected in the dropdown menu.
+
 The `rqt_image_view` window with the `/DUCKIEBOT_NAME/camera_node/image/compressed` topic dropdown menu option shown.
 ```
 
@@ -128,7 +131,9 @@ My ROS commands are not working and I cannot use <kbd>Tab</kbd> to autocomplete 
 ---
 Run:
 
-    `source /code/catkin_ws/devel/setup.bash`
+~~~shell
+source /code/catkin_ws/devel/setup.bash
+~~~
 ```
 
 ```{trouble}
@@ -136,5 +141,7 @@ I cannot connect to my Duckiebot's ROS Master.
 ---
 Run the following command and make sure that the `ROS`, `car-interface` and `duckiebot-interface` containers are running:
 
-    `dts duckiebot dashboard DUCKIEBOT_NAME --page portainer`
+~~~shell
+dts duckiebot dashboard DUCKIEBOT_NAME --page portainer
+~~~
 ```

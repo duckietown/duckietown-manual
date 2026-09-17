@@ -1,10 +1,10 @@
-(slides-and-recordings-estimation-slam)=
-# Full Lecture on Simultaneous Localization and Mapping
-
 ```{seo}
 :description: Duckietown introduction to the simultaneous localization and mapping (SLAM) problem in robotics.
 :keywords: SLAM, simultaneous localization and mapping, duckietown, botics, autonomous vehicles, AVs, self driving cars, self-driving cars
 ```
+
+(slides-and-recordings-estimation-slam)=
+# Full Lecture on Simultaneous Localization and Mapping
 
 ## Introduction to SLAM
 
