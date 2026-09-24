@@ -55,15 +55,25 @@ echo \
     sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-Then install Docker Engine and Docker Compose (version 28), by running:
+To keep Docker Engine at version 28 while allowing automatic updates to future 28.x releases, create an APT preference:
+
+```shell
+sudo tee /etc/apt/preferences.d/docker-ce <<'EOF'
+Package: docker-ce docker-ce-cli docker-ce-rootless-extras
+Pin: version 5:28.*
+Pin-Priority: 1001
+EOF
+```
+
+Then install Docker Engine and Docker Compose, by running:
 
 ```shell
 sudo apt update
-sudo apt install containerd.io docker-buildx-plugin docker-ce=5:28.* docker-ce-cli=5:28.* docker-compose-plugin
+sudo apt install containerd.io docker-buildx-plugin docker-ce docker-ce-cli docker-compose-plugin
 ```
 
 ```{note}
-This installs Docker version 28, which is the latest version before 29. If you need a different version, you can list available versions with `apt-cache madison docker-ce`.
+The APT preference prevents Docker Engine, the Docker CLI, and their rootless extras package from upgrading to version 29 or later, while allowing automatic updates to version 28. If you need a different version, you can list available versions with `apt-cache madison docker-ce`.
 ```
 
 ::::
@@ -134,7 +144,16 @@ Run:
 ```shell
 docker --version
 ---
-Make sure the Docker version is less than 29
+Make sure the Docker version is 28
+```
+
+```{testexpect}
+Run:
+
+```shell
+apt-cache policy docker-ce docker-ce-cli docker-ce-rootless-extras
+---
+For all three packages, make sure the `Installed` version begins with `5:28.`
 ```
 
 ```{testexpect}
