@@ -205,7 +205,7 @@ dts duckiebot virtual start ROBOT_NAME
 You should see it with a status `Booting` and finally `Ready` if you look at `dts fleet discover`:
 
 ```text
-     | Hardware |   Type    | Model |  Status  | Hostname 
+    | Hardware |   Type    | Model |  Status  | Address
 ---  | -------- | --------- | ----- | -------- | ---------
 ROBOT_NAME |  virtual | duckiebot | DB21J |  Ready   | ROBOT_NAME.local
 ```

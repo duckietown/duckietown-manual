@@ -85,12 +85,12 @@ To verify that your Duckiebot has completed the booting process, run the followi
 dts fleet discover
 ```
 
-```{figure} ../../_images/setup/handling/fleet_discover.png
-:name: fig:db21-power-management-fleet-discover
-:alt: output of dts fleet discover-3
-:width: 85%
+For example, a Duckiebot that has finished booting appears as follows:
 
-Output of `dts fleet discover`.
+```text
+               |  Hardware   |   Type    | Model |  Status  |       Address
+-------------- | ----------- | --------- | ----- | -------- | --------------------
+DUCKIEBOT_NAME | jetson_nano | duckiebot | DB21J |  Ready   | DUCKIEBOT_NAME.local
 ```
 
 ```{note}
