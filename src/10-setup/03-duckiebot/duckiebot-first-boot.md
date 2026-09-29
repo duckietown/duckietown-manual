@@ -45,18 +45,18 @@ Then open a terminal and run:
 dts fleet discover
 ```
 
-The command above will show a list of all the Duckiebots reachable on your local network.  For each Duckiebot, `dts fleet discover` will also show the model that was used to flash the SD card, the hostname of your robot, and a status indicator.
+The command above will show a list of all the Duckiebots reachable on your local network. For each Duckiebot, `dts fleet discover` shows its model, status, and an `Address` that can be a `.local` name or an IP address.
 
 Leave this tool open, it will refresh automatically every second, so there is no need to manually restart it.
 
 Within a few minutes of powering up the robot with the SD card in, your Duckiebot will appear in the list with status __Booting__.  If it does not appear within 5 minutes, check out the Troubleshooting guide at the end of this page.
 
-```{figure} ../../_images/setup/handling/fleet_discover.png
-:name: fig:fleet-discover
-:width: 85%
-:alt: Terminal output from `dts fleet discover` listing nearby Duckiebots and their boot status.
+For example, a Duckiebot that has finished booting appears as follows:
 
-Output of 'dts fleet discover'
+```text
+               |  Hardware   |   Type    | Model |  Status  |       Address
+-------------- | ----------- | --------- | ----- | -------- | --------------------
+DUCKIEBOT_NAME | jetson_nano | duckiebot | DB21J |  Ready   | DUCKIEBOT_NAME.local
 ```
 
 ```{attention}
@@ -64,7 +64,7 @@ During the first boot, the robot will automatically reboot several times. Wait f
 ```
 
 ```{note}
-Unfortunately the 'dts fleet discover' is currently non functional in the Duckietown Workspaces (devcontainer) on Windows and Mac. You can test if the robot has booted by running `ping <DUCKIEBOT_NAME>.local` and try to connect to the dashboard at `http://<DUCKIEBOT_NAME>.local`
+If `dts fleet discover` is unavailable in a Duckietown Workspace on Windows or Mac, you can check whether the Duckiebot has booted with `ping DUCKIEBOT_NAME.local` and open `http://DUCKIEBOT_NAME.local/`. If `.local` does not resolve and you know the Duckiebot's IP address, use `ping DUCKIEBOT_IP` and `http://DUCKIEBOT_IP/` instead.
 ```
 
 ## Software and Hardware Updates

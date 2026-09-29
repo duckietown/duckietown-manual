@@ -68,14 +68,16 @@ You can find your Duckietown Dashboard at:
 http://DUCKIEBOT_NAME.local/
 ```
 
-If the above address does not work, remove the `.local` part and just use
+If `.local` does not resolve, use the Duckiebot's reachable IP address (shown in the `Address` column of `dts fleet discover` when available):
 
 ```text
-http://DUCKIEBOT_NAME/
+http://DUCKIEBOT_IP/
 ```
 
+If `DUCKIEBOT_NAME` resolves without `.local`, you can also use `http://DUCKIEBOT_NAME/`. An IP address does not require mDNS; a failed `.local` lookup does not necessarily mean the Duckiebot's Dashboard is unreachable.
+
 ```{note}
-If `.local` does not work, that means your router's default domain name is set to something else. It will be helpful if you figure out what that is. And keep in mind that any instruction later that includes `.local` should be just ignored.
+Older Dashboard images may open by IP but fail to load live data. Full IP-based access requires a Dashboard image with IP-origin support.
 ```
 
 You will be greeted by the Dashboard shown here. Read the steps below before continuing through the setup page.

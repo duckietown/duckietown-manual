@@ -38,13 +38,21 @@ Setting up a working Wi-Fi connection between your base station and Duckiebot is
 
 ### Checkpoint
 
-Your network is set up correctly if you can:
+Check that you can reach the Duckiebot:
 
 ```shell
 ping DUCKIEBOT_NAME.local
 ```
 
-while being connected to the internet. You can test this by opening a browser or, for example:
+If `.local` does not resolve, use the Duckiebot's reachable IP address (shown in the `Address` column of `dts fleet discover` when available):
+
+```shell
+ping DUCKIEBOT_IP
+```
+
+You can also use the IP address with `dts`: run `dts duckiebot dashboard DUCKIEBOT_IP` to open the Dashboard, or pass `-H DUCKIEBOT_IP` to commands that accept a target host.
+
+Also check that you can reach the internet by opening a browser or, for example:
 
 ```shell
 ping 8.8.8.8
@@ -57,12 +65,12 @@ Run:
 dts fleet discover
 ```
 ---
-```{figure} ../../_images/setup/handling/fleet_discover.png
-:name: fig:fleet-discover-2
-:alt: Duckiebot ready on dts fleet discover network discovery tool
-:width: 85%
+For example, a connected Duckiebot appears as follows:
 
-Output of `dts fleet discover` with a connected Duckiebot
+```text
+               |  Hardware   |   Type    | Model |  Status  |       Address
+-------------- | ----------- | --------- | ----- | -------- | --------------------
+DUCKIEBOT_NAME | jetson_nano | duckiebot | DB21J |  Ready   | DUCKIEBOT_NAME.local
 ```
 ````
 
@@ -87,7 +95,7 @@ Ideally, you work with Duckietown in an environment in which you have administra
 
 In university or corporate networks, for security reasons, some functionalities like local discovery or access to certain ports or websites are made unavailable. Duckietown relies on the following:
 
-- A router that can resolve `DUCKIEBOT_NAME.local` and local IP addresses (that is, local discovery tools such as mDNS).
+- mDNS to resolve `DUCKIEBOT_NAME.local`, if you use that name instead of the Duckiebot's reachable IP address.
 
 - Internet access to services such as GitHub, Docker Hub, and Duckietown.
 
