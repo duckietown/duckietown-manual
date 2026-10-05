@@ -51,6 +51,7 @@ sphinx:
     - sphinx_sitemap
   local_extensions:
     manual_binder_accessibility: _extensions
+    manual_repository_links: _extensions
     manual_llms_txt: _extensions
   config:
     html_baseurl: "https://docs.duckietown.com/ente/duckietown-manual/"
