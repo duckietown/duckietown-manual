@@ -14,7 +14,7 @@
 ```
 
 (lx-setup-planning-rrt)=
-# LX: Planning - RRT
+# 🔥 🆕 LX: Planning - RRT
 
 In this learning experience, you will build a robot planner designed to have a Duckiebot drive safely in a cluttered environment. We will represent the environment by a set of obstacles (in our simplified case they will be circular and rectangular). The first task will be to figure out how to tell if a robot configuration (pose) collides with an obstacle. From there, you can build a planner based on the Rapidly-exploring Random Tree (RRT) algorithm to find a path from a start configuration to a goal configuration without colliding with anything.
 

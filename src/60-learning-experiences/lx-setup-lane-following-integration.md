@@ -1,41 +1,60 @@
 ```{seo}
-:description: Step by step instructions on how to run the Extended Kalman Filtering Localization learning experience (LX) in Duckietown.
-:keywords: Duckietown, Duckiebot, LXs, Learning Experiences, localization, state estimation, kalman filter, extended kalman filter, particle filter, histogram filter, hands on learning, sensor fusion
+:description: Combine the knowledge gained from previous LXs such as modeling, control, computer vision, filtering, etc., into a more complex lane following autonomous behavior.
+:keywords: lane following, learning experience, LX, Duckietown, Duckiebot, autonomous driving, self-driving cars, computer vision, dts devel
+```
+
+```{needget}
+- Learning experience computer setup: [](duckiebot-lxs)
+- (recommended) A successful Duckiematrix installation: [](the-duckiematrix-first-steps)
+- (optional) A "Ready to Go" Duckiebot: [](duckiebot-setup-intro)
+---
+- A Duckiebot autonomously following the lane in Duckietown.
 ```
 
 (lx-setup-lf-integration)=
-# LX: Lane Following - Integration
+# 🔥 🆕 LX: Lane Following - Integration
 
-```{todo}
-Update this to actual LF LX - now just a copy of EKF
-```
+This learning experience is designed to combine the knowledge gained from several of the simpler LXs into one more complex lane following autonomous behavior. 
 
-```{include} ../_includes/lx/ekf-prerequisites-needget.md
-```
+It also serves as an introduction to the [`dts devel`](https://docs.duckietown.com/ente/duckietown-manual/70-developer-manual/dtproject/creating-demos.html) API which you can use to create new behaviors in Duckietown. 
 
-This learning experience is about how we should use the data streaming through the sensors, together with the knowledge of our surroundings, to estimate our state. The so-called optimal approach to this is the Bayes filter, however, this approach is computationally intractable in all but the simplest settings. We will explore several approximations to the Bayes filter. Namely, the Kalman filter, the particle filter, and the histogram filter. Each has its own assumptions and conditions under which it is most applicable. Finally, you will program an extended Kalman filter, or EKF, to localize your Duckiebot using the data from the wheel encoders and the AprilTag fiducial markers that you observe at known locations.
+For guided environment setup instructions, lecture content, and more related to this LX, see [the EdX course page](https://duckietown.com/self-driving-cars-with-duckietown-mooc/).
 
-```{figure} ../_images/lx-devmanual/lx-ekf-localization/Histogram.png
-:alt: Duckietown histogram filter representation for Duckiebot pose estimation
-:width: 60%
-:name: duckiebot-lx-lane-following-integration-histogram
-:align: center
-
-Welcome to the EKF - Localization LX!
+```{raw} html
+<figure style="max-width: 800px; margin: 1.5rem auto;">
+  <iframe
+    src="https://livid.com/embed/0inEP377lU9-?autoplay=1&amp;loop=1&amp;muted=1"
+    title="Lane following - Duckiebot DB21J (no sound)"
+    style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0;"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture; web-share"
+    allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+  <figcaption style="margin-top: 0.5rem; text-align: center;">
+    Lane following with a DB21J Duckiebots.
+    <a href="https://livid.com/watch/0inEP377lU9-">Watch online</a>
+  </figcaption>
+</figure>
 ```
 
 ```{admonition} Intended Learning Outcomes
 :class: tip
-After this learning experience, you will:
-- Learn about Kalman filters: from the theory to implementation details.
 
-- Learn about Particle filters: from the theory to implementation details.
+After this learning experience, you will be able to:
+- Use the `dts devel` API to deploy your code and create new behaviors in Duckietown.
+- Integrate the knowledge gained from previous LXs such as modeling, control, computer vision, filtering, etc., into a more complex lane following autonomous behavior.
+- Run and tune the autonomous lane following behavior on a Duckiebot in the Duckiematrix and on a physical Duckiebot.
+- Identify common pitfalls, and troubleshoot issues that arise when running the lane following behavior on a Duckiebot in different environments.
+```
 
-- Learn about Histogram filters: from the theory to implementation details.
+```{admonition} Available repositories
+:class: seealso
 
-- Be able to evaluate advantages and disadvantages of each approach given different scenarios.
+- [Learner Repository](https://github.com/duckietown/lx-lane-following) 
+- [Recipe/Technical Backend Repository](https://github.com/duckietown/lx-recipe-lane-following)
+- 🔒 Instructor Solution Repository: this LX does not require a solutions repository.
 
-- Be able to design, tune and test an extended Kalman Filter for achieving map-based localization, fusing wheel encoder and AprilTag-based pose measurement.
+To access solution repositories, [become a Duckietown Instructor](https://hub.duckietown.com/plans/?plan=institutional). 
 ```
 
 {{ dt_workspace_matrix_lx_warning.format(dt_workspace_note_prefix) }}
@@ -47,12 +66,12 @@ For guided setup instructions, lecture content, and more related to this LX, see
 ```{include} ../_includes/lx/exercise-offboard-runtime-note.md
 ```
 
-(lx-forking-ekf-localization)=
+(lx-forking-lane-following)=
 ## Forking the repository
 
 ### 1. Create a fork
 
-Navigate to [the lx-ekf-localization repository](https://github.com/duckietown/lx-ekf-localization).
+Navigate to [the lx-lane-following repository](https://github.com/duckietown/lx-lane-following).
 
 Find and press the "Fork" button on the top right:
 
@@ -65,15 +84,15 @@ Find and press the "Fork" button on the top right:
 Fork the LX to be able to make local changes while still being able to receive updates.
 ```
 
-This will create a new repository at: `<your_github_username>/lx-ekf-localization`.
+This will create a new repository at: `<your_github_username>/lx-lane-following`.
 
 ### 2. Clone the fork
 
 Clone the fork on your computer, replacing your GitHub username in the command below, and navigate to the new folder:
 
 ```shell
-git clone git@github.com:<your_github_username>/lx-ekf-localization
-cd lx-ekf-localization
+git clone --recurse-submodules git@github.com:<your_github_username>/lx-lane-following
+cd lx-lane-following
 ```
 
 ### 3. Configure the upstream repository
@@ -89,7 +108,7 @@ git remote -v
 Specify a new remote upstream repository:
 
 ```shell
-git remote add upstream https://github.com/duckietown/lx-ekf-localization
+git remote add upstream https://github.com/duckietown/lx-lane-following
 ```
 
 Confirm that the new upstream repository was added to the list:
@@ -100,7 +119,7 @@ git remote -v
 
 You can now push your work to your own repository using the standard GitHub workflow, and the beginning of every exercise will prompt you to pull from the upstream repository, updating your exercises to the latest version (if available).
 
-(lx-system-update-ekf-localization)=
+(lx-system-update-lane-following)=
 ## Keeping your System Up To Date
 
 - 💻 These instructions are for `ente` learning experiences. Ensure your Duckietown Shell is set to an `ente` profile (and not a `daffy` one). You can check your current profile with:
@@ -143,13 +162,13 @@ You can now push your work to your own repository using the standard GitHub work
 
     (where `DUCKIEBOT_NAME` is the name of your physical or virtual Duckiebot.)
 
-(lx-code-editor-lx-ekf-localization)=
+(lx-code-editor-lx-lane-following)=
 ## Launching the Code Editor
 
 ```{include} ../_includes/lx/dts-code-root-important.md
 ```
 
-Making sure you are inside the path of this learning experience (`cd ./path-to-lxs-in-your-workstation/lx-ekf-localization`), then open the code editor:
+Making sure you are inside the path of this learning experience (`cd ./path-to-lxs-in-your-workstation/lx-lane-following`), then open the code editor:
 
 ```shell
 dts code editor
@@ -159,25 +178,21 @@ Wait for a URL to appear on the terminal, then click on it or copy-paste it in t
 
 The first thing you will see in the code editor is a version of these instructions. At this point you can start following the LX-specific indications shown in your code editor.
 
-(lx-navigating-notebooks-ekf-localization)=
+(lx-navigating-notebooks-lane-following)=
 ## Walkthrough of Notebooks
 
-Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the
-`notebooks` directory and open the first notebook.
+Inside the code editor, use the navigator sidebar on the left-hand side to navigate to the `notebooks` directory and open the first notebook.
 
-Follow the instructions on the notebook and work through them in sequence.
-
-In many cases the last notebook will instruct you to write some code inside the
-learning experience directory.
+Follow the instructions on the notebook and work through them in sequence. In many cases the last notebook will instruct you to write some code inside the learning experience directory.
 
 Once you have done that you will need to __build__ your code before __testing__ it.
 
-(lx-matrix-testing-ekf-localization)=
+(lx-matrix-testing-lane-following)=
 ### Testing with the Duckiematrix
 
 To test your code in the Duckiematrix, attach either a physical or virtual robot to a Duckiematrix Entity. The steps below use a virtual robot; for instructions on attaching a physical robot, see [](introduction-duckiematrix-connect-db-to-remote-engine).
 
-(lx-create-vbot-ekf-localization)=
+(lx-create-vbot-lane-following)=
 #### 1. Creating and starting virtual Duckiebot
 
 If you have not done so already (e.g., for a different LX), you can create a virtual Duckiebot with the command:
@@ -214,117 +229,42 @@ If in doubt if any of your virtual Duckiebots in running or not, you can check t
 dts duckiebot virtual list
 ```
 
-(lx-code-matrix-start-ekf-localization)=
+(lx-code-matrix-start-lane-following)=
 #### 2. Starting the Duckiematrix with the virtual Duckiebot
 
 Now that your virtual robot is ready, you can start the Duckiematrix. From this LX directory:
 
 ```shell
-dts code start_matrix [--no-renderer]
+dts code start_matrix [--no-renderer] [--browser]
 ```
 
 {{ dt_workspace_start_matrix_split_note.format(dt_workspace_note_prefix) }}
-
-You will see the Unity-based Duckiematrix simulator start up. The startup screen will look like:
-
-```{figure} ../_images/lx-devmanual/lx-ekf-localization/duckiematrix-start.png
-:alt: Duckiematrix splash screen for the EKF Localization learning experience. 
-:width: 70%
-:name: duckiebot-lx-lane-following-integration-start
-:align: center
-
-In this LX you will be greeted by a slightly more complex Duckietown than in previous ones. 
-```
-
-From here you can click anywhere on the window and click <kbd>ENTER</kbd> to make it become active, and then move the duckie towards the Duckiebot with the <kbd>w</kbd>, <kbd>a</kbd>, <kbd>s</kbd>, and <kbd>d</kbd> keys, and you can move the camera angle to view the Duckiebot with the mouse.
-
-If you are close enough to your Duckiebot, you can board it with the <kbd>E</kbd> key, which should look like
-
-```{figure} ../_images/lx-devmanual/lx-ekf-localization/duckiematrix-riding.png
-:alt: Duckiematrix splash screen for the EKF Localization learning experience. 
-:width: 70%
-:name: duckiebot-lx-lane-following-integration-riding
-:align: center
-
-After boarding your Duckiebot you will be able to move it around manually with <kbd>WASD</kbd>.
-```
-
-You can then you can drive the Duckiebot around with the 'w', 'a', 's', and 'd' keys. You will notice that this map includes traffic signs with fiducial markers ([AprilTags](https://april.eecs.umich.edu/software/apriltag)) that we are going to use in this LX to help localize your robot.
-
-If you get very lost from the road and you want to come back, you can do so with the <kbd>R</kbd> key.
-
-```{include} ../_includes/lx/reset-duckiebot-position-note.md
-```
 
 To run the WebGL (browser) version of the Duckiematrix, add the `--browser` flag.
 
 ```{include} ../_includes/duckiematrix/webgl-browser-note.md
 ```
 
-(lx-code-build-ekf-localization)=
+You will see the Unity-based Duckiematrix simulator start up. 
+
+From here you can click anywhere on the window and click <kbd>ENTER</kbd> to make it become active, and then move the duckie towards the Duckiebot with the <kbd>w</kbd>, <kbd>a</kbd>, <kbd>s</kbd>, and <kbd>d</kbd> keys, and you can move the camera angle to view the Duckiebot with the mouse. If you are close enough to your Duckiebot, you can board it with the <kbd>E</kbd> key, and drive the Duckiebot around with <kbd>w</kbd>, <kbd>a</kbd>, <kbd>s</kbd>, and <kbd>d</kbd> keys. 
+
+If you get very lost from the road and you want to come back, you can do so with the <kbd>R</kbd> key.
+
+```{include} ../_includes/lx/reset-duckiebot-position-note.md
+```
+
+(lx-code-build-lane-following)=
 ### Building the Code
 
-From inside the learning experience root directory, you can build your code with:
+Part of this LX involves writing code for the lane-following behavior. Once you have written your code, run `cd packages/dt-core` from the LX root, then `dts devel build -H ROBOT_NAME` before testing it.
 
-```shell
-dts code build -R ROBOT_NAME
-```
+The `dts devel` workflow is more advanced (and powerful) than the `dts code` commands that we typically use in LXs. For details, refer to the last notebook of this LX.
 
-where `ROBOT_NAME` can be either a physical or virtual robot.
-
-(lx-code-test-ekf-localization)=
+(lx-code-test-lane-following)=
 ### Testing on a Duckiebot or in the Duckiematrix
 
-🚙 To test your code on your physical Duckiebot you can do:
-
-```shell
-dts code workbench -R DUCKIEBOT_NAME
-```
-
-💻 To test your code on a virtual robot in the Duckiematrix:
-
-```shell
-dts code workbench -m -R ROBOT_NAME
-```
-
-(note the `-m` flag which means that we are running in the `matrix`.)
-
-In another terminal, you can launch the `noVNC` viewer for this exercise and open RViz:
-
-```shell
-dts code vnc -R ROBOT_NAME
-```
-
-where `ROBOT_NAME` could be the physical or the virtual robot (use whichever you ran the `dts code workbench` and `dts code build` command with).
-
-This will show you your published pose estimate (blue arrow with a covariance ellipse in purple) as well the ground truth pose of the robot (red arrow which should be inside the ellipse if your implementation is correct).
-
-You will also see markers that correspond to the AprilTag traffic signs in the map. As each one is detected by your camera you will see it change color from green to blue. At initialization, it should like this:
-
-```{figure} ../_images/lx-devmanual/lx-ekf-localization/rviz.png
-:alt: RViz initialization showing the estimated pose, ground-truth pose, and AprilTag markers.
-:width: 70%
-:name: duckiebot-lx-lane-following-integration-rviz
-:align: center
-
-RViz initialization showing the estimated pose, ground-truth pose, and AprilTag markers.
-```
-
-You can also look at an image that shows the tags that are being detected. It is published on the topic `/DUCKIEBOT_NAME/detections/image/compressed` (for example you can view with `rqt_image_viewer`).
-
-This output should look like this:
-
-```{figure} ../_images/lx-devmanual/lx-ekf-localization/apriltag-detections.png
-:alt: Duckietown EKF localization LX AprilTag detections
-:width: 70%
-:name: duckiebot-lx-lane-following-integration-april-tag-detections
-:align: center
-
-AprilTag detections. 
-```
-
-You may also use the keyboard controller to pilot your robot and test that the localization performance
-of your Duckiebot as it moves.
+🚙 To test the code of this LX on your Duckiebot - whether physical or virtual - use the `dts devel` workflow. Details are provided in the pertinent notebook, accessible with `dts code editor`. 
 
 ## Troubleshooting
 

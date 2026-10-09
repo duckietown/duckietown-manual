@@ -15,7 +15,6 @@ exclude_patterns:
   - "40-demonstrations/lane-following-with-duckiebots.md"
   - "40-demonstrations/lane-following-with-intersections.md"
   - "40-demonstrations/lane-following-with-obstacles.md"
-  - "60-learning-experiences/lx-setup-lane-following-integration.md"
   - "80-instructor-manual/available-resources/slides/vision/not-now-*.md"
 
 # Force re-execution of notebooks on each build.
