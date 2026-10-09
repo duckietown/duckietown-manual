@@ -257,7 +257,7 @@ If you get very lost from the road and you want to come back, you can do so with
 (lx-code-build-lane-following)=
 ### Building the Code
 
-Part of the learning activities in this LX require to write the code that composes the various functions of the lane following behavior. Once you have written your code, you will need to build it before testing it using the `dts devel build -H ROBOT_NAME` command. 
+Part of this LX involves writing code for the lane-following behavior. Once you have written your code, run `cd packages/dt-core` from the LX root, then `dts devel build -H ROBOT_NAME` before testing it.
 
 The `dts devel` workflow is more advanced (and powerful) than the `dts code` commands that we typically use in LXs. For details, refer to the last notebook of this LX.
 
