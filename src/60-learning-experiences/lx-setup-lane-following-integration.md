@@ -91,7 +91,7 @@ This will create a new repository at: `<your_github_username>/lx-lane-following`
 Clone the fork on your computer, replacing your GitHub username in the command below, and navigate to the new folder:
 
 ```shell
-git clone git@github.com:<your_github_username>/lx-lane-following
+git clone --recurse-submodules git@github.com:<your_github_username>/lx-lane-following
 cd lx-lane-following
 ```
 
