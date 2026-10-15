@@ -10,5 +10,9 @@ This section contains more detailed information about how the Duckiematrix Unity
 
 For basic operation of the Duckiematrix see [](the-duckiematrix-manual).
 
+```{note}
+The same [Duckiematrix access rules](setup-dts-plans) apply when creating maps, working on Engine integrations, or using Learning Experiences.
+```
+
 ```{tableofcontents}
 ```

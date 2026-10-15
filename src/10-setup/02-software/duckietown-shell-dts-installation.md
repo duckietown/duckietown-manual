@@ -14,12 +14,18 @@ This section describes how to install and set up `dts` (`Duckietown Shell`), a C
 - [GitHub is installed and set up](setup-sw-github)
 
 - [Duckietown account](setup-account-duckietown-hub)
+
+- [Software dependencies, including pipx](setup-sw-dependencies)
 ---
 - A computer with `dts` installed and correctly set up.
 ```
 
 (setup-dts-installation)=
 ## Duckietown Shell (`dts`) Installation
+
+DTS requires __CPython 3.10, 3.11, or 3.12__ and supports Linux x86-64/ARM64, macOS Intel/Apple Silicon, and Windows x86-64. Other Python versions and platforms are not supported.
+
+Use an already-installed, supported interpreter. The examples select Python 3.12 explicitly; replace `python3.12` with `python3.10` or `python3.11` if that is the supported interpreter installed on your computer. Host installation instructions for macOS and Windows are in [](dts-install-host-machine).
 
 :::::{tab-set}
 
@@ -36,27 +42,27 @@ pip3 uninstall duckietown-shell
 To install `dts`, run:
 
 ```shell
-pipx install duckietown-shell
+pipx install --python python3.12 duckietown-shell
 ```
 
 ::::
 
 ::::{tab-item} Duckietown Workspace
 
-The Duckietown Shell is pre-installed in Workspaces. Run the checkpoint to verify it is working as intended.
+The Duckietown Shell is pre-installed in Workspaces. Run the checkpoint to verify it is working as intended. An optional host installation is separate; follow [](dts-install-host-machine) to install and configure it.
 
 ::::
 
 :::::
 
 ````{warning}
-If you are installing `dts` on an arm machine you will also need to install the `gcc` and `python3-dev` dependencies:
+Some DTS commands need additional dependencies that require build tools on ARM-based Ubuntu computers, including Ubuntu virtual machines on Apple Silicon Macs:
 
 ```shell
 sudo apt install -y gcc python3-dev
 ```
 
-This includes Apple Silicon macs with Ubuntu arm64 virtual machines.
+The development headers must match the Python interpreter used by DTS. Installing a compiler does not make an unsupported Python version or platform compatible with DTS.
 ````
 
 (setup-dts-checkpoint1)=
@@ -108,6 +114,41 @@ The resulting output after step 6 should look like the following, where `UID` is
 dts :  Correctly identified as uid = UID
 ```
 ````
+
+(setup-dts-plans)=
+### Plans and computer access
+
+The following access rules apply to `ente` and Duckiematrix:
+
+- From __1 February 2027 at 00:00 UTC__, `ente` and `ente-staging` require the free __Independent User__ plan or an active __Institutional User__ plan. The __Instructor__ add-on alone is not sufficient. See [](duckietown-plans) to choose a plan.
+
+- Before that deadline, active accounts can use `ente` and Duckiematrix without a qualifying plan. You still need to sign in, and the one-computer limit applies.
+
+- `daffy` and `daffy-staging` remain plan-free. Generating an ordinary Duckietown identity token does not require a plan.
+
+- Active Hub staff and superusers are exempt from the plan and one-computer limits.
+
+To inspect your account plans, access eligibility, registered computer, and any pending transfer, run:
+
+```shell
+dts plan status
+```
+
+Each account that is neither staff nor a superuser can register one DTS computer. DTS registers your computer automatically when it first approves access to `ente`. A virtual machine, a separate operating-system installation, or reinstalling the operating system may count as a different computer.
+
+A [Duckietown Workspace](setup-devcontainer) and DTS on its host share one computer registration when the Workspace is created from the same operating system where host DTS runs. Sign in separately in each installation using the same Duckietown account. See [](setup-devcontainer-shared-computer) for setup and instructions for older Workspaces.
+
+When moving to a replacement computer, run this command __on the replacement computer__:
+
+```shell
+dts plan transfer
+```
+
+A transfer may be immediate or scheduled for after all previously issued authorizations expire, for at most 24 hours. While a transfer is pending, new authorizations are paused. `dts plan status` shows when the replacement computer can request access. Switching profiles, copying tokens, or resetting local settings does not reset this per-account registration.
+
+After using `ente` online on your registered computer, you can continue using it offline until your saved access expires, for at most 24 hours. Access may end sooner if your qualifying plan expires or the grace period ends. Connect to the internet to renew expired access. `daffy` does not require a plan, although individual commands may still need network access.
+
+Token, profile, command-management, and plan-management commands remain available when `ente` access is denied.
 
 (dt-account-switch)=
 ### Switching user in the Duckietown Shell
@@ -189,7 +230,26 @@ With an extra __positional__ argument, one could specify a custom Docker registr
 `docker.io`. Check `dts config docker set --help` for more details.
 ```
 
+(setup-dts-updating)=
+### Updating the Shell and its commands
+
+For a pipx installation, update the installed Shell package and then its command sets:
+
+```shell
+pipx upgrade duckietown-shell
+dts update
+dts version
+```
+
+`pipx upgrade` updates the Shell package; `dts update` updates command sets, not the package itself. To recreate an existing pipx installation with a supported interpreter, use `pipx reinstall --python python3.12 duckietown-shell`.
+
+Use `dts update` for every distribution, including `daffy`. DTS verifies each downloaded update before installing it; do not modify the installed command files.
+
 ### Resetting the Duckietown Shell
+
+```{warning}
+A full reset removes your profiles, saved login, Docker credentials, and offline access. Make sure you can retrieve your Duckietown token and Docker credentials before continuing. Resetting local settings does not free your registered computer; use `dts plan transfer` when moving to another computer.
+```
 
 To reset `dts` to "factory conditions", run:
 

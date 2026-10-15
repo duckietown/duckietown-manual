@@ -18,6 +18,14 @@
 
 The Duckiematrix automatically installs the first time it is run, so no explicit installation action is required.
 
+```{important}
+To use Duckiematrix, [install DTS 6.3.0 or later](setup-dts) and select an `ente` profile. The [plan, grace-period, and computer-access rules](setup-dts-plans) apply.
+
+Start Duckiematrix through `dts matrix run` and __keep that DTS command and its terminal running__ while using it. This applies to both the desktop and browser versions. If the Workspace starts Duckiematrix on the host, keep the host-side DTS process running too.
+
+DTS signs you in automatically using your configured Duckietown account. You do not need to log in again or enter your Duckietown token in Duckiematrix.
+```
+
 :::::{tab-set}
 
 ::::{tab-item} Ubuntu
@@ -129,6 +137,16 @@ However, two additional pieces of information are required:
     - Use a default map: [](introduction-duckiematrix-maps).
 
     - Create your own map: [](introduction-duckiematrix-custom-maps).
+
+## Offline use and renewing access
+
+Start Duckiematrix while connected to the internet on your registered computer. You can then restart it offline until your saved access expires, for at most 24 hours. Access may end sooner if your Duckietown token or qualifying plan expires, or the grace period ends. Keep DTS running during offline use too.
+
+If Duckiematrix cannot start because of an access error, run `dts plan status` to check your account and computer registration. To renew access, connect to the internet and add `--renew-authorization` to your usual launch command. Your account must be eligible and the computer must be registered. For example:
+
+```shell
+dts matrix run --standalone --embedded --map sandbox --renew-authorization
+```
 
 (duckiematrix-optional-flags)=
 ## Common optional `run` flags

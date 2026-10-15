@@ -174,6 +174,19 @@ To create a new local integrated terminal (outside the Dev Container), open the 
 
 The Duckietown Shell is pre-installed in the workspace, so there is no need to re-install it. It is necessary though to configure it with your user credentials, which can be done by following the [Duckietown Shell first boot setup](dt-account-set-token) instructions inside the workspace.
 
+(setup-devcontainer-shared-computer)=
+### Sharing one computer registration
+
+You can use the same Duckietown account in DTS on your host and inside its local Workspaces. They count as one registered computer, even after rebuilding a Workspace. You do not need to install DTS on the host if you only use it inside the Workspace. The same [plan and computer-access rules](setup-dts-plans) apply in both places.
+
+The Workspace Shell and an optional host Shell are separate installations. Update each one where it is used and [sign in](dt-account-set-token) separately using the same account.
+
+Create the Workspace from the same operating system where host DTS runs. A separate virtual machine or WSL distribution may count as a different computer; it does not automatically share the outer macOS or native Windows registration.
+
+```{note}
+When updating an older Workspace, use __Dev Containers: Rebuild Container__ in VS Code to enable the shared computer registration. If DTS already uses this host's registration, no transfer is needed. If your account was registered to an older Workspace instead, run `dts plan transfer` once from the rebuilt Workspace or matching host. The normal [transfer waiting period](setup-dts-plans) still applies.
+```
+
 ```{tip}
 Some Duckietown robot apps, such as the image viewer or keyboard controller, can be visualized natively on the host machine instead of inside a noVNC desktop, resulting in a better experience. To enable this, set up the Duckietown Shell on the host machine as well. 
 ```
@@ -191,14 +204,14 @@ On your host machine, open a terminal and install [Brew](https://brew.sh/) if yo
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-and proceed to install Python:
+and proceed to install Python and pipx:
 
 ```shell
-brew install python@3.12
+brew install python@3.12 pipx
 ```
 
 ```{note}
-Compatible versions of Python are 3.10/3.11/3.12.
+DTS requires CPython 3.10, 3.11, or 3.12. The examples below select Python 3.12; the Homebrew prefix works on both Intel and Apple Silicon Macs.
 ```
 
 Confirm the installation was successful:
@@ -207,22 +220,18 @@ Confirm the installation was successful:
 Run:
 
 ```shell
-/opt/homebrew/bin/python3.12 --version
+"$(brew --prefix python@3.12)/bin/python3.12" --version
 ---
 Python 3.12.13
 ````
 
-Before installing `dts`, remove any previously failed pipx attempts:
+Install the Duckietown Shell using Python 3.12 explicitly:
 
 ```shell
-pipx uninstall duckietown-shell
+pipx install --python "$(brew --prefix python@3.12)/bin/python3.12" duckietown-shell
 ```
 
-Then (re)install the Duckietown Shell using Python 3.12 explicitly:
-
-```shell
-pipx install --python /opt/homebrew/bin/python3.12 duckietown-shell
-```
+If a pipx installation already exists but uses another interpreter, use `pipx reinstall --python "$(brew --prefix python@3.12)/bin/python3.12" duckietown-shell` instead.
 
 Refresh the shell path:
 
@@ -273,7 +282,15 @@ Host machine `dts` installations are not fully functional, but useful in specifi
 
 ::::{tab-item} Windows
 
-To set up the Duckietown Shell on the host machine, [install Python 3.10/3.11/3.12](https://www.python.org/downloads/windows/) and then follow the [Duckietown Shell setup instructions](setup-dts).
+To set up the Duckietown Shell on the host machine, [install 64-bit CPython 3.10, 3.11, or 3.12](https://www.python.org/downloads/windows/). The following PowerShell example selects Python 3.12:
+
+```powershell
+py -3.12 -m pip install --user pipx
+py -3.12 -m pipx ensurepath
+py -3.12 -m pipx install --python (py -3.12 -c "import sys; print(sys.executable)") duckietown-shell
+```
+
+Open a new terminal if needed, then follow [](dt-account-set-token) to configure DTS. Windows ARM64 and 32-bit Python are not native release-wheel targets. Continue using the Workspace for commands that need Linux-specific tools.
 
 ::::
 
